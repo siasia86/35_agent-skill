@@ -50,9 +50,11 @@ skills/md-link-check/SKILL.md
 skills/planning-and-breakdown/SKILL.md
 skills/python-script-template/SKILL.md
 skills/readme-template/SKILL.md
+skills/repo-governance/SKILL.md
 skills/security-tools/SKILL.md
 skills/shipping-checklist/SKILL.md
 skills/spec-driven-infra/SKILL.md
 skills/testing-guide/SKILL.md
 skills/using-skills/SKILL.md
 skills/work-rules/SKILL.md
+skills/zircon-readme-policy/SKILL.md
