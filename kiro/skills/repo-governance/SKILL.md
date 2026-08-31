@@ -112,11 +112,12 @@ repo-local .governance/
 
 ## 알려진 저장소
 
-| 저장소                                  | `.governance/` | 비고                      |
-|-----------------------------------------|----------------|---------------------------|
-| `/root/32_system-engineering-resources` | 미도입         | 정책 원본 보유            |
-| `/root/22_github_private/11_zircon`     | 미도입         | 전역 skill에서 이관 예정  |
-| Ansible 학습·자동화 저장소              | 도입 완료      | 저장소 규칙으로 이관 완료 |
+| 저장소                                  | `.governance/` | 비고                             |
+|-----------------------------------------|----------------|----------------------------------|
+| `/root/31_governances`                  | 도입 완료      | 공통 정책 원본 (2026-08-31 이관) |
+| `/root/32_system-engineering-resources` | 미도입         | 학습 문서 저장소, 정책은 31 참조 |
+| `/root/22_github_private/11_zircon`     | 미도입         | 전역 skill에서 이관 예정         |
+| Ansible 학습·자동화 저장소              | 도입 완료      | 저장소 규칙으로 이관 완료        |
 
 이 표는 참고용입니다. 실제 존재 여부는 항상 탐색 절차로 확인합니다.
 
@@ -136,8 +137,9 @@ repo-local .governance/
 
 ## 참조 정책
 
-전체 정책은 다음 문서에 있습니다.
+전체 정책은 다음 저장소에 있습니다.
 
 ```
-/root/32_system-engineering-resources/00_governance/01_repository_governance/governance_precedence.md
+https://github.com/siasia86/31_governances
+.governance/repository/governance_precedence.md
 ```
