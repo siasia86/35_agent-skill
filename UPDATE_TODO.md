@@ -106,6 +106,26 @@ find "$HOME/.kiro" -maxdepth 3 -type f -print 2>/dev/null | sort
 - [ ] 변경된 Skill이 실제 Agent 응답에 반영되는지 확인.
 - [ ] 원본 clone 저장소와 `$HOME/.kiro`의 변경 범위를 비교.
 
+
+### 3-6. 외부 Agent·Skill 저장소 조사 및 선별
+
+- [ ] GitHub repository search와 GitHub API를 사용해 공개 Agent·Skill 저장소를 조사합니다.
+- [ ] 검색 결과를 별 개수만으로 결정하지 않고 최근 활동일, 유지보수 상태, 라이선스, 보안 이슈, 문서 품질, 실제 Agent·Skill 구조를 함께 평가합니다.
+- [ ] 다음 후보를 우선 조사합니다.
+  - `addyosmani/agent-skills` — Agent·Skill 구성 및 웹 개발 작업 패턴.
+  - `obra/superpowers` — 개발 작업용 Agent Skill·워크플로우 패턴.
+  - `mattpocock/skills` — 재사용 가능한 개발 Skill 구성 패턴.
+  - `anthropics/skills` — 공식 공개 Skill 구조와 문서화 패턴.
+  - `github/awesome-copilot` — Agent·Prompt·Instruction 사례와 선별 기준.
+- [ ] 후보 저장소를 `git clone --depth 1`로 임시 디렉터리에 받아 실행하지 않고 구조만 검토합니다.
+- [ ] Agent, Skill, Prompt, Hook, script의 역할·의존성·권한 범위·외부 통신·시크릿 처리 여부를 확인합니다.
+- [ ] 각 저장소의 license 파일, 저작권 고지, commit SHA, 조사일, 적용 범위를 기록합니다. 라이선스가 불명확한 자료는 복사하지 않습니다.
+- [ ] 현재 `kiro/agents/`, `kiro/skills/`, `kiro/prompts/`와 비교해 중복·충돌·누락·불필요한 복잡성을 기록합니다.
+- [ ] 보안·신뢰성·재현성·Kiro 호환성을 검토한 뒤 적용할 패턴만 선택합니다. 저장소 전체를 무조건 복사하지 않습니다.
+- [ ] 선택한 개선 내용을 현재 저장소의 Agent·Skill·Prompt에 반영하고 원본 저장소 링크와 출처를 문서화합니다.
+- [ ] 외부 저장소 코드를 실행하거나 `$HOME/.kiro`에 적용하기 전에 dry-run, 백업, 롤백, Markdown·JSON·Git 검증을 수행합니다.
+- [ ] 외부 후보 조사 및 반영 후 `@skill-review`를 실행합니다.
+
 ## 4. 검증
 
 clone 저장소 루트에서 실행합니다.
@@ -184,6 +204,11 @@ clone 저장소 변경은 변경 파일을 먼저 확인한 뒤 해당 파일만
 
 - [`_reference/INDEX.md`](_reference/INDEX.md) — Agent Skill 참고 문서 색인.
 - [`USER_TODO.md`](USER_TODO.md) — 최초 Kiro Skill 적용 작업.
+- [`addyosmani/agent-skills`](https://github.com/addyosmani/agent-skills) — Agent·Skill 사례 조사 대상. — ★★★☆☆
+- [`obra/superpowers`](https://github.com/obra/superpowers) — 개발 Agent Skill 워크플로우 조사 대상. — ★★★☆☆
+- [`mattpocock/skills`](https://github.com/mattpocock/skills) — 재사용 Skill 구성 조사 대상. — ★★★☆☆
+- [`anthropics/skills`](https://github.com/anthropics/skills) — 공식 Skill 구조 조사 대상. — ★★★☆☆
+- [`github/awesome-copilot`](https://github.com/github/awesome-copilot) — Agent·Prompt 사례 조사 대상. — ★★★☆☆
 
 ---
 
