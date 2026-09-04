@@ -111,7 +111,7 @@ system-engineer
 |--------------------------------------------------------------------|----------------------|
 | `file://~/.kiro/.local/memory.md`                                  | 세션 간 영구 기억    |
 | `file://~/.kiro/markdown/STYLE.md`                                 | Markdown 작성 규칙   |
-| `file:///root/32_system-engineering-resources/_reference/INDEX.md` | 기술 레퍼런스 인덱스 |
+| `<clone-root>/_reference/INDEX.md` | 기술 레퍼런스 인덱스 |
 
 ---
 

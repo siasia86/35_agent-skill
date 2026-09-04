@@ -72,4 +72,4 @@ system-engineer
 | 파일                                                               | 용도                 |
 |--------------------------------------------------------------------|----------------------|
 | `file://~/.kiro/markdown/STYLE.md`                                 | Markdown 작성 규칙   |
-| `file:///root/32_system-engineering-resources/_reference/INDEX.md` | 기술 레퍼런스 인덱스 |
+| `<clone-root>/_reference/INDEX.md` | 기술 레퍼런스 인덱스 |

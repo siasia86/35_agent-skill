@@ -26,6 +26,9 @@ AI Agent skills repo. AI 도구별 공개 자료 미러를 관리합니다.
 
 - [Kiro 미러](kiro/README.md): `~/.kiro/`에서 허용된 자료만 보존합니다.
 - [Claude 미러](claude/README.md): Claude 자료 추가를 위한 예약 영역입니다.
+- [초기 적용 작업](USER_TODO.md): clone 후 Kiro Agent Skill을 적용하는 작업 목록입니다.
+- [업데이트 작업](UPDATE_TODO.md): 참고 문서를 기반으로 Skill·Agent·Prompt를 고도화하는 작업 목록입니다.
+- [Agent 참고 문서](_reference/INDEX.md): 업데이트에 사용하는 참고 문서 색인입니다.
 
 ## 3. 운영 원칙
 
@@ -51,6 +54,6 @@ gitleaks detect --source . --no-git --no-banner
 
 **작성일**: 2026-08-31
 
-**마지막 업데이트**: 2026-08-31
+**마지막 업데이트**: 2026-09-04
 
 © 2026 siasia86. Licensed under CC BY 4.0.

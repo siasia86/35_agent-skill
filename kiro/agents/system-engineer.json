@@ -37,7 +37,6 @@
     "skill://doubt-driven-infra",
     "skill://shipping-checklist",
     "file://~/.kiro/markdown/STYLE.md",
-    "file:///root/32_system-engineering-resources/_reference/INDEX.md",
     "skill://bash-script-template",
     "skill://python-script-template",
     "skill://testing-guide",
