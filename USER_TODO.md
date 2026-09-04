@@ -1,6 +1,6 @@
 # USER TODO
 
-`35_agent-skill`을 clone한 사용자가 Kiro Agent에게 로컬 적용 작업을 지시할 때 사용하는 작업 목록입니다.
+`35_agent-skill`을 clone한 사용자가 README.md §5의 Kiro 사전 적용을 완료한 뒤, 적용된 Kiro Agent에게 로컬 작업을 지시할 때 사용하는 작업 목록입니다.
 
 > 이 문서를 읽은 Agent는 미완료 TODO를 순서대로 확인합니다. 파일 변경이나 삭제 전에 현재 상태, 변경 범위, 롤백 방법을 먼저 제시합니다.
 
@@ -17,22 +17,29 @@
 
 ## 1. 사용 방법
 
-저장소를 clone한 뒤 Kiro Agent에게 다음과 같이 지시합니다.
+README.md §5의 순서를 먼저 실행합니다.
+
+1. Git clone 및 clone 저장소 상태 확인.
+2. `$HOME/.kiro` 백업, `rsync --dry-run` 검토, Kiro Agent·Skill 파일 사전 적용.
+3. Kiro CLI 실행 및 `system-engineer` Agent 전환.
+4. 아래 지시로 미완료 TODO 실행.
+
+Kiro CLI에서 다음과 같이 지시합니다.
 
 ```text
 USER_TODO.md를 읽고 미완료 TODO를 순서대로 실행합니다.
+README.md §5에 따라 Kiro Agent·Skill이 이미 $HOME/.kiro에 적용되었는지 먼저 확인합니다.
 각 단계 전에 현재 상태와 변경 범위를 확인하고, 삭제 또는 덮어쓰기 작업에는 롤백 방법을 제시합니다.
 작업 후 검증 결과를 USER_TODO.md의 완료 기록에 반영합니다.
 ```
 
 기본 작업 순서는 다음과 같습니다.
 
-1. 저장소와 대상 경로의 현재 상태 확인.
-2. Kiro 파일 적용 명령의 `dry-run` 결과 확인.
-3. Kiro Agent를 `system-engineer`로 전환.
-4. 로컬 실행 환경에만 필요한 문서 정리.
-5. Skill 내 누락 파일 참조 정리.
-6. 검증 및 완료 기록 작성.
+1. 사전 적용된 Kiro 파일과 대상 경로의 현재 상태 확인.
+2. Kiro Agent를 `system-engineer`로 전환.
+3. 현재 사용자 Kiro Skill의 로컬 정리.
+4. Skill 내 누락 파일 참조 정리.
+5. 검증 및 완료 기록 작성.
 
 ## 2. 작업 전 조건
 
@@ -45,18 +52,16 @@ USER_TODO.md를 읽고 미완료 TODO를 순서대로 실행합니다.
 
 ## 3. TODO 목록
 
-### 3-1. Kiro Agent Skill 파일 적용
+### 3-1. 사전 적용된 Kiro Agent·Skill 확인
+
+Kiro Agent·Skill 복사는 README.md §5의 shell 절차로 Kiro CLI 실행 전에 완료해야 합니다. 이 TODO 단계에서는 복사를 다시 수행하지 않고 적용 결과만 확인합니다.
 
 - [ ] clone 경로와 Git 상태 확인.
-- [ ] `kiro/03_home-sjyun-kiro.sh` 실행 후 출력된 `rsync` 대상과 제외 목록 확인.
-- [ ] 현재 사용자의 `$HOME/.kiro` 기존 내용을 백업.
-- [ ] 검토한 명령으로 Kiro 파일을 적용.
-- [ ] 적용 후 대상 파일과 `kiro/manifests/kiro_files.txt`의 범위를 비교.
+- [ ] 현재 사용자의 `$HOME/.kiro`가 사전 백업되었는지 확인.
+- [ ] `$HOME/.kiro/agents/system-engineer.json`과 주요 Skill·Prompt 파일 존재 확인.
+- [ ] `kiro/manifests/kiro_files.txt`의 허용 범위와 대상 파일을 비교.
+- [ ] 원본 clone 디렉터리와 `$HOME/.kiro`의 변경 범위를 구분.
 
-```bash
-cd "$(git rev-parse --show-toplevel)"
-sudo bash kiro/03_home-sjyun-kiro.sh
-```
 
 ### 3-2. Kiro Agent 전환
 

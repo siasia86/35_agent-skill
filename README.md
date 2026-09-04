@@ -54,37 +54,27 @@ gitleaks detect --source . --no-git --no-banner
 
 ## 5. 활용
 
-저장소를 clone한 사용자는 Kiro Agent에게 TODO 문서를 순서대로 지시하고, 검토된 Agent·Skill·Prompt 파일만 현재 사용자의 `$HOME/.kiro/`에 복사합니다. clone 저장소와 실제 Kiro 실행 환경을 혼동하지 않습니다.
+저장소를 clone한 뒤 Kiro Agent·Skill을 먼저 현재 사용자의 `$HOME/.kiro/`에 적용합니다. 그 다음 Kiro CLI를 실행하고, 이미 적용된 Skill을 사용해 TODO를 순서대로 실행합니다. clone 저장소와 실제 Kiro 실행 환경을 혼동하지 않습니다.
 
-### Clone 후 AI 작업 지시
+### 5-1. Git clone
 
 ```bash
 git clone <repository-url> <clone-path>
 cd <clone-path>
-kiro-cli chat
+git status --short --branch
 ```
 
-Kiro CLI에서 먼저 초기 적용 작업을 지시합니다.
+Git clone 직후에는 Kiro CLI를 실행하지 않습니다. 먼저 clone 저장소의 `kiro/` 내용을 확인하고 로컬 Kiro 실행 환경을 준비합니다.
 
-```text
-USER_TODO.md를 읽고 미완료 TODO를 순서대로 실행합니다.
-각 단계 전에 현재 상태, 변경 범위, 롤백 방법을 출력합니다.
-Kiro Agent·Skill 파일을 적용하기 전에 rsync dry-run 결과와 백업 경로를 확인합니다.
-작업 후 검증 결과를 USER_TODO.md의 완료 기록에 반영합니다.
+### 5-2. Kiro Agent·Skill 사전 적용
+
+`kiro/03_home-sjyun-kiro.sh`는 clone 위치를 계산한 뒤 실제 복사 전에 실행할 `rsync` 명령을 출력합니다. 스크립트 자체가 `$HOME/.kiro`를 자동으로 덮어쓰지는 않습니다.
+
+```bash
+bash kiro/03_home-sjyun-kiro.sh
 ```
 
-초기 적용과 검증이 끝난 뒤 Agent·Skill·Prompt 개선 작업을 지시합니다.
-
-```text
-UPDATE_TODO.md와 _reference/INDEX.md를 읽고 미완료 TODO를 순서대로 실행합니다.
-외부 Agent·Skill 저장소는 라이선스, 보안, 유지보수 상태를 검토한 뒤 필요한 패턴만 반영합니다.
-각 단계 후 검증 결과와 변경 파일을 UPDATE_TODO.md의 완료 기록에 반영합니다.
-모든 TODO 완료 후 @skill-review를 실행합니다.
-```
-
-### rsync로 Agent·Skill 복사
-
-`kiro/03_home-sjyun-kiro.sh`는 clone 경로를 계산한 뒤 실제 복사 전에 실행할 `rsync` 명령을 출력합니다. 출력된 명령은 먼저 `dry-run`으로 확인하며, 스크립트 자체가 `$HOME/.kiro`를 자동으로 덮어쓰지는 않습니다.
+현재 `$HOME/.kiro`를 백업한 뒤 `rsync --dry-run` 결과의 대상·제외 목록·변경 파일을 확인합니다.
 
 ```bash
 REPO_ROOT="$(git rev-parse --show-toplevel)"
@@ -101,7 +91,7 @@ rsync -av --dry-run \
     "$SOURCE/" "$TARGET/"
 ```
 
-`rsync --dry-run`의 대상·제외 목록·변경 파일을 확인한 뒤에만 실제 복사를 수행합니다.
+변경 범위를 검토한 뒤에만 실제 복사를 수행합니다.
 
 ```bash
 rsync -av \
@@ -112,21 +102,47 @@ rsync -av \
     "$SOURCE/" "$TARGET/"
 ```
 
-대상 경로에 쓰기 권한이 없는 경우에만 동일한 명령 앞에 `sudo`를 사용합니다. 실제 적용 후 다음 항목을 확인합니다.
+대상 경로에 쓰기 권한이 없는 경우에만 동일한 `rsync` 명령 앞에 `sudo`를 사용합니다. 복사 후 `kiro/manifests/kiro_files.txt`와 실제 대상 파일 범위를 대조합니다.
 
-- `$HOME/.kiro/agents/`에 `system-engineer.json`이 존재하는지 확인.
-- `$HOME/.kiro/skills/`와 `$HOME/.kiro/prompts/`의 파일 범위를 clone 저장소와 비교.
-- Kiro CLI에서 `/agent swap system-engineer`를 실행.
-- Markdown·JSON·Bash·Git 검증을 다시 실행.
-- 문제가 발생하면 백업 경로로 `$HOME/.kiro`를 복원.
+### 5-3. Kiro 실행 및 TODO 순차 처리
 
-### 활용 시 안전 원칙
+Kiro Skill 적용이 끝난 뒤 Kiro CLI를 실행합니다.
 
-- clone 저장소의 기존 변경 사항과 미추적 파일을 먼저 보존합니다.
-- `$HOME/.kiro` 백업과 `rsync --dry-run` 없이 실제 복사를 수행하지 않습니다.
+```bash
+kiro-cli chat
+```
+
+Kiro CLI에서 Agent를 전환합니다.
+
+```text
+/agent swap system-engineer
+```
+
+이제 적용된 Agent·Skill을 사용해 TODO를 순서대로 실행합니다.
+
+```text
+USER_TODO.md를 읽고 미완료 TODO를 순서대로 실행합니다.
+Kiro Agent·Skill이 $HOME/.kiro에 사전 적용되었는지 먼저 확인합니다.
+각 단계 전에 현재 상태, 변경 범위, 롤백 방법을 출력합니다.
+작업 후 검증 결과를 USER_TODO.md의 완료 기록에 반영합니다.
+```
+
+초기 적용과 검증이 끝난 뒤 Agent·Skill·Prompt 개선 작업을 지시합니다.
+
+```text
+UPDATE_TODO.md와 _reference/INDEX.md를 읽고 미완료 TODO를 순서대로 실행합니다.
+외부 Agent·Skill 저장소는 라이선스, 보안, 유지보수 상태를 검토한 뒤 필요한 패턴만 반영합니다.
+각 단계 후 검증 결과와 변경 파일을 UPDATE_TODO.md의 완료 기록에 반영합니다.
+모든 TODO 완료 후 @skill-review를 실행합니다.
+```
+
+### 5-4. 사후 검증 및 롤백
+
+- `$HOME/.kiro/agents/`에 `system-engineer.json`이 존재하는지 확인합니다.
+- `$HOME/.kiro/skills/`와 `$HOME/.kiro/prompts/`의 파일 범위를 clone 저장소와 비교합니다.
+- Markdown·JSON·Bash·Git 검증을 다시 실행합니다.
+- 문제가 발생하면 사전 생성한 백업으로 `$HOME/.kiro`를 복원합니다.
 - 원본 clone 저장소가 아닌 `$HOME/.kiro`만 로컬 실행 환경으로 변경합니다.
-- `kiro/manifests/kiro_files.txt`의 허용 범위와 실제 복사 결과를 대조합니다.
-- 모든 TODO 완료 후 `@skill-review`와 최종 검증을 실행합니다.
 
 ---
 

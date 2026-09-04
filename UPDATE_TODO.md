@@ -17,19 +17,39 @@ Git clone 후 `35-agent-skill`의 참고 문서를 읽고, 현재 Agent·Skill·
 
 ## 1. 실행 방법
 
-저장소를 clone한 뒤 Kiro CLI에서 다음과 같이 지시합니다.
+저장소를 clone한 뒤 README.md §5의 순서를 먼저 실행합니다. Kiro CLI를 실행하기 전에 clone 저장소의 `kiro/` 파일을 `$HOME/.kiro/`에 백업·dry-run·rsync 순서로 사전 적용합니다.
 
 ```bash
 git clone <repository-url> <clone-path>
 cd <clone-path>
+git status --short --branch
+bash kiro/03_home-sjyun-kiro.sh
+```
+
+Kiro Agent·Skill 사전 적용이 끝난 뒤 Kiro CLI를 실행합니다.
+
+```bash
 kiro-cli chat
 ```
 
+Kiro CLI에서 다음과 같이 지시합니다.
+
 ```text
+/agent swap system-engineer
 UPDATE_TODO.md와 _reference/INDEX.md를 읽고 미완료 TODO를 순서대로 실행합니다.
+Kiro Agent·Skill이 $HOME/.kiro에 사전 적용되었는지 먼저 확인합니다.
 각 단계 전에 현재 상태와 변경 범위, 롤백 방법을 출력합니다.
 작업 후 검증 결과와 변경 파일을 완료 기록에 반영합니다.
 ```
+
+실행 순서는 다음과 같습니다.
+
+1. Git clone 및 clone 저장소 상태 확인.
+2. `$HOME/.kiro` 백업, `rsync --dry-run` 검토, Agent·Skill·Prompt 사전 적용.
+3. Kiro CLI 실행 및 `system-engineer` Agent 전환.
+4. `USER_TODO.md`의 초기 적용 결과 확인과 로컬 정리 실행.
+5. `UPDATE_TODO.md`의 Agent·Skill·Prompt 개선 실행.
+6. 검증과 `@skill-review` 실행.
 
 작업 대상은 두 영역으로 구분합니다.
 
@@ -97,14 +117,16 @@ find "$HOME/.kiro" -maxdepth 3 -type f -print 2>/dev/null | sort
 - [ ] Agent 간 역할 중복과 우선순위 충돌을 정리.
 - [ ] JSON 문법과 파일명·Agent 이름의 일관성을 검증.
 
-### 3-5. 로컬 실행 환경 적용
+### 3-5. 사전 적용 결과 확인 및 로컬 실행 환경 검증
 
-- [ ] 변경한 clone 저장소 파일을 먼저 검증.
-- [ ] `kiro/03_home-sjyun-kiro.sh`의 대상 경로와 `rsync` 제외 목록 확인.
-- [ ] `$HOME/.kiro` 백업을 확인한 뒤 변경 사항을 적용.
+- [ ] README.md §5의 shell bootstrap이 Kiro CLI 실행 전에 완료되었는지 확인.
+- [ ] `kiro/03_home-sjyun-kiro.sh`의 clone 경로와 `rsync` 제외 목록 확인.
+- [ ] `$HOME/.kiro` 백업 경로와 적용 결과를 확인.
+- [ ] `kiro/manifests/kiro_files.txt`와 `$HOME/.kiro`의 파일 범위를 비교.
 - [ ] Kiro CLI에 접속하고 `/agent swap system-engineer`를 실행.
 - [ ] 변경된 Skill이 실제 Agent 응답에 반영되는지 확인.
 - [ ] 원본 clone 저장소와 `$HOME/.kiro`의 변경 범위를 비교.
+
 
 
 ### 3-6. 외부 Agent·Skill 저장소 조사 및 선별
