@@ -10,14 +10,15 @@ echo "# rsync --dry-run mode #"
 echo  "rsync -av /home/${WHO01}/.kiro/ /root/sj_del/00_default/.kiro/${WHO01}/ --exclude .cli_bash_history --exclude sessions --exclude *.swp -n"
 echo "============================================="
 
+echo "rsync -av /home/${WHO01}/.kiro/ /root/sj_del/00_default/.kiro/${WHO01}/ --exclude .cli_bash_history --exclude sessions --exclude settings --exclude *.swp  -n"
 rsync -av /home/${WHO01}/.kiro/ /root/sj_del/00_default/.kiro/${WHO01}/ --exclude .cli_bash_history --exclude sessions --exclude settings --exclude *.swp  -n
 for ((i=1;i<=10;i++)) ; do echo "#####  ${i}  #####" ; sleep 1 ; done
 rsync -av /home/${WHO01}/.kiro/ /root/sj_del/00_default/.kiro/${WHO01}/ --exclude .cli_bash_history --exclude sessions --exclude settings --exclude *.swp
 
-echo "rsync --dry-run"
-rsync -av /home/${WHO01}/.kiro/ /root/35_agent-skill/kiro/  --exclude .cli_bash_history --exclude sessions --exclude .local --exclude *.swp --exclude 01_home-sjyun-kiro.sh --exclude settings -n
+echo "rsync -av /home/${WHO01}/.kiro/ /root/35_agent-skill/kiro/  --exclude .cli_bash_history --exclude sessions --exclude .local --exclude *.swp --exclude logs --exclude settings -n"
+rsync -av /home/${WHO01}/.kiro/ /root/35_agent-skill/kiro/  --exclude .cli_bash_history --exclude sessions --exclude .local --exclude *.swp --exclude logs --exclude settings --exclude session-index -n
 for ((i=1;i<=5;i++)) ; do echo "#####  ${i}  #####" ; sleep 1 ; done
-rsync -av /home/${WHO01}/.kiro/ /root/35_agent-skill/kiro/  --exclude .cli_bash_history --exclude sessions --exclude .local --exclude *.swp --exclude 01_home-sjyun-kiro.sh --exclude settings
+rsync -av /home/${WHO01}/.kiro/ /root/35_agent-skill/kiro/  --exclude .cli_bash_history --exclude sessions --exclude .local --exclude *.swp --exclude logs --exclude settings --exclude session-index
 
 
 ##################################################

@@ -113,7 +113,7 @@ sudo python3 -c "import py_compile; py_compile.compile('/root/sj_del/json_mask.p
 
 ## 10. Bash script common rules
 
-- Use the output format `[N/M] check_name` followed by `✓`, `✗`, or `WARN`.
+- Use the output format `[N/M] check_name` followed by `✓`, `✗`, or `⚠`.
 - Run `bash -n` after modifying either Bash script.
 - Load shared settings from `/root/sj_del/security_check.conf`.
 - Exclude the `.kiro` directory from scans.

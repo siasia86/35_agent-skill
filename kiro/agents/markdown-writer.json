@@ -32,6 +32,7 @@
     "skill://md-link-check",
     "skill://code-review",
     "file://~/.kiro/markdown/STYLE.md",
+    "file:///root/32_system-engineering-resources/_reference/INDEX.md",
     "skill://bash-script-template",
     "skill://python-script-template",
     "skill://security-tools",
