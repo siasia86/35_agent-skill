@@ -39,6 +39,7 @@ description: Defines the mandatory footer template for applicable Markdown docum
 - `_reference/` 디렉토리 내 파일은 푸터를 붙이지 않습니다
 - `_reference/` 파일은 frontmatter(`sources`, `last_checked`)로 버전 관리합니다
 - `~/.kiro/skills/**/SKILL.md` 에이전트 skill 정의 파일은 푸터를 붙이지 않습니다
+- `~/.kiro/skills/README.md` skill 목록 파일은 통계·푸터를 붙이지 않습니다
 - `SKILL.md`는 frontmatter와 운영 지침을 우선하며, README 통계 배지·작성일·저작권 푸터를 포함하지 않습니다
 
 ## 날짜 업데이트 규칙 (필수)
