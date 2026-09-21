@@ -1,0 +1,236 @@
+[
+  {
+    "source": "kiro/skills/bash-script-template/SKILL.md",
+    "target": ".agents/skills/bash-script-template/SKILL.md",
+    "sha256": "5156328e4a35f9765907910f0431f65b71a9a2bd0c86982cc7a7311465fdac2c",
+    "conversion": "skill URI and Codex asset paths only; custom rules preserved"
+  },
+  {
+    "source": "kiro/skills/code-review/SKILL.md",
+    "target": ".agents/skills/code-review/SKILL.md",
+    "sha256": "4517d03039faec289e326ca452de1f62e8434d7c2bb9dec7c03bb05ac99b47d6",
+    "conversion": "skill URI and Codex asset paths only; custom rules preserved"
+  },
+  {
+    "source": "kiro/skills/debugging-and-recovery/SKILL.md",
+    "target": ".agents/skills/debugging-and-recovery/SKILL.md",
+    "sha256": "10140924f539da68922ce66acd54d6d30e596059f377bdeeeecbd8e26400b11e",
+    "conversion": "skill URI and Codex asset paths only; custom rules preserved"
+  },
+  {
+    "source": "kiro/skills/doubt-driven-infra/SKILL.md",
+    "target": ".agents/skills/doubt-driven-infra/SKILL.md",
+    "sha256": "f56cbf7786e794ee886bb5d7a86abaa568e0bd4db194eef275f0c62bf65b622c",
+    "conversion": "skill URI and Codex asset paths only; custom rules preserved"
+  },
+  {
+    "source": "kiro/skills/git-commit-rule/SKILL.md",
+    "target": ".agents/skills/git-commit-rule/SKILL.md",
+    "sha256": "9fecb39349ea2536bcb781cd6c551541dc6839cad32e454bd3d037d2078437c5",
+    "conversion": "skill URI and Codex asset paths only; custom rules preserved"
+  },
+  {
+    "source": "kiro/skills/incremental-change/SKILL.md",
+    "target": ".agents/skills/incremental-change/SKILL.md",
+    "sha256": "73abe0ab80accaae28ff8a628e16412255867aaacf063d2ee10bddc34b661d86",
+    "conversion": "skill URI and Codex asset paths only; custom rules preserved"
+  },
+  {
+    "source": "kiro/skills/kiro-lock/SKILL.md",
+    "target": ".agents/skills/kiro-lock/SKILL.md",
+    "sha256": "207914bf93b04e9a201297def12cf0a0c512bd4fb10ef20c86e8a5ba57c10553",
+    "conversion": "skill URI and Codex asset paths only; custom rules preserved"
+  },
+  {
+    "source": "kiro/skills/md-link-check/SKILL.md",
+    "target": ".agents/skills/md-link-check/SKILL.md",
+    "sha256": "67bc59e6ca5432cd17ce0d13077cbaeaa51cc00c9c5764c8565323869d85aa05",
+    "conversion": "skill URI and Codex asset paths only; custom rules preserved"
+  },
+  {
+    "source": "kiro/skills/planning-and-breakdown/SKILL.md",
+    "target": ".agents/skills/planning-and-breakdown/SKILL.md",
+    "sha256": "11ca00491de7ace22d02b633db071d7c46233e8678b58d3a6ab1ed223694925a",
+    "conversion": "skill URI and Codex asset paths only; custom rules preserved"
+  },
+  {
+    "source": "kiro/skills/python-script-template/SKILL.md",
+    "target": ".agents/skills/python-script-template/SKILL.md",
+    "sha256": "8691f514f0ac0530807fd0cffdf38e4ad4fb7e66019629874bb360df04d219d9",
+    "conversion": "skill URI and Codex asset paths only; custom rules preserved"
+  },
+  {
+    "source": "kiro/skills/readme-template/SKILL.md",
+    "target": ".agents/skills/readme-template/SKILL.md",
+    "sha256": "754dd7ea3b7be8e968802990ac8e63a2239285567d5c6c0ff45d935e8abc5a9e",
+    "conversion": "skill URI and Codex asset paths only; custom rules preserved"
+  },
+  {
+    "source": "kiro/skills/repo-governance/SKILL.md",
+    "target": ".agents/skills/repo-governance/SKILL.md",
+    "sha256": "ec70916e7a09db1f82c4c4882292b9cb1d1ed8d72ba7ed27008a366eb9e95e17",
+    "conversion": "skill URI and Codex asset paths only; custom rules preserved"
+  },
+  {
+    "source": "kiro/skills/security-tools/SKILL.md",
+    "target": ".agents/skills/security-tools/SKILL.md",
+    "sha256": "d61f66ef4cae5d85b9b80a24167b39340ac5be299e8d602fe380644ac3579ae3",
+    "conversion": "skill URI and Codex asset paths only; custom rules preserved"
+  },
+  {
+    "source": "kiro/skills/shipping-checklist/SKILL.md",
+    "target": ".agents/skills/shipping-checklist/SKILL.md",
+    "sha256": "f6a291a8f7119b888daabe2491917b380ca5c84fa9dfc83966c4a5e4d899effd",
+    "conversion": "skill URI and Codex asset paths only; custom rules preserved"
+  },
+  {
+    "source": "kiro/skills/spec-driven-infra/SKILL.md",
+    "target": ".agents/skills/spec-driven-infra/SKILL.md",
+    "sha256": "e102ac0892303423279dc10afa24fbd7fa939042205776586b5fa8cd4d9419b2",
+    "conversion": "skill URI and Codex asset paths only; custom rules preserved"
+  },
+  {
+    "source": "kiro/skills/testing-guide/SKILL.md",
+    "target": ".agents/skills/testing-guide/SKILL.md",
+    "sha256": "5bb3a1be05d470a8f58d1459bd6d9a31c85ba00de81ac1e9fb8359c814028fda",
+    "conversion": "skill URI and Codex asset paths only; custom rules preserved"
+  },
+  {
+    "source": "kiro/skills/using-skills/SKILL.md",
+    "target": ".agents/skills/using-skills/SKILL.md",
+    "sha256": "1ded614abc90d43868e43306e3381af04948168f5e419bc9cd004e67daa0be75",
+    "conversion": "skill URI and Codex asset paths only; custom rules preserved"
+  },
+  {
+    "source": "kiro/skills/work-rules/SKILL.md",
+    "target": ".agents/skills/work-rules/SKILL.md",
+    "sha256": "a940ad7376aecac56a873671a3f77250fb6d4f6deb77598810bdfefd1420ed20",
+    "conversion": "skill URI and Codex asset paths only; custom rules preserved"
+  },
+  {
+    "source": "kiro/skills/zircon-readme-policy/SKILL.md",
+    "target": ".agents/skills/zircon-readme-policy/SKILL.md",
+    "sha256": "ad8f3b767ac27577365701cb6a026041b57080d992a2aea1de16db43510732c7",
+    "conversion": "skill URI and Codex asset paths only; custom rules preserved"
+  },
+  {
+    "source": "kiro/prompts/ansible-convert.md",
+    "target": "prompts/ansible-convert.md",
+    "sha256": "aafed97fd2f80451bb12e00bb2da3f2416f2a22472704c0674acfe71841d3b89",
+    "conversion": "manual prompt example; placeholders require user substitution"
+  },
+  {
+    "source": "kiro/prompts/ansible-create.md",
+    "target": "prompts/ansible-create.md",
+    "sha256": "43e6955f109a8d1cae74162e88e24e16e19d10a175c24c3729210c7b7d84e01c",
+    "conversion": "manual prompt example; placeholders require user substitution"
+  },
+  {
+    "source": "kiro/prompts/ansible-debug.md",
+    "target": "prompts/ansible-debug.md",
+    "sha256": "839f277ccbba0e4f7326d92efe1fd4fcf1ef9cf9e55dc339ac4e10dedff97e4e",
+    "conversion": "manual prompt example; placeholders require user substitution"
+  },
+  {
+    "source": "kiro/prompts/ansible-review.md",
+    "target": "prompts/ansible-review.md",
+    "sha256": "bfd6e87037a1e61cf209dc5ae9b8659fb3c81056aeae9f4256cb35fa2b2d2e13",
+    "conversion": "manual prompt example; placeholders require user substitution"
+  },
+  {
+    "source": "kiro/prompts/code-review.md",
+    "target": "prompts/code-review.md",
+    "sha256": "132c522691f327e81aded3a93ae5e96fe57028aed87895082982dea007b8e59f",
+    "conversion": "manual prompt example; placeholders require user substitution"
+  },
+  {
+    "source": "kiro/prompts/doc-consistency-ansible-review.md",
+    "target": "prompts/doc-consistency-ansible-review.md",
+    "sha256": "08c6d3a8afd38206ae9d61ddb7db3483700e64d565cecdc96055d867282c25c9",
+    "conversion": "manual prompt example; placeholders require user substitution"
+  },
+  {
+    "source": "kiro/prompts/doc-consistency-review.md",
+    "target": "prompts/doc-consistency-review.md",
+    "sha256": "fe168f782bc3a20806fdb30e82af86025ea0f6704d8068eb2e746edab1831f49",
+    "conversion": "manual prompt example; placeholders require user substitution"
+  },
+  {
+    "source": "kiro/prompts/fact-check.md",
+    "target": "prompts/fact-check.md",
+    "sha256": "49e2592294248371f5d82f3723bcca64beb0650a8038d504109e66a34ac2aa59",
+    "conversion": "manual prompt example; placeholders require user substitution"
+  },
+  {
+    "source": "kiro/prompts/md-review.md",
+    "target": "prompts/md-review.md",
+    "sha256": "d7fdae19094c5732bb678fe74b2325269e68e7b391c696d312ced4f4db05335a",
+    "conversion": "manual prompt example; placeholders require user substitution"
+  },
+  {
+    "source": "kiro/prompts/py-review.md",
+    "target": "prompts/py-review.md",
+    "sha256": "06baa1fcf000d63a23c7679de69cd695f95e607416ada9a13cdb3bba204d3cdb",
+    "conversion": "manual prompt example; placeholders require user substitution"
+  },
+  {
+    "source": "kiro/prompts/sh-review.md",
+    "target": "prompts/sh-review.md",
+    "sha256": "7839aedec9b7262fe87911ca0a42dfe8532ee034df34cf465870ade3aa26e085",
+    "conversion": "manual prompt example; placeholders require user substitution"
+  },
+  {
+    "source": "kiro/prompts/skill-review.md",
+    "target": "prompts/skill-review.md",
+    "sha256": "b0a8df71e7e7e4cc605c745b7c2efbf954e988307e59e4a9c6d32ff3c4d88371",
+    "conversion": "manual prompt example; placeholders require user substitution"
+  },
+  {
+    "source": "kiro/prompts/vagrant-review.md",
+    "target": "prompts/vagrant-review.md",
+    "sha256": "78ada546c15d73e802eb60d67a5c30889a9eff4c175352c6e324f65beeb97208",
+    "conversion": "manual prompt example; placeholders require user substitution"
+  },
+  {
+    "source": "kiro/agents/code-reviewer.json",
+    "target": ".codex/agents/code-reviewer.toml",
+    "sha256": "233c5b50bd4a5b05b51b69faf8c3e4c7878cb37b1d29119b1a2951808e39abde",
+    "conversion": "prompt preserved; resource paths mapped; model inherited; tools/hooks tracked in ISSUE.md"
+  },
+  {
+    "source": "kiro/agents/doc-reviewer.json",
+    "target": ".codex/agents/doc-reviewer.toml",
+    "sha256": "063f51df9a3fc4a6ec39b623174c76ad329dee36a1e2d3f53f3fd8bddb9abf71",
+    "conversion": "prompt preserved; resource paths mapped; model inherited; tools/hooks tracked in ISSUE.md"
+  },
+  {
+    "source": "kiro/agents/git-manager.json",
+    "target": ".codex/agents/git-manager.toml",
+    "sha256": "986a4c13e94c177f311de0f4d0486c5854e95b511217c28dc615e50526ddf3b8",
+    "conversion": "prompt preserved; resource paths mapped; model inherited; tools/hooks tracked in ISSUE.md"
+  },
+  {
+    "source": "kiro/agents/markdown-writer.json",
+    "target": ".codex/agents/markdown-writer.toml",
+    "sha256": "d476d088f66d1323bbe0b256c8c837dbea1fb145bd8ac12db297f3488ce47c80",
+    "conversion": "prompt preserved; resource paths mapped; model inherited; tools/hooks tracked in ISSUE.md"
+  },
+  {
+    "source": "kiro/agents/se-lite.json",
+    "target": ".codex/agents/se-lite.toml",
+    "sha256": "1de45c2a55c3a81042b8bdaf27c8d559eeabbc7dd4523388d725dea5056ecb63",
+    "conversion": "prompt preserved; resource paths mapped; model inherited; tools/hooks tracked in ISSUE.md"
+  },
+  {
+    "source": "kiro/agents/security-auditor.json",
+    "target": ".codex/agents/security-auditor.toml",
+    "sha256": "a14c954cd623288b52b41e3a80dbff15ec0cb7ac00731cb6b87b0302862b9165",
+    "conversion": "prompt preserved; resource paths mapped; model inherited; tools/hooks tracked in ISSUE.md"
+  },
+  {
+    "source": "kiro/agents/system-engineer.json",
+    "target": ".codex/agents/system-engineer.toml",
+    "sha256": "4bb344c114d8933f9b2fd1cc03da20445f0ba4e3ef90b0d48a2bc396492771eb",
+    "conversion": "prompt preserved; resource paths mapped; model inherited; tools/hooks tracked in ISSUE.md"
+  }
+]
