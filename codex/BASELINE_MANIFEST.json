@@ -1,0 +1,295 @@
+{
+  "schema_version": 1,
+  "status": "baseline-copy-not-a-release",
+  "recorded_on": "2026-09-21",
+  "source_directory": "gpt",
+  "source_commit": "51ae244e7a93e299dd7c8e67e03291584e0ff269",
+  "source_worktree_clean": true,
+  "source_worktree_check": {
+    "scope": "gpt/ only; repository-wide TODO.md was already modified",
+    "phase": "before initial copy on recorded_on",
+    "command": "git -c safe.directory=/root/35_agent-skill status --porcelain -- gpt",
+    "output_empty": true
+  },
+  "destination_directory": "codex",
+  "initial_copy_verification": {
+    "phase": "after rsync; before adding this manifest or editing destination files",
+    "command": "diff -qr gpt codex",
+    "exit_code": 0,
+    "file_count": 62,
+    "meaning": "all initial destination file contents equal source_sha256; not a current release checksum"
+  },
+  "post_copy_changes": [
+    {
+      "path": "AGENTS.md",
+      "reason": "Distribution development scope replaces automatic loading of all legacy rules; original remains in gpt."
+    },
+    {
+      "path": "README.md",
+      "reason": "Separate installable minimal payload from preserved source assets and historical records."
+    }
+  ],
+  "hash_algorithm": "sha256",
+  "excluded_patterns": [
+    "*.swp",
+    "*.swo",
+    "*.tmp",
+    "*.log",
+    "*~",
+    ".local/",
+    "sessions/",
+    "auth.json"
+  ],
+  "excluded_paths": [],
+  "file_count": 62,
+  "files": [
+    {
+      "path": ".agents/skills/ansible-review/SKILL.md",
+      "source_sha256": "6fea3ffabb8b8bf5cb54bcfd7641a6e3ed9fc080c39c274f1d98f4a31d0c727a"
+    },
+    {
+      "path": ".agents/skills/bash-script-template/SKILL.md",
+      "source_sha256": "1c226bc1cbacad0e5ea447876e77104136393a08e35d7e0dc9ab7f6e51a1c797"
+    },
+    {
+      "path": ".agents/skills/code-review/SKILL.md",
+      "source_sha256": "4517d03039faec289e326ca452de1f62e8434d7c2bb9dec7c03bb05ac99b47d6"
+    },
+    {
+      "path": ".agents/skills/debugging-and-recovery/SKILL.md",
+      "source_sha256": "f9883d3b95706550276e968e8a3262938a2cb8df08b0e17420b5a5c83775ea4f"
+    },
+    {
+      "path": ".agents/skills/doubt-driven-infra/SKILL.md",
+      "source_sha256": "f56cbf7786e794ee886bb5d7a86abaa568e0bd4db194eef275f0c62bf65b622c"
+    },
+    {
+      "path": ".agents/skills/fact-check/SKILL.md",
+      "source_sha256": "4773ac949d36de24f48270615d8f5cb5cc0fc9d75c505d1063929879e0a7de06"
+    },
+    {
+      "path": ".agents/skills/git-commit-rule/SKILL.md",
+      "source_sha256": "9fecb39349ea2536bcb781cd6c551541dc6839cad32e454bd3d037d2078437c5"
+    },
+    {
+      "path": ".agents/skills/git-release/SKILL.md",
+      "source_sha256": "011d1680fbc9919574116831373872c21415b89d42c2c9f5fb3b589b03fae1a6"
+    },
+    {
+      "path": ".agents/skills/incremental-change/SKILL.md",
+      "source_sha256": "1dad501330dbf2f059ea2903c11c3609520bf77f78f29fa1bb9f791b0aca5eb7"
+    },
+    {
+      "path": ".agents/skills/kiro-lock/SKILL.md",
+      "source_sha256": "207914bf93b04e9a201297def12cf0a0c512bd4fb10ef20c86e8a5ba57c10553"
+    },
+    {
+      "path": ".agents/skills/markdown-review/SKILL.md",
+      "source_sha256": "b09774e326ef8b3941091fe7d4ccc3a2ccb32a5c6e720774b1088e779d66f3dc"
+    },
+    {
+      "path": ".agents/skills/md-link-check/SKILL.md",
+      "source_sha256": "67bc59e6ca5432cd17ce0d13077cbaeaa51cc00c9c5764c8565323869d85aa05"
+    },
+    {
+      "path": ".agents/skills/planning-and-breakdown/SKILL.md",
+      "source_sha256": "939fc14770dec56cfd1b9eca19ceae69e2ff1d1ed30736be822064f8acd4c0dc"
+    },
+    {
+      "path": ".agents/skills/python-script-template/SKILL.md",
+      "source_sha256": "77f05eb894230c3c7dc8fd1fd6f66c1ffebe9645ee617a1231a0649ee54eeb29"
+    },
+    {
+      "path": ".agents/skills/readme-template/SKILL.md",
+      "source_sha256": "7f88b54441dd892434e64e3633ada47a39ae26d940f8ddb4a58c05556945e8c1"
+    },
+    {
+      "path": ".agents/skills/repo-governance/SKILL.md",
+      "source_sha256": "ec70916e7a09db1f82c4c4882292b9cb1d1ed8d72ba7ed27008a366eb9e95e17"
+    },
+    {
+      "path": ".agents/skills/security-audit/SKILL.md",
+      "source_sha256": "3a7e1e35d30122de3f1550b16bd1bea342adc18c8e16aebf190d5d25fe40a182"
+    },
+    {
+      "path": ".agents/skills/security-tools/SKILL.md",
+      "source_sha256": "d61f66ef4cae5d85b9b80a24167b39340ac5be299e8d602fe380644ac3579ae3"
+    },
+    {
+      "path": ".agents/skills/shipping-checklist/SKILL.md",
+      "source_sha256": "63b9e1c5b28cfc9cb9e69221fe862512c02e919ff673237bf10140c62f85a98e"
+    },
+    {
+      "path": ".agents/skills/spec-driven-infra/SKILL.md",
+      "source_sha256": "e9819e0c13dc7dd0547136d0070f19c5d04700f4b50aa41f7cc411d0d5cdecd4"
+    },
+    {
+      "path": ".agents/skills/testing-and-verification/SKILL.md",
+      "source_sha256": "f8885c9f5179408b37b9ce6b27e0de256538fff08ab5bc8309bd1ec3a796ee14"
+    },
+    {
+      "path": ".agents/skills/testing-guide/SKILL.md",
+      "source_sha256": "e6819c934e76811739e51d5ebabd3e9269d72263acd05f53cafa90093248a305"
+    },
+    {
+      "path": ".agents/skills/using-skills/SKILL.md",
+      "source_sha256": "5e89660c5c3c6d255283731f365c3abc47c0009f96500053075a7fd4d981c348"
+    },
+    {
+      "path": ".agents/skills/work-rules/SKILL.md",
+      "source_sha256": "7f0255400e89873ef644034924b86c9c622604c4ccce20934889b8733fb4ccac"
+    },
+    {
+      "path": ".agents/skills/zircon-readme-policy/SKILL.md",
+      "source_sha256": "ad8f3b767ac27577365701cb6a026041b57080d992a2aea1de16db43510732c7"
+    },
+    {
+      "path": ".codex/agents/code-reviewer.toml",
+      "source_sha256": "32d6d28bcf439329ebc12d9442fbb5e24cbdaab008cfe61a21eacd1a89755795"
+    },
+    {
+      "path": ".codex/agents/doc-reviewer.toml",
+      "source_sha256": "70d8e6a309c801ecf729f011afd11a1332d4170501934fb51acc62e1c91cb905"
+    },
+    {
+      "path": ".codex/agents/docs-reviewer.toml",
+      "source_sha256": "0278a7a4b30ced1ef30a794c98ac774f8b937c27921223c5984fbdf9649b32bd"
+    },
+    {
+      "path": ".codex/agents/git-manager.toml",
+      "source_sha256": "94479a67fd6dec303391878c625c68bf9b07f2d29cc0fb472395317d25d38b7c"
+    },
+    {
+      "path": ".codex/agents/infra-worker.toml",
+      "source_sha256": "0194ff221361ef3f54f0645203b530a548d22e1f7fa5a742987dc2aede74fc14"
+    },
+    {
+      "path": ".codex/agents/markdown-writer.toml",
+      "source_sha256": "d0953a834ffbd81ac3e8c6adf910c4eda0fcd3c8b722037a09cfd24b1bf6bdea"
+    },
+    {
+      "path": ".codex/agents/reviewer.toml",
+      "source_sha256": "a15e0ce74bccfac02012f5f811e7f10040c9a119da3f8e91e85068d63c4c2197"
+    },
+    {
+      "path": ".codex/agents/se-lite.toml",
+      "source_sha256": "6ff331bf58b8185a7641e41b87b652baed59a2ac55b4ba2d4a7816c2213d4688"
+    },
+    {
+      "path": ".codex/agents/security-auditor.toml",
+      "source_sha256": "7d7268e6149255ed06c6b76e335aa75218d07770d4a9dd2e4e63c761646a4acf"
+    },
+    {
+      "path": ".codex/agents/system-engineer.toml",
+      "source_sha256": "febfcf99b845134cb9cedf1b8c796ca603fa01f04c88625f6a41b833912a38c4"
+    },
+    {
+      "path": "AGENTS.md",
+      "source_sha256": "ac782db717b9d842e0dad7d59bdff5ae91042e5f79a4aa86a0a12bf51962ed89"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "source_sha256": "e4d4c07ad0aeed6ad20631e2ddef84f71327686a06e7eeafe9d1decf68cad95b"
+    },
+    {
+      "path": "CODEX_MIGRATION_MAP.md",
+      "source_sha256": "5dd03a5bf7460831b3fd4c291e84e5ba6d2128b7110bbd57a78c462ad83b12ec"
+    },
+    {
+      "path": "CODEX_MIGRATION_TODO.md",
+      "source_sha256": "8ca11a7bbe9c31f316a447a71abfdbce37f8b1a0f32c9db2133a308c0e87cc09"
+    },
+    {
+      "path": "ISSUE.md",
+      "source_sha256": "1b8213024cc619394e3e5e83ed709da4476645f213db626549d741832e88202f"
+    },
+    {
+      "path": "markdown/INDEX.md",
+      "source_sha256": "aecb6f732ea573c77fb729feb4f05fe2d56941ea956bbaab9bb8ed0daa87981f"
+    },
+    {
+      "path": "markdown/STYLE.md",
+      "source_sha256": "21a40d9c4296e95ddab455b2c481b25ea62e334e04f6d129729e071f5078835f"
+    },
+    {
+      "path": "PLAN.md",
+      "source_sha256": "b372faa18ba19057d68f2cda70387b82606ba9870733ae73cb76c6e6792722c8"
+    },
+    {
+      "path": "policies/CODEX_COMPATIBILITY.md",
+      "source_sha256": "859460066b379aac80e1bf4d2f8512a09036004f7d38f2c18d8ec50efc362e15"
+    },
+    {
+      "path": "policies/DOCUMENT_WORKFLOW.md",
+      "source_sha256": "5ab7bb7d6a92dde9e80456c10bbe664f8f1ee3fd367e660dc07de863601ce086"
+    },
+    {
+      "path": "policies/MIGRATION_MANIFEST.json",
+      "source_sha256": "0981b7f5d4496423cc6d018638aa7288a4bf40064e9838d5cfa81d0a730ae062"
+    },
+    {
+      "path": "prompts/ansible-convert.md",
+      "source_sha256": "101ec141e0bd2e01285804be0d00bacaea35e42e85ecbcf77af7725e7d1cce69"
+    },
+    {
+      "path": "prompts/ansible-create.md",
+      "source_sha256": "43e6955f109a8d1cae74162e88e24e16e19d10a175c24c3729210c7b7d84e01c"
+    },
+    {
+      "path": "prompts/ansible-debug.md",
+      "source_sha256": "839f277ccbba0e4f7326d92efe1fd4fcf1ef9cf9e55dc339ac4e10dedff97e4e"
+    },
+    {
+      "path": "prompts/ansible-review.md",
+      "source_sha256": "2b6bc2045c46ddd96c970ea07bc09b53366233b62864eeaa417fbdc3fb1f5627"
+    },
+    {
+      "path": "prompts/code-review.md",
+      "source_sha256": "726e1ab4270ddfb621202baf7b523d17b7fa4161b5469bbc7280807ab22d77b4"
+    },
+    {
+      "path": "prompts/doc-consistency-ansible-review.md",
+      "source_sha256": "2e9da8c285019cd1e2d12a78467eb58bf120d8a56efc972fd1fd54099f84b16f"
+    },
+    {
+      "path": "prompts/doc-consistency-review.md",
+      "source_sha256": "f2514519e9dd4aa99776f4c1d66dcf2ba6d17a22a0fadee480325e8d2d591cff"
+    },
+    {
+      "path": "prompts/fact-check.md",
+      "source_sha256": "741eea4f75345612ef2d3dc64afff1545fab6425b57968ac9881d218db8978b6"
+    },
+    {
+      "path": "prompts/markdown-review.md",
+      "source_sha256": "35355f762ff55f8c2d080a8611db436119ac1a76b44e895753023095f110f96f"
+    },
+    {
+      "path": "prompts/md-review.md",
+      "source_sha256": "a200409fef740ce03fbfc1cb9c43f4b9f0e4f1e2ab850b30106de26e094f6aa3"
+    },
+    {
+      "path": "prompts/py-review.md",
+      "source_sha256": "abe64afce7d1010f6807f682f67e0b0dcc8d72df168502966b0156e2fa4bf67b"
+    },
+    {
+      "path": "prompts/sh-review.md",
+      "source_sha256": "f1c368a2d26aa019e9cc08edb1e4c50d28bc4c13541b8265255d38a2fe58d4ad"
+    },
+    {
+      "path": "prompts/skill-review.md",
+      "source_sha256": "c700db1558a46810617b193a3d5c1dbe48613fdc2bddddcb3cb23273bc6de8bb"
+    },
+    {
+      "path": "prompts/vagrant-review.md",
+      "source_sha256": "364ab1debfd4904942b2c88bb082c53bbd86d97a968f8dfb70242d36a0272759"
+    },
+    {
+      "path": "README.md",
+      "source_sha256": "629e85946127fece3b2a833bb7fbaa43b97a0e517054cb4d597c81ef0f9ad892"
+    },
+    {
+      "path": "TODO.md",
+      "source_sha256": "195453d1e7dfaabd2cb435cde61bb7f02550b561fe8fb6486693349644be4d55"
+    }
+  ]
+}
