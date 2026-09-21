@@ -224,7 +224,7 @@ clone 저장소 변경은 변경 파일을 먼저 확인한 뒤 해당 파일만
 
 ## 참고 자료
 
-- [`_reference/INDEX.md`](_reference/INDEX.md) — Agent Skill 참고 문서 색인.
+- [`../../_reference/INDEX.md`](../../_reference/INDEX.md) — Agent Skill 참고 문서 색인.
 - [`USER_TODO.md`](USER_TODO.md) — 최초 Kiro Skill 적용 작업.
 - [`addyosmani/agent-skills`](https://github.com/addyosmani/agent-skills) — Agent·Skill 사례 조사 대상. — ★★★☆☆
 - [`obra/superpowers`](https://github.com/obra/superpowers) — 개발 Agent Skill 워크플로우 조사 대상. — ★★★☆☆

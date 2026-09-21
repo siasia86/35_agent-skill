@@ -20,23 +20,27 @@ AI Agent skills repo. AI 도구별 공개 자료 미러를 관리합니다.
 
 ## 2. 구성
 
-| 디렉토리  | 역할                  | 원본·범위            |
-|-----------|-----------------------|----------------------|
-| `kiro/`   | Kiro 공개 미러        | `~/.kiro/` 허용 목록 |
-| `claude/` | Claude 공개 미러 예정 | 원본·허용 목록 미정  |
+| 디렉토리           | 역할                           | 원본·범위                        |
+|--------------------|--------------------------------|----------------------------------|
+| `kiro/`            | Kiro 공개 미러                 | `~/.kiro/` 허용 목록             |
+| `gpt/`             | GPT/Codex 자산                | `AGENTS.md`·`.agents/`·`.codex/` |
+| `claude/`          | Claude 공개 미러 예정          | 원본·허용 목록 미정              |
+| `agent-workflows/` | 도구별 최초 적용·업데이트 TODO | common·kiro·gpt·claude           |
+| `_reference/`      | Agent·Skill 개선 참고 문서     | 32 문서 복사본                   |
 
 - [Kiro 미러](kiro/README.md): `~/.kiro/`에서 허용된 자료만 보존합니다.
+- [GPT/Codex 자산](gpt/README.md): GPT/Codex Agent·Skill 자료를 관리합니다.
 - [Claude 미러](claude/README.md): Claude 자료 추가를 위한 예약 영역입니다.
-- [초기 적용 작업](USER_TODO.md): clone 후 Kiro Agent Skill을 적용하는 작업 목록입니다.
-- [업데이트 작업](UPDATE_TODO.md): 참고 문서를 기반으로 Skill·Agent·Prompt를 고도화하는 작업 목록입니다.
+- [Agent workflow](agent-workflows/README.md): 공통 및 도구별 TODO를 관리합니다.
 - [Agent 참고 문서](_reference/INDEX.md): 업데이트에 사용하는 참고 문서 색인입니다.
 
 ## 3. 운영 원칙
 
 - 저장소 정책은 특정 AI 도구의 실행 환경과 분리합니다.
-- 도구별 원본 경로와 동기화 허용 목록을 별도로 관리합니다.
+- 도구별 payload와 도구별 workflow를 분리합니다.
 - 개인 설정, 세션 상태, 자격증명, 내부 환경 정보는 공개 미러에 포함하지 않습니다.
 - 원본에서 공개 미러로의 동기화만 허용하며 자동 역동기화는 수행하지 않습니다.
+- 공통 workflow는 `agent-workflows/common/`에 두고 도구별 명령은 각 adapter에 둡니다.
 - 디렉토리 구조를 변경하면 이 `README.md`와 `CHANGELOG.md`를 함께 갱신합니다.
 
 ## 4. 검증
@@ -49,12 +53,28 @@ git diff --check
 gitleaks detect --source . --no-git --no-banner
 ```
 
-`kiro/`와 향후 `claude/`의 미러 문서는 원본 형식을 보존할 수 있으므로 일반 Markdown 스타일 검사에서 별도 예외로 관리합니다.
-
+도구별 payload를 변경한 경우 JSON·TOML·Bash·manifest 검증을 추가합니다. `kiro/`와 향후 `claude/`의 mirror 문서는 원본 형식을 보존할 수 있으므로 일반 Markdown 스타일 검사에서 별도 예외가 필요한지 확인합니다.
 
 ## 5. 활용
 
-저장소를 clone한 뒤 Kiro Agent·Skill을 먼저 현재 사용자의 `$HOME/.kiro/`에 적용합니다. 그 다음 Kiro CLI를 실행하고, 이미 적용된 Skill을 사용해 TODO를 순서대로 실행합니다. clone 저장소와 실제 Kiro 실행 환경을 혼동하지 않습니다.
+먼저 사용할 도구를 선택하고 `agent-workflows/`의 공통 TODO와 도구별 adapter TODO를 확인합니다. clone 저장소의 payload와 실제 사용자 runtime target을 혼동하지 않습니다.
+
+### 5-1. Git clone 및 상태 확인
+
+```bash
+git clone <repository-url> <clone-path>
+cd <clone-path>
+git status --short --branch
+```
+
+### 5-2. 도구별 workflow 선택
+
+- Kiro: [Kiro USER TODO](agent-workflows/kiro/USER_TODO.md)와 [Kiro UPDATE TODO](agent-workflows/kiro/UPDATE_TODO.md).
+- GPT/Codex: [GPT USER TODO](agent-workflows/gpt/USER_TODO.md)와 [GPT UPDATE TODO](agent-workflows/gpt/UPDATE_TODO.md).
+- Claude: [Claude USER TODO](agent-workflows/claude/USER_TODO.md)와 [Claude UPDATE TODO](agent-workflows/claude/UPDATE_TODO.md).
+- 공통 원칙: [공통 USER TODO](agent-workflows/common/USER_TODO.md)와 [공통 UPDATE TODO](agent-workflows/common/UPDATE_TODO.md).
+
+도구별 adapter가 정한 source·staging·runtime target과 backup·dry-run·rollback 절차를 먼저 수행합니다.
 
 ### 5-1. Git clone
 
