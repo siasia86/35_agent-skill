@@ -21,7 +21,7 @@
 - `planning-and-breakdown` — `.agents/skills/planning-and-breakdown/SKILL.md`; 이식: 인프라 작업 분해·완료 조건 절차; 개인.
 - `testing-and-verification` — `.agents/skills/testing-and-verification/SKILL.md`; 유지: `testing-guide`와 정책을 다시 읽는 진입점이므로 단독 payload 후보 아님; 프로젝트.
 - `testing-guide` — `.agents/skills/testing-guide/SKILL.md`; 제한: 외부 `file:///root/.../edge_case_testing.md` 참고가 있어 내용 확인 전 범위 제한; 프로젝트.
-- `using-skills` — `.agents/skills/using-skills/SKILL.md`; 이식: 작업 유형별 skill 선택 안내이나 Kiro lock 항목은 분리 필요; 개인.
+- `using-skills` — `.agents/skills/using-skills/SKILL.md`; 제한: Kiro lock 외에도 플랫폼·관리 정책을 빠뜨린 우선순위와 광범위한 skill 연쇄 적용 규칙을 수정해야 함; 개인 후보이나 현 상태 단독 설치 금지.
 
 ## Skills — 배포·저장소·보안
 
@@ -66,10 +66,17 @@
 - branch/footer 고정값은 `git-commit-rule`, `readme-template`, `zircon-readme-policy`에서 확인했습니다. 개인 프로젝트에 자동 적용하지 않습니다.
 - TOML의 model·sandbox 값은 위에 정적값으로만 기록했습니다. 실제 지원 모델, 유효 sandbox, 상속 설정은 런타임 검증 전 미확정입니다.
 
+## 2026-09-22 재검토 보완
+
+- 위 35개 목록은 자산별 1차 분류이며 전체 의존 그래프는 아직 검토 중입니다. 내부 진입점 세 개만으로 의존성 검토 완료를 판정하지 않습니다.
+- planning-and-breakdown은 incremental-change, spec-driven-infra는 planning-and-breakdown·incremental-change, incremental-change는 장애 시 debugging-and-recovery를 참조합니다. using-skills는 여러 skill의 선택·연쇄 적용을 안내하므로 단독 자체 완결형 후보가 아닙니다.
+- spec-driven-infra의 inventory에는 ~/.ssh/id_ed25519 예시가 있습니다. 필수 키 경로가 아닌 profile별 예제로 다루며 사용자 키의 존재나 사용 권한을 가정하지 않습니다.
+- fact-check·markdown-review와 reviewer·docs_reviewer의 신규 후보는 [payload 매핑](PAYLOAD_MAP.md)에 분리했습니다. 본문의 보존 영역 분류와 신규 후보의 시험 상태는 구분합니다.
+
 ---
 
 **작성일**: 2026-09-21
 
-**마지막 업데이트**: 2026-09-21
+**마지막 업데이트**: 2026-09-22
 
 © 2026 siasia86. Licensed under CC BY 4.0.

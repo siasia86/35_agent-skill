@@ -1,0 +1,132 @@
+{
+  "catalog_version": "0.1-draft",
+  "status": "development_catalog_not_release",
+  "recorded_on": "2026-09-22",
+  "asset_owner": "35_agent-skill",
+  "deployment_policy_owner": "31_governances",
+  "execution_owner": "30_sia-scripts",
+  "source": {
+    "repository": "35_agent-skill",
+    "base_commit": "24baaeb2645237e18c80365e82b76f6b352d3ec6",
+    "snapshot": "working_tree",
+    "release_commit": null
+  },
+  "payload_root": "payload",
+  "checksum_algorithm": "sha256",
+  "deployment_authorized": false,
+  "record_storage_decision": "pending",
+  "assets": [
+    {
+      "id": "se-instructions",
+      "kind": "instruction",
+      "source_path": "personal/AGENTS.md",
+      "sha256": "cb24b8f0281382ea8fbf90075290cb98b5756b1d80338d9e509ef498159d28f7",
+      "targets": {
+        "personal": {
+          "root": "codex_home",
+          "path": "AGENTS.md"
+        },
+        "project": {
+          "root": "repository",
+          "path": "AGENTS.md"
+        }
+      },
+      "required_companion_files": [],
+      "optional_skill_references": [],
+      "activation_boundary": "runtime_path_placement",
+      "conflict_policy": "stop_and_review",
+      "installation_status": "personal_p0_verified"
+    },
+    {
+      "id": "fact-check",
+      "kind": "skill",
+      "source_path": "skills/fact-check/SKILL.md",
+      "sha256": "a83a12c56cb02a4a6188a07718ba73063a5dd691c0abdead10ecc77e95e6af0f",
+      "targets": {
+        "personal": {
+          "root": "user_home",
+          "path": ".agents/skills/fact-check/SKILL.md"
+        },
+        "project": {
+          "root": "repository",
+          "path": ".agents/skills/fact-check/SKILL.md"
+        }
+      },
+      "required_companion_files": [],
+      "optional_skill_references": [
+        "markdown-review"
+      ],
+      "activation_boundary": "runtime_path_placement",
+      "conflict_policy": "stop_and_review",
+      "installation_status": "candidate_not_installed"
+    },
+    {
+      "id": "markdown-review",
+      "kind": "skill",
+      "source_path": "skills/markdown-review/SKILL.md",
+      "sha256": "a9b196ec9fef4ec3432f4037f21a8ba9e7b60540e834647910b5acc88df1c7b0",
+      "targets": {
+        "personal": {
+          "root": "user_home",
+          "path": ".agents/skills/markdown-review/SKILL.md"
+        },
+        "project": {
+          "root": "repository",
+          "path": ".agents/skills/markdown-review/SKILL.md"
+        }
+      },
+      "required_companion_files": [],
+      "optional_skill_references": [
+        "fact-check"
+      ],
+      "activation_boundary": "runtime_path_placement",
+      "conflict_policy": "stop_and_review",
+      "installation_status": "candidate_not_installed"
+    },
+    {
+      "id": "reviewer",
+      "kind": "agent",
+      "source_path": "agents/reviewer.toml",
+      "sha256": "a459f2ca49e050bed59dde1a6b5f84e10b11d0fd7b986892f8f60cb27097bf1e",
+      "targets": {
+        "personal": {
+          "root": "codex_home",
+          "path": "agents/reviewer.toml"
+        },
+        "project": {
+          "root": "repository",
+          "path": ".codex/agents/reviewer.toml"
+        }
+      },
+      "required_companion_files": [],
+      "optional_skill_references": [],
+      "activation_boundary": "runtime_path_placement",
+      "conflict_policy": "stop_and_review",
+      "installation_status": "candidate_not_installed"
+    },
+    {
+      "id": "docs_reviewer",
+      "kind": "agent",
+      "source_path": "agents/docs-reviewer.toml",
+      "sha256": "4809bf813c115541eb31da067177976e68eacfa59171ca7472c22aa885456b57",
+      "targets": {
+        "personal": {
+          "root": "codex_home",
+          "path": "agents/docs-reviewer.toml"
+        },
+        "project": {
+          "root": "repository",
+          "path": ".codex/agents/docs-reviewer.toml"
+        }
+      },
+      "required_companion_files": [],
+      "optional_skill_references": [
+        "fact-check",
+        "markdown-review"
+      ],
+      "activation_boundary": "runtime_path_placement",
+      "conflict_policy": "stop_and_review",
+      "installation_status": "candidate_not_installed"
+    }
+  ]
+}

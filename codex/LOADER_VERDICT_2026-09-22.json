@@ -1,0 +1,58 @@
+{
+  "date": "2026-09-22",
+  "cli_version": "0.155.1",
+  "command": [
+    "codex",
+    "-C",
+    "<cwd>",
+    "debug",
+    "prompt-input",
+    "Discovery diagnostic only"
+  ],
+  "model_called": false,
+  "raw_prompt_saved": false,
+  "criteria": {
+    "common_heading": "# 개인 공통 SE 작업 지침",
+    "repository_marker": "공통 규칙과 적용 범위",
+    "skills": "Resolve file: rN/name/SKILL.md using Skill roots; compare with fixture path"
+  },
+  "checks": [
+    {
+      "cwd": "/root/35_agent-skill",
+      "exit_code": 0,
+      "common_heading_count": 1,
+      "repository_marker_present": true,
+      "skills": {}
+    },
+    {
+      "cwd": "/tmp/se-global-load.OuP66y",
+      "exit_code": 0,
+      "common_heading_count": 1,
+      "repository_marker_present": false,
+      "skills": {}
+    },
+    {
+      "cwd": "/tmp/codex-batch2.BA7MRN",
+      "exit_code": 0,
+      "common_heading_count": 1,
+      "repository_marker_present": false,
+      "skills": {
+        "fact-check": {
+          "resolved_path": "/tmp/codex-batch2.BA7MRN/.agents/skills/fact-check/SKILL.md",
+          "expected_path_match": true,
+          "sha256": "a83a12c56cb02a4a6188a07718ba73063a5dd691c0abdead10ecc77e95e6af0f"
+        },
+        "markdown-review": {
+          "resolved_path": "/tmp/codex-batch2.BA7MRN/.agents/skills/markdown-review/SKILL.md",
+          "expected_path_match": true,
+          "sha256": "a9b196ec9fef4ec3432f4037f21a8ba9e7b60540e834647910b5acc88df1c7b0"
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "No proof of custom agent name-based invocation",
+    "No proof of behavioral compliance",
+    "Transient /tmp fixtures may not persist"
+  ]
+}

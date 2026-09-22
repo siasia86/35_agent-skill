@@ -4,7 +4,7 @@
 
 gpt 원본 62개 파일을 복사한 개발용 배포본입니다. 전체 skill·agent를 바로 설치할 수 있는 release는 아직 아닙니다. 원본은 gpt에 보존하며 최초 파일별 SHA-256과 출발 commit은 [BASELINE_MANIFEST.json](BASELINE_MANIFEST.json)에 있습니다.
 
-현재 독립 설치 후보는 [최소 SE 공통 지침](payload/personal/AGENTS.md) 하나입니다. 이 파일에는 다른 파일을 필수로 읽는 참조나 개인 절대 경로가 없습니다. 구체적인 설치 상태와 시험 결과는 [SE 파일럿](../agent-workflows/gpt/SE_PILOT.md), 진행 순서는 [루트 TODO](../TODO.md)를 확인합니다.
+현재 payload에는 [최소 SE 공통 지침](payload/personal/AGENTS.md), 자체 완결형 검토 skill 2개와 읽기 전용 agent 2개가 있습니다. 개인 홈에 설치한 것은 최소 지침뿐입니다. 신규 후보의 원본 대응·개인 및 프로젝트 설치 경로는 [설치 매핑](PAYLOAD_MAP.md), 시험 범위는 [Batch 2 기록](BATCH2_VERIFICATION.md), 전체 진행은 [루트 TODO](../TODO.md)를 확인합니다.
 
 ## 2. 설치 경계
 
@@ -12,7 +12,7 @@ gpt 원본 62개 파일을 복사한 개발용 배포본입니다. 전체 skill�
 - 프로젝트 시험: 같은 최소 지침에 저장소 전용 범위를 더한 루트 AGENTS.md를 사용할 수 있습니다.
 - 기존 AGENTS.md·AGENTS.override.md와 차이·우선순위·백업을 확인하고 새 세션에서 로딩과 동작을 검증합니다.
 - 이 디렉토리 전체를 사용자 홈이나 consumer 루트에 덮어쓰지 않습니다. README·TODO·PLAN·이전 이력·BASELINE_MANIFEST는 설치 payload가 아닙니다.
-- .agents/skills, .codex/agents, policies, markdown, prompts는 보존된 이식 후보입니다. 경로·권한·지침 충돌 검토와 설치 매핑이 완료되기 전에는 전체를 활성화하지 않습니다.
+- .agents/skills, .codex/agents, policies, markdown, prompts는 보존된 이식 후보입니다. 신규 자체 완결형 후보는 payload 아래에 분리했으며 보존 영역 전체를 활성화하지 않습니다.
 - 복사된 과거 문서의 완료 표시는 gpt 이전 이력입니다. 다른 환경의 trusted·자동 승인·profile 설정이 현재 설치됐다고 가정하지 않습니다.
 
 ## 3. 원본 관리와 갱신
@@ -30,6 +30,6 @@ gpt 원본 62개 파일을 복사한 개발용 배포본입니다. 전체 skill�
 
 **작성일**: 2026-09-04
 
-**마지막 업데이트**: 2026-09-21
+**마지막 업데이트**: 2026-09-22
 
 © 2026 siasia86. Licensed under CC BY 4.0.
