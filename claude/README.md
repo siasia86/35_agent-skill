@@ -1,4 +1,8 @@
 # Claude Tool Mirror
+## 저장소 사용자 지침
+
+- [Claude 최초 적용 전 점검](docs/CLAUDE_SETUP_GUIDE.md)
+- [Claude 업데이트 전 점검](docs/CLAUDE_UPDATE_GUIDE.md)
 
 Claude 관련 Skill과 운영 자료를 추가하기 위한 예약 영역입니다.
 

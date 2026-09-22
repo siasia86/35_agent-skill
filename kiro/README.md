@@ -1,5 +1,10 @@
 # .kiro — Agent System Configuration
 
+## 저장소 사용자 지침
+
+- [Kiro 최초 적용 지침](docs/KIRO_SETUP_GUIDE.md)
+- [Kiro 업데이트 지침](docs/KIRO_UPDATE_GUIDE.md)
+
 ## 디렉토리 구조
 
 ```

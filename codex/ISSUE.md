@@ -57,10 +57,11 @@
 
 ### ISSUE-006: 병행 작업 문서의 접근 권한
 
-- 대상: 저장소 `agent-workflows/gpt/USER_TODO.md`, `UPDATE_TODO.md`.
-- 증상: 일반 읽기와 sandbox 밖 읽기 모두 OS Permission denied입니다.
-- 영향: 이 문서들과 이번 산출물의 정책 중복·충돌 검증은 미완료입니다.
-- 상태: 미해결. 해당 파일과 다른 작업의 루트 변경을 보존합니다.
+- 당시 대상: 저장소 `agent-workflows/gpt/USER_TODO.md`, `UPDATE_TODO.md`.
+- 당시 증상: 일반 읽기와 sandbox 밖 읽기 모두 OS Permission denied로 정책 중복·충돌 검증을 진행하지 못했습니다.
+- 현재 경로: [최초 적용 지침](docs/CODEX_SETUP_GUIDE.md), [업데이트 지침](docs/CODEX_UPDATE_GUIDE.md).
+- 2026-09-22 확인: 현재 작업 계정에서 두 문서 전체를 읽을 수 있었습니다. 다른 계정의 접근 권한이나 OS 권한 변경을 검증한 것은 아닙니다.
+- 상태: 현재 경로의 읽기 차단은 해소 확인. 과거 실패 기록은 보존하며, 전체 정책 충돌 검토 완료로 확대하지 않습니다. 하위 README 쓰기 제한은 [저장소 ISSUE-2](../ISSUE.md)에서 별도로 추적합니다.
 
 ### ISSUE-007: 자동 검토와 현재 세션
 
@@ -84,6 +85,6 @@
 
 **작성일**: 2026-09-21
 
-**마지막 업데이트**: 2026-09-21
+**마지막 업데이트**: 2026-09-22
 
 © 2026 siasia86. Licensed under CC BY 4.0.
