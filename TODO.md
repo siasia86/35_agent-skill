@@ -72,7 +72,7 @@
 
 31의 `.governance/repository/consumer_bundle_contract.yaml`에는 `.gitleaks.toml`, Markdown 검사 설정, `.gitignore`, README와 consumer governance 문서가 포함되어 있습니다. Codex 지침·skill·agent·AI hook은 현재 payload 목록에 명시되어 있지 않습니다.
 
-로컬 `.governance/profiles/governance_manifest.json`은 `release_status: draft`, `source_ref: v0.1.1-rc.19`입니다. AI 구성 통합은 기존 계약과 실행 코드를 확장할 작업으로 관리합니다.
+31의 현재 manifest 경로는 `profiles/governance_manifest.json`입니다. 개발 manifest v2는 중앙 관리와 최초 생성 후 로컬 보존을 구분하며 `release_status: draft`를 유지합니다. source_ref는 개발 기준점이지 현재 변경 전체의 배포 승인 근거가 아닙니다.
 
 31 자체의 TODO·PLAN을 consumer에 그대로 복사하지 않고 consumer용 템플릿을 사용하는 원칙을 유지합니다.
 
@@ -352,6 +352,8 @@ Batch 4 계정 clone에는 governance_profile.py와 테스트를 추가했습니
 
 ### 8.1 작업 재개 순서
 
+2026-09-22 후속: 30·31의 manifest 경로·ownership v2·profile 합성 개선은 해당 저장소 PLAN-BATCH-1과 CHANGELOG를 기준으로 추적합니다. 과거 Batch 검증 수치·경로를 현재 코드 검증으로 재사용하지 않습니다. 이번 35 변경은 이전 경로 안내와 기록 연결만 정리하며 자산 이식·runtime 활성화는 완료로 바꾸지 않습니다.
+
 1. 현재 기반 확인: 이번 30·31 설계 브랜치와 계정 clone의 차이·미커밋 사본·기존 정책을 확인합니다. root 기준 작업본 통합과 로컬 회귀 40개 검사는 완료했지만 protected branch 통합·CI는 별도입니다. 원본 복사·완료 검사는 반복하지 않고 필요한 변경만 재검증합니다. 이번 push 승인과 root 예외는 다음 작업으로 승계하지 않습니다.
 2. 안전 실행 계약 우선: §1.4·6.4의 환경 구분·허용 작업·대상·인자·직접 실행 예외·승인 조건을 정의합니다. 미결정이면 임의로 허용하지 않습니다. 먼저 읽기 전용 계획과 거부 테스트를 확장하고 서버 변경 기능은 아직 연결하지 않습니다.
 3. 제한된 개발 pilot: 작업 하나의 최소 실행 script·Ansible 연결을 구현하고 격리 fixture의 정상·거부·복구 시험을 먼저 통과시킵니다. 그 뒤 대상이 확정된 개발·테스트 환경에서 승인된 해당 작업만 실행해 검증합니다. 전체 skill 이식을 pilot의 선행 조건으로 삼지 않습니다.
@@ -426,7 +428,7 @@ Batch 4 계정 clone에는 governance_profile.py와 테스트를 추가했습니
 ### 9.2 근거 문서
 
 - 35: [지침](gpt/AGENTS.md), [Skill](gpt/.agents/skills/), [Agent](gpt/.codex/agents/), [이식 manifest](gpt/policies/MIGRATION_MANIFEST.json).
-- 31: `README.md`, `.governance/repository/consumer_bundle_contract.yaml`, `consumer_governance_structure.md`, `sync_policy.md`, `.governance/profiles/governance_manifest.json`.
+- 31: `README.md`, `.governance/repository/consumer_bundle_contract.yaml`, `consumer_governance_structure.md`, `sync_policy.md`, `profiles/governance_manifest.json`.
 - 30: `docs/governance_sync.md`, `src/md-*-check.py`, `src/governance_sync.py`.
 - 이전 참고 메모: [_reference](_reference/32_system-engineering-resources/ref_codex_cli_official_notes.md). 확인일이 2026-09-03인 자료로, 이후 기능의 근거로 확대하지 않습니다.
 
