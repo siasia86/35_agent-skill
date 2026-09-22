@@ -1,6 +1,8 @@
-# Claude USER TODO
+# Claude 최초 적용 지침
 
-Claude용 Agent·Skill·Prompt 최초 적용 adapter입니다. 공통 절차는 [공통 USER TODO](../common/USER_TODO.md)를 따릅니다.
+Claude용 Agent·Skill·Prompt 최초 적용 adapter입니다. 공통 절차는 [공통 USER TODO](../../agent-workflows/common/USER_TODO.md)를 따릅니다.
+
+공용 체크리스트는 원본으로 유지하고 사용자별 결과·백업·미완료 항목은 별도 작업 기록에 남깁니다. docs/는 runtime 설치 대상이 아닙니다.
 
 ## 목차
 
@@ -57,6 +59,6 @@ source·target·allowlist가 확정되지 않았거나 검증 명령이 없으�
 
 **작성일**: 2026-09-21
 
-**마지막 업데이트**: 2026-09-21
+**마지막 업데이트**: 2026-09-22
 
 © 2026 siasia86. Licensed under CC BY 4.0.

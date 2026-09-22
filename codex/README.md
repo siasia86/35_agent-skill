@@ -1,5 +1,7 @@
 # Codex 재사용 배포본
 
+사용자 지침: [최초 적용](docs/CODEX_SETUP_GUIDE.md) · [업데이트](docs/CODEX_UPDATE_GUIDE.md). docs/는 설치 payload가 아니며 아래 개발 상태와 설치 경계를 먼저 확인합니다.
+
 ## 1. 현재 상태
 
 gpt 원본 62개 파일을 복사한 개발용 배포본입니다. 전체 skill·agent를 바로 설치할 수 있는 release는 아직 아닙니다. 원본은 gpt에 보존하며 최초 파일별 SHA-256과 출발 commit은 [BASELINE_MANIFEST.json](BASELINE_MANIFEST.json)에 있습니다.

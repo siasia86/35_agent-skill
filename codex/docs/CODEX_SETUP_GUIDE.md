@@ -1,6 +1,10 @@
-# GPT/Codex USER TODO
+# Codex 최초 적용 지침
 
-GPT/Codex용 Agent·Skill·Prompt를 최초 적용할 때 사용하는 adapter입니다. 공통 절차는 [공통 USER TODO](../common/USER_TODO.md)를 따릅니다.
+GPT/Codex용 Agent·Skill·Prompt를 최초 적용할 때 사용하는 adapter입니다. 공통 절차는 [공통 USER TODO](../../agent-workflows/common/USER_TODO.md)를 따릅니다.
+
+공용 체크리스트는 원본으로 유지하고 사용자별 결과·백업·미완료 항목은 별도 작업 기록에 남깁니다. docs/는 runtime 설치 대상이 아닙니다.
+
+현재 전체 배포는 승인 release가 아닙니다. 이 문서는 선택 시험 전 점검 절차이며 적용 승인이 아닙니다. 실제 대상·권한·복구 범위를 별도로 확인하며 gpt/ 원본은 수정하지 않습니다.
 
 ## 목차
 
@@ -13,17 +17,7 @@ GPT/Codex용 Agent·Skill·Prompt를 최초 적용할 때 사용하는 adapter�
 
 ## 1. 현재 자산
 
-현재 GPT/Codex 영역은 다음 구조를 사용합니다.
-
-```text
-gpt/
-├── AGENTS.md
-├── .agents/skills/
-├── .codex/
-└── prompts/
-```
-
-현재 일부 GPT/Codex 파일은 Git 미추적 상태일 수 있으므로, 적용 전에 `git status --short`로 source 상태를 확인합니다. 미추적 파일은 승인 없이 삭제하거나 stage하지 않습니다.
+gpt/는 보존 원본이며 codex/는 개발 공간입니다. 현재 후보와 검증 상태는 [Codex README](../README.md), 선택 파일은 [설치 매핑](../PAYLOAD_MAP.md)을 기준으로 확인합니다. 전체 디렉토리를 복사하지 않습니다.
 
 [⬆ 목차로 돌아가기](#목차)
 
@@ -32,7 +26,7 @@ gpt/
 ## 2. 적용 전 조건
 
 - [ ] Codex client와 version을 확인합니다.
-- [ ] `gpt/AGENTS.md`와 `.agents/skills/`의 적용 범위를 확인합니다.
+- [ ] 선택한 payload 지침와 선택한 payload skill의 적용 범위를 확인합니다.
 - [ ] 프로젝트 로컬 설정과 user-level 설정을 구분합니다.
 - [ ] 실제 target 경로는 현재 Codex 공식 문서와 실행 환경으로 확인합니다.
 - [ ] Kiro 전용 `$HOME/.kiro`, `skill://`, `/agent swap`, Kiro hook을 사용하지 않습니다.
@@ -46,8 +40,8 @@ gpt/
 ## 3. Codex 적용
 
 - [ ] `AGENTS.md`를 프로젝트 instruction으로 먼저 검토합니다.
-- [ ] `.agents/skills/`의 Skill 이름·frontmatter·적용 조건을 확인합니다.
-- [ ] `.codex/agents/`의 Agent 설정과 권한 범위를 확인합니다.
+- [ ] 선택한 payload skill의 Skill 이름·frontmatter·적용 조건을 확인합니다.
+- [ ] 선택한 payload agent의 Agent 설정과 권한 범위를 확인합니다.
 - [ ] prompt와 Skill이 실제 파일 경로를 참조하는지 확인합니다.
 - [ ] Codex client가 지원하는 방식으로 staging에서 target에 적용합니다.
 - [ ] 적용 전 dry-run 또는 파일 목록 비교를 실행합니다.
@@ -69,6 +63,6 @@ gpt/
 
 **작성일**: 2026-09-21
 
-**마지막 업데이트**: 2026-09-21
+**마지막 업데이트**: 2026-09-22
 
 © 2026 siasia86. Licensed under CC BY 4.0.

@@ -4,6 +4,15 @@
 
 ## [Unreleased]
 
+### 사용자 지침 구조 정비 — 2026-09-22
+
+- 도구별 USER_TODO·UPDATE_TODO 6개를 kiro/docs·codex/docs·claude/docs의 도구명_SETUP_GUIDE·도구명_UPDATE_GUIDE로 이동·정리했습니다.
+- 공통 체크리스트와 SE 시험 기록은 agent-workflows에 유지하고 루트 README의 중복 Kiro 절차·이전 경로를 새 지침 링크로 대체했습니다.
+- 공용 지침과 개인 실행 기록, 최초 적용과 선택 유지보수를 구분했습니다. 누락 참조·저작권 고지 자동 삭제와 전체 runtime 복사 안내를 제거했습니다.
+- Codex 개발 후보·Claude 예약 상태를 유지하고 docs의 runtime 복사 제외 및 기존 Kiro 미리보기 출력의 chown 주의점을 명시했습니다.
+- 사용자 승인 사유는 도구별 사용자 지침 구조 정비이며 이번 문서 변경·검증·commit·push 완료 시 직접 수정 예외가 종료됩니다. 운영 적용·agent·skill·설치 script 변경은 제외합니다.
+- 변경 문서 12개의 스타일·헤딩·로컬 링크 검사와 diff 공백 검사를 통과했습니다. 설치·runtime 동작 시험은 수행하지 않았습니다. Kiro·Claude 하위 README는 파일 권한 제한으로 보존하고 루트 README와 공통 인덱스에서 새 지침을 연결했습니다.
+
 ### Governance design checkpoint — 2026-09-22
 
 - gpt 원본 62개를 보존한 codex 개발본과 최초 출처·해시 기록을 작성했습니다.

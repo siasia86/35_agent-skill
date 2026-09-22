@@ -1,6 +1,8 @@
 # 공통 UPDATE TODO
 
-Kiro·GPT/Codex·Claude의 Agent·Skill·Prompt를 업데이트할 때 공통으로 수행하는 작업입니다. 실제 명령과 runtime 경로는 각 도구별 adapter TODO에서 결정합니다.
+Kiro·GPT/Codex·Claude의 Agent·Skill·Prompt를 업데이트할 때 공통으로 수행하는 작업입니다. 실제 명령과 runtime 경로는 각 도구별 사용자 지침에서 결정합니다.
+
+이 문서는 공용 체크리스트입니다. 결과는 별도 사용자 작업 기록에 남기며 공용 원본의 완료 상태를 변경하지 않습니다. 개발 후보·예약 영역의 적용 제한은 도구별 지침이 정한 범위를 따릅니다.
 
 ## 목차
 
@@ -93,6 +95,6 @@ Kiro·GPT/Codex·Claude의 Agent·Skill·Prompt를 업데이트할 때 공통으
 
 **작성일**: 2026-09-21
 
-**마지막 업데이트**: 2026-09-21
+**마지막 업데이트**: 2026-09-22
 
 © 2026 siasia86. Licensed under CC BY 4.0.

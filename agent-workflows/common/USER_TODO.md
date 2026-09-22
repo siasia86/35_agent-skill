@@ -1,6 +1,8 @@
 # 공통 USER TODO
 
-Kiro·GPT/Codex·Claude의 Agent·Skill·Prompt를 최초 적용할 때 공통으로 수행하는 작업입니다. 도구별 명령과 runtime 경로는 각 adapter TODO에서 결정합니다.
+Kiro·GPT/Codex·Claude의 Agent·Skill·Prompt를 최초 적용할 때 공통으로 수행하는 작업입니다. 도구별 명령과 runtime 경로는 각 사용자 지침에서 결정합니다.
+
+이 문서는 공용 체크리스트입니다. 결과는 별도 사용자 작업 기록에 남기며 공용 원본의 완료 상태를 변경하지 않습니다. 개발 후보·예약 영역의 적용 제한은 도구별 지침이 정한 범위를 따릅니다.
 
 ## 목차
 
@@ -14,7 +16,7 @@ Kiro·GPT/Codex·Claude의 Agent·Skill·Prompt를 최초 적용할 때 공통�
 
 ## 1. 적용 전 확인
 
-- [ ] 사용할 도구를 선택합니다: `kiro`, `gpt`, `claude`.
+- [ ] 사용할 도구를 선택합니다: `kiro`, `codex`, `claude`.
 - [ ] 해당 도구의 [adapter USER TODO](../README.md#3-도구별-workflow)를 확인합니다.
 - [ ] source repository의 branch·commit·working tree를 확인합니다.
 - [ ] 기존 사용자 변경 사항과 미추적 파일을 보존합니다.
@@ -103,6 +105,6 @@ user runtime target
 
 **작성일**: 2026-09-21
 
-**마지막 업데이트**: 2026-09-21
+**마지막 업데이트**: 2026-09-22
 
 © 2026 siasia86. Licensed under CC BY 4.0.

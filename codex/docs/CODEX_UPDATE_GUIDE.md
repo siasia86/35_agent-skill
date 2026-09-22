@@ -1,6 +1,10 @@
-# GPT/Codex UPDATE TODO
+# Codex 업데이트 지침
 
-GPT/Codex용 Agent·Skill·Prompt 업데이트 adapter입니다. 공통 절차는 [공통 UPDATE TODO](../common/UPDATE_TODO.md)를 따릅니다.
+GPT/Codex용 Agent·Skill·Prompt 업데이트 adapter입니다. 공통 절차는 [공통 UPDATE TODO](../../agent-workflows/common/UPDATE_TODO.md)를 따릅니다.
+
+공용 체크리스트는 원본으로 유지하고 사용자별 결과·백업·미완료 항목은 별도 작업 기록에 남깁니다. docs/는 runtime 설치 대상이 아닙니다.
+
+현재 전체 배포는 승인 release가 아닙니다. 이 문서는 선택 시험 전 점검 절차이며 적용 승인이 아닙니다. 실제 대상·권한·복구 범위를 별도로 확인하며 gpt/ 원본은 수정하지 않습니다.
 
 ## 목차
 
@@ -13,10 +17,10 @@ GPT/Codex용 Agent·Skill·Prompt 업데이트 adapter입니다. 공통 절차�
 
 ## 1. 변경 범위
 
-- [ ] `gpt/AGENTS.md`의 공통 지시와 프로젝트 지시를 구분합니다.
-- [ ] `.agents/skills/`의 추가·수정·삭제 Skill을 확인합니다.
-- [ ] `.codex/agents/`의 Agent 설정 변경을 확인합니다.
-- [ ] `gpt/prompts/`와 다른 도구용 prompt의 경계를 확인합니다.
+- [ ] 선택한 payload 지침의 공통 지시와 프로젝트 지시를 구분합니다.
+- [ ] 선택한 payload skill의 추가·수정·삭제 Skill을 확인합니다.
+- [ ] 선택한 payload agent의 Agent 설정 변경을 확인합니다.
+- [ ] 보존 prompt와 다른 도구용 prompt의 경계를 확인합니다.
 - [ ] 현재 미추적 작업 파일을 보존하고 변경 owner를 확인합니다.
 
 [⬆ 목차로 돌아가기](#목차)
@@ -59,6 +63,6 @@ GPT/Codex용 Agent·Skill·Prompt 업데이트 adapter입니다. 공통 절차�
 
 **작성일**: 2026-09-21
 
-**마지막 업데이트**: 2026-09-21
+**마지막 업데이트**: 2026-09-22
 
 © 2026 siasia86. Licensed under CC BY 4.0.

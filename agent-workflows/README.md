@@ -14,28 +14,15 @@ AI 도구별 Agent·Skill·Prompt의 최초 적용과 업데이트 절차를 관
 
 ## 1. 구조
 
-```text
-agent-workflows/
-├── common/
-│   ├── USER_TODO.md
-│   └── UPDATE_TODO.md
-├── kiro/
-│   ├── USER_TODO.md
-│   └── UPDATE_TODO.md
-├── gpt/
-│   ├── USER_TODO.md
-│   └── UPDATE_TODO.md
-└── claude/
-    ├── USER_TODO.md
-    └── UPDATE_TODO.md
-```
+공통 절차와 기존 SE 시험 기록을 보관합니다. 사용자 지침서는 각 도구의 docs/에서 관리합니다.
 
-- `common/`: 도구에 관계없이 적용하는 backup·staging·검증·rollback 원칙.
-- `kiro/`: Kiro CLI·`$HOME/.kiro`·Kiro manifest에 맞춘 절차.
-- `gpt/`: GPT/Codex의 `AGENTS.md`·`.agents/skills/`·`.codex/` 구조에 맞춘 절차.
-- `claude/`: Claude source·allowlist·target이 확정된 뒤 활성화할 절차.
+- common/: 공통 최초 적용·업데이트 체크리스트.
+- gpt/: 기존 SE_PILOT.md·SE_PILOT_RESULTS.md 시험 기록. 경로와 과거 기록은 보존합니다.
+- ../kiro/docs/: Kiro 사용자 지침.
+- ../codex/docs/: Codex 개발 후보의 선택 적용 지침.
+- ../claude/docs/: Claude 예약 영역의 적용 전 점검 지침.
 
-`kiro/`, `gpt/`, `claude/`는 실제 payload이고 `agent-workflows/`는 운영 문서입니다. workflow 문서를 runtime payload 디렉토리에 넣지 않습니다.
+도구 디렉토리 전체가 설치 payload인 것은 아닙니다. docs/와 개발·검증 기록은 runtime에 복사하지 않습니다.
 
 [⬆ 목차로 돌아가기](#목차)
 
@@ -43,7 +30,7 @@ agent-workflows/
 
 ## 2. 공통 workflow
 
-각 도구별 TODO는 다음 공통 단계를 따릅니다.
+각 도구별 지침는 다음 공통 단계를 따릅니다.
 
 ```text
 source 확인
@@ -74,13 +61,13 @@ rollback 가능 상태 확인
 
 ## 3. 도구별 workflow
 
-| 도구      | 최초 적용                        | 업데이트                             | 현재 상태                       |
-|-----------|----------------------------------|--------------------------------------|---------------------------------|
-| Kiro      | [USER_TODO](kiro/USER_TODO.md)   | [UPDATE_TODO](kiro/UPDATE_TODO.md)   | Kiro payload와 적용 script 존재 |
-| GPT/Codex | [USER_TODO](gpt/USER_TODO.md)    | [UPDATE_TODO](gpt/UPDATE_TODO.md)    | payload는 작업 중·일부 미추적   |
-| Claude    | [USER_TODO](claude/USER_TODO.md) | [UPDATE_TODO](claude/UPDATE_TODO.md) | source·allowlist 확정 전 예약   |
+| 도구   | 최초 적용                                         | 업데이트                                          | 현재 상태                     |
+|--------|---------------------------------------------------|---------------------------------------------------|-------------------------------|
+| Kiro   | [최초 적용](../kiro/docs/KIRO_SETUP_GUIDE.md)     | [업데이트](../kiro/docs/KIRO_UPDATE_GUIDE.md)     | 선택 적용 전 검토 필요        |
+| Codex  | [최초 적용](../codex/docs/CODEX_SETUP_GUIDE.md)   | [업데이트](../codex/docs/CODEX_UPDATE_GUIDE.md)   | 개발 후보·전체 설치 금지      |
+| Claude | [최초 적용](../claude/docs/CLAUDE_SETUP_GUIDE.md) | [업데이트](../claude/docs/CLAUDE_UPDATE_GUIDE.md) | source·allowlist 확정 전 예약 |
 
-도구별 TODO는 공통 TODO의 원칙을 따르되, 다른 도구의 명령·경로·runtime 설정을 사용하지 않습니다.
+도구별 지침는 공통 TODO의 원칙을 따르되, 다른 도구의 명령·경로·runtime 설정을 사용하지 않습니다.
 
 [⬆ 목차로 돌아가기](#목차)
 
@@ -121,6 +108,6 @@ gitleaks detect --source . --no-git --no-banner
 
 **작성일**: 2026-09-21
 
-**마지막 업데이트**: 2026-09-21
+**마지막 업데이트**: 2026-09-22
 
 © 2026 siasia86. Licensed under CC BY 4.0.
