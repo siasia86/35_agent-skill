@@ -4,6 +4,16 @@
 
 ## [Unreleased]
 
+### README 정합성 정비 — 2026-09-22
+
+- 추가 요청에 따라 ISSUE를 정리해 정적 관찰·영향·임시 조치·해결 조건을 기록했습니다. README에서 해결한 설명 문제와 실행 코드·권한·전환 계약의 미해결 문제를 구분했습니다.
+
+- 세 저장소의 역할·연결 흐름을 같은 책임 기준으로 정리하고 현재 구현과 목표 구조·미완료를 구분했습니다.
+- 보존 원본·개발 후보·선택 payload·사용자 지침의 경계와 30·31 연결을 명시하고 기존 도구별 지침 링크를 유지했습니다. 검사 범위와 작업 예외·승인 조건을 정리했습니다.
+- 사용자 승인 사유: 세 저장소 README의 역할·운영정책·구현 상태 정합성 정비. 이번 요청에 한해 root 작업본의 README·CHANGELOG 및 추가 요청한 ISSUE 수정·검증·commit·push를 허용하며 30·31은 기존 설계 브랜치, 35는 yunli에 게시합니다. 작업 종료·중단 시 예외는 만료됩니다.
+- 실행 코드·기존 정책 원본·manifest·운영 환경은 변경하지 않습니다. 보호 브랜치 직접 push·release 승인·권한 확대는 제외하며 게시 후 복구는 검토된 revert로 수행합니다.
+- 검증: ISSUE를 포함한 세 저장소의 변경 문서 9개 style·heading·로컬 link 검사, diff 공백 검사, 31 draft manifest 45개 항목·manifest checksum, profile과 자산 5개의 읽기 전용 계획 연동을 확인했습니다. 전체 unit test·Ansible 실행·운영 설치·원격 CI는 이번 문서 작업에서 재검증하지 않았습니다.
+
 ### 사용자 지침 구조 정비 — 2026-09-22
 
 - 도구별 USER_TODO·UPDATE_TODO 6개를 kiro/docs·codex/docs·claude/docs의 도구명_SETUP_GUIDE·도구명_UPDATE_GUIDE로 이동·정리했습니다.
