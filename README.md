@@ -26,7 +26,7 @@
 
 위 표는 중앙 관리 목표의 책임 구분입니다. 31의 기존 v1과 중앙 소유 전환 계약은 구분하며, 기존 대상 저장소의 예외를 자동 덮어쓰지 않습니다. 35는 구현 원본과 선택 후보를 제공하고 적용 대상·예외·승인을 자체 결정하지 않습니다.
 
-현재 연결은 35 자산 목록 + 31 draft profile → 30 읽기 전용 planner → 설치 불가 계획 출력입니다. 검증된 staging의 활성화와 운영 복구 통합은 후속 작업입니다.
+현재 연결은 35 자산 목록 + 31 draft profile → 30 계획 검증 → 격리 fixture용 패키지 시험입니다. payload는 지침 1개·skill 25개·agent 10개와 동반 참조 파일 1개로 구성한 개발 후보이며 실제 runtime 배포가 아닙니다. 검증된 staging의 운영 활성화·권한·Ansible 시험과 release는 8·9번 PLAN으로 남깁니다.
 
 저장소 공통 정책의 원본은 [31 governances](https://github.com/siasia86/31_governances), 실행 도구는 [30 sia-scripts](https://github.com/siasia86/30_sia-scripts)에서 관리합니다. 이 저장소의 작업 범위·보존 규칙·예외는 [AGENTS.md](AGENTS.md)를 따릅니다. 아래 내용은 진입 안내이며 상세 정책 원본을 대체하지 않습니다.
 

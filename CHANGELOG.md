@@ -4,6 +4,20 @@
 
 ## [Unreleased]
 
+### 읽기 중심 위임 정책 후속 예약과 게시 — 2026-09-22
+
+- 사용자 요청으로 TODO에 단일 작성자·읽기 중심 조사·리뷰·테스트 분석, 기본 2개·최대 3개 위임, worktree별 독립 구현과 최종 통합 기준을 예약했습니다. 기존 구현 위임 정책과의 정합화 및 영향 범위 재검증을 포함합니다.
+- 순서는 7번 개발 검증 완료 → 8번 pilot → 위임 정책 정비·재검증 → 9번 release입니다. 이번 게시에서 공통 지침·agent 권한·개인 runtime은 변경하지 않습니다.
+- 후속 사용자 요청으로 현재까지의 개발 변경과 TODO를 검증 후 기존 yunli에 commit·push합니다. 원격 결과는 해당 commit으로 확인하며 release·운영 적용·OS 권한 변경은 제외합니다.
+
+### 작업 6 자산 이식과 5~7 연계 — 2026-09-22
+
+- 보존 gpt·kiro·codex 원본 영역은 유지하고 payload를 지침 1개·skill 25개·agent 10개로 확장했습니다. work-rules 동반 참조 1개를 포함해 선택 ID 36개·파일 37개입니다. 개발 후보이며 실제 runtime에 설치하지 않았습니다.
+- catalog 0.2-draft에 참조 파일의 source·relative target·SHA-256을 명시하고 30 planner·격리 패키지와 연결했습니다. 개인용·프로젝트용 모두 37개 파일 staging·설치·재적용 무변경을 확인했습니다.
+- skill-creator 기준으로 범위·의존성을 정리했으며 개인 규칙을 일반론으로 축약한 초기 후보를 보완했습니다. 독립 검토에 따라 테스트 작성 승인, branch 확인, Python 멱등성, Ansible 상세 검사, masking·restore 불변식, container 검증, 문서 고유 검사와 optional 관계를 복원했습니다.
+- 원본 62개 해시는 BASELINE_MANIFEST와 일치합니다. skill 25개 frontmatter와 agent 10개 TOML을 정적 검사했으며 실제 discovery·agent invocation·sandbox·자동 hook 동작을 대신하지 않습니다. Kiro 자동 hook 동등 동작은 명시적으로 보류했습니다.
+- 이번 요청의 5~7번 개발·검증 범위이며 8번 실제 환경 pilot과 9번 release·운영 배포는 PLAN으로 남깁니다. Sol 독립 재검토와 합성 요청 3개를 통과했습니다. 30 전체 단위 시험 89개, 최종 catalog 개인·프로젝트 37개 파일 및 31 v2 profile 5개 파일의 격리 연동·재적용 검사를 통과했습니다. 게시 범위는 위 후속 요청 기록을 따릅니다.
+
 ### Governance 경로와 과거 기록 구분 — 2026-09-22
 
 - TODO의 현재 manifest 안내를 31 최상위 profiles 경로와 개발 v2 소유권 계약에 맞췄습니다. Batch 4는 과거 검증 기록임을 명시하고 원본 명령·출처는 보존했습니다.

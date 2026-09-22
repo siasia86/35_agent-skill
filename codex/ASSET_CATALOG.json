@@ -1,5 +1,5 @@
 {
-  "catalog_version": "0.1-draft",
+  "catalog_version": "0.2-draft",
   "status": "development_catalog_not_release",
   "recorded_on": "2026-09-22",
   "asset_owner": "35_agent-skill",
@@ -123,6 +123,683 @@
       "optional_skill_references": [
         "fact-check",
         "markdown-review"
+      ],
+      "activation_boundary": "runtime_path_placement",
+      "conflict_policy": "stop_and_review",
+      "installation_status": "candidate_not_installed"
+    },
+    {
+      "id": "ansible-review",
+      "kind": "skill",
+      "source_path": "skills/ansible-review/SKILL.md",
+      "sha256": "b2024a96427e7f449fd31d5b4d2dbc3c94372749eb5c550a6d18204a8189cc95",
+      "targets": {
+        "personal": {
+          "root": "user_home",
+          "path": ".agents/skills/ansible-review/SKILL.md"
+        },
+        "project": {
+          "root": "repository",
+          "path": ".agents/skills/ansible-review/SKILL.md"
+        }
+      },
+      "required_companion_files": [],
+      "optional_skill_references": [],
+      "activation_boundary": "runtime_path_placement",
+      "conflict_policy": "stop_and_review",
+      "installation_status": "candidate_not_installed"
+    },
+    {
+      "id": "bash-script-template",
+      "kind": "skill",
+      "source_path": "skills/bash-script-template/SKILL.md",
+      "sha256": "920a921ed36c953cc6950ea5eb8fd95e78e7b97cedb1918f42766fbb2fd672b8",
+      "targets": {
+        "personal": {
+          "root": "user_home",
+          "path": ".agents/skills/bash-script-template/SKILL.md"
+        },
+        "project": {
+          "root": "repository",
+          "path": ".agents/skills/bash-script-template/SKILL.md"
+        }
+      },
+      "required_companion_files": [],
+      "optional_skill_references": [],
+      "activation_boundary": "runtime_path_placement",
+      "conflict_policy": "stop_and_review",
+      "installation_status": "candidate_not_installed"
+    },
+    {
+      "id": "code-review",
+      "kind": "skill",
+      "source_path": "skills/code-review/SKILL.md",
+      "sha256": "b4f452fcce679b3f66d474177a83e051d1cc6e76d6d413dc369236918c6099a4",
+      "targets": {
+        "personal": {
+          "root": "user_home",
+          "path": ".agents/skills/code-review/SKILL.md"
+        },
+        "project": {
+          "root": "repository",
+          "path": ".agents/skills/code-review/SKILL.md"
+        }
+      },
+      "required_companion_files": [],
+      "optional_skill_references": [],
+      "activation_boundary": "runtime_path_placement",
+      "conflict_policy": "stop_and_review",
+      "installation_status": "candidate_not_installed"
+    },
+    {
+      "id": "debugging-and-recovery",
+      "kind": "skill",
+      "source_path": "skills/debugging-and-recovery/SKILL.md",
+      "sha256": "3d60d6a2df1534721d921f4aa7766a193b8c34beeac389e5e5de87d9b8226cf7",
+      "targets": {
+        "personal": {
+          "root": "user_home",
+          "path": ".agents/skills/debugging-and-recovery/SKILL.md"
+        },
+        "project": {
+          "root": "repository",
+          "path": ".agents/skills/debugging-and-recovery/SKILL.md"
+        }
+      },
+      "required_companion_files": [],
+      "optional_skill_references": [],
+      "activation_boundary": "runtime_path_placement",
+      "conflict_policy": "stop_and_review",
+      "installation_status": "candidate_not_installed"
+    },
+    {
+      "id": "doubt-driven-infra",
+      "kind": "skill",
+      "source_path": "skills/doubt-driven-infra/SKILL.md",
+      "sha256": "584e596b8ba4633aab5ba68fa885ac4f01837ad25277ef23bf6c1b5b9901d3c0",
+      "targets": {
+        "personal": {
+          "root": "user_home",
+          "path": ".agents/skills/doubt-driven-infra/SKILL.md"
+        },
+        "project": {
+          "root": "repository",
+          "path": ".agents/skills/doubt-driven-infra/SKILL.md"
+        }
+      },
+      "required_companion_files": [],
+      "optional_skill_references": [],
+      "activation_boundary": "runtime_path_placement",
+      "conflict_policy": "stop_and_review",
+      "installation_status": "candidate_not_installed"
+    },
+    {
+      "id": "git-commit-rule",
+      "kind": "skill",
+      "source_path": "skills/git-commit-rule/SKILL.md",
+      "sha256": "489b70c2eba7043c564b79a6ea8bc95d680a131c5d2c08dba58455a8140fd8ba",
+      "targets": {
+        "personal": {
+          "root": "user_home",
+          "path": ".agents/skills/git-commit-rule/SKILL.md"
+        },
+        "project": {
+          "root": "repository",
+          "path": ".agents/skills/git-commit-rule/SKILL.md"
+        }
+      },
+      "required_companion_files": [],
+      "optional_skill_references": [],
+      "activation_boundary": "runtime_path_placement",
+      "conflict_policy": "stop_and_review",
+      "installation_status": "candidate_not_installed"
+    },
+    {
+      "id": "git-release",
+      "kind": "skill",
+      "source_path": "skills/git-release/SKILL.md",
+      "sha256": "256d750b277d3ee33a1bac7523cc1134a00b1ca66e15f2976751f4825e51ad68",
+      "targets": {
+        "personal": {
+          "root": "user_home",
+          "path": ".agents/skills/git-release/SKILL.md"
+        },
+        "project": {
+          "root": "repository",
+          "path": ".agents/skills/git-release/SKILL.md"
+        }
+      },
+      "required_companion_files": [],
+      "optional_skill_references": [],
+      "activation_boundary": "runtime_path_placement",
+      "conflict_policy": "stop_and_review",
+      "installation_status": "candidate_not_installed"
+    },
+    {
+      "id": "incremental-change",
+      "kind": "skill",
+      "source_path": "skills/incremental-change/SKILL.md",
+      "sha256": "a8b621b3e22d8ace0538ed983de16fde1e8c9e978acd59507bc05f417c3bc163",
+      "targets": {
+        "personal": {
+          "root": "user_home",
+          "path": ".agents/skills/incremental-change/SKILL.md"
+        },
+        "project": {
+          "root": "repository",
+          "path": ".agents/skills/incremental-change/SKILL.md"
+        }
+      },
+      "required_companion_files": [],
+      "optional_skill_references": [],
+      "activation_boundary": "runtime_path_placement",
+      "conflict_policy": "stop_and_review",
+      "installation_status": "candidate_not_installed"
+    },
+    {
+      "id": "kiro-lock",
+      "kind": "skill",
+      "source_path": "skills/kiro-lock/SKILL.md",
+      "sha256": "56461b06aff1ab5e6a1d7459463330a9d129c8f84b85339747687b7bf5f48c34",
+      "targets": {
+        "personal": {
+          "root": "user_home",
+          "path": ".agents/skills/kiro-lock/SKILL.md"
+        },
+        "project": {
+          "root": "repository",
+          "path": ".agents/skills/kiro-lock/SKILL.md"
+        }
+      },
+      "required_companion_files": [],
+      "optional_skill_references": [],
+      "activation_boundary": "runtime_path_placement",
+      "conflict_policy": "stop_and_review",
+      "installation_status": "candidate_not_installed"
+    },
+    {
+      "id": "md-link-check",
+      "kind": "skill",
+      "source_path": "skills/md-link-check/SKILL.md",
+      "sha256": "2e0dadb307626664dacdfe47f613eb59dc5f7f7ee22605171cbe6670855a7013",
+      "targets": {
+        "personal": {
+          "root": "user_home",
+          "path": ".agents/skills/md-link-check/SKILL.md"
+        },
+        "project": {
+          "root": "repository",
+          "path": ".agents/skills/md-link-check/SKILL.md"
+        }
+      },
+      "required_companion_files": [],
+      "optional_skill_references": [],
+      "activation_boundary": "runtime_path_placement",
+      "conflict_policy": "stop_and_review",
+      "installation_status": "candidate_not_installed"
+    },
+    {
+      "id": "planning-and-breakdown",
+      "kind": "skill",
+      "source_path": "skills/planning-and-breakdown/SKILL.md",
+      "sha256": "88f4aba0dfedbcee6b9799e5c52020f34ac27cea42ba35f18925b3926d4445aa",
+      "targets": {
+        "personal": {
+          "root": "user_home",
+          "path": ".agents/skills/planning-and-breakdown/SKILL.md"
+        },
+        "project": {
+          "root": "repository",
+          "path": ".agents/skills/planning-and-breakdown/SKILL.md"
+        }
+      },
+      "required_companion_files": [],
+      "optional_skill_references": [],
+      "activation_boundary": "runtime_path_placement",
+      "conflict_policy": "stop_and_review",
+      "installation_status": "candidate_not_installed"
+    },
+    {
+      "id": "python-script-template",
+      "kind": "skill",
+      "source_path": "skills/python-script-template/SKILL.md",
+      "sha256": "4f2c714d0a9fe25ba50382e3a5f2390e52056ba427985f21a179c53a081f00a7",
+      "targets": {
+        "personal": {
+          "root": "user_home",
+          "path": ".agents/skills/python-script-template/SKILL.md"
+        },
+        "project": {
+          "root": "repository",
+          "path": ".agents/skills/python-script-template/SKILL.md"
+        }
+      },
+      "required_companion_files": [],
+      "optional_skill_references": [],
+      "activation_boundary": "runtime_path_placement",
+      "conflict_policy": "stop_and_review",
+      "installation_status": "candidate_not_installed"
+    },
+    {
+      "id": "readme-template",
+      "kind": "skill",
+      "source_path": "skills/readme-template/SKILL.md",
+      "sha256": "250baca8076f3c7c3df5aadc670516d45b5adeb194185b48998bdb6280bd720d",
+      "targets": {
+        "personal": {
+          "root": "user_home",
+          "path": ".agents/skills/readme-template/SKILL.md"
+        },
+        "project": {
+          "root": "repository",
+          "path": ".agents/skills/readme-template/SKILL.md"
+        }
+      },
+      "required_companion_files": [],
+      "optional_skill_references": [],
+      "activation_boundary": "runtime_path_placement",
+      "conflict_policy": "stop_and_review",
+      "installation_status": "candidate_not_installed"
+    },
+    {
+      "id": "repo-governance",
+      "kind": "skill",
+      "source_path": "skills/repo-governance/SKILL.md",
+      "sha256": "2eecbf519fd454910c1909ccf6fd852a3863d2f8d5d1e3f69085a56b8417ddca",
+      "targets": {
+        "personal": {
+          "root": "user_home",
+          "path": ".agents/skills/repo-governance/SKILL.md"
+        },
+        "project": {
+          "root": "repository",
+          "path": ".agents/skills/repo-governance/SKILL.md"
+        }
+      },
+      "required_companion_files": [],
+      "optional_skill_references": [],
+      "activation_boundary": "runtime_path_placement",
+      "conflict_policy": "stop_and_review",
+      "installation_status": "candidate_not_installed"
+    },
+    {
+      "id": "security-audit",
+      "kind": "skill",
+      "source_path": "skills/security-audit/SKILL.md",
+      "sha256": "632946452db5c9e193fefbfc63d24ab232ca531af0e807169eb78af0c0485f4e",
+      "targets": {
+        "personal": {
+          "root": "user_home",
+          "path": ".agents/skills/security-audit/SKILL.md"
+        },
+        "project": {
+          "root": "repository",
+          "path": ".agents/skills/security-audit/SKILL.md"
+        }
+      },
+      "required_companion_files": [],
+      "optional_skill_references": [],
+      "activation_boundary": "runtime_path_placement",
+      "conflict_policy": "stop_and_review",
+      "installation_status": "candidate_not_installed"
+    },
+    {
+      "id": "security-tools",
+      "kind": "skill",
+      "source_path": "skills/security-tools/SKILL.md",
+      "sha256": "7df3fa04bc5d9b35e73d9abde37ab5180a138b4fa51108c3545c2e4e1e00bc62",
+      "targets": {
+        "personal": {
+          "root": "user_home",
+          "path": ".agents/skills/security-tools/SKILL.md"
+        },
+        "project": {
+          "root": "repository",
+          "path": ".agents/skills/security-tools/SKILL.md"
+        }
+      },
+      "required_companion_files": [],
+      "optional_skill_references": [],
+      "activation_boundary": "runtime_path_placement",
+      "conflict_policy": "stop_and_review",
+      "installation_status": "candidate_not_installed"
+    },
+    {
+      "id": "shipping-checklist",
+      "kind": "skill",
+      "source_path": "skills/shipping-checklist/SKILL.md",
+      "sha256": "fde70db5e6847372cca665b7af3f3a6a838bd814d4fe3006512f45aec8689703",
+      "targets": {
+        "personal": {
+          "root": "user_home",
+          "path": ".agents/skills/shipping-checklist/SKILL.md"
+        },
+        "project": {
+          "root": "repository",
+          "path": ".agents/skills/shipping-checklist/SKILL.md"
+        }
+      },
+      "required_companion_files": [],
+      "optional_skill_references": [],
+      "activation_boundary": "runtime_path_placement",
+      "conflict_policy": "stop_and_review",
+      "installation_status": "candidate_not_installed"
+    },
+    {
+      "id": "spec-driven-infra",
+      "kind": "skill",
+      "source_path": "skills/spec-driven-infra/SKILL.md",
+      "sha256": "d49ecae227e06fd66afa7bbf9eddb17aa192aa9c30390ffda3b75a3a0e7fe08c",
+      "targets": {
+        "personal": {
+          "root": "user_home",
+          "path": ".agents/skills/spec-driven-infra/SKILL.md"
+        },
+        "project": {
+          "root": "repository",
+          "path": ".agents/skills/spec-driven-infra/SKILL.md"
+        }
+      },
+      "required_companion_files": [],
+      "optional_skill_references": [],
+      "activation_boundary": "runtime_path_placement",
+      "conflict_policy": "stop_and_review",
+      "installation_status": "candidate_not_installed"
+    },
+    {
+      "id": "testing-and-verification",
+      "kind": "skill",
+      "source_path": "skills/testing-and-verification/SKILL.md",
+      "sha256": "812be0b01100480f8c02df0b3f7d41a67be896bd93a96ad2b25497fd53b6e1c2",
+      "targets": {
+        "personal": {
+          "root": "user_home",
+          "path": ".agents/skills/testing-and-verification/SKILL.md"
+        },
+        "project": {
+          "root": "repository",
+          "path": ".agents/skills/testing-and-verification/SKILL.md"
+        }
+      },
+      "required_companion_files": [],
+      "optional_skill_references": [],
+      "activation_boundary": "runtime_path_placement",
+      "conflict_policy": "stop_and_review",
+      "installation_status": "candidate_not_installed"
+    },
+    {
+      "id": "testing-guide",
+      "kind": "skill",
+      "source_path": "skills/testing-guide/SKILL.md",
+      "sha256": "976a3e2cec26e10ff722a909075c62ae269ae1b8bfea80a1e82cc4708a0ce164",
+      "targets": {
+        "personal": {
+          "root": "user_home",
+          "path": ".agents/skills/testing-guide/SKILL.md"
+        },
+        "project": {
+          "root": "repository",
+          "path": ".agents/skills/testing-guide/SKILL.md"
+        }
+      },
+      "required_companion_files": [],
+      "optional_skill_references": [],
+      "activation_boundary": "runtime_path_placement",
+      "conflict_policy": "stop_and_review",
+      "installation_status": "candidate_not_installed"
+    },
+    {
+      "id": "using-skills",
+      "kind": "skill",
+      "source_path": "skills/using-skills/SKILL.md",
+      "sha256": "bae5774275a4c268091f5c639c52e1630eb41d4482ee391f0247a0c8ffb8e01a",
+      "targets": {
+        "personal": {
+          "root": "user_home",
+          "path": ".agents/skills/using-skills/SKILL.md"
+        },
+        "project": {
+          "root": "repository",
+          "path": ".agents/skills/using-skills/SKILL.md"
+        }
+      },
+      "required_companion_files": [],
+      "optional_skill_references": [],
+      "activation_boundary": "runtime_path_placement",
+      "conflict_policy": "stop_and_review",
+      "installation_status": "candidate_not_installed"
+    },
+    {
+      "id": "zircon-readme-policy",
+      "kind": "skill",
+      "source_path": "skills/zircon-readme-policy/SKILL.md",
+      "sha256": "509106cdc28600e90514602361b95fd4199f9ce552132a16f71914eccd14ade7",
+      "targets": {
+        "personal": {
+          "root": "user_home",
+          "path": ".agents/skills/zircon-readme-policy/SKILL.md"
+        },
+        "project": {
+          "root": "repository",
+          "path": ".agents/skills/zircon-readme-policy/SKILL.md"
+        }
+      },
+      "required_companion_files": [],
+      "optional_skill_references": [],
+      "activation_boundary": "runtime_path_placement",
+      "conflict_policy": "stop_and_review",
+      "installation_status": "candidate_not_installed"
+    },
+    {
+      "id": "code-reviewer",
+      "kind": "agent",
+      "source_path": "agents/code-reviewer.toml",
+      "sha256": "f7475a673401ce6e041b23dac1e8bb49506b8cf335fff841be0d1cd3522841ca",
+      "targets": {
+        "personal": {
+          "root": "codex_home",
+          "path": "agents/code-reviewer.toml"
+        },
+        "project": {
+          "root": "repository",
+          "path": ".codex/agents/code-reviewer.toml"
+        }
+      },
+      "required_companion_files": [],
+      "optional_skill_references": [
+        "code-review"
+      ],
+      "activation_boundary": "runtime_path_placement",
+      "conflict_policy": "stop_and_review",
+      "installation_status": "candidate_not_installed"
+    },
+    {
+      "id": "doc-reviewer",
+      "kind": "agent",
+      "source_path": "agents/doc-reviewer.toml",
+      "sha256": "34ca409930bc5d86a85947c151a774b0dc5ec70e1e42fc75b23c3c9451887186",
+      "targets": {
+        "personal": {
+          "root": "codex_home",
+          "path": "agents/doc-reviewer.toml"
+        },
+        "project": {
+          "root": "repository",
+          "path": ".codex/agents/doc-reviewer.toml"
+        }
+      },
+      "required_companion_files": [],
+      "optional_skill_references": [
+        "md-link-check"
+      ],
+      "activation_boundary": "runtime_path_placement",
+      "conflict_policy": "stop_and_review",
+      "installation_status": "candidate_not_installed"
+    },
+    {
+      "id": "git-manager",
+      "kind": "agent",
+      "source_path": "agents/git-manager.toml",
+      "sha256": "b4c5912f038fc3e44d754fae92f3b567762977866428eb6808bc6f1ac5267b7e",
+      "targets": {
+        "personal": {
+          "root": "codex_home",
+          "path": "agents/git-manager.toml"
+        },
+        "project": {
+          "root": "repository",
+          "path": ".codex/agents/git-manager.toml"
+        }
+      },
+      "required_companion_files": [],
+      "optional_skill_references": [
+        "git-commit-rule"
+      ],
+      "activation_boundary": "runtime_path_placement",
+      "conflict_policy": "stop_and_review",
+      "installation_status": "candidate_not_installed"
+    },
+    {
+      "id": "markdown-writer",
+      "kind": "agent",
+      "source_path": "agents/markdown-writer.toml",
+      "sha256": "ec417a21205aabda1f333a11cea4e8c78c016f03fc0e0f6cf37340aa8906df80",
+      "targets": {
+        "personal": {
+          "root": "codex_home",
+          "path": "agents/markdown-writer.toml"
+        },
+        "project": {
+          "root": "repository",
+          "path": ".codex/agents/markdown-writer.toml"
+        }
+      },
+      "required_companion_files": [],
+      "optional_skill_references": [
+        "markdown-review",
+        "md-link-check"
+      ],
+      "activation_boundary": "runtime_path_placement",
+      "conflict_policy": "stop_and_review",
+      "installation_status": "candidate_not_installed"
+    },
+    {
+      "id": "se-lite",
+      "kind": "agent",
+      "source_path": "agents/se-lite.toml",
+      "sha256": "5f6de77bff0b0431df4073f88be3490541a5f59e5260f8ed033f347e24a8ab83",
+      "targets": {
+        "personal": {
+          "root": "codex_home",
+          "path": "agents/se-lite.toml"
+        },
+        "project": {
+          "root": "repository",
+          "path": ".codex/agents/se-lite.toml"
+        }
+      },
+      "required_companion_files": [],
+      "optional_skill_references": [],
+      "activation_boundary": "runtime_path_placement",
+      "conflict_policy": "stop_and_review",
+      "installation_status": "candidate_not_installed"
+    },
+    {
+      "id": "security-auditor",
+      "kind": "agent",
+      "source_path": "agents/security-auditor.toml",
+      "sha256": "5f93da76bda8b981f04ac8c6ad02ef105ed51afa1fc7975296b797487e7e379d",
+      "targets": {
+        "personal": {
+          "root": "codex_home",
+          "path": "agents/security-auditor.toml"
+        },
+        "project": {
+          "root": "repository",
+          "path": ".codex/agents/security-auditor.toml"
+        }
+      },
+      "required_companion_files": [],
+      "optional_skill_references": [
+        "security-audit"
+      ],
+      "activation_boundary": "runtime_path_placement",
+      "conflict_policy": "stop_and_review",
+      "installation_status": "candidate_not_installed"
+    },
+    {
+      "id": "system-engineer",
+      "kind": "agent",
+      "source_path": "agents/system-engineer.toml",
+      "sha256": "be5e8a9e3eb21028d655f9bf72c285cf2c03843d4bcbe466ee51ea89e69483b2",
+      "targets": {
+        "personal": {
+          "root": "codex_home",
+          "path": "agents/system-engineer.toml"
+        },
+        "project": {
+          "root": "repository",
+          "path": ".codex/agents/system-engineer.toml"
+        }
+      },
+      "required_companion_files": [],
+      "optional_skill_references": [
+        "incremental-change",
+        "testing-and-verification"
+      ],
+      "activation_boundary": "runtime_path_placement",
+      "conflict_policy": "stop_and_review",
+      "installation_status": "candidate_not_installed"
+    },
+    {
+      "id": "infra_worker",
+      "kind": "agent",
+      "source_path": "agents/infra-worker.toml",
+      "sha256": "8a50c6da0b7e210a6ff3be0dffbb012b14c35beba86103e6271888b5dd91d94e",
+      "targets": {
+        "personal": {
+          "root": "codex_home",
+          "path": "agents/infra-worker.toml"
+        },
+        "project": {
+          "root": "repository",
+          "path": ".codex/agents/infra-worker.toml"
+        }
+      },
+      "required_companion_files": [],
+      "optional_skill_references": [
+        "incremental-change",
+        "testing-and-verification"
+      ],
+      "activation_boundary": "runtime_path_placement",
+      "conflict_policy": "stop_and_review",
+      "installation_status": "candidate_not_installed"
+    },
+    {
+      "id": "work-rules",
+      "kind": "skill",
+      "source_path": "skills/work-rules/SKILL.md",
+      "sha256": "ba622e6e69a7b0f7e8520cb49a99375b074f5328c6dd6369376af4a7da0a6537",
+      "targets": {
+        "personal": {
+          "root": "user_home",
+          "path": ".agents/skills/work-rules/SKILL.md"
+        },
+        "project": {
+          "root": "repository",
+          "path": ".agents/skills/work-rules/SKILL.md"
+        }
+      },
+      "required_companion_files": [
+        {
+          "source_path": "skills/work-rules/references/operating-rules.md",
+          "sha256": "cbbf2b77bd9baec790b86a4cd1d02aa1a8f1c39eeb50056c877ab2b0acea8591",
+          "relative_target": "references/operating-rules.md"
+        }
+      ],
+      "optional_skill_references": [
+        "bash-script-template",
+        "python-script-template"
       ],
       "activation_boundary": "runtime_path_placement",
       "conflict_policy": "stop_and_review",

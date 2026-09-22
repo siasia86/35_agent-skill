@@ -2,17 +2,19 @@
 
 ## 1. 적용 범위
 
-Batch 2 개발 후보입니다. 최소 개인 지침 외에는 실제 개인 홈 설치가 완료된 상태가 아닙니다. 원본 보존 영역인 .agents·.codex 전체를 복사하지 않고 아래 목록만 선택합니다. README·TODO·manifest는 운영 대상에 덮어쓰지 않습니다.
+Batch 2·6 개발 후보입니다. 최소 개인 지침 외에는 실제 개인 홈 설치가 완료된 상태가 아닙니다. 원본 보존 영역인 .agents·.codex 전체를 복사하지 않고 아래 목록만 선택합니다. README·TODO·manifest는 운영 대상에 덮어쓰지 않습니다.
 
-| 배포 원본                         | 개인 설치 대상                                   | 프로젝트 설치 대상                       |
-|-----------------------------------|--------------------------------------------------|------------------------------------------|
-| payload/personal/AGENTS.md        | 실제 Codex home의 AGENTS.md                      | 저장소 AGENTS.md에 필요한 공통 원칙 병합 |
-| payload/skills/fact-check/        | 실제 사용자 홈의 .agents/skills/fact-check/      | 저장소 .agents/skills/fact-check/        |
-| payload/skills/markdown-review/   | 실제 사용자 홈의 .agents/skills/markdown-review/ | 저장소 .agents/skills/markdown-review/   |
-| payload/agents/reviewer.toml      | 실제 Codex home의 agents/reviewer.toml           | 저장소 .codex/agents/reviewer.toml       |
-| payload/agents/docs-reviewer.toml | 실제 Codex home의 agents/docs-reviewer.toml      | 저장소 .codex/agents/docs-reviewer.toml  |
+| 배포 원본                                     | 개인 설치 대상                                   | 프로젝트 설치 대상                       |
+|-----------------------------------------------|--------------------------------------------------|------------------------------------------|
+| payload/personal/AGENTS.md                    | 실제 Codex home의 AGENTS.md                      | 저장소 AGENTS.md에 필요한 공통 원칙 병합 |
+| payload/skills/fact-check/                    | 실제 사용자 홈의 .agents/skills/fact-check/      | 저장소 .agents/skills/fact-check/        |
+| payload/skills/markdown-review/               | 실제 사용자 홈의 .agents/skills/markdown-review/ | 저장소 .agents/skills/markdown-review/   |
+| payload/agents/reviewer.toml                  | 실제 Codex home의 agents/reviewer.toml           | 저장소 .codex/agents/reviewer.toml       |
+| payload/agents/docs-reviewer.toml             | 실제 Codex home의 agents/docs-reviewer.toml      | 저장소 .codex/agents/docs-reviewer.toml  |
+| payload/skills/&lt;Batch 6 skill&gt;/SKILL.md | 실제 사용자 홈의 .agents/skills/&lt;name&gt;/    | 저장소 .agents/skills/&lt;name&gt;/      |
+| payload/agents/&lt;Batch 6 agent&gt;.toml     | 실제 Codex home의 agents/&lt;name&gt;.toml       | 저장소 .codex/agents/&lt;name&gt;.toml   |
 
-공식 기본 경로는 [Skills](https://learn.chatgpt.com/docs/build-skills), [Subagents](https://learn.chatgpt.com/docs/agent-configuration/subagents)에 근거합니다. 사용자 홈과 Codex home을 같은 변수로 가정하지 않습니다. agent 내부 이름은 각각 reviewer·docs_reviewer이며 모델 ID는 고정하지 않습니다. 개인·프로젝트 중 필요한 범위를 선택하고 중복 설치를 기본으로 하지 않습니다.
+공식 기본 경로는 [Skills](https://learn.chatgpt.com/docs/build-skills), [Subagents](https://learn.chatgpt.com/docs/agent-configuration/subagents)에 근거합니다. 사용자 홈과 Codex home을 같은 변수로 가정하지 않습니다. agent 내부 이름은 TOML과 catalog에서 확인하며 모델 ID는 고정하지 않습니다. 개인·프로젝트 중 필요한 범위를 선택하고 중복 설치를 기본으로 하지 않습니다.
 
 ## 2. 원본 대응과 변경 사유
 
@@ -20,7 +22,17 @@ Batch 2 개발 후보입니다. 최소 개인 지침 외에는 실제 개인 홈
 - markdown-review: 기존 진입점과 prompts/md-review의 구조·링크·표·예시 검토를 자체 완결형으로 이식합니다. 프로젝트별 푸터·배지·내부 문서 규칙은 적용 정책이 있을 때만 사용합니다.
 - reviewer: 기존 읽기 전용 역할을 보존하고 부작용 있는 명령·권한 변경·무단 재위임을 금지했습니다.
 - docs_reviewer: 읽기 전용 검토를 유지하고 관련 skill이 없으면 실행한 것처럼 보고하지 않도록 합니다.
-- 나머지 skill 23개·agent 8개는 보존 영역에 남습니다. 제거하거나 일괄 설치하지 않습니다.
+- Batch 6은 나머지 skill 23개와 agent 8개를 self-contained 후보로 이식했습니다. 모두 선택 후보이며 설치·활성화·release 승인은 수행하지 않았습니다. work-rules는 필수 references 파일을 함께 가지며 나머지 skill은 단일 SKILL.md입니다.  원본의 `prompts/`, `policies/`, Kiro hook, 절대 경로와 고정 branch·권한 지시는 portable 조건과 현재 repository guidance 확인으로 전환했습니다.
+
+### 2.1 Batch 6 정확한 inventory
+
+Static candidates: `ansible-review`, `bash-script-template`, `code-review`, `debugging-and-recovery`, `doubt-driven-infra`, `git-commit-rule`, `git-release`, `incremental-change`, `kiro-lock` (manual protocol only), `md-link-check`, `planning-and-breakdown`, `python-script-template`, `readme-template`, `repo-governance`, `security-audit`, `security-tools`, `shipping-checklist`, `spec-driven-infra`, `testing-and-verification`, `testing-guide`, `using-skills`, `zircon-readme-policy`.
+
+`work-rules` is a companion-resource candidate: its entrypoint installs with `references/operating-rules.md` under the same skill folder. Its catalog v0.2-draft companion object uses the exact source-parent-relative layout required by the planner: `skills/work-rules/` + `references/operating-rules.md`. The planner selects the companion as a separate generated file entry while the original `work-rules` asset ID remains the selection ID. Kiro automatic hook behavior remains explicitly deferred.
+
+Agents: `code-reviewer`, `doc-reviewer`, `git-manager`, `infra_worker`, `markdown-writer`, `se-lite`, `security-auditor`, `system-engineer`.
+
+The exact payload path, SHA-256, target roots, companion inventory, and optional skill relationships are authoritative in [ASSET_CATALOG.json](ASSET_CATALOG.json). Targets are alternatives, not a command to install both. `user_home`, `codex_home`, and `repository` are resolved only by an approved installer or the user’s chosen runtime.
 
 ## 3. 설치·갱신·복구 조건
 
