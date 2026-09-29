@@ -1,0 +1,255 @@
+{
+  "format": "preserved-asset-relocation-v1",
+  "recorded_on": "2026-09-29",
+  "baseline_manifest": "../BASELINE_MANIFEST.json",
+  "files": [
+    {
+      "old_path": ".agents/skills/ansible-review/SKILL.md",
+      "path": "archive/skills/ansible-review/SKILL.md",
+      "sha256": "6fea3ffabb8b8bf5cb54bcfd7641a6e3ed9fc080c39c274f1d98f4a31d0c727a",
+      "original_sha256": "6fea3ffabb8b8bf5cb54bcfd7641a6e3ed9fc080c39c274f1d98f4a31d0c727a",
+      "original_path": "archive/skills/ansible-review/SKILL.md"
+    },
+    {
+      "old_path": ".agents/skills/bash-script-template/SKILL.md",
+      "path": "archive/skills/bash-script-template/SKILL.md",
+      "sha256": "1c226bc1cbacad0e5ea447876e77104136393a08e35d7e0dc9ab7f6e51a1c797",
+      "original_sha256": "1c226bc1cbacad0e5ea447876e77104136393a08e35d7e0dc9ab7f6e51a1c797",
+      "original_path": "archive/skills/bash-script-template/SKILL.md"
+    },
+    {
+      "old_path": ".agents/skills/code-review/SKILL.md",
+      "path": "archive/skills/code-review/SKILL.md",
+      "sha256": "4517d03039faec289e326ca452de1f62e8434d7c2bb9dec7c03bb05ac99b47d6",
+      "original_sha256": "4517d03039faec289e326ca452de1f62e8434d7c2bb9dec7c03bb05ac99b47d6",
+      "original_path": "archive/skills/code-review/SKILL.md"
+    },
+    {
+      "old_path": ".agents/skills/debugging-and-recovery/SKILL.md",
+      "path": "archive/skills/debugging-and-recovery/SKILL.md",
+      "sha256": "f9883d3b95706550276e968e8a3262938a2cb8df08b0e17420b5a5c83775ea4f",
+      "original_sha256": "f9883d3b95706550276e968e8a3262938a2cb8df08b0e17420b5a5c83775ea4f",
+      "original_path": "archive/skills/debugging-and-recovery/SKILL.md"
+    },
+    {
+      "old_path": ".agents/skills/doubt-driven-infra/SKILL.md",
+      "path": "archive/skills/doubt-driven-infra/SKILL.md",
+      "sha256": "f56cbf7786e794ee886bb5d7a86abaa568e0bd4db194eef275f0c62bf65b622c",
+      "original_sha256": "f56cbf7786e794ee886bb5d7a86abaa568e0bd4db194eef275f0c62bf65b622c",
+      "original_path": "archive/skills/doubt-driven-infra/SKILL.md"
+    },
+    {
+      "old_path": ".agents/skills/fact-check/SKILL.md",
+      "path": "archive/skills/fact-check/SKILL.md",
+      "sha256": "4773ac949d36de24f48270615d8f5cb5cc0fc9d75c505d1063929879e0a7de06",
+      "original_sha256": "4773ac949d36de24f48270615d8f5cb5cc0fc9d75c505d1063929879e0a7de06",
+      "original_path": "archive/skills/fact-check/SKILL.md"
+    },
+    {
+      "old_path": ".agents/skills/git-commit-rule/SKILL.md",
+      "path": "archive/skills/git-commit-rule/SKILL.md",
+      "sha256": "9fecb39349ea2536bcb781cd6c551541dc6839cad32e454bd3d037d2078437c5",
+      "original_sha256": "9fecb39349ea2536bcb781cd6c551541dc6839cad32e454bd3d037d2078437c5",
+      "original_path": "archive/skills/git-commit-rule/SKILL.md"
+    },
+    {
+      "old_path": ".agents/skills/git-release/SKILL.md",
+      "path": "archive/skills/git-release/SKILL.md",
+      "sha256": "f050a7739be72ccd707c4127b6ae1889d12679cd10dab31af595accdd4b890d1",
+      "original_sha256": "011d1680fbc9919574116831373872c21415b89d42c2c9f5fb3b589b03fae1a6",
+      "original_path": "archive/skills/git-release/SKILL.md.original",
+      "normalization": "intra-archive relative Markdown link and readable-copy footer; original bytes unchanged"
+    },
+    {
+      "old_path": ".agents/skills/incremental-change/SKILL.md",
+      "path": "archive/skills/incremental-change/SKILL.md",
+      "sha256": "1dad501330dbf2f059ea2903c11c3609520bf77f78f29fa1bb9f791b0aca5eb7",
+      "original_sha256": "1dad501330dbf2f059ea2903c11c3609520bf77f78f29fa1bb9f791b0aca5eb7",
+      "original_path": "archive/skills/incremental-change/SKILL.md"
+    },
+    {
+      "old_path": ".agents/skills/kiro-lock/SKILL.md",
+      "path": "archive/skills/kiro-lock/SKILL.md",
+      "sha256": "207914bf93b04e9a201297def12cf0a0c512bd4fb10ef20c86e8a5ba57c10553",
+      "original_sha256": "207914bf93b04e9a201297def12cf0a0c512bd4fb10ef20c86e8a5ba57c10553",
+      "original_path": "archive/skills/kiro-lock/SKILL.md"
+    },
+    {
+      "old_path": ".agents/skills/markdown-review/SKILL.md",
+      "path": "archive/skills/markdown-review/SKILL.md",
+      "sha256": "b09774e326ef8b3941091fe7d4ccc3a2ccb32a5c6e720774b1088e779d66f3dc",
+      "original_sha256": "b09774e326ef8b3941091fe7d4ccc3a2ccb32a5c6e720774b1088e779d66f3dc",
+      "original_path": "archive/skills/markdown-review/SKILL.md"
+    },
+    {
+      "old_path": ".agents/skills/md-link-check/SKILL.md",
+      "path": "archive/skills/md-link-check/SKILL.md",
+      "sha256": "67bc59e6ca5432cd17ce0d13077cbaeaa51cc00c9c5764c8565323869d85aa05",
+      "original_sha256": "67bc59e6ca5432cd17ce0d13077cbaeaa51cc00c9c5764c8565323869d85aa05",
+      "original_path": "archive/skills/md-link-check/SKILL.md"
+    },
+    {
+      "old_path": ".agents/skills/planning-and-breakdown/SKILL.md",
+      "path": "archive/skills/planning-and-breakdown/SKILL.md",
+      "sha256": "939fc14770dec56cfd1b9eca19ceae69e2ff1d1ed30736be822064f8acd4c0dc",
+      "original_sha256": "939fc14770dec56cfd1b9eca19ceae69e2ff1d1ed30736be822064f8acd4c0dc",
+      "original_path": "archive/skills/planning-and-breakdown/SKILL.md"
+    },
+    {
+      "old_path": ".agents/skills/python-script-template/SKILL.md",
+      "path": "archive/skills/python-script-template/SKILL.md",
+      "sha256": "77f05eb894230c3c7dc8fd1fd6f66c1ffebe9645ee617a1231a0649ee54eeb29",
+      "original_sha256": "77f05eb894230c3c7dc8fd1fd6f66c1ffebe9645ee617a1231a0649ee54eeb29",
+      "original_path": "archive/skills/python-script-template/SKILL.md"
+    },
+    {
+      "old_path": ".agents/skills/readme-template/SKILL.md",
+      "path": "archive/skills/readme-template/SKILL.md",
+      "sha256": "7f88b54441dd892434e64e3633ada47a39ae26d940f8ddb4a58c05556945e8c1",
+      "original_sha256": "7f88b54441dd892434e64e3633ada47a39ae26d940f8ddb4a58c05556945e8c1",
+      "original_path": "archive/skills/readme-template/SKILL.md"
+    },
+    {
+      "old_path": ".agents/skills/repo-governance/SKILL.md",
+      "path": "archive/skills/repo-governance/SKILL.md",
+      "sha256": "ec70916e7a09db1f82c4c4882292b9cb1d1ed8d72ba7ed27008a366eb9e95e17",
+      "original_sha256": "ec70916e7a09db1f82c4c4882292b9cb1d1ed8d72ba7ed27008a366eb9e95e17",
+      "original_path": "archive/skills/repo-governance/SKILL.md"
+    },
+    {
+      "old_path": ".agents/skills/security-audit/SKILL.md",
+      "path": "archive/skills/security-audit/SKILL.md",
+      "sha256": "cbbbe74c824dc649a4c85a9325b67de78915a606e11b91f3b0c3832747a94999",
+      "original_sha256": "3a7e1e35d30122de3f1550b16bd1bea342adc18c8e16aebf190d5d25fe40a182",
+      "original_path": "archive/skills/security-audit/SKILL.md.original",
+      "normalization": "intra-archive relative Markdown link and readable-copy footer; original bytes unchanged"
+    },
+    {
+      "old_path": ".agents/skills/security-tools/SKILL.md",
+      "path": "archive/skills/security-tools/SKILL.md",
+      "sha256": "d61f66ef4cae5d85b9b80a24167b39340ac5be299e8d602fe380644ac3579ae3",
+      "original_sha256": "d61f66ef4cae5d85b9b80a24167b39340ac5be299e8d602fe380644ac3579ae3",
+      "original_path": "archive/skills/security-tools/SKILL.md"
+    },
+    {
+      "old_path": ".agents/skills/shipping-checklist/SKILL.md",
+      "path": "archive/skills/shipping-checklist/SKILL.md",
+      "sha256": "63b9e1c5b28cfc9cb9e69221fe862512c02e919ff673237bf10140c62f85a98e",
+      "original_sha256": "63b9e1c5b28cfc9cb9e69221fe862512c02e919ff673237bf10140c62f85a98e",
+      "original_path": "archive/skills/shipping-checklist/SKILL.md"
+    },
+    {
+      "old_path": ".agents/skills/spec-driven-infra/SKILL.md",
+      "path": "archive/skills/spec-driven-infra/SKILL.md",
+      "sha256": "e9819e0c13dc7dd0547136d0070f19c5d04700f4b50aa41f7cc411d0d5cdecd4",
+      "original_sha256": "e9819e0c13dc7dd0547136d0070f19c5d04700f4b50aa41f7cc411d0d5cdecd4",
+      "original_path": "archive/skills/spec-driven-infra/SKILL.md"
+    },
+    {
+      "old_path": ".agents/skills/testing-and-verification/SKILL.md",
+      "path": "archive/skills/testing-and-verification/SKILL.md",
+      "sha256": "736ac771b9cd565bd03fd0971a86852a96bbce4866e1864c9563761d2c27a03f",
+      "original_sha256": "f8885c9f5179408b37b9ce6b27e0de256538fff08ab5bc8309bd1ec3a796ee14",
+      "original_path": "archive/skills/testing-and-verification/SKILL.md.original",
+      "normalization": "intra-archive relative Markdown link and readable-copy footer; original bytes unchanged"
+    },
+    {
+      "old_path": ".agents/skills/testing-guide/SKILL.md",
+      "path": "archive/skills/testing-guide/SKILL.md",
+      "sha256": "e6819c934e76811739e51d5ebabd3e9269d72263acd05f53cafa90093248a305",
+      "original_sha256": "e6819c934e76811739e51d5ebabd3e9269d72263acd05f53cafa90093248a305",
+      "original_path": "archive/skills/testing-guide/SKILL.md"
+    },
+    {
+      "old_path": ".agents/skills/using-skills/SKILL.md",
+      "path": "archive/skills/using-skills/SKILL.md",
+      "sha256": "5e89660c5c3c6d255283731f365c3abc47c0009f96500053075a7fd4d981c348",
+      "original_sha256": "5e89660c5c3c6d255283731f365c3abc47c0009f96500053075a7fd4d981c348",
+      "original_path": "archive/skills/using-skills/SKILL.md"
+    },
+    {
+      "old_path": ".agents/skills/work-rules/SKILL.md",
+      "path": "archive/skills/work-rules/SKILL.md",
+      "sha256": "7f0255400e89873ef644034924b86c9c622604c4ccce20934889b8733fb4ccac",
+      "original_sha256": "7f0255400e89873ef644034924b86c9c622604c4ccce20934889b8733fb4ccac",
+      "original_path": "archive/skills/work-rules/SKILL.md"
+    },
+    {
+      "old_path": ".agents/skills/zircon-readme-policy/SKILL.md",
+      "path": "archive/skills/zircon-readme-policy/SKILL.md",
+      "sha256": "ad8f3b767ac27577365701cb6a026041b57080d992a2aea1de16db43510732c7",
+      "original_sha256": "ad8f3b767ac27577365701cb6a026041b57080d992a2aea1de16db43510732c7",
+      "original_path": "archive/skills/zircon-readme-policy/SKILL.md"
+    },
+    {
+      "old_path": ".codex/agents/code-reviewer.toml",
+      "path": "archive/agents/code-reviewer.toml",
+      "sha256": "32d6d28bcf439329ebc12d9442fbb5e24cbdaab008cfe61a21eacd1a89755795",
+      "original_sha256": "32d6d28bcf439329ebc12d9442fbb5e24cbdaab008cfe61a21eacd1a89755795",
+      "original_path": "archive/agents/code-reviewer.toml"
+    },
+    {
+      "old_path": ".codex/agents/doc-reviewer.toml",
+      "path": "archive/agents/doc-reviewer.toml",
+      "sha256": "70d8e6a309c801ecf729f011afd11a1332d4170501934fb51acc62e1c91cb905",
+      "original_sha256": "70d8e6a309c801ecf729f011afd11a1332d4170501934fb51acc62e1c91cb905",
+      "original_path": "archive/agents/doc-reviewer.toml"
+    },
+    {
+      "old_path": ".codex/agents/docs-reviewer.toml",
+      "path": "archive/agents/docs-reviewer.toml",
+      "sha256": "0278a7a4b30ced1ef30a794c98ac774f8b937c27921223c5984fbdf9649b32bd",
+      "original_sha256": "0278a7a4b30ced1ef30a794c98ac774f8b937c27921223c5984fbdf9649b32bd",
+      "original_path": "archive/agents/docs-reviewer.toml"
+    },
+    {
+      "old_path": ".codex/agents/git-manager.toml",
+      "path": "archive/agents/git-manager.toml",
+      "sha256": "94479a67fd6dec303391878c625c68bf9b07f2d29cc0fb472395317d25d38b7c",
+      "original_sha256": "94479a67fd6dec303391878c625c68bf9b07f2d29cc0fb472395317d25d38b7c",
+      "original_path": "archive/agents/git-manager.toml"
+    },
+    {
+      "old_path": ".codex/agents/infra-worker.toml",
+      "path": "archive/agents/infra-worker.toml",
+      "sha256": "0194ff221361ef3f54f0645203b530a548d22e1f7fa5a742987dc2aede74fc14",
+      "original_sha256": "0194ff221361ef3f54f0645203b530a548d22e1f7fa5a742987dc2aede74fc14",
+      "original_path": "archive/agents/infra-worker.toml"
+    },
+    {
+      "old_path": ".codex/agents/markdown-writer.toml",
+      "path": "archive/agents/markdown-writer.toml",
+      "sha256": "d0953a834ffbd81ac3e8c6adf910c4eda0fcd3c8b722037a09cfd24b1bf6bdea",
+      "original_sha256": "d0953a834ffbd81ac3e8c6adf910c4eda0fcd3c8b722037a09cfd24b1bf6bdea",
+      "original_path": "archive/agents/markdown-writer.toml"
+    },
+    {
+      "old_path": ".codex/agents/reviewer.toml",
+      "path": "archive/agents/reviewer.toml",
+      "sha256": "a15e0ce74bccfac02012f5f811e7f10040c9a119da3f8e91e85068d63c4c2197",
+      "original_sha256": "a15e0ce74bccfac02012f5f811e7f10040c9a119da3f8e91e85068d63c4c2197",
+      "original_path": "archive/agents/reviewer.toml"
+    },
+    {
+      "old_path": ".codex/agents/se-lite.toml",
+      "path": "archive/agents/se-lite.toml",
+      "sha256": "6ff331bf58b8185a7641e41b87b652baed59a2ac55b4ba2d4a7816c2213d4688",
+      "original_sha256": "6ff331bf58b8185a7641e41b87b652baed59a2ac55b4ba2d4a7816c2213d4688",
+      "original_path": "archive/agents/se-lite.toml"
+    },
+    {
+      "old_path": ".codex/agents/security-auditor.toml",
+      "path": "archive/agents/security-auditor.toml",
+      "sha256": "7d7268e6149255ed06c6b76e335aa75218d07770d4a9dd2e4e63c761646a4acf",
+      "original_sha256": "7d7268e6149255ed06c6b76e335aa75218d07770d4a9dd2e4e63c761646a4acf",
+      "original_path": "archive/agents/security-auditor.toml"
+    },
+    {
+      "old_path": ".codex/agents/system-engineer.toml",
+      "path": "archive/agents/system-engineer.toml",
+      "sha256": "febfcf99b845134cb9cedf1b8c796ca603fa01f04c88625f6a41b833912a38c4",
+      "original_sha256": "febfcf99b845134cb9cedf1b8c796ca603fa01f04c88625f6a41b833912a38c4",
+      "original_path": "archive/agents/system-engineer.toml"
+    }
+  ]
+}

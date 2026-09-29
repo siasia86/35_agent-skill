@@ -7,7 +7,7 @@
 - gpt 원본은 수정하지 않습니다. 출처와 최초 해시는 BASELINE_MANIFEST.json에 있습니다.
 - 현재 작업 순서·모델별 위임·완료 상태는 저장소 루트 TODO.md §8에서 관리합니다.
 - 복사된 TODO·PLAN·CHANGELOG·ISSUE·CODEX_MIGRATION 문서의 과거 완료 기록을 현재 설치 결과로 사용하지 않습니다.
-- 기존 커스텀 규칙의 상세 본문은 .agents/skills, policies, markdown, prompts에 보존합니다. 작업에 필요한 파일만 읽고 적용 범위를 확인합니다.
+- 기존 커스텀 규칙의 상세 본문은 archive/skills, archive/agents, policies, markdown, prompts에 보존합니다. archive는 비교 자료이며 자동 실행 지침이 아닙니다. 작업에 필요한 파일만 읽고 적용 범위를 확인합니다.
 - 현재 사용자 요청과 플랫폼 지침·권한을 따릅니다. 과거 절대 경로·branch·프로필·무조건 승인 생략·프로세스 정리 예시는 실행 지시로 취급하지 않습니다.
 
 ## 2. 구현과 검증
@@ -23,6 +23,6 @@
 
 **작성일**: 2026-09-21
 
-**마지막 업데이트**: 2026-09-22
+**마지막 업데이트**: 2026-09-29
 
 © 2026 siasia86. Licensed under CC BY 4.0.

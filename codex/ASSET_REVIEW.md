@@ -1,5 +1,8 @@
 # Codex 자산 정적 감사
 
+2026-09-29 경로 변경: 아래 최초 검토의 `.agents/skills`·`.codex/agents`는 현재 `archive/skills`·`archive/agents`에 있습니다. [경로 대응표](archive/PATH_MAP.json)로 확인하며 당시 판단과 최초 manifest는 보존합니다.
+
+
 ## 범위와 판정 기준
 
 이 문서는 `gpt/` 원본과 `codex/` 복사본의 skill 25개, agent TOML 10개를 **읽기 전용으로 정적 감사**한 기록입니다. 전체 포팅, 런타임 로딩, 권한·model·sandbox 동작 검증은 완료되지 않았습니다. 원본의 예제 명령과 지침은 실행하지 않았습니다.
@@ -77,6 +80,6 @@
 
 **작성일**: 2026-09-21
 
-**마지막 업데이트**: 2026-09-22
+**마지막 업데이트**: 2026-09-29
 
 © 2026 siasia86. Licensed under CC BY 4.0.

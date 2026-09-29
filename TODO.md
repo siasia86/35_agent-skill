@@ -430,6 +430,18 @@ Batch 6에서 10개 모두 정적 이식·TOML·역할 검토를 완료했습니
 - 다음 작업의 단일 기준은 §8.1입니다. 환경·허용 작업 계약과 통합 기준을 먼저 확인하며 실제 계정 권한·서버·실행 코드는 이번 TODO 검토에서 변경하지 않았습니다. 기록 위치와 직접 실행 예외는 미결정입니다.
 - 2026-09-22 설계 checkpoint: 후속 사용자 요청으로 30·31·35 root 작업본 직접 수정·commit·push를 이번 1회에 한해 승인받았습니다. 이유는 governance 구조 설계 변경의 통합·검증·이력 정리입니다. 계정 clone은 보존하고 변경 부분만 옮겼으며 30 전체 테스트 40개·31 draft 45개 항목·5개 자산 계획 연동을 확인했습니다. 운영 적용·release 승인·ACL 변경은 제외합니다. 게시 대상은 30·31 design/governance-20260922, 35 yunli이며 이후 root 직접 수정은 새 이유·승인이 필요합니다.
 
+### 8.5 2026-09-29 Codex governance 개선
+
+이번 사용자 요청의 범위는 Kiro skill 접근 재확인·Codex 개선 후보 구현·검증입니다. [작업 기록](codex/CODEX_GOVERNANCE_PLAN.md)과 [검증 기록](codex/CODEX_GOVERNANCE_VERIFICATION.md)을 기준으로 합니다. 기존 8번 실제 환경 pilot·후속 위임 정책·9번 release의 완료 상태는 변경하지 않습니다.
+
+- [x] CG-35: 자동 발견 보존본을 archive로 이동하고 정책·전문 skill·개인 양식의 범위를 정리합니다. bytes·catalog·문법·문서·보안 검사를 통과했습니다.
+- [x] CG-31: 공통·저장소별 정책과 두 skill 합성 profile, 필수 정책 bootstrap을 작성합니다. draft 후보이며 현재 runtime에는 설치하지 않습니다.
+- [x] CG-30: 닫힌 후보 생성·check 도구와 단위 시험을 추가합니다. 기존 계약을 유지하고 세 profile의 build·check·unchanged를 검사했습니다.
+- [x] CG-REVIEW: 독립 정책·권한·forward-test 검토의 발견사항을 통합·수정하고 주 agent의 최종 후보·103개 회귀 검사로 재검증했습니다.
+- [ ] 최신 Kiro md-link-check·repo-governance·work-rules 세 파일의 OS 읽기 접근 후 전체 내용을 대조합니다.
+- [x] 검증한 패치를 현재 작업의 1회 승인으로 root 30·31·35에 반영했습니다. yunli commit·일반 push는 후속 승인 범위이며 게시 결과는 최종 Git 기록으로 확인합니다.
+- [ ] 실제 runtime 설치·새 세션 동작은 대상·승인·검증 범위가 갖춰진 뒤 진행합니다.
+
 ## 9. 문서 검토 기록과 근거
 
 ### 9.1 검토 범위
@@ -464,6 +476,6 @@ Batch 6에서 10개 모두 정적 이식·TOML·역할 검토를 완료했습니
 
 **작성일**: 2026-09-21
 
-**마지막 업데이트**: 2026-09-22
+**마지막 업데이트**: 2026-09-29
 
 © 2026 siasia86. Licensed under CC BY 4.0.

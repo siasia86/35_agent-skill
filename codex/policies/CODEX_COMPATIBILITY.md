@@ -2,7 +2,7 @@
 
 ## 1. 보존 원칙
 
-기준 원본은 이 저장소의 `kiro/`입니다. 홈 디렉터리의 실행 환경으로 원본을 대체하지 않습니다. 문서 형식, 푸터, 별점, PLAN 오류 기록, TODO 배치, Git 메시지, 테스트 및 운영 규칙을 보존합니다. 원본과 대상 경로·SHA-256은 `MIGRATION_MANIFEST.json`에 기록합니다.
+기준 원본은 이 저장소의 `kiro/`입니다. 홈 디렉터리의 실행 환경으로 원본을 대체하지 않습니다. 원본은 비교·추적을 위해 보존하고 현재 실행 규칙은 적용 저장소 정책에 맞게 이식합니다. 푸터·별점·PLAN·배치·개인 코드 양식을 전체 작업의 공통 의무로 확대하지 않습니다. 원본과 대상 경로·SHA-256은 `MIGRATION_MANIFEST.json`에 기록합니다.
 
 ## 2. 실행과 승인
 
@@ -30,19 +30,10 @@
 
 ---
 
-## 통계
-
-![GitHub stars](https://img.shields.io/github/stars/siasia86/system-engineering-resources?style=social)
-![GitHub forks](https://img.shields.io/github/forks/siasia86/system-engineering-resources?style=social)
-![GitHub watchers](https://img.shields.io/github/watchers/siasia86/system-engineering-resources?style=social)
-![GitHub last commit](https://img.shields.io/github/last-commit/siasia86/system-engineering-resources)
-![License](https://img.shields.io/github/license/siasia86/system-engineering-resources)
-![Actions](https://img.shields.io/github/actions/workflow/status/siasia86/system-engineering-resources/update-date.yml)
-
 ---
 
 **작성일**: 2026-09-21
 
-**마지막 업데이트**: 2026-09-21
+**마지막 업데이트**: 2026-09-29
 
 © 2026 siasia86. Licensed under CC BY 4.0.

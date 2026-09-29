@@ -14,7 +14,7 @@ gpt 원본 62개 파일을 복사한 개발용 배포본입니다. 전체 skill�
 - 프로젝트 시험: 같은 최소 지침에 저장소 전용 범위를 더한 루트 AGENTS.md를 사용할 수 있습니다.
 - 기존 AGENTS.md·AGENTS.override.md와 차이·우선순위·백업을 확인하고 새 세션에서 로딩과 동작을 검증합니다.
 - 이 디렉토리 전체를 사용자 홈이나 consumer 루트에 덮어쓰지 않습니다. README·TODO·PLAN·이전 이력·BASELINE_MANIFEST는 설치 payload가 아닙니다.
-- .agents/skills, .codex/agents, policies, markdown, prompts는 보존된 이식 후보입니다. 신규 자체 완결형 후보는 payload 아래에 분리했으며 보존 영역 전체를 활성화하지 않습니다.
+- archive/skills, archive/agents, policies, markdown, prompts는 보존된 이식 후보입니다. 이전 경로는 archive/PATH_MAP.json으로 대응하며 자동 발견 경로에서 분리했습니다. 신규 자체 완결형 후보는 payload 아래에 분리했으며 보존 영역 전체를 활성화하지 않습니다.
 - 복사된 과거 문서의 완료 표시는 gpt 이전 이력입니다. 다른 환경의 trusted·자동 승인·profile 설정이 현재 설치됐다고 가정하지 않습니다.
 
 ## 3. 원본 관리와 갱신
@@ -28,10 +28,14 @@ gpt 원본 62개 파일을 복사한 개발용 배포본입니다. 전체 skill�
 - Codex 지침: [공식 AGENTS.md 문서](https://learn.chatgpt.com/docs/agent-configuration/agents-md) — ★★★☆☆
 - Subagents: [공식 위임 설정 문서](https://learn.chatgpt.com/docs/agent-configuration/subagents) — ★★★☆☆
 
+## 5. 중앙 governance skill 후보
+
+두 governance 역할의 소유권·필수 정책 읽기·발견 경로·초안 생성 범위는 [Codex governance 구성](CODEX_GOVERNANCE.md)을 따릅니다. 기존 독립 payload와 정책 합성 후보의 파일 집합을 구분합니다.
+
 ---
 
 **작성일**: 2026-09-04
 
-**마지막 업데이트**: 2026-09-22
+**마지막 업데이트**: 2026-09-29
 
 © 2026 siasia86. Licensed under CC BY 4.0.

@@ -2,7 +2,7 @@
 
 ## 1. 적용 범위
 
-Batch 2·6 개발 후보입니다. 최소 개인 지침 외에는 실제 개인 홈 설치가 완료된 상태가 아닙니다. 원본 보존 영역인 .agents·.codex 전체를 복사하지 않고 아래 목록만 선택합니다. README·TODO·manifest는 운영 대상에 덮어쓰지 않습니다.
+Batch 2·6 개발 후보입니다. 최소 개인 지침 외에는 실제 개인 홈 설치가 완료된 상태가 아닙니다. 원본 보존 영역인 archive 전체를 복사하지 않고 아래 목록만 선택합니다. README·TODO·manifest는 운영 대상에 덮어쓰지 않습니다.
 
 | 배포 원본                                     | 개인 설치 대상                                   | 프로젝트 설치 대상                       |
 |-----------------------------------------------|--------------------------------------------------|------------------------------------------|
@@ -53,10 +53,14 @@ The exact payload path, SHA-256, target roots, companion inventory, and optional
 - 원본 복사와 runtime 설치를 구분합니다. 자동 발견 자산은 runtime 검색 밖 staging에서 검증한 뒤 최종 배치를 활성화로 취급합니다. hook 등록은 별도 검증·승인 단계입니다.
 - 실제 적용 기록·운영 로그·snapshot의 최종 보관 위치는 미결정입니다. 기존 복구 자료를 유지하며 본 개발 기록으로 운영 배치를 확정하지 않습니다.
 
+## 5. 중앙 정책을 합성하는 두 skill
+
+governance-default·governance-repository는 [별도 초안 구성](CODEX_GOVERNANCE.md)으로 생성합니다. 35의 templates/governance는 runtime payload가 아니며, 31의 고정 정책과 30의 생성 도구를 통해 로컬 references가 포함된 일곱 파일 후보를 만듭니다. 기존 AGENTS는 병합 검토하며 두 skill을 현재 catalog의 단일 파일 자산처럼 복사하지 않습니다.
+
 ---
 
 **작성일**: 2026-09-22
 
-**마지막 업데이트**: 2026-09-22
+**마지막 업데이트**: 2026-09-29
 
 © 2026 siasia86. Licensed under CC BY 4.0.

@@ -1,15 +1,15 @@
 ---
 name: python-script-template
-description: Create or improve portable Python CLI scripts using the established safety switch, date version, strict layout, argparse, logging, and error-handling conventions.
+description: Create standalone Python CLI utilities using the personal template when selected, while following the target project’s existing layout and version conventions.
 ---
 
 # Python script template
 
 Use this skill for a new or materially revised Python command-line script. Read applicable repository guidance first; its explicit conventions take precedence over this template. Preserve a project’s established package layout when editing an existing program.
 
-## Required structure
+## Personal standalone template
 
-For a standalone script, keep this order unless the target project requires another structure:
+Select this personal layout when requested or when the project chooses it. A safety switch, date-based version, and imports after VERSION are personal conventions; preserve an existing package’s import order, version scheme, and lint requirements. For a new standalone utility using this template, use:
 
 1. `#!/usr/bin/env python3`
 2. commented safety switch
@@ -108,6 +108,6 @@ Run `python3 -m py_compile <script>` and `<script> --help` when safe. Also run t
 
 **작성일**: 2026-09-22
 
-**마지막 업데이트**: 2026-09-22
+**마지막 업데이트**: 2026-09-29
 
 © 2026 siasia86. Licensed under CC BY 4.0.

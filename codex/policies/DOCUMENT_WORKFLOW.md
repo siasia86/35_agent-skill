@@ -1,43 +1,32 @@
 # 작업 문서 정책
 
-## 1. 원본과 적용 위치
+## 1. 적용할 정책
 
-원본은 `kiro/skills/repo-governance/SKILL.md`, `kiro/skills/work-rules/SKILL.md` §23·§26, `31_governances/.governance/repository/documentation_policy.md`입니다. 저장소별 `.governance/GOVERNANCE.md`, `exceptions.md`, `verification.md`를 우선 확인합니다.
+작업 저장소의 `AGENTS.md`, `.governance/GOVERNANCE.md`, 문서 정책·예외·검증 기준을 확인합니다. 정책 파일의 실제 위치와 적용 범위를 사용하며 특정 개인 경로나 다른 저장소의 존재를 가정하지 않습니다. 중앙 구성 사용 시 31 profile이 고정하고 후보에 포함한 정책을 읽습니다.
 
-일반 프로젝트는 `.governance/ISSUE.md`, `TODO.md`, `PLAN.md`를 사용하고 기존 저장소는 루트 문서를 허용합니다. 이번 마이그레이션은 사용자가 지정한 `gpt/`에 ISSUE·TODO·PLAN·CHANGELOG를 둡니다. 다른 작업의 루트 문서나 `agent-workflows/`를 덮어쓰지 않습니다.
+Kiro 원본은 이식 의도의 비교 자료입니다. 읽지 못한 최신 원본의 세부 규칙을 확인했다고 기록하지 않습니다. 보존된 Markdown 스타일·배치 규칙은 현재 저장소가 선택한 경우에만 적용합니다.
 
-## 2. 문서 역할
+## 2. 문서 역할과 계획
 
-- ISSUE: 문제의 재현, 원인, 영향, 제안, 상태를 기록합니다.
-- TODO: 미착수·미완료 작업과 검증 후 완료 상태를 기록합니다.
-- PLAN: 진행 중인 복합 작업의 단계, 범위, 검증, 롤백을 기록합니다.
-- CHANGELOG: 완료되고 검증된 변경을 최신순으로 기록합니다.
+- ISSUE에는 재현·원인·영향·해결 상태를 기록합니다.
+- TODO에는 작업 색인과 미착수·미완료 상태를 기록합니다.
+- PLAN에는 진행 중인 복합 작업의 의존 단계·범위·검증·복구를 기록합니다.
+- CHANGELOG에는 완료하고 검증한 변경과 남은 제한을 기록합니다.
 
-흐름은 `ISSUE → TODO → PLAN → 구현·검증 → CHANGELOG`입니다. 단순 변경은 TODO·CHANGELOG로 처리합니다. 세 단계 이상 작업에는 PLAN을 사용합니다. 활성 내용이 없어도 문서를 삭제하지 않고 `없음`을 기록합니다.
+단순 변경은 해당 저장소의 TODO·CHANGELOG 흐름을 사용합니다. 의존 단계·고위험 변경·consumer 전환·별도 승인·복구 설계·버전 및 checksum 변경이 있으면 PLAN을 사용합니다. 단계 수만으로 PLAN을 강제하지 않습니다. 기존 기록 위치는 유지하며 새 문서를 만들거나 옮기는 범위는 사용자 요청과 저장소 정책에서 정합니다.
 
-## 3. 원본 세부 규칙
+## 3. 기록과 검사
 
-PLAN 오류 기록은 work-rules §23을 그대로 적용합니다. 비자명한 오류, escaping 문제, 코드 수정에 따른 장애 등을 해결한 직후 기록하며 같은 증상의 기존 항목에 보강합니다. 계획 문서 자체 편집은 재귀 기록하지 않습니다. ISSUE에는 원인·영향, PLAN에는 작업 중 발견한 해결 과정과 검증을 기록합니다.
+비자명한 오류를 해결한 뒤 증상·원인·해결·검증을 해당 작업 기록에 남깁니다. 상세는 한 곳에 두고 관련 문서에서는 연결합니다. 검사 목적·대상·결과·미실행을 구분하고 실제 검증 후에 완료 상태를 갱신합니다.
 
-TODO 배치는 work-rules §26을 그대로 적용합니다. 기본 3개 단위, 세션 간 연속 배치 번호, 마지막 1~2개도 사전·사후 보고, reference 준비 후 작성, 표 정렬, 세 가지 Markdown 검사, 대상별 fact-check 회차, 검증 후 상태 갱신 순서를 유지합니다. 중단 후 다음 미완료 항목부터 재개합니다. README·CHANGELOG는 마지막 배치에서 갱신하고 보류 여부를 보고합니다.
+배치는 의존성과 검토 가능한 변경 범위로 나눕니다. 저장소가 배치 크기를 정한 경우 그 값을 따릅니다. 공통 기본값으로 세 항목 배치·세션 번호·reference 갱신·고정 fact-check 회차를 강제하지 않습니다.
 
-일반 문서의 푸터·날짜·배지와 참고 링크 별점은 `markdown/STYLE.md`, `readme-template`에 따릅니다. Skill 정의·목록과 `_reference/` 예외를 일반 문서 전체에 확대하지 않습니다. 검사 예외는 원본 정책 또는 ISSUE의 명시적 근거가 있어야 하며, 검사 실패를 숨기기 위한 전체 비활성화는 하지 않습니다.
-
----
-
-## 통계
-
-![GitHub stars](https://img.shields.io/github/stars/siasia86/system-engineering-resources?style=social)
-![GitHub forks](https://img.shields.io/github/forks/siasia86/system-engineering-resources?style=social)
-![GitHub watchers](https://img.shields.io/github/watchers/siasia86/system-engineering-resources?style=social)
-![GitHub last commit](https://img.shields.io/github/last-commit/siasia86/system-engineering-resources)
-![License](https://img.shields.io/github/license/siasia86/system-engineering-resources)
-![Actions](https://img.shields.io/github/actions/workflow/status/siasia86/system-engineering-resources/update-date.yml)
+푸터·날짜·배지·별점·문서 언어는 적용되는 문서 정책이 선택한 경우에만 사용합니다. 실제 설치된 검사 도구와 설정을 확인하여 변경 파일의 style·heading·link를 검사합니다. 누락·권한 거부·실패를 전체 통과로 기록하지 않습니다.
 
 ---
 
-**작성일**: 2026-09-21
+**작성일**: 2026-09-29
 
-**마지막 업데이트**: 2026-09-21
+**마지막 업데이트**: 2026-09-29
 
 © 2026 siasia86. Licensed under CC BY 4.0.

@@ -1,7 +1,7 @@
 {
   "catalog_version": "0.2-draft",
   "status": "development_catalog_not_release",
-  "recorded_on": "2026-09-22",
+  "recorded_on": "2026-09-29",
   "asset_owner": "35_agent-skill",
   "deployment_policy_owner": "31_governances",
   "execution_owner": "30_sia-scripts",
@@ -258,7 +258,7 @@
       "id": "git-release",
       "kind": "skill",
       "source_path": "skills/git-release/SKILL.md",
-      "sha256": "256d750b277d3ee33a1bac7523cc1134a00b1ca66e15f2976751f4825e51ad68",
+      "sha256": "b8c67c9db70556be69b0a0f31a005168490dabb7c3f6aac7619de624457cdbf5",
       "targets": {
         "personal": {
           "root": "user_home",
@@ -363,7 +363,7 @@
       "id": "python-script-template",
       "kind": "skill",
       "source_path": "skills/python-script-template/SKILL.md",
-      "sha256": "4f2c714d0a9fe25ba50382e3a5f2390e52056ba427985f21a179c53a081f00a7",
+      "sha256": "dc8c4d4e7b8f26b0edb28531c565e16e153315952e4dfe434e090de37b491d76",
       "targets": {
         "personal": {
           "root": "user_home",
@@ -405,7 +405,7 @@
       "id": "repo-governance",
       "kind": "skill",
       "source_path": "skills/repo-governance/SKILL.md",
-      "sha256": "2eecbf519fd454910c1909ccf6fd852a3863d2f8d5d1e3f69085a56b8417ddca",
+      "sha256": "d76293bafa8c34fc06ed283f618f2a754e14cf371ad2d16a35eda79c90ed57e0",
       "targets": {
         "personal": {
           "root": "user_home",
@@ -552,7 +552,7 @@
       "id": "using-skills",
       "kind": "skill",
       "source_path": "skills/using-skills/SKILL.md",
-      "sha256": "bae5774275a4c268091f5c639c52e1630eb41d4482ee391f0247a0c8ffb8e01a",
+      "sha256": "d19722da67fed9c62092ab8adf292901ef0bdc900a112f3fde3ba7a0549d33d8",
       "targets": {
         "personal": {
           "root": "user_home",
@@ -731,7 +731,7 @@
       "id": "system-engineer",
       "kind": "agent",
       "source_path": "agents/system-engineer.toml",
-      "sha256": "be5e8a9e3eb21028d655f9bf72c285cf2c03843d4bcbe466ee51ea89e69483b2",
+      "sha256": "058b061bed9ae678564d002c8630e4cda3ee94925be193bebb9753ddb3c0cd80",
       "targets": {
         "personal": {
           "root": "codex_home",
@@ -779,7 +779,7 @@
       "id": "work-rules",
       "kind": "skill",
       "source_path": "skills/work-rules/SKILL.md",
-      "sha256": "ba622e6e69a7b0f7e8520cb49a99375b074f5328c6dd6369376af4a7da0a6537",
+      "sha256": "b02cc7d140d8519b6a1a99cabc5faed1e90212cbdf959c6c3816dd179907bd99",
       "targets": {
         "personal": {
           "root": "user_home",
@@ -793,7 +793,7 @@
       "required_companion_files": [
         {
           "source_path": "skills/work-rules/references/operating-rules.md",
-          "sha256": "cbbf2b77bd9baec790b86a4cd1d02aa1a8f1c39eeb50056c877ab2b0acea8591",
+          "sha256": "03c9b0a823081c01dc2becc00b72203e7fc241b6a68000736967b9b59fdaa046",
           "relative_target": "references/operating-rules.md"
         }
       ],

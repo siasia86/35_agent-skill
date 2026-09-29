@@ -2,7 +2,7 @@
 name: markdown-style-index
 description: >
   STYLE.md 섹션 참조 인덱스.
-  마크다운 작성 중 어떤 규칙을 적용할지 빠르게 찾을 때 사용.
+  현재 저장소 또는 사용자가 이 개인 양식을 선택한 경우 적용할 규칙을 찾을 때 사용.
   상세 규칙은 STYLE.md 참고.
 tags:
   - markdown
@@ -46,3 +46,11 @@ STYLE.md
     ├── §12 README 푸터        배지, 날짜, 저작권 (readme-template 스킬)
     └── §13 구분선             섹션 그룹 사이 --- (남용 금지)
 ```
+
+---
+
+**작성일**: 2026-09-29
+
+**마지막 업데이트**: 2026-09-29
+
+© 2026 siasia86. Licensed under CC BY 4.0.

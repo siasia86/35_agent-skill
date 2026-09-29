@@ -4,6 +4,19 @@
 
 ## [Unreleased]
 
+### 검증한 Codex 개선 패치의 root 반영 — 2026-09-29
+
+- 검증한 변경을 사용자의 이번 1회 승인으로 원래 작업본에 반영했습니다. 후속 요청으로 yunli commit·일반 push까지 승인받았으며 반영 파일을 다시 검증합니다. 게시 성공은 실제 원격 Git 확인 결과로 판정합니다.
+- 기존 사용자 변경과 Kiro/GPT 원본을 보존합니다. 개인 runtime·운영 적용·OS 권한·release·main/integration·force push는 포함하지 않으며 이번 작업 종료 시 예외가 만료됩니다.
+
+### Codex governance 개선 후보 — 2026-09-29
+
+- 계정 소유 독립 작업본에서 35 재사용 진입점·31 공통 및 저장소별 정책·30 생성 도구를 연결하는 별도 draft 구성을 작성했습니다. 기존 독립 payload 25 skill·10 agent·37파일은 유지합니다.
+- Codex 보존 자산은 archive로 분리하고 35개 원문 bytes를 유지했습니다. 이동 후 상대 링크 세 곳은 열람본에서 정리하며 해당 원문도 별도로 보관했습니다. 최초 baseline·Kiro/GPT 원본은 유지합니다.
+- 문서 계획·배치·개인 Markdown 및 Python 양식과 release 준비의 적용 범위를 현재 저장소·기존 승인 기준에 맞췄습니다. 필수 정책 누락·해시 불일치의 중단 조건과 기존 instruction의 AGENTS 경로 충돌 거부를 명시했습니다.
+- 검증 범위·독립 검토·접근 제한은 [검증 기록](codex/CODEX_GOVERNANCE_VERIFICATION.md)에 남깁니다. 최신 Kiro 세 skill의 전체 내용 대조는 OS 읽기 권한으로 미완료입니다. 위 독립 작업본 검사 시점에는 root 통합·commit·push를 수행하지 않았습니다. 이후 승인·반영은 위 최신 항목을 따르며 실제 runtime 설치·release는 미실행입니다.
+
+
 ### 게시·병합과 작업본 최신화 마감 — 2026-09-22
 
 - 개발 자산과 후속 TODO를 9fe7fc4로 yunli에 게시하고 main에도 fast-forward로 반영했습니다. 충돌은 없었으며 기존 commit을 보존했습니다. 등록 CI workflow는 없어 로컬 자산·문서·보안 검사 결과를 사용했습니다.
@@ -83,6 +96,6 @@
 
 **작성일**: 2026-08-31
 
-**마지막 업데이트**: 2026-09-22
+**마지막 업데이트**: 2026-09-29
 
 © 2026 siasia86. Licensed under CC BY 4.0.

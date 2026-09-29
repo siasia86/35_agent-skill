@@ -36,7 +36,7 @@ Use primary/official sources for factual technical claims when accuracy matters.
 
 ## 8. Python conventions retained from the personal standard
 
-For standalone Python utilities, use the ordered structure of shebang, commented safety switch, module docstring, date-based `VERSION`, ordered imports, constants/patterns, functions, `parse_args()`, `main()`, and a guarded `KeyboardInterrupt` handler. Use `argparse`, validate configuration early, use context managers, compile repeated patterns once, and keep colors/logging configurable. The portable `python-script-template` skill supplies the full safe template; private lock/status/log paths are intentionally not defaults.
+When the user or repository selects the personal standalone template, use the ordered structure of shebang, commented safety switch, module docstring, date-based `VERSION`, ordered imports, constants/patterns, functions, `parse_args()`, `main()`, and a guarded `KeyboardInterrupt` handler. Use `argparse`, validate configuration early, use context managers, compile repeated patterns once, and keep colors/logging configurable. The portable `python-script-template` skill supplies the full safe template; private lock/status/log paths are intentionally not defaults.
 
 ## 9. Remote, Windows, and VM work
 
@@ -54,6 +54,6 @@ For a multi-step or risky task, state objective, assumptions, ordered steps, dep
 
 **작성일**: 2026-09-22
 
-**마지막 업데이트**: 2026-09-22
+**마지막 업데이트**: 2026-09-29
 
 © 2026 siasia86. Licensed under CC BY 4.0.
