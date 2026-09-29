@@ -4,6 +4,14 @@
 
 ## [Unreleased]
 
+### sjyun·yunli·main 브랜치 통합 — 2026-09-29
+
+- 사용자가 세 저장소의 개발 변경과 기준 브랜치를 정합화하기 위해 이번 1회에 한해 sjyun·yunli·main 병합·일반 push를 명시적으로 승인했습니다. 계정 소유 독립 clone에서 수행하며 완료·중단 시 예외가 만료됩니다. 이후 main 게시의 상시 권한으로 재사용하지 않습니다.
+- 통합 전 원격 기준: sjyun 없음 · yunli 3179f95 · main c30c33f. 기존 각 브랜치의 모든 commit이 최신 yunli에 포함됨을 확인했습니다. 기존 sjyun이 없어 검증한 통합 commit에서 새로 생성합니다. 검증한 결과와 이 기록을 포함한 동일 commit으로 세 브랜치를 fast-forward합니다.
+- 검증: 개발·배포 및 보완 열람 문서 40개 style, 이동 보존본 포함 62개 heading·link, 작업본 Gitleaks·diff 검사 통과. 보존본의 기존 서식 지적 64건은 전체 style 통과로 바꾸지 않으며 archive 원본 35개가 이전 main과 동일한 bytes임을 확인했습니다. catalog 36 ID·40파일과 개인·프로젝트 격리 설치·재적용 no-op 검사도 통과했습니다. 원격 브랜치 SHA 일치와 시작 commit 보존 여부로 게시를 확인합니다.
+- 기존 사용자 변경·원본·release를 보존하며 보호 설정·자격증명·OS 권한·운영 적용은 변경하지 않습니다. 게시 후 복구는 검토된 revert로 수행합니다.
+
+
 ### 작업 기록 규약과 skill 경량화 — 2026-09-29
 
 - 공통 번호 규약을 따르도록 문서 정책을 연결하고, 기존 Token·품질 비교 항목을 codex/tasks/01_TODO.md로 분리했습니다. 루트 TODO는 링크와 미완료 상태를 유지하고 governance 완료 체크리스트는 기존 CHANGELOG·검증 근거로 연결했습니다.
