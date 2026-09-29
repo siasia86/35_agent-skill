@@ -41,7 +41,7 @@
       "id": "fact-check",
       "kind": "skill",
       "source_path": "skills/fact-check/SKILL.md",
-      "sha256": "a83a12c56cb02a4a6188a07718ba73063a5dd691c0abdead10ecc77e95e6af0f",
+      "sha256": "36d49ca8c42bdcb5f06edc39d8575578c233763e9067c921f7ea7c4e6ad9f620",
       "targets": {
         "personal": {
           "root": "user_home",
@@ -64,7 +64,7 @@
       "id": "markdown-review",
       "kind": "skill",
       "source_path": "skills/markdown-review/SKILL.md",
-      "sha256": "a9b196ec9fef4ec3432f4037f21a8ba9e7b60540e834647910b5acc88df1c7b0",
+      "sha256": "c87f3dace668f3af4f891fafd7159e64d1e493c9eaa44c3565e99f57a4fa7307",
       "targets": {
         "personal": {
           "root": "user_home",
@@ -279,7 +279,7 @@
       "id": "incremental-change",
       "kind": "skill",
       "source_path": "skills/incremental-change/SKILL.md",
-      "sha256": "a8b621b3e22d8ace0538ed983de16fde1e8c9e978acd59507bc05f417c3bc163",
+      "sha256": "4c2031d9beee5864d287fd5afef316f653f04b130626fdb2a29a87dd39a568f3",
       "targets": {
         "personal": {
           "root": "user_home",
@@ -342,7 +342,7 @@
       "id": "planning-and-breakdown",
       "kind": "skill",
       "source_path": "skills/planning-and-breakdown/SKILL.md",
-      "sha256": "88f4aba0dfedbcee6b9799e5c52020f34ac27cea42ba35f18925b3926d4445aa",
+      "sha256": "1e5eb8d2bcd1b54442a7f842425172fce62d0b38b9945bafc6873462da3d8044",
       "targets": {
         "personal": {
           "root": "user_home",
@@ -363,7 +363,7 @@
       "id": "python-script-template",
       "kind": "skill",
       "source_path": "skills/python-script-template/SKILL.md",
-      "sha256": "dc8c4d4e7b8f26b0edb28531c565e16e153315952e4dfe434e090de37b491d76",
+      "sha256": "1ce2afab42c7571ae2c0a91308162d16b876187ec445297623e43cd798a9cd6d",
       "targets": {
         "personal": {
           "root": "user_home",
@@ -374,7 +374,13 @@
           "path": ".agents/skills/python-script-template/SKILL.md"
         }
       },
-      "required_companion_files": [],
+      "required_companion_files": [
+        {
+          "source_path": "skills/python-script-template/assets/standalone.py",
+          "sha256": "81a1e78b42f71e23f0f4db56ab9b5bdd9e9d69663f563b0c26e52bb31dc0ed90",
+          "relative_target": "assets/standalone.py"
+        }
+      ],
       "optional_skill_references": [],
       "activation_boundary": "runtime_path_placement",
       "conflict_policy": "stop_and_review",
@@ -468,7 +474,7 @@
       "id": "shipping-checklist",
       "kind": "skill",
       "source_path": "skills/shipping-checklist/SKILL.md",
-      "sha256": "fde70db5e6847372cca665b7af3f3a6a838bd814d4fe3006512f45aec8689703",
+      "sha256": "8d72cbfb9a687d76f6603db67746f952cef07ec20f555ef9efea564545f64066",
       "targets": {
         "personal": {
           "root": "user_home",
@@ -510,7 +516,7 @@
       "id": "testing-and-verification",
       "kind": "skill",
       "source_path": "skills/testing-and-verification/SKILL.md",
-      "sha256": "812be0b01100480f8c02df0b3f7d41a67be896bd93a96ad2b25497fd53b6e1c2",
+      "sha256": "86c99139018033068123441eda5801ec17d1201d7f316483e65d47b749a098d9",
       "targets": {
         "personal": {
           "root": "user_home",
@@ -531,7 +537,7 @@
       "id": "testing-guide",
       "kind": "skill",
       "source_path": "skills/testing-guide/SKILL.md",
-      "sha256": "976a3e2cec26e10ff722a909075c62ae269ae1b8bfea80a1e82cc4708a0ce164",
+      "sha256": "17f79596abcd9623020646c522808524de029b44bd0eeec2dce11d72570bccc0",
       "targets": {
         "personal": {
           "root": "user_home",
@@ -779,7 +785,7 @@
       "id": "work-rules",
       "kind": "skill",
       "source_path": "skills/work-rules/SKILL.md",
-      "sha256": "b02cc7d140d8519b6a1a99cabc5faed1e90212cbdf959c6c3816dd179907bd99",
+      "sha256": "e4c9f58ff1abc370eea995931b474d9ef780d6703017bd99e2657ccc309425f6",
       "targets": {
         "personal": {
           "root": "user_home",
@@ -793,8 +799,18 @@
       "required_companion_files": [
         {
           "source_path": "skills/work-rules/references/operating-rules.md",
-          "sha256": "03c9b0a823081c01dc2becc00b72203e7fc241b6a68000736967b9b59fdaa046",
+          "sha256": "d8bb6807721ef622fba737ef68405258aabf70f1887414ed7424e28933ac685c",
           "relative_target": "references/operating-rules.md"
+        },
+        {
+          "source_path": "skills/work-rules/references/documentation.md",
+          "sha256": "b1973fea45164022df55ac1f01f381f002482c48559539cbe8927d953ade6fb6",
+          "relative_target": "references/documentation.md"
+        },
+        {
+          "source_path": "skills/work-rules/references/infrastructure.md",
+          "sha256": "1764ed954d7cb208fb0f154d6cc57fc68f5e2334de24a427e0b519695294e713",
+          "relative_target": "references/infrastructure.md"
         }
       ],
       "optional_skill_references": [

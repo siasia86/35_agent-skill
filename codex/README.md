@@ -6,7 +6,7 @@
 
 gpt 원본 62개 파일을 복사한 개발용 배포본입니다. 전체 skill·agent를 바로 설치할 수 있는 release는 아직 아닙니다. 원본은 gpt에 보존하며 최초 파일별 SHA-256과 출발 commit은 [BASELINE_MANIFEST.json](BASELINE_MANIFEST.json)에 있습니다.
 
-현재 payload에는 [최소 SE 공통 지침](payload/personal/AGENTS.md), skill 25개, agent 10개와 work-rules의 동반 참조 파일 1개가 있습니다. 자산 선택 ID는 36개, 설치 후보 파일은 37개입니다. 개인 홈에 설치한 것은 과거 P0 최소 지침뿐이며 이번에는 runtime을 변경하지 않습니다. 원본 대응·개인 및 프로젝트 설치 경로는 [설치 매핑](PAYLOAD_MAP.md), 이식 상태는 [Batch 6 기록](MIGRATION_BATCH6.md), 전체 진행은 [루트 TODO](../TODO.md)를 확인합니다.
+현재 payload에는 [최소 SE 공통 지침](payload/personal/AGENTS.md), skill 25개, agent 10개와 work-rules의 작업별 참조 3개와 Python 코드 골격 1개가 있습니다. 자산 선택 ID는 36개, 설치 후보 파일은 40개입니다. 개인 홈에 설치한 것은 과거 P0 최소 지침뿐이며 이번에는 runtime을 변경하지 않습니다. 원본 대응·개인 및 프로젝트 설치 경로는 [설치 매핑](PAYLOAD_MAP.md), 이식 상태는 [Batch 6 기록](MIGRATION_BATCH6.md), 전체 진행은 [루트 TODO](../TODO.md)를 확인합니다.
 
 ## 2. 설치 경계
 

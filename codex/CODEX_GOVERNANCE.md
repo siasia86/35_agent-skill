@@ -6,7 +6,7 @@
 - governance-repository는 각 저장소가 선택한 정책·검증·업무 기록을 적용하는 skill입니다. 이름은 같고 내용과 해시는 저장소 profile에 따라 달라집니다.
 - 35의 templates/governance는 재사용 진입점 구현입니다. 31이 정책·저장소별 profile을 소유하고 30의 codex_governance.py가 고정 입력을 검증해 완결된 후보를 생성합니다.
 
-현재 [payload catalog](ASSET_CATALOG.json)는 기존 독립 skill 25개·agent 10개·개인 지침 한 개와 work-rules 동반 파일을 유지합니다. 새 두 skill은 31의 정책을 합성하는 별도 초안 계약으로 생성하며 catalog의 단일 파일 자산으로 취급하지 않습니다. 관련 정책을 제외한 SKILL만 설치하지 않습니다.
+현재 [payload catalog](ASSET_CATALOG.json)는 기존 독립 skill 25개·agent 10개·개인 지침 한 개와 work-rules의 참조 3개와 Python 코드 골격 1개를 포함합니다. 선택 ID 36개가 전체 선택 시 40개 파일로 확장됩니다. 새 두 skill은 31의 정책을 합성하는 별도 초안 계약으로 생성하며 catalog의 단일 파일 자산으로 취급하지 않습니다. 관련 정책을 제외한 SKILL만 설치하지 않습니다.
 
 ## 2. 필수 지침과 발견 경로
 

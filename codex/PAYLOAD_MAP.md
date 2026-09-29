@@ -18,17 +18,19 @@ Batch 2·6 개발 후보입니다. 최소 개인 지침 외에는 실제 개인 
 
 ## 2. 원본 대응과 변경 사유
 
-- fact-check: 기존 .agents/skills/fact-check 진입점과 prompts/fact-check의 사실 검증 항목을 통합했습니다. 외부 정책 파일 필수 참조를 없애고 검토와 수정 권한을 분리했습니다. 공식 근거·전체 대상 검토·최대 두 번 재검증 의도는 유지합니다.
+- fact-check: 기존 .agents/skills/fact-check 진입점과 prompts/fact-check의 사실 검증 항목을 통합했습니다. 외부 정책 파일 필수 참조를 없애고 검토와 수정 권한을 분리했습니다. 공식 근거와 전체 대상 검토를 유지하고, 반복 횟수는 사용자 지정 또는 완료·진행 정체 조건을 따릅니다.
 - markdown-review: 기존 진입점과 prompts/md-review의 구조·링크·표·예시 검토를 자체 완결형으로 이식합니다. 프로젝트별 푸터·배지·내부 문서 규칙은 적용 정책이 있을 때만 사용합니다.
 - reviewer: 기존 읽기 전용 역할을 보존하고 부작용 있는 명령·권한 변경·무단 재위임을 금지했습니다.
 - docs_reviewer: 읽기 전용 검토를 유지하고 관련 skill이 없으면 실행한 것처럼 보고하지 않도록 합니다.
-- Batch 6은 나머지 skill 23개와 agent 8개를 self-contained 후보로 이식했습니다. 모두 선택 후보이며 설치·활성화·release 승인은 수행하지 않았습니다. work-rules는 필수 references 파일을 함께 가지며 나머지 skill은 단일 SKILL.md입니다.  원본의 `prompts/`, `policies/`, Kiro hook, 절대 경로와 고정 branch·권한 지시는 portable 조건과 현재 repository guidance 확인으로 전환했습니다.
+- Batch 6은 나머지 skill 23개와 agent 8개를 self-contained 후보로 이식했습니다. 모두 선택 후보이며 설치·활성화·release 승인은 수행하지 않았습니다. 현재 work-rules는 작업별 참조 3개, python-script-template은 선택형 코드 골격 1개를 필수 동반 파일로 배치합니다. 동반 배치는 매 작업의 전체 로딩을 뜻하지 않습니다.  원본의 `prompts/`, `policies/`, Kiro hook, 절대 경로와 고정 branch·권한 지시는 portable 조건과 현재 repository guidance 확인으로 전환했습니다.
 
 ### 2.1 Batch 6 정확한 inventory
 
 Static candidates: `ansible-review`, `bash-script-template`, `code-review`, `debugging-and-recovery`, `doubt-driven-infra`, `git-commit-rule`, `git-release`, `incremental-change`, `kiro-lock` (manual protocol only), `md-link-check`, `planning-and-breakdown`, `python-script-template`, `readme-template`, `repo-governance`, `security-audit`, `security-tools`, `shipping-checklist`, `spec-driven-infra`, `testing-and-verification`, `testing-guide`, `using-skills`, `zircon-readme-policy`.
 
-`work-rules` is a companion-resource candidate: its entrypoint installs with `references/operating-rules.md` under the same skill folder. Its catalog v0.2-draft companion object uses the exact source-parent-relative layout required by the planner: `skills/work-rules/` + `references/operating-rules.md`. The planner selects the companion as a separate generated file entry while the original `work-rules` asset ID remains the selection ID. Kiro automatic hook behavior remains explicitly deferred.
+`work-rules` is a companion-resource candidate: its entrypoint installs with `references/operating-rules.md`, `references/documentation.md`, and `references/infrastructure.md` under the same skill folder; only relevant references are read. Its catalog v0.2-draft companion object uses the exact source-parent-relative layout required by the planner: `skills/work-rules/` + `references/operating-rules.md`. The planner selects the companion as a separate generated file entry while the original `work-rules` asset ID remains the selection ID. Kiro automatic hook behavior remains explicitly deferred.
+
+`python-script-template` also packages `assets/standalone.py`. The 36 selection IDs expand to 40 files when all assets are selected; the catalog includes all four companion files.
 
 Agents: `code-reviewer`, `doc-reviewer`, `git-manager`, `infra_worker`, `markdown-writer`, `se-lite`, `security-auditor`, `system-engineer`.
 

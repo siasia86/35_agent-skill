@@ -1,6 +1,6 @@
 ---
 name: planning-and-breakdown
-description: Break a scoped infrastructure or engineering request into dependency-aware tasks, gates, ownership, verification, and rollback.
+description: Plan engineering work when dependencies, ownership, decision gates, or recovery need an explicit execution plan.
 ---
 
 # Planning and breakdown
@@ -13,6 +13,6 @@ Mark tasks blocked by missing decisions or authority; do not fill them with inve
 
 **작성일**: 2026-09-22
 
-**마지막 업데이트**: 2026-09-22
+**마지막 업데이트**: 2026-09-29
 
 © 2026 siasia86. Licensed under CC BY 4.0.

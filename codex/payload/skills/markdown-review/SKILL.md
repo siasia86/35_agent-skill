@@ -16,9 +16,9 @@ establish the truth of technical claims.
   file to review.
 - A review-only request is read-only. Do not edit files, apply patches, or
   start a review-and-fix loop.
-- Make edits only when the user explicitly requests them. In that case, review
-  and revise at most three times, stopping earlier when the requested outcome
-  is met. Report unresolved findings instead of continuing automatically.
+- Make edits when requested, and continue until the scoped outcome is met.
+  Respect an explicit review count or budget. If progress stalls without new
+  evidence or a missing decision blocks work, report findings and the next step.
 - Do not assume a repository's conventions from a file path, a previous
   project, or a personal preference. Apply project-specific requirements only
   when an applicable project policy explicitly states them.
@@ -72,15 +72,15 @@ state the verification limitation and list the claims that remain unverified.
 ## Report format
 
 Respond in the user's requested language; otherwise use the conversation's
-working language. Use `✅`, `❌`, or `🟡` for each checked area. For every
-finding, give the severity or status, `file:line` when available, the evidence,
-and a concise suggested fix. End with files reviewed, findings by status,
-whether any external facts remain unverified, and whether edits were made.
+working language. Report actionable findings with severity, `file:line` when
+available, evidence, and a suggested fix. For a small review, a short findings
+list and verification limits are sufficient. Use an area-by-area status table
+only when the review scope benefits from it or the user requests it.
 
 ---
 
 **작성일**: 2026-09-22
 
-**마지막 업데이트**: 2026-09-22
+**마지막 업데이트**: 2026-09-29
 
 © 2026 siasia86. Licensed under CC BY 4.0.

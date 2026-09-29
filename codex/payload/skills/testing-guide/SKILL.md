@@ -1,6 +1,6 @@
 ---
 name: testing-guide
-description: Design tests using behavior, error paths, boundaries, equivalence classes, and relevant operational edge cases.
+description: Design or review test cases when test authoring or coverage analysis is requested.
 ---
 
 # Testing guide
@@ -15,6 +15,6 @@ For container-related changes, consider Dockerfile lint, image build, container 
 
 **작성일**: 2026-09-22
 
-**마지막 업데이트**: 2026-09-22
+**마지막 업데이트**: 2026-09-29
 
 © 2026 siasia86. Licensed under CC BY 4.0.
