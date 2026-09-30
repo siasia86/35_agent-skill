@@ -1,0 +1,74 @@
+{
+  "format": "codex-personal-observation-v1-draft",
+  "status": "observation-not-deployment-profile",
+  "verified_at": "2026-09-30",
+  "runtime_id": "codex-windows-personal",
+  "agent_kind": "Codex desktop app and CLI in the same Windows user scope",
+  "configuration_source": "31_governances/windows_game_governance",
+  "installed_skills": [
+    {
+      "asset_id": "code-review",
+      "source": "codex/payload/skills/code-review",
+      "source_commit": "4a5dfb17ccbd0dcb5d6da787e3c5133761c06261",
+      "scope": "user",
+      "file_sha256": {
+        "SKILL.md": "b4f452fcce679b3f66d474177a83e051d1cc6e76d6d413dc369236918c6099a4"
+      },
+      "installation": "verified",
+      "discovery": "pending",
+      "behavior": "not-tested"
+    },
+    {
+      "asset_id": "debugging-and-recovery",
+      "source": "codex/payload/skills/debugging-and-recovery",
+      "source_commit": "4a5dfb17ccbd0dcb5d6da787e3c5133761c06261",
+      "scope": "user",
+      "file_sha256": {
+        "SKILL.md": "3d60d6a2df1534721d921f4aa7766a193b8c34beeac389e5e5de87d9b8226cf7"
+      },
+      "installation": "verified",
+      "discovery": "pending",
+      "behavior": "not-tested"
+    },
+    {
+      "asset_id": "markdown-review",
+      "source": "codex/payload/skills/markdown-review",
+      "source_commit": "4a5dfb17ccbd0dcb5d6da787e3c5133761c06261",
+      "scope": "user",
+      "file_sha256": {
+        "SKILL.md": "c87f3dace668f3af4f891fafd7159e64d1e493c9eaa44c3565e99f57a4fa7307"
+      },
+      "installation": "verified",
+      "discovery": "pending",
+      "behavior": "not-tested"
+    },
+    {
+      "asset_id": "md-link-check",
+      "source": "codex/payload/skills/md-link-check",
+      "source_commit": "4a5dfb17ccbd0dcb5d6da787e3c5133761c06261",
+      "scope": "user",
+      "file_sha256": {
+        "SKILL.md": "9ca1a79e8a2d5be44787f26765dff2f77d101262225920d4a499b3f7f45feabe"
+      },
+      "installation": "verified",
+      "discovery": "pending",
+      "behavior": "not-tested"
+    }
+  ],
+  "installed_custom_agent_toml": [],
+  "personal_agents": {
+    "installed": true,
+    "origin": "user-requested-minimal-local-guidance",
+    "body_published": false,
+    "automatic_loading_test": "pending"
+  },
+  "config_toml_modified": false,
+  "central_governance_activated": false,
+  "automatic_inventory_sync": "not-implemented",
+  "receipt_update": "required-on-install-change-remove",
+  "limitations": [
+    "Not an inventory of other users, devices or cloud agents",
+    "Installed does not imply loaded in every task",
+    "New skill files or local drift require another observation"
+  ]
+}

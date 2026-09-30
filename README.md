@@ -26,6 +26,14 @@
 
 위 표는 중앙 관리 목표의 책임 구분입니다. 31의 기존 v1과 중앙 소유 전환 계약은 구분하며, 기존 대상 저장소의 예외를 자동 덮어쓰지 않습니다. 35는 구현 원본과 선택 후보를 제공하고 적용 대상·예외·승인을 자체 결정하지 않습니다.
 
+### 개인 agent·skill 적용 현황의 핵심 원칙
+
+**35에서는 어떤 agent 환경에 어떤 skill이 설치·발견·검증되어 있는지 출처와 확인 시점으로 파악할 수 있어야 합니다.** 31의 저장소별 선택·설정과 35의 구현·실제 설치 관찰을 연결하되, 설치 예정과 설치 완료, 파일 일치와 모델 행동 검증을 구분합니다.
+
+사용자 범위 skill을 설치·갱신·제거하거나 agent 전용 skill을 생성한 경우 비식별 runtime ID·asset ID·원본 commit·파일 해시·확인일·발견 및 행동 상태를 함께 갱신합니다. 개인 경로·계정·세션 본문·자격증명·전체 config는 게시하지 않습니다. 자동 수집·동기화가 없다면 현황은 마지막 확인 시점의 관찰이며 현재 runtime을 실시간으로 보장하지 않습니다.
+
+이번 Windows 개인 Codex 현황은 [개인 적용 현황](codex/windows_game_governance/README.md)에서 확인합니다. 이 영역은 설치 receipt의 비공개 정보를 제외한 관찰 색인이며 새 정책·설치 payload·31 설정 원본이 아닙니다.
+
 현재 연결은 35 자산 목록 + 31 draft profile → 30 계획 검증 → 격리 fixture용 패키지 시험입니다. payload는 지침 1개·skill 16개·agent 10개와 동반 파일 4개로 구성한 개발 후보이며 실제 runtime 배포가 아닙니다. 검증된 staging의 운영 활성화·권한·Ansible 시험과 release는 8·9번 PLAN으로 남깁니다.
 
 저장소 공통 정책의 원본은 [31 governances](https://github.com/siasia86/31_governances), 실행 도구는 [30 sia-scripts](https://github.com/siasia86/30_sia-scripts)에서 관리합니다. 이 저장소의 작업 범위·보존 규칙·예외는 [AGENTS.md](AGENTS.md)를 따릅니다. 아래 내용은 진입 안내이며 상세 정책 원본을 대체하지 않습니다.
@@ -44,6 +52,7 @@
 - [Kiro 미러](kiro/README.md): `~/.kiro/`에서 허용된 자료만 보존합니다.
 - [GPT 보존 원본](gpt/README.md): 이식 출발 자료입니다.
 - [Codex 개발본](codex/README.md): 선택 후보와 검증 상태를 확인합니다.
+- [Windows 개인 Codex 적용 현황](codex/windows_game_governance/README.md): agent 환경별 설치·발견·행동 검증의 마지막 관찰.
 - [Claude 미러](claude/README.md): Claude 자료 추가를 위한 예약 영역입니다.
 - [Agent workflow](agent-workflows/README.md): 공통 체크리스트·도구별 지침 색인·기존 SE 시험 기록을 관리합니다.
 - [Agent 참고 문서](_reference/INDEX.md): 업데이트에 사용하는 참고 문서 색인입니다.

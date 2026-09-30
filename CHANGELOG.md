@@ -4,6 +4,13 @@
 
 ## [Unreleased]
 
+### Windows 개인 agent·skill 적용 현황 원칙 — 2026-09-30
+
+- README에 agent 환경별 skill 설치·발견·행동 검증을 출처·확인 시점으로 추적하는 원칙 명시. 설치·변경·제거·agent 전용 skill 생성 시 현황 갱신 의무와 실시간 자동 동기화 미구현의 한계를 구분합니다.
+- `codex/windows_game_governance`에 비식별 개인 runtime 현황과 네 skill의 설치 파일 해시·원본 commit·발견/행동 상태 추가. 31은 저장소별 설정·선택 원본, 35는 구현·적용 관찰, 30은 실행 구현이라는 책임을 유지합니다.
+- 사용자 요청 범위의 Windows 개인 환경에 code-review·debugging-and-recovery·markdown-review·md-link-check 설치 및 원본 파일 일치 확인. 짧은 개인 AGENTS를 추가하고 기존 model·approval·sandbox·MCP·플러그인 설정은 변경하지 않았습니다.
+- 새 세션의 skill 발견·대표 작업 행동·중앙 governance 활성화·운영 적용은 미검증 또는 미실행입니다. 개인 경로·계정·config 본문·운영 증거는 원격 현황에 포함하지 않습니다. 기존 payload·catalog·agent TOML·보존 원본은 유지합니다.
+
 ### engineer ACL과 세 브랜치 통합 — 2026-09-30
 
 - 사용자 요청으로 이번에 한해 로컬·원격 main·yunli·sjyun을 통합합니다. 기존 변경은 원격 main에 이미 포함됐으며 미커밋 상태를 stash로 보존하고 fast-forward 병합했습니다.
