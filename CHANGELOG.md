@@ -4,6 +4,14 @@
 
 ## [Unreleased]
 
+### 개인 홈 경로 skill 사본과 현행 안내 통합 — 2026-09-30
+
+- 사용자 지정 `pc01_codex-app-home` 아래 실제 사용자 홈과 같은 `.agents/skills/<이름>/` 경로로 네 개인 skill의 전체 설치 사본 추가. 재사용 구현 원본은 codex/payload, 환경별 사본은 설치 관찰로 구분하며 같은 사용자 홈의 App·CLI 파일을 중복 관리하지 않습니다.
+- README·JSON 중심의 이전 조회 안내를 실제 본문·진입 안내·단일 관찰 metadata 구조로 정리. 현행 runtime inventory와 검증 이력을 agent-workflows/codex로 통합하고 codex/windows_game_governance의 README는 연결 안내로 유지합니다.
+- 실제 설치·고정 Git 원본·사본 inventory와 SHA-256을 검증하고 현재 세션의 네 skill 목록 발견을 관찰. 대표 행동·전 세션 로딩·원격 CI·자동 동기화·중앙 runtime·하위 게임 저장소 적용은 완료 처리하지 않습니다.
+- 변경 Markdown 11개 style·heading·로컬 링크와 31·35 교차 앵커 35개, JSON·네 사본 전체 bytes·게임 상태 보존·전체 Gitleaks·diff 검사 통과. 31의 새 개인 관찰 참조 9개와 일치하며 게시 후 원격 main SHA는 별도 확인합니다. 재검사에서 개인 config 해시의 기간 중 변경을 관찰했으나 이번 작업은 개인 홈에 쓰지 않았고 현재 파일을 보존하며 원인·본문은 게시하지 않습니다.
+- 사용자가 이번 구조 정리 결과를 새 branch 없이 31·35 main에 직접 commit·일반 push하도록 명시 승인. 범위는 중앙 사본·metadata·README/CHANGELOG와 검증 기록이며 개인 설정·payload·catalog·게임 코드·release는 유지합니다. 종료 시 이번 게시 권한은 만료하며 게시 후 복구는 이번 commit의 검토된 revert를 사용합니다.
+
 ### Windows 개인 현황 초안의 main 병합 — 2026-09-30
 
 - 사용자가 이번 작업에 한해 31·35 각각 main까지 병합하도록 명시했습니다. 35의 최신 원격 main `4a5dfb1`에서 검증한 개인 현황 초안 `90a189e`와 이번 병합 기록까지 fast-forward하고 일반 push합니다. 이후 main 게시의 상시 권한으로 재사용하지 않습니다.

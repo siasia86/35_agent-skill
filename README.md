@@ -32,7 +32,7 @@
 
 사용자 범위 skill을 설치·갱신·제거하거나 agent 전용 skill을 생성한 경우 비식별 runtime ID·asset ID·원본 commit·파일 해시·확인일·발견 및 행동 상태를 함께 갱신합니다. 개인 경로·계정·세션 본문·자격증명·전체 config는 게시하지 않습니다. 자동 수집·동기화가 없다면 현황은 마지막 확인 시점의 관찰이며 현재 runtime을 실시간으로 보장하지 않습니다.
 
-이번 Windows 개인 Codex 현황은 [개인 적용 현황](codex/windows_game_governance/README.md)에서 확인합니다. 이 영역은 설치 receipt의 비공개 정보를 제외한 관찰 색인이며 새 정책·설치 payload·31 설정 원본이 아닙니다.
+이번 Windows 개인 Codex 현황은 [개인 적용본과 현황](agent-workflows/codex/README.md)에서 확인합니다. `agent-workflows/codex/<환경 ID>/`는 사용자 홈에 대응하며 실제 설치와 같은 `.agents/skills/<이름>/` 경로로 공개 가능한 전체 skill 사본을 보여 줍니다. README는 진입, skill 사본은 본문, 단일 runtime inventory는 출처·해시·확인일·상태를 관리합니다. 재사용 구현은 codex/payload에서 수정하고 관찰 사본은 독립 편집하지 않습니다. 전체 홈 백업이나 설치 payload로 사용하지 않습니다.
 
 현재 연결은 35 자산 목록 + 31 draft profile → 30 계획 검증 → 격리 fixture용 패키지 시험입니다. payload는 지침 1개·skill 16개·agent 10개와 동반 파일 4개로 구성한 개발 후보이며 실제 runtime 배포가 아닙니다. 검증된 staging의 운영 활성화·권한·Ansible 시험과 release는 8·9번 PLAN으로 남깁니다.
 
@@ -40,19 +40,19 @@
 
 ## 2. 구성
 
-| 디렉토리           | 역할                          | 원본·범위                     |
-|--------------------|-------------------------------|-------------------------------|
-| `kiro/`            | Kiro 공개 미러                | `~/.kiro/` 허용 목록          |
-| `gpt/`             | GPT/Codex 보존 원본           | 개선 시 직접 수정하지 않음    |
-| `codex/`           | 재사용 자산 개발·선택 payload | 전체 복사 설치 금지           |
-| `claude/`          | Claude 공개 미러 예정         | 원본·허용 목록 미정           |
-| `agent-workflows/` | 공통 안전 절차·시험 기록      | 도구별 사용자 지침은 각 docs/ |
-| `_reference/`      | Agent·Skill 개선 참고 문서    | 32 문서 복사본                |
+| 디렉토리           | 역할                          | 원본·범위                  |
+|--------------------|-------------------------------|----------------------------|
+| `kiro/`            | Kiro 공개 미러                | `~/.kiro/` 허용 목록       |
+| `gpt/`             | GPT/Codex 보존 원본           | 개선 시 직접 수정하지 않음 |
+| `codex/`           | 재사용 자산 개발·선택 payload | 전체 복사 설치 금지        |
+| `claude/`          | Claude 공개 미러 예정         | 원본·허용 목록 미정        |
+| `agent-workflows/` | 적용·갱신 절차·개인 적용 사본 | 도구별 지침과 환경별 관찰  |
+| `_reference/`      | Agent·Skill 개선 참고 문서    | 32 문서 복사본             |
 
 - [Kiro 미러](kiro/README.md): `~/.kiro/`에서 허용된 자료만 보존합니다.
 - [GPT 보존 원본](gpt/README.md): 이식 출발 자료입니다.
 - [Codex 개발본](codex/README.md): 선택 후보와 검증 상태를 확인합니다.
-- [Windows 개인 Codex 적용 현황](codex/windows_game_governance/README.md): agent 환경별 설치·발견·행동 검증의 마지막 관찰.
+- [개인 Codex 적용본](agent-workflows/codex/README.md): 환경별 동일 상대 경로의 skill 본문·설치·발견·행동 검증 관찰.
 - [Claude 미러](claude/README.md): Claude 자료 추가를 위한 예약 영역입니다.
 - [Agent workflow](agent-workflows/README.md): 공통 체크리스트·도구별 지침 색인·기존 SE 시험 기록을 관리합니다.
 - [Agent 참고 문서](_reference/INDEX.md): 업데이트에 사용하는 참고 문서 색인입니다.

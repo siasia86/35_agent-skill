@@ -6,7 +6,7 @@
 
 gpt 원본 62개 파일을 복사한 개발용 배포본입니다. 전체 skill·agent를 바로 설치할 수 있는 release는 아직 아닙니다. 원본은 gpt에 보존하며 최초 파일별 SHA-256과 출발 commit은 [BASELINE_MANIFEST.json](BASELINE_MANIFEST.json)에 있습니다.
 
-현재 payload에는 [최소 SE 공통 지침](payload/personal/AGENTS.md), skill 16개, agent 10개와 work-rules의 작업별 참조 3개와 Python 코드 골격 1개가 있습니다. 자산 선택 ID는 27개, 설치 후보 파일은 31개입니다. 과거 P0 최소 지침 설치와 이식 개발 기록은 현재 사용자의 설치 상태와 구분합니다. 2026-09-30 요청 범위의 Windows 개인 네 skill 설치·검증은 [개인 적용 현황](windows_game_governance/README.md)에서 확인합니다. 전체 payload와 agent TOML을 설치한 것은 아닙니다. 원본 대응·개인 및 프로젝트 설치 경로는 [설치 매핑](PAYLOAD_MAP.md), 이식 상태는 [Batch 6 기록](MIGRATION_BATCH6.md), 전체 진행은 [루트 TODO](../TODO.md)를 확인합니다.
+현재 payload에는 [최소 SE 공통 지침](payload/personal/AGENTS.md), skill 16개, agent 10개와 work-rules의 작업별 참조 3개와 Python 코드 골격 1개가 있습니다. 자산 선택 ID는 27개, 설치 후보 파일은 31개입니다. 과거 P0 최소 지침 설치와 이식 개발 기록은 현재 사용자의 설치 상태와 구분합니다. 2026-09-30 요청 범위의 Windows 개인 네 skill 설치·검증은 [개인 적용본과 현황](../agent-workflows/codex/README.md)에서 확인합니다. 전체 payload와 agent TOML을 설치한 것은 아닙니다. 원본 대응·개인 및 프로젝트 설치 경로는 [설치 매핑](PAYLOAD_MAP.md), 이식 상태는 [Batch 6 기록](MIGRATION_BATCH6.md), 전체 진행은 [루트 TODO](../TODO.md)를 확인합니다.
 
 ## 2. 설치 경계
 
@@ -24,7 +24,7 @@ gpt 원본 62개 파일을 복사한 개발용 배포본입니다. 전체 skill�
 
 개인 홈 설치와 전체 배포는 별도로 기록합니다. 문서·해시 검사 통과를 모델 행동·hook·복구의 실행 검증 완료로 확대하지 않습니다.
 
-이 Windows 개인 runtime의 skill을 설치·변경·제거할 때 [runtime 현황](windows_game_governance/runtime_inventory.json)의 asset·출처·해시·확인일·설치/발견/행동 상태를 갱신합니다. 다른 환경·agent는 별도 runtime ID의 관찰로 추가하며 현재 Windows 현황에 섞지 않습니다. 현황 원칙은 루트 README·CHANGELOG에서 유지하고 개인 비공개 설정·세션 내용은 게시하지 않습니다.
+이 Windows 개인 runtime의 skill을 설치·변경·제거할 때 [runtime 현황](../agent-workflows/codex/pc01_codex-app-home/runtime_inventory.json)의 asset·출처·해시·확인일·설치/발견/행동 상태를 갱신합니다. 다른 환경·agent는 별도 runtime ID의 관찰로 추가하며 현재 Windows 현황에 섞지 않습니다. 현황 원칙은 루트 README·CHANGELOG에서 유지하고 개인 비공개 설정·세션 내용은 게시하지 않습니다.
 
 ## 4. 근거
 

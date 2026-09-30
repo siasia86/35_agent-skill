@@ -1,0 +1,150 @@
+{
+  "format": "codex-personal-observation-v1-draft",
+  "status": "observation-not-deployment-profile",
+  "verified_at": "2026-09-30",
+  "runtime_id": "pc01_codex-app-home",
+  "agent_kind": "Codex desktop app; same-user CLI shares the user-scope skill files",
+  "configuration_source": "31_governances/windows_game_governance",
+  "installed_skills": [
+    {
+      "asset_id": "code-review",
+      "source": "codex/payload/skills/code-review",
+      "source_commit": "4a5dfb17ccbd0dcb5d6da787e3c5133761c06261",
+      "scope": "user",
+      "file_sha256": {
+        "SKILL.md": "b4f452fcce679b3f66d474177a83e051d1cc6e76d6d413dc369236918c6099a4"
+      },
+      "installation": "verified",
+      "discovery": "observed-in-current-session-catalog",
+      "behavior": "not-tested",
+      "captured_from": {
+        "root": "user-home",
+        "relative_path": ".agents/skills/code-review"
+      },
+      "mirror_path": ".agents/skills/code-review",
+      "mirror_sha256": {
+        "SKILL.md": "b4f452fcce679b3f66d474177a83e051d1cc6e76d6d413dc369236918c6099a4"
+      },
+      "mirror_matches_runtime": true,
+      "mirror_matches_pinned_source": true,
+      "discovery_evidence": "2026-09-30 current session available-skills metadata; not an all-session loading test"
+    },
+    {
+      "asset_id": "debugging-and-recovery",
+      "source": "codex/payload/skills/debugging-and-recovery",
+      "source_commit": "4a5dfb17ccbd0dcb5d6da787e3c5133761c06261",
+      "scope": "user",
+      "file_sha256": {
+        "SKILL.md": "3d60d6a2df1534721d921f4aa7766a193b8c34beeac389e5e5de87d9b8226cf7"
+      },
+      "installation": "verified",
+      "discovery": "observed-in-current-session-catalog",
+      "behavior": "not-tested",
+      "captured_from": {
+        "root": "user-home",
+        "relative_path": ".agents/skills/debugging-and-recovery"
+      },
+      "mirror_path": ".agents/skills/debugging-and-recovery",
+      "mirror_sha256": {
+        "SKILL.md": "3d60d6a2df1534721d921f4aa7766a193b8c34beeac389e5e5de87d9b8226cf7"
+      },
+      "mirror_matches_runtime": true,
+      "mirror_matches_pinned_source": true,
+      "discovery_evidence": "2026-09-30 current session available-skills metadata; not an all-session loading test"
+    },
+    {
+      "asset_id": "markdown-review",
+      "source": "codex/payload/skills/markdown-review",
+      "source_commit": "4a5dfb17ccbd0dcb5d6da787e3c5133761c06261",
+      "scope": "user",
+      "file_sha256": {
+        "SKILL.md": "c87f3dace668f3af4f891fafd7159e64d1e493c9eaa44c3565e99f57a4fa7307"
+      },
+      "installation": "verified",
+      "discovery": "observed-in-current-session-catalog",
+      "behavior": "not-tested",
+      "captured_from": {
+        "root": "user-home",
+        "relative_path": ".agents/skills/markdown-review"
+      },
+      "mirror_path": ".agents/skills/markdown-review",
+      "mirror_sha256": {
+        "SKILL.md": "c87f3dace668f3af4f891fafd7159e64d1e493c9eaa44c3565e99f57a4fa7307"
+      },
+      "mirror_matches_runtime": true,
+      "mirror_matches_pinned_source": true,
+      "discovery_evidence": "2026-09-30 current session available-skills metadata; not an all-session loading test"
+    },
+    {
+      "asset_id": "md-link-check",
+      "source": "codex/payload/skills/md-link-check",
+      "source_commit": "4a5dfb17ccbd0dcb5d6da787e3c5133761c06261",
+      "scope": "user",
+      "file_sha256": {
+        "SKILL.md": "9ca1a79e8a2d5be44787f26765dff2f77d101262225920d4a499b3f7f45feabe"
+      },
+      "installation": "verified",
+      "discovery": "observed-in-current-session-catalog",
+      "behavior": "not-tested",
+      "captured_from": {
+        "root": "user-home",
+        "relative_path": ".agents/skills/md-link-check"
+      },
+      "mirror_path": ".agents/skills/md-link-check",
+      "mirror_sha256": {
+        "SKILL.md": "9ca1a79e8a2d5be44787f26765dff2f77d101262225920d4a499b3f7f45feabe"
+      },
+      "mirror_matches_runtime": true,
+      "mirror_matches_pinned_source": true,
+      "discovery_evidence": "2026-09-30 current session available-skills metadata; not an all-session loading test"
+    }
+  ],
+  "installed_custom_agent_toml": [],
+  "personal_agents": {
+    "installed": true,
+    "origin": "user-requested-minimal-local-guidance",
+    "body_published": false,
+    "automatic_loading_test": "pending"
+  },
+  "config_toml_modified": false,
+  "config_toml_modified_scope": "this-mirror-task",
+  "config_toml_observation": {
+    "task_wrote_file": false,
+    "changed_during_mirror_task": true,
+    "body_published": false,
+    "cause": "not-investigated",
+    "handling": "preserved-current-file"
+  },
+  "central_governance_activated": false,
+  "automatic_inventory_sync": "not-implemented",
+  "receipt_update": "required-on-install-change-remove",
+  "limitations": [
+    "Not an inventory of other users, devices or cloud agents",
+    "Installed does not imply loaded in every task",
+    "New skill files or local drift require another observation"
+  ],
+  "previous_runtime_ids": [
+    "codex-windows-personal"
+  ],
+  "runtime_identity": {
+    "kind": "user-chosen-alias",
+    "os": "windows",
+    "account_scope": "same-user-home",
+    "actual_hostname_published": false,
+    "ip_published": false
+  },
+  "snapshot": {
+    "kind": "observed-public-skill-copy",
+    "home_relative_root": ".",
+    "captured_at": "2026-09-30",
+    "independent_editing": false,
+    "installation_input": false,
+    "full_home_backup": false,
+    "allowed_skill_ids": [
+      "code-review",
+      "debugging-and-recovery",
+      "markdown-review",
+      "md-link-check"
+    ]
+  }
+}

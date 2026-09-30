@@ -14,10 +14,11 @@ AI 도구별 Agent·Skill·Prompt의 최초 적용과 업데이트 절차를 관
 
 ## 1. 구조
 
-공통 절차와 기존 SE 시험 기록을 보관합니다. 사용자 지침서는 각 도구의 docs/에서 관리합니다.
+공통 절차·기존 SE 시험 기록과 환경별 공개 개인 skill 적용 사본을 보관합니다. 사용자 지침서는 각 도구의 docs/에서 관리합니다.
 
 - common/: 공통 최초 적용·업데이트 체크리스트.
 - gpt/: 기존 SE_PILOT.md·SE_PILOT_RESULTS.md 시험 기록. 경로와 과거 기록은 보존합니다.
+- [codex/](codex/README.md): 개인 환경별 실제 홈 상대 경로의 skill 관찰 사본과 단일 inventory. `pc01_codex-app-home`은 공개 별칭입니다.
 - ../kiro/docs/: Kiro 사용자 지침.
 - ../codex/docs/: Codex 개발 후보의 선택 적용 지침.
 - ../claude/docs/: Claude 예약 영역의 적용 전 점검 지침.
@@ -78,7 +79,7 @@ rollback 가능 상태 확인
 - source·staging·runtime target을 서로 다른 경로로 관리합니다.
 - runtime 적용 전 기존 설정을 백업하고 `dry-run` 결과를 검토합니다.
 - version·commit·manifest·checksum을 기록합니다.
-- 개인 설정·세션·credential·private key는 payload와 manifest에서 제외합니다.
+- 개인 설정·세션·credential·private key는 payload와 manifest에서 제외합니다. 사용자가 선택한 공개 가능 skill 폴더의 환경별 관찰 사본만 codex/에 보관하며 전체 홈·실제 AGENTS·전체 config는 복제하지 않습니다.
 - 도구별 payload는 각 도구의 공개 allowlist를 통해서만 배포합니다.
 - 외부 Agent·Skill은 license·권한·외부 통신·유지보수 상태를 검토한 뒤 필요한 패턴만 반영합니다.
 - AI skill·prompt는 보안 경계가 아니며, 실제 강제는 CI·IAM·runner·network policy에서 수행합니다.
@@ -108,6 +109,6 @@ gitleaks detect --source . --no-git --no-banner
 
 **작성일**: 2026-09-21
 
-**마지막 업데이트**: 2026-09-22
+**마지막 업데이트**: 2026-09-30
 
 © 2026 siasia86. Licensed under CC BY 4.0.

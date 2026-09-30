@@ -1,0 +1,4 @@
+# Preserve the exact observed skill bytes in Windows checkouts.
+*.md text eol=lf
+*.json text eol=lf
+pc01_codex-app-home/.agents/skills/** -text
