@@ -5,6 +5,13 @@
 ## [Unreleased]
 
 
+### main 병합 일회성 승인 — 2026-09-30
+
+- 사용자가 이번에 한해 게시된 yunli 변경의 main 병합·일반 push를 승인했습니다. main의 `f884f9a`에서 검증한 yunli `42ba33f`까지 충돌 없이 fast-forward 병합하고 이번 승인 기록을 추가했습니다. [병합 범위와 검증·복구](codex/CODEX_GOVERNANCE_VERIFICATION.md#10-2026-09-30-main-병합-일회성-승인)를 확인합니다.
+- 구현·payload는 기존 검증 commit과 같으며 추가 문서 2개의 style·heading·파일 link·diff 검사를 통과했습니다. 실제 runtime·30·31·release·운영 적용·force push·보호 설정 변경은 제외하며 완료 또는 중단 시 승인이 만료됩니다.
+
+
+
 ### 검증한 35 변경의 yunli 게시 — 2026-09-30
 
 - 마무리 검사 뒤 사용자가 commit·push를 승인했습니다. 실행 계정 소유 독립 clone에서 검증한 변경과 기록을 `origin/yunli`에 일반 push하며 원격 commit SHA 일치로 확인합니다. [게시 범위와 복구](codex/CODEX_GOVERNANCE_VERIFICATION.md#9-2026-09-30-yunli-게시-승인과-절차)를 기록했습니다.
