@@ -4,6 +4,12 @@
 
 ## [Unreleased]
 
+### engineer ACL과 세 브랜치 통합 — 2026-09-30
+
+- 사용자 요청으로 이번에 한해 로컬·원격 main·yunli·sjyun을 통합합니다. 기존 변경은 원격 main에 이미 포함됐으며 미커밋 상태를 stash로 보존하고 fast-forward 병합했습니다.
+- engineer 쓰기 제한 파일 68개의 ACL과 계정별 Git 신뢰 설정을 보완했습니다. 구성원 5명의 파일·Git 접근, sjyun·yunli의 push 사전 검사와 setup 회귀 10개를 통과했습니다.
+- [검증과 복구](codex/CODEX_GOVERNANCE_VERIFICATION.md#11-2026-09-30-engineer-acl과-브랜치-통합)를 기록하며 게시 후 SHA 일치로 확인합니다.
+
 
 ### main 병합 일회성 승인 — 2026-09-30
 

@@ -185,6 +185,16 @@ compile와 Python 3.9 문법 파싱은 통과했으며 실제 Python 3.9 실행 
 
 공유 원본 작업본과 기존 사용자 변경은 보존합니다. 30·31·개인 runtime·release·force push·보호 설정 변경·운영 적용은 제외합니다. 보호 정책이 일반 push를 거부하면 우회하지 않습니다. 게시 전 실패 시 독립 clone에서 재개하며 게시 후 복구는 검토된 revert로 수행합니다. 이번 승인 기록은 이후 main 게시의 상시 권한으로 사용하지 않습니다.
 
+## 11. 2026-09-30 engineer ACL과 브랜치 통합
+
+사용자가 이번에 한해 35의 로컬·원격 main·yunli 등의 병합을 승인했습니다. 원격 main b686587, yunli 42ba33f, sjyun f884f9a는 같은 이력의 조상·후손 관계입니다. 기존 파일은 신규 파일까지 main과 bytes를 대조했으며 병합 기록 문서 두 개만 달랐습니다. 기존 변경을 `pre-35-acl-merge-20260930` stash로 보존한 뒤 yunli에서 main을 fast-forward 병합했습니다. stash는 보관본이며 중복 변경을 재적용하지 않습니다.
+
+전체 ACL 백업은 `/root/workspaces/35-acl-20260930/acl-before.txt`, 변경 목록은 같은 디렉토리의 fixed-files.json에 있습니다. Kiro·참조·검사 파일 68개의 engineer 읽기·쓰기를 보완하며 기존 실행 여부를 유지했습니다. 불변 Git 객체는 읽기와 부모 접근을 기준으로 확인하며 객체 쓰기 mask를 일괄 확대하지 않았습니다. 호스트 engineer GID는 1009이며 sandbox의 미해결 그룹 표시는 유효 권한 판단에 사용하지 않았습니다.
+
+sjyun의 Git 신뢰 설정은 기존에 있었으며 yunli·siasia·hihi·hoho에 정확한 저장소 safe.directory를 추가하고 core.sharedRepository=group을 설정했습니다. 구성원 5명의 실제 파일·Git 쓰기 경로와 Git status에서 차단 0건을 확인했습니다. sjyun·yunli의 원격 push 사전 검사를 통과했으며 실제 게시도 두 계정으로 나누어 수행합니다. 다른 세 계정의 원격 인증·push는 미실행이며 ACL만으로 GitHub 권한을 보장하지 않습니다.
+
+setup 회귀 10개를 통과했습니다. 추가 문서 style·heading·link와 diff를 검사한 뒤 기록을 commit하고 로컬·원격 세 브랜치를 동일 SHA로 맞춥니다. 기존 commit·stash·ACL 백업을 보존합니다. 게시 후 코드 복구는 검토된 revert, ACL 복구는 이후 변경을 대조한 이번 변경분을 대상으로 합니다. 개인 runtime·release·운영 적용·force push는 제외하며 이번 통합 종료로 병합 승인이 만료됩니다.
+
 ---
 
 **작성일**: 2026-09-29
