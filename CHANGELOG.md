@@ -4,6 +4,12 @@
 
 ## [Unreleased]
 
+### Windows 개인 현황 초안의 main 병합 — 2026-09-30
+
+- 사용자가 이번 작업에 한해 31·35 각각 main까지 병합하도록 명시했습니다. 35의 최신 원격 main `4a5dfb1`에서 검증한 개인 현황 초안 `90a189e`와 이번 병합 기록까지 fast-forward하고 일반 push합니다. 이후 main 게시의 상시 권한으로 재사용하지 않습니다.
+- 대상은 README·CHANGELOG·Codex 안내와 비식별 설치 현황입니다. payload·catalog·보존 원본·기존 사용자 설정을 유지하며 하위 게임 저장소 설정 적용·integration·release·운영 배포는 포함하지 않습니다.
+- 기존 설치·해시 검증과 변경 문서·보안·diff를 확인합니다. 원격 CI API는 404 응답으로 미확인이며 통과로 기록하지 않습니다. 게시 후 원격 main SHA 일치와 시작 commit 보존 여부를 확인하고, 복구는 검토된 revert를 사용합니다.
+
 ### Windows 개인 agent·skill 적용 현황 원칙 — 2026-09-30
 
 - README에 agent 환경별 skill 설치·발견·행동 검증을 출처·확인 시점으로 추적하는 원칙 명시. 설치·변경·제거·agent 전용 skill 생성 시 현황 갱신 의무와 실시간 자동 동기화 미구현의 한계를 구분합니다.

@@ -10,7 +10,9 @@
 
 변경 Markdown 5개의 style·heading·로컬 링크, 원본과 설치 파일 inventory·해시 검사를 통과했습니다. 전체 저장소 Gitleaks v8.30.1 파일 검사에서 leak 0건이며 diff whitespace 검사를 통과했습니다. JSON·교차 앵커·게시 후 원격 SHA 일치의 최종 결과는 작업의 로컬 검증 receipt에 기록합니다. payload·catalog를 변경하지 않았다는 diff 범위도 확인합니다.
 
-31은 저장소별 설정·선택의 중앙 원본이고 이 관찰 JSON을 deployment profile로 사용하지 않습니다. 사용자가 하위 게임 저장소 설정 적용을 보류했으므로 해당 파일은 설치·변경하지 않습니다. 게시 대상은 작업 브랜치이며 main·release·운영 배포는 포함하지 않습니다.
+31은 저장소별 설정·선택의 중앙 원본이고 이 관찰 JSON을 deployment profile로 사용하지 않습니다. 사용자가 하위 게임 저장소 설정 적용을 보류했으므로 해당 파일은 설치·변경하지 않습니다. 최초 게시 대상은 작업 브랜치였고 이후 명시적 사용자 요청에 따라 이번 main 병합·일반 push를 추가합니다. [루트 CHANGELOG](../../CHANGELOG.md)의 이번 요청 기록을 따르며 integration·release·운영 배포는 포함하지 않습니다.
+
+이번 원격 CI API 조회는 404 응답으로 미확인입니다. 로컬 검증과 원격 main SHA 일치를 구분해 기록하며 CI 통과로 보고하지 않습니다.
 
 ## 3. 검증 한계와 다음 관찰
 
