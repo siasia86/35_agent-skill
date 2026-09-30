@@ -10,12 +10,12 @@ Reuse valid authorization for the identified targets. Obtain a decision for addi
 
 Use bounded remote commands. For Windows PowerShell over SSH, check the actual target's encoding and quoting with a harmless command before consequential operations. Do not copy a host-specific wrapper without inspecting its assumptions.
 
-Before deleting a VM or comparable resource, identify the exact targets and confirm that deletion is authorized. Preserve required recovery material. Do not use generic process cleanup as a session-start ritual.
+Before deleting a VM or comparable resource, identify the exact targets and confirm that deletion is authorized. Preserve required recovery material. Do not use generic process cleanup as a session-start ritual. After a timeout, inspect the owned process and remote job state before retrying; local termination may leave remote work running. Stop only identified resources within the authorized scope.
 
 ---
 
 **작성일**: 2026-09-29
 
-**마지막 업데이트**: 2026-09-29
+**마지막 업데이트**: 2026-09-30
 
 © 2026 siasia86. Licensed under CC BY 4.0.

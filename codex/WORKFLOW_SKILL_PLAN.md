@@ -33,10 +33,40 @@
 
 게시 전에는 이번 diff만 검토해 되돌립니다. 게시 후에는 해당 commit의 검토된 revert를 사용합니다. 이전 정책·catalog·동반 파일을 함께 되돌려 해시 일치를 유지하며 runtime 적용·release는 별도 작업으로 남깁니다.
 
+## 5. 2026-09-30 개인 skill 설치 목록 정리
+
+사용자는 Windows 설치 결함 수정·재검증과 공식 Codex skill 문서에 따른 과도한 개인 skill 제거를 요청했습니다. [공식 skill 안내](https://learn.chatgpt.com/docs/build-skills)와 [skill·prompt 재검토 안내](https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra)를 실제 열람했습니다. 짧고 구체적인 선택 조건, 관련 자료만 읽는 구조, 이미 가능한 일반 작업을 장황한 절차로 반복하지 않는 기준을 적용합니다. 아래 제외 목록은 이 저장소의 판단이며 공식 권장 삭제 목록이 아닙니다.
+
+### 제외한 9개와 기능의 위치
+
+- using-skills: 일반적인 skill 라우팅은 Codex 선택과 적용 지침에서 처리합니다. 개별 skill은 자신의 좁은 선택 조건을 유지합니다.
+- planning-and-breakdown: 일반 작업 계획은 요청·저장소 정책에서 처리하고 중요한 인프라 사양은 spec-driven-infra에 남깁니다.
+- incremental-change: 단계별 검증·중단·복구는 기존 작업 계획과 work-rules의 선택 참조를 사용합니다.
+- doubt-driven-infra: 위험·승인·복구 검토는 spec-driven-infra·git-release와 적용 정책에 남깁니다.
+- shipping-checklist: 별도 일반 출시 체크리스트 대신 요청된 release의 git-release와 저장소 release 정책을 사용합니다.
+- readme-template: 일반 README 작성은 Codex와 저장소 문서 관례를 따르고 구조·링크 검사는 markdown-review·md-link-check를 사용합니다.
+- testing-and-verification: 기존 검사 선택·결과 구분을 testing-guide에 짧게 통합하여 검사 실행과 test authoring을 한 진입점에서 구분합니다.
+- kiro-lock: Codex에서 존재하지 않는 Kiro hook을 가정하지 않는 기준은 적용 AGENTS·저장소 coordination 정책에 남깁니다. 독립 개인 skill로 설치하지 않습니다.
+- zircon-readme-policy: 특정 저장소만의 푸터·배지 예외는 해당 저장소 정책·선택 profile의 범위입니다.
+
+마지막 payload bytes는 `archive/retired-payload/skills/<이름>/SKILL.md`에 보존합니다. 이 경로는 자동 발견·catalog·setup 선택 대상이 아닙니다. Kiro/GPT 원본·최초 baseline·기존 archive 원문은 보존합니다. 개인 홈의 기존 설치는 자동 삭제하지 않으며 기존 사용자 수정과 다른 의존성을 확인한 뒤 필요하면 runtime 검색 밖으로 격리합니다.
+
+### 유지한 구체적 역할과 계약
+
+현재 개인 skill 16개는 Ansible 검토, Bash/Python 양식, 직접 코드 검토, 디버깅·복구, 기술 사실 검증, 한국어 commit 양식, 요청된 release 준비, Markdown 형식/링크 검사, 로컬 지침 discovery, 보안 audit/도구 사용, 인프라 사양, 검사/테스트 선택, 선택형 개인 관례입니다. code-review는 사용자의 직접 검토에 사용하고 시스템 review-agent는 위임 검토 경로이므로 단순 이름 바꾸기·삭제로 통합하지 않습니다. fact-check는 OpenAI 전용 openai-docs와 범위가 다릅니다. setup은 로컬 bytes 검증을 제공하여 네트워크 기반 시스템 installer와 구분합니다. 개인 사용은 31을 필수 의존하지 않습니다.
+
+agent 10개·개인 지침 한 개·동반 파일 4개는 유지합니다. catalog는 27 ID·31파일로 갱신하고 system-engineer·infra_worker의 optional skill 참조는 spec-driven-infra·testing-guide로 변경합니다. 과거 Batch 6의 25개·40파일 검증 수치는 당시 기록으로 보존합니다. 31 agent는 현재 catalog bytes로 pin을 재검토하고 제외 ID를 선택한 profile이 있다면 선택 이유·대체 경로를 검토합니다. 중앙 profile을 이 작업에서 수정하거나 승인하지 않습니다.
+
+### 수정·검증·복구 범위
+
+`.gitattributes`는 payload·catalog·governance template와 setup/test Python의 LF를 고정합니다. 정확한 bytes 해시 검증을 유지하고 CRLF를 설치기에서 조용히 정규화하지 않습니다. 이전 checkout은 사용자 변경을 보존하고 새 clone으로 대조합니다. 보존 원본과 archive에는 줄바꿈 정책을 적용하지 않습니다.
+
+회귀 검사에 실제 Git core.autocrlf=true clone과 설치를 추가했습니다. 이 변경의 source·catalog·archive 보존·참조 및 Windows clone 재현 결과는 [추가 검증 기록](CODEX_GOVERNANCE_VERIFICATION.md#8-2026-09-30-windows-clone-수정과-skill-정리)에 남깁니다. 게시 전 복구는 이번 archive 이동·통합 skill·catalog·지침/문서·attributes 변경을 함께 검토해 되돌리며 사용자 변경은 보존합니다. 개인 runtime·commit·push·release는 수행하지 않습니다.
+
 ---
 
 **작성일**: 2026-09-29
 
-**마지막 업데이트**: 2026-09-29
+**마지막 업데이트**: 2026-09-30
 
 © 2026 siasia86. Licensed under CC BY 4.0.

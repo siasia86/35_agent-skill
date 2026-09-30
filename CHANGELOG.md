@@ -4,6 +4,42 @@
 
 ## [Unreleased]
 
+
+### 검증한 35 변경의 yunli 게시 — 2026-09-30
+
+- 마무리 검사 뒤 사용자가 commit·push를 승인했습니다. 실행 계정 소유 독립 clone에서 검증한 변경과 기록을 `origin/yunli`에 일반 push하며 원격 commit SHA 일치로 확인합니다. [게시 범위와 복구](codex/CODEX_GOVERNANCE_VERIFICATION.md#9-2026-09-30-yunli-게시-승인과-절차)를 기록했습니다.
+- 아래 commit/push 미실행 문구는 게시 요청 전 검사 상태입니다. 30·31·개인 runtime·main·release·운영 적용은 이번 게시 범위에 포함하지 않습니다.
+
+
+### Windows clone 결함 수정과 개인 skill 정리 — 2026-09-30
+
+- `.gitattributes`로 payload·catalog·governance template의 LF를 고정하고 core.autocrlf=true 실제 clone 후 setup 설치 회귀를 추가했습니다. 정확한 해시 검증을 유지하며 setup 회귀 10개를 통과했습니다.
+- 공식 Codex skill 문서와 skill-creator 기준에 따라 일반 절차·중복/특정 저장소 전용 skill 9개를 설치 목록에서 제외하고 마지막 payload bytes를 archive에 보존했습니다. 검증 절차를 testing-guide로 통합하고 catalog·agent optional 참조·현재 안내를 갱신했습니다. 현재 skill 16개·catalog 27 ID·31파일입니다.
+- 문법·참조·해시·보존 bytes·Markdown·diff·비밀정보 검사와 31 companion v1 planner를 통과했습니다. 31 v2 pin 정합화·실제 Windows/runtime·경량화 효과·commit/push는 미실행입니다. [정리 근거](codex/WORKFLOW_SKILL_PLAN.md#5-2026-09-30-개인-skill-설치-목록-정리)와 [검증 기록](codex/CODEX_GOVERNANCE_VERIFICATION.md#8-2026-09-30-windows-clone-수정과-skill-정리)을 확인합니다.
+- 사용자 요청에 따른 마무리 점검에서 추가 결함은 발견하지 않았습니다. setup 회귀 10개, skill 16개·agent 10개 문법, catalog와 실제 payload 31파일의 정확한 inventory·해시·참조, 변경 Markdown 27개와 diff·비밀정보 검사를 통과했습니다. 제외 payload 9개·Kiro 원본 세 파일의 bytes 보존과 31 HANDOFF 패치의 적용 사전 검사를 확인했습니다. 검사 통과를 게시·runtime 검증으로 확대하지 않습니다.
+
+
+### Linux·Windows 독립 개인 Codex skill setup — 2026-09-30
+
+- README에 계정 홈의 `.agents/skills`로 선택한 payload 폴더 전체를 복사하는 Bash·PowerShell·파일 탐색기 절차와 동반 파일·기존 설치 비교·발견 확인·복구 기준을 추가했습니다.
+- Python 표준 라이브러리만 쓰는 [개인 setup](codex/scripts/setup_personal_skills.py)의 list·선택/전체 설치·dry-run·catalog 해시 확인·동일 설치 건너뛰기·기존 수정 보존을 구현했습니다. 30·31·네트워크 없이 개인 skill을 사용할 수 있으며 중앙 profile·정책 합성은 별도 계약으로 유지합니다. 실제 sjyun 홈 설치·Windows runtime 검증은 수행하지 않았습니다.
+
+- 초기 setup 단계에서 30·31이 없는 임시 작업본의 설치·재실행·dry-run·사용자 변경·경로/해시/링크 거부·부분 실패 시험 9개를 통과했습니다. 이후 Windows clone 회귀를 추가한 최종 시험 수는 10개입니다. [초기 검증 기록 §7](codex/CODEX_GOVERNANCE_VERIFICATION.md#7-2026-09-30-독립-개인-skill-setup)에 당시 검사 범위와 미실행을 남겼습니다.
+
+### 31/35 중복 검토와 후속 agent 인계 — 2026-09-30
+
+- 31 중앙 정책과 35 skill 절차의 반복·역할 분리, AGENTS target 충돌 및 31 후속 실행 순서를 [기존 governance 안내](codex/CODEX_GOVERNANCE.md#6-31-담당-agent-인계와-중복-판정)에 기록했습니다. 35 PLAN의 과거 원본 대조 미완료 안내를 날짜별 상태로 정정했습니다.
+- template·정책 pin 8개 일치와 companion v1 planner 통과를 확인했습니다. v2 AI profile은 catalog pin 불일치로 거부됐으며 31 정합화·staging 검증을 미완료로 연결했습니다. 31 기존 HANDOFF 보완 패치는 준비·사전 검사했으나 31 원본·profile·manifest·runtime은 변경하지 않았습니다. 상세는 [검증 기록 §6](codex/CODEX_GOVERNANCE_VERIFICATION.md#6-2026-09-30-3135-중복-검토와-agent-인계)에 있습니다.
+
+
+### 최신 Kiro 세 skill 대조와 Codex 보완 — 2026-09-30
+
+- 읽기 가능해진 Kiro md-link-check·repo-governance·work-rules 전체 본문을 현재 HEAD와 대조하고 원본을 보존했습니다. Codex 후보의 검사 범위·코드 예시 제외·정책 발견·필수 정책 실패·권한과 재시도·비밀정보 및 기록 기준을 보완했습니다.
+- catalog 36 ID·40파일과 작업별 참조 선택을 유지하고 변경 해시를 갱신했습니다. README의 이전 2개 skill·2개 agent 안내와 현재 Kiro 대조 상태를 정정했습니다.
+- skill 25개 문법·agent 10개 TOML·catalog 해시·변경 Markdown·diff·Codex 비밀정보 검사를 통과했습니다. 격리 checker 시험에서 cross-file fragment 누락과 유효한 중첩 코드 예시 오탐을 확인하고 [검증 기록](codex/CODEX_GOVERNANCE_VERIFICATION.md#5-2026-09-30-최신-kiro-세-파일-대조와-보완)에 남겼습니다.
+- 실제 runtime·자동 hook·30 checker 구현·31 profile pin·배포 연동·commit·push는 수행하지 않았습니다. 기존 31 pin은 변경된 catalog와 후속 정합화해야 하며 이번 정적 검사를 운영 적용 근거로 사용하지 않습니다.
+
+
 ### sjyun·yunli·main 브랜치 통합 — 2026-09-29
 
 - 사용자가 세 저장소의 개발 변경과 기준 브랜치를 정합화하기 위해 이번 1회에 한해 sjyun·yunli·main 병합·일반 push를 명시적으로 승인했습니다. 계정 소유 독립 clone에서 수행하며 완료·중단 시 예외가 만료됩니다. 이후 main 게시의 상시 권한으로 재사용하지 않습니다.
@@ -113,6 +149,6 @@
 
 **작성일**: 2026-08-31
 
-**마지막 업데이트**: 2026-09-29
+**마지막 업데이트**: 2026-09-30
 
 © 2026 siasia86. Licensed under CC BY 4.0.

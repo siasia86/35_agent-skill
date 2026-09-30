@@ -6,10 +6,11 @@
 
 gpt 원본 62개 파일을 복사한 개발용 배포본입니다. 전체 skill·agent를 바로 설치할 수 있는 release는 아직 아닙니다. 원본은 gpt에 보존하며 최초 파일별 SHA-256과 출발 commit은 [BASELINE_MANIFEST.json](BASELINE_MANIFEST.json)에 있습니다.
 
-현재 payload에는 [최소 SE 공통 지침](payload/personal/AGENTS.md), skill 25개, agent 10개와 work-rules의 작업별 참조 3개와 Python 코드 골격 1개가 있습니다. 자산 선택 ID는 36개, 설치 후보 파일은 40개입니다. 개인 홈에 설치한 것은 과거 P0 최소 지침뿐이며 이번에는 runtime을 변경하지 않습니다. 원본 대응·개인 및 프로젝트 설치 경로는 [설치 매핑](PAYLOAD_MAP.md), 이식 상태는 [Batch 6 기록](MIGRATION_BATCH6.md), 전체 진행은 [루트 TODO](../TODO.md)를 확인합니다.
+현재 payload에는 [최소 SE 공통 지침](payload/personal/AGENTS.md), skill 16개, agent 10개와 work-rules의 작업별 참조 3개와 Python 코드 골격 1개가 있습니다. 자산 선택 ID는 27개, 설치 후보 파일은 31개입니다. 개인 홈에 설치한 것은 과거 P0 최소 지침뿐이며 이번에는 runtime을 변경하지 않습니다. 원본 대응·개인 및 프로젝트 설치 경로는 [설치 매핑](PAYLOAD_MAP.md), 이식 상태는 [Batch 6 기록](MIGRATION_BATCH6.md), 전체 진행은 [루트 TODO](../TODO.md)를 확인합니다.
 
 ## 2. 설치 경계
 
+- 개인 skill 선택 설치는 [루트 README](../README.md#51-개인-codex-skill-직접-설치)의 Python setup·수동 복사 절차를 사용합니다. payload skill은 31 없이 사용할 수 있으며 중앙 정책 합성은 별도 선택 구성입니다.
 - 개인 적용 후보: payload/personal/AGENTS.md를 실제 Codex home의 AGENTS.md에 병합합니다. 기본 홈 경로를 추정해 다른 계정에 설치하지 않습니다.
 - 프로젝트 시험: 같은 최소 지침에 저장소 전용 범위를 더한 루트 AGENTS.md를 사용할 수 있습니다.
 - 기존 AGENTS.md·AGENTS.override.md와 차이·우선순위·백업을 확인하고 새 세션에서 로딩과 동작을 검증합니다.
@@ -36,6 +37,6 @@ gpt 원본 62개 파일을 복사한 개발용 배포본입니다. 전체 skill�
 
 **작성일**: 2026-09-04
 
-**마지막 업데이트**: 2026-09-29
+**마지막 업데이트**: 2026-09-30
 
 © 2026 siasia86. Licensed under CC BY 4.0.

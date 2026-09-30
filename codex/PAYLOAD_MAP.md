@@ -2,7 +2,7 @@
 
 ## 1. 적용 범위
 
-Batch 2·6 개발 후보입니다. 최소 개인 지침 외에는 실제 개인 홈 설치가 완료된 상태가 아닙니다. 원본 보존 영역인 archive 전체를 복사하지 않고 아래 목록만 선택합니다. README·TODO·manifest는 운영 대상에 덮어쓰지 않습니다.
+Batch 2·6 개발 후보를 2026-09-30 재검토하여 skill 16개·agent 10개로 정리했습니다. 최소 개인 지침 외에는 실제 개인 홈 설치가 완료된 상태가 아닙니다. 원본 보존 영역인 archive 전체를 복사하지 않고 아래 목록만 선택합니다. README·TODO·manifest는 운영 대상에 덮어쓰지 않습니다.
 
 | 배포 원본                                     | 개인 설치 대상                                   | 프로젝트 설치 대상                       |
 |-----------------------------------------------|--------------------------------------------------|------------------------------------------|
@@ -22,17 +22,19 @@ Batch 2·6 개발 후보입니다. 최소 개인 지침 외에는 실제 개인 
 - markdown-review: 기존 진입점과 prompts/md-review의 구조·링크·표·예시 검토를 자체 완결형으로 이식합니다. 프로젝트별 푸터·배지·내부 문서 규칙은 적용 정책이 있을 때만 사용합니다.
 - reviewer: 기존 읽기 전용 역할을 보존하고 부작용 있는 명령·권한 변경·무단 재위임을 금지했습니다.
 - docs_reviewer: 읽기 전용 검토를 유지하고 관련 skill이 없으면 실행한 것처럼 보고하지 않도록 합니다.
-- Batch 6은 나머지 skill 23개와 agent 8개를 self-contained 후보로 이식했습니다. 모두 선택 후보이며 설치·활성화·release 승인은 수행하지 않았습니다. 현재 work-rules는 작업별 참조 3개, python-script-template은 선택형 코드 골격 1개를 필수 동반 파일로 배치합니다. 동반 배치는 매 작업의 전체 로딩을 뜻하지 않습니다.  원본의 `prompts/`, `policies/`, Kiro hook, 절대 경로와 고정 branch·권한 지시는 portable 조건과 현재 repository guidance 확인으로 전환했습니다.
+- Batch 6 당시에는 나머지 skill 23개와 agent 8개를 self-contained 후보로 이식했습니다. 이후 중복·일반 절차 skill 9개를 설치 목록에서 제외했으며 현재 후보는 아래 목록을 따릅니다. 모두 선택 후보이며 설치·활성화·release 승인은 수행하지 않았습니다. 현재 work-rules는 작업별 참조 3개, python-script-template은 선택형 코드 골격 1개를 필수 동반 파일로 배치합니다. 동반 배치는 매 작업의 전체 로딩을 뜻하지 않습니다.  원본의 `prompts/`, `policies/`, Kiro hook, 절대 경로와 고정 branch·권한 지시는 portable 조건과 현재 repository guidance 확인으로 전환했습니다.
 
-### 2.1 Batch 6 정확한 inventory
+### 2.1 현재 선택 inventory
 
-Static candidates: `ansible-review`, `bash-script-template`, `code-review`, `debugging-and-recovery`, `doubt-driven-infra`, `git-commit-rule`, `git-release`, `incremental-change`, `kiro-lock` (manual protocol only), `md-link-check`, `planning-and-breakdown`, `python-script-template`, `readme-template`, `repo-governance`, `security-audit`, `security-tools`, `shipping-checklist`, `spec-driven-infra`, `testing-and-verification`, `testing-guide`, `using-skills`, `zircon-readme-policy`.
+Static candidates: `ansible-review`, `bash-script-template`, `code-review`, `debugging-and-recovery`, `git-commit-rule`, `git-release`, `md-link-check`, `python-script-template`, `repo-governance`, `security-audit`, `security-tools`, `spec-driven-infra`, `testing-guide`.
 
 `work-rules` is a companion-resource candidate: its entrypoint installs with `references/operating-rules.md`, `references/documentation.md`, and `references/infrastructure.md` under the same skill folder; only relevant references are read. Its catalog v0.2-draft companion object uses the exact source-parent-relative layout required by the planner: `skills/work-rules/` + `references/operating-rules.md`. The planner selects the companion as a separate generated file entry while the original `work-rules` asset ID remains the selection ID. Kiro automatic hook behavior remains explicitly deferred.
 
-`python-script-template` also packages `assets/standalone.py`. The 36 selection IDs expand to 40 files when all assets are selected; the catalog includes all four companion files.
+`python-script-template` also packages `assets/standalone.py`. The 27 selection IDs expand to 31 files when all assets are selected; the catalog includes all four companion files.
 
 Agents: `code-reviewer`, `doc-reviewer`, `git-manager`, `infra_worker`, `markdown-writer`, `se-lite`, `security-auditor`, `system-engineer`.
+
+Retired skill payloads are preserved in `archive/retired-payload/skills/` and are excluded from installation. Removal decisions and replacements are in [the consolidation record](WORKFLOW_SKILL_PLAN.md#5-2026-09-30-개인-skill-설치-목록-정리). Already installed retired skills are not automatically deleted.
 
 The exact payload path, SHA-256, target roots, companion inventory, and optional skill relationships are authoritative in [ASSET_CATALOG.json](ASSET_CATALOG.json). Targets are alternatives, not a command to install both. `user_home`, `codex_home`, and `repository` are resolved only by an approved installer or the user’s chosen runtime.
 
@@ -45,7 +47,7 @@ The exact payload path, SHA-256, target roots, companion inventory, and optional
 5. 검토만 요청한 사례, 필수 자료 접근 실패, 로컬 링크 오류로 실제 행동을 시험합니다. 실패하면 해당 설치분만 복구하고 사용자 후속 수정을 보존합니다.
 6. 신규 설치 복구는 설치 목록과 현재 해시가 일치하는 파일만 격리하는 방식으로 준비합니다. 기존 파일 갱신 복구는 검증된 백업을 사용합니다. 여러 파일의 중간 실패·재적용·버전 복귀 시험 전에는 복구 보장을 주장하지 않습니다.
 
-자동 설치기·hook·31 release 계약은 이번 목록에 포함하지 않습니다. 이 문서는 설치 절차와 후보 목록이지 실행 완료 증거가 아닙니다. 실제 선택·저장소별 설정·예외의 원본 소유자는 31이며 본 문서는 35의 자산 배치 후보를 설명합니다.
+35의 [개인 skill setup](scripts/setup_personal_skills.py)은 이 catalog의 skill과 동반 파일만 선택 설치하는 독립 도구입니다. Python 표준 라이브러리를 사용하고 30·31·네트워크를 요구하지 않습니다. 개인 선택 설치에서는 사용자가 목록을 고르며 중앙 구성의 선택·저장소별 설정·예외는 31이 소유합니다. 동일 설치는 건너뛰고 다른 기존 파일은 보존·거부합니다. 사용 방법은 [루트 README](../README.md#51-개인-codex-skill-직접-설치)에 있습니다. hook·중앙 release 계약·운영 배포는 이 도구에 포함하지 않습니다. 설치 절차와 후보 목록은 실제 실행 완료 증거가 아닙니다.
 
 ## 4. 중앙 관리 계약과 활성화 경계
 
@@ -63,6 +65,6 @@ governance-default·governance-repository는 [별도 초안 구성](CODEX_GOVERN
 
 **작성일**: 2026-09-22
 
-**마지막 업데이트**: 2026-09-29
+**마지막 업데이트**: 2026-09-30
 
 © 2026 siasia86. Licensed under CC BY 4.0.

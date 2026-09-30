@@ -107,19 +107,19 @@ Batch 4 계정 clone에는 governance_profile.py와 테스트를 추가했습니
 - [ ] 배포 설명서·작업 이력과 실제 설치할 파일(payload)을 구분하여 대상 저장소의 README·TODO·PLAN·CHANGELOG를 보호합니다.
 - [x] 후속 변경은 `codex/`에 반영하고 `gpt/` 재복사로 개선 사항을 덮어쓰지 않도록 갱신 절차를 문서화합니다.
 
-### 3.2 Skill 25개 검토
+### 3.2 개인 skill 후보 검토
 
-전역 설치 여부와 활성 범위는 31 profile에서 선택합니다. 아래 항목은 삭제 목록이 아닙니다. Batch 6에서 25개 모두 정적 후보 이식·검토를 완료했습니다. 아래 체크는 실제 도구·runtime·hook 및 profile 수용까지 포함하는 후속 기준이며 개발 완료와 구분합니다.
+개인 독립 설치는 사용자가 선택하고 중앙 관리 구성은 31 profile에서 선택합니다. Batch 6 당시 25개를 이식했으며 2026-09-30 재검토에서 일반 절차·중복 skill 9개를 archive로 보존하고 현재 개인 후보를 16개로 정리했습니다. [정리 근거와 대체 경로](codex/WORKFLOW_SKILL_PLAN.md#5-2026-09-30-개인-skill-설치-목록-정리)를 따릅니다. 아래 체크는 실제 도구·runtime·hook 및 profile 수용까지 포함하는 후속 기준이며 개발 완료와 구분합니다.
 
-- [ ] 공통 운영: `work-rules`, `using-skills`, `repo-governance`의 목적을 보존하고 중복·충돌을 정리합니다.
-- [ ] 검토·검증: `code-review`, `security-audit`, `fact-check`, `testing-and-verification`, `testing-guide`를 재사용 후보로 유지합니다.
-- [ ] 문서: `markdown-review`, `md-link-check`, `readme-template`의 검사 의존성과 배지·푸터 값을 분리합니다. 기존 푸터 제외 대상도 보존합니다.
+- [ ] 공통 운영: `work-rules`, `repo-governance`의 목적을 보존하고 중복·충돌을 정리합니다.
+- [ ] 검토·검증: `code-review`, `security-audit`, `fact-check`, `testing-guide`를 재사용 후보로 유지합니다.
+- [ ] 문서: `markdown-review`, `md-link-check`의 검사 의존성과 배지·푸터 값을 분리합니다. 기존 푸터 제외 대상도 보존합니다.
 - [ ] Git: `git-commit-rule`, `git-release`의 한국어·길이 선호를 보존하고 branch 이동·push 대상을 저장소 설정으로 전환합니다.
 - [ ] 스크립트: `bash-script-template`, `python-script-template`의 개인 표준을 보존하고 절대 경로·작성자 예시·응답 표식·Bash `eval` 조건을 검토합니다.
-- [ ] 인프라: `ansible-review`, `debugging-and-recovery`, `doubt-driven-infra`, `incremental-change`, `planning-and-breakdown`, `shipping-checklist`, `spec-driven-infra`를 인프라 구성 후보로 유지합니다.
-- [ ] 잠금: `kiro-lock`의 수동 절차와 Kiro hook을 분리하여 이식하고 소유권·경쟁 조건·중단 후 복구를 검증합니다.
+- [ ] 인프라: `ansible-review`, `debugging-and-recovery`, `spec-driven-infra`를 인프라 구성 후보로 유지합니다.
+- [ ] 잠금: 개인 skill에서는 기존 AGENTS·저장소 lock 절차를 따릅니다. Kiro hook 대응의 소유권·경쟁 조건·중단 후 복구는 별도 runtime 범위에서 검증합니다.
 - [ ] 도구 연결: `security-tools`의 실제 도구 위치·설치 조건·대체 명령을 확인합니다.
-- [ ] 저장소 예외: `zircon-readme-policy`의 푸터 제외 목적을 보존하고 Zircon 구성에만 연결합니다.
+- [ ] 저장소 예외: Zircon 푸터 예외는 해당 저장소 정책·중앙 profile에서 선택하고 일반 개인 skill 설치에서는 제외합니다.
 
 ### 3.3 Subagent 10개 검토
 
@@ -423,8 +423,9 @@ Batch 6에서 10개 모두 정적 이식·TOML·역할 검토를 완료했습니
 
 후보 구현·검증·게시 완료 내용은 [CHANGELOG](CHANGELOG.md)와 [기존 검증 기록](codex/CODEX_GOVERNANCE_VERIFICATION.md)에 기록했습니다. 완료 체크리스트를 다시 실행하지 않습니다.
 
-- [ ] 최신 Kiro md-link-check·repo-governance·work-rules 세 파일의 OS 읽기 접근 후 전체 내용을 대조합니다.
+- [x] 2026-09-30 최신 Kiro md-link-check·repo-governance·work-rules 세 파일의 전체 본문을 대조하고 Codex 후보를 보완했습니다. [추가 검증 기록](codex/CODEX_GOVERNANCE_VERIFICATION.md#5-2026-09-30-최신-kiro-세-파일-대조와-보완)에 원본 해시·이식 결정·검사 한계를 남겼으며 runtime 검증은 별도 미완료입니다.
 - [ ] 실제 runtime 설치·새 세션 동작은 대상·승인·검증 범위가 갖춰진 뒤 진행합니다.
+- [ ] 31 담당 agent가 catalog v2 pin·기존 HANDOFF·관련 PLAN/TODO와 draft manifest를 정합화하고 30 planner·staging 검사를 수행합니다. [중복 판정과 인계 순서](codex/CODEX_GOVERNANCE.md#6-31-담당-agent-인계와-중복-판정)를 따릅니다. 35의 읽기 전용 대조·문서 작성은 완료했으며 31 반영·생성 검증은 미실행입니다.
 - 경량화 효과 측정은 5.4절의 작업 01에서 관리하며 중복 등록하지 않습니다.
 
 ## 9. 문서 검토 기록과 근거
@@ -461,6 +462,6 @@ Batch 6에서 10개 모두 정적 이식·TOML·역할 검토를 완료했습니
 
 **작성일**: 2026-09-21
 
-**마지막 업데이트**: 2026-09-29
+**마지막 업데이트**: 2026-09-30
 
 © 2026 siasia86. Licensed under CC BY 4.0.
