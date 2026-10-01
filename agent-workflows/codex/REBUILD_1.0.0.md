@@ -13,7 +13,7 @@
 3. workflow 검토: Luna로 경로·관찰 시점·설치 원본을 읽기 전용 조사합니다. 상태: 조사·보완 완료.
 4. 새 개인 스킬: Kiro 스킬 19개와 동반 자료를 기준으로 codex/skills를 작성합니다. 상태: 원문 보존 19개 작성 완료.
 5. 검증: 단독 복사·원문 대응·내부 링크·문법·안전한 로컬 사례를 검사하고 Luna로 독립 사례를 수행합니다. 상태: 완료; 부분 검사·미실행 범위는 아래와 Codex VERIFICATION에 구분.
-6. 2차 yunli 게시와 기록: 검증 결과·제한·후속 TODO를 기록하고 새 스킬을 일반 commit·push합니다. 상태: 검증·기록 작성 완료, 2차 게시 준비.
+6. 2차 yunli 게시와 기록: 검증 결과·제한·후속 TODO를 기록하고 새 스킬을 일반 commit·push합니다. 상태: 완료 (`ef438b7` 원격 확인); 확인 결과 기록은 후속 문서 commit으로 같은 yunli에 게시합니다.
 
 ## 3. 현재 관찰과 수정 방향
 
@@ -47,9 +47,18 @@ Luna workflow 조사에서 사라진 codex/payload 경로와 과거 관찰의 �
 
 Terraform provider 부재로 validate가 실패한 사례는 부분 검사이며 init/plan/apply는 미실행입니다. root 환경의 읽기 거부 fixture는 별도 사용자 실행 제한으로 재현하지 못했습니다. 실제 개인 홈 발견·Windows·운영과 원문 보안 실행 도구/map 호환성은 미실행/미검증입니다. 원문 도구가 없다고 가짜 통과 또는 대체 동등성으로 보고하지 않습니다.
 
-원래 root 작업본은 main 상태와 Git index를 유지합니다. 승인된 변경의 commit·yunli 일반 push는 독립 /tmp 게시 clone에서 진행하며 root Git 관리 영역·개인 홈·다른 저장소의 권한을 변경하지 않습니다. 최종 원격 결과는 실제 게시 후 아래에 추가합니다.
+원래 root 작업본은 main 상태와 Git index를 유지합니다. 승인된 변경의 commit·yunli 일반 push는 독립 /tmp 게시 clone에서 진행하며 root Git 관리 영역·개인 홈·다른 저장소의 권한을 변경하지 않습니다. 원격 결과는 아래에 기록합니다.
 
 최종 새 안내 문서 style 12개·heading 범위 21개 검사에서 오류 0건입니다. 활성 자료와 root/workflow를 합친 98개 문서의 로컬 파일 링크 323개·앵커 94개도 오류 0건이며 source 기준 252개와 REVIEW 원문 bytes를 다시 확인했습니다. 전체 파일 Gitleaks 탐지 0건입니다. 게시 clone 전체 diff 검사는 보존한 testing-guide 원문 후행 공백 4곳을 보고했으며 그대로 기록·보존합니다. 그 항목만 제외한 검사는 다른 오류가 없습니다.
+
+## 7. 실제 게시 확인
+
+- 1차 이력/버전 정리: `f76d03d48487cad59f4a9ab5e3cebc1b22eba553` — 일반 push로 기존 yunli `4a5dfb1`에서 게시했습니다.
+- 2차 개인 스킬/검증: `ef438b73addf0a0ed4e59c7fa1b90292695f7c02` — 일반 push로 1차 commit 뒤에 게시했습니다. git ls-remote로 원격 yunli가 이 SHA와 같음을 확인했습니다.
+- 원격 main: `4227f1d6b703238e3d2b763a0d320998cfeedc09` — 작업 시작 값과 같습니다. main push·force push·tag·release·실제 runtime 설치는 수행하지 않았습니다.
+- 확인 결과를 담은 이 문서와 CHANGELOG는 별도 docs commit으로 같은 yunli에 게시합니다. 그 기록 commit의 SHA는 자기 참조로 본문에 넣지 않고 최종 Git HEAD와 응답에서 확인합니다.
+
+목적에 맞는 저장소 모음 작성과 승인된 yunli 게시를 마쳤습니다. 실행되지 않은 환경 확인·원문 도구 동등성·경량화/추가 스킬 검토는 Codex TODO에 남깁니다. 원본 main 작업본은 Git index/branch를 갱신하지 않아 변경 목록이 남으며 게시 clone은 clean 상태입니다. 원본 작업본을 yunli로 전환하거나 reset하지 않았습니다. 이번 게시 요청을 다른 작업의 권한으로 재사용하지 않습니다.
 
 ---
 
