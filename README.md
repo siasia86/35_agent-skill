@@ -10,7 +10,7 @@ Kiro에서 사용하던 개인 규칙·템플릿·워크플로를 Codex에서 �
 
 - `kiro/`: 실제 Kiro 개인 스킬·prompt·스타일의 보존 원본.
 - `gpt/`: 이전 GPT/Codex 이식의 보존 원본.
-- `codex/`: 새 Codex 개인 스킬을 작성할 위치. 1.0.0 이력 정리 후 생성합니다.
+- [codex/](codex/README.md): 폴더 단위로 단독 복사하는 Codex 개인 스킬 19개, 선택적 개인 지침 예시와 검증 기록.
 - [105_backup/codex](105_backup/codex/README.md): 폐기한 개발본·payload·catalog·설치기·governance·검증 이력. 새 설치 원본으로 사용하지 않습니다.
 - [agent-workflows](agent-workflows/README.md): 적용 절차와 과거 환경별 설치 관찰.
 - `claude/`: 기존 예약 영역.
@@ -21,6 +21,8 @@ Kiro에서 사용하던 개인 규칙·템플릿·워크플로를 Codex에서 �
 ## 3. 개인 스킬의 사용 단위
 
 새 스킬은 `codex/skills/<이름>/` 전체를 실행 사용자의 `~/.agents/skills/<이름>/`에 복사하는 형태로 작성합니다. 스킬 폴더 안에 필요한 자료를 포함하고 다른 스킬의 별도 설치·catalog·installer·30·31 저장소를 요구하지 않습니다. Git·Python·Terraform 같은 작업 도구와 해당 작업의 권한은 실제 실행 환경에서 확인합니다.
+
+[수동 복사 안내](codex/README.md#2-수동-복사), [원문 대응과 변경 이유](codex/MIGRATION.md), [19개 스킬 검증 결과](codex/VERIFICATION.md)를 확인합니다. 원문 본문은 유지하고 Codex 호환 절을 추가했습니다. 실제 원본이 없는 개인 보안 도구의 배포·map 호환성은 별도 미검증으로 명시합니다.
 
 스킬 생성과 폴더 복사 검증을 실제 개인 홈 설치·자동 발견·운영 적용으로 처리하지 않습니다. 기존 동명 스킬이 있으면 백업·비교하고 사용자 편집을 보존합니다. 개인 설정 예시와 실제 개인 config도 구분합니다.
 

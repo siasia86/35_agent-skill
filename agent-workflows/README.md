@@ -20,7 +20,8 @@ AI 도구별 Agent·Skill·Prompt의 최초 적용과 업데이트 절차를 관
 - gpt/: 기존 SE_PILOT.md·SE_PILOT_RESULTS.md 시험 기록. 경로와 과거 기록은 보존합니다.
 - [codex/](codex/README.md): 개인 환경별 실제 홈 상대 경로의 skill 관찰 사본과 단일 inventory. `pc01_codex-app-home`은 공개 별칭입니다.
 - ../kiro/docs/: Kiro 사용자 지침.
-- ../105_backup/codex/docs/: 폐기한 Codex 개발본의 역사적 적용 지침. 새 개인 스킬 안내는 현재 작업 기록에서 연결합니다.
+- [../codex/](../codex/README.md): 현재 개인 스킬의 수동 복사·기존 편집 보존·검증 안내.
+- ../105_backup/codex/docs/: 폐기한 Codex 개발본의 역사적 적용 지침. 현재 설치 입력으로 사용하지 않습니다.
 - ../claude/docs/: Claude 예약 영역의 적용 전 점검 지침.
 
 도구 디렉토리 전체가 설치 payload인 것은 아닙니다. docs/와 개발·검증 기록은 runtime에 복사하지 않습니다.
@@ -62,13 +63,15 @@ rollback 가능 상태 확인
 
 ## 3. 도구별 workflow
 
-| 도구   | 최초 적용                                                  | 업데이트                                                   | 현재 상태                     |
-|--------|------------------------------------------------------------|------------------------------------------------------------|-------------------------------|
-| Kiro   | [최초 적용](../kiro/docs/KIRO_SETUP_GUIDE.md)              | [업데이트](../kiro/docs/KIRO_UPDATE_GUIDE.md)              | 선택 적용 전 검토 필요        |
-| Codex  | [최초 적용](../105_backup/codex/docs/CODEX_SETUP_GUIDE.md) | [업데이트](../105_backup/codex/docs/CODEX_UPDATE_GUIDE.md) | 과거 안내·새 설치에 사용 금지 |
-| Claude | [최초 적용](../claude/docs/CLAUDE_SETUP_GUIDE.md)          | [업데이트](../claude/docs/CLAUDE_UPDATE_GUIDE.md)          | source·allowlist 확정 전 예약 |
+| 도구   | 최초 적용                                         | 업데이트                                            | 현재 상태                     |
+|--------|---------------------------------------------------|-----------------------------------------------------|-------------------------------|
+| Kiro   | [최초 적용](../kiro/docs/KIRO_SETUP_GUIDE.md)     | [업데이트](../kiro/docs/KIRO_UPDATE_GUIDE.md)       | 선택 적용 전 검토 필요        |
+| Codex  | [수동 복사](../codex/README.md#2-수동-복사)       | [비교·백업 후 복사](../codex/README.md#2-수동-복사) | 현재 모음·개인 설치 미실행    |
+| Claude | [최초 적용](../claude/docs/CLAUDE_SETUP_GUIDE.md) | [업데이트](../claude/docs/CLAUDE_UPDATE_GUIDE.md)   | source·allowlist 확정 전 예약 |
 
 새 Codex 개인 스킬은 폴더 전체의 수동 복사를 기본으로 하며 catalog·adapter·installer·30·31을 필수로 요구하지 않습니다. 기존 공통 체크리스트의 manifest·adapter 항목은 해당 구성이 실제 제공될 때만 적용합니다. [1.0.0 실행 기록](codex/REBUILD_1.0.0.md)을 확인합니다.
+
+폐기한 Codex의 [최초 적용](../105_backup/codex/docs/CODEX_SETUP_GUIDE.md)·[업데이트](../105_backup/codex/docs/CODEX_UPDATE_GUIDE.md) 문서는 과거 이력으로 보존합니다. 새 설치에 사용하지 않습니다.
 
 도구별 지침는 공통 TODO의 원칙을 따르되, 다른 도구의 명령·경로·runtime 설정을 사용하지 않습니다.
 
@@ -86,6 +89,8 @@ rollback 가능 상태 확인
 - 외부 Agent·Skill은 license·권한·외부 통신·유지보수 상태를 검토한 뒤 필요한 패턴만 반영합니다.
 - AI skill·prompt는 보안 경계가 아니며, 실제 강제는 CI·IAM·runner·network policy에서 수행합니다.
 - 기존 사용자 변경 사항과 미추적 파일을 확인하지 않고 삭제하거나 덮어쓰지 않습니다.
+
+새 Codex 모음은 선택한 스킬 폴더 전체가 공개 복사 단위이며 별도 allowlist 파일을 준비할 필요가 없습니다. 원문 대응·실제 파일·버전·commit·검증 범위를 확인합니다. 기존 manifest/adapter 기반의 도구는 그 도구의 실제 제공 구성을 따릅니다.
 
 [⬆ 목차로 돌아가기](#목차)
 

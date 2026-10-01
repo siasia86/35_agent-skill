@@ -1,0 +1,513 @@
+[
+  {
+    "file": "codex/skills/bash-script-template/SKILL.md",
+    "source": "kiro/skills/bash-script-template/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/code-review/SKILL.md",
+    "source": "kiro/skills/code-review/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/debugging-and-recovery/SKILL.md",
+    "source": "kiro/skills/debugging-and-recovery/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/debugging-and-recovery/references/skills/incremental-change.md",
+    "source": "kiro/skills/incremental-change/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/doubt-driven-infra/SKILL.md",
+    "source": "kiro/skills/doubt-driven-infra/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/git-commit-rule/SKILL.md",
+    "source": "kiro/skills/git-commit-rule/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/git-commit-rule/references/STYLE.md",
+    "source": "kiro/markdown/STYLE.md",
+    "baseline_issues": 7,
+    "active_issues": 7,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/git-commit-rule/references/skills/md-link-check.md",
+    "source": "kiro/skills/md-link-check/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/incremental-change/SKILL.md",
+    "source": "kiro/skills/incremental-change/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/incremental-change/references/skills/debugging-and-recovery.md",
+    "source": "kiro/skills/debugging-and-recovery/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/kiro-lock/SKILL.md",
+    "source": "kiro/skills/kiro-lock/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/md-link-check/SKILL.md",
+    "source": "kiro/skills/md-link-check/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/md-link-check/references/STYLE.md",
+    "source": "kiro/markdown/STYLE.md",
+    "baseline_issues": 7,
+    "active_issues": 7,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/planning-and-breakdown/SKILL.md",
+    "source": "kiro/skills/planning-and-breakdown/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/planning-and-breakdown/references/skills/debugging-and-recovery.md",
+    "source": "kiro/skills/debugging-and-recovery/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/planning-and-breakdown/references/skills/incremental-change.md",
+    "source": "kiro/skills/incremental-change/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/python-script-template/SKILL.md",
+    "source": "kiro/skills/python-script-template/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/readme-template/SKILL.md",
+    "source": "kiro/skills/readme-template/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/readme-template/references/STYLE.md",
+    "source": "kiro/markdown/STYLE.md",
+    "baseline_issues": 7,
+    "active_issues": 7,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/readme-template/references/skills/md-link-check.md",
+    "source": "kiro/skills/md-link-check/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/repo-governance/SKILL.md",
+    "source": "kiro/skills/repo-governance/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/security-tools/SKILL.md",
+    "source": "kiro/skills/security-tools/SKILL.md",
+    "baseline_issues": 1,
+    "active_issues": 1,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/security-tools/references/STYLE.md",
+    "source": "kiro/markdown/STYLE.md",
+    "baseline_issues": 7,
+    "active_issues": 7,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/shipping-checklist/SKILL.md",
+    "source": "kiro/skills/shipping-checklist/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/shipping-checklist/references/skills/debugging-and-recovery.md",
+    "source": "kiro/skills/debugging-and-recovery/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/shipping-checklist/references/skills/incremental-change.md",
+    "source": "kiro/skills/incremental-change/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/spec-driven-infra/SKILL.md",
+    "source": "kiro/skills/spec-driven-infra/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/spec-driven-infra/references/skills/debugging-and-recovery.md",
+    "source": "kiro/skills/debugging-and-recovery/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/spec-driven-infra/references/skills/incremental-change.md",
+    "source": "kiro/skills/incremental-change/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/spec-driven-infra/references/skills/planning-and-breakdown.md",
+    "source": "kiro/skills/planning-and-breakdown/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/testing-guide/SKILL.md",
+    "source": "kiro/skills/testing-guide/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/testing-guide/references/resources/edge_case_testing.md",
+    "source": "/root/32_system-engineering-resources/01_fundamentals/cs/testing/04_test_design/edge_case_testing.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/testing-guide/references/skills/debugging-and-recovery.md",
+    "source": "kiro/skills/debugging-and-recovery/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/testing-guide/references/skills/incremental-change.md",
+    "source": "kiro/skills/incremental-change/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/using-skills/SKILL.md",
+    "source": "kiro/skills/using-skills/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/using-skills/references/STYLE.md",
+    "source": "kiro/markdown/STYLE.md",
+    "baseline_issues": 7,
+    "active_issues": 7,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/using-skills/references/resources/edge_case_testing.md",
+    "source": "/root/32_system-engineering-resources/01_fundamentals/cs/testing/04_test_design/edge_case_testing.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/using-skills/references/skills/bash-script-template.md",
+    "source": "kiro/skills/bash-script-template/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/using-skills/references/skills/code-review.md",
+    "source": "kiro/skills/code-review/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/using-skills/references/skills/debugging-and-recovery.md",
+    "source": "kiro/skills/debugging-and-recovery/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/using-skills/references/skills/doubt-driven-infra.md",
+    "source": "kiro/skills/doubt-driven-infra/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/using-skills/references/skills/git-commit-rule.md",
+    "source": "kiro/skills/git-commit-rule/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/using-skills/references/skills/incremental-change.md",
+    "source": "kiro/skills/incremental-change/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/using-skills/references/skills/kiro-lock.md",
+    "source": "kiro/skills/kiro-lock/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/using-skills/references/skills/md-link-check.md",
+    "source": "kiro/skills/md-link-check/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/using-skills/references/skills/planning-and-breakdown.md",
+    "source": "kiro/skills/planning-and-breakdown/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/using-skills/references/skills/python-script-template.md",
+    "source": "kiro/skills/python-script-template/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/using-skills/references/skills/readme-template.md",
+    "source": "kiro/skills/readme-template/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/using-skills/references/skills/repo-governance.md",
+    "source": "kiro/skills/repo-governance/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/using-skills/references/skills/security-tools.md",
+    "source": "kiro/skills/security-tools/SKILL.md",
+    "baseline_issues": 1,
+    "active_issues": 1,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/using-skills/references/skills/shipping-checklist.md",
+    "source": "kiro/skills/shipping-checklist/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/using-skills/references/skills/spec-driven-infra.md",
+    "source": "kiro/skills/spec-driven-infra/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/using-skills/references/skills/testing-guide.md",
+    "source": "kiro/skills/testing-guide/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/using-skills/references/skills/work-rules.md",
+    "source": "kiro/skills/work-rules/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/using-skills/references/skills/zircon-readme-policy.md",
+    "source": "kiro/skills/zircon-readme-policy/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/work-rules/SKILL.md",
+    "source": "kiro/skills/work-rules/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/work-rules/references/STYLE.md",
+    "source": "kiro/markdown/STYLE.md",
+    "baseline_issues": 7,
+    "active_issues": 7,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/work-rules/references/skills/debugging-and-recovery.md",
+    "source": "kiro/skills/debugging-and-recovery/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/work-rules/references/skills/incremental-change.md",
+    "source": "kiro/skills/incremental-change/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/work-rules/references/skills/kiro-lock.md",
+    "source": "kiro/skills/kiro-lock/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/work-rules/references/skills/planning-and-breakdown.md",
+    "source": "kiro/skills/planning-and-breakdown/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/work-rules/references/skills/spec-driven-infra.md",
+    "source": "kiro/skills/spec-driven-infra/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/zircon-readme-policy/SKILL.md",
+    "source": "kiro/skills/zircon-readme-policy/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/zircon-readme-policy/references/STYLE.md",
+    "source": "kiro/markdown/STYLE.md",
+    "baseline_issues": 7,
+    "active_issues": 7,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/zircon-readme-policy/references/skills/debugging-and-recovery.md",
+    "source": "kiro/skills/debugging-and-recovery/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/zircon-readme-policy/references/skills/git-commit-rule.md",
+    "source": "kiro/skills/git-commit-rule/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/zircon-readme-policy/references/skills/incremental-change.md",
+    "source": "kiro/skills/incremental-change/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/zircon-readme-policy/references/skills/kiro-lock.md",
+    "source": "kiro/skills/kiro-lock/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/zircon-readme-policy/references/skills/md-link-check.md",
+    "source": "kiro/skills/md-link-check/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/zircon-readme-policy/references/skills/planning-and-breakdown.md",
+    "source": "kiro/skills/planning-and-breakdown/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/zircon-readme-policy/references/skills/readme-template.md",
+    "source": "kiro/skills/readme-template/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/zircon-readme-policy/references/skills/spec-driven-infra.md",
+    "source": "kiro/skills/spec-driven-infra/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  },
+  {
+    "file": "codex/skills/zircon-readme-policy/references/skills/work-rules.md",
+    "source": "kiro/skills/work-rules/SKILL.md",
+    "baseline_issues": 0,
+    "active_issues": 0,
+    "new_issues": []
+  }
+]
