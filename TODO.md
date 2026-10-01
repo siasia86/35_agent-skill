@@ -3,7 +3,9 @@
 
 31에서 저장소별 AI 운영 구성을 관리하고, 35의 지침·skill·agent와 30의 검사 도구를 조합하여 여러 환경에 배포하기 위한 작업 목록입니다. 대상 저장소를 이 문서에서는 consumer라고 부릅니다.
 
-사용자 요청의 **5~7번 개발·검증을 완료**했습니다. 30의 비실행 안전 요청 검사, 35의 skill 25개·agent 10개 배포 후보, 상세 지침을 보존하는 동반 파일 계약, 격리 패키지 설치·복구·멱등성을 검증했습니다. [Batch 6 이식 기록](codex/MIGRATION_BATCH6.md)과 CHANGELOG를 기준으로 확인하며 과거 Batch 4의 검사 수치를 현재 결과로 재사용하지 않습니다. 8번 실제 환경·Ansible·권한 pilot과 9번 release·운영 배포는 PLAN으로 남기고 8번부터 31 작업 공간의 새 세션에서 진행합니다. P0 행동 수용·Kiro 자동 hook의 동등 동작·실제 runtime 설치는 미완료입니다.
+사용자 요청의 **5~7번 개발·검증을 완료**했습니다. 30의 비실행 안전 요청 검사, 35의 skill 25개·agent 10개 배포 후보, 상세 지침을 보존하는 동반 파일 계약, 격리 패키지 설치·복구·멱등성을 검증했습니다. [Batch 6 이식 기록](105_backup/codex/MIGRATION_BATCH6.md)과 CHANGELOG를 기준으로 확인하며 과거 Batch 4의 검사 수치를 현재 결과로 재사용하지 않습니다. 8번 실제 환경·Ansible·권한 pilot과 9번 release·운영 배포는 PLAN으로 남기고 8번부터 31 작업 공간의 새 세션에서 진행합니다. P0 행동 수용·Kiro 자동 hook의 동등 동작·실제 runtime 설치는 미완료입니다.
+
+**2026-10-01 / 1.0.0:** 이 문서의 중앙 배포 개발 이력과 기존 다음 단계는 역사 기록으로 보존합니다. 이번 개인 스킬 재작성의 현재 작업은 [TODO2](TODO2.md)와 [실행 기록](agent-workflows/codex/REBUILD_1.0.0.md)입니다. 30·31 작업·운영 적용을 자동 재개하지 않습니다.
 
 ## 목차
 
@@ -41,7 +43,7 @@
 - 확정: 배포 명세에 선택 자산·버전·해시·설치 대상·관리 범위·병합 방식·검증·복구 조건을 명시합니다. 30은 누락된 정책을 임의로 추정하지 않습니다.
 - 확정: 차이 확인·설치·검증·활성화를 단계별로 분리합니다. 설치 성공만으로 hook 활성화나 실제 동작 성공을 표시하지 않습니다.
 - 유보: 적용 상태·검증 결과·운영 로그의 최종 보관 위치는 중앙·consumer·혼합 중 미결정입니다. 설정 원본의 중앙 소유와는 별개입니다. 결정 전 기존 기록·복구 자료를 이동하거나 삭제하지 않습니다.
-- 전환 필요: 현재 30·31 문서는 consumer가 예외·운영 명령 원본을 소유한다고 명시합니다. 위 기준은 새 목표이며 기존 실행 계약을 자동 변경하지 않습니다. [통합 계약 초안](codex/INTEGRATION_CONTRACT.md)을 따라 소유권 전환과 호환성 검증을 진행합니다.
+- 전환 필요: 현재 30·31 문서는 consumer가 예외·운영 명령 원본을 소유한다고 명시합니다. 위 기준은 새 목표이며 기존 실행 계약을 자동 변경하지 않습니다. [통합 계약 초안](105_backup/codex/INTEGRATION_CONTRACT.md)을 따라 소유권 전환과 호환성 검증을 진행합니다.
 
 ### 1.4 환경별 권한과 안전장치 기준
 
@@ -61,7 +63,7 @@
 
 ### 2.1 35의 AI 자산
 
-- `gpt/.agents/skills/`에 skill 25개, `gpt/.codex/agents/`에 TOML 10개가 있습니다. 숨김 파일을 포함한 원본 62개를 `codex/`에 복사하고 [출처 manifest](codex/BASELINE_MANIFEST.json)에 최초 해시를 기록했습니다. 전체 복사본은 아직 설치용 release가 아닙니다.
+- `gpt/.agents/skills/`에 skill 25개, `gpt/.codex/agents/`에 TOML 10개가 있습니다. 숨김 파일을 포함한 원본 62개를 `codex/`에 복사하고 [출처 manifest](105_backup/codex/BASELINE_MANIFEST.json)에 최초 해시를 기록했습니다. 전체 복사본은 아직 설치용 release가 아닙니다.
 - [gpt/AGENTS.md](gpt/AGENTS.md)는 `policies/`와 `markdown/STYLE.md`를 참조합니다.
 - [fact-check skill](gpt/.agents/skills/fact-check/SKILL.md)은 [상세 프롬프트](gpt/prompts/fact-check.md)를 상대 경로로 읽습니다. skill 폴더만 복사할 경우 의존 파일이 누락될 수 있습니다.
 - [기존 이식 manifest](gpt/policies/MIGRATION_MANIFEST.json)는 보존하고 새 배포 이력은 별도로 작성할 계획입니다.
@@ -100,7 +102,7 @@ Batch 4 계정 clone에는 governance_profile.py와 테스트를 추가했습니
 
 - [x] 숨김 디렉토리를 포함해 `gpt/`를 `codex/`로 복사하고 최초 파일 목록·출발 commit·hash를 기록합니다.
 - [x] swap·임시 로그·개인 세션 파일을 배포 대상에서 제외하고 원본 파일은 보존합니다.
-- [x] 각 자산의 유지·변환·범위 제한·보류 사유와 원본 대응 경로를 기록합니다. [35개 자산 정적 검토](codex/ASSET_REVIEW.md)의 후보 판정이며 실제 이식 완료는 아닙니다.
+- [x] 각 자산의 유지·변환·범위 제한·보류 사유와 원본 대응 경로를 기록합니다. [35개 자산 정적 검토](105_backup/codex/ASSET_REVIEW.md)의 후보 판정이며 실제 이식 완료는 아닙니다.
 - [ ] 지침·skill·agent가 읽는 `policies/`, `prompts/`, `markdown/`의 의존 관계를 확인합니다.
 - [ ] 필요한 파일을 패키지에 포함하거나 skill 내부 `references/`로 옮겨 개인용·프로젝트용 설치에서도 참조가 유지되게 만듭니다.
 - [ ] 개인 절대 경로를 패키지 내부 경로, 설치 가능한 도구 명령 또는 profile 설정으로 전환합니다.
@@ -109,7 +111,7 @@ Batch 4 계정 clone에는 governance_profile.py와 테스트를 추가했습니
 
 ### 3.2 개인 skill 후보 검토
 
-개인 독립 설치는 사용자가 선택하고 중앙 관리 구성은 31 profile에서 선택합니다. Batch 6 당시 25개를 이식했으며 2026-09-30 재검토에서 일반 절차·중복 skill 9개를 archive로 보존하고 현재 개인 후보를 16개로 정리했습니다. [정리 근거와 대체 경로](codex/WORKFLOW_SKILL_PLAN.md#5-2026-09-30-개인-skill-설치-목록-정리)를 따릅니다. 아래 체크는 실제 도구·runtime·hook 및 profile 수용까지 포함하는 후속 기준이며 개발 완료와 구분합니다.
+개인 독립 설치는 사용자가 선택하고 중앙 관리 구성은 31 profile에서 선택합니다. Batch 6 당시 25개를 이식했으며 2026-09-30 재검토에서 일반 절차·중복 skill 9개를 archive로 보존하고 현재 개인 후보를 16개로 정리했습니다. [정리 근거와 대체 경로](105_backup/codex/WORKFLOW_SKILL_PLAN.md#5-2026-09-30-개인-skill-설치-목록-정리)를 따릅니다. 아래 체크는 실제 도구·runtime·hook 및 profile 수용까지 포함하는 후속 기준이며 개발 완료와 구분합니다.
 
 - [ ] 공통 운영: `work-rules`, `repo-governance`의 목적을 보존하고 중복·충돌을 정리합니다.
 - [ ] 검토·검증: `code-review`, `security-audit`, `fact-check`, `testing-guide`를 재사용 후보로 유지합니다.
@@ -250,7 +252,7 @@ Batch 6에서 10개 모두 정적 이식·TOML·역할 검토를 완료했습니
 
 ### 5.4 Token 영향과 비교 검증
 
-- [ ] 01: [지침·skill 경량화 효과 비교](codex/tasks/01_TODO.md). 상태는 예정이며 모델·도구·격리 대상·측정 항목 확정 후 진행합니다. 정적 파일 축소를 실제 품질·사용량 개선으로 간주하지 않습니다.
+- [ ] 01: [지침·skill 경량화 효과 비교](105_backup/codex/tasks/01_TODO.md). 상태는 예정이며 모델·도구·격리 대상·측정 항목 확정 후 진행합니다. 정적 파일 축소를 실제 품질·사용량 개선으로 간주하지 않습니다.
 
 ### 5.5 우선 적용할 최소 SE 작업 흐름
 
@@ -407,25 +409,25 @@ Batch 6에서 10개 모두 정적 이식·TOML·역할 검토를 완료했습니
 
 - Batch 1 실행 완료 범위: 원본 복사·출처 manifest·최소 SE 지침 작성·개인 설치·CLI 로딩 확인·세 합성 시험. P0 전체 수용 완료나 전체 배포 완료를 뜻하지 않습니다.
 - 주 agent: 루트 TODO·AGENTS, `codex/` 배포 원본·payload·검증 기록, 승인받은 개인 지침 설치와 독립 재검증을 담당했습니다.
-- Terra: 파일럿 절차 작성. Sol: 권한·배포·검증 설계의 독립 검토. Luna: 격리 fixture에서 정상·실패·부분 검사 실행. 요청 모델·agent ID와 결과는 [P0 검증 기록](codex/P0_VERIFICATION.md)에 있습니다.
+- Terra: 파일럿 절차 작성. Sol: 권한·배포·검증 설계의 독립 검토. Luna: 격리 fixture에서 정상·실패·부분 검사 실행. 요청 모델·agent ID와 결과는 [P0 검증 기록](105_backup/codex/P0_VERIFICATION.md)에 있습니다.
 - 시험 절차와 실행 결과는 각각 [SE_PILOT.md](agent-workflows/gpt/SE_PILOT.md), [SE_PILOT_RESULTS.md](agent-workflows/gpt/SE_PILOT_RESULTS.md)에 기록했습니다. 읽기 실패 1건은 예상한 부분 검사 결과이며 전체 통과로 바꾸지 않았습니다.
-- Batch 1의 Terra 위임으로 [자산 정적 검토](codex/ASSET_REVIEW.md)에 skill 25개·agent 10개의 대응과 후보·일부 의존성을 기록했습니다. 전체 의존 그래프는 아직 검토 중이며 보존 영역 본문·설정은 그대로입니다.
+- Batch 1의 Terra 위임으로 [자산 정적 검토](105_backup/codex/ASSET_REVIEW.md)에 skill 25개·agent 10개의 대응과 후보·일부 의존성을 기록했습니다. 전체 의존 그래프는 아직 검토 중이며 보존 영역 본문·설정은 그대로입니다.
 - 원본 보존 기준: 출발 commit `51ae244e7a93e299dd7c8e67e03291584e0ff269`, 작업 시작 시 `gpt/` Git 변경 없음. 파일별 SHA-256으로 복사와 원본 불변 여부를 검증합니다.
-- Batch 2(2026-09-22): fact-check·markdown-review 자체 완결형 skill과 reviewer·docs_reviewer 읽기 전용 agent 후보를 payload에 분리했습니다. [설치 매핑](codex/PAYLOAD_MAP.md)을 작성했고 격리 경로에서 skill 발견·독립 검토 시험을 수행했습니다. 개인 설치 및 custom agent 이름 기반 위임 시험은 미완료입니다.
+- Batch 2(2026-09-22): fact-check·markdown-review 자체 완결형 skill과 reviewer·docs_reviewer 읽기 전용 agent 후보를 payload에 분리했습니다. [설치 매핑](105_backup/codex/PAYLOAD_MAP.md)을 작성했고 격리 경로에서 skill 발견·독립 검토 시험을 수행했습니다. 개인 설치 및 custom agent 이름 기반 위임 시험은 미완료입니다.
 - 재검토 수정: using-skills의 우선순위·연쇄 적용 위험, 인프라 skill 간 누락된 의존 관계와 홈 상대 키 경로 예시를 기록했습니다. 합성 명령 결과와 설치 지침의 행동 준수 검증을 분리했습니다.
-- Batch 3(2026-09-22): §1.3의 중앙 소유·배포 명세·단계 분리 기준과 기록 위치 유보를 반영했습니다. [통합 계약 초안](codex/INTEGRATION_CONTRACT.md)과 [자산 목록](codex/ASSET_CATALOG.json)을 작성하고 5개 payload 해시·대상 매핑 및 잘못된 입력 5종 거부를 정적 검증했습니다. 이는 31 승인 명세나 30 실행기 구현 완료가 아닙니다.
-- Batch 4(2026-09-22): 31 정책에 따라 계정별 홈 clone·siasia 브랜치에서 작업했습니다. 31 중앙 관리 계약·draft profile, 30 읽기 전용 planner·테스트를 구현하고 실제 35 자산 5개와 연결했습니다. [검증 기록과 작업 경로](codex/BATCH4_VERIFICATION.md)를 확인합니다. root mirror는 그대로이며 30 계정 clone의 테스트 28개 통과는 최신 sync와의 통합 검증을 뜻하지 않습니다.
+- Batch 3(2026-09-22): §1.3의 중앙 소유·배포 명세·단계 분리 기준과 기록 위치 유보를 반영했습니다. [통합 계약 초안](105_backup/codex/INTEGRATION_CONTRACT.md)과 [자산 목록](105_backup/codex/ASSET_CATALOG.json)을 작성하고 5개 payload 해시·대상 매핑 및 잘못된 입력 5종 거부를 정적 검증했습니다. 이는 31 승인 명세나 30 실행기 구현 완료가 아닙니다.
+- Batch 4(2026-09-22): 31 정책에 따라 계정별 홈 clone·siasia 브랜치에서 작업했습니다. 31 중앙 관리 계약·draft profile, 30 읽기 전용 planner·테스트를 구현하고 실제 35 자산 5개와 연결했습니다. [검증 기록과 작업 경로](105_backup/codex/BATCH4_VERIFICATION.md)를 확인합니다. root mirror는 그대로이며 30 계정 clone의 테스트 28개 통과는 최신 sync와의 통합 검증을 뜻하지 않습니다.
 - 2026-09-22 전체 재검토: 개발·테스트의 전체 운영 권한 허용 계획과 운영의 script 경유 권한 강제를 §1.4·6.4에 반영했습니다. 전체 권한과 직접 실행 승인, 자산 배치 planner와 안전 실행기를 구분했습니다. 상태 요약·기록 위치·재개 순서의 누락과 충돌을 수정했습니다.
 - 다음 작업의 단일 기준은 §8.1입니다. 환경·허용 작업 계약과 통합 기준을 먼저 확인하며 실제 계정 권한·서버·실행 코드는 이번 TODO 검토에서 변경하지 않았습니다. 기록 위치와 직접 실행 예외는 미결정입니다.
 - 2026-09-22 설계 checkpoint: 후속 사용자 요청으로 30·31·35 root 작업본 직접 수정·commit·push를 이번 1회에 한해 승인받았습니다. 이유는 governance 구조 설계 변경의 통합·검증·이력 정리입니다. 계정 clone은 보존하고 변경 부분만 옮겼으며 30 전체 테스트 40개·31 draft 45개 항목·5개 자산 계획 연동을 확인했습니다. 운영 적용·release 승인·ACL 변경은 제외합니다. 게시 대상은 30·31 design/governance-20260922, 35 yunli이며 이후 root 직접 수정은 새 이유·승인이 필요합니다.
 
 ### 8.5 Codex governance 후속 작업
 
-후보 구현·검증·게시 완료 내용은 [CHANGELOG](CHANGELOG.md)와 [기존 검증 기록](codex/CODEX_GOVERNANCE_VERIFICATION.md)에 기록했습니다. 완료 체크리스트를 다시 실행하지 않습니다.
+후보 구현·검증·게시 완료 내용은 [CHANGELOG](CHANGELOG.md)와 [기존 검증 기록](105_backup/codex/CODEX_GOVERNANCE_VERIFICATION.md)에 기록했습니다. 완료 체크리스트를 다시 실행하지 않습니다.
 
-- [x] 2026-09-30 최신 Kiro md-link-check·repo-governance·work-rules 세 파일의 전체 본문을 대조하고 Codex 후보를 보완했습니다. [추가 검증 기록](codex/CODEX_GOVERNANCE_VERIFICATION.md#5-2026-09-30-최신-kiro-세-파일-대조와-보완)에 원본 해시·이식 결정·검사 한계를 남겼으며 runtime 검증은 별도 미완료입니다.
+- [x] 2026-09-30 최신 Kiro md-link-check·repo-governance·work-rules 세 파일의 전체 본문을 대조하고 Codex 후보를 보완했습니다. [추가 검증 기록](105_backup/codex/CODEX_GOVERNANCE_VERIFICATION.md#5-2026-09-30-최신-kiro-세-파일-대조와-보완)에 원본 해시·이식 결정·검사 한계를 남겼으며 runtime 검증은 별도 미완료입니다.
 - [ ] 실제 runtime 설치·새 세션 동작은 대상·승인·검증 범위가 갖춰진 뒤 진행합니다.
-- [ ] 31 담당 agent가 catalog v2 pin·기존 HANDOFF·관련 PLAN/TODO와 draft manifest를 정합화하고 30 planner·staging 검사를 수행합니다. [중복 판정과 인계 순서](codex/CODEX_GOVERNANCE.md#6-31-담당-agent-인계와-중복-판정)를 따릅니다. 35의 읽기 전용 대조·문서 작성은 완료했으며 31 반영·생성 검증은 미실행입니다.
+- [ ] 31 담당 agent가 catalog v2 pin·기존 HANDOFF·관련 PLAN/TODO와 draft manifest를 정합화하고 30 planner·staging 검사를 수행합니다. [중복 판정과 인계 순서](105_backup/codex/CODEX_GOVERNANCE.md#6-31-담당-agent-인계와-중복-판정)를 따릅니다. 35의 읽기 전용 대조·문서 작성은 완료했으며 31 반영·생성 검증은 미실행입니다.
 - 경량화 효과 측정은 5.4절의 작업 01에서 관리하며 중복 등록하지 않습니다.
 
 ## 9. 문서 검토 기록과 근거

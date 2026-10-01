@@ -4,7 +4,7 @@
 
 이 파일럿은 결과를 길게 설명하는 대신, 중요한 판단에서 **목적 → 근거 → 다음 조치**를 남기는지 확인합니다. 최소 지침의 원본·설치·로딩·모델 행동을 별도로 검증하며, 전체 skill·agent 배포나 hook 활성화는 이 시험에 포함하지 않습니다.
 
-대상 payload는 [개인 공통 지침](../../codex/payload/personal/AGENTS.md)입니다. `gpt/` 원본 지침은 검토 대상일 뿐, 이 파일로 자동 적용되지 않습니다. `gpt/AGENTS.md` 전체나 전체 `gpt/` 디렉터리를 Codex home·루트에 복사하지 않습니다.
+대상 payload는 [개인 공통 지침](../../105_backup/codex/payload/personal/AGENTS.md)입니다. `gpt/` 원본 지침은 검토 대상일 뿐, 이 파일로 자동 적용되지 않습니다. `gpt/AGENTS.md` 전체나 전체 `gpt/` 디렉터리를 Codex home·루트에 복사하지 않습니다.
 
 ## 설치 전 확인과 안전 경계
 

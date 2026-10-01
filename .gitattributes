@@ -1,7 +1,5 @@
-# Catalog and profile pins identify these files by their exact LF bytes.
-# Keep preservation sources (kiro/, gpt/, archive/) outside this rule.
-codex/payload/** text eol=lf
-codex/ASSET_CATALOG.json text eol=lf
-codex/templates/governance/** text eol=lf
-codex/scripts/*.py text eol=lf
-codex/tests/*.py text eol=lf
+# Preserve historical and original bytes; active Codex skills use LF.
+kiro/** -text
+gpt/** -text
+105_backup/** -text
+codex/** text eol=lf

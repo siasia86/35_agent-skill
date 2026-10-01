@@ -2,7 +2,7 @@
 
 ## 1. 범위
 
-저장소 공통 문서·배포 경계의 문제를 기록합니다. 개발 계획은 [TODO](TODO.md), 완료 이력은 [CHANGELOG](CHANGELOG.md)에서 관리합니다. [Codex 마이그레이션 이슈](codex/ISSUE.md)의 과거 기록과 gpt 보존 원본은 별도로 유지합니다.
+저장소 공통 문서·배포 경계의 문제를 기록합니다. 개발 계획은 [TODO](TODO.md), 완료 이력은 [CHANGELOG](CHANGELOG.md)에서 관리합니다. [Codex 마이그레이션 이슈](105_backup/codex/ISSUE.md)의 과거 기록과 gpt 보존 원본은 별도로 유지합니다.
 
 ## 2. 이슈 현황
 
