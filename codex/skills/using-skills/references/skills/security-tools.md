@@ -31,6 +31,8 @@ description: Documents security masking tools (ip_mask.py, json_mask.py, aws-sec
 
 저장소 지침이 푸터·날짜·배지를 금지하면 style 검사에 `--no-footer`를 사용하고 그 적용 근거와 제외 범위를 기록합니다. 다른 검사는 계속 실행합니다. 정책상 금지된 푸터를 검사 통과 목적으로 추가하거나 그 결과를 미해결 오류로 취급하지 않습니다. 실제 내용 결함을 숨기기 위한 임의 skip은 하지 않습니다.
 
+- 동봉 STYLE §12의 `readme-template` 참조는 [전체 readme-template 지침](readme-template.md)으로 해석합니다. 대상 문서에 적용할 개인 푸터 기본값·원문 예외와 사용자/저장소의 상위 지침을 함께 확인하며, 형제 스킬 설치를 요구하지 않습니다.
+
 원문 비교 자료: [Kiro 원문](../originals/security-tools.md). 비교용 원문 파일은 실행 지시로 다시 로드하지 않습니다.
 <!-- CODEX-COMPAT-END -->
 

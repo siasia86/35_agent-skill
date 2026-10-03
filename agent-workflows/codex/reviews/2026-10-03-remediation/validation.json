@@ -1,0 +1,1567 @@
+{
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "ls-tree",
+        "-r",
+        "--name-only",
+        "-z",
+        "f66b5b86212927b1913a798be46397ef45e1cafa"
+      ],
+      "exit": 0,
+      "stdout": ".codex/config.toml\u0000.gitattributes\u0000105_backup/codex/AGENTS.md\u0000105_backup/codex/ASSET_CATALOG.json\u0000105_backup/codex/ASSET_REVIEW.md\u0000105_backup/codex/BASELINE_MANIFEST.json\u0000105_backup/codex/BATCH2_VERIFICATION.md\u0000105_backup/codex/BATCH4_VERIFICATION.md\u0000105_backup/codex/CHANGELOG.md\u0000105_backup/codex/CODEX_GOVERNANCE.md\u0000105_backup/codex/CODEX_GOVERNANCE_PLAN.md\u0000105_backup/codex/CODEX_GOVERNANCE_VERIFICATION.md\u0000105_backup/codex/CODEX_MIGRATION_MAP.md\u0000105_backup/codex/CODEX_MIGRATION_TODO.md\u0000105_backup/codex/INTEGRATION_CONTRACT.md\u0000105_backup/codex/ISSUE.md\u0000105_backup/codex/LOADER_VERDICT_2026-09-22.json\u0000105_backup/codex/MIGRATION_BATCH6.md\u0000105_backup/codex/P0_VERIFICATION.md\u0000105_backup/codex/PAYLOAD_MAP.md\u0000105_backup/codex/PLAN.md\u0000105_backup/codex/README.before-1.0.0.md\u0000105_backup/codex/README.md\u0000105_backup/codex/REPOSITORY_README.before-1.0.0.md\u0000105_backup/codex/REVIEW.md\u0000105_backup/codex/TODO.md\u0000105_backup/codex/WORKFLOW_SKILL_PLAN.md\u0000105_backup/codex/archive/PATH_MAP.json\u0000105_backup/codex/archive/README.md\u0000105_backup/codex/archive/agents/code-reviewer.toml\u0000105_backup/codex/archive/agents/doc-reviewer.toml\u0000105_backup/codex/archive/agents/docs-reviewer.toml\u0000105_backup/codex/archive/agents/git-manager.toml\u0000105_backup/codex/archive/agents/infra-worker.toml\u0000105_backup/codex/archive/agents/markdown-writer.toml\u0000105_backup/codex/archive/agents/reviewer.toml\u0000105_backup/codex/archive/agents/se-lite.toml\u0000105_backup/codex/archive/agents/security-auditor.toml\u0000105_backup/codex/archive/agents/system-engineer.toml\u0000105_backup/codex/archive/retired-payload/skills/doubt-driven-infra/SKILL.md\u0000105_backup/codex/archive/retired-payload/skills/incremental-change/SKILL.md\u0000105_backup/codex/archive/retired-payload/skills/kiro-lock/SKILL.md\u0000105_backup/codex/archive/retired-payload/skills/planning-and-breakdown/SKILL.md\u0000105_backup/codex/archive/retired-payload/skills/readme-template/SKILL.md\u0000105_backup/codex/archive/retired-payload/skills/shipping-checklist/SKILL.md\u0000105_backup/codex/archive/retired-payload/skills/testing-and-verification/SKILL.md\u0000105_backup/codex/archive/retired-payload/skills/using-skills/SKILL.md\u0000105_backup/codex/archive/retired-payload/skills/zircon-readme-policy/SKILL.md\u0000105_backup/codex/archive/skills/ansible-review/SKILL.md\u0000105_backup/codex/archive/skills/bash-script-template/SKILL.md\u0000105_backup/codex/archive/skills/code-review/SKILL.md\u0000105_backup/codex/archive/skills/debugging-and-recovery/SKILL.md\u0000105_backup/codex/archive/skills/doubt-driven-infra/SKILL.md\u0000105_backup/codex/archive/skills/fact-check/SKILL.md\u0000105_backup/codex/archive/skills/git-commit-rule/SKILL.md\u0000105_backup/codex/archive/skills/git-release/SKILL.md\u0000105_backup/codex/archive/skills/git-release/SKILL.md.original\u0000105_backup/codex/archive/skills/incremental-change/SKILL.md\u0000105_backup/codex/archive/skills/kiro-lock/SKILL.md\u0000105_backup/codex/archive/skills/markdown-review/SKILL.md\u0000105_backup/codex/archive/skills/md-link-check/SKILL.md\u0000105_backup/codex/archive/skills/planning-and-breakdown/SKILL.md\u0000105_backup/codex/archive/skills/python-script-template/SKILL.md\u0000105_backup/codex/archive/skills/readme-template/SKILL.md\u0000105_backup/codex/archive/skills/repo-governance/SKILL.md\u0000105_backup/codex/archive/skills/security-audit/SKILL.md\u0000105_backup/codex/archive/skills/security-audit/SKILL.md.original\u0000105_backup/codex/archive/skills/security-tools/SKILL.md\u0000105_backup/codex/archive/skills/shipping-checklist/SKILL.md\u0000105_backup/codex/archive/skills/spec-driven-infra/SKILL.md\u0000105_backup/codex/archive/skills/testing-and-verification/SKILL.md\u0000105_backup/codex/archive/skills/testing-and-verification/SKILL.md.original\u0000105_backup/codex/archive/skills/testing-guide/SKILL.md\u0000105_backup/codex/archive/skills/using-skills/SKILL.md\u0000105_backup/codex/archive/skills/work-rules/SKILL.md\u0000105_backup/codex/archive/skills/zircon-readme-policy/SKILL.md\u0000105_backup/codex/docs/CODEX_SETUP_GUIDE.md\u0000105_backup/codex/docs/CODEX_UPDATE_GUIDE.md\u0000105_backup/codex/markdown/INDEX.md\u0000105_backup/codex/markdown/STYLE.md\u0000105_backup/codex/payload/agents/code-reviewer.toml\u0000105_backup/codex/payload/agents/doc-reviewer.toml\u0000105_backup/codex/payload/agents/docs-reviewer.toml\u0000105_backup/codex/payload/agents/git-manager.toml\u0000105_backup/codex/payload/agents/infra-worker.toml\u0000105_backup/codex/payload/agents/markdown-writer.toml\u0000105_backup/codex/payload/agents/reviewer.toml\u0000105_backup/codex/payload/agents/se-lite.toml\u0000105_backup/codex/payload/agents/security-auditor.toml\u0000105_backup/codex/payload/agents/system-engineer.toml\u0000105_backup/codex/payload/personal/AGENTS.md\u0000105_backup/codex/payload/skills/ansible-review/SKILL.md\u0000105_backup/codex/payload/skills/bash-script-template/SKILL.md\u0000105_backup/codex/payload/skills/code-review/SKILL.md\u0000105_backup/codex/payload/skills/debugging-and-recovery/SKILL.md\u0000105_backup/codex/payload/skills/fact-check/SKILL.md\u0000105_backup/codex/payload/skills/git-commit-rule/SKILL.md\u0000105_backup/codex/payload/skills/git-release/SKILL.md\u0000105_backup/codex/payload/skills/markdown-review/SKILL.md\u0000105_backup/codex/payload/skills/md-link-check/SKILL.md\u0000105_backup/codex/payload/skills/python-script-template/SKILL.md\u0000105_backup/codex/payload/skills/python-script-template/assets/standalone.py\u0000105_backup/codex/payload/skills/repo-governance/SKILL.md\u0000105_backup/codex/payload/skills/security-audit/SKILL.md\u0000105_backup/codex/payload/skills/security-tools/SKILL.md\u0000105_backup/codex/payload/skills/spec-driven-infra/SKILL.md\u0000105_backup/codex/payload/skills/testing-guide/SKILL.md\u0000105_backup/codex/payload/skills/work-rules/SKILL.md\u0000105_backup/codex/payload/skills/work-rules/references/documentation.md\u0000105_backup/codex/payload/skills/work-rules/references/infrastructure.md\u0000105_backup/codex/payload/skills/work-rules/references/operating-rules.md\u0000105_backup/codex/policies/CODEX_COMPATIBILITY.md\u0000105_backup/codex/policies/DOCUMENT_WORKFLOW.md\u0000105_backup/codex/policies/MIGRATION_MANIFEST.json\u0000105_backup/codex/prompts/ansible-convert.md\u0000105_backup/codex/prompts/ansible-create.md\u0000105_backup/codex/prompts/ansible-debug.md\u0000105_backup/codex/prompts/ansible-review.md\u0000105_backup/codex/prompts/code-review.md\u0000105_backup/codex/prompts/doc-consistency-ansible-review.md\u0000105_backup/codex/prompts/doc-consistency-review.md\u0000105_backup/codex/prompts/fact-check.md\u0000105_backup/codex/prompts/markdown-review.md\u0000105_backup/codex/prompts/md-review.md\u0000105_backup/codex/prompts/py-review.md\u0000105_backup/codex/prompts/sh-review.md\u0000105_backup/codex/prompts/skill-review.md\u0000105_backup/codex/prompts/vagrant-review.md\u0000105_backup/codex/scripts/setup_personal_skills.py\u0000105_backup/codex/tasks/01_TODO.md\u0000105_backup/codex/templates/governance/governance-default-SKILL.md\u0000105_backup/codex/templates/governance/governance-repository-SKILL.md\u0000105_backup/codex/templates/governance/personal-AGENTS.md\u0000105_backup/codex/templates/governance/repository-AGENTS.md\u0000105_backup/codex/tests/test_setup_personal_skills.py\u0000105_backup/codex/windows_game_governance/README.md\u0000AGENTS.md\u0000CHANGELOG.md\u0000ISSUE.md\u0000README.md\u0000TODO.md\u0000TODO2.md\u0000VERSION\u0000_reference/32_system-engineering-resources/ref_ai_coding_tools_comparison.md\u0000_reference/32_system-engineering-resources/ref_ai_coding_tools_official_notes.md\u0000_reference/32_system-engineering-resources/ref_ai_development_request_template.md\u0000_reference/32_system-engineering-resources/ref_ai_markdown_design_patterns.md\u0000_reference/32_system-engineering-resources/ref_codex_cli_official_notes.md\u0000_reference/32_system-engineering-resources/ref_gitleaks_official_notes.md\u0000_reference/32_system-engineering-resources/ref_harness_engineering.md\u0000_reference/32_system-engineering-resources/ref_kiro_agent_lock.md\u0000_reference/32_system-engineering-resources/ref_kiro_cli_command_reference.md\u0000_reference/32_system-engineering-resources/ref_kiro_model_guide.md\u0000_reference/32_system-engineering-resources/ref_kiro_setup_guide.md\u0000_reference/32_system-engineering-resources/ref_loop_engineering.md\u0000_reference/INDEX.md\u0000agent-workflows/README.md\u0000agent-workflows/codex/.gitattributes\u0000agent-workflows/codex/HANDOFF.md\u0000agent-workflows/codex/MERGE_REVIEW_2026-10-03.md\u0000agent-workflows/codex/README.md\u0000agent-workflows/codex/REBUILD_1.0.0.md\u0000agent-workflows/codex/VERIFICATION.md\u0000agent-workflows/codex/pc01_codex-app-home/.agents/skills/code-review/SKILL.md\u0000agent-workflows/codex/pc01_codex-app-home/.agents/skills/debugging-and-recovery/SKILL.md\u0000agent-workflows/codex/pc01_codex-app-home/.agents/skills/markdown-review/SKILL.md\u0000agent-workflows/codex/pc01_codex-app-home/.agents/skills/md-link-check/SKILL.md\u0000agent-workflows/codex/pc01_codex-app-home/runtime_inventory.json\u0000agent-workflows/codex/reviews/2026-10-02/findings.json\u0000agent-workflows/codex/reviews/2026-10-02/scope-validation.json\u0000agent-workflows/codex/reviews/2026-10-03/four-branch-merge.json\u0000agent-workflows/codex/reviews/2026-10-03/reproduce_review.py\u0000agent-workflows/codex/reviews/2026-10-03/reproductions.json\u0000agent-workflows/common/UPDATE_TODO.md\u0000agent-workflows/common/USER_TODO.md\u0000agent-workflows/gpt/SE_PILOT.md\u0000agent-workflows/gpt/SE_PILOT_RESULTS.md\u0000claude/README.md\u0000claude/docs/CLAUDE_SETUP_GUIDE.md\u0000claude/docs/CLAUDE_UPDATE_GUIDE.md\u0000codex/MIGRATION.md\u0000codex/README.md\u0000codex/TODO.md\u0000codex/VERIFICATION.md\u0000codex/personal/AGENTS.md\u0000codex/skills/bash-script-template/SKILL.md\u0000codex/skills/bash-script-template/references/kiro-original.md\u0000codex/skills/code-review/SKILL.md\u0000codex/skills/code-review/references/kiro-original.md\u0000codex/skills/debugging-and-recovery/SKILL.md\u0000codex/skills/debugging-and-recovery/references/kiro-original.md\u0000codex/skills/debugging-and-recovery/references/originals/incremental-change.md\u0000codex/skills/debugging-and-recovery/references/skills/incremental-change.md\u0000codex/skills/doubt-driven-infra/SKILL.md\u0000codex/skills/doubt-driven-infra/references/kiro-original.md\u0000codex/skills/git-commit-rule/SKILL.md\u0000codex/skills/git-commit-rule/references/STYLE.md\u0000codex/skills/git-commit-rule/references/kiro-original.md\u0000codex/skills/git-commit-rule/references/originals/md-link-check.md\u0000codex/skills/git-commit-rule/references/skills/md-link-check.md\u0000codex/skills/git-commit-rule/scripts/md-heading-check.py\u0000codex/skills/git-commit-rule/scripts/md-link-check.py\u0000codex/skills/git-commit-rule/scripts/md-style-check.py\u0000codex/skills/incremental-change/SKILL.md\u0000codex/skills/incremental-change/references/kiro-original.md\u0000codex/skills/incremental-change/references/originals/debugging-and-recovery.md\u0000codex/skills/incremental-change/references/skills/debugging-and-recovery.md\u0000codex/skills/kiro-lock/SKILL.md\u0000codex/skills/kiro-lock/references/kiro-original.md\u0000codex/skills/kiro-lock/scripts/lock.py\u0000codex/skills/md-link-check/SKILL.md\u0000codex/skills/md-link-check/references/STYLE.md\u0000codex/skills/md-link-check/references/kiro-original.md\u0000codex/skills/md-link-check/scripts/md-heading-check.py\u0000codex/skills/md-link-check/scripts/md-link-check.py\u0000codex/skills/md-link-check/scripts/md-style-check.py\u0000codex/skills/planning-and-breakdown/SKILL.md\u0000codex/skills/planning-and-breakdown/references/kiro-original.md\u0000codex/skills/planning-and-breakdown/references/originals/debugging-and-recovery.md\u0000codex/skills/planning-and-breakdown/references/originals/incremental-change.md\u0000codex/skills/planning-and-breakdown/references/skills/debugging-and-recovery.md\u0000codex/skills/planning-and-breakdown/references/skills/incremental-change.md\u0000codex/skills/python-script-template/SKILL.md\u0000codex/skills/python-script-template/references/kiro-original.md\u0000codex/skills/readme-template/SKILL.md\u0000codex/skills/readme-template/references/STYLE.md\u0000codex/skills/readme-template/references/kiro-original.md\u0000codex/skills/readme-template/references/originals/md-link-check.md\u0000codex/skills/readme-template/references/skills/md-link-check.md\u0000codex/skills/readme-template/scripts/md-heading-check.py\u0000codex/skills/readme-template/scripts/md-link-check.py\u0000codex/skills/readme-template/scripts/md-style-check.py\u0000codex/skills/repo-governance/SKILL.md\u0000codex/skills/repo-governance/references/kiro-original.md\u0000codex/skills/security-tools/SKILL.md\u0000codex/skills/security-tools/references/STYLE.md\u0000codex/skills/security-tools/references/kiro-original.md\u0000codex/skills/security-tools/scripts/md-heading-check.py\u0000codex/skills/security-tools/scripts/md-link-check.py\u0000codex/skills/security-tools/scripts/md-style-check.py\u0000codex/skills/shipping-checklist/SKILL.md\u0000codex/skills/shipping-checklist/references/kiro-original.md\u0000codex/skills/shipping-checklist/references/originals/debugging-and-recovery.md\u0000codex/skills/shipping-checklist/references/originals/incremental-change.md\u0000codex/skills/shipping-checklist/references/skills/debugging-and-recovery.md\u0000codex/skills/shipping-checklist/references/skills/incremental-change.md\u0000codex/skills/spec-driven-infra/SKILL.md\u0000codex/skills/spec-driven-infra/references/kiro-original.md\u0000codex/skills/spec-driven-infra/references/originals/debugging-and-recovery.md\u0000codex/skills/spec-driven-infra/references/originals/incremental-change.md\u0000codex/skills/spec-driven-infra/references/originals/planning-and-breakdown.md\u0000codex/skills/spec-driven-infra/references/skills/debugging-and-recovery.md\u0000codex/skills/spec-driven-infra/references/skills/incremental-change.md\u0000codex/skills/spec-driven-infra/references/skills/planning-and-breakdown.md\u0000codex/skills/testing-guide/SKILL.md\u0000codex/skills/testing-guide/references/kiro-original.md\u0000codex/skills/testing-guide/references/originals/debugging-and-recovery.md\u0000codex/skills/testing-guide/references/originals/edge_case_testing.md\u0000codex/skills/testing-guide/references/originals/incremental-change.md\u0000codex/skills/testing-guide/references/resources/edge_case_testing.md\u0000codex/skills/testing-guide/references/skills/debugging-and-recovery.md\u0000codex/skills/testing-guide/references/skills/incremental-change.md\u0000codex/skills/using-skills/SKILL.md\u0000codex/skills/using-skills/references/STYLE.md\u0000codex/skills/using-skills/references/kiro-original.md\u0000codex/skills/using-skills/references/originals/bash-script-template.md\u0000codex/skills/using-skills/references/originals/code-review.md\u0000codex/skills/using-skills/references/originals/debugging-and-recovery.md\u0000codex/skills/using-skills/references/originals/doubt-driven-infra.md\u0000codex/skills/using-skills/references/originals/edge_case_testing.md\u0000codex/skills/using-skills/references/originals/git-commit-rule.md\u0000codex/skills/using-skills/references/originals/incremental-change.md\u0000codex/skills/using-skills/references/originals/kiro-lock.md\u0000codex/skills/using-skills/references/originals/md-link-check.md\u0000codex/skills/using-skills/references/originals/planning-and-breakdown.md\u0000codex/skills/using-skills/references/originals/python-script-template.md\u0000codex/skills/using-skills/references/originals/readme-template.md\u0000codex/skills/using-skills/references/originals/repo-governance.md\u0000codex/skills/using-skills/references/originals/security-tools.md\u0000codex/skills/using-skills/references/originals/shipping-checklist.md\u0000codex/skills/using-skills/references/originals/spec-driven-infra.md\u0000codex/skills/using-skills/references/originals/testing-guide.md\u0000codex/skills/using-skills/references/originals/work-rules.md\u0000codex/skills/using-skills/references/originals/zircon-readme-policy.md\u0000codex/skills/using-skills/references/resources/edge_case_testing.md\u0000codex/skills/using-skills/references/skills/bash-script-template.md\u0000codex/skills/using-skills/references/skills/code-review.md\u0000codex/skills/using-skills/references/skills/debugging-and-recovery.md\u0000codex/skills/using-skills/references/skills/doubt-driven-infra.md\u0000codex/skills/using-skills/references/skills/git-commit-rule.md\u0000codex/skills/using-skills/references/skills/incremental-change.md\u0000codex/skills/using-skills/references/skills/kiro-lock.md\u0000codex/skills/using-skills/references/skills/md-link-check.md\u0000codex/skills/using-skills/references/skills/planning-and-breakdown.md\u0000codex/skills/using-skills/references/skills/python-script-template.md\u0000codex/skills/using-skills/references/skills/readme-template.md\u0000codex/skills/using-skills/references/skills/repo-governance.md\u0000codex/skills/using-skills/references/skills/security-tools.md\u0000codex/skills/using-skills/references/skills/shipping-checklist.md\u0000codex/skills/using-skills/references/skills/spec-driven-infra.md\u0000codex/skills/using-skills/references/skills/testing-guide.md\u0000codex/skills/using-skills/references/skills/work-rules.md\u0000codex/skills/using-skills/references/skills/zircon-readme-policy.md\u0000codex/skills/using-skills/scripts/lock.py\u0000codex/skills/using-skills/scripts/md-heading-check.py\u0000codex/skills/using-skills/scripts/md-link-check.py\u0000codex/skills/using-skills/scripts/md-style-check.py\u0000codex/skills/work-rules/SKILL.md\u0000codex/skills/work-rules/references/STYLE.md\u0000codex/skills/work-rules/references/kiro-original.md\u0000codex/skills/work-rules/references/originals/debugging-and-recovery.md\u0000codex/skills/work-rules/references/originals/incremental-change.md\u0000codex/skills/work-rules/references/originals/kiro-lock.md\u0000codex/skills/work-rules/references/originals/planning-and-breakdown.md\u0000codex/skills/work-rules/references/originals/spec-driven-infra.md\u0000codex/skills/work-rules/references/skills/debugging-and-recovery.md\u0000codex/skills/work-rules/references/skills/incremental-change.md\u0000codex/skills/work-rules/references/skills/kiro-lock.md\u0000codex/skills/work-rules/references/skills/planning-and-breakdown.md\u0000codex/skills/work-rules/references/skills/spec-driven-infra.md\u0000codex/skills/work-rules/scripts/lock.py\u0000codex/skills/work-rules/scripts/md-heading-check.py\u0000codex/skills/work-rules/scripts/md-link-check.py\u0000codex/skills/work-rules/scripts/md-style-check.py\u0000codex/skills/zircon-readme-policy/SKILL.md\u0000codex/skills/zircon-readme-policy/references/STYLE.md\u0000codex/skills/zircon-readme-policy/references/kiro-original.md\u0000codex/skills/zircon-readme-policy/references/originals/debugging-and-recovery.md\u0000codex/skills/zircon-readme-policy/references/originals/git-commit-rule.md\u0000codex/skills/zircon-readme-policy/references/originals/incremental-change.md\u0000codex/skills/zircon-readme-policy/references/originals/kiro-lock.md\u0000codex/skills/zircon-readme-policy/references/originals/md-link-check.md\u0000codex/skills/zircon-readme-policy/references/originals/planning-and-breakdown.md\u0000codex/skills/zircon-readme-policy/references/originals/readme-template.md\u0000codex/skills/zircon-readme-policy/references/originals/spec-driven-infra.md\u0000codex/skills/zircon-readme-policy/references/originals/work-rules.md\u0000codex/skills/zircon-readme-policy/references/skills/debugging-and-recovery.md\u0000codex/skills/zircon-readme-policy/references/skills/git-commit-rule.md\u0000codex/skills/zircon-readme-policy/references/skills/incremental-change.md\u0000codex/skills/zircon-readme-policy/references/skills/kiro-lock.md\u0000codex/skills/zircon-readme-policy/references/skills/md-link-check.md\u0000codex/skills/zircon-readme-policy/references/skills/planning-and-breakdown.md\u0000codex/skills/zircon-readme-policy/references/skills/readme-template.md\u0000codex/skills/zircon-readme-policy/references/skills/spec-driven-infra.md\u0000codex/skills/zircon-readme-policy/references/skills/work-rules.md\u0000codex/skills/zircon-readme-policy/scripts/lock.py\u0000codex/skills/zircon-readme-policy/scripts/md-heading-check.py\u0000codex/skills/zircon-readme-policy/scripts/md-link-check.py\u0000codex/skills/zircon-readme-policy/scripts/md-style-check.py\u0000codex/verification/luna-results.json\u0000codex/verification/style-baseline.json\u0000codex/verification/verify_skills.py\u0000gpt/.agents/skills/ansible-review/SKILL.md\u0000gpt/.agents/skills/bash-script-template/SKILL.md\u0000gpt/.agents/skills/code-review/SKILL.md\u0000gpt/.agents/skills/debugging-and-recovery/SKILL.md\u0000gpt/.agents/skills/doubt-driven-infra/SKILL.md\u0000gpt/.agents/skills/fact-check/SKILL.md\u0000gpt/.agents/skills/git-commit-rule/SKILL.md\u0000gpt/.agents/skills/git-release/SKILL.md\u0000gpt/.agents/skills/incremental-change/SKILL.md\u0000gpt/.agents/skills/kiro-lock/SKILL.md\u0000gpt/.agents/skills/markdown-review/SKILL.md\u0000gpt/.agents/skills/md-link-check/SKILL.md\u0000gpt/.agents/skills/planning-and-breakdown/SKILL.md\u0000gpt/.agents/skills/python-script-template/SKILL.md\u0000gpt/.agents/skills/readme-template/SKILL.md\u0000gpt/.agents/skills/repo-governance/SKILL.md\u0000gpt/.agents/skills/security-audit/SKILL.md\u0000gpt/.agents/skills/security-tools/SKILL.md\u0000gpt/.agents/skills/shipping-checklist/SKILL.md\u0000gpt/.agents/skills/spec-driven-infra/SKILL.md\u0000gpt/.agents/skills/testing-and-verification/SKILL.md\u0000gpt/.agents/skills/testing-guide/SKILL.md\u0000gpt/.agents/skills/using-skills/SKILL.md\u0000gpt/.agents/skills/work-rules/SKILL.md\u0000gpt/.agents/skills/zircon-readme-policy/SKILL.md\u0000gpt/.codex/agents/code-reviewer.toml\u0000gpt/.codex/agents/doc-reviewer.toml\u0000gpt/.codex/agents/docs-reviewer.toml\u0000gpt/.codex/agents/git-manager.toml\u0000gpt/.codex/agents/infra-worker.toml\u0000gpt/.codex/agents/markdown-writer.toml\u0000gpt/.codex/agents/reviewer.toml\u0000gpt/.codex/agents/se-lite.toml\u0000gpt/.codex/agents/security-auditor.toml\u0000gpt/.codex/agents/system-engineer.toml\u0000gpt/AGENTS.md\u0000gpt/CHANGELOG.md\u0000gpt/CODEX_MIGRATION_MAP.md\u0000gpt/CODEX_MIGRATION_TODO.md\u0000gpt/ISSUE.md\u0000gpt/PLAN.md\u0000gpt/README.md\u0000gpt/TODO.md\u0000gpt/markdown/INDEX.md\u0000gpt/markdown/STYLE.md\u0000gpt/policies/CODEX_COMPATIBILITY.md\u0000gpt/policies/DOCUMENT_WORKFLOW.md\u0000gpt/policies/MIGRATION_MANIFEST.json\u0000gpt/prompts/ansible-convert.md\u0000gpt/prompts/ansible-create.md\u0000gpt/prompts/ansible-debug.md\u0000gpt/prompts/ansible-review.md\u0000gpt/prompts/code-review.md\u0000gpt/prompts/doc-consistency-ansible-review.md\u0000gpt/prompts/doc-consistency-review.md\u0000gpt/prompts/fact-check.md\u0000gpt/prompts/markdown-review.md\u0000gpt/prompts/md-review.md\u0000gpt/prompts/py-review.md\u0000gpt/prompts/sh-review.md\u0000gpt/prompts/skill-review.md\u0000gpt/prompts/vagrant-review.md\u0000kiro/.docs-kr/work-rules-guide.md\u0000kiro/.gitignore\u0000kiro/01_home-sjyun-kiro.sh\u0000kiro/02_home-sjyun-kiro.sh\u0000kiro/README.md\u0000kiro/agents/README.md\u0000kiro/agents/agent_config.json.example\u0000kiro/agents/code-reviewer.json\u0000kiro/agents/doc-reviewer.json\u0000kiro/agents/git-manager.json\u0000kiro/agents/markdown-writer.json\u0000kiro/agents/se-lite.json\u0000kiro/agents/security-auditor.json\u0000kiro/agents/system-engineer.json\u0000kiro/docs/KIRO_SETUP_GUIDE.md\u0000kiro/docs/KIRO_UPDATE_GUIDE.md\u0000kiro/hooks/md-style-check.sh\u0000kiro/manifests/README.md\u0000kiro/manifests/kiro_files.txt\u0000kiro/markdown/INDEX.md\u0000kiro/markdown/STYLE.md\u0000kiro/prompts/README.md\u0000kiro/prompts/ansible-convert.md\u0000kiro/prompts/ansible-create.md\u0000kiro/prompts/ansible-debug.md\u0000kiro/prompts/ansible-review.md\u0000kiro/prompts/code-review.md\u0000kiro/prompts/doc-consistency-ansible-review.md\u0000kiro/prompts/doc-consistency-review.md\u0000kiro/prompts/fact-check.md\u0000kiro/prompts/md-review.md\u0000kiro/prompts/py-review.md\u0000kiro/prompts/sh-review.md\u0000kiro/prompts/skill-review.md\u0000kiro/prompts/vagrant-review.md\u0000kiro/skills/README.md\u0000kiro/skills/bash-script-template/SKILL.md\u0000kiro/skills/code-review/SKILL.md\u0000kiro/skills/debugging-and-recovery/SKILL.md\u0000kiro/skills/doubt-driven-infra/SKILL.md\u0000kiro/skills/git-commit-rule/SKILL.md\u0000kiro/skills/incremental-change/SKILL.md\u0000kiro/skills/kiro-lock/SKILL.md\u0000kiro/skills/md-link-check/SKILL.md\u0000kiro/skills/planning-and-breakdown/SKILL.md\u0000kiro/skills/python-script-template/SKILL.md\u0000kiro/skills/readme-template/SKILL.md\u0000kiro/skills/repo-governance/SKILL.md\u0000kiro/skills/security-tools/SKILL.md\u0000kiro/skills/shipping-checklist/SKILL.md\u0000kiro/skills/spec-driven-infra/SKILL.md\u0000kiro/skills/testing-guide/SKILL.md\u0000kiro/skills/using-skills/SKILL.md\u0000kiro/skills/work-rules/SKILL.md\u0000kiro/skills/zircon-readme-policy/SKILL.md\u0000scripts/temp-md-heading-check.py\u0000scripts/temp-md-link-check.py\u0000scripts/temp-md-style-check.py\u0000",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "ls-files",
+        "--others",
+        "--exclude-standard",
+        "-z"
+      ],
+      "exit": 0,
+      "stdout": "agent-workflows/codex/REMEDIATION_2026-10-03.md\u0000agent-workflows/codex/reviews/2026-10-03-remediation/baseline.json\u0000agent-workflows/codex/reviews/2026-10-03-remediation/basic-check.json\u0000agent-workflows/codex/reviews/2026-10-03-remediation/tests.json\u0000agent-workflows/codex/reviews/2026-10-03-remediation/validate_remediation.py\u0000agent-workflows/codex/reviews/2026-10-03-remediation/validation-initial-error.txt\u0000agent-workflows/codex/reviews/2026-10-03-remediation/validation.json\u0000codex/skills/git-commit-rule/references/originals/readme-template.md\u0000codex/skills/git-commit-rule/references/skills/readme-template.md\u0000codex/skills/md-link-check/references/originals/md-link-check.md\u0000codex/skills/md-link-check/references/originals/readme-template.md\u0000codex/skills/md-link-check/references/skills/md-link-check.md\u0000codex/skills/md-link-check/references/skills/readme-template.md\u0000codex/skills/readme-template/references/originals/readme-template.md\u0000codex/skills/readme-template/references/skills/readme-template.md\u0000codex/skills/security-tools/references/originals/md-link-check.md\u0000codex/skills/security-tools/references/originals/readme-template.md\u0000codex/skills/security-tools/references/skills/md-link-check.md\u0000codex/skills/security-tools/references/skills/readme-template.md\u0000codex/skills/shipping-checklist/references/originals/code-review.md\u0000codex/skills/shipping-checklist/references/skills/code-review.md\u0000codex/skills/work-rules/references/originals/md-link-check.md\u0000codex/skills/work-rules/references/originals/readme-template.md\u0000codex/skills/work-rules/references/skills/md-link-check.md\u0000codex/skills/work-rules/references/skills/readme-template.md\u0000codex/verification/test_remediation.py\u0000",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "/root/35_agent-skill/codex/skills/md-link-check/scripts/md-heading-check.py",
+        "/root/35_agent-skill/CHANGELOG.md",
+        "/root/35_agent-skill/agent-workflows/codex/HANDOFF.md",
+        "/root/35_agent-skill/agent-workflows/codex/REMEDIATION_2026-10-03.md",
+        "/root/35_agent-skill/codex/MIGRATION.md",
+        "/root/35_agent-skill/codex/TODO.md",
+        "/root/35_agent-skill/codex/VERIFICATION.md",
+        "/root/35_agent-skill/codex/skills/bash-script-template/SKILL.md",
+        "/root/35_agent-skill/codex/skills/git-commit-rule/SKILL.md",
+        "/root/35_agent-skill/codex/skills/git-commit-rule/references/originals/readme-template.md",
+        "/root/35_agent-skill/codex/skills/git-commit-rule/references/skills/md-link-check.md",
+        "/root/35_agent-skill/codex/skills/git-commit-rule/references/skills/readme-template.md",
+        "/root/35_agent-skill/codex/skills/md-link-check/SKILL.md",
+        "/root/35_agent-skill/codex/skills/md-link-check/references/originals/md-link-check.md",
+        "/root/35_agent-skill/codex/skills/md-link-check/references/originals/readme-template.md",
+        "/root/35_agent-skill/codex/skills/md-link-check/references/skills/md-link-check.md",
+        "/root/35_agent-skill/codex/skills/md-link-check/references/skills/readme-template.md",
+        "/root/35_agent-skill/codex/skills/python-script-template/SKILL.md",
+        "/root/35_agent-skill/codex/skills/readme-template/references/originals/readme-template.md",
+        "/root/35_agent-skill/codex/skills/readme-template/references/skills/md-link-check.md",
+        "/root/35_agent-skill/codex/skills/readme-template/references/skills/readme-template.md",
+        "/root/35_agent-skill/codex/skills/repo-governance/SKILL.md",
+        "/root/35_agent-skill/codex/skills/security-tools/SKILL.md",
+        "/root/35_agent-skill/codex/skills/security-tools/references/originals/md-link-check.md",
+        "/root/35_agent-skill/codex/skills/security-tools/references/originals/readme-template.md",
+        "/root/35_agent-skill/codex/skills/security-tools/references/skills/md-link-check.md",
+        "/root/35_agent-skill/codex/skills/security-tools/references/skills/readme-template.md",
+        "/root/35_agent-skill/codex/skills/shipping-checklist/SKILL.md",
+        "/root/35_agent-skill/codex/skills/shipping-checklist/references/originals/code-review.md",
+        "/root/35_agent-skill/codex/skills/shipping-checklist/references/skills/code-review.md",
+        "/root/35_agent-skill/codex/skills/using-skills/references/skills/bash-script-template.md",
+        "/root/35_agent-skill/codex/skills/using-skills/references/skills/git-commit-rule.md",
+        "/root/35_agent-skill/codex/skills/using-skills/references/skills/md-link-check.md",
+        "/root/35_agent-skill/codex/skills/using-skills/references/skills/python-script-template.md",
+        "/root/35_agent-skill/codex/skills/using-skills/references/skills/repo-governance.md",
+        "/root/35_agent-skill/codex/skills/using-skills/references/skills/security-tools.md",
+        "/root/35_agent-skill/codex/skills/using-skills/references/skills/shipping-checklist.md",
+        "/root/35_agent-skill/codex/skills/using-skills/references/skills/work-rules.md",
+        "/root/35_agent-skill/codex/skills/work-rules/SKILL.md",
+        "/root/35_agent-skill/codex/skills/work-rules/references/originals/md-link-check.md",
+        "/root/35_agent-skill/codex/skills/work-rules/references/originals/readme-template.md",
+        "/root/35_agent-skill/codex/skills/work-rules/references/skills/md-link-check.md",
+        "/root/35_agent-skill/codex/skills/work-rules/references/skills/readme-template.md",
+        "/root/35_agent-skill/codex/skills/zircon-readme-policy/references/skills/git-commit-rule.md",
+        "/root/35_agent-skill/codex/skills/zircon-readme-policy/references/skills/md-link-check.md",
+        "/root/35_agent-skill/codex/skills/zircon-readme-policy/references/skills/work-rules.md"
+      ],
+      "exit": 0,
+      "stdout": "✅ 헤딩 구조 정상\n\n────────────────────────────────────────────────────────────\n검사 파일: 45개 | 헤딩: 820개 | 이슈: 0건\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "/root/35_agent-skill/codex/skills/md-link-check/scripts/md-link-check.py",
+        "/root/35_agent-skill/CHANGELOG.md",
+        "/root/35_agent-skill/agent-workflows/codex/HANDOFF.md",
+        "/root/35_agent-skill/agent-workflows/codex/REMEDIATION_2026-10-03.md",
+        "/root/35_agent-skill/codex/MIGRATION.md",
+        "/root/35_agent-skill/codex/TODO.md",
+        "/root/35_agent-skill/codex/VERIFICATION.md",
+        "/root/35_agent-skill/codex/skills/bash-script-template/SKILL.md",
+        "/root/35_agent-skill/codex/skills/git-commit-rule/SKILL.md",
+        "/root/35_agent-skill/codex/skills/git-commit-rule/references/originals/readme-template.md",
+        "/root/35_agent-skill/codex/skills/git-commit-rule/references/skills/md-link-check.md",
+        "/root/35_agent-skill/codex/skills/git-commit-rule/references/skills/readme-template.md",
+        "/root/35_agent-skill/codex/skills/md-link-check/SKILL.md",
+        "/root/35_agent-skill/codex/skills/md-link-check/references/originals/md-link-check.md",
+        "/root/35_agent-skill/codex/skills/md-link-check/references/originals/readme-template.md",
+        "/root/35_agent-skill/codex/skills/md-link-check/references/skills/md-link-check.md",
+        "/root/35_agent-skill/codex/skills/md-link-check/references/skills/readme-template.md",
+        "/root/35_agent-skill/codex/skills/python-script-template/SKILL.md",
+        "/root/35_agent-skill/codex/skills/readme-template/references/originals/readme-template.md",
+        "/root/35_agent-skill/codex/skills/readme-template/references/skills/md-link-check.md",
+        "/root/35_agent-skill/codex/skills/readme-template/references/skills/readme-template.md",
+        "/root/35_agent-skill/codex/skills/repo-governance/SKILL.md",
+        "/root/35_agent-skill/codex/skills/security-tools/SKILL.md",
+        "/root/35_agent-skill/codex/skills/security-tools/references/originals/md-link-check.md",
+        "/root/35_agent-skill/codex/skills/security-tools/references/originals/readme-template.md",
+        "/root/35_agent-skill/codex/skills/security-tools/references/skills/md-link-check.md",
+        "/root/35_agent-skill/codex/skills/security-tools/references/skills/readme-template.md",
+        "/root/35_agent-skill/codex/skills/shipping-checklist/SKILL.md",
+        "/root/35_agent-skill/codex/skills/shipping-checklist/references/originals/code-review.md",
+        "/root/35_agent-skill/codex/skills/shipping-checklist/references/skills/code-review.md",
+        "/root/35_agent-skill/codex/skills/using-skills/references/skills/bash-script-template.md",
+        "/root/35_agent-skill/codex/skills/using-skills/references/skills/git-commit-rule.md",
+        "/root/35_agent-skill/codex/skills/using-skills/references/skills/md-link-check.md",
+        "/root/35_agent-skill/codex/skills/using-skills/references/skills/python-script-template.md",
+        "/root/35_agent-skill/codex/skills/using-skills/references/skills/repo-governance.md",
+        "/root/35_agent-skill/codex/skills/using-skills/references/skills/security-tools.md",
+        "/root/35_agent-skill/codex/skills/using-skills/references/skills/shipping-checklist.md",
+        "/root/35_agent-skill/codex/skills/using-skills/references/skills/work-rules.md",
+        "/root/35_agent-skill/codex/skills/work-rules/SKILL.md",
+        "/root/35_agent-skill/codex/skills/work-rules/references/originals/md-link-check.md",
+        "/root/35_agent-skill/codex/skills/work-rules/references/originals/readme-template.md",
+        "/root/35_agent-skill/codex/skills/work-rules/references/skills/md-link-check.md",
+        "/root/35_agent-skill/codex/skills/work-rules/references/skills/readme-template.md",
+        "/root/35_agent-skill/codex/skills/zircon-readme-policy/references/skills/git-commit-rule.md",
+        "/root/35_agent-skill/codex/skills/zircon-readme-policy/references/skills/md-link-check.md",
+        "/root/35_agent-skill/codex/skills/zircon-readme-policy/references/skills/work-rules.md"
+      ],
+      "exit": 0,
+      "stdout": "✅ 모든 링크 정상\n\n────────────────────────────────────────────────────────────\n검사 파일: 45개 | 링크: 163개 | 깨진 링크: 0건\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "/root/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "/root/35_agent-skill/codex/skills/bash-script-template"
+      ],
+      "exit": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "/root/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "/root/35_agent-skill/codex/skills/code-review"
+      ],
+      "exit": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "/root/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "/root/35_agent-skill/codex/skills/debugging-and-recovery"
+      ],
+      "exit": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "/root/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "/root/35_agent-skill/codex/skills/doubt-driven-infra"
+      ],
+      "exit": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "/root/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "/root/35_agent-skill/codex/skills/git-commit-rule"
+      ],
+      "exit": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "/root/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "/root/35_agent-skill/codex/skills/incremental-change"
+      ],
+      "exit": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "/root/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "/root/35_agent-skill/codex/skills/kiro-lock"
+      ],
+      "exit": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "/root/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "/root/35_agent-skill/codex/skills/md-link-check"
+      ],
+      "exit": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "/root/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "/root/35_agent-skill/codex/skills/planning-and-breakdown"
+      ],
+      "exit": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "/root/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "/root/35_agent-skill/codex/skills/python-script-template"
+      ],
+      "exit": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "/root/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "/root/35_agent-skill/codex/skills/readme-template"
+      ],
+      "exit": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "/root/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "/root/35_agent-skill/codex/skills/repo-governance"
+      ],
+      "exit": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "/root/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "/root/35_agent-skill/codex/skills/security-tools"
+      ],
+      "exit": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "/root/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "/root/35_agent-skill/codex/skills/shipping-checklist"
+      ],
+      "exit": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "/root/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "/root/35_agent-skill/codex/skills/spec-driven-infra"
+      ],
+      "exit": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "/root/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "/root/35_agent-skill/codex/skills/testing-guide"
+      ],
+      "exit": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "/root/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "/root/35_agent-skill/codex/skills/using-skills"
+      ],
+      "exit": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "/root/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "/root/35_agent-skill/codex/skills/work-rules"
+      ],
+      "exit": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "/root/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "/root/35_agent-skill/codex/skills/zircon-readme-policy"
+      ],
+      "exit": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--cached",
+        "--stat"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit": 0,
+      "stdout": "f66b5b86212927b1913a798be46397ef45e1cafa\n",
+      "stderr": ""
+    }
+  ],
+  "runtime": {
+    "python": "3.12.3"
+  },
+  "scope": {
+    "baseline_head": "f66b5b86212927b1913a798be46397ef45e1cafa",
+    "baseline_files": 472,
+    "changed_existing": [
+      "CHANGELOG.md",
+      "agent-workflows/codex/HANDOFF.md",
+      "codex/MIGRATION.md",
+      "codex/TODO.md",
+      "codex/VERIFICATION.md",
+      "codex/skills/bash-script-template/SKILL.md",
+      "codex/skills/git-commit-rule/SKILL.md",
+      "codex/skills/git-commit-rule/references/skills/md-link-check.md",
+      "codex/skills/git-commit-rule/scripts/md-link-check.py",
+      "codex/skills/md-link-check/SKILL.md",
+      "codex/skills/md-link-check/scripts/md-link-check.py",
+      "codex/skills/python-script-template/SKILL.md",
+      "codex/skills/readme-template/references/skills/md-link-check.md",
+      "codex/skills/readme-template/scripts/md-link-check.py",
+      "codex/skills/repo-governance/SKILL.md",
+      "codex/skills/security-tools/SKILL.md",
+      "codex/skills/security-tools/scripts/md-link-check.py",
+      "codex/skills/shipping-checklist/SKILL.md",
+      "codex/skills/using-skills/references/skills/bash-script-template.md",
+      "codex/skills/using-skills/references/skills/git-commit-rule.md",
+      "codex/skills/using-skills/references/skills/md-link-check.md",
+      "codex/skills/using-skills/references/skills/python-script-template.md",
+      "codex/skills/using-skills/references/skills/repo-governance.md",
+      "codex/skills/using-skills/references/skills/security-tools.md",
+      "codex/skills/using-skills/references/skills/shipping-checklist.md",
+      "codex/skills/using-skills/references/skills/work-rules.md",
+      "codex/skills/using-skills/scripts/md-link-check.py",
+      "codex/skills/work-rules/SKILL.md",
+      "codex/skills/work-rules/scripts/md-link-check.py",
+      "codex/skills/zircon-readme-policy/references/skills/git-commit-rule.md",
+      "codex/skills/zircon-readme-policy/references/skills/md-link-check.md",
+      "codex/skills/zircon-readme-policy/references/skills/work-rules.md",
+      "codex/skills/zircon-readme-policy/scripts/md-link-check.py"
+    ],
+    "new_files": [
+      "agent-workflows/codex/REMEDIATION_2026-10-03.md",
+      "agent-workflows/codex/reviews/2026-10-03-remediation/baseline.json",
+      "agent-workflows/codex/reviews/2026-10-03-remediation/basic-check.json",
+      "agent-workflows/codex/reviews/2026-10-03-remediation/tests.json",
+      "agent-workflows/codex/reviews/2026-10-03-remediation/validate_remediation.py",
+      "agent-workflows/codex/reviews/2026-10-03-remediation/validation-initial-error.txt",
+      "agent-workflows/codex/reviews/2026-10-03-remediation/validation.json",
+      "codex/skills/git-commit-rule/references/originals/readme-template.md",
+      "codex/skills/git-commit-rule/references/skills/readme-template.md",
+      "codex/skills/md-link-check/references/originals/md-link-check.md",
+      "codex/skills/md-link-check/references/originals/readme-template.md",
+      "codex/skills/md-link-check/references/skills/md-link-check.md",
+      "codex/skills/md-link-check/references/skills/readme-template.md",
+      "codex/skills/readme-template/references/originals/readme-template.md",
+      "codex/skills/readme-template/references/skills/readme-template.md",
+      "codex/skills/security-tools/references/originals/md-link-check.md",
+      "codex/skills/security-tools/references/originals/readme-template.md",
+      "codex/skills/security-tools/references/skills/md-link-check.md",
+      "codex/skills/security-tools/references/skills/readme-template.md",
+      "codex/skills/shipping-checklist/references/originals/code-review.md",
+      "codex/skills/shipping-checklist/references/skills/code-review.md",
+      "codex/skills/work-rules/references/originals/md-link-check.md",
+      "codex/skills/work-rules/references/originals/readme-template.md",
+      "codex/skills/work-rules/references/skills/md-link-check.md",
+      "codex/skills/work-rules/references/skills/readme-template.md",
+      "codex/verification/test_remediation.py"
+    ],
+    "missing": [],
+    "unchanged_existing": 439,
+    "protected_changes": [],
+    "head_unchanged": true,
+    "staged_diff_empty": true
+  },
+  "documents": [
+    "CHANGELOG.md",
+    "agent-workflows/codex/HANDOFF.md",
+    "agent-workflows/codex/REMEDIATION_2026-10-03.md",
+    "codex/MIGRATION.md",
+    "codex/TODO.md",
+    "codex/VERIFICATION.md",
+    "codex/skills/bash-script-template/SKILL.md",
+    "codex/skills/git-commit-rule/SKILL.md",
+    "codex/skills/git-commit-rule/references/originals/readme-template.md",
+    "codex/skills/git-commit-rule/references/skills/md-link-check.md",
+    "codex/skills/git-commit-rule/references/skills/readme-template.md",
+    "codex/skills/md-link-check/SKILL.md",
+    "codex/skills/md-link-check/references/originals/md-link-check.md",
+    "codex/skills/md-link-check/references/originals/readme-template.md",
+    "codex/skills/md-link-check/references/skills/md-link-check.md",
+    "codex/skills/md-link-check/references/skills/readme-template.md",
+    "codex/skills/python-script-template/SKILL.md",
+    "codex/skills/readme-template/references/originals/readme-template.md",
+    "codex/skills/readme-template/references/skills/md-link-check.md",
+    "codex/skills/readme-template/references/skills/readme-template.md",
+    "codex/skills/repo-governance/SKILL.md",
+    "codex/skills/security-tools/SKILL.md",
+    "codex/skills/security-tools/references/originals/md-link-check.md",
+    "codex/skills/security-tools/references/originals/readme-template.md",
+    "codex/skills/security-tools/references/skills/md-link-check.md",
+    "codex/skills/security-tools/references/skills/readme-template.md",
+    "codex/skills/shipping-checklist/SKILL.md",
+    "codex/skills/shipping-checklist/references/originals/code-review.md",
+    "codex/skills/shipping-checklist/references/skills/code-review.md",
+    "codex/skills/using-skills/references/skills/bash-script-template.md",
+    "codex/skills/using-skills/references/skills/git-commit-rule.md",
+    "codex/skills/using-skills/references/skills/md-link-check.md",
+    "codex/skills/using-skills/references/skills/python-script-template.md",
+    "codex/skills/using-skills/references/skills/repo-governance.md",
+    "codex/skills/using-skills/references/skills/security-tools.md",
+    "codex/skills/using-skills/references/skills/shipping-checklist.md",
+    "codex/skills/using-skills/references/skills/work-rules.md",
+    "codex/skills/work-rules/SKILL.md",
+    "codex/skills/work-rules/references/originals/md-link-check.md",
+    "codex/skills/work-rules/references/originals/readme-template.md",
+    "codex/skills/work-rules/references/skills/md-link-check.md",
+    "codex/skills/work-rules/references/skills/readme-template.md",
+    "codex/skills/zircon-readme-policy/references/skills/git-commit-rule.md",
+    "codex/skills/zircon-readme-policy/references/skills/md-link-check.md",
+    "codex/skills/zircon-readme-policy/references/skills/work-rules.md"
+  ],
+  "style": [
+    {
+      "file": "CHANGELOG.md",
+      "raw_issues": [],
+      "source_issues": [],
+      "added_issues": []
+    },
+    {
+      "file": "agent-workflows/codex/HANDOFF.md",
+      "raw_issues": [],
+      "source_issues": [],
+      "added_issues": []
+    },
+    {
+      "file": "agent-workflows/codex/REMEDIATION_2026-10-03.md",
+      "raw_issues": [],
+      "source_issues": [],
+      "added_issues": []
+    },
+    {
+      "file": "codex/MIGRATION.md",
+      "raw_issues": [],
+      "source_issues": [],
+      "added_issues": []
+    },
+    {
+      "file": "codex/TODO.md",
+      "raw_issues": [],
+      "source_issues": [],
+      "added_issues": []
+    },
+    {
+      "file": "codex/VERIFICATION.md",
+      "raw_issues": [],
+      "source_issues": [],
+      "added_issues": []
+    },
+    {
+      "file": "codex/skills/bash-script-template/SKILL.md",
+      "raw_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "source_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "added_issues": []
+    },
+    {
+      "file": "codex/skills/git-commit-rule/SKILL.md",
+      "raw_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "source_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "added_issues": []
+    },
+    {
+      "file": "codex/skills/git-commit-rule/references/originals/readme-template.md",
+      "raw_issues": [],
+      "source_issues": [],
+      "added_issues": []
+    },
+    {
+      "file": "codex/skills/git-commit-rule/references/skills/md-link-check.md",
+      "raw_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "source_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "added_issues": []
+    },
+    {
+      "file": "codex/skills/git-commit-rule/references/skills/readme-template.md",
+      "raw_issues": [],
+      "source_issues": [],
+      "added_issues": []
+    },
+    {
+      "file": "codex/skills/md-link-check/SKILL.md",
+      "raw_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "source_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "added_issues": []
+    },
+    {
+      "file": "codex/skills/md-link-check/references/originals/md-link-check.md",
+      "raw_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "source_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "added_issues": []
+    },
+    {
+      "file": "codex/skills/md-link-check/references/originals/readme-template.md",
+      "raw_issues": [],
+      "source_issues": [],
+      "added_issues": []
+    },
+    {
+      "file": "codex/skills/md-link-check/references/skills/md-link-check.md",
+      "raw_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "source_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "added_issues": []
+    },
+    {
+      "file": "codex/skills/md-link-check/references/skills/readme-template.md",
+      "raw_issues": [],
+      "source_issues": [],
+      "added_issues": []
+    },
+    {
+      "file": "codex/skills/python-script-template/SKILL.md",
+      "raw_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "source_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "added_issues": []
+    },
+    {
+      "file": "codex/skills/readme-template/references/originals/readme-template.md",
+      "raw_issues": [],
+      "source_issues": [],
+      "added_issues": []
+    },
+    {
+      "file": "codex/skills/readme-template/references/skills/md-link-check.md",
+      "raw_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "source_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "added_issues": []
+    },
+    {
+      "file": "codex/skills/readme-template/references/skills/readme-template.md",
+      "raw_issues": [],
+      "source_issues": [],
+      "added_issues": []
+    },
+    {
+      "file": "codex/skills/repo-governance/SKILL.md",
+      "raw_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "source_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "added_issues": []
+    },
+    {
+      "file": "codex/skills/security-tools/SKILL.md",
+      "raw_issues": [
+        [
+          "비허용 이모지",
+          "L141: 비허용 이모지 '⚠' — 허용: ✅ ❌ 🟡 🟢 🔴 ★"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "source_issues": [
+        [
+          "비허용 이모지",
+          "L109: 비허용 이모지 '⚠' — 허용: ✅ ❌ 🟡 🟢 🔴 ★"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "added_issues": []
+    },
+    {
+      "file": "codex/skills/security-tools/references/originals/md-link-check.md",
+      "raw_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "source_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "added_issues": []
+    },
+    {
+      "file": "codex/skills/security-tools/references/originals/readme-template.md",
+      "raw_issues": [],
+      "source_issues": [],
+      "added_issues": []
+    },
+    {
+      "file": "codex/skills/security-tools/references/skills/md-link-check.md",
+      "raw_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "source_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "added_issues": []
+    },
+    {
+      "file": "codex/skills/security-tools/references/skills/readme-template.md",
+      "raw_issues": [],
+      "source_issues": [],
+      "added_issues": []
+    },
+    {
+      "file": "codex/skills/shipping-checklist/SKILL.md",
+      "raw_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "source_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "added_issues": []
+    },
+    {
+      "file": "codex/skills/shipping-checklist/references/originals/code-review.md",
+      "raw_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "source_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "added_issues": []
+    },
+    {
+      "file": "codex/skills/shipping-checklist/references/skills/code-review.md",
+      "raw_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "source_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "added_issues": []
+    },
+    {
+      "file": "codex/skills/using-skills/references/skills/bash-script-template.md",
+      "raw_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "source_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "added_issues": []
+    },
+    {
+      "file": "codex/skills/using-skills/references/skills/git-commit-rule.md",
+      "raw_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "source_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "added_issues": []
+    },
+    {
+      "file": "codex/skills/using-skills/references/skills/md-link-check.md",
+      "raw_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "source_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "added_issues": []
+    },
+    {
+      "file": "codex/skills/using-skills/references/skills/python-script-template.md",
+      "raw_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "source_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "added_issues": []
+    },
+    {
+      "file": "codex/skills/using-skills/references/skills/repo-governance.md",
+      "raw_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "source_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "added_issues": []
+    },
+    {
+      "file": "codex/skills/using-skills/references/skills/security-tools.md",
+      "raw_issues": [
+        [
+          "비허용 이모지",
+          "L141: 비허용 이모지 '⚠' — 허용: ✅ ❌ 🟡 🟢 🔴 ★"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "source_issues": [
+        [
+          "비허용 이모지",
+          "L109: 비허용 이모지 '⚠' — 허용: ✅ ❌ 🟡 🟢 🔴 ★"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "added_issues": []
+    },
+    {
+      "file": "codex/skills/using-skills/references/skills/shipping-checklist.md",
+      "raw_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "source_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "added_issues": []
+    },
+    {
+      "file": "codex/skills/using-skills/references/skills/work-rules.md",
+      "raw_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "source_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "added_issues": []
+    },
+    {
+      "file": "codex/skills/work-rules/SKILL.md",
+      "raw_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "source_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "added_issues": []
+    },
+    {
+      "file": "codex/skills/work-rules/references/originals/md-link-check.md",
+      "raw_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "source_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "added_issues": []
+    },
+    {
+      "file": "codex/skills/work-rules/references/originals/readme-template.md",
+      "raw_issues": [],
+      "source_issues": [],
+      "added_issues": []
+    },
+    {
+      "file": "codex/skills/work-rules/references/skills/md-link-check.md",
+      "raw_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "source_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "added_issues": []
+    },
+    {
+      "file": "codex/skills/work-rules/references/skills/readme-template.md",
+      "raw_issues": [],
+      "source_issues": [],
+      "added_issues": []
+    },
+    {
+      "file": "codex/skills/zircon-readme-policy/references/skills/git-commit-rule.md",
+      "raw_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "source_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "added_issues": []
+    },
+    {
+      "file": "codex/skills/zircon-readme-policy/references/skills/md-link-check.md",
+      "raw_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "source_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "added_issues": []
+    },
+    {
+      "file": "codex/skills/zircon-readme-policy/references/skills/work-rules.md",
+      "raw_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "source_issues": [
+        [
+          "푸터",
+          "푸터 누락: **작성일** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: **마지막 업데이트** 없음"
+        ],
+        [
+          "푸터",
+          "푸터 누락: 저작권(©) 없음"
+        ]
+      ],
+      "added_issues": []
+    }
+  ],
+  "anchors": {
+    "checked": 13,
+    "errors": []
+  },
+  "syntax": {
+    "python_files": [
+      "agent-workflows/codex/reviews/2026-10-03-remediation/validate_remediation.py",
+      "codex/skills/git-commit-rule/scripts/md-link-check.py",
+      "codex/skills/md-link-check/scripts/md-link-check.py",
+      "codex/skills/readme-template/scripts/md-link-check.py",
+      "codex/skills/security-tools/scripts/md-link-check.py",
+      "codex/skills/using-skills/scripts/md-link-check.py",
+      "codex/skills/work-rules/scripts/md-link-check.py",
+      "codex/skills/zircon-readme-policy/scripts/md-link-check.py",
+      "codex/verification/test_remediation.py"
+    ],
+    "grammar": "3.11",
+    "errors": []
+  },
+  "frontmatter": {
+    "skills": 19,
+    "failed": 0
+  },
+  "non_utf8_files": [],
+  "secret_scan": {
+    "status": "partial: regex only; Gitleaks unavailable",
+    "files": 59,
+    "findings": []
+  },
+  "regression_inputs": {
+    "hashes": 80,
+    "mismatches": [],
+    "recorded_tests_passed": true
+  },
+  "json_files": [
+    "agent-workflows/codex/reviews/2026-10-03-remediation/baseline.json",
+    "agent-workflows/codex/reviews/2026-10-03-remediation/basic-check.json",
+    "agent-workflows/codex/reviews/2026-10-03-remediation/tests.json",
+    "agent-workflows/codex/reviews/2026-10-03-remediation/validation.json"
+  ],
+  "style_added_issues": 0,
+  "style_raw_issues": 89,
+  "passed_required_checks": true
+}

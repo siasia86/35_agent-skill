@@ -1,0 +1,1670 @@
+{
+  "scope": "Linux temporary fixtures; no runtime installation",
+  "commands": [
+    {
+      "test": "__main__.RemediationTests.test_bash_failure_return_logging_and_stop_in_both_modes",
+      "argv": [
+        "bash",
+        "--noprofile",
+        "--norc",
+        "-c",
+        "run_msg_info() {\n    if [ \"$#\" -lt 2 ]; then\n        printf 'run_msg_info: number and command required\\n' >&2\n        return 2\n    fi\n    local info_code=$1\n    shift\n    local status\n\n    if \"$@\"; then\n        status=0\n    else\n        status=$?\n    fi\n    if [ \"$status\" -eq 0 ]; then\n        printf '%s sj_scripts [info] code:%s success.\\n' \"$(date '+%Y-%m-%d %H:%M:%S')\" \"$info_code\" >&2\n    else\n        printf '%s sj_scripts [error] code:%s failed with status %s.\\n' \"$(date '+%Y-%m-%d %H:%M:%S')\" \"$info_code\" \"$status\" >&2\n    fi\n    return \"$status\"\n}\nrun_msg_info 1 bash -c 'exit 7'\nstatus=$?\nexit \"$status\"\n"
+      ],
+      "cwd": "/tmp/skill-remediation-test-l4ou996r",
+      "exit": 7,
+      "stdout": "",
+      "stderr": "2026-10-03 13:08:00 sj_scripts [error] code:1 failed with status 7.\n"
+    },
+    {
+      "test": "__main__.RemediationTests.test_bash_failure_return_logging_and_stop_in_both_modes",
+      "argv": [
+        "bash",
+        "--noprofile",
+        "--norc",
+        "-c",
+        "run_msg_info() {\n    if [ \"$#\" -lt 2 ]; then\n        printf 'run_msg_info: number and command required\\n' >&2\n        return 2\n    fi\n    local info_code=$1\n    shift\n    local status\n\n    if \"$@\"; then\n        status=0\n    else\n        status=$?\n    fi\n    if [ \"$status\" -eq 0 ]; then\n        printf '%s sj_scripts [info] code:%s success.\\n' \"$(date '+%Y-%m-%d %H:%M:%S')\" \"$info_code\" >&2\n    else\n        printf '%s sj_scripts [error] code:%s failed with status %s.\\n' \"$(date '+%Y-%m-%d %H:%M:%S')\" \"$info_code\" \"$status\" >&2\n    fi\n    return \"$status\"\n}\nrun_msg_info 1 bash -c 'exit 7' || exit \"$?\"\nprintf \"NEXT\\n\"\n"
+      ],
+      "cwd": "/tmp/skill-remediation-test-l4ou996r",
+      "exit": 7,
+      "stdout": "",
+      "stderr": "2026-10-03 13:08:00 sj_scripts [error] code:1 failed with status 7.\n"
+    },
+    {
+      "test": "__main__.RemediationTests.test_bash_failure_return_logging_and_stop_in_both_modes",
+      "argv": [
+        "bash",
+        "--noprofile",
+        "--norc",
+        "-c",
+        "set -e\nrun_msg_info() {\n    if [ \"$#\" -lt 2 ]; then\n        printf 'run_msg_info: number and command required\\n' >&2\n        return 2\n    fi\n    local info_code=$1\n    shift\n    local status\n\n    if \"$@\"; then\n        status=0\n    else\n        status=$?\n    fi\n    if [ \"$status\" -eq 0 ]; then\n        printf '%s sj_scripts [info] code:%s success.\\n' \"$(date '+%Y-%m-%d %H:%M:%S')\" \"$info_code\" >&2\n    else\n        printf '%s sj_scripts [error] code:%s failed with status %s.\\n' \"$(date '+%Y-%m-%d %H:%M:%S')\" \"$info_code\" \"$status\" >&2\n    fi\n    return \"$status\"\n}\nrun_msg_info 1 bash -c 'exit 7'\nprintf \"NEXT\\n\"\n"
+      ],
+      "cwd": "/tmp/skill-remediation-test-l4ou996r",
+      "exit": 7,
+      "stdout": "",
+      "stderr": "2026-10-03 13:08:00 sj_scripts [error] code:1 failed with status 7.\n"
+    },
+    {
+      "test": "__main__.RemediationTests.test_bash_failure_return_logging_and_stop_in_both_modes",
+      "argv": [
+        "bash",
+        "--noprofile",
+        "--norc",
+        "-c",
+        "set -e\nrun_msg_info() {\n    if [ \"$#\" -lt 2 ]; then\n        printf 'run_msg_info: number and command required\\n' >&2\n        return 2\n    fi\n    local info_code=$1\n    shift\n    local status\n\n    if \"$@\"; then\n        status=0\n    else\n        status=$?\n    fi\n    if [ \"$status\" -eq 0 ]; then\n        printf '%s sj_scripts [info] code:%s success.\\n' \"$(date '+%Y-%m-%d %H:%M:%S')\" \"$info_code\" >&2\n    else\n        printf '%s sj_scripts [error] code:%s failed with status %s.\\n' \"$(date '+%Y-%m-%d %H:%M:%S')\" \"$info_code\" \"$status\" >&2\n    fi\n    return \"$status\"\n}\nrun_msg_info 1 bash -c 'exit 7' || exit \"$?\"\nprintf \"NEXT\\n\"\n"
+      ],
+      "cwd": "/tmp/skill-remediation-test-l4ou996r",
+      "exit": 7,
+      "stdout": "",
+      "stderr": "2026-10-03 13:08:00 sj_scripts [error] code:1 failed with status 7.\n"
+    },
+    {
+      "test": "__main__.RemediationTests.test_bash_invalid_call_reports_failure",
+      "argv": [
+        "bash",
+        "--noprofile",
+        "--norc",
+        "-c",
+        "run_msg_info() {\n    if [ \"$#\" -lt 2 ]; then\n        printf 'run_msg_info: number and command required\\n' >&2\n        return 2\n    fi\n    local info_code=$1\n    shift\n    local status\n\n    if \"$@\"; then\n        status=0\n    else\n        status=$?\n    fi\n    if [ \"$status\" -eq 0 ]; then\n        printf '%s sj_scripts [info] code:%s success.\\n' \"$(date '+%Y-%m-%d %H:%M:%S')\" \"$info_code\" >&2\n    else\n        printf '%s sj_scripts [error] code:%s failed with status %s.\\n' \"$(date '+%Y-%m-%d %H:%M:%S')\" \"$info_code\" \"$status\" >&2\n    fi\n    return \"$status\"\n}\nrun_msg_info 1"
+      ],
+      "cwd": "/tmp/skill-remediation-test-m5qsfwsh",
+      "exit": 2,
+      "stdout": "",
+      "stderr": "run_msg_info: number and command required\n"
+    },
+    {
+      "test": "__main__.RemediationTests.test_bash_success_preserves_literal_arguments_and_stdout",
+      "argv": [
+        "bash",
+        "--noprofile",
+        "--norc",
+        "-c",
+        "run_msg_info() {\n    if [ \"$#\" -lt 2 ]; then\n        printf 'run_msg_info: number and command required\\n' >&2\n        return 2\n    fi\n    local info_code=$1\n    shift\n    local status\n\n    if \"$@\"; then\n        status=0\n    else\n        status=$?\n    fi\n    if [ \"$status\" -eq 0 ]; then\n        printf '%s sj_scripts [info] code:%s success.\\n' \"$(date '+%Y-%m-%d %H:%M:%S')\" \"$info_code\" >&2\n    else\n        printf '%s sj_scripts [error] code:%s failed with status %s.\\n' \"$(date '+%Y-%m-%d %H:%M:%S')\" \"$info_code\" \"$status\" >&2\n    fi\n    return \"$status\"\n}\nrun_msg_info 1 printf '%s\\n' 'spaces ; $(touch SHOULD_NOT_EXIST) *' || exit \"$?\"\n"
+      ],
+      "cwd": "/tmp/skill-remediation-test-bvjsz0g2",
+      "exit": 0,
+      "stdout": "spaces ; $(touch SHOULD_NOT_EXIST) *\n",
+      "stderr": "2026-10-03 13:08:00 sj_scripts [info] code:1 success.\n"
+    },
+    {
+      "test": "__main__.RemediationTests.test_flock_waiter_and_new_process_share_one_inode",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-26z7r635/lock_child.py",
+        "/tmp/skill-remediation-test-26z7r635/persistent.lock"
+      ],
+      "cwd": "/tmp/skill-remediation-test-26z7r635",
+      "exit": 7,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_flock_waiter_and_new_process_share_one_inode",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-26z7r635/lock_child.py",
+        "/tmp/skill-remediation-test-26z7r635/persistent.lock"
+      ],
+      "cwd": "/tmp/skill-remediation-test-26z7r635",
+      "exit": 0,
+      "stdout": "786938\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/git-commit-rule/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/normal.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ normal.md\n   L3: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/md-link-check/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/normal.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ normal.md\n   L3: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/readme-template/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/normal.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ normal.md\n   L3: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/security-tools/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/normal.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ normal.md\n   L3: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/using-skills/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/normal.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ normal.md\n   L3: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/work-rules/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/normal.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ normal.md\n   L3: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/zircon-readme-policy/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/normal.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ normal.md\n   L3: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/git-commit-rule/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/original_nested.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ original_nested.md\n   L8: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/md-link-check/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/original_nested.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ original_nested.md\n   L8: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/readme-template/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/original_nested.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ original_nested.md\n   L8: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/security-tools/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/original_nested.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ original_nested.md\n   L8: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/using-skills/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/original_nested.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ original_nested.md\n   L8: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/work-rules/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/original_nested.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ original_nested.md\n   L8: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/zircon-readme-policy/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/original_nested.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ original_nested.md\n   L8: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/git-commit-rule/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/nested_complete.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ nested_complete.md\n   L6: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/md-link-check/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/nested_complete.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ nested_complete.md\n   L6: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/readme-template/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/nested_complete.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ nested_complete.md\n   L6: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/security-tools/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/nested_complete.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ nested_complete.md\n   L6: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/using-skills/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/nested_complete.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ nested_complete.md\n   L6: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/work-rules/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/nested_complete.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ nested_complete.md\n   L6: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/zircon-readme-policy/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/nested_complete.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ nested_complete.md\n   L6: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/git-commit-rule/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/longer_close.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ longer_close.md\n   L4: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/md-link-check/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/longer_close.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ longer_close.md\n   L4: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/readme-template/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/longer_close.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ longer_close.md\n   L4: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/security-tools/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/longer_close.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ longer_close.md\n   L4: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/using-skills/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/longer_close.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ longer_close.md\n   L4: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/work-rules/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/longer_close.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ longer_close.md\n   L4: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/zircon-readme-policy/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/longer_close.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ longer_close.md\n   L4: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/git-commit-rule/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/tilde.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ tilde.md\n   L6: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/md-link-check/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/tilde.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ tilde.md\n   L6: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/readme-template/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/tilde.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ tilde.md\n   L6: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/security-tools/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/tilde.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ tilde.md\n   L6: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/using-skills/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/tilde.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ tilde.md\n   L6: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/work-rules/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/tilde.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ tilde.md\n   L6: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/zircon-readme-policy/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/tilde.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ tilde.md\n   L6: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/git-commit-rule/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/different_marker.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ different_marker.md\n   L5: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/md-link-check/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/different_marker.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ different_marker.md\n   L5: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/readme-template/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/different_marker.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ different_marker.md\n   L5: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/security-tools/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/different_marker.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ different_marker.md\n   L5: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/using-skills/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/different_marker.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ different_marker.md\n   L5: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/work-rules/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/different_marker.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ different_marker.md\n   L5: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/zircon-readme-policy/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/different_marker.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ different_marker.md\n   L5: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/git-commit-rule/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/tagged_close.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ tagged_close.md\n   L5: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/md-link-check/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/tagged_close.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ tagged_close.md\n   L5: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/readme-template/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/tagged_close.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ tagged_close.md\n   L5: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/security-tools/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/tagged_close.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ tagged_close.md\n   L5: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/using-skills/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/tagged_close.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ tagged_close.md\n   L5: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/work-rules/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/tagged_close.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ tagged_close.md\n   L5: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/zircon-readme-policy/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/tagged_close.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ tagged_close.md\n   L5: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/git-commit-rule/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/indent_three.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ indent_three.md\n   L4: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/md-link-check/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/indent_three.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ indent_three.md\n   L4: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/readme-template/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/indent_three.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ indent_three.md\n   L4: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/security-tools/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/indent_three.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ indent_three.md\n   L4: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/using-skills/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/indent_three.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ indent_three.md\n   L4: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/work-rules/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/indent_three.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ indent_three.md\n   L4: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/zircon-readme-policy/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/indent_three.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ indent_three.md\n   L4: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/git-commit-rule/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/indent_four_cannot_close.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ indent_four_cannot_close.md\n   L5: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/md-link-check/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/indent_four_cannot_close.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ indent_four_cannot_close.md\n   L5: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/readme-template/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/indent_four_cannot_close.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ indent_four_cannot_close.md\n   L5: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/security-tools/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/indent_four_cannot_close.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ indent_four_cannot_close.md\n   L5: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/using-skills/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/indent_four_cannot_close.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ indent_four_cannot_close.md\n   L5: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/work-rules/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/indent_four_cannot_close.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ indent_four_cannot_close.md\n   L5: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/zircon-readme-policy/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/indent_four_cannot_close.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ indent_four_cannot_close.md\n   L5: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/git-commit-rule/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/invalid_backtick_info.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ invalid_backtick_info.md\n   L2: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/md-link-check/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/invalid_backtick_info.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ invalid_backtick_info.md\n   L2: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/readme-template/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/invalid_backtick_info.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ invalid_backtick_info.md\n   L2: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/security-tools/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/invalid_backtick_info.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ invalid_backtick_info.md\n   L2: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/using-skills/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/invalid_backtick_info.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ invalid_backtick_info.md\n   L2: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/work-rules/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/invalid_backtick_info.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ invalid_backtick_info.md\n   L2: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/zircon-readme-policy/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/invalid_backtick_info.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ invalid_backtick_info.md\n   L2: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/git-commit-rule/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/closing_spaces.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ closing_spaces.md\n   L4: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/md-link-check/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/closing_spaces.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ closing_spaces.md\n   L4: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/readme-template/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/closing_spaces.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ closing_spaces.md\n   L4: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/security-tools/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/closing_spaces.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ closing_spaces.md\n   L4: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/using-skills/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/closing_spaces.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ closing_spaces.md\n   L4: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/work-rules/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/closing_spaces.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ closing_spaces.md\n   L4: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_fence_matrix_in_all_seven_isolated_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-ytf1oxrj/skills/zircon-readme-policy/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-ytf1oxrj/closing_spaces.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-ytf1oxrj",
+      "exit": 1,
+      "stdout": "\n❌ closing_spaces.md\n   L4: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_mixed_files_and_existing_exclusions",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-457ja73d/skills/git-commit-rule/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-457ja73d/good.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-457ja73d",
+      "exit": 0,
+      "stdout": "✅ 모든 링크 정상\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 0건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_mixed_files_and_existing_exclusions",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-457ja73d/skills/git-commit-rule/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-457ja73d/unclosed.md",
+        "/tmp/skill-remediation-test-457ja73d/broken.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-457ja73d",
+      "exit": 2,
+      "stdout": "\n❌ broken.md\n   L1: missing.md\n🟡 검사 미완료: 닫히지 않은 코드 펜스 1개 파일\n\n────────────────────────────────────────────────────────────\n검사 파일: 2개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": "🟡 unclosed code block: unclosed.md (last open: L1)\n"
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_mixed_files_and_existing_exclusions",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-457ja73d/skills/md-link-check/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-457ja73d/good.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-457ja73d",
+      "exit": 0,
+      "stdout": "✅ 모든 링크 정상\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 0건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_mixed_files_and_existing_exclusions",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-457ja73d/skills/md-link-check/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-457ja73d/unclosed.md",
+        "/tmp/skill-remediation-test-457ja73d/broken.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-457ja73d",
+      "exit": 2,
+      "stdout": "\n❌ broken.md\n   L1: missing.md\n🟡 검사 미완료: 닫히지 않은 코드 펜스 1개 파일\n\n────────────────────────────────────────────────────────────\n검사 파일: 2개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": "🟡 unclosed code block: unclosed.md (last open: L1)\n"
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_mixed_files_and_existing_exclusions",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-457ja73d/skills/readme-template/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-457ja73d/good.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-457ja73d",
+      "exit": 0,
+      "stdout": "✅ 모든 링크 정상\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 0건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_mixed_files_and_existing_exclusions",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-457ja73d/skills/readme-template/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-457ja73d/unclosed.md",
+        "/tmp/skill-remediation-test-457ja73d/broken.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-457ja73d",
+      "exit": 2,
+      "stdout": "\n❌ broken.md\n   L1: missing.md\n🟡 검사 미완료: 닫히지 않은 코드 펜스 1개 파일\n\n────────────────────────────────────────────────────────────\n검사 파일: 2개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": "🟡 unclosed code block: unclosed.md (last open: L1)\n"
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_mixed_files_and_existing_exclusions",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-457ja73d/skills/security-tools/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-457ja73d/good.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-457ja73d",
+      "exit": 0,
+      "stdout": "✅ 모든 링크 정상\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 0건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_mixed_files_and_existing_exclusions",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-457ja73d/skills/security-tools/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-457ja73d/unclosed.md",
+        "/tmp/skill-remediation-test-457ja73d/broken.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-457ja73d",
+      "exit": 2,
+      "stdout": "\n❌ broken.md\n   L1: missing.md\n🟡 검사 미완료: 닫히지 않은 코드 펜스 1개 파일\n\n────────────────────────────────────────────────────────────\n검사 파일: 2개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": "🟡 unclosed code block: unclosed.md (last open: L1)\n"
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_mixed_files_and_existing_exclusions",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-457ja73d/skills/using-skills/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-457ja73d/good.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-457ja73d",
+      "exit": 0,
+      "stdout": "✅ 모든 링크 정상\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 0건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_mixed_files_and_existing_exclusions",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-457ja73d/skills/using-skills/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-457ja73d/unclosed.md",
+        "/tmp/skill-remediation-test-457ja73d/broken.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-457ja73d",
+      "exit": 2,
+      "stdout": "\n❌ broken.md\n   L1: missing.md\n🟡 검사 미완료: 닫히지 않은 코드 펜스 1개 파일\n\n────────────────────────────────────────────────────────────\n검사 파일: 2개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": "🟡 unclosed code block: unclosed.md (last open: L1)\n"
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_mixed_files_and_existing_exclusions",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-457ja73d/skills/work-rules/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-457ja73d/good.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-457ja73d",
+      "exit": 0,
+      "stdout": "✅ 모든 링크 정상\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 0건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_mixed_files_and_existing_exclusions",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-457ja73d/skills/work-rules/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-457ja73d/unclosed.md",
+        "/tmp/skill-remediation-test-457ja73d/broken.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-457ja73d",
+      "exit": 2,
+      "stdout": "\n❌ broken.md\n   L1: missing.md\n🟡 검사 미완료: 닫히지 않은 코드 펜스 1개 파일\n\n────────────────────────────────────────────────────────────\n검사 파일: 2개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": "🟡 unclosed code block: unclosed.md (last open: L1)\n"
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_mixed_files_and_existing_exclusions",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-457ja73d/skills/zircon-readme-policy/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-457ja73d/good.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-457ja73d",
+      "exit": 0,
+      "stdout": "✅ 모든 링크 정상\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 0건\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_mixed_files_and_existing_exclusions",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-457ja73d/skills/zircon-readme-policy/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-457ja73d/unclosed.md",
+        "/tmp/skill-remediation-test-457ja73d/broken.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-457ja73d",
+      "exit": 2,
+      "stdout": "\n❌ broken.md\n   L1: missing.md\n🟡 검사 미완료: 닫히지 않은 코드 펜스 1개 파일\n\n────────────────────────────────────────────────────────────\n검사 파일: 2개 | 링크: 1개 | 깨진 링크: 1건\n",
+      "stderr": "🟡 unclosed code block: unclosed.md (last open: L1)\n"
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_unclosed_fences_fail_in_all_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-8742xi4h/skills/git-commit-rule/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-8742xi4h/unclosed.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-8742xi4h",
+      "exit": 2,
+      "stdout": "🟡 검사 미완료: 닫히지 않은 코드 펜스 1개 파일\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 0개 | 깨진 링크: 0건\n",
+      "stderr": "🟡 unclosed code block: unclosed.md (last open: L2)\n"
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_unclosed_fences_fail_in_all_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-8742xi4h/skills/md-link-check/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-8742xi4h/unclosed.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-8742xi4h",
+      "exit": 2,
+      "stdout": "🟡 검사 미완료: 닫히지 않은 코드 펜스 1개 파일\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 0개 | 깨진 링크: 0건\n",
+      "stderr": "🟡 unclosed code block: unclosed.md (last open: L2)\n"
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_unclosed_fences_fail_in_all_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-8742xi4h/skills/readme-template/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-8742xi4h/unclosed.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-8742xi4h",
+      "exit": 2,
+      "stdout": "🟡 검사 미완료: 닫히지 않은 코드 펜스 1개 파일\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 0개 | 깨진 링크: 0건\n",
+      "stderr": "🟡 unclosed code block: unclosed.md (last open: L2)\n"
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_unclosed_fences_fail_in_all_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-8742xi4h/skills/security-tools/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-8742xi4h/unclosed.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-8742xi4h",
+      "exit": 2,
+      "stdout": "🟡 검사 미완료: 닫히지 않은 코드 펜스 1개 파일\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 0개 | 깨진 링크: 0건\n",
+      "stderr": "🟡 unclosed code block: unclosed.md (last open: L2)\n"
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_unclosed_fences_fail_in_all_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-8742xi4h/skills/using-skills/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-8742xi4h/unclosed.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-8742xi4h",
+      "exit": 2,
+      "stdout": "🟡 검사 미완료: 닫히지 않은 코드 펜스 1개 파일\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 0개 | 깨진 링크: 0건\n",
+      "stderr": "🟡 unclosed code block: unclosed.md (last open: L2)\n"
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_unclosed_fences_fail_in_all_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-8742xi4h/skills/work-rules/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-8742xi4h/unclosed.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-8742xi4h",
+      "exit": 2,
+      "stdout": "🟡 검사 미완료: 닫히지 않은 코드 펜스 1개 파일\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 0개 | 깨진 링크: 0건\n",
+      "stderr": "🟡 unclosed code block: unclosed.md (last open: L2)\n"
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_unclosed_fences_fail_in_all_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-8742xi4h/skills/zircon-readme-policy/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-8742xi4h/unclosed.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-8742xi4h",
+      "exit": 2,
+      "stdout": "🟡 검사 미완료: 닫히지 않은 코드 펜스 1개 파일\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 0개 | 깨진 링크: 0건\n",
+      "stderr": "🟡 unclosed code block: unclosed.md (last open: L2)\n"
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_unclosed_fences_fail_in_all_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-8742xi4h/skills/git-commit-rule/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-8742xi4h/unclosed.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-8742xi4h",
+      "exit": 2,
+      "stdout": "🟡 검사 미완료: 닫히지 않은 코드 펜스 1개 파일\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 0개 | 깨진 링크: 0건\n",
+      "stderr": "🟡 unclosed code block: unclosed.md (last open: L2)\n"
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_unclosed_fences_fail_in_all_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-8742xi4h/skills/md-link-check/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-8742xi4h/unclosed.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-8742xi4h",
+      "exit": 2,
+      "stdout": "🟡 검사 미완료: 닫히지 않은 코드 펜스 1개 파일\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 0개 | 깨진 링크: 0건\n",
+      "stderr": "🟡 unclosed code block: unclosed.md (last open: L2)\n"
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_unclosed_fences_fail_in_all_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-8742xi4h/skills/readme-template/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-8742xi4h/unclosed.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-8742xi4h",
+      "exit": 2,
+      "stdout": "🟡 검사 미완료: 닫히지 않은 코드 펜스 1개 파일\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 0개 | 깨진 링크: 0건\n",
+      "stderr": "🟡 unclosed code block: unclosed.md (last open: L2)\n"
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_unclosed_fences_fail_in_all_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-8742xi4h/skills/security-tools/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-8742xi4h/unclosed.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-8742xi4h",
+      "exit": 2,
+      "stdout": "🟡 검사 미완료: 닫히지 않은 코드 펜스 1개 파일\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 0개 | 깨진 링크: 0건\n",
+      "stderr": "🟡 unclosed code block: unclosed.md (last open: L2)\n"
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_unclosed_fences_fail_in_all_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-8742xi4h/skills/using-skills/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-8742xi4h/unclosed.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-8742xi4h",
+      "exit": 2,
+      "stdout": "🟡 검사 미완료: 닫히지 않은 코드 펜스 1개 파일\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 0개 | 깨진 링크: 0건\n",
+      "stderr": "🟡 unclosed code block: unclosed.md (last open: L2)\n"
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_unclosed_fences_fail_in_all_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-8742xi4h/skills/work-rules/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-8742xi4h/unclosed.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-8742xi4h",
+      "exit": 2,
+      "stdout": "🟡 검사 미완료: 닫히지 않은 코드 펜스 1개 파일\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 0개 | 깨진 링크: 0건\n",
+      "stderr": "🟡 unclosed code block: unclosed.md (last open: L2)\n"
+    },
+    {
+      "test": "__main__.RemediationTests.test_link_unclosed_fences_fail_in_all_copies",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-8742xi4h/skills/zircon-readme-policy/scripts/md-link-check.py",
+        "/tmp/skill-remediation-test-8742xi4h/unclosed.md"
+      ],
+      "cwd": "/tmp/skill-remediation-test-8742xi4h",
+      "exit": 2,
+      "stdout": "🟡 검사 미완료: 닫히지 않은 코드 펜스 1개 파일\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 0개 | 깨진 링크: 0건\n",
+      "stderr": "🟡 unclosed code block: unclosed.md (last open: L2)\n"
+    },
+    {
+      "test": "__main__.RemediationTests.test_python_no_args_help_version_and_invalid_option",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-fd1z3slr/cli.py"
+      ],
+      "cwd": "/tmp/skill-remediation-test-fd1z3slr",
+      "exit": 0,
+      "stdout": "usage: cli.py [-h] [-V] [-f FILE [FILE ...]] [-d] [-v] [-q] [-D DIR [DIR ...]]\n              [target]\n\n스크립트 한 줄 설명\n\npositional arguments:\n  target                파일 또는 디렉토리 경로\n\noptions:\n  -h, --help            show this help message and exit\n  -V, --version         show program's version number and exit\n  -f FILE [FILE ...], --file FILE [FILE ...]\n                        대상 파일\n  -d, --dry-run         변경 없이 출력만\n  -v, --verbose         상세 출력\n  -q, --quiet           에러만 출력\n  -D DIR [DIR ...], --dir DIR [DIR ...]\n                        디렉토리 일괄 처리\n\nExamples:\n  cli.py config.txt              기본 동작\n  cli.py -r config.txt           원복 모드\n  cli.py -d -v config.txt        dry-run 상세 출력\n  cli.py -D ./configs/           디렉토리 처리\n\nNotes:\n  - 멱등성 보장: 이미 처리된 파일에 다시 실행해도 결과 동일\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_python_no_args_help_version_and_invalid_option",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-fd1z3slr/cli.py",
+        "--help"
+      ],
+      "cwd": "/tmp/skill-remediation-test-fd1z3slr",
+      "exit": 0,
+      "stdout": "usage: cli.py [-h] [-V] [-f FILE [FILE ...]] [-d] [-v] [-q] [-D DIR [DIR ...]]\n              [target]\n\n스크립트 한 줄 설명\n\npositional arguments:\n  target                파일 또는 디렉토리 경로\n\noptions:\n  -h, --help            show this help message and exit\n  -V, --version         show program's version number and exit\n  -f FILE [FILE ...], --file FILE [FILE ...]\n                        대상 파일\n  -d, --dry-run         변경 없이 출력만\n  -v, --verbose         상세 출력\n  -q, --quiet           에러만 출력\n  -D DIR [DIR ...], --dir DIR [DIR ...]\n                        디렉토리 일괄 처리\n\nExamples:\n  cli.py config.txt              기본 동작\n  cli.py -r config.txt           원복 모드\n  cli.py -d -v config.txt        dry-run 상세 출력\n  cli.py -D ./configs/           디렉토리 처리\n\nNotes:\n  - 멱등성 보장: 이미 처리된 파일에 다시 실행해도 결과 동일\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_python_no_args_help_version_and_invalid_option",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-fd1z3slr/cli.py",
+        "--version"
+      ],
+      "cwd": "/tmp/skill-remediation-test-fd1z3slr",
+      "exit": 0,
+      "stdout": "cli.py fixture-version\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_python_no_args_help_version_and_invalid_option",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-fd1z3slr/cli.py",
+        "--unknown-option"
+      ],
+      "cwd": "/tmp/skill-remediation-test-fd1z3slr",
+      "exit": 2,
+      "stdout": "",
+      "stderr": "usage: cli.py [-h] [-V] [-f FILE [FILE ...]] [-d] [-v] [-q] [-D DIR [DIR ...]]\n              [target]\ncli.py: error: unrecognized arguments: --unknown-option\n"
+    },
+    {
+      "test": "__main__.RemediationTests.test_python_target_file_directory_and_flags",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-436nt2i8/cli.py",
+        "/tmp/skill-remediation-test-436nt2i8/original.txt",
+        "-d",
+        "-v"
+      ],
+      "cwd": "/tmp/skill-remediation-test-436nt2i8",
+      "exit": 0,
+      "stdout": "file /tmp/skill-remediation-test-436nt2i8/original.txt {'dry_run': True, 'verbose': True}\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_python_target_file_directory_and_flags",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-436nt2i8/cli.py",
+        "-f",
+        "/tmp/skill-remediation-test-436nt2i8/original.txt",
+        "/tmp/skill-remediation-test-436nt2i8/original.txt",
+        "-q"
+      ],
+      "cwd": "/tmp/skill-remediation-test-436nt2i8",
+      "exit": 0,
+      "stdout": "file /tmp/skill-remediation-test-436nt2i8/original.txt {'dry_run': False, 'verbose': False}\nfile /tmp/skill-remediation-test-436nt2i8/original.txt {'dry_run': False, 'verbose': False}\n",
+      "stderr": ""
+    },
+    {
+      "test": "__main__.RemediationTests.test_python_target_file_directory_and_flags",
+      "argv": [
+        "python3",
+        "-I",
+        "/tmp/skill-remediation-test-436nt2i8/cli.py",
+        "-D",
+        "/tmp/skill-remediation-test-436nt2i8",
+        "-d"
+      ],
+      "cwd": "/tmp/skill-remediation-test-436nt2i8",
+      "exit": 0,
+      "stdout": "dir /tmp/skill-remediation-test-436nt2i8 {'dry_run': True, 'verbose': False}\n",
+      "stderr": ""
+    }
+  ],
+  "tests_run": 16,
+  "failures": [],
+  "errors": [],
+  "passed": true,
+  "inputs": {
+    "codex/skills/bash-script-template/SKILL.md": "bbd6fb8c0fb56f682d01e293ce596c4bed8c9681def00d45e0cf55116f479bb6",
+    "codex/skills/code-review/SKILL.md": "8f89352bf924360a11ef6b7b207e836c532d447b7185b23e42576e1263b40303",
+    "codex/skills/debugging-and-recovery/SKILL.md": "1e54c6076119c318eded71e707c626ced008324e492e7c3a3e350fe13c0a4ee3",
+    "codex/skills/debugging-and-recovery/references/skills/incremental-change.md": "319f704c9b1186ca0b7135ac549d065d8149ab928d6e199d61dbf8b98b2908d3",
+    "codex/skills/doubt-driven-infra/SKILL.md": "82f65a71cb5e97a70ee7d5ad45996a9ffe0b62d7e893b3475d610c618554b5e2",
+    "codex/skills/git-commit-rule/SKILL.md": "7c98d1c614e26bb44715708ad5f2ac0af598da054292f273c234490661501717",
+    "codex/skills/git-commit-rule/references/skills/md-link-check.md": "b42e938b6c6e004e4625de0f403323e0fc2249a7074c253ca0084316e48c7085",
+    "codex/skills/git-commit-rule/references/skills/readme-template.md": "f384b1571a4b8f35c642e5984354f0c2721ecf612b66d3ba09bddf39dc58e850",
+    "codex/skills/git-commit-rule/scripts/md-link-check.py": "9f6d5a2d5c83f160d73623ef881e62fec8adb876a4ef3696d2666866fdef13f7",
+    "codex/skills/incremental-change/SKILL.md": "f9c23007684a81815d277b043d79e4f163983920f219622c8cb6fafe77e2e2ec",
+    "codex/skills/incremental-change/references/skills/debugging-and-recovery.md": "34a351b91c6726b27ad27f60962252905a7b708b9f71cf1cb034c965e4bea882",
+    "codex/skills/kiro-lock/SKILL.md": "057557134a32d1b3deb9bbcfe447f8d858b396762eb5cfb4d366b5176e2fc13c",
+    "codex/skills/md-link-check/SKILL.md": "351f5c44338f52b8ceb4c06d21a9c863c0681136173ccefb4b6fc5cabb20c35c",
+    "codex/skills/md-link-check/references/skills/md-link-check.md": "b42e938b6c6e004e4625de0f403323e0fc2249a7074c253ca0084316e48c7085",
+    "codex/skills/md-link-check/references/skills/readme-template.md": "f384b1571a4b8f35c642e5984354f0c2721ecf612b66d3ba09bddf39dc58e850",
+    "codex/skills/md-link-check/scripts/md-link-check.py": "9f6d5a2d5c83f160d73623ef881e62fec8adb876a4ef3696d2666866fdef13f7",
+    "codex/skills/planning-and-breakdown/SKILL.md": "e48d05e3c44af73e1eeb8a9a4c638f06a77485abdb49ca689a494cbff7706efe",
+    "codex/skills/planning-and-breakdown/references/skills/debugging-and-recovery.md": "2d9abe01ee69ea435b9ab22f192770cfdba8ae01a28e47bd9cb7745bc8e9d77f",
+    "codex/skills/planning-and-breakdown/references/skills/incremental-change.md": "130094af74d1304f0e6ab6684c19725cf266c0db9cb29c5bb112531fc4ec36ce",
+    "codex/skills/python-script-template/SKILL.md": "17c2b2a8cb87bb20551aa7c6af459a80da6ff8f2818707a6529c6845c55f4817",
+    "codex/skills/readme-template/SKILL.md": "7ea648b0edc173152d48478fafb03c27c0790cbaf19a0cffdbc23c8ac80cc10e",
+    "codex/skills/readme-template/references/skills/md-link-check.md": "b42e938b6c6e004e4625de0f403323e0fc2249a7074c253ca0084316e48c7085",
+    "codex/skills/readme-template/references/skills/readme-template.md": "f384b1571a4b8f35c642e5984354f0c2721ecf612b66d3ba09bddf39dc58e850",
+    "codex/skills/readme-template/scripts/md-link-check.py": "9f6d5a2d5c83f160d73623ef881e62fec8adb876a4ef3696d2666866fdef13f7",
+    "codex/skills/repo-governance/SKILL.md": "7db1c1f32eeb47e3eb11f21be2b6c8189badff560130381c5ca1eb3dec140129",
+    "codex/skills/security-tools/SKILL.md": "477130e71bbf5ef341dcf5f90cd9936844c5fae80e9cf6ddd261f5acca2f7794",
+    "codex/skills/security-tools/references/skills/md-link-check.md": "b42e938b6c6e004e4625de0f403323e0fc2249a7074c253ca0084316e48c7085",
+    "codex/skills/security-tools/references/skills/readme-template.md": "f384b1571a4b8f35c642e5984354f0c2721ecf612b66d3ba09bddf39dc58e850",
+    "codex/skills/security-tools/scripts/md-link-check.py": "9f6d5a2d5c83f160d73623ef881e62fec8adb876a4ef3696d2666866fdef13f7",
+    "codex/skills/shipping-checklist/SKILL.md": "995df14376c965f4fce9928d190ceb843ecc9f11940c7593c07bd7982e2b9e22",
+    "codex/skills/shipping-checklist/references/skills/code-review.md": "1e94645a8ee91ccb09db6274419e44efe97a7b27b38625f5909e8965e8dde572",
+    "codex/skills/shipping-checklist/references/skills/debugging-and-recovery.md": "2d9abe01ee69ea435b9ab22f192770cfdba8ae01a28e47bd9cb7745bc8e9d77f",
+    "codex/skills/shipping-checklist/references/skills/incremental-change.md": "130094af74d1304f0e6ab6684c19725cf266c0db9cb29c5bb112531fc4ec36ce",
+    "codex/skills/spec-driven-infra/SKILL.md": "02278ad7bdd4092a27e1d57f21a39fd7049ca1794d04d4727fbca4221cce3016",
+    "codex/skills/spec-driven-infra/references/skills/debugging-and-recovery.md": "2d9abe01ee69ea435b9ab22f192770cfdba8ae01a28e47bd9cb7745bc8e9d77f",
+    "codex/skills/spec-driven-infra/references/skills/incremental-change.md": "130094af74d1304f0e6ab6684c19725cf266c0db9cb29c5bb112531fc4ec36ce",
+    "codex/skills/spec-driven-infra/references/skills/planning-and-breakdown.md": "b28e326aa8c55ad774826dabd870eb9b014c2076ca5ed26410c646e8d07125cf",
+    "codex/skills/testing-guide/SKILL.md": "0398843913db43fb60d84d7d27ec697b26ac0c5303025f5caac0ccdeeb270a59",
+    "codex/skills/testing-guide/references/skills/debugging-and-recovery.md": "2d9abe01ee69ea435b9ab22f192770cfdba8ae01a28e47bd9cb7745bc8e9d77f",
+    "codex/skills/testing-guide/references/skills/incremental-change.md": "130094af74d1304f0e6ab6684c19725cf266c0db9cb29c5bb112531fc4ec36ce",
+    "codex/skills/using-skills/SKILL.md": "cb13e00c8da33fac480b5c14456ae4d1b72d44bb8123b3905f90efea57e7d948",
+    "codex/skills/using-skills/references/skills/bash-script-template.md": "c5de513ed36633556cba9c4e6dc700140d5daf97cdd8c1439425c62aa06ef47d",
+    "codex/skills/using-skills/references/skills/code-review.md": "1e94645a8ee91ccb09db6274419e44efe97a7b27b38625f5909e8965e8dde572",
+    "codex/skills/using-skills/references/skills/debugging-and-recovery.md": "2d9abe01ee69ea435b9ab22f192770cfdba8ae01a28e47bd9cb7745bc8e9d77f",
+    "codex/skills/using-skills/references/skills/doubt-driven-infra.md": "a734a58d8bab6a465d287d06f62d400bddea0f2c5a6a0dfea6e7c12aadad3894",
+    "codex/skills/using-skills/references/skills/git-commit-rule.md": "df8055de8399195e6f93d6cd68dbb86bb4dab27a25ecc00bb45bc00f8c1bb438",
+    "codex/skills/using-skills/references/skills/incremental-change.md": "130094af74d1304f0e6ab6684c19725cf266c0db9cb29c5bb112531fc4ec36ce",
+    "codex/skills/using-skills/references/skills/kiro-lock.md": "3451b83e3c0d23e0833e0f6e26b613713c984091440ccafb5c66a2b52f0b6c90",
+    "codex/skills/using-skills/references/skills/md-link-check.md": "b42e938b6c6e004e4625de0f403323e0fc2249a7074c253ca0084316e48c7085",
+    "codex/skills/using-skills/references/skills/planning-and-breakdown.md": "b28e326aa8c55ad774826dabd870eb9b014c2076ca5ed26410c646e8d07125cf",
+    "codex/skills/using-skills/references/skills/python-script-template.md": "2c65b38929f713cbd026c481ae67bebdd46fdd3ffdf8d6d2d2c491bea2af06a5",
+    "codex/skills/using-skills/references/skills/readme-template.md": "f384b1571a4b8f35c642e5984354f0c2721ecf612b66d3ba09bddf39dc58e850",
+    "codex/skills/using-skills/references/skills/repo-governance.md": "7397fba9ff4e14817d627859a71693811b41f2fbf3ff8e20aba507dd666bdc9c",
+    "codex/skills/using-skills/references/skills/security-tools.md": "5fb93cf6d24be189235f8853bca092766837d428089afb58eb51db91a858a890",
+    "codex/skills/using-skills/references/skills/shipping-checklist.md": "62a2c38a42bb3738857d9f45b429accb4c09efb4d74a5a5948b1d102951d4aa5",
+    "codex/skills/using-skills/references/skills/spec-driven-infra.md": "2c8006325c5194aa013470926f59d98574b6f7eb815f06624273593d88a40949",
+    "codex/skills/using-skills/references/skills/testing-guide.md": "de2e41db626c7732c61cd005c797308642fa4d8412ba1cb1f63babccf4d64e3f",
+    "codex/skills/using-skills/references/skills/work-rules.md": "3220baa55a8b7c0d6447209d27e3d7cc148c05b58b5b7415ec2d63e19621423c",
+    "codex/skills/using-skills/references/skills/zircon-readme-policy.md": "a15f285be2fde845a0db8a08106d728a3a740c8a9eb12010461c3ead8ff0c9a5",
+    "codex/skills/using-skills/scripts/md-link-check.py": "9f6d5a2d5c83f160d73623ef881e62fec8adb876a4ef3696d2666866fdef13f7",
+    "codex/skills/work-rules/SKILL.md": "87e5f78b137d2896b38dd29ddcad55aaf10e730f0f15d384d3c1ea41d4c8ab82",
+    "codex/skills/work-rules/references/skills/debugging-and-recovery.md": "2d9abe01ee69ea435b9ab22f192770cfdba8ae01a28e47bd9cb7745bc8e9d77f",
+    "codex/skills/work-rules/references/skills/incremental-change.md": "130094af74d1304f0e6ab6684c19725cf266c0db9cb29c5bb112531fc4ec36ce",
+    "codex/skills/work-rules/references/skills/kiro-lock.md": "3451b83e3c0d23e0833e0f6e26b613713c984091440ccafb5c66a2b52f0b6c90",
+    "codex/skills/work-rules/references/skills/md-link-check.md": "b42e938b6c6e004e4625de0f403323e0fc2249a7074c253ca0084316e48c7085",
+    "codex/skills/work-rules/references/skills/planning-and-breakdown.md": "b28e326aa8c55ad774826dabd870eb9b014c2076ca5ed26410c646e8d07125cf",
+    "codex/skills/work-rules/references/skills/readme-template.md": "f384b1571a4b8f35c642e5984354f0c2721ecf612b66d3ba09bddf39dc58e850",
+    "codex/skills/work-rules/references/skills/spec-driven-infra.md": "2c8006325c5194aa013470926f59d98574b6f7eb815f06624273593d88a40949",
+    "codex/skills/work-rules/scripts/md-link-check.py": "9f6d5a2d5c83f160d73623ef881e62fec8adb876a4ef3696d2666866fdef13f7",
+    "codex/skills/zircon-readme-policy/SKILL.md": "6b8a4ef7d48b587690e85d0b0b49ec26fc26feb6e22d825676ab514b38da0eee",
+    "codex/skills/zircon-readme-policy/references/skills/debugging-and-recovery.md": "2d9abe01ee69ea435b9ab22f192770cfdba8ae01a28e47bd9cb7745bc8e9d77f",
+    "codex/skills/zircon-readme-policy/references/skills/git-commit-rule.md": "df8055de8399195e6f93d6cd68dbb86bb4dab27a25ecc00bb45bc00f8c1bb438",
+    "codex/skills/zircon-readme-policy/references/skills/incremental-change.md": "130094af74d1304f0e6ab6684c19725cf266c0db9cb29c5bb112531fc4ec36ce",
+    "codex/skills/zircon-readme-policy/references/skills/kiro-lock.md": "3451b83e3c0d23e0833e0f6e26b613713c984091440ccafb5c66a2b52f0b6c90",
+    "codex/skills/zircon-readme-policy/references/skills/md-link-check.md": "b42e938b6c6e004e4625de0f403323e0fc2249a7074c253ca0084316e48c7085",
+    "codex/skills/zircon-readme-policy/references/skills/planning-and-breakdown.md": "b28e326aa8c55ad774826dabd870eb9b014c2076ca5ed26410c646e8d07125cf",
+    "codex/skills/zircon-readme-policy/references/skills/readme-template.md": "f384b1571a4b8f35c642e5984354f0c2721ecf612b66d3ba09bddf39dc58e850",
+    "codex/skills/zircon-readme-policy/references/skills/spec-driven-infra.md": "2c8006325c5194aa013470926f59d98574b6f7eb815f06624273593d88a40949",
+    "codex/skills/zircon-readme-policy/references/skills/work-rules.md": "3220baa55a8b7c0d6447209d27e3d7cc148c05b58b5b7415ec2d63e19621423c",
+    "codex/skills/zircon-readme-policy/scripts/md-link-check.py": "9f6d5a2d5c83f160d73623ef881e62fec8adb876a4ef3696d2666866fdef13f7"
+  }
+}

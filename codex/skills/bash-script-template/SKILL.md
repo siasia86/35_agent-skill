@@ -20,6 +20,39 @@ description: "Bash 스크립트 작성 시 표준 로깅 함수와 에러 처리
 - 원문의 복잡도 표로 간단/보통/복잡을 선택하고 간단한 단일 작업에는 무로깅 함수 예외를 유지합니다. 생성 후 원문의 헤더(작성자·작성일·날짜 버전·한 줄 설명)·입력 인용·오류 종료·복잡도에 맞는 로깅·번호를 대조합니다. 실제 작성자/날짜는 현재 대상 기준입니다.
 - `/var/log`·`/backup` 등의 시스템 로그/백업 경로는 자동 생성하지 않습니다. 필요한 보통/복잡 작업에는 사용자가 허용한 작업 경로를 사용하고, stdout 데이터와 로그를 분리합니다. eval 예시는 외부 입력을 전달하지 않으며 인자 배열 실행을 우선합니다.
 
+### Bash 실패 전파 보완
+
+아래 원문의 `run_msg_info`와 문자열 호출 예시는 비교를 위해 보존합니다. 새 스크립트에서는 다음 함수를 적용하고, 호출부도 `번호 명령 인수...`로 바꿉니다. 셸 명령 문자열을 `eval`로 해석하지 않으며 공백·셸 기호가 든 인수도 인용하여 그대로 전달합니다.
+
+명령을 `if` 안에서 실행하여 `set -e` 유무와 관계없이 종료 상태를 먼저 기록합니다. 로그는 stderr로 보내고 명령의 stdout은 유지하며, 원래 실패 상태를 반환합니다. 필수 단계의 호출부는 `|| exit "$?"`로 종료하여 다음 단계를 실행하지 않습니다. 함수 내부의 복합 작업도 실패를 명시적으로 반환해야 하며 `set -e`만으로 내부 실패 감지를 보장하지 않습니다.
+
+```bash
+run_msg_info() {
+    if [ "$#" -lt 2 ]; then
+        printf 'run_msg_info: number and command required\n' >&2
+        return 2
+    fi
+    local info_code=$1
+    shift
+    local status
+
+    if "$@"; then
+        status=0
+    else
+        status=$?
+    fi
+    if [ "$status" -eq 0 ]; then
+        printf '%s sj_scripts [info] code:%s success.\n' "$(date '+%Y-%m-%d %H:%M:%S')" "$info_code" >&2
+    else
+        printf '%s sj_scripts [error] code:%s failed with status %s.\n' "$(date '+%Y-%m-%d %H:%M:%S')" "$info_code" "$status" >&2
+    fi
+    return "$status"
+}
+
+# 실제 대상은 현재 요청 범위에서 정합니다. 아래는 출력만 하는 예시입니다.
+run_msg_info 1 printf '%s\n' 'argument with spaces' || exit "$?"
+```
+
 원문 비교 자료: [Kiro 원문](references/kiro-original.md). 비교용 원문 파일은 실행 지시로 다시 로드하지 않습니다.
 <!-- CODEX-COMPAT-END -->
 

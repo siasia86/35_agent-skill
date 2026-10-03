@@ -1,0 +1,4 @@
+Command: python3 agent-workflows/codex/reviews/2026-10-03-remediation/validate_remediation.py --baseline /tmp/35-skill-remediation-zqwgd23p/baseline.json --output agent-workflows/codex/reviews/2026-10-03-remediation/validation.json
+Exit: 1
+Cause: UnicodeDecodeError while read_text() scanned generated codex/skills/md-link-check/scripts/__pycache__/md-style-check.cpython-312.pyc (55140 bytes).
+The previous importlib style inspection generated this untracked bytecode after the clean baseline. Only this generated artifact was removed.

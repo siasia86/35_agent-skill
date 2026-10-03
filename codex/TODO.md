@@ -2,20 +2,22 @@
 
 ## 1. 다음 세션에서 이어갈 추가 검토
 
-[세션 인계](../agent-workflows/codex/HANDOFF.md)의 범위·재개 순서·완료 조건을 따릅니다. 아래는 2026-10-02 추가 검토에서 남은 후보이며, 저장소에 보존한 [원시 결과](../agent-workflows/codex/reviews/2026-10-02/findings.json)를 현재 구현과 재대조한 뒤 확정합니다. 1.0.0 당시의 검증 통과가 이 후보들의 해결을 뜻하지 않습니다.
+[세션 인계](../agent-workflows/codex/HANDOFF.md)의 범위·재개 순서·완료 조건을 따릅니다. 아래는 2026-10-02 추가 검토에서 남은 후보이며, 저장소에 보존한 [원시 결과](../agent-workflows/codex/reviews/2026-10-02/findings.json)를 현재 구현과 재대조합니다. 2026-10-03 보완·로컬 검사 완료 항목은 아래에 표시하고 [보완 기록](../agent-workflows/codex/REMEDIATION_2026-10-03.md)에 근거를 남깁니다. 1.0.0 당시의 검증 통과가 이 후보들의 해결을 뜻하지 않습니다.
 
 - [x] 마지막 게시 커밋·미게시 문서 12개·추가 검토 근거·재개 순서를 저장소에 인계하고 AGENTS·README·TODO에서 연결합니다. 검토 JSON 두 개를 bytes 그대로 보존합니다.
-- [ ] Python 전체 템플릿의 인수 없는 실행에서 `parser`가 정의되지 않는 경로를 보완합니다. 2026-10-03 재현 완료이며 원문을 유지한 수정 예시와 적용 기준은 남아 있습니다.
-- [ ] Python `_atomic_write`의 권한·소유 보존 범위를 정합니다. 2026-10-03 기존 파일 모드가 `0755`에서 `0600`으로 바뀌는 관찰을 재현했습니다.
-- [ ] Bash `run_msg_info`의 실패 반환·로그·후속 실행 기준을 보완합니다. 2026-10-03 일반 실행의 성공 반환과 `set -e`의 로그 없는 중단을 재현했습니다.
-- [ ] work-rules의 Python `fcntl.flock` 예시에서 잠금 경로 삭제 정책을 보완합니다. 2026-10-03 서로 다른 inode에 두 잠금이 잡히는 순서를 재현했으며, `kiro-lock/scripts/lock.py`의 기존 검사와 별도 사례입니다.
-- [ ] 중첩 코드 펜스 뒤의 링크 검사 누락을 보완합니다. 2026-10-03 동봉 검사기 7개에서 깨진 링크를 누락하는 관찰을 재현했습니다.
-- [ ] shipping-checklist의 code-review, 네 STYLE 사본의 푸터 참조, repo-governance의 템플릿 언급을 대조하여 필수 자료·환경 조건·설명용 예시를 구분합니다. 폴더 단독 사용에 필요한 자료 누락을 확인합니다.
+- [x] Python 전체 템플릿의 무인수 parser 오류를 원문 보존 대체 블록으로 보완했습니다. 무인수/help/version/잘못된 옵션과 처리 분기를 회귀 검사했습니다.
+- [x] Python `_atomic_write`의 POSIX mode·uid·gid 보존 범위를 정하고 대체 블록을 추가했습니다. 기존/새 파일·실패 시 원본 유지·symlink 거부를 검사했고 다른 소유의 실제 파일/ACL/Windows는 범위 밖으로 남깁니다.
+- [x] Bash `run_msg_info`를 argv 실행·stderr 로그·실패 상태 반환으로 보완했습니다. 필수 호출부의 후속 차단과 set -e 유무를 회귀 검사했습니다.
+- [x] work-rules의 Python flock 예시를 경로를 삭제하지 않는 context manager로 보완했습니다. 같은 inode의 waiter와 새 프로세스 배제·예외 해제를 검사했습니다. kiro-lock helper는 변경하지 않았습니다.
+- [x] 중첩 펜스 뒤 링크 누락을 실행용 검사기 7개에 보완했습니다. 중첩/tilde/닫는 태그/들여쓰기·미닫힘 종료 2·기존 제외를 단독 사본에서 검사했습니다.
+- [x] shipping-checklist의 code-review와 네 STYLE 역할의 readme-template·필요한 md-link-check를 전체 지침/원문으로 동봉했습니다. governance 템플릿은 대상 저장소의 조건부 자료로 구분했고 단독 폴더 참조를 검사했습니다.
 - [ ] md-link-check·using-skills·zircon-readme-policy의 최종본 독립 사례를 확인합니다. 2026-10-03 기록된 검사 시점 해시와 현재 해시의 차이 및 후속 보고 부재를 확인했습니다. readme-template도 해시 차이가 있지만 후속 보고가 있으므로 같은 미검증 상태로 단정하지 않고 후속 입력 근거를 대조합니다. 독립 사례를 다시 수행한다면 현재 사용자 요청·모델·협업 도구 조건을 확인합니다.
-- [ ] 확정한 항목만 Codex 호환 규칙·예시·동반 자료에 보완하고, 원문 대응·관련 로컬 재현을 검사하여 MIGRATION·VERIFICATION·TODO·CHANGELOG의 상태를 갱신합니다.
+- [x] 확정한 로컬 항목의 호환 규칙·예시·동반 자료를 보완하고 원문 대응·회귀·기본 검사를 완료했습니다. MIGRATION·VERIFICATION·TODO·CHANGELOG·인계를 갱신했습니다. 최종본 독립 모델 사례는 별도 미완료로 유지합니다.
 - [x] 2026-10-02 미게시 문서 12개와 인계·병합 검토 자료를 구분해 검토한 뒤, 2026-10-03 사용자 요청 범위에서 yunli에 게시했습니다. `525f0e0`의 일반 push와 원격 SHA 일치, main·design 유지를 확인했습니다. 확인 결과를 담은 후속 문서 커밋은 같은 yunli에 게시합니다.
 - [x] 2026-10-03 main·yunli·design 전체 원격 브랜치의 선후 관계와 격리 병합을 검토했습니다. 충돌·고유 커밋 유실은 없으며, 확인한 동작 결함과 판정 범위는 [병합 검토](../agent-workflows/codex/MERGE_REVIEW_2026-10-03.md)에 기록합니다. 실제 main·design 게시와 구현 보완은 완료 처리하지 않습니다.
 - [x] 후속 사용자 요청의 원격 main·yunli와 로컬 main·yunli 네 브랜치를 `36cd9d3`으로 실제 통합하고 원격 SHA·로컬/추적 refs·clean 상태·파일 보존을 확인했습니다. 기본 스킬 검사도 통과했습니다. 확인 결과를 담은 후속 기록 커밋 역시 네 브랜치로 fast-forward하며 최종 SHA는 Git refs에서 확인합니다. [실제 병합 기록](../agent-workflows/codex/MERGE_REVIEW_2026-10-03.md#7-네-브랜치의-실제-병합)을 따르고 기존 스킬 문제의 보완은 미완료로 유지합니다.
+
+- [ ] 2026-10-03 후속 사용자 요청의 보완 변경 yunli 게시와 main 병합을 수행하고 실제 원격·로컬 refs를 확인합니다. 승인 범위와 보존 절차는 [보완 기록](../agent-workflows/codex/REMEDIATION_2026-10-03.md#6-보완-변경-게시와-main-병합-승인)에 남깁니다.
 
 ## 2. 실제 사용자 환경
 

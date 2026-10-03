@@ -14,24 +14,24 @@ Kiro SKILL.md 19개 원문 전체를 각 스킬의 `references/kiro-original.md`
 
 | 스킬                   | 원문 행 | 활성 행 | 추가 행 | 원문 8행 이후 대응 | 동봉 역할 수 |
 |------------------------|---------|---------|---------|--------------------|--------------|
-| bash-script-template   | 294     | 313     | 19      | 27–313             | 0            |
+| bash-script-template   | 294     | 346     | 52      | 60–346             | 0            |
 | code-review            | 118     | 135     | 17      | 25–135             | 0            |
 | debugging-and-recovery | 209     | 230     | 21      | 29–230             | 1            |
 | doubt-driven-infra     | 159     | 176     | 17      | 25–176             | 0            |
-| git-commit-rule        | 94      | 127     | 33      | 41–127             | 1            |
+| git-commit-rule        | 94      | 129     | 35      | 43–129             | 2            |
 | incremental-change     | 225     | 246     | 21      | 29–246             | 1            |
 | kiro-lock              | 99      | 122     | 23      | 31–122             | 0            |
-| md-link-check          | 289     | 317     | 28      | 36–317             | 0            |
+| md-link-check          | 289     | 325     | 36      | 44–325             | 2            |
 | planning-and-breakdown | 212     | 233     | 21      | 29–233             | 2            |
-| python-script-template | 389     | 408     | 19      | 27–408             | 0            |
-| readme-template        | 67      | 99      | 32      | 40–99              | 1            |
-| repo-governance        | 145     | 164     | 19      | 27–164             | 0            |
-| security-tools         | 154     | 184     | 30      | 38–184             | 0            |
-| shipping-checklist     | 130     | 151     | 21      | 29–151             | 2            |
+| python-script-template | 389     | 515     | 126     | 134–515            | 0            |
+| readme-template        | 67      | 99      | 32      | 40–99              | 2            |
+| repo-governance        | 145     | 166     | 21      | 29–166             | 0            |
+| security-tools         | 154     | 186     | 32      | 40–186             | 2            |
+| shipping-checklist     | 130     | 153     | 23      | 31–153             | 3            |
 | spec-driven-infra      | 253     | 275     | 22      | 30–275             | 3            |
 | testing-guide          | 153     | 177     | 24      | 32–177             | 2            |
 | using-skills           | 65      | 115     | 50      | 58–115             | 18           |
-| work-rules             | 728     | 769     | 41      | 49–769             | 5            |
+| work-rules             | 728     | 796     | 68      | 76–796             | 7            |
 | zircon-readme-policy   | 44      | 80      | 36      | 44–80              | 9            |
 
 ## 3. 최소 호환 변경의 이유
@@ -48,7 +48,7 @@ Kiro SKILL.md 19개 원문 전체를 각 스킬의 `references/kiro-original.md`
 
 ## 4. 동반 자료와 출처
 
-필수 style은 `kiro/markdown/STYLE.md`의 동일 bytes 사본입니다. Markdown 검사 세 도구는 작업 시작 시 존재한 30 저장소의 독립 Python 파일 전체를 필요한 폴더에 복사했습니다. Python 3.11 표준 라이브러리만 사용하므로 사용 시 30 저장소와 pip 설치는 필요하지 않습니다. 개인 스킬에는 실제 도구/문서 파일을 넣었으며 source hash는 아래에 남깁니다. 잠금 helper는 이번 작업에서 작성하고 실제 동시 획득·소유 검사를 수행했습니다.
+필수 style은 `kiro/markdown/STYLE.md`의 동일 bytes 사본입니다. Markdown 검사 세 도구는 작업 시작 시 존재한 30 저장소의 독립 Python 파일 전체를 필요한 폴더에 복사했습니다. 초기 사본은 Python 3.11 표준 라이브러리만 사용하므로 사용 시 30 저장소와 pip 설치는 필요하지 않습니다. 개인 스킬에는 실제 도구/문서 파일을 넣었으며 초기 source hash는 아래에 남기며 2026-10-03 링크 검사기 보완은 6절에서 구분합니다. 잠금 helper는 이번 작업에서 작성하고 실제 동시 획득·소유 검사를 수행했습니다.
 
 testing-guide의 외부 5축 상세 문서는 전체를 동봉했습니다. 활성 edge case 문서의 BVA 링크만 같은 폴더의 testing-guide BVA 절로 연결했습니다. 그 문서의 비교용 원문은 동일 bytes로 별도 보존하며 원래 32 저장소의 상대 링크는 비교 자료 안에만 남습니다. 비교 자료를 실행 의존으로 로드하지 않습니다. 다른 참고 문서 체인을 전체 복제할 필요가 없습니다.
 
@@ -88,10 +88,22 @@ Kiro의 prompt 16개는 스킬 19개 본문에서 필수 호출하지 않습니�
 
 실제 검증·Luna 재검증과 미실행 범위는 [VERIFICATION](VERIFICATION.md), 후속 환경 확인은 [TODO](TODO.md)에 기록합니다. 개발 검사 script는 복사한 개인 스킬의 실행 의존성이 아닙니다.
 
+## 6. 2026-10-03 동작 보완과 참조 완결성
+
+사용자 요청의 로컬 보완·테스트를 수행했습니다. 위 표는 이번 보완 후의 현재 행 대응이며 Kiro 원문·예시·템플릿·체크리스트는 모두 유지합니다.
+
+- Python: 원문 argparse·main·Atomic Write 블록은 그대로 두고 호환 절에 parser 반환 계약과 POSIX mode·uid·gid 보존 대체 블록을 추가했습니다. 처리 옵션·로깅·main 분기는 유지합니다.
+- Bash: 원문 함수·문자열 호출은 유지하고 호환 절에 argv 실행·stderr 로그·원래 종료 상태 반환·필수 호출부 종료 예시를 추가했습니다.
+- work-rules: §17의 삭제 예시는 원문으로 보존하고 동일 inode의 잠금 경로를 유지하는 POSIX context manager를 추가했습니다. 동봉 kiro-lock helper는 변경하지 않았습니다.
+- md-link-check: 원문 지침은 유지하고 실행용 링크 검사기 7개를 문자·길이·닫는 태그·들여쓰기 기준으로 수정했습니다. 미닫힘은 종료 `2`로 보고하며 활성 동봉 지침 사본에도 적용 기준을 반영했습니다. 초기 외부 source hash를 수정본 hash로 덮어쓰지 않습니다.
+- 참조: shipping-checklist의 code-review와 네 STYLE 역할의 readme-template·필요한 md-link-check를 전체 지침과 비교 원문으로 동봉했습니다. 동봉 역할은 45개에서 54개로 늘었고 형제 설치 의존은 없습니다. repo-governance의 템플릿 이름은 대상 저장소의 조건부 입력으로 명시했습니다.
+
+동작·최종 파일 해시·검사 범위는 [보완 기록](../agent-workflows/codex/REMEDIATION_2026-10-03.md)과 [회귀 원시 결과](../agent-workflows/codex/reviews/2026-10-03-remediation/tests.json)에 남깁니다. 실행용 검사기는 Codex 폴더의 지역 수정본이며 30 저장소의 원본은 변경하지 않았습니다.
+
 ---
 
 **작성일**: 2026-10-01
 
-**마지막 업데이트**: 2026-10-01
+**마지막 업데이트**: 2026-10-03
 
 © 2026 siasia86. Licensed under CC BY 4.0.

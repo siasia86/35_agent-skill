@@ -1,5 +1,7 @@
 # Codex 개인 스킬 검증 기록
 
+1~5절은 2026-10-01 당시의 검사 기록입니다. 최신 로컬 보완 결과는 6절을 따르며 과거 게시·모델 지정은 새 실행 권한이나 현재 검증 결과가 아닙니다.
+
 ## 1. 목적과 실행 범위
 
 2026-10-01 작성한 19개 개인 스킬을 각 폴더 단독 복사 상태에서 검증합니다. Kiro 원문 보존·발견 가능한 frontmatter·내부 참조·도구 독립 실행과 실제 개인 규약 적용을 확인합니다. 주 agent의 정적/실행 검사와 Luna의 독립 사례를 구분합니다. 모든 변경/실행은 저장소와 격리 /tmp 프로젝트 안에서 수행했으며 개인 홈 설치·다른 저장소 수정·운영 적용은 수행하지 않았습니다.
@@ -68,10 +70,26 @@ python3 codex/skills/md-link-check/scripts/md-heading-check.py codex/skills
 
 루트 문서·workflow·Git diff·원본 보존·Gitleaks와 게시 검사는 [이번 실행 기록](../agent-workflows/codex/REBUILD_1.0.0.md)에 기록합니다. 원본 main 작업본의 Git 관리 영역을 수정하지 않고 독립 게시 clone에서 승인된 yunli 일반 push를 수행합니다.
 
+## 6. 2026-10-03 로컬 보완과 회귀 검사
+
+- **통과:** 수정 전 최소 재현으로 동작 문제 5개를 다시 확인했습니다. [baseline.json](../agent-workflows/codex/reviews/2026-10-03-remediation/baseline.json)은 새 관찰이며 기존 재현 JSON은 보존합니다.
+- **통과:** 보완 후 unittest 16개와 실제 CLI 실행 120회입니다. Python 무인수/help/version/잘못된 옵션·처리 분기, 기존 파일 mode/uid/gid·새 파일 0600·실패 시 원본 유지/임시 파일 정리, Bash 상태 7 전파/로그/후속 차단·인수 보존, flock inode 유지/프로세스 간 배제/예외 해제, 링크 검사기 7개의 중첩·tilde·들여쓰기·미닫힘·기존 제외를 확인했습니다. [회귀 스크립트](verification/test_remediation.py)와 [원시 결과](../agent-workflows/codex/reviews/2026-10-03-remediation/tests.json)에 입력 해시·명령·종료·stdout/stderr를 남깁니다.
+- **통과:** 기존 기본 검사에서 스킬 19개·동봉 역할 54개·폴더 내부 링크 213개·Python 도구 구문 25개·단독 도구 실행 35회·kiro-lock 조건 8개를 확인했습니다. Kiro 원문 bytes와 전체 본문 대응도 유지합니다. [기본 검사 결과](../agent-workflows/codex/reviews/2026-10-03-remediation/basic-check.json)를 참고합니다.
+- **통과:** 새 문서 style 경고 0건·앵커 13개·frontmatter 19개·변경 Python 구문·diff·보호 원본 보존을 확인했습니다. 원시 style 경고 89건은 source/푸터의 기존 경고이며 전체 style 무경고 통과로 기록하지 않습니다. 회귀 입력 해시 80개도 현재본과 같습니다.
+- **검증 범위:** 소유 보존은 동일 uid/gid의 실제 교체와 fchown 거부 주입으로 검사했습니다. 다른 소유의 실제 파일·ACL·확장 속성·하드 링크·Windows 메타데이터 보존은 검증하지 않았으며 POSIX 대체 예시의 범위에서 제외합니다.
+- **미실행:** 최종본의 독립 모델 행동 사례·개인 홈 설치/발견·Windows·운영 적용·commit/push입니다. 기존 Luna 결과를 새 수정본의 독립 행동 통과로 사용하지 않습니다. Gitleaks 실행 도구가 없어 정규식 검사만 별도 부분 검사로 기록합니다.
+
+문서 검사·보존·변경 파일과 남은 항목은 [보완 기록](../agent-workflows/codex/REMEDIATION_2026-10-03.md)에 남깁니다. 기본 검사와 회귀 검사는 각각의 범위를 확인하며 실제 사용자 환경 전체를 보장하지 않습니다.
+
+```bash
+python3 codex/verification/test_remediation.py --output /tmp/35-remediation-tests.json
+python3 codex/verification/verify_skills.py
+```
+
 ---
 
 **작성일**: 2026-10-01
 
-**마지막 업데이트**: 2026-10-01
+**마지막 업데이트**: 2026-10-03
 
 © 2026 siasia86. Licensed under CC BY 4.0.

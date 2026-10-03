@@ -20,6 +20,113 @@ description: "Python 스크립트 작성 시 표준 구조, 로깅, argparse, �
 - 원문의 복잡도 표로 단순/보통/복잡을 선택합니다. 간단한 스크립트의 print 로깅 예외는 유지하지만 공통 필수 요소를 생략하는 예외는 아닙니다. 생성 후 shebang·주석 상태 SAFETY·날짜 기반 VERSION과 --version 연결·함수 docstring·parse_args 분리·KeyboardInterrupt·help Examples/Notes와 RawDescriptionHelpFormatter를 원문 체크와 대조합니다.
 - 파일 로깅은 현재 요청이 허용한 작업 경로로 지정합니다. 단순 코드에는 원문의 무로거 예외를 적용하고 `/var/log`를 만들지 않습니다. 보통/복잡 코드에서도 명시 승인되지 않은 개인 홈·시스템 로그 경로를 자동 생성하지 않습니다.
 
+### Python 실행·원자적 쓰기 보완
+
+아래 원문의 argparse·main·Atomic Write 블록은 비교를 위해 그대로 보존합니다. 새 스크립트에서는 다음 보완 블록을 해당 함수 대신 적용합니다. 두 argparse 함수를 함께 적용하여 반환 계약을 맞추고, 나머지 로깅·처리 함수·옵션·체크리스트는 유지합니다.
+
+무인수 실행은 같은 parser의 도움말을 출력하고 정상 종료합니다. `--help`·`--version`·잘못된 옵션은 argparse의 기존 종료 동작을 유지합니다.
+
+```python
+def parse_args():
+    """Parse command line arguments."""
+    parser = argparse.ArgumentParser(
+        description='스크립트 한 줄 설명',
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog=(
+            "\nExamples:\n"
+            "  %(prog)s config.txt              기본 동작\n"
+            "  %(prog)s -r config.txt           원복 모드\n"
+            "  %(prog)s -d -v config.txt        dry-run 상세 출력\n"
+            "  %(prog)s -D ./configs/           디렉토리 처리\n"
+            "\nNotes:\n"
+            "  - 멱등성 보장: 이미 처리된 파일에 다시 실행해도 결과 동일\n"
+        )
+    )
+    parser.add_argument('-V', '--version', action='version', version=f'%(prog)s {VERSION}')
+    parser.add_argument('target', nargs='?', help='파일 또는 디렉토리 경로')
+    parser.add_argument('-f', '--file', nargs='+', metavar='FILE', help='대상 파일')
+    parser.add_argument('-d', '--dry-run', action='store_true', help='변경 없이 출력만')
+    parser.add_argument('-v', '--verbose', action='store_true', help='상세 출력')
+    parser.add_argument('-q', '--quiet', action='store_true', help='에러만 출력')
+    parser.add_argument('-D', '--dir', nargs='+', metavar='DIR', help='디렉토리 일괄 처리')
+    return parser.parse_args(), parser
+
+def main():
+    """Main entry point."""
+    args, parser = parse_args()
+    if args.quiet:
+        log.setLevel(logging.ERROR)
+
+    if args.file:
+        for f in args.file:
+            if os.path.isfile(f):
+                process_file(f, dry_run=args.dry_run, verbose=args.verbose)
+            else:
+                log.error(f"not found: {f}")
+    elif args.dir:
+        for d in args.dir:
+            if os.path.isdir(d):
+                process_dir(d, dry_run=args.dry_run, verbose=args.verbose)
+            else:
+                log.error(f"not found: {d}")
+    elif args.target:
+        if os.path.isdir(args.target):
+            process_dir(args.target, dry_run=args.dry_run, verbose=args.verbose)
+        elif os.path.isfile(args.target):
+            process_file(args.target, dry_run=args.dry_run, verbose=args.verbose)
+        else:
+            log.error(f"not found: {args.target}")
+    else:
+        parser.print_help()
+
+
+if __name__ == '__main__':
+    try:
+        main()
+    except KeyboardInterrupt:
+        sys.exit(130)
+```
+
+다음 `_atomic_write`는 POSIX의 일반 파일을 같은 디렉토리에서 교체합니다. 기존 파일은 mode·uid·gid를 유지하고, 소유가 다를 때 필요한 `fchown`이 거부되면 교체하지 않고 오류를 전달합니다. 임의로 소유를 바꾸거나 권한 거부를 우회하지 않습니다. 새 파일은 `mkstemp`의 기본 `0600`을 사용합니다.
+
+심볼릭 링크·디렉토리는 거부합니다. 동시 writer는 별도 잠금으로 조정해야 하며 ACL·확장 속성·하드 링크 관계·Windows 메타데이터 보존은 이 예시의 범위가 아닙니다. `os.replace`의 원자적 교체와 전원 장애 이후의 영속성 보장은 구분합니다.
+
+```python
+def _atomic_write(filepath, data):
+    """Atomically replace a POSIX regular file, preserving mode and owner."""
+    import stat
+    import tempfile
+
+    if os.name != 'posix':
+        raise NotImplementedError('POSIX metadata preservation required')
+    filepath = os.path.abspath(os.fspath(filepath))
+    try:
+        original = os.stat(filepath, follow_symlinks=False)
+    except FileNotFoundError:
+        original = None
+    if original is not None and not stat.S_ISREG(original.st_mode):
+        raise ValueError('target must be a regular file, not a symlink')
+
+    fd, tmp_path = tempfile.mkstemp(dir=os.path.dirname(filepath), prefix='.tmp_')
+    try:
+        with os.fdopen(fd, 'w', encoding='utf-8') as stream:
+            stream.write(data)
+            stream.flush()
+            if original is not None:
+                temporary = os.fstat(stream.fileno())
+                if (temporary.st_uid, temporary.st_gid) != (original.st_uid, original.st_gid):
+                    os.fchown(stream.fileno(), original.st_uid, original.st_gid)
+                # chown can clear mode bits; restore the mode afterwards.
+                os.fchmod(stream.fileno(), stat.S_IMODE(original.st_mode))
+            os.fsync(stream.fileno())
+        os.replace(tmp_path, filepath)
+    finally:
+        try:
+            os.unlink(tmp_path)
+        except FileNotFoundError:
+            pass
+```
+
 원문 비교 자료: [Kiro 원문](references/kiro-original.md). 비교용 원문 파일은 실행 지시로 다시 로드하지 않습니다.
 <!-- CODEX-COMPAT-END -->
 

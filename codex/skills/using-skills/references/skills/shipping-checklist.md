@@ -22,6 +22,8 @@ description: Pre-deployment checklist for infrastructure changes. Use when deplo
 
 - `skill://incremental-change` → [incremental-change](incremental-change.md).
 
+- 원문 코드 준비의 `code-review` 항목은 필수 리뷰 역할입니다. 형제 설치를 요구하지 않고 동봉 [code-review](code-review.md)의 전체 체크리스트를 적용하며, 실제 리뷰 증거가 없으면 완료 표시하지 않습니다.
+
 원문 비교 자료: [Kiro 원문](../originals/shipping-checklist.md). 비교용 원문 파일은 실행 지시로 다시 로드하지 않습니다.
 <!-- CODEX-COMPAT-END -->
 

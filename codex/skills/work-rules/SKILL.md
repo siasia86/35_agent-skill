@@ -42,6 +42,33 @@ description: Defines operating rules for all agents. Use when executing any task
 
 잠금 도구: [lock.py](scripts/lock.py). `python3 <SKILL_DIR>/scripts/lock.py --help`로 실제 인자를 확인합니다.
 
+### Python flock 경로 보완
+
+§17의 File lock pattern 원문과 삭제 예시는 보존 자료입니다. 새 POSIX 코드에는 다음 예시를 적용합니다. 모든 참여자가 같은 잠금 경로·inode를 사용하고, 정상 해제 시 잠금 파일을 삭제하지 않습니다. 잠금 파일이 남아 있다는 사실만으로 획득 실패를 판단하지 않고 `flock` 결과로 판단합니다.
+
+`BlockingIOError`는 이미 잠긴 경우로 처리하고 다른 I/O·권한 오류는 전달합니다. 잠금 경로를 지우거나 교체하면 기존 inode의 waiter와 새 inode의 writer가 동시에 잠글 수 있습니다. 비협력 writer·네트워크 파일시스템·Windows 잠금의 보장은 별도 검증 대상이며, 이 POSIX 예시와 동봉 kiro-lock helper는 서로 다른 프로토콜입니다.
+
+```python
+import fcntl
+from contextlib import contextmanager
+
+
+@contextmanager
+def exclusive_file_lock(lock_file):
+    """Hold a nonblocking flock on a persistent path until work finishes."""
+    with open(lock_file, 'a+', encoding='utf-8') as lock_fp:
+        fcntl.flock(lock_fp, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        try:
+            yield lock_fp
+        finally:
+            fcntl.flock(lock_fp, fcntl.LOCK_UN)
+    # Keep the path: another participant may already have opened this inode.
+```
+
+호출부는 `with exclusive_file_lock(LOCK_FILE):` 안에서 실제 작업을 수행합니다. 이미 잠긴 경우에만 `except BlockingIOError:`에서 중복 실행을 보고하고 실패 상태로 종료합니다.
+
+- 동봉 STYLE §12의 `readme-template` 참조는 [전체 readme-template 지침](references/skills/readme-template.md)으로 해석합니다. 대상 문서에 적용할 개인 푸터 기본값·원문 예외와 사용자/저장소의 상위 지침을 함께 확인하며, 형제 스킬 설치를 요구하지 않습니다.
+
 원문 비교 자료: [Kiro 원문](references/kiro-original.md). 비교용 원문 파일은 실행 지시로 다시 로드하지 않습니다.
 <!-- CODEX-COMPAT-END -->
 

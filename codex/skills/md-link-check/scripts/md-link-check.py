@@ -22,10 +22,11 @@ md-link-check.py — Markdown 내부 링크 존재 여부 검증
 
 종료 코드:
     0 = 모든 링크 정상
-    1 = 깨진 링크 발견
+    1 = 깨진 링크 발견 또는 읽기 실패
+    2 = 닫히지 않은 코드 펜스로 검사 미완료
 """
 
-VERSION = "26.07.04"
+VERSION = "26.10.03"
 
 import argparse
 import os
@@ -78,47 +79,40 @@ def collect_md_files(paths):
     return sorted(set(files))
 
 
-def strip_code_blocks_preserve_lines(content, filepath=None):
-    """코드블록·인라인 코드 내용을 제거 (행 번호 유지).
+class UnclosedCodeBlockError(ValueError):
+    """A fence prevented completion of a file's link check."""
 
-    라인 단위 토글 방식으로 코드 펜스를 판정합니다.
-    줄 시작이 ``` 인 경우만 코드블록 경계로 인식하므로
-    인라인 백틱(줄 중간)에 의한 오판을 방지합니다.
-    홀수 펜스(unclosed code block) 감지 시 stderr 경고를 출력합니다.
-    """
-    lines = content.splitlines()
+
+def strip_code_blocks_preserve_lines(content, filepath=None):
+    """Remove fenced/inline code, preserving line numbers and fence lengths."""
     result = []
-    in_code = False
-    fence_count = 0
+    fence_char = None
+    fence_len = 0
     last_open_line = 0
-    last_open_tag = ''
-    nested_hints = []
-    for i, line in enumerate(lines, 1):
-        stripped = line.strip()
-        if stripped.startswith('```'):
-            fence_count += 1
-            if not in_code:
-                # 열림
-                in_code = True
-                last_open_line = i
-                last_open_tag = stripped
-            else:
-                # 닫힘 — 닫는 태그가 언어 태그를 포함하면 중첩 의심
-                if stripped != '```' and len(stripped) > 3:
-                    nested_hints.append((last_open_line, last_open_tag, i, stripped))
-                in_code = False
-            result.append('')
-        elif in_code:
+    for lineno, line in enumerate(content.splitlines(), 1):
+        match = re.match(r'^( {0,3})(`{3,}|~{3,})(.*)$', line)
+        if match:
+            marker, info = match.group(2), match.group(3).strip(' \t')
+            if fence_char is None:
+                # Backticks are forbidden in the info string of a backtick opener.
+                if marker[0] != '`' or '`' not in info:
+                    fence_char, fence_len = marker[0], len(marker)
+                    last_open_line = lineno
+                    result.append('')
+                    continue
+            elif marker[0] == fence_char and len(marker) >= fence_len and not info:
+                fence_char, fence_len = None, 0
+                result.append('')
+                continue
+        if fence_char is not None:
             result.append('')
         else:
-            # 인라인 코드 제거 (길이 유지 불필요, 공백 치환)
             result.append(INLINE_CODE_PATTERN.sub(_blank_inline, line))
-    if in_code and filepath:
-        rel = os.path.relpath(filepath)
-        print(f"🟡 unclosed code block: {rel} (fence count: {fence_count}, last open: L{last_open_line})", file=sys.stderr)
-        if nested_hints:
-            for open_line, open_tag, close_line, close_tag in nested_hints[:3]:
-                print(f"   hint: nested fence at L{open_line} ({open_tag}) -> L{close_line} ({close_tag})", file=sys.stderr)
+    if fence_char is not None:
+        label = os.path.relpath(filepath) if filepath else '<content>'
+        message = f'unclosed code block: {label} (last open: L{last_open_line})'
+        print(f'🟡 {message}', file=sys.stderr)
+        raise UnclosedCodeBlockError(message)
     return '\n'.join(result)
 
 
@@ -184,11 +178,16 @@ def main():
         sys.exit(0)
 
     total_broken = 0
+    incomplete_files = 0
     total_links = 0
     broken_files = []
 
     for filepath in files:
-        broken, link_count = check_file(filepath)
+        try:
+            broken, link_count = check_file(filepath)
+        except UnclosedCodeBlockError:
+            incomplete_files += 1
+            continue
         total_links += link_count
         if broken:
             total_broken += len(broken)
@@ -204,13 +203,15 @@ def main():
             print(f"\n❌ {rel}")
             for lineno, link, target in broken_list:
                 print(f"   L{lineno}: {link}")
-    else:
+    elif not incomplete_files:
         print("✅ 모든 링크 정상")
+    if incomplete_files:
+        print(f"🟡 검사 미완료: 닫히지 않은 코드 펜스 {incomplete_files}개 파일")
 
     print(f"\n{'─' * 60}")
     print(f"검사 파일: {len(files)}개 | 링크: {total_links}개 | 깨진 링크: {total_broken}건")
 
-    sys.exit(1 if total_broken > 0 else 0)
+    sys.exit(2 if incomplete_files else (1 if total_broken > 0 else 0))
 
 
 if __name__ == '__main__':

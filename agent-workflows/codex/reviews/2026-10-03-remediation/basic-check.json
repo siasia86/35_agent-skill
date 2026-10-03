@@ -1,0 +1,12 @@
+{
+  "command": "python3 codex/verification/verify_skills.py",
+  "exit": 0,
+  "counts": {
+    "skills": 19,
+    "bundled_workflows": 54,
+    "local_links": 213,
+    "scripts": 25,
+    "isolated_tool_runs": 35,
+    "lock_invariants": 8
+  }
+}

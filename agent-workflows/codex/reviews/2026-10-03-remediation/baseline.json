@@ -1,0 +1,200 @@
+{
+  "observation_date": "2026-10-03",
+  "scope": "temporary Linux fixtures; review, no implementation changes",
+  "cases": {
+    "python_no_args": {
+      "status": "confirmed",
+      "source": "codex/skills/python-script-template/SKILL.md",
+      "same_as_kiro": true,
+      "no_arguments": {
+        "exit": 1,
+        "stdout": "",
+        "stderr": "Traceback (most recent call last):\n  File \"/tmp/skill-review-fixtures-tvvhry_5/python_cli.py\", line 59, in <module>\n    main()\n  File \"/tmp/skill-review-fixtures-tvvhry_5/python_cli.py\", line 54, in main\n    parser.print_help()\n    ^^^^^^\nNameError: name 'parser' is not defined\n"
+      },
+      "help_control": {
+        "exit": 0,
+        "stdout": "usage: python_cli.py [-h] [-V] [-f FILE [FILE ...]] [-d] [-v] [-q]\n                     [-D DIR [DIR ...]]\n                     [target]\n\n스크립트 한 줄 설명\n\npositional arguments:\n  target                파일 또는 디렉토리 경로\n\noptions:\n  -h, --help            show this help message and exit\n  -V, --version         show program's version number and exit\n  -f FILE [FILE ...], --file FILE [FILE ...]\n                        대상 파일\n  -d, --dry-run         변경 없이 출력만\n  -v, --verbose         상세 출력\n  -q, --quiet           에러만 출력\n  -D DIR [DIR ...], --dir DIR [DIR ...]\n                        디렉토리 일괄 처리\n\nExamples:\n  python_cli.py config.txt              기본 동작\n  python_cli.py -r config.txt           원복 모드\n  python_cli.py -d -v config.txt        dry-run 상세 출력\n  python_cli.py -D ./configs/           디렉토리 처리\n\nNotes:\n  - 멱등성 보장: 이미 처리된 파일에 다시 실행해도 결과 동일\n",
+        "stderr": ""
+      }
+    },
+    "atomic_write_mode": {
+      "status": "confirmed",
+      "same_as_kiro": true,
+      "before": "0o755",
+      "after": "0o600"
+    },
+    "bash_error_propagation": {
+      "status": "confirmed",
+      "same_as_kiro": true,
+      "default": {
+        "exit": 0,
+        "stdout": "2026-10-03 12:58:11 sj_scripts [error] code:1 failed with status 1. false\nreturned=0\nnext step executed\n",
+        "stderr": ""
+      },
+      "errexit": {
+        "exit": 1,
+        "stdout": "",
+        "stderr": "bash: line 16: pop_var_context: head of shell_variables not a function context\n"
+      }
+    },
+    "flock_unlink_race": {
+      "status": "confirmed",
+      "source": "codex/skills/work-rules/SKILL.md",
+      "scope": "generic fcntl example, not kiro-lock helper",
+      "blocked_before_release": true,
+      "two_independent_locks_held": true,
+      "different_inodes": true,
+      "schedule": "A unlocks/closes; B acquires old inode; A removes path; C locks new inode"
+    },
+    "nested_fence_link_omission": {
+      "status": "confirmed",
+      "affected_copies": 7,
+      "normal_fixture": "# Fixture\n\n[Broken](missing.md)\n",
+      "nested_fixture": "# Fixture\n\n````markdown\n```python\nsample\n````\n\n[Broken](missing.md)\n",
+      "results": [
+        {
+          "checker": "codex/skills/git-commit-rule/scripts/md-link-check.py",
+          "sha256": "9790836669891291beb19659668e2ef7e878776df287ed2301f7425ebb91706f",
+          "normal": {
+            "exit": 1,
+            "stdout": "\n❌ normal.md\n   L3: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+            "stderr": ""
+          },
+          "nested": {
+            "exit": 0,
+            "stdout": "✅ 모든 링크 정상\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 0개 | 깨진 링크: 0건\n",
+            "stderr": "🟡 unclosed code block: nested.md (fence count: 3, last open: L6)\n   hint: nested fence at L3 (````markdown) -> L4 (```python)\n"
+          }
+        },
+        {
+          "checker": "codex/skills/md-link-check/scripts/md-link-check.py",
+          "sha256": "9790836669891291beb19659668e2ef7e878776df287ed2301f7425ebb91706f",
+          "normal": {
+            "exit": 1,
+            "stdout": "\n❌ normal.md\n   L3: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+            "stderr": ""
+          },
+          "nested": {
+            "exit": 0,
+            "stdout": "✅ 모든 링크 정상\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 0개 | 깨진 링크: 0건\n",
+            "stderr": "🟡 unclosed code block: nested.md (fence count: 3, last open: L6)\n   hint: nested fence at L3 (````markdown) -> L4 (```python)\n"
+          }
+        },
+        {
+          "checker": "codex/skills/readme-template/scripts/md-link-check.py",
+          "sha256": "9790836669891291beb19659668e2ef7e878776df287ed2301f7425ebb91706f",
+          "normal": {
+            "exit": 1,
+            "stdout": "\n❌ normal.md\n   L3: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+            "stderr": ""
+          },
+          "nested": {
+            "exit": 0,
+            "stdout": "✅ 모든 링크 정상\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 0개 | 깨진 링크: 0건\n",
+            "stderr": "🟡 unclosed code block: nested.md (fence count: 3, last open: L6)\n   hint: nested fence at L3 (````markdown) -> L4 (```python)\n"
+          }
+        },
+        {
+          "checker": "codex/skills/security-tools/scripts/md-link-check.py",
+          "sha256": "9790836669891291beb19659668e2ef7e878776df287ed2301f7425ebb91706f",
+          "normal": {
+            "exit": 1,
+            "stdout": "\n❌ normal.md\n   L3: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+            "stderr": ""
+          },
+          "nested": {
+            "exit": 0,
+            "stdout": "✅ 모든 링크 정상\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 0개 | 깨진 링크: 0건\n",
+            "stderr": "🟡 unclosed code block: nested.md (fence count: 3, last open: L6)\n   hint: nested fence at L3 (````markdown) -> L4 (```python)\n"
+          }
+        },
+        {
+          "checker": "codex/skills/using-skills/scripts/md-link-check.py",
+          "sha256": "9790836669891291beb19659668e2ef7e878776df287ed2301f7425ebb91706f",
+          "normal": {
+            "exit": 1,
+            "stdout": "\n❌ normal.md\n   L3: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+            "stderr": ""
+          },
+          "nested": {
+            "exit": 0,
+            "stdout": "✅ 모든 링크 정상\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 0개 | 깨진 링크: 0건\n",
+            "stderr": "🟡 unclosed code block: nested.md (fence count: 3, last open: L6)\n   hint: nested fence at L3 (````markdown) -> L4 (```python)\n"
+          }
+        },
+        {
+          "checker": "codex/skills/work-rules/scripts/md-link-check.py",
+          "sha256": "9790836669891291beb19659668e2ef7e878776df287ed2301f7425ebb91706f",
+          "normal": {
+            "exit": 1,
+            "stdout": "\n❌ normal.md\n   L3: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+            "stderr": ""
+          },
+          "nested": {
+            "exit": 0,
+            "stdout": "✅ 모든 링크 정상\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 0개 | 깨진 링크: 0건\n",
+            "stderr": "🟡 unclosed code block: nested.md (fence count: 3, last open: L6)\n   hint: nested fence at L3 (````markdown) -> L4 (```python)\n"
+          }
+        },
+        {
+          "checker": "codex/skills/zircon-readme-policy/scripts/md-link-check.py",
+          "sha256": "9790836669891291beb19659668e2ef7e878776df287ed2301f7425ebb91706f",
+          "normal": {
+            "exit": 1,
+            "stdout": "\n❌ normal.md\n   L3: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건\n",
+            "stderr": ""
+          },
+          "nested": {
+            "exit": 0,
+            "stdout": "✅ 모든 링크 정상\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 0개 | 깨진 링크: 0건\n",
+            "stderr": "🟡 unclosed code block: nested.md (fence count: 3, last open: L6)\n   hint: nested fence at L3 (````markdown) -> L4 (```python)\n"
+          }
+        }
+      ]
+    },
+    "luna_input_hash_mismatch": {
+      "status": "confirmed metadata difference; model behavior not rerun",
+      "mismatches": [
+        {
+          "skill": "md-link-check",
+          "group": "documents",
+          "recorded_hash": "abab10b5ede8ce2ff01f2d5be80df40daf0c76e704656ac1d4d9a79a602d3729",
+          "current_hash": "c5060ea67a51876178f3501e51b4cb2f53f83e22c8bf863c7669747509900058",
+          "has_followup_report": false
+        },
+        {
+          "skill": "readme-template",
+          "group": "documents",
+          "recorded_hash": "23747c86de2a1a95b1317992dc2d620545a0eee8259e6722d3fdef2e7f25d10f",
+          "current_hash": "7ea648b0edc173152d48478fafb03c27c0790cbaf19a0cffdbc23c8ac80cc10e",
+          "has_followup_report": true
+        },
+        {
+          "skill": "zircon-readme-policy",
+          "group": "documents",
+          "recorded_hash": "236f83258fd5b4d5a69be8daa1d8c9a76d4094a0b687dbd69d88e172addfa5d3",
+          "current_hash": "6b8a4ef7d48b587690e85d0b0b49ec26fc26feb6e22d825676ab514b38da0eee",
+          "has_followup_report": false
+        },
+        {
+          "skill": "using-skills",
+          "group": "workflow",
+          "recorded_hash": "65d4c204cbbb150ee915b336757d0c68a25968216c041de59cd54f06e3e9df86",
+          "current_hash": "cb13e00c8da33fac480b5c14456ae4d1b72d44bb8123b3905f90efea57e7d948",
+          "has_followup_report": false
+        }
+      ],
+      "excluded_non_skill_cases": [
+        {
+          "skill": "personal",
+          "group": "priority"
+        },
+        {
+          "skill": "user",
+          "group": "priority"
+        }
+      ]
+    }
+  },
+  "implementation_modified": false
+}
