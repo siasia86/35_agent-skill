@@ -4,6 +4,11 @@
 
 ## [Unreleased]
 
+### Windows 구조와 Workflow 안내 — 2026-10-03
+
+- 루트 [codex_windows.md](codex_windows.md)에 현재 tree·복사 사용/개발 기록의 구분·Codex Markdown 인식 방식·문서별 역할·보완안·장단점과 정적 검토 기준을 정리했습니다.
+- 현재 배치와 미적용 보완안을 구분하며 기존 skill·설정·작업 문서의 이동이나 실제 홈 적용은 수행하지 않습니다.
+
 ### 단순 조회의 Luna 우선 배정 — 2026-10-03
 
 - Windows work-rules와 동봉 역할 2곳, personal AGENTS에 Luna 우선 배정·근거 수집·main AI 검증·지원 여부와 위임 비용 예외를 추가했습니다. 기본 모델·홈·config·중앙 정책은 변경하지 않습니다.
