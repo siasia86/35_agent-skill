@@ -2,6 +2,8 @@
 
 플랫폼 분리 이후 기존 원문 보존 이식본은 [codex_linux](codex_linux/README.md)에 있고 Windows의 전체19개·현재공통설정 이관은 [이관 기록](agent-workflows/codex/WINDOWS_MIGRATION_2026-10-03.md)·[PLAN](agent-workflows/codex/windows/PLAN.md)·[TODO](agent-workflows/codex/windows/TODO.md)에서 확인합니다. 최적화는 전체이관 이후입니다. 이 문서의 축약 금지·원문 보존 기준과 과거 초안·검증 기록은 유지하며 새 작업 범위는 [분리 기록](agent-workflows/codex/PLATFORM_SPLIT_2026-10-03.md)을 확인합니다.
 
+현재 공통 보고·채팅 요청 구분과 Windows helper 보완은 [보고 지침과 helper 보완](agent-workflows/codex/windows/REPORTING_REMEDIATION_2026-10-03.md)에서 확인합니다.
+
 Kiro CLI에서 사용하던 개인 작업 규칙과 스킬을 Codex에서 활용하기 위한 구조와 후속 작업을 정리합니다. GPT-6 Astra 사용을 염두에 둔 개인 구성안이며, 모델 선택·결제·설치는 후속 작업입니다.
 
 사용자가 지정한 루트 `TODO2.md`에 이번 대화의 구조와 설명을 기록합니다. 기존 [루트 TODO](TODO.md)의 전체 배포·중앙 관리 작업과 완료 기록은 유지하며, 이 문서의 체크리스트를 작성하는 것만으로 실행한 것으로 처리하지 않습니다.

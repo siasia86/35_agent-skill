@@ -6,6 +6,7 @@ Optional --raw-output is for private TEMP diagnostics only; public JSON has no p
 import argparse
 from contextlib import contextmanager
 import json
+import re
 from pathlib import Path
 import shutil
 import subprocess
@@ -60,7 +61,7 @@ def main():
             target.write_bytes(content.replace('\n', '\r\n').encode('utf-8') if crlf else content.encode('utf-8'))
             return target
 
-        def run(case, tool, expected, *arguments, cwd=None, expected_stdout=None):
+        def run(case, tool, expected, *arguments, cwd=None, expected_stdout=None, expected_metrics=None, expected_lines=None):
             command = [sys.executable, '-X', 'utf8', '-B', str(scripts / tool), *map(str, arguments)]
             process = subprocess.run(command, cwd=cwd or root, encoding='utf-8', capture_output=True, timeout=30)
             passed = process.returncode == expected and 'Traceback (most recent call last)' not in process.stderr
@@ -68,6 +69,24 @@ def main():
                 passed = passed and expected_stdout in process.stdout
             results.append({'case': case, 'tool': tool, 'expected_status': expected,
                             'actual_status': process.returncode, 'passed': passed})
+            if expected_metrics is not None:
+                metrics = {}
+                for key, pattern in {
+                    'files': r'검사 파일:\s*(\d+)개',
+                    'links': r'\| 링크:\s*(\d+)개',
+                    'broken_links': r'깨진 링크:\s*(\d+)건',
+                    'headings': r'헤딩:\s*(\d+)개',
+                    'issues': r'이슈:\s*(\d+)건',
+                }.items():
+                    match = re.search(pattern, process.stdout)
+                    if match:
+                        metrics[key] = int(match.group(1))
+                results[-1].update({'expected_metrics': expected_metrics, 'actual_metrics': metrics})
+                results[-1]['passed'] = results[-1]['passed'] and all(metrics.get(key) == value for key, value in expected_metrics.items())
+            if expected_lines is not None:
+                actual_lines = [int(value) for value in re.findall(r'L(\d+):', process.stdout)]
+                results[-1].update({'expected_lines': expected_lines, 'actual_lines': actual_lines})
+                results[-1]['passed'] = results[-1]['passed'] and actual_lines == expected_lines
             if case.endswith('-version'):
                 results[-1].update({'expected_version': '26.10.03',
                                     'actual_version': process.stdout.strip().rsplit(' ', 1)[-1]})
@@ -213,6 +232,92 @@ def main():
         run('style-directory-exclusion', 'md-style-check.py', 0, '--no-footer', '-E', 'ignored', root / 'style-exclude')
         run('style-strict-preserved', 'md-style-check.py', 0, '--strict', '--no-footer', clean_style)
 
+        # W04: escaped opening brackets depend on the parity of the backslash run.
+        for count, expected in ((1, 0), (2, 1), (3, 0), (4, 1)):
+            escaped_link = write(f'w04-backslashes-{count}.md', '# Root\n' + '\\' * count + '[Broken](absent.md)\n')
+            metrics = {'files': 1, 'links': expected, 'broken_links': expected}
+            run(f'w04-backslash-parity-{count}', 'md-link-check.py', expected, escaped_link, expected_metrics=metrics)
+
+        # W05: only equal-length runs close inline code; real links still count.
+        inline_double = write('w05-inline-double.md', '# Root\n``prefix ` [literal](absent.md) suffix``\n')
+        run('w05-code-span-inner-shorter-run', 'md-link-check.py', 0, inline_double,
+            expected_metrics={'files': 1, 'links': 0, 'broken_links': 0})
+        inline_then_real = write('w05-inline-then-real.md', inline_double.read_text(encoding='utf-8') + '[Broken](outside.md)\n')
+        run('w05-real-link-after-code-span', 'md-link-check.py', 1, inline_then_real,
+            expected_metrics={'files': 1, 'links': 1, 'broken_links': 1}, expected_lines=[3])
+        unmatched_inline = write('w05-unmatched-inline.md', '# Root\n``literal [Broken](absent.md)\n')
+        run('w05-unmatched-run-keeps-real-link', 'md-link-check.py', 1, unmatched_inline,
+            expected_metrics={'files': 1, 'links': 1, 'broken_links': 1})
+        anchor_literal = write('w05-anchor-literal.md', '# Root\n`[literal](#absent)`\n')
+        run('w05-inline-anchor-literal', 'md-heading-check.py', 0, *anchor_flags, anchor_literal,
+            expected_metrics={'files': 1, 'headings': 1, 'issues': 0})
+        literal_then_real = write('w05-anchor-then-real.md', anchor_literal.read_text(encoding='utf-8') + '[Broken](#outside)\n')
+        run('w05-real-anchor-after-code-span', 'md-heading-check.py', 1, *anchor_flags, literal_then_real,
+            expected_metrics={'files': 1, 'headings': 1, 'issues': 1}, expected_lines=[3])
+        code_heading = write('w05-code-heading.md', '# Root\n[API](#api_name)\n## `api_name`\n')
+        run('w05-heading-code-text-preserved', 'md-heading-check.py', 0, *anchor_flags, code_heading,
+            expected_metrics={'files': 1, 'headings': 2, 'issues': 0})
+        duplicate_literal = write('w05-duplicate-literal.md', '# Root\n`[literal](#overview)`\n## Overview\n## Overview\n')
+        run('w05-literal-does-not-activate-duplicate-policy', 'md-heading-check.py', 0,
+            '--no-number', '--no-level', '--no-toc', duplicate_literal,
+            expected_metrics={'files': 1, 'headings': 3, 'issues': 0})
+
+        # W06: Linux-style relative separators remain valid on native Windows.
+        write('w06-exclude/document.md', '# Root\n')
+        write('w06-exclude/nested/ignored/bad.md', '# Root\n[Bad](#absent)\n')
+        for label, exclusion in (('forward', 'nested/ignored'), ('native', str(Path('nested') / 'ignored'))):
+            run(f'w06-relative-exclusion-{label}', 'md-heading-check.py', 0, *anchor_flags,
+                '-E', exclusion, root / 'w06-exclude', expected_metrics={'files': 1, 'headings': 1, 'issues': 0})
+        write('w06-config/.md-heading-check.toml', 'exclude_dirs = ["nested/ignored"]\n')
+        write('w06-config/document.md', '# Root\n')
+        write('w06-config/nested/ignored/bad.md', '# Root\n[Bad](#absent)\n')
+        run('w06-relative-exclusion-toml', 'md-heading-check.py', 0, *anchor_flags, root / 'w06-config',
+            expected_metrics={'files': 1, 'headings': 1, 'issues': 0})
+
+        # W07: encoded fragments apply consistently to anchors, TOC, and policy.
+        encoded_anchor = write('w07-encoded-anchor.md', '# Root\n[Target](#%ED%95%9C%EA%B8%80)\n## 한글\n')
+        run('w07-encoded-korean-anchor', 'md-heading-check.py', 0, *anchor_flags, encoded_anchor,
+            expected_metrics={'files': 1, 'headings': 2, 'issues': 0})
+        encoded_missing = write('w07-encoded-missing.md', '# Root\n[Missing](#%ED%95%9C%EA%B8%80)\n')
+        run('w07-encoded-missing-anchor-fails', 'md-heading-check.py', 1, *anchor_flags, encoded_missing,
+            expected_metrics={'files': 1, 'headings': 1, 'issues': 1}, expected_lines=[2])
+        encoded_toc = write('w07-encoded-toc.md', '# Root\n## 목차\n[Target](#1-%ED%95%9C%EA%B8%80)\n## 1. 한글\n')
+        run('w07-encoded-toc-completeness', 'md-heading-check.py', 0, encoded_toc,
+            expected_metrics={'files': 1, 'headings': 3, 'issues': 0})
+        encoded_duplicate = write('w07-encoded-duplicate.md', '# Root\n[First](#%ED%95%9C%EA%B8%80)\n## 한글\n## 한글\n')
+        run('w07-encoded-duplicate-policy-preserved', 'md-heading-check.py', 1,
+            '--no-number', '--no-level', '--no-toc', encoded_duplicate,
+            expected_metrics={'files': 1, 'headings': 3, 'issues': 1}, expected_lines=[4])
+        encoded_suffix = write('w07-encoded-suffix.md', '# Root\n[Second](#%ED%95%9C%EA%B8%80-1)\n## 한글\n## 한글\n')
+        run('w07-encoded-duplicate-suffix', 'md-heading-check.py', 0, *anchor_flags, encoded_suffix,
+            expected_metrics={'files': 1, 'headings': 3, 'issues': 0})
+
+        # W08: remove closing ATX syntax without removing literal escaped marks.
+        closing_atx = write('w08-closing-atx.md', '# Root\n[Target](#overview)\n## Overview ##\n')
+        run('w08-closing-atx-anchor', 'md-heading-check.py', 0, *anchor_flags, closing_atx,
+            expected_metrics={'files': 1, 'headings': 2, 'issues': 0})
+        closing_tab = write('w08-closing-tab.md', '# Root\n[Target](#overview)\n## Overview\t###\t\n')
+        run('w08-closing-atx-tab-whitespace', 'md-heading-check.py', 0, *anchor_flags, closing_tab,
+            expected_metrics={'files': 1, 'headings': 2, 'issues': 0})
+        escaped_atx = write('w08-escaped-closing.md', '# Root\n[Target](#overview-)\n## Overview \\##\n')
+        run('w08-escaped-hashes-remain-heading-text', 'md-heading-check.py', 0, *anchor_flags, escaped_atx,
+            expected_metrics={'files': 1, 'headings': 2, 'issues': 0})
+
+        # W09: classify excluded URI schemes without modifying local paths.
+        for label, uri in (('https', 'HTTPS://example.invalid/a'), ('http', 'HtTp://example.invalid/a'), ('mail', 'MAILTO:person@example.invalid')):
+            external = write(f'w09-external-{label}.md', '# Root\n[External](' + uri + ')\n')
+            run(f'w09-scheme-case-{label}', 'md-link-check.py', 0, external,
+                expected_metrics={'files': 1, 'links': 0, 'broken_links': 0})
+
+        # W10: every line-numbered diagnostic points into the original source.
+        style_line_control = write('w10-line-control.md', '# Document\n\n✅NoSpace\n')
+        style_line_fenced = write('w10-line-fenced.md', '# Document\n```text\nsample\n```\n\n✅NoSpace\n')
+        style_line_quoted = write('w10-line-quoted.md', '# Document\n> ~~~text\n> sample\n> ~~~\n\n✅NoSpace\n')
+        for label, target, line in (('control', style_line_control, 3), ('fenced', style_line_fenced, 6), ('quoted-tilde', style_line_quoted, 6)):
+            run(f'w10-original-line-{label}', 'md-style-check.py', 1, '--no-footer', target,
+                expected_metrics={'files': 1, 'issues': 1}, expected_lines=[line])
+
+
         # The fixture remains on TEMP's drive. Change only subprocess cwd to an
         # existing directory on the other drive; never write that directory.
         cross_cwd = args.cross_drive_cwd
@@ -236,12 +341,12 @@ def main():
             run('cross-drive-cwd-style-failure-display', 'md-style-check.py', 1, '--no-footer', style_h1,
                 cwd=cross_cwd, expected_stdout=style_h1.name)
 
-        # A user-supplied or preserved repository README is read-only. These cases exercise
+        # A user-supplied or current Windows usage README is read-only. These cases exercise
         # TEMP cwd -> existing other-drive file as well as absolute display.
         cross_file = args.cross_drive_file
         skills_root = ((args.repo / 'codex_windows/skills') if args.repo else args.skills)
         if cross_file is None and skills_root:
-            candidate = skills_root.resolve().parent.parent / 'codex_linux/README.md'
+            candidate = skills_root.resolve().parent / 'README.md'
             if candidate.is_file() and candidate.drive != root.drive:
                 cross_file = candidate
         if cross_file is not None:
@@ -265,7 +370,10 @@ def main():
                     expected_stdout='검사할 .md 파일이 없습니다.')
 
     summary = {'runtime': 'native-windows' if sys.platform == 'win32' else sys.platform,
-               'cases': len(results), 'passed': sum(r['passed'] for r in results),
+               'cases': len(results),
+               'baseline_cases': sum(not r['case'].startswith(tuple('w' + str(n).zfill(2) + '-' for n in range(4, 11))) for r in results),
+               'new_cases': sum(r['case'].startswith(tuple('w' + str(n).zfill(2) + '-' for n in range(4, 11))) for r in results),
+               'passed': sum(r['passed'] for r in results),
                'failed': sum(not r['passed'] for r in results), 'results': results}
     if args.output:
         args.output.parent.mkdir(parents=True, exist_ok=True)

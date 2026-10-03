@@ -71,9 +71,11 @@ log_msg_error() {
 }
 
 # ── 설정 파일 백업 함수 ────────────────────────────────────
-backup_conf() {
+backup_conf() (
+    # A subshell keeps this cleanup trap out of the caller's trap policy.
     local conf_file=$1
     local backup_file="${conf_file}_ORG_${DATE}"
+    local stage_dir=''
     local status
     if [ ! -f "$conf_file" ]; then
         log_msg_info 0 "$conf_file not exists. skip backup."
@@ -87,15 +89,31 @@ backup_conf() {
         log_msg_info 0 "[dry-run] would backup: $conf_file -> $backup_file"
         return "$?"
     fi
-    if cp -a -- "$conf_file" "$backup_file"; then
-        log_msg_info 0 "backup: $backup_file"
-        return "$?"
-    else
+    # GNU ln -T publishes without replacing an existing file/directory/link.
+    # Same-filesystem hard links must be supported; never fall back to overwrite.
+    # The payload is an independent cp -a snapshot, not a link to the live source.
+    trap 'if [ -n "$stage_dir" ]; then rm -f -- "$stage_dir/payload"; rmdir -- "$stage_dir"; fi' EXIT
+    trap 'exit 130' INT
+    trap 'exit 143' TERM
+    if stage_dir=$(mktemp -d -- "${backup_file}.stage.XXXXXXXX"); then :; else
+        status=$?
+        log_msg_error 1 "backup staging failed with status $status" || :
+        return "$status"
+    fi
+    if cp -a -- "$conf_file" "$stage_dir/payload"; then :; else
         status=$?
         log_msg_error 1 "backup copy failed with status $status" || :
         return "$status"
     fi
-}
+    if ln -T -- "$stage_dir/payload" "$backup_file"; then
+        log_msg_info 0 "backup: $backup_file"
+        return "$?"
+    else
+        status=$?
+        log_msg_error 1 "backup publication failed with status $status; destination preserved" || :
+        return "$status"
+    fi
+)
 
 # ── 서비스 시작 함수 ───────────────────────────────────────
 service_start() {

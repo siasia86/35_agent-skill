@@ -15,6 +15,7 @@ import stat
 import subprocess
 import sys
 import tempfile
+import time
 from unittest import mock
 import uuid
 
@@ -129,6 +130,56 @@ def main(argv=None):
         record('python_atomic_replace_failure_propagates', code, 0)
         record('python_atomic_replace_failure_preserves_original', int(valid.read_bytes() != before), 0)
         record('python_atomic_replace_failure_cleans_temp', int(bool(list(fixture.glob('.tmp_*')))), 0)
+
+        # W02: real logger setup must not add its output to business inputs.
+        shared_log_dir = fixture / 'business and file logs'
+        shared_log_dir.mkdir()
+        business = shared_log_dir / '00_business.txt'
+        lookalike = shared_log_dir / 'script_template_example.log'
+        business.write_text('before business\n', encoding='utf-8')
+        lookalike.write_text('before user-owned data\n', encoding='utf-8')
+        result = run_python(template, ['-d', '-D', shared_log_dir, '--log-dir', shared_log_dir])
+        record('python_shared_log_dir_dry_run_status', result['code'], 0, result)
+        monthly = python_module._log_file_path(python_module.log.name, shared_log_dir)
+        selected = [line for line in result['stderr'].splitlines() if 'would invoke project transform:' in line]
+        record('python_shared_log_dir_excludes_active_log', int(any(monthly.name in line for line in selected)), 0)
+        record('python_shared_log_dir_keeps_user_loglike_file', int(not any(lookalike.name in line for line in selected)), 0)
+        processed = []
+
+        def business_transform(text, path):
+            """A real TEMP text transform, leaving the shipping placeholder alone."""
+            processed.append(Path(path).name)
+            return text.replace('before', 'after')
+
+        try:
+            with mock.patch.object(python_module, 'transform_content', side_effect=business_transform):
+                result = call_main(python_module, ['-D', str(shared_log_dir), '--log-dir', str(shared_log_dir)])
+            record('python_shared_log_dir_normal_status', result['code'], 0, result)
+            record('python_shared_log_dir_only_business_dispatch', int(set(processed) != {business.name, lookalike.name}), 0)
+            record('python_shared_log_dir_business_written', int(not business.read_text(encoding='utf-8').startswith('after')), 0)
+        finally:
+            for handler in list(python_module.log.handlers):
+                if hasattr(handler, 'baseFilename'):
+                    python_module.log.removeHandler(handler)
+                    handler.close()  # Own fixture handler only, for Windows cleanup.
+        monthly_before = monthly.read_bytes()
+        business_before = business.read_bytes()
+        result = call_main(python_module, ['-d', '-f', str(business), str(monthly), '--log-dir', str(shared_log_dir)])
+        record('python_explicit_log_batch_conflict_status', result['code'], 1, result)
+        record('python_explicit_log_conflict_before_log_open', int(monthly.read_bytes() != monthly_before), 0)
+        record('python_explicit_log_conflict_before_business_dispatch', int(business.read_bytes() != business_before), 0)
+        result = call_main(python_module, ['-d', str(monthly), '--log-dir', str(shared_log_dir)])
+        record('python_log_target_conflict_status', result['code'], 1, result)
+        alias = shared_log_dir / 'log identity alias.txt'
+        try:
+            os.link(monthly, alias)
+        except OSError:
+            record('python_log_identity_alias_capability', 'SKIP', 'SKIP')
+        else:
+            result = call_main(python_module, ['-d', str(alias), '--log-dir', str(shared_log_dir)])
+            record('python_log_identity_alias_conflict_status', result['code'], 1, result)
+            record('python_log_identity_alias_preserves_bytes', int(alias.read_bytes() != monthly_before), 0)
+            alias.unlink()
 
         lock_module = load_script(lock_script, 'windows_lock_test')
         token = uuid.uuid4().hex
@@ -291,6 +342,66 @@ def main(argv=None):
             result = subprocess.run([str(args.bash), shell_path, '--dry-run', '--backup', './--name'], cwd=fixture,
                                     capture_output=True, encoding='utf-8', timeout=20, env=bash_env)
             record('bash_leading_dash_filename_explicit_path', result.returncode, 0, {'stdout': result.stdout, 'stderr': result.stderr})
+
+            # W03: snapshot a private copy, then publish without clobbering.
+            backup_source = fixture / 'snapshot source.txt'
+            backup_source.write_text('snapshot original\n', encoding='utf-8')
+            snapshot_harness = 'source "$1"\nDATE="fixture-snapshot"\nbackup_conf "$2"\n'
+            snapshot = Path(str(backup_source) + '_ORG_fixture-snapshot')
+            result = subprocess.run([str(args.bash), '-c', snapshot_harness, 'fixture', shell_path, backup_source.as_posix()],
+                                    capture_output=True, encoding='utf-8', timeout=20, env=bash_env)
+            record('bash_backup_snapshot_status', result.returncode, 0, {'stdout': result.stdout, 'stderr': result.stderr})
+            record('bash_backup_success_log_delivered', int('backup: ' not in result.stderr), 0)
+            record('bash_backup_snapshot_stage_cleanup', int(bool(list(fixture.glob(backup_source.name + '_ORG_fixture-snapshot.stage.*')))), 0)
+            backup_source.write_text('live source changed\n', encoding='utf-8')
+            record('bash_backup_snapshot_independent_of_live_source', int(not snapshot.exists() or snapshot.read_text(encoding='utf-8') != 'snapshot original\n'), 0)
+            snapshot_before = snapshot.read_bytes() if snapshot.exists() else b''
+            result = subprocess.run([str(args.bash), '-c', snapshot_harness, 'fixture', shell_path, backup_source.as_posix()],
+                                    capture_output=True, encoding='utf-8', timeout=20, env=bash_env)
+            record('bash_existing_snapshot_collision_status', result.returncode, 1, {'stdout': result.stdout, 'stderr': result.stderr})
+            record('bash_existing_snapshot_collision_preserves_bytes', int(not snapshot.exists() or snapshot.read_bytes() != snapshot_before), 0)
+
+            publish_failure = 'source "$1"\nDATE="fixture-publish-fail"\nln() { return 11; }\nif backup_conf "$2"; then printf "AFTER_BACKUP\\n"; exit 0; else exit "$?"; fi\n'
+            result = subprocess.run([str(args.bash), '-c', publish_failure, 'fixture', shell_path, backup_source.as_posix()],
+                                    capture_output=True, encoding='utf-8', timeout=20, env=bash_env)
+            record('bash_publish_failure_status', result.returncode, 11, {'stdout': result.stdout, 'stderr': result.stderr})
+            record('bash_publish_failure_stops_followup', int('AFTER_BACKUP' in result.stdout or 'backup: ' in result.stderr), 0)
+            record('bash_publish_failure_no_overwrite_fallback', int(Path(str(backup_source) + '_ORG_fixture-publish-fail').exists()), 0)
+            record('bash_publish_failure_stage_cleanup', int(bool(list(fixture.glob(backup_source.name + '_ORG_fixture-publish-fail.stage.*')))), 0)
+            record('bash_copy_failure_stage_cleanup', int(bool(list(fixture.glob(valid.name + '_ORG_*.stage.*')))), 0)
+
+            # Pause one actual publication, complete another snapshot, then
+            # verify the loser cannot replace the winner's completed bytes.
+            race_source = fixture / 'race snapshot source.txt'
+            race_source.write_text('older snapshot\n', encoding='utf-8')
+            ready, proceed = fixture / 'publish-ready', fixture / 'publish-proceed'
+            race_snapshot = Path(str(race_source) + '_ORG_fixture-race')
+            paused_publish = ('source "$1"\nDATE="fixture-race"\nREADY=$3\nPROCEED=$4\n'
+                              'ln() { : > "$READY"; local attempt; for ((attempt=0; attempt<300; attempt++)); do '
+                              'if [ -f "$PROCEED" ]; then command ln "$@"; return "$?"; fi; sleep 0.02; done; return 99; }\n'
+                              'backup_conf "$2"\n')
+            winner_publish = 'source "$1"\nDATE="fixture-race"\nbackup_conf "$2"\n'
+            loser = subprocess.Popen([str(args.bash), '-c', paused_publish, 'fixture', shell_path, race_source.as_posix(), ready.as_posix(), proceed.as_posix()],
+                                     stdout=subprocess.PIPE, stderr=subprocess.PIPE, encoding='utf-8', env=bash_env)
+            try:
+                deadline = time.monotonic() + 6
+                while not ready.exists() and loser.poll() is None and time.monotonic() < deadline:
+                    time.sleep(0.02)
+                record('bash_race_publication_barrier_ready', int(not ready.exists()), 0)
+                race_source.write_text('winner snapshot\n', encoding='utf-8')
+                winner = subprocess.run([str(args.bash), '-c', winner_publish, 'fixture', shell_path, race_source.as_posix()],
+                                        capture_output=True, encoding='utf-8', timeout=20, env=bash_env)
+                winner_bytes = race_snapshot.read_bytes() if race_snapshot.exists() else b''
+                proceed.write_text('continue', encoding='utf-8')
+                stdout, stderr = loser.communicate(timeout=20)
+                record('bash_race_winner_status', winner.returncode, 0, {'stdout': winner.stdout, 'stderr': winner.stderr})
+                record('bash_race_loser_status', loser.returncode, 1, {'stdout': stdout, 'stderr': stderr})
+                record('bash_race_completed_snapshot_preserved', int(not race_snapshot.exists() or race_snapshot.read_bytes() != winner_bytes or winner_bytes != race_source.read_bytes()), 0)
+                record('bash_race_loser_stage_cleanup', int(bool(list(fixture.glob(race_source.name + '_ORG_fixture-race.stage.*')))), 0)
+            finally:
+                if loser.poll() is None:
+                    loser.kill()
+                loser.wait()
 
     text = json.dumps(public, ensure_ascii=False, indent=2) + '\n'
     if args.output:

@@ -29,7 +29,7 @@ Windows의 Bash 업무는 Git Bash/WSL에서 [전체 Bash 템플릿](scripts/scr
 
 - 기본 무인수 실행은 help만 출력합니다. `--backup`, `--ensure-dir`, `--service`는 실제 현재 요청 대상과 승인 범위에서 명시적으로 선택합니다. 업무 없는 scaffold가 설치·서비스·시스템 로그·백업 디렉터리를 자동 실행하지 않습니다.
 - `run_msg_info 번호 명령 인수...`는 인자 배열을 실행하고 원래 상태를 반환합니다. 로그는 stderr이고 필수 단계는 `|| return "$?"` 또는 최상위 `|| exit "$?"`로 중단합니다. `set -e`만으로 복합 함수 내부 실패를 보장하지 않습니다. 모든 helper는 실패 상태를 명시적으로 전파합니다.
-- `backup_conf`는 실제 `cp -a`가 성공한 뒤에만 성공 로그를 씁니다. 실패 상태를 원래대로 반환하여 후속 작업을 막습니다. 원문의 없는 파일 skip 계약은 유지하되 skip을 백업 성공이라고 기록하지 않습니다. 같은 목적의 백업이 이미 있으면 덮어쓰지 않고 실패합니다. 메타데이터 보존은 사용한 Git Bash/WSL·파일시스템의 `cp -a` 범위이며 Windows ACL/ADS 보존을 주장하지 않습니다.
+- `backup_conf`는 같은 부모의 독립 `mktemp` stage에 `cp -a`로 완성본을 만든 후 GNU `ln -T`로 목적지를 독점 게시합니다. stage 작성과 게시가 모두 성공한 뒤에만 성공 로그를 쓰고 실패 상태를 전파합니다. 목적지가 이미 있거나 동시 호출이 먼저 게시하면 덮어쓰지 않고 실패하며 자기 stage만 정리합니다. 현재 Bash의 `cp`·`mktemp`·GNU `ln -T`와 같은 파일시스템의 hard-link 지원이 필요합니다. 미지원 파일시스템은 실패하며 덮어쓰기 fallback을 사용하지 않습니다. 없는 원본의 skip 계약은 유지하되 skip을 백업 성공이라고 기록하지 않습니다. 메타데이터 보존은 사용한 `cp -a`의 범위이며 Windows ACL/ADS 보존을 주장하지 않습니다.
 - `service_start`는 WSL/Linux의 실제 init 시스템에서만 선택적으로 사용합니다. Git Bash에서 Linux 서비스 호출은 지원하지 않습니다. `daemon-reload`, enable, restart, status 실패를 전파합니다. `ensure_dir`는 새 디렉터리만 만들고 owner가 명시된 POSIX 작업에서만 chown하며 오류를 반환합니다. 네이티브 Windows 서비스는 현재 요청에 맞는 PowerShell cmdlet로 작성합니다.
 - 로그 파일은 `LOG_FILE01`, status 위치는 `backup_status_log_dir`를 사용자가 허용한 작업 경로로 명시했을 때만 초기화합니다. 기본은 stderr 콘솔이며 stdout 데이터는 유지합니다. 전역 `exec >> ... 2>&1`로 stdout을 로그에 섞지 않습니다. 환경 변수의 기존 사용자 값을 존중합니다.
 

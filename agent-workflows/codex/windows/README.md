@@ -7,7 +7,8 @@
 - [PLAN](PLAN.md): 이관과 후속 작업 순서.
 - [TODO](TODO.md): 완료·미실행·사용자 검증 상태.
 - [ISSUE](ISSUE.md): 호환 교정과 환경 제약.
-- [개선 검토](IMPROVEMENT_REVIEW_2026-10-03.md): 현재 구성 정리와 재현된 후속 보완 사항.
+- [보고 지침과 helper 보완](REPORTING_REMEDIATION_2026-10-03.md): 현재 공통 보고 규칙·W02–W10 수정·새 검증과 미실행.
+- [개선 검토](IMPROVEMENT_REVIEW_2026-10-03.md): 구성 정리와 보완 전 재현 근거.
 - [이관 REVIEW](REVIEW.md): `773a150` 이관 당시 검사와 한계.
 - [개발 검증 도구](verification/README.md): 현재 실행 경로와 과거 결과의 구분.
 - [이관 기록](../WINDOWS_MIGRATION_2026-10-03.md): 전체 출처·보존·검증·복구 기준.

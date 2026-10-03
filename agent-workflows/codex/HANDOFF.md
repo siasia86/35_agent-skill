@@ -2,7 +2,7 @@
 
 ## 1. 재개할 작업과 읽기 순서
 
-**2026-10-03 현재 상태:** Windows 19개 전체 이관본은 `yunli@773a150`에 게시했습니다. 복사용 본문은 [codex_windows](../../codex_windows/README.md), 현재 개발 계획·후속은 [Windows 작업 기록](windows/README.md)에 구분합니다. 사용자 검증·개인 홈 적용·main 반영은 미완료이며 실제 Git 상태를 먼저 대조합니다.
+**2026-10-03 현재 상태:** Windows 전체 이관 `773a150`과 복사용 구성 정리 `47f3328` 이후 work-rules·personal AGENTS의 공통 보고·채팅 요청 구분과 W02–W10을 보완했습니다. 현재 변경·새 검증은 [보고 지침과 helper 보완](windows/REPORTING_REMEDIATION_2026-10-03.md), 복사용 본문은 [codex_windows](../../codex_windows/README.md), 후속은 [Windows 작업 기록](windows/README.md)에서 확인합니다. 실제 게시 SHA는 Git refs를 먼저 대조하고 사용자 검증·개인 홈 적용·main 반영은 후속으로 유지합니다.
 
 **플랫폼 분리 전 2026-10-03 상태:** 원격·로컬 main·yunli 통합 이후 사용자 요청으로 동작 문제 5개와 참조 완결성을 로컬 보완하고 회귀 검사를 마쳤습니다. 수정본은 후속 요청으로 yunli 게시와 main 병합을 마쳤으며 최신 상태는 아래 10절과 [보완 기록](REMEDIATION_2026-10-03.md#7-yunli-게시와-main-병합-완료)을 따릅니다. 다음 미완료 항목은 최종본 독립 모델 사례와 사용자가 선택하는 실제 환경 확인입니다. [codex/TODO](../../codex_linux/TODO.md#1-다음-세션에서-이어갈-추가-검토)에 범위를 남깁니다.
 

@@ -32,7 +32,7 @@ import argparse
 import os
 import re
 import sys
-from md_common import configure_utf8_output, display_path, strip_fenced_code, iter_inline_links
+from md_common import configure_utf8_output, display_path, strip_fenced_code, iter_inline_links, mask_inline_code
 
 # ── patterns ──────────────────────────────────────────────────────────────────
 
@@ -92,8 +92,7 @@ def strip_code_blocks_preserve_lines(content, filepath=None):
         message = f'unclosed code block: {label} (last open: L{open_line})'
         print(f'🟡 {message}', file=sys.stderr)
         raise UnclosedCodeBlockError(message)
-    return '\n'.join(INLINE_CODE_PATTERN.sub(_blank_inline, line)
-                     for line in clean.split('\n'))
+    return mask_inline_code(clean)
 
 def extract_link_path(raw_link):
     """Extract a destination with angle/parenthesis/title and URL decoding."""
@@ -116,7 +115,7 @@ def check_file(filepath):
         for link, link_path in iter_inline_links(line):
 
             # 외부 링크, 앵커 제외
-            if link_path.startswith(('http://', 'https://', '#', 'mailto:')):
+            if link_path.lower().startswith(('http://', 'https://', '#', 'mailto:')):
                 continue
 
             if not link_path:

@@ -22,6 +22,8 @@ Bash 조건은 `test_runtime.py`에서 `--bash '<현재 Git Bash의 bash.exe 경
 
 검사에 쓰는 fixtures는 새 TEMP 안에서 생성·정리합니다. 운영 리소스·개인 홈·네트워크·권한을 바꾸지 않습니다. 공식 `skill-creator`의 `quick_validate.py`도 별도 실행하며 PyYAML은 개발 검증용일 뿐 동봉 runtime 의존성이 아닙니다.
 
+W02–W10의 신규 회귀는 Markdown91조건, Python/Bash108조건으로 확장했습니다. 시작/완료 보고 규칙과 현재 판정·미실행은 [보고 지침과 helper 보완](../REPORTING_REMEDIATION_2026-10-03.md#3-현재-검증과-미실행)을 확인합니다.
+
 ## 3. 결과와 한계
 
 `results.json`·`input_hashes.json`·`behavior_summary.json`은 이관 커밋 `773a150`의 과거 검사 결과·입력 해시·사례 기록이며 당시 경로와 bytes를 보존합니다. [이관 결과](results.json)와 [당시 입력 해시](input_hashes.json)를 현재 파일의 검사 결과로 재사용하지 않습니다. 새 검사는 별도 결과 파일에 비식별 case·카운트·판정을 기록합니다. 개인 절대 경로·계정·토큰·원시 stdout은 로컬에 보존합니다. 검사 입력과 실제 결과가 바뀌면 새 결과를 기록합니다. 원문의 과거 Linux 결과는 Windows 최종본 결과로 바꾸지 않습니다.

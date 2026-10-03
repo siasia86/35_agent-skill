@@ -4,6 +4,12 @@
 
 ## [Unreleased]
 
+### Windows 공통 보고 지침과 helper 보완 — 2026-10-03
+
+- work-rules·personal AGENTS에 시작/완료 보고, 결과 경로·가시성, 성과/제약, 채팅 `;` 요청 구분 규칙을 반영했습니다. 코드·명령어 등 내용 안의 기호는 원래 의미를 유지합니다.
+- W02–W10과 자기 폴더 예시를 보완하고 원문·19개 독립 복사 구성을 보존했습니다. 현재 검사와 미실행은 [보완 기록](agent-workflows/codex/windows/REPORTING_REMEDIATION_2026-10-03.md)으로 연결합니다.
+- 중앙 31의 35 정책은 구현 기준으로 정리하며 실제 홈 설치·자동 적용·main 반영과 구분합니다.
+
 ### Windows 복사용 구성과 개발 기록 분리 — 2026-10-03
 
 - `codex_windows`에는 19개 skill·동봉 자료·선택적 개인 지침/설정과 사용 안내를 유지합니다. PLAN·TODO·ISSUE·REVIEW와 개발 verification은 `agent-workflows/codex/windows`로 이동합니다.

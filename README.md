@@ -25,7 +25,7 @@
 - `claude/`: 기존 예약 영역.
 - [_reference](_reference/INDEX.md): 기존 참고 자료.
 
-이동 전 루트 안내는 [보존 README](105_backup/codex/REPOSITORY_README.before-1.0.0.md)에 남겼습니다. 기존 30·31 연동은 과거 중앙 관리 개발 이력이며 새 개인 스킬의 필수 의존성이 아닙니다. 다른 저장소나 개인 홈은 이번 요청에서 변경하지 않습니다.
+이동 전 루트 안내는 [보존 README](105_backup/codex/REPOSITORY_README.before-1.0.0.md)에 남겼습니다. 기존 30·31 연동은 과거 중앙 관리 개발 이력이며 새 개인 스킬의 필수 의존성이 아닙니다. 개인 skill을 사용하기 위해 다른 저장소나 개인 홈의 변경을 자동 요구하지 않습니다.
 
 `codex_windows/`에는 복사·사용에 필요한 파일만 둡니다. `PLAN.md`·`TODO.md`·`ISSUE.md`·`REVIEW.md`, 개발 검사기·출처 manifest·검증 결과는 [Windows 작업 기록](agent-workflows/codex/windows/README.md)에서 관리합니다. 같은 관리 문서가 복사 영역에 다시 들어오지 않도록 배치 기준을 확인하며, 재발 원인·조치는 [ISSUE W01](agent-workflows/codex/windows/ISSUE.md#4-복사용-영역과-개발-기록-혼입-w01)에 기록합니다. skill의 실행 도구와 필요한 참고 자료는 각 skill 폴더에 유지합니다.
 
@@ -40,6 +40,8 @@
 스킬 생성과 폴더 복사 검증을 실제 개인 홈 설치·자동 발견·운영 적용으로 처리하지 않습니다. 기존 동명 스킬이 있으면 백업·비교하고 사용자 편집을 보존합니다. 개인 설정 예시와 실제 개인 config도 구분합니다.
 
 ## 4. 작업과 검증
+
+- [Windows 보고 지침과 helper 보완](agent-workflows/codex/windows/REPORTING_REMEDIATION_2026-10-03.md): work-rules·personal AGENTS의 공통 보고·채팅 요청 구분 규칙과 W02–W10 수정·현재 검사.
 
 - [Windows 개선 검토](agent-workflows/codex/windows/IMPROVEMENT_REVIEW_2026-10-03.md): 복사용 구성 정리·새로 재현한 helper 보완 사항·검증과 미실행 범위.
 

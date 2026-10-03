@@ -25,7 +25,7 @@ import sys
 import tempfile
 
 # ── logger ────────────────────────────────────────────────────────────────────
-def _setup_logger(name='script_template', log_dir=None):
+def _setup_logger(name='script_template', log_dir=None, log_file=None):
     """Log to stderr, optionally to a caller-selected UTF-8 monthly file."""
     fmt = logging.Formatter('%(asctime)s [%(levelname)s] %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
     logger = logging.getLogger(name)
@@ -39,7 +39,7 @@ def _setup_logger(name='script_template', log_dir=None):
         try:
             directory = Path(log_dir)
             directory.mkdir(parents=True, exist_ok=True)
-            log_path = directory / f'{name}_{datetime.now():%Y%m}.log'
+            log_path = Path(log_file) if log_file is not None else _log_file_path(name, directory)
             if not any(isinstance(h, logging.FileHandler) and Path(h.baseFilename) == log_path.absolute() for h in logger.handlers):
                 file_handler = logging.FileHandler(log_path, encoding='utf-8')
                 file_handler.setFormatter(fmt)
@@ -96,6 +96,31 @@ def _checked_path(filepath, kind=None):
     return path, info
 
 
+def _log_file_path(name, log_dir):
+    """Compute the selected monthly log once, before any input processing."""
+    return Path(log_dir).absolute() / f'{name}_{datetime.now():%Y%m}.log'
+
+
+def _same_path_or_file(first, second):
+    """Compare Windows path spelling and existing file identities."""
+    if os.path.normcase(os.path.abspath(os.fspath(first))) == os.path.normcase(os.path.abspath(os.fspath(second))):
+        return True
+    try:
+        return os.path.samefile(first, second)
+    except OSError:
+        return False  # Missing/unreadable inputs are rejected by normal checks.
+
+
+def _active_log_paths():
+    """Return output paths from this template's configured file handlers."""
+    return [Path(handler.baseFilename) for handler in log.handlers if isinstance(handler, logging.FileHandler)]
+
+
+def _is_log_output(filepath, extra_paths=()):
+    """Keep business input separate from active and newly requested file logs."""
+    return any(_same_path_or_file(filepath, output) for output in [*_active_log_paths(), *extra_paths])
+
+
 def _atomic_write(filepath, data):
     """Replace a regular file through a flushed same-directory temporary file.
 
@@ -144,6 +169,8 @@ def transform_content(content, filepath):
 def process_file(filepath, dry_run=False, verbose=False):
     """Validate/read one UTF-8 file; plan or perform the project's transform."""
     path, _ = _checked_path(filepath, 'file')
+    if _is_log_output(path):
+        raise ValueError('business input conflicts with a file log output')
     with path.open('r', encoding='utf-8', newline='') as stream:
         content = stream.read()
     if dry_run:
@@ -171,6 +198,8 @@ def process_dir(dirpath, dry_run=False, verbose=False):
             _reject_reparse(info)
             if stat.S_ISDIR(info.st_mode):
                 continue  # Recursion is a project-specific feature, not implied.
+            if _is_log_output(child):
+                continue  # File logs are outputs, not implicit batch inputs.
             process_file(child, dry_run=dry_run, verbose=verbose)
         except (OSError, ValueError, TypeError, NotImplementedError) as exc:
             failures += 1
@@ -217,7 +246,14 @@ def main(argv=None):
     if not (args.target or args.file or args.dir):
         parser.print_help()
         return 0
-    _setup_logger(log_dir=args.log_dir)
+    planned_log = _log_file_path(log.name, args.log_dir) if args.log_dir is not None else None
+    explicit_files = args.file if args.file else [args.target] if args.target else []
+    requested_outputs = [planned_log] if planned_log is not None else []
+    if any(_is_log_output(filepath, requested_outputs) for filepath in explicit_files):
+        # Preflight before FileHandler opens/appends an existing input file.
+        log.error('business input conflicts with a file log output')
+        return 1
+    _setup_logger(log_dir=args.log_dir, log_file=planned_log)
     log.setLevel(logging.ERROR if args.quiet else logging.DEBUG if args.verbose else logging.INFO)
     targets = [(path, 'file') for path in args.file] if args.file else [(path, 'dir') for path in args.dir] if args.dir else [(args.target, None)]
     failures = 0

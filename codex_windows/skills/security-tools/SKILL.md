@@ -34,7 +34,7 @@ description: Documents security masking tools (ip_mask.py, json_mask.py, aws-sec
 문서 스타일은 동봉 [STYLE.md](references/STYLE.md)를 사용합니다. `sia-md-*` 대신 동봉 스크립트를 Python 3.11 이상으로 실행합니다. 기본 OS/언어 runtime 외 pip·다른 저장소 설치는 필요하지 않습니다. 대상 저장소의 선택적 TOML 설정은 실제 존재할 때만 적용합니다.
 
 ```powershell
-$SkillDir = 'C:\work\skills\md-link-check'  # 실제 복사된 해당 스킬 폴더
+$SkillDir = 'C:\work\skills\security-tools'  # 실제 복사된 해당 스킬 폴더
 $Target = 'C:\work\repo\README.md'  # 현재 요청의 실제 대상
 python -X utf8 -B (Join-Path $SkillDir 'scripts/md-style-check.py') $Target
 python -X utf8 -B (Join-Path $SkillDir 'scripts/md-heading-check.py') $Target

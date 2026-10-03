@@ -32,7 +32,7 @@ import sys
 import tomllib
 import unicodedata
 from functools import lru_cache
-from md_common import configure_utf8_output, display_path, fence_info, strip_blockquote_prefix
+from md_common import configure_utf8_output, display_path, fence_info, strip_blockquote_prefix, strip_fenced_code
 
 # ── 컬러 ──────────────────────────────────────────────────────────────────────
 
@@ -87,22 +87,8 @@ def split_table_row(line):
 
 @lru_cache(maxsize=1)
 def strip_code_blocks(content):
-    """코드블록 제거 후 반환하며 현재 파일의 반복 호출 결과를 캐시합니다."""
-    lines = content.split('\n')
-    result = []
-    fence_length = None
-    fence_char = None
-    for line in lines:
-        info = _fence_info(line)
-        if fence_length is None and info:
-            fence_char, fence_length = info[0], info[1]
-        elif (fence_length is not None and info
-              and info[0] == fence_char and info[1] >= fence_length and not info[2]):
-            fence_length = None
-            fence_char = None
-        elif fence_length is None:
-            result.append(line)
-    return '\n'.join(result)
+    """Blank fenced code while preserving original diagnostic line numbers."""
+    return strip_fenced_code(content)[0]
 
 
 @lru_cache(maxsize=1)

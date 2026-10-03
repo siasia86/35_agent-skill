@@ -49,7 +49,8 @@ import os
 import re
 import sys
 import tomllib
-from md_common import configure_utf8_output, display_path, strip_fenced_code, unique_heading_anchors
+from md_common import configure_utf8_output, display_path, strip_fenced_code, unique_heading_anchors, mask_inline_code
+from urllib.parse import unquote
 
 # ── patterns ──────────────────────────────────────────────────────────────────
 
@@ -171,7 +172,8 @@ def strip_code_blocks(content):
 
 def collect_md_files(paths, exclude_dirs=None, exclude_files=None):
     """대상 경로에서 .md 파일 목록 수집. 제외 설정을 적용합니다."""
-    skip_dirs = set(exclude_dirs or DEFAULT_EXCLUDE_DIRS) | DEFAULT_EXCLUDE_DIRS
+    skip_dirs = {os.path.normpath(value)
+                 for value in set(exclude_dirs or DEFAULT_EXCLUDE_DIRS) | DEFAULT_EXCLUDE_DIRS}
     skip_files = set(exclude_files or [])
     files = []
     for path in paths:
@@ -199,7 +201,8 @@ def extract_headings(content):
     for lineno, line in enumerate(content.split('\n'), 1):
         m = HEADING_PATTERN.match(line)
         if m:
-            headings.append((len(m.group(1)), m.group(2), lineno))
+            text = re.sub(r'(?:^|[ \t]+)#+[ \t]*$', '', m.group(2))
+            headings.append((len(m.group(1)), text, lineno))
     return headings
 
 
@@ -209,7 +212,7 @@ def check_anchors(headings, content):
     issues = []
     for lineno, line in enumerate(content.split('\n'), 1):
         for anchor in ANCHOR_LINK_PATTERN.findall(line):
-            if anchor not in valid:
+            if anchor not in valid and unquote(anchor) not in valid:
                 issues.append((lineno, 'anchor', f'앵커 대상 없음: #{anchor}'))
     return issues
 
@@ -280,6 +283,7 @@ def check_duplicates(headings, content):
     referenced = set()
     for line in content.split('\n'):
         referenced.update(ANCHOR_LINK_PATTERN.findall(line))
+    referenced.update(unquote(anchor) for anchor in tuple(referenced))
     if not referenced:
         return []
 
@@ -318,6 +322,7 @@ def check_toc(headings, content):
     lines = content.split('\n')
     toc_body = '\n'.join(lines[start:(end - 1) if end else len(lines)])
     listed = set(ANCHOR_LINK_PATTERN.findall(toc_body))
+    listed.update(unquote(anchor) for anchor in tuple(listed))
 
     issues = []
     for (lv, text, lineno), anchor in zip(headings, unique_heading_anchors(headings, make_anchor)):
@@ -338,18 +343,19 @@ def check_file(filepath, enabled):
 
     content = strip_code_blocks(raw)
     headings = extract_headings(content)
+    link_content = mask_inline_code(content)
 
     issues = []
     if 'anchor' in enabled:
-        issues += check_anchors(headings, content)
+        issues += check_anchors(headings, link_content)
     if 'number' in enabled:
         issues += check_numbering(headings)
     if 'level' in enabled:
         issues += check_levels(headings)
     if 'duplicate' in enabled:
-        issues += check_duplicates(headings, content)
+        issues += check_duplicates(headings, link_content)
     if 'toc' in enabled:
-        issues += check_toc(headings, content)
+        issues += check_toc(headings, link_content)
     return sorted(issues), len(headings)
 
 

@@ -9,7 +9,44 @@ from urllib.parse import unquote
 
 _QUOTE_PREFIX = re.compile(r'^ {0,3}>[ \t]?')
 _FENCE = re.compile(r'^ {0,3}(`{3,}|~{3,})(.*)$')
-_LINK_START = re.compile(r'(?<!\\)\[(?:[^\[\]\\]|\\.|\[[^\[\]]*\])*\]\(')
+_LINK_START = re.compile(r'\[(?:[^\[\]\\]|\\.|\[[^\[\]]*\])*\]\(')
+
+
+
+def _is_escaped(content, position):
+    backslashes = 0
+    while position > 0 and content[position - 1] == '\\':
+        position -= 1
+        backslashes += 1
+    return bool(backslashes % 2)
+
+
+def mask_inline_code(content):
+    """Blank equal-length backtick spans, preserving every source newline.
+
+    Shorter/longer runs inside a span are literal code. This helper is for
+    link scanning; heading text must remain intact when generating slugs.
+    """
+    runs = list(re.finditer(r'`+', content))
+    following = {}
+    next_equal = {}
+    for index in range(len(runs) - 1, -1, -1):
+        length = len(runs[index].group())
+        next_equal[index] = following.get(length)
+        following[length] = index
+    result = list(content)
+    index = 0
+    while index < len(runs):
+        opener = runs[index]
+        closer_index = next_equal[index]
+        if _is_escaped(content, opener.start()) or closer_index is None:
+            index += 1
+            continue
+        for position in range(opener.start(), runs[closer_index].end()):
+            if result[position] not in '\r\n':
+                result[position] = ' '
+        index = closer_index + 1
+    return ''.join(result)
 
 
 def display_path(path, start=None):
@@ -83,6 +120,8 @@ def iter_inline_links(line):
     Reference-style links and multiline links remain outside this CLI's scope.
     """
     for match in _LINK_START.finditer(line):
+        if _is_escaped(line, match.start()):
+            continue
         start = i = match.end()
         while i < len(line) and line[i] in ' \t':
             i += 1
