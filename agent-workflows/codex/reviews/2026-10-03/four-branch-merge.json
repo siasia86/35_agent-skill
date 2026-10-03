@@ -1,0 +1,35 @@
+{
+  "observation_date": "2026-10-03",
+  "scope": "requested remote main/yunli and original workspace local main/yunli",
+  "starting_remote_main": "4227f1d6b703238e3d2b763a0d320998cfeedc09",
+  "starting_remote_yunli": "345a6be30a1d4f460b90b352bb1c9d6a701f774b",
+  "starting_local_main": "4227f1d6b703238e3d2b763a0d320998cfeedc09",
+  "starting_local_yunli": "4a5dfb17ccbd0dcb5d6da787e3c5133761c06261",
+  "verified_remote_main": "36cd9d335949428856a1d21317772670ef610fa9",
+  "verified_remote_yunli": "36cd9d335949428856a1d21317772670ef610fa9",
+  "verified_local_refs": {
+    "refs/heads/main": "36cd9d335949428856a1d21317772670ef610fa9",
+    "refs/heads/yunli": "36cd9d335949428856a1d21317772670ef610fa9",
+    "refs/remotes/origin/main": "36cd9d335949428856a1d21317772670ef610fa9",
+    "refs/remotes/origin/yunli": "36cd9d335949428856a1d21317772670ef610fa9"
+  },
+  "tree": "b74c80ca300f09e4fc201d92c5e1443e3518d81d",
+  "remote_push": "atomic; normal fast-forward; no force",
+  "local_merge": "index aligned to already matching files, normal main fast-forward, ancestor/CAS yunli ref advance",
+  "working_tree_clean": true,
+  "published_files_compared": 471,
+  "original_files_captured": 470,
+  "approved_document_changes": 6,
+  "unchanged_captured_files": 464,
+  "basic_skill_checks": {
+    "skills": 19,
+    "bundled_workflows": 45,
+    "local_links": 173,
+    "scripts": 25,
+    "isolated_tool_runs": 35,
+    "lock_invariants": 8
+  },
+  "known_skill_issues": "five previously reproduced issues remain unresolved; branch integration does not fix them",
+  "design_branch": "unchanged at 55282e293f00e074d9c812561fcf4edb115f111d",
+  "followup_record_commit": "this verification record is subsequently committed and fast-forwarded to both remote and both local branches; final SHA is checked in Git refs, not self-referenced here"
+}
