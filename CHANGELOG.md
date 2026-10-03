@@ -4,6 +4,12 @@
 
 ## [Unreleased]
 
+### 개인 skill 내용 검토 — 2026-10-03
+
+- Linux skill 19개의 본문·참조·동봉 도구를 검토해 P1 1건·P2 11건·P3 2건을 기록했습니다. 현재 원문 기준 문제이며 플랫폼 이동의 신규 결함은 아닙니다.
+- TEMP에서 누락 입력·백업 실패·lock 부분 쓰기 실패·Markdown 정상 문법의 오판을 확인했습니다. 실제 모델 행동·전체 Linux 회귀·운영 적용은 미실행입니다.
+- 상세 근거와 후속 보완은 [skill 검토](agent-workflows/codex/SKILL_REVIEW_2026-10-03.md)에 연결하며 skill 본문·도구·개인 설정은 수정하지 않았습니다. 검토 기록은 yunli 게시 후 사용자 검증을 거쳐 main에 반영합니다.
+
 ### Windows Linux 플랫폼 분리 — 2026-10-03
 
 - 기존 codex를 codex_linux로 이동하고 Linux skill 19개·원문·동반 자료·개인 지침·검증 JSON을 보존합니다. 현행 안내와 개발 검증 경로를 새 위치로 연결합니다.

@@ -39,6 +39,8 @@
 
 ## 4. 작업과 검증
 
+- [2026-10-03 skill 내용 검토](agent-workflows/codex/SKILL_REVIEW_2026-10-03.md): 19개 skill의 현재 수정 필요 14건과 실제 재현·미실행 범위. 원문·실행 코드 보완은 후속입니다.
+
 - [세션 인계](agent-workflows/codex/HANDOFF.md): 마지막 게시 상태·미게시 변경·추가 검토 근거·다음 세션의 재개 순서. 플랫폼별 후속은 [Linux TODO](codex_linux/TODO.md)와 [Windows TODO](codex_windows/TODO.md)에서 확인합니다.
 - [2026-10-03 병합 검토와 실제 통합](agent-workflows/codex/MERGE_REVIEW_2026-10-03.md): 전체 원격 브랜치의 검토 결과, 원문 보존·동작 제한과 후속 요청의 원격/로컬 main·yunli 통합 상태.
 - [TODO2](TODO2.md): 원문 보존·최소 호환성 수정·후속 경량화 검토 기준.

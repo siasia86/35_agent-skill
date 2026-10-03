@@ -9,6 +9,8 @@
 - [x] [Linux 원문](../codex_linux/README.md)의 이동 전후 보존과 활성 링크를 최종 확인합니다.
 - [ ] Windows 실행 조건과 작업 예시를 확정합니다.
 - [ ] 우선 skill·선택 이유·필수 동반 자료를 정합니다.
+- [x] 기존 Linux skill 19개의 [검토 결과](../agent-workflows/codex/SKILL_REVIEW_2026-10-03.md)와 Windows 재작성에 반영할 실패 사례를 연결합니다.
+- [ ] 선택한 Windows skill에 관련 복구·입력 검증·오류 전파·Markdown 실패 사례의 재발 방지 조건을 반영합니다.
 
 ## 2. Windows 구현
 
