@@ -1,0 +1,460 @@
+{
+  "scope": "installed personal skills; host paths omitted",
+  "files": [
+    {
+      "path": "code-review/references/kiro-original.md",
+      "sha256": "4517d03039faec289e326ca452de1f62e8434d7c2bb9dec7c03bb05ac99b47d6",
+      "bytes": 4188
+    },
+    {
+      "path": "code-review/references/linux-original.md",
+      "sha256": "8f89352bf924360a11ef6b7b207e836c532d447b7185b23e42576e1263b40303",
+      "bytes": 6714
+    },
+    {
+      "path": "code-review/SKILL.md",
+      "sha256": "169bebbc6f96499be6e0e773472825aa0239366f879510797d14da5c12367920",
+      "bytes": 9026
+    },
+    {
+      "path": "debugging-and-recovery/references/kiro-original.md",
+      "sha256": "10140924f539da68922ce66acd54d6d30e596059f377bdeeeecbd8e26400b11e",
+      "bytes": 7021
+    },
+    {
+      "path": "debugging-and-recovery/references/linux-original.md",
+      "sha256": "1e54c6076119c318eded71e707c626ced008324e492e7c3a3e350fe13c0a4ee3",
+      "bytes": 9781
+    },
+    {
+      "path": "debugging-and-recovery/references/linux-skills/incremental-change.md",
+      "sha256": "319f704c9b1186ca0b7135ac549d065d8149ab928d6e199d61dbf8b98b2908d3",
+      "bytes": 9798
+    },
+    {
+      "path": "debugging-and-recovery/references/originals/incremental-change.md",
+      "sha256": "73abe0ab80accaae28ff8a628e16412255867aaacf063d2ee10bddc34b661d86",
+      "bytes": 7100
+    },
+    {
+      "path": "debugging-and-recovery/references/skills/incremental-change.md",
+      "sha256": "03fb2836db4af493377452ac8a2a28150fceb3b640ee61d450ce5298f933f1bc",
+      "bytes": 14397
+    },
+    {
+      "path": "debugging-and-recovery/SKILL.md",
+      "sha256": "785b3b2ebd009a20ece3a9469932346627a17bcc019486d9824f57fb68c6025b",
+      "bytes": 15325
+    },
+    {
+      "path": "git-commit-rule/references/kiro-original.md",
+      "sha256": "9fecb39349ea2536bcb781cd6c551541dc6839cad32e454bd3d037d2078437c5",
+      "bytes": 2693
+    },
+    {
+      "path": "git-commit-rule/references/linux-original.md",
+      "sha256": "7c98d1c614e26bb44715708ad5f2ac0af598da054292f273c234490661501717",
+      "bytes": 7509
+    },
+    {
+      "path": "git-commit-rule/references/linux-skills/md-link-check.md",
+      "sha256": "b42e938b6c6e004e4625de0f403323e0fc2249a7074c253ca0084316e48c7085",
+      "bytes": 17422
+    },
+    {
+      "path": "git-commit-rule/references/linux-skills/readme-template.md",
+      "sha256": "f384b1571a4b8f35c642e5984354f0c2721ecf612b66d3ba09bddf39dc58e850",
+      "bytes": 7219
+    },
+    {
+      "path": "git-commit-rule/references/linux-tools/md-heading-check.py",
+      "sha256": "53015d827dc7576dd4221c7accf7398a3be0e97d596b0b0b2951164397455df7",
+      "bytes": 30106
+    },
+    {
+      "path": "git-commit-rule/references/linux-tools/md-link-check.py",
+      "sha256": "9f6d5a2d5c83f160d73623ef881e62fec8adb876a4ef3696d2666866fdef13f7",
+      "bytes": 7944
+    },
+    {
+      "path": "git-commit-rule/references/linux-tools/md-style-check.py",
+      "sha256": "21d70e4cc4e4e272cbe64fdf6957dd10592eb26267a96c01d503c8a519c5ba10",
+      "bytes": 46040
+    },
+    {
+      "path": "git-commit-rule/references/originals/md-link-check.md",
+      "sha256": "67bc59e6ca5432cd17ce0d13077cbaeaa51cc00c9c5764c8565323869d85aa05",
+      "bytes": 12260
+    },
+    {
+      "path": "git-commit-rule/references/originals/readme-template.md",
+      "sha256": "754dd7ea3b7be8e968802990ac8e63a2239285567d5c6c0ff45d935e8abc5a9e",
+      "bytes": 2998
+    },
+    {
+      "path": "git-commit-rule/references/skills/md-link-check.md",
+      "sha256": "a5ebe97108c1793eae1c1b266f36192c6165150e72af94bcb1f0e137ca5de1be",
+      "bytes": 21104
+    },
+    {
+      "path": "git-commit-rule/references/skills/readme-template.md",
+      "sha256": "3c819ae22628cf6f3aeaaea2d25ccc4f53bfd7070e31fff2864e6344eb3d60a0",
+      "bytes": 10882
+    },
+    {
+      "path": "git-commit-rule/references/STYLE.md",
+      "sha256": "f2797a30aaf805f9ab3cf157fff2e7229ad99dfe5cc6785b01b734090701a46a",
+      "bytes": 19168
+    },
+    {
+      "path": "git-commit-rule/scripts/md-heading-check.py",
+      "sha256": "16c3de7712ef8987216b3b4e519d9bce5214fb15f78a69865e7441805bdf85d3",
+      "bytes": 29592
+    },
+    {
+      "path": "git-commit-rule/scripts/md-link-check.py",
+      "sha256": "6991d56bf10c1ec6eaa8cbb9add5ff2e8bd3231a6cf8c534856736205983e5e6",
+      "bytes": 6993
+    },
+    {
+      "path": "git-commit-rule/scripts/md-style-check.py",
+      "sha256": "a5199d0740de762ceef8441f862b6691c9614caea944c4671c2c9771c732c0e2",
+      "bytes": 46391
+    },
+    {
+      "path": "git-commit-rule/scripts/md_common.py",
+      "sha256": "8af651399536aa8f7cf03101c1dee3ea5ee190a3621819d55d9ae1ddb81ef78d",
+      "bytes": 6387
+    },
+    {
+      "path": "git-commit-rule/SKILL.md",
+      "sha256": "7031923a327f005ec810b7700f9fba4d48b97207b27cbb9eda75883697af92b6",
+      "bytes": 10022
+    },
+    {
+      "path": "markdown-review/SKILL.md",
+      "sha256": "c87f3dace668f3af4f891fafd7159e64d1e493c9eaa44c3565e99f57a4fa7307",
+      "bytes": 4077
+    },
+    {
+      "path": "md-link-check/references/kiro-original.md",
+      "sha256": "67bc59e6ca5432cd17ce0d13077cbaeaa51cc00c9c5764c8565323869d85aa05",
+      "bytes": 12260
+    },
+    {
+      "path": "md-link-check/references/linux-original.md",
+      "sha256": "351f5c44338f52b8ceb4c06d21a9c863c0681136173ccefb4b6fc5cabb20c35c",
+      "bytes": 17446
+    },
+    {
+      "path": "md-link-check/references/linux-skills/md-link-check.md",
+      "sha256": "b42e938b6c6e004e4625de0f403323e0fc2249a7074c253ca0084316e48c7085",
+      "bytes": 17422
+    },
+    {
+      "path": "md-link-check/references/linux-skills/readme-template.md",
+      "sha256": "f384b1571a4b8f35c642e5984354f0c2721ecf612b66d3ba09bddf39dc58e850",
+      "bytes": 7219
+    },
+    {
+      "path": "md-link-check/references/linux-tools/md-heading-check.py",
+      "sha256": "53015d827dc7576dd4221c7accf7398a3be0e97d596b0b0b2951164397455df7",
+      "bytes": 30106
+    },
+    {
+      "path": "md-link-check/references/linux-tools/md-link-check.py",
+      "sha256": "9f6d5a2d5c83f160d73623ef881e62fec8adb876a4ef3696d2666866fdef13f7",
+      "bytes": 7944
+    },
+    {
+      "path": "md-link-check/references/linux-tools/md-style-check.py",
+      "sha256": "21d70e4cc4e4e272cbe64fdf6957dd10592eb26267a96c01d503c8a519c5ba10",
+      "bytes": 46040
+    },
+    {
+      "path": "md-link-check/references/originals/md-link-check.md",
+      "sha256": "67bc59e6ca5432cd17ce0d13077cbaeaa51cc00c9c5764c8565323869d85aa05",
+      "bytes": 12260
+    },
+    {
+      "path": "md-link-check/references/originals/readme-template.md",
+      "sha256": "754dd7ea3b7be8e968802990ac8e63a2239285567d5c6c0ff45d935e8abc5a9e",
+      "bytes": 2998
+    },
+    {
+      "path": "md-link-check/references/skills/md-link-check.md",
+      "sha256": "2cbb72592e51ef03c808f50f1ce6d7e081df4b694d66dc4e9c6a56b577ab650e",
+      "bytes": 21102
+    },
+    {
+      "path": "md-link-check/references/skills/readme-template.md",
+      "sha256": "615efeca28f609cf52931c583011d1f20334e7087b99fecd6ba40abf0beb5bb1",
+      "bytes": 10870
+    },
+    {
+      "path": "md-link-check/references/STYLE.md",
+      "sha256": "f2797a30aaf805f9ab3cf157fff2e7229ad99dfe5cc6785b01b734090701a46a",
+      "bytes": 19168
+    },
+    {
+      "path": "md-link-check/scripts/__pycache__/md_common.cpython-314.pyc",
+      "sha256": "0063da7ad10fcdfab76196b40e1782b05cc825588624c5214961f4bea6c2d78b",
+      "bytes": 9009
+    },
+    {
+      "path": "md-link-check/scripts/md-heading-check.py",
+      "sha256": "16c3de7712ef8987216b3b4e519d9bce5214fb15f78a69865e7441805bdf85d3",
+      "bytes": 29592
+    },
+    {
+      "path": "md-link-check/scripts/md-link-check.py",
+      "sha256": "6991d56bf10c1ec6eaa8cbb9add5ff2e8bd3231a6cf8c534856736205983e5e6",
+      "bytes": 6993
+    },
+    {
+      "path": "md-link-check/scripts/md-style-check.py",
+      "sha256": "a5199d0740de762ceef8441f862b6691c9614caea944c4671c2c9771c732c0e2",
+      "bytes": 46391
+    },
+    {
+      "path": "md-link-check/scripts/md_common.py",
+      "sha256": "8af651399536aa8f7cf03101c1dee3ea5ee190a3621819d55d9ae1ddb81ef78d",
+      "bytes": 6387
+    },
+    {
+      "path": "md-link-check/SKILL.md",
+      "sha256": "18760b67ad4b6a4582550a390b411060b566a69cfb71f2191c44ef4633ff3e90",
+      "bytes": 21110
+    },
+    {
+      "path": "planning-and-breakdown/references/kiro-original.md",
+      "sha256": "11ca00491de7ace22d02b633db071d7c46233e8678b58d3a6ab1ed223694925a",
+      "bytes": 6048
+    },
+    {
+      "path": "planning-and-breakdown/references/linux-original.md",
+      "sha256": "e48d05e3c44af73e1eeb8a9a4c638f06a77485abdb49ca689a494cbff7706efe",
+      "bytes": 8790
+    },
+    {
+      "path": "planning-and-breakdown/references/linux-skills/debugging-and-recovery.md",
+      "sha256": "2d9abe01ee69ea435b9ab22f192770cfdba8ae01a28e47bd9cb7745bc8e9d77f",
+      "bytes": 9774
+    },
+    {
+      "path": "planning-and-breakdown/references/linux-skills/incremental-change.md",
+      "sha256": "130094af74d1304f0e6ab6684c19725cf266c0db9cb29c5bb112531fc4ec36ce",
+      "bytes": 9809
+    },
+    {
+      "path": "planning-and-breakdown/references/originals/debugging-and-recovery.md",
+      "sha256": "10140924f539da68922ce66acd54d6d30e596059f377bdeeeecbd8e26400b11e",
+      "bytes": 7021
+    },
+    {
+      "path": "planning-and-breakdown/references/originals/incremental-change.md",
+      "sha256": "73abe0ab80accaae28ff8a628e16412255867aaacf063d2ee10bddc34b661d86",
+      "bytes": 7100
+    },
+    {
+      "path": "planning-and-breakdown/references/skills/debugging-and-recovery.md",
+      "sha256": "1d0749fc403b39ed0591a34bbbbce4581b49762e3803abb2edbb01458475358f",
+      "bytes": 15328
+    },
+    {
+      "path": "planning-and-breakdown/references/skills/incremental-change.md",
+      "sha256": "b8bf1f4f344e1ff03b5b226325da1d32a77ec076cfb9293467a06d6a4a667b07",
+      "bytes": 14418
+    },
+    {
+      "path": "planning-and-breakdown/SKILL.md",
+      "sha256": "41af860edc6831b07c8b0146782303a71b0379cc035878c59413e3d926891cc8",
+      "bytes": 13798
+    },
+    {
+      "path": "work-rules/references/kiro-original.md",
+      "sha256": "a940ad7376aecac56a873671a3f77250fb6d4f6deb77598810bdfefd1420ed20",
+      "bytes": 29956
+    },
+    {
+      "path": "work-rules/references/legacy-work-rules.md",
+      "sha256": "e7e21a43a174ff83a1c45bea840d07ef892b58ee8455201286b936dc8bf26727",
+      "bytes": 29703
+    },
+    {
+      "path": "work-rules/references/linux-original.md",
+      "sha256": "87e5f78b137d2896b38dd29ddcad55aaf10e730f0f15d384d3c1ea41d4c8ab82",
+      "bytes": 38141
+    },
+    {
+      "path": "work-rules/references/linux-skills/debugging-and-recovery.md",
+      "sha256": "2d9abe01ee69ea435b9ab22f192770cfdba8ae01a28e47bd9cb7745bc8e9d77f",
+      "bytes": 9774
+    },
+    {
+      "path": "work-rules/references/linux-skills/incremental-change.md",
+      "sha256": "130094af74d1304f0e6ab6684c19725cf266c0db9cb29c5bb112531fc4ec36ce",
+      "bytes": 9809
+    },
+    {
+      "path": "work-rules/references/linux-skills/kiro-lock.md",
+      "sha256": "3451b83e3c0d23e0833e0f6e26b613713c984091440ccafb5c66a2b52f0b6c90",
+      "bytes": 7050
+    },
+    {
+      "path": "work-rules/references/linux-skills/md-link-check.md",
+      "sha256": "b42e938b6c6e004e4625de0f403323e0fc2249a7074c253ca0084316e48c7085",
+      "bytes": 17422
+    },
+    {
+      "path": "work-rules/references/linux-skills/planning-and-breakdown.md",
+      "sha256": "b28e326aa8c55ad774826dabd870eb9b014c2076ca5ed26410c646e8d07125cf",
+      "bytes": 8783
+    },
+    {
+      "path": "work-rules/references/linux-skills/readme-template.md",
+      "sha256": "f384b1571a4b8f35c642e5984354f0c2721ecf612b66d3ba09bddf39dc58e850",
+      "bytes": 7219
+    },
+    {
+      "path": "work-rules/references/linux-skills/spec-driven-infra.md",
+      "sha256": "2c8006325c5194aa013470926f59d98574b6f7eb815f06624273593d88a40949",
+      "bytes": 10758
+    },
+    {
+      "path": "work-rules/references/linux-tools/lock.py",
+      "sha256": "90940c3f7d16cf4fb9f13e9244743d254d522523df0e8ed2b36881ab90bbffe0",
+      "bytes": 3840
+    },
+    {
+      "path": "work-rules/references/linux-tools/md-heading-check.py",
+      "sha256": "53015d827dc7576dd4221c7accf7398a3be0e97d596b0b0b2951164397455df7",
+      "bytes": 30106
+    },
+    {
+      "path": "work-rules/references/linux-tools/md-link-check.py",
+      "sha256": "9f6d5a2d5c83f160d73623ef881e62fec8adb876a4ef3696d2666866fdef13f7",
+      "bytes": 7944
+    },
+    {
+      "path": "work-rules/references/linux-tools/md-style-check.py",
+      "sha256": "21d70e4cc4e4e272cbe64fdf6957dd10592eb26267a96c01d503c8a519c5ba10",
+      "bytes": 46040
+    },
+    {
+      "path": "work-rules/references/originals/debugging-and-recovery.md",
+      "sha256": "10140924f539da68922ce66acd54d6d30e596059f377bdeeeecbd8e26400b11e",
+      "bytes": 7021
+    },
+    {
+      "path": "work-rules/references/originals/incremental-change.md",
+      "sha256": "73abe0ab80accaae28ff8a628e16412255867aaacf063d2ee10bddc34b661d86",
+      "bytes": 7100
+    },
+    {
+      "path": "work-rules/references/originals/kiro-lock.md",
+      "sha256": "207914bf93b04e9a201297def12cf0a0c512bd4fb10ef20c86e8a5ba57c10553",
+      "bytes": 3021
+    },
+    {
+      "path": "work-rules/references/originals/md-link-check.md",
+      "sha256": "67bc59e6ca5432cd17ce0d13077cbaeaa51cc00c9c5764c8565323869d85aa05",
+      "bytes": 12260
+    },
+    {
+      "path": "work-rules/references/originals/planning-and-breakdown.md",
+      "sha256": "11ca00491de7ace22d02b633db071d7c46233e8678b58d3a6ab1ed223694925a",
+      "bytes": 6048
+    },
+    {
+      "path": "work-rules/references/originals/readme-template.md",
+      "sha256": "754dd7ea3b7be8e968802990ac8e63a2239285567d5c6c0ff45d935e8abc5a9e",
+      "bytes": 2998
+    },
+    {
+      "path": "work-rules/references/originals/spec-driven-infra.md",
+      "sha256": "e102ac0892303423279dc10afa24fbd7fa939042205776586b5fa8cd4d9419b2",
+      "bytes": 7965
+    },
+    {
+      "path": "work-rules/references/repository-workflow.md",
+      "sha256": "8c5f4789e51cad685c2a4072758f2df52c87d866f6e17cb2712b22b4ce2b5bc5",
+      "bytes": 9592
+    },
+    {
+      "path": "work-rules/references/skills/debugging-and-recovery.md",
+      "sha256": "1d0749fc403b39ed0591a34bbbbce4581b49762e3803abb2edbb01458475358f",
+      "bytes": 15328
+    },
+    {
+      "path": "work-rules/references/skills/incremental-change.md",
+      "sha256": "b8bf1f4f344e1ff03b5b226325da1d32a77ec076cfb9293467a06d6a4a667b07",
+      "bytes": 14418
+    },
+    {
+      "path": "work-rules/references/skills/kiro-lock.md",
+      "sha256": "add747a0a09e3c75dabe4844e6030a127027cab15ffb8962aed0e5745349e84d",
+      "bytes": 8753
+    },
+    {
+      "path": "work-rules/references/skills/md-link-check.md",
+      "sha256": "4fbb8506adce3a19a0fb7d812bf8ae83c38edb5886cf8157f320377a1506fc3c",
+      "bytes": 21099
+    },
+    {
+      "path": "work-rules/references/skills/planning-and-breakdown.md",
+      "sha256": "623c3618695262e019620243d1600cf66247a1c555d8da0bf1cf8f74b2349c61",
+      "bytes": 13801
+    },
+    {
+      "path": "work-rules/references/skills/readme-template.md",
+      "sha256": "3c819ae22628cf6f3aeaaea2d25ccc4f53bfd7070e31fff2864e6344eb3d60a0",
+      "bytes": 10882
+    },
+    {
+      "path": "work-rules/references/skills/spec-driven-infra.md",
+      "sha256": "8cdfcc91e9c4e9543d45ef8242571303ac43395982ab2bdd711af6c41fee5d3e",
+      "bytes": 15345
+    },
+    {
+      "path": "work-rules/references/STYLE.md",
+      "sha256": "f2797a30aaf805f9ab3cf157fff2e7229ad99dfe5cc6785b01b734090701a46a",
+      "bytes": 19168
+    },
+    {
+      "path": "work-rules/references/windows-work-rules-details.md",
+      "sha256": "2cb03e06ebf5ab45ba8b1917399469fb6c75e89a8d8f544ecc76a135d2080b60",
+      "bytes": 30798
+    },
+    {
+      "path": "work-rules/scripts/lock.py",
+      "sha256": "d26db693d6656ca610cc6164a4e9dea41bea7244f173e4d5bf499fa1a33585a4",
+      "bytes": 5896
+    },
+    {
+      "path": "work-rules/scripts/md-heading-check.py",
+      "sha256": "16c3de7712ef8987216b3b4e519d9bce5214fb15f78a69865e7441805bdf85d3",
+      "bytes": 29592
+    },
+    {
+      "path": "work-rules/scripts/md-link-check.py",
+      "sha256": "6991d56bf10c1ec6eaa8cbb9add5ff2e8bd3231a6cf8c534856736205983e5e6",
+      "bytes": 6993
+    },
+    {
+      "path": "work-rules/scripts/md-style-check.py",
+      "sha256": "a5199d0740de762ceef8441f862b6691c9614caea944c4671c2c9771c732c0e2",
+      "bytes": 46391
+    },
+    {
+      "path": "work-rules/scripts/md_common.py",
+      "sha256": "8af651399536aa8f7cf03101c1dee3ea5ee190a3621819d55d9ae1ddb81ef78d",
+      "bytes": 6387
+    },
+    {
+      "path": "work-rules/SKILL.md",
+      "sha256": "afe4c06df8058721a69b02eb0b7bf85e357129d040f4668178b09058a9a6afb0",
+      "bytes": 7682
+    }
+  ]
+}

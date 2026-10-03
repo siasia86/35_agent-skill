@@ -1,0 +1,569 @@
+{
+  "historical_hash_checks": 368,
+  "quick_validate_skills": 19,
+  "yaml_version": "6.0.3",
+  "source_markdown": {
+    "files": 61,
+    "links_exit": 0,
+    "headings_exit": 0
+  },
+  "style": {
+    "scope": "changed active Windows Markdown; footer excluded because personal skill is not a repository footer policy",
+    "existing_diagnostics": 51,
+    "new_diagnostics": 0,
+    "existing_details": [
+      {
+        "file": "codex_windows/skills/git-commit-rule/references/STYLE.md",
+        "check": "다이어그램 한글",
+        "message": "L212: 다이어그램 내부 한글 사용: ['책상'] (영문 권장)"
+      },
+      {
+        "file": "codex_windows/skills/git-commit-rule/references/STYLE.md",
+        "check": "다이어그램 한글",
+        "message": "L214: 다이어그램 내부 한글 사용: ['시스템', '프롬프트', '이전'] (영문 권장)"
+      },
+      {
+        "file": "codex_windows/skills/git-commit-rule/references/STYLE.md",
+        "check": "다이어그램 한글",
+        "message": "L222: 다이어그램 내부 한글 사용: ['명령어', '실행', '완료'] (영문 권장)"
+      },
+      {
+        "file": "codex_windows/skills/git-commit-rule/references/STYLE.md",
+        "check": "다이어그램 한글",
+        "message": "L226: 다이어그램 내부 한글 사용: ['훅'] (영문 권장)"
+      },
+      {
+        "file": "codex_windows/skills/git-commit-rule/references/STYLE.md",
+        "check": "이모지 뒤 공백",
+        "message": "L294: '🟡' 뒤 공백 없음 → '🟡버'"
+      },
+      {
+        "file": "codex_windows/skills/git-commit-rule/references/STYLE.md",
+        "check": "과장 표현",
+        "message": "L393: - 단, 절차·경고·조건 등 완전한 문장이 필요한 경우에는 합니다체를 사용할 수 있습니다."
+      },
+      {
+        "file": "codex_windows/skills/git-commit-rule/references/STYLE.md",
+        "check": "과장 표현",
+        "message": "L400: - ❌ `SE 완전 로드맵`, `완벽한 가이드`"
+      },
+      {
+        "file": "codex_windows/skills/md-link-check/references/STYLE.md",
+        "check": "다이어그램 한글",
+        "message": "L212: 다이어그램 내부 한글 사용: ['책상'] (영문 권장)"
+      },
+      {
+        "file": "codex_windows/skills/md-link-check/references/STYLE.md",
+        "check": "다이어그램 한글",
+        "message": "L214: 다이어그램 내부 한글 사용: ['시스템', '프롬프트', '이전'] (영문 권장)"
+      },
+      {
+        "file": "codex_windows/skills/md-link-check/references/STYLE.md",
+        "check": "다이어그램 한글",
+        "message": "L222: 다이어그램 내부 한글 사용: ['명령어', '실행', '완료'] (영문 권장)"
+      },
+      {
+        "file": "codex_windows/skills/md-link-check/references/STYLE.md",
+        "check": "다이어그램 한글",
+        "message": "L226: 다이어그램 내부 한글 사용: ['훅'] (영문 권장)"
+      },
+      {
+        "file": "codex_windows/skills/md-link-check/references/STYLE.md",
+        "check": "이모지 뒤 공백",
+        "message": "L294: '🟡' 뒤 공백 없음 → '🟡버'"
+      },
+      {
+        "file": "codex_windows/skills/md-link-check/references/STYLE.md",
+        "check": "과장 표현",
+        "message": "L393: - 단, 절차·경고·조건 등 완전한 문장이 필요한 경우에는 합니다체를 사용할 수 있습니다."
+      },
+      {
+        "file": "codex_windows/skills/md-link-check/references/STYLE.md",
+        "check": "과장 표현",
+        "message": "L400: - ❌ `SE 완전 로드맵`, `완벽한 가이드`"
+      },
+      {
+        "file": "codex_windows/skills/readme-template/references/STYLE.md",
+        "check": "다이어그램 한글",
+        "message": "L212: 다이어그램 내부 한글 사용: ['책상'] (영문 권장)"
+      },
+      {
+        "file": "codex_windows/skills/readme-template/references/STYLE.md",
+        "check": "다이어그램 한글",
+        "message": "L214: 다이어그램 내부 한글 사용: ['시스템', '프롬프트', '이전'] (영문 권장)"
+      },
+      {
+        "file": "codex_windows/skills/readme-template/references/STYLE.md",
+        "check": "다이어그램 한글",
+        "message": "L222: 다이어그램 내부 한글 사용: ['명령어', '실행', '완료'] (영문 권장)"
+      },
+      {
+        "file": "codex_windows/skills/readme-template/references/STYLE.md",
+        "check": "다이어그램 한글",
+        "message": "L226: 다이어그램 내부 한글 사용: ['훅'] (영문 권장)"
+      },
+      {
+        "file": "codex_windows/skills/readme-template/references/STYLE.md",
+        "check": "이모지 뒤 공백",
+        "message": "L294: '🟡' 뒤 공백 없음 → '🟡버'"
+      },
+      {
+        "file": "codex_windows/skills/readme-template/references/STYLE.md",
+        "check": "과장 표현",
+        "message": "L393: - 단, 절차·경고·조건 등 완전한 문장이 필요한 경우에는 합니다체를 사용할 수 있습니다."
+      },
+      {
+        "file": "codex_windows/skills/readme-template/references/STYLE.md",
+        "check": "과장 표현",
+        "message": "L400: - ❌ `SE 완전 로드맵`, `완벽한 가이드`"
+      },
+      {
+        "file": "codex_windows/skills/security-tools/SKILL.md",
+        "check": "비허용 이모지",
+        "message": "L193: 비허용 이모지 '⚠' — 허용: ✅ ❌ 🟡 🟢 🔴 ★"
+      },
+      {
+        "file": "codex_windows/skills/security-tools/references/STYLE.md",
+        "check": "다이어그램 한글",
+        "message": "L212: 다이어그램 내부 한글 사용: ['책상'] (영문 권장)"
+      },
+      {
+        "file": "codex_windows/skills/security-tools/references/STYLE.md",
+        "check": "다이어그램 한글",
+        "message": "L214: 다이어그램 내부 한글 사용: ['시스템', '프롬프트', '이전'] (영문 권장)"
+      },
+      {
+        "file": "codex_windows/skills/security-tools/references/STYLE.md",
+        "check": "다이어그램 한글",
+        "message": "L222: 다이어그램 내부 한글 사용: ['명령어', '실행', '완료'] (영문 권장)"
+      },
+      {
+        "file": "codex_windows/skills/security-tools/references/STYLE.md",
+        "check": "다이어그램 한글",
+        "message": "L226: 다이어그램 내부 한글 사용: ['훅'] (영문 권장)"
+      },
+      {
+        "file": "codex_windows/skills/security-tools/references/STYLE.md",
+        "check": "이모지 뒤 공백",
+        "message": "L294: '🟡' 뒤 공백 없음 → '🟡버'"
+      },
+      {
+        "file": "codex_windows/skills/security-tools/references/STYLE.md",
+        "check": "과장 표현",
+        "message": "L393: - 단, 절차·경고·조건 등 완전한 문장이 필요한 경우에는 합니다체를 사용할 수 있습니다."
+      },
+      {
+        "file": "codex_windows/skills/security-tools/references/STYLE.md",
+        "check": "과장 표현",
+        "message": "L400: - ❌ `SE 완전 로드맵`, `완벽한 가이드`"
+      },
+      {
+        "file": "codex_windows/skills/using-skills/references/STYLE.md",
+        "check": "다이어그램 한글",
+        "message": "L212: 다이어그램 내부 한글 사용: ['책상'] (영문 권장)"
+      },
+      {
+        "file": "codex_windows/skills/using-skills/references/STYLE.md",
+        "check": "다이어그램 한글",
+        "message": "L214: 다이어그램 내부 한글 사용: ['시스템', '프롬프트', '이전'] (영문 권장)"
+      },
+      {
+        "file": "codex_windows/skills/using-skills/references/STYLE.md",
+        "check": "다이어그램 한글",
+        "message": "L222: 다이어그램 내부 한글 사용: ['명령어', '실행', '완료'] (영문 권장)"
+      },
+      {
+        "file": "codex_windows/skills/using-skills/references/STYLE.md",
+        "check": "다이어그램 한글",
+        "message": "L226: 다이어그램 내부 한글 사용: ['훅'] (영문 권장)"
+      },
+      {
+        "file": "codex_windows/skills/using-skills/references/STYLE.md",
+        "check": "이모지 뒤 공백",
+        "message": "L294: '🟡' 뒤 공백 없음 → '🟡버'"
+      },
+      {
+        "file": "codex_windows/skills/using-skills/references/STYLE.md",
+        "check": "과장 표현",
+        "message": "L393: - 단, 절차·경고·조건 등 완전한 문장이 필요한 경우에는 합니다체를 사용할 수 있습니다."
+      },
+      {
+        "file": "codex_windows/skills/using-skills/references/STYLE.md",
+        "check": "과장 표현",
+        "message": "L400: - ❌ `SE 완전 로드맵`, `완벽한 가이드`"
+      },
+      {
+        "file": "codex_windows/skills/using-skills/references/skills/security-tools.md",
+        "check": "비허용 이모지",
+        "message": "L193: 비허용 이모지 '⚠' — 허용: ✅ ❌ 🟡 🟢 🔴 ★"
+      },
+      {
+        "file": "codex_windows/skills/work-rules/references/STYLE.md",
+        "check": "다이어그램 한글",
+        "message": "L212: 다이어그램 내부 한글 사용: ['책상'] (영문 권장)"
+      },
+      {
+        "file": "codex_windows/skills/work-rules/references/STYLE.md",
+        "check": "다이어그램 한글",
+        "message": "L214: 다이어그램 내부 한글 사용: ['시스템', '프롬프트', '이전'] (영문 권장)"
+      },
+      {
+        "file": "codex_windows/skills/work-rules/references/STYLE.md",
+        "check": "다이어그램 한글",
+        "message": "L222: 다이어그램 내부 한글 사용: ['명령어', '실행', '완료'] (영문 권장)"
+      },
+      {
+        "file": "codex_windows/skills/work-rules/references/STYLE.md",
+        "check": "다이어그램 한글",
+        "message": "L226: 다이어그램 내부 한글 사용: ['훅'] (영문 권장)"
+      },
+      {
+        "file": "codex_windows/skills/work-rules/references/STYLE.md",
+        "check": "이모지 뒤 공백",
+        "message": "L294: '🟡' 뒤 공백 없음 → '🟡버'"
+      },
+      {
+        "file": "codex_windows/skills/work-rules/references/STYLE.md",
+        "check": "과장 표현",
+        "message": "L393: - 단, 절차·경고·조건 등 완전한 문장이 필요한 경우에는 합니다체를 사용할 수 있습니다."
+      },
+      {
+        "file": "codex_windows/skills/work-rules/references/STYLE.md",
+        "check": "과장 표현",
+        "message": "L400: - ❌ `SE 완전 로드맵`, `완벽한 가이드`"
+      },
+      {
+        "file": "codex_windows/skills/zircon-readme-policy/references/STYLE.md",
+        "check": "다이어그램 한글",
+        "message": "L212: 다이어그램 내부 한글 사용: ['책상'] (영문 권장)"
+      },
+      {
+        "file": "codex_windows/skills/zircon-readme-policy/references/STYLE.md",
+        "check": "다이어그램 한글",
+        "message": "L214: 다이어그램 내부 한글 사용: ['시스템', '프롬프트', '이전'] (영문 권장)"
+      },
+      {
+        "file": "codex_windows/skills/zircon-readme-policy/references/STYLE.md",
+        "check": "다이어그램 한글",
+        "message": "L222: 다이어그램 내부 한글 사용: ['명령어', '실행', '완료'] (영문 권장)"
+      },
+      {
+        "file": "codex_windows/skills/zircon-readme-policy/references/STYLE.md",
+        "check": "다이어그램 한글",
+        "message": "L226: 다이어그램 내부 한글 사용: ['훅'] (영문 권장)"
+      },
+      {
+        "file": "codex_windows/skills/zircon-readme-policy/references/STYLE.md",
+        "check": "이모지 뒤 공백",
+        "message": "L294: '🟡' 뒤 공백 없음 → '🟡버'"
+      },
+      {
+        "file": "codex_windows/skills/zircon-readme-policy/references/STYLE.md",
+        "check": "과장 표현",
+        "message": "L393: - 단, 절차·경고·조건 등 완전한 문장이 필요한 경우에는 합니다체를 사용할 수 있습니다."
+      },
+      {
+        "file": "codex_windows/skills/zircon-readme-policy/references/STYLE.md",
+        "check": "과장 표현",
+        "message": "L400: - ❌ `SE 완전 로드맵`, `완벽한 가이드`"
+      }
+    ],
+    "new_details": []
+  },
+  "standalone": {
+    "packages": [
+      "git-commit-rule",
+      "md-link-check",
+      "readme-template",
+      "security-tools",
+      "using-skills",
+      "work-rules",
+      "zircon-readme-policy"
+    ],
+    "helper_cases": [
+      {
+        "skill": "git-commit-rule",
+        "tool": "md-link-check.py",
+        "fixture": "한글 정상.md",
+        "exit": 0
+      },
+      {
+        "skill": "git-commit-rule",
+        "tool": "md-link-check.py",
+        "fixture": "bad.md",
+        "exit": 1
+      },
+      {
+        "skill": "git-commit-rule",
+        "tool": "md-link-check.py",
+        "fixture": "empty",
+        "exit": 2
+      },
+      {
+        "skill": "git-commit-rule",
+        "tool": "md-heading-check.py",
+        "fixture": "한글 정상.md",
+        "exit": 0
+      },
+      {
+        "skill": "git-commit-rule",
+        "tool": "md-heading-check.py",
+        "fixture": "bad.md",
+        "exit": 1
+      },
+      {
+        "skill": "md-link-check",
+        "tool": "md-link-check.py",
+        "fixture": "한글 정상.md",
+        "exit": 0
+      },
+      {
+        "skill": "md-link-check",
+        "tool": "md-link-check.py",
+        "fixture": "bad.md",
+        "exit": 1
+      },
+      {
+        "skill": "md-link-check",
+        "tool": "md-link-check.py",
+        "fixture": "empty",
+        "exit": 2
+      },
+      {
+        "skill": "md-link-check",
+        "tool": "md-heading-check.py",
+        "fixture": "한글 정상.md",
+        "exit": 0
+      },
+      {
+        "skill": "md-link-check",
+        "tool": "md-heading-check.py",
+        "fixture": "bad.md",
+        "exit": 1
+      },
+      {
+        "skill": "readme-template",
+        "tool": "md-link-check.py",
+        "fixture": "한글 정상.md",
+        "exit": 0
+      },
+      {
+        "skill": "readme-template",
+        "tool": "md-link-check.py",
+        "fixture": "bad.md",
+        "exit": 1
+      },
+      {
+        "skill": "readme-template",
+        "tool": "md-link-check.py",
+        "fixture": "empty",
+        "exit": 2
+      },
+      {
+        "skill": "readme-template",
+        "tool": "md-heading-check.py",
+        "fixture": "한글 정상.md",
+        "exit": 0
+      },
+      {
+        "skill": "readme-template",
+        "tool": "md-heading-check.py",
+        "fixture": "bad.md",
+        "exit": 1
+      },
+      {
+        "skill": "security-tools",
+        "tool": "md-link-check.py",
+        "fixture": "한글 정상.md",
+        "exit": 0
+      },
+      {
+        "skill": "security-tools",
+        "tool": "md-link-check.py",
+        "fixture": "bad.md",
+        "exit": 1
+      },
+      {
+        "skill": "security-tools",
+        "tool": "md-link-check.py",
+        "fixture": "empty",
+        "exit": 2
+      },
+      {
+        "skill": "security-tools",
+        "tool": "md-heading-check.py",
+        "fixture": "한글 정상.md",
+        "exit": 0
+      },
+      {
+        "skill": "security-tools",
+        "tool": "md-heading-check.py",
+        "fixture": "bad.md",
+        "exit": 1
+      },
+      {
+        "skill": "using-skills",
+        "tool": "md-link-check.py",
+        "fixture": "한글 정상.md",
+        "exit": 0
+      },
+      {
+        "skill": "using-skills",
+        "tool": "md-link-check.py",
+        "fixture": "bad.md",
+        "exit": 1
+      },
+      {
+        "skill": "using-skills",
+        "tool": "md-link-check.py",
+        "fixture": "empty",
+        "exit": 2
+      },
+      {
+        "skill": "using-skills",
+        "tool": "md-heading-check.py",
+        "fixture": "한글 정상.md",
+        "exit": 0
+      },
+      {
+        "skill": "using-skills",
+        "tool": "md-heading-check.py",
+        "fixture": "bad.md",
+        "exit": 1
+      },
+      {
+        "skill": "work-rules",
+        "tool": "md-link-check.py",
+        "fixture": "한글 정상.md",
+        "exit": 0
+      },
+      {
+        "skill": "work-rules",
+        "tool": "md-link-check.py",
+        "fixture": "bad.md",
+        "exit": 1
+      },
+      {
+        "skill": "work-rules",
+        "tool": "md-link-check.py",
+        "fixture": "empty",
+        "exit": 2
+      },
+      {
+        "skill": "work-rules",
+        "tool": "md-heading-check.py",
+        "fixture": "한글 정상.md",
+        "exit": 0
+      },
+      {
+        "skill": "work-rules",
+        "tool": "md-heading-check.py",
+        "fixture": "bad.md",
+        "exit": 1
+      },
+      {
+        "skill": "zircon-readme-policy",
+        "tool": "md-link-check.py",
+        "fixture": "한글 정상.md",
+        "exit": 0
+      },
+      {
+        "skill": "zircon-readme-policy",
+        "tool": "md-link-check.py",
+        "fixture": "bad.md",
+        "exit": 1
+      },
+      {
+        "skill": "zircon-readme-policy",
+        "tool": "md-link-check.py",
+        "fixture": "empty",
+        "exit": 2
+      },
+      {
+        "skill": "zircon-readme-policy",
+        "tool": "md-heading-check.py",
+        "fixture": "한글 정상.md",
+        "exit": 0
+      },
+      {
+        "skill": "zircon-readme-policy",
+        "tool": "md-heading-check.py",
+        "fixture": "bad.md",
+        "exit": 1
+      }
+    ]
+  },
+  "installation": {
+    "updated_skills": [
+      "git-commit-rule",
+      "md-link-check",
+      "work-rules"
+    ],
+    "unchanged_skills": [
+      "code-review",
+      "debugging-and-recovery",
+      "markdown-review",
+      "planning-and-breakdown"
+    ],
+    "files_before": 91,
+    "files_after": 100,
+    "updated_folders_match_source": true,
+    "personal_agents_updated": true,
+    "config_unchanged": true,
+    "private_backup_ignored": true,
+    "new_session_implicit_selection": "not tested"
+  },
+  "routing_review": {
+    "independent_agent": "four static scenarios; no live changes",
+    "scenarios": [
+      "resume existing task",
+      "SSH encoding analysis",
+      "one personal skill update",
+      "two-line README without footer"
+    ],
+    "blocking_findings": 0,
+    "runtime_section_scoping_improved": true,
+    "implicit_selection_test": false
+  },
+  "content_size": {
+    "unit": "Unicode characters, not tokens",
+    "work_rules_before": 4805,
+    "work_rules_after": 3506,
+    "personal_agents_before": 2254,
+    "personal_agents_after": 1818
+  },
+  "unexecuted": [
+    "31 deployment",
+    "CI/CD auto-sync",
+    "main push",
+    "new Codex session implicit selection and real task behavior",
+    "token usage measurement",
+    "live SSH or ACL changes"
+  ],
+  "final_markdown": {
+    "files": 72,
+    "links": 242,
+    "headings": 973,
+    "link_issues": 0,
+    "heading_issues": 0,
+    "management_style_issues": 0
+  },
+  "publication": {
+    "branch": "yunli",
+    "main": "not changed",
+    "remote_confirmation": "reported after push; not inferred from local validation"
+  },
+  "known_unmodified_checker_limits": [
+    "Encoded leading %23 path can be skipped as an anchor",
+    "Unmatched inline backticks can hide links across paragraphs",
+    "Blockquote fence termination can hide later links"
+  ],
+  "security": {
+    "scanner": "gitleaks 8.30.1",
+    "scope": "76 staged files; private backups excluded",
+    "exit": 0,
+    "findings": 0,
+    "staged_diff_check": 0,
+    "source_installed_hashes_rechecked": true
+  }
+}

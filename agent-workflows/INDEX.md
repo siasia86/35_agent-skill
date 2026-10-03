@@ -48,7 +48,7 @@
 | Windows 복사·사용     | [Windows README](../codex_windows/README.md)                                                         | 실제 설치/적용 요청 범위가 있을 때                               |
 | 개인 공통 규칙 작성   | [공통 AGENTS](../codex_windows/AGENTS.md), [work-rules](../codex_windows/skills/work-rules/SKILL.md) | 선택적 작성 원본과 실제 홈을 구분                                |
 | 필요한 역할 선택      | [using-skills](../codex_windows/skills/using-skills/SKILL.md)                                        | 역할 기준 원본; 개별 본문은 선택한 것만                          |
-| repo 문서·결과물 구조 | [Workflow 참조](../codex_windows/skills/work-rules/references/repository-workflow.md)                | INDEX/TODO/TASK·경로 예외·이력 설계                              |
+| repo 문서·결과물 구조 | [Workflow 참조](../codex_windows/skills/work-rules/references/repository-workflow.md)                | 대상 repo 지침·31 중앙 원본의 구분과 조회 조건                   |
 | Windows 변경·재개     | [Windows TODO](codex/windows/TODO.md), [PLAN](codex/windows/PLAN.md)                                 | 관련 항목과 실제 Git·파일 상태를 대조                            |
 | 반복 문제·제약        | [Windows ISSUE](codex/windows/ISSUE.md)                                                              | 해당 문제와 필요한 재개 조건만                                   |
 | 공식 system 기준·검증 | [공식 skill 재검토](codex/windows/SYSTEM_SKILL_REVIEW_2026-10-03.md)                                 | 고정 source·설치/발견/정적/행동 범위를 구분                      |
@@ -58,6 +58,8 @@
 완료한 배포 원본 배치 교정은 [T-WIN-002 이력](history/2026-10-03/T-WIN-002-distribution-root.md)에서 확인합니다. 이 색인에 완료 상태를 다시 운영하지 않습니다.
 
 이번 개인 skill의 업데이트·이전본 조회는 [T-WIN-003 백업](codex/2026-10-03-personal-skills-T-WIN-003/README.md)을, 두 요청 skill의 원본 출처 조회는 [참고 색인](../_reference/INDEX.md#4-skill-원본-보관)을 사용합니다.
+
+현재 개인 skill 재구성·설치 기록은 [T-WIN-004](codex/2026-10-04-personal-routing-T-WIN-004/README.md)에서 확인합니다. 과거 Workflow 역할표·tree는 현재 중앙 정책 원본으로 재사용하지 않습니다.
 
 ## 3. INDEX가 관리하지 않는 것
 

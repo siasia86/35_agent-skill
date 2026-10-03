@@ -31,7 +31,7 @@ description: Documents security masking tools (ip_mask.py, json_mask.py, aws-sec
 - 실행 스크립트가 동봉된 스킬은 이 폴더 안의 사본을 사용합니다. 세 Markdown 검사기가 동봉된 경우 `../../scripts/md_common.py`도 같은 폴더에 있어야 합니다. 스크립트가 없는 스킬에 실행 도구가 구현됐다고 가정하지 않습니다. 폴더 전체 복사 외 별도 중앙 설치·전역 alias가 필요하지 않습니다.
 - PowerShell 문법 검사·Python AST 검사는 실제 프로그램 실행 결과와 구분합니다. 현재 대상·실행 도구·제외 설정·종료 코드를 기록하고 **통과 / 부분 검사 / 실패 / 미실행**을 구분합니다.
 
-문서 스타일은 동봉 [STYLE.md](../STYLE.md)를 사용합니다. `sia-md-*` 대신 동봉 스크립트를 Python 3.11 이상으로 실행합니다. 기본 OS/언어 runtime 외 pip·다른 저장소 설치는 필요하지 않습니다. 대상 저장소의 선택적 TOML 설정은 실제 존재할 때만 적용합니다.
+문서 표현 기준이 필요할 때만 동봉 [STYLE.md](../STYLE.md)를 읽고 문서 역할·푸터·날짜·배지는 대상 repo의 적용 기준을 따릅니다. `sia-md-*` 대신 동봉 스크립트를 Python 3.11 이상으로 실행합니다. 기본 OS/언어 runtime 외 pip·다른 저장소 설치는 필요하지 않습니다. 대상 저장소의 선택적 TOML 설정은 실제 존재할 때만 적용합니다.
 
 ```powershell
 $SkillDir = 'C:\work\skills\security-tools'  # 실제 복사된 해당 스킬 폴더
@@ -50,7 +50,7 @@ python -X utf8 -B (Join-Path $SkillDir 'scripts/md-link-check.py') $Target
 
 저장소 지침이 푸터·날짜·배지를 금지하면 style 검사에 `--no-footer`를 사용하고 그 적용 근거와 제외 범위를 기록합니다. 다른 검사는 계속 실행합니다. 정책상 금지된 푸터를 검사 통과 목적으로 추가하거나 그 결과를 미해결 오류로 취급하지 않습니다. 실제 내용 결함을 숨기기 위한 임의 skip은 하지 않습니다.
 
-- 동봉 STYLE §12의 `readme-template` 참조는 [전체 readme-template 지침](../skills/readme-template.md)으로 해석합니다. 대상 문서에 적용할 개인 푸터 기본값·원문 예외와 사용자/저장소의 상위 지침을 함께 확인하며, 형제 스킬 설치를 요구하지 않습니다.
+- 동봉 STYLE §12의 `readme-template` 참조는 [전체 readme-template 지침](../skills/readme-template.md)으로 해석합니다. 대상 repo가 채택한 문서 양식을 확인하며 개인 공통 푸터를 추가하거나 형제 스킬 설치를 요구하지 않습니다.
 
 ### Windows 보안 도구 경계
 

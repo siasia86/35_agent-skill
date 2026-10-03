@@ -405,42 +405,15 @@ H3 제목 형식: `` ### `/command` — 한글 설명 ``
 
 ## 11. 이미지
 
-```markdown
-![alt text 설명](../98_image/문서명/파일명.png)
-```
-
-- alt text 필수 (스크린리더/이미지 깨짐 대비)
-- 이미지 경로: 상대경로 사용, `98_image/문서명/` 하위에 정리
-- 캡션이 필요하면 이미지 아래에 인용블록 사용
+alt text를 제공하고 필요한 캡션을 붙입니다. 저장 위치·파일명·상대 링크 기준은 대상 repo의 적용 지침을 확인합니다. 개인 표현 가이드에서 고정 이미지 디렉토리를 만들지 않습니다.
 
 ## 12. README 푸터
 
-모든 .md 파일 말미에 `readme-template` 스킬의 통계 배지/저작권 푸터를 적용합니다.
-이 스타일 가이드와 별도로 관리되므로 `skill://readme-template` 참고.
-
-### 날짜 필드 빈줄 규칙
-
-`**작성일**`과 `**마지막 업데이트**` 사이에 반드시 빈줄 1개를 넣습니다.
-마크다운 렌더러는 빈줄 없이 연속된 줄을 한 줄로 합쳐 출력하기 때문입니다.
-
-```markdown
----
-
-**작성일**: 2026-04-30
-
-**마지막 업데이트**: 2026-08-27
-
-© 2026 siasia86. Licensed under CC BY 4.0.
-```
-
-🟡 빈줄을 제거하면 웹 렌더링 시 `작성일: 2026-04-30 마지막 업데이트: 2026-04-30` 으로 한 줄 출력됨.
+푸터·배지·라이선스·날짜는 대상 repo가 채택한 양식을 따릅니다. 일반 Markdown이나 skill에 공통 푸터를 자동 추가하지 않습니다. 원문 형식 비교는 [보존 STYLE](originals/STYLE.md)에서 필요한 때만 확인합니다.
 
 ## 13. 파일명 규칙
 
-- 소문자 사용
-- 단어 구분: **언더스코어(`_`)** 사용 — 하이픈(`-`) 사용 금지
-- 예: `binary_tree.md`, `lsp_guide.md`, `cdn_proxy_origin_ip.md`
-- ❌ `binary-tree.md`, `lsp-guide.md`
+현재 제품·도구·repo가 지정한 파일명과 기존 링크를 유지합니다. 이 가이드는 공통 하이픈 금지·밑줄 강제 규칙을 두지 않습니다.
 
 ## 14. 구분선
 
@@ -474,47 +447,4 @@ H3 제목 형식: `` ### `/command` — 한글 설명 ``
 
 ## 16. 참고 자료
 
-각 문서 말미, 통계 배지 앞에 배치. 외부 링크는 표 대신 목록 형태로 작성.
-
-```markdown
-## 참고 자료
-
-- 레이블: [링크텍스트](https://url) — ★★★☆☆
-- 책/RFC 등: 저자. "제목"
-```
-
-### 작성 규칙
-
-- **외부 URL**: `- 레이블: [링크텍스트](URL) — ★★★☆☆` 형식 사용
-  - 레이블: 문서/서비스 이름 (콜론 뒤)
-  - 링크텍스트: 도메인 또는 페이지 제목 (간결하게)
-  - 별점: 모든 외부 링크에 필수 추가
-  - 예: `- Redis Documentation: [redis.io/docs](https://redis.io/docs/) — ★★★★☆`
-- **RFC/논문/책**: `- 저자. "제목"` 또는 `- RFC XXXX: 제목` (별점 생략 가능)
-- **내부 문서**: `- [문서명](상대경로)` 형식 사용 (별점 생략)
-- URL만 있고 레이블 없는 경우: `- [페이지 제목](URL)`
-
-### 별점 기준
-
-| 별점  | 자료 유형                   | 사용 빈도   | 예시                                 |
-|-------|-----------------------------|-------------|--------------------------------------|
-| ★☆☆☆☆ | 온라인 도구, 단순 참고 링크 | 드물게      | subnet-calculator.com                |
-| ★★☆☆☆ | 블로그, 튜토리얼, 서드파티  | 가장 많이   | percona.com/blog                     |
-| ★★★☆☆ | 공식 문서, 공식 레퍼런스    | 자주        | docs.python.org, docs.aws.amazon.com |
-| ★★★★☆ | RFC 원문, seminal 도서      | 어쩌다 한번 | RFC 793, Google SRE Book             |
-| ★★★★★ | 대체 불가 필독서/표준       | 사용 자제   | 거의 없음                            |
-
-🟡 별점은 후하게 주지 않는다. ★★☆☆☆이 기본값이며 ★★★★★는 해당 분야에서 대체 불가한 자료에만 사용.
-
-### 예시
-
-```markdown
-## 참고 자료
-
-- Redis Documentation: [redis.io/docs](https://redis.io/docs/) — ★★★★☆
-- Redis Commands: [redis.io/commands](https://redis.io/commands/) — ★★★☆☆
-- Redis Patterns: [redis.io/docs/manual/patterns](https://redis.io/docs/manual/patterns/) — ★★★☆☆
-- RFC 793: Transmission Control Protocol
-- Stevens, W. Richard. "TCP/IP Illustrated, Volume 1"
-- [관련 내부 문서](../01_fundamentals/networking/tcp_state_concepts.md)
-```
+주장을 뒷받침하는 출처를 식별 가능한 제목과 링크로 연결합니다. 위치·목록 형식·별점·배지는 대상의 적용 양식을 따르며 개인 기본값으로 강제하지 않습니다. 원문 별점표·예시는 [보존 STYLE](originals/STYLE.md)에 유지합니다.

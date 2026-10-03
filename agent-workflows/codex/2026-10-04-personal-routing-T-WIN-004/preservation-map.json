@@ -1,0 +1,41 @@
+{
+  "historical_manifest": "../windows/verification/source_manifest.json",
+  "relocated_preserved_files": [
+    {
+      "before": "codex_windows/skills/git-commit-rule/references/STYLE.md",
+      "preserved": "codex_windows/skills/git-commit-rule/references/originals/STYLE.md",
+      "sha256": "f2797a30aaf805f9ab3cf157fff2e7229ad99dfe5cc6785b01b734090701a46a"
+    },
+    {
+      "before": "codex_windows/skills/md-link-check/references/STYLE.md",
+      "preserved": "codex_windows/skills/md-link-check/references/originals/STYLE.md",
+      "sha256": "f2797a30aaf805f9ab3cf157fff2e7229ad99dfe5cc6785b01b734090701a46a"
+    },
+    {
+      "before": "codex_windows/skills/readme-template/references/STYLE.md",
+      "preserved": "codex_windows/skills/readme-template/references/originals/STYLE.md",
+      "sha256": "f2797a30aaf805f9ab3cf157fff2e7229ad99dfe5cc6785b01b734090701a46a"
+    },
+    {
+      "before": "codex_windows/skills/security-tools/references/STYLE.md",
+      "preserved": "codex_windows/skills/security-tools/references/originals/STYLE.md",
+      "sha256": "f2797a30aaf805f9ab3cf157fff2e7229ad99dfe5cc6785b01b734090701a46a"
+    },
+    {
+      "before": "codex_windows/skills/using-skills/references/STYLE.md",
+      "preserved": "codex_windows/skills/using-skills/references/originals/STYLE.md",
+      "sha256": "f2797a30aaf805f9ab3cf157fff2e7229ad99dfe5cc6785b01b734090701a46a"
+    },
+    {
+      "before": "codex_windows/skills/work-rules/references/STYLE.md",
+      "preserved": "codex_windows/skills/work-rules/references/originals/STYLE.md",
+      "sha256": "f2797a30aaf805f9ab3cf157fff2e7229ad99dfe5cc6785b01b734090701a46a"
+    },
+    {
+      "before": "codex_windows/skills/zircon-readme-policy/references/STYLE.md",
+      "preserved": "codex_windows/skills/zircon-readme-policy/references/originals/STYLE.md",
+      "sha256": "f2797a30aaf805f9ab3cf157fff2e7229ad99dfe5cc6785b01b734090701a46a"
+    }
+  ],
+  "source_and_preserved_checks": 368
+}

@@ -68,7 +68,7 @@ Windows에서도 원문의 발견 트리·구성·우선순위를 현재 요청 
 - `skill://work-rules` → [work-rules](references/skills/work-rules.md).
 - `skill://zircon-readme-policy` → [zircon-readme-policy](references/skills/zircon-readme-policy.md).
 
-문서 개인 양식은 [STYLE.md](references/STYLE.md)를 현재 사용자/저장소 예외와 함께 적용합니다.
+문서 표현 양식이 실제 필요한 경우에만 [STYLE.md](references/STYLE.md)를 읽습니다. 문서 역할·결과물 위치·푸터·날짜·배지는 대상 repo의 적용 지침을 따릅니다.
 
 ### 동봉 도구 호출
 

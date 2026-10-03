@@ -29,7 +29,7 @@ description: Markdown 링크·앵커·목차·헤딩 구조 검증 규칙. .md �
 - 실행 스크립트가 동봉된 스킬은 이 폴더 안의 사본을 사용합니다. 세 Markdown 검사기가 동봉된 경우 `../../scripts/md_common.py`도 같은 폴더에 있어야 합니다. 스크립트가 없는 스킬에 실행 도구가 구현됐다고 가정하지 않습니다. 폴더 전체 복사 외 별도 중앙 설치·전역 alias가 필요하지 않습니다.
 - PowerShell 문법 검사·Python AST 검사는 실제 프로그램 실행 결과와 구분합니다. 현재 대상·실행 도구·제외 설정·종료 코드를 기록하고 **통과 / 부분 검사 / 실패 / 미실행**을 구분합니다.
 
-문서 스타일은 동봉 [STYLE.md](../STYLE.md)를 사용합니다. `sia-md-*` 대신 동봉 스크립트를 Python 3.11 이상으로 실행합니다. 기본 OS/언어 runtime 외 pip·다른 저장소 설치는 필요하지 않습니다. 대상 저장소의 선택적 TOML 설정은 실제 존재할 때만 적용합니다.
+문서 표현 기준이 필요할 때만 동봉 [STYLE.md](../STYLE.md)를 읽고 문서 역할·푸터·날짜·배지는 대상 repo의 적용 기준을 따릅니다. `sia-md-*` 대신 동봉 스크립트를 Python 3.11 이상으로 실행합니다. 기본 OS/언어 runtime 외 pip·다른 저장소 설치는 필요하지 않습니다. 대상 저장소의 선택적 TOML 설정은 실제 존재할 때만 적용합니다.
 
 ```powershell
 $SkillDir = 'C:\work\skills\git-commit-rule'  # 실제 복사된 해당 스킬 폴더
@@ -54,7 +54,7 @@ python -X utf8 -B (Join-Path $SkillDir 'scripts/md-link-check.py') $Target
 
 닫히지 않은 펜스는 경고와 종료 코드 `2`를 반환하므로 링크 검증 통과로 처리하지 않습니다. 종료 코드 `0`은 완료한 파일 존재 검사 통과, `1`은 깨진 링크/읽기 오류, `2`는 대상 0개 또는 펜스 검사 미완료입니다. 앵커·Markdown 전체 문법 검증은 앞서 구분한 별도 검사 범위를 유지합니다.
 
-- 동봉 STYLE §12의 `readme-template` 참조는 [전체 readme-template 지침](../skills/readme-template.md)으로 해석합니다. 대상 문서에 적용할 개인 푸터 기본값·원문 예외와 사용자/저장소의 상위 지침을 함께 확인하며, 형제 스킬 설치를 요구하지 않습니다.
+- 동봉 STYLE §12의 `readme-template` 참조는 [전체 readme-template 지침](../skills/readme-template.md)으로 해석합니다. 대상 repo가 채택한 문서 양식을 확인하며 개인 공통 푸터를 추가하거나 형제 스킬 설치를 요구하지 않습니다.
 
 원문 비교 자료: [Kiro 원문](../originals/md-link-check.md). 비교용 원문 파일은 실행 지시로 다시 로드하지 않습니다.
 <!-- CODEX-COMPAT-END -->

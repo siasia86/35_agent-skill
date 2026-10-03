@@ -4,27 +4,29 @@
 
 ## 1. 전체 19개
 
-| skill                                                     | 유지한 역할                          | Windows 실행 조건·도구                        |
-|-----------------------------------------------------------|--------------------------------------|-----------------------------------------------|
-| [bash-script-template](bash-script-template/SKILL.md)     | Bash 전체 템플릿·백업·실패 전파      | Git Bash 또는 WSL; native 서비스는 PowerShell |
-| [code-review](code-review/SKILL.md)                       | 코드·스크립트·IaC 검토               | Git·대상 언어 도구; 실행한 검사만 보고        |
-| [debugging-and-recovery](debugging-and-recovery/SKILL.md) | 증거 수집·장애 격리·복구             | Windows 서비스/로그 또는 확인한 원격 Linux    |
-| [doubt-driven-infra](doubt-driven-infra/SKILL.md)         | 비가역 변경의 가정·증거·복구 검토    | 대상 인프라 CLI와 현재 권한 확인              |
-| [git-commit-rule](git-commit-rule/SKILL.md)               | 커밋·PR·변경 기록                    | Git·Python Markdown 도구                      |
-| [incremental-change](incremental-change/SKILL.md)         | 작은 변경·선행 호환성·검증           | Git·대상 IaC/서비스 도구                      |
-| [kiro-lock](kiro-lock/SKILL.md)                           | 협조자 잠금·소유 확인·해제           | Python 동봉 lock; ACL/SMB 보장 별도           |
-| [md-link-check](md-link-check/SKILL.md)                   | Markdown 파일 링크·앵커·헤딩         | Python 검사기 3개 + md_common.py              |
-| [planning-and-breakdown](planning-and-breakdown/SKILL.md) | 목적·범위·의존성·실행 순서           | 현재 저장소 문서 체계; 고정 외부 도구 없음    |
-| [python-script-template](python-script-template/SKILL.md) | 전체 Python 템플릿·UTF-8·원자 쓰기   | Python; 실제 업무 변환은 대상에서 구현        |
-| [readme-template](readme-template/SKILL.md)               | README 구조·표·푸터 규칙             | Python Markdown 도구; 저장소 예외 우선        |
-| [repo-governance](repo-governance/SKILL.md)               | 저장소 지침·예외·권한 확인           | Git·현재 AGENTS와 채택된 정책                 |
-| [security-tools](security-tools/SKILL.md)                 | 비밀정보·보안 도구·마스킹 검토       | Python·실제 제공된 보안 CLI; 개인 map 비공개  |
-| [shipping-checklist](shipping-checklist/SKILL.md)         | 배포 조건·검증·가역성·복구           | 실제 배포 대상 CLI; 요청 범위 확인            |
-| [spec-driven-infra](spec-driven-infra/SKILL.md)           | 인프라 명세·설계·구현·검증           | Terraform/Docker/원격 Ansible 등 대상별 확인  |
-| [testing-guide](testing-guide/SKILL.md)                   | 테스트 설계·경계·실패·운영 지표      | 대상 언어 도구·명시한 playbook/container      |
-| [using-skills](using-skills/SKILL.md)                     | 전체 19개 역할 대응·필요 참조 선택   | 동봉 역할 18개·현재 작업 도구                 |
-| [work-rules](work-rules/SKILL.md)                         | 전체 공통 작업·문서·파일·서비스 규약 | PowerShell·Git·Python; Linux 업무 계층 구분   |
-| [zircon-readme-policy](zircon-readme-policy/SKILL.md)     | Zircon 대상 README 정책·예외         | 명시 채택 저장소에서만; 동봉 Python 도구      |
+| skill                                                     | 유지한 역할                        | Windows 실행 조건·도구                        |
+|-----------------------------------------------------------|------------------------------------|-----------------------------------------------|
+| [bash-script-template](bash-script-template/SKILL.md)     | Bash 전체 템플릿·백업·실패 전파    | Git Bash 또는 WSL; native 서비스는 PowerShell |
+| [code-review](code-review/SKILL.md)                       | 코드·스크립트·IaC 검토             | Git·대상 언어 도구; 실행한 검사만 보고        |
+| [debugging-and-recovery](debugging-and-recovery/SKILL.md) | 증거 수집·장애 격리·복구           | Windows 서비스/로그 또는 확인한 원격 Linux    |
+| [doubt-driven-infra](doubt-driven-infra/SKILL.md)         | 비가역 변경의 가정·증거·복구 검토  | 대상 인프라 CLI와 현재 권한 확인              |
+| [git-commit-rule](git-commit-rule/SKILL.md)               | 커밋·PR·변경 기록                  | Git·Python Markdown 도구                      |
+| [incremental-change](incremental-change/SKILL.md)         | 작은 변경·선행 호환성·검증         | Git·대상 IaC/서비스 도구                      |
+| [kiro-lock](kiro-lock/SKILL.md)                           | 협조자 잠금·소유 확인·해제         | Python 동봉 lock; ACL/SMB 보장 별도           |
+| [md-link-check](md-link-check/SKILL.md)                   | Markdown 파일 링크·앵커·헤딩       | Python 검사기 3개 + md_common.py              |
+| [planning-and-breakdown](planning-and-breakdown/SKILL.md) | 목적·범위·의존성·실행 순서         | 현재 저장소 문서 체계; 고정 외부 도구 없음    |
+| [python-script-template](python-script-template/SKILL.md) | 전체 Python 템플릿·UTF-8·원자 쓰기 | Python; 실제 업무 변환은 대상에서 구현        |
+| [readme-template](readme-template/SKILL.md)               | 대상 README 양식 연결              | Python Markdown 도구; 저장소 예외 우선        |
+| [repo-governance](repo-governance/SKILL.md)               | 저장소 지침·예외·권한 확인         | Git·현재 AGENTS와 채택된 정책                 |
+| [security-tools](security-tools/SKILL.md)                 | 비밀정보·보안 도구·마스킹 검토     | Python·실제 제공된 보안 CLI; 개인 map 비공개  |
+| [shipping-checklist](shipping-checklist/SKILL.md)         | 배포 조건·검증·가역성·복구         | 실제 배포 대상 CLI; 요청 범위 확인            |
+| [spec-driven-infra](spec-driven-infra/SKILL.md)           | 인프라 명세·설계·구현·검증         | Terraform/Docker/원격 Ansible 등 대상별 확인  |
+| [testing-guide](testing-guide/SKILL.md)                   | 테스트 설계·경계·실패·운영 지표    | 대상 언어 도구·명시한 playbook/container      |
+| [using-skills](using-skills/SKILL.md)                     | 전체 19개 역할 대응·필요 참조 선택 | 동봉 역할 18개·현재 작업 도구                 |
+| [work-rules](work-rules/SKILL.md)                         | 공통 작업·보고·조건별 참조         | PowerShell·Git·Python; Linux 업무 계층 구분   |
+| [zircon-readme-policy](zircon-readme-policy/SKILL.md)     | Zircon 현행 문서 지침 연결         | 명시 채택 저장소에서만; 동봉 Python 도구      |
+
+2026-10-04 재구성에서 work-rules의 조건별 상세를 분리하고 문서 역할·결과물 tree·푸터·고정 branch의 개인 중복 규칙을 제거했습니다. 문서·정책 skill은 실제 대상에 적용된 지침을 연결하며 보존 원문과 실행 도구는 유지합니다. 현재 선택한 개인 설치본은 별도 업데이트 기록에서 확인합니다.
 
 ## 2. 단독 사용과 보존
 
