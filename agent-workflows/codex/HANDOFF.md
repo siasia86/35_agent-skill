@@ -2,7 +2,9 @@
 
 ## 1. 재개할 작업과 읽기 순서
 
-**2026-10-03 현재 상태:** Windows 전체 이관 `773a150`과 복사용 구성 정리 `47f3328` 이후 work-rules·personal AGENTS의 공통 보고·채팅 요청 구분과 W02–W10을 보완했습니다. 현재 변경·새 검증은 [보고 지침과 helper 보완](windows/REPORTING_REMEDIATION_2026-10-03.md), 복사용 본문은 [codex_windows](../../codex_windows/README.md), 후속은 [Windows 작업 기록](windows/README.md)에서 확인합니다. 실제 게시 SHA는 Git refs를 먼저 대조하고 사용자 검증·개인 홈 적용·main 반영은 후속으로 유지합니다.
+**2026-10-03 후속 상태:** 공식 source를 재검토하고 INDEX·단일 작업 상태·산출물 경로 예외를 보완했습니다. 사용자가 지정한 work-rules와 개인 AGENTS 공통 요약을 실제 개인 경로에 적용하고 기존 사본을 보존했습니다. 상세 실행·검증·미검증은 [공식 skill 재검토](windows/SYSTEM_SKILL_REVIEW_2026-10-03.md#6-적용검증복구), 후속 상태는 [Windows TODO](windows/TODO.md)를 확인합니다. 게시 SHA는 실제 Git refs와 대조하며 사용자 검증 전 main 반영·추가 개인 적용을 완료로 가정하지 않습니다.
+
+**같은 날 이전 상태:** Windows 전체 이관 `773a150`과 복사용 구성 정리 `47f3328` 이후 work-rules·personal AGENTS의 공통 보고·채팅 요청 구분과 W02–W10을 보완했습니다. 당시 변경·검증은 [보고 지침과 helper 보완](windows/REPORTING_REMEDIATION_2026-10-03.md), 복사용 본문은 [codex_windows](../../codex_windows/README.md)에서 확인합니다. 당시 개인 홈 적용 대기 기록은 위 후속 상태와 구분합니다.
 
 **플랫폼 분리 전 2026-10-03 상태:** 원격·로컬 main·yunli 통합 이후 사용자 요청으로 동작 문제 5개와 참조 완결성을 로컬 보완하고 회귀 검사를 마쳤습니다. 수정본은 후속 요청으로 yunli 게시와 main 병합을 마쳤으며 최신 상태는 아래 10절과 [보완 기록](REMEDIATION_2026-10-03.md#7-yunli-게시와-main-병합-완료)을 따릅니다. 다음 미완료 항목은 최종본 독립 모델 사례와 사용자가 선택하는 실제 환경 확인입니다. [codex/TODO](../../codex_linux/TODO.md#1-다음-세션에서-이어갈-추가-검토)에 범위를 남깁니다.
 

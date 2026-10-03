@@ -55,6 +55,8 @@ Windows 개인 Codex의 복사·사용 구성, 저장소 작업 기록, 공통 w
 
 현행 상태·검사·미실행은 [Windows 작업 색인](agent-workflows/codex/windows/README.md), [TODO](agent-workflows/codex/windows/TODO.md), [보고 지침과 helper 보완 기록](agent-workflows/codex/windows/REPORTING_REMEDIATION_2026-10-03.md)에서 확인합니다. 기존 이관 REVIEW와 후속 검토는 입력 시점·범위를 구분합니다.
 
+현행 자료 탐색은 [AI 작업 INDEX](agent-workflows/INDEX.md)를 기준으로 합니다. 위 tree는 기재한 입력 시점의 구조 설명이며 INDEX의 활성 경로·조회 조건과 같은 현황표를 별도 관리하지 않습니다.
+
 ## 2. Codex가 인식하는 Markdown
 
 | 파일                 | 공식 동작                                                   | 구조에서의 역할                                                     |
@@ -68,7 +70,7 @@ AGENTS의 발견 경로·우선순위는 [공식 AGENTS 안내](https://learn.ch
 
 `PLANS.md`는 제품의 기본 자동 발견 파일이라는 근거로 사용하지 않습니다. 해당 Cookbook은 실행 계획의 형식·사용 조건을 AGENTS로 연결한 예시이며 현재 archived 자료입니다. [공식 실행 계획 예시](https://developers.openai.com/cookbook/articles/codex_exec_plans)
 
-README·PLAN·TODO·REVIEW·DELEGATION·ISSUE·CHANGELOG·INTERVIEW는 기본 자동 발견 이름으로 공식 안내되지 않은 사용자 관리 문서입니다. 요청·AGENTS·선택 skill에 경로와 조회 조건을 명시합니다. `project_doc_fallback_filenames`는 AGENTS의 대체 지침 이름을 선택하는 설정이므로 관리 문서 전체를 로드하는 기능으로 사용하지 않습니다.
+README·INDEX·PLAN·TODO·TASK·REVIEW·DELEGATION·ISSUE·CHANGELOG·INTERVIEW는 기본 자동 발견 이름으로 공식 안내되지 않은 사용자 관리 문서입니다. 요청·AGENTS·선택 skill에 경로와 조회 조건을 명시합니다. `project_doc_fallback_filenames`는 AGENTS의 대체 지침 이름을 선택하는 설정이므로 관리 문서 전체를 로드하는 기능으로 사용하지 않습니다.
 
 DELEGATION 기록은 실제 agent 호출·모델 선택·결과 회수와 구분합니다. 개인·프로젝트 custom agent 설정은 별도의 TOML 형식이며 문서 존재만으로 실행을 보장하지 않습니다. [공식 Subagents 안내](https://learn.chatgpt.com/docs/agent-configuration/subagents)
 
@@ -174,7 +176,19 @@ history에는 공개 가능한 상세 관리 기록을, CHANGELOG에는 완료 �
 
 정적 설계 검토에서 근본적인 문서 책임 충돌은 확인하지 못했습니다. 실제 파일 이동·홈 지침 병합·새 세션의 발견/선택·모든 환경의 동작을 확인한 결과는 아닙니다. 구조 안내 작성과 실제 적용의 상태를 구분하며, 선택한 적용 범위에서 별도로 검증합니다.
 
-이번 문서 추가는 기존 skill·개인 설정·활성 작업 문서·보호 원문을 개편하지 않습니다. 기존 이관 검사 결과는 당시 증거로 유지합니다. 구조 변경이 후속으로 진행되면 변경한 문서·참조와 실제 새 세션 동작을 해당 범위에서 확인합니다.
+최초 구조 안내 문서 추가 당시에는 기존 skill·개인 설정·활성 작업 문서·보호 원문을 개편하지 않았습니다. 기존 이관 검사 결과는 당시 증거로 유지합니다. 아래 후속 보완의 변경·검증·실제 개인 적용은 별도 검토 기록에서 확인하며 새 세션 동작과 구분합니다.
+
+## 8. 공식 skill 기준의 후속 보완
+
+[system·공식 skill 재검토](agent-workflows/codex/windows/SYSTEM_SKILL_REVIEW_2026-10-03.md)에서 현행 공개 plugin source 전체와 실제 local system·cache를 구분했습니다. 35의 AI 작업 INDEX를 추가하고 work-rules·personal AGENTS에 아래 기준을 반영합니다.
+
+- README는 개요·진입점, INDEX는 주요 tree·읽기 조건·기준 문서 연결입니다. 실제 router skill의 SKILL.md와 일반 INDEX.md를 구분하며 동명 skill은 plugin·파일 경로로 식별합니다.
+- 기본은 짧은 TODO.md와 큰 작업의 tasks/<ID>/TASK.md입니다. TODO/ 방식은 각 작업 문서가 상태 원본이고 README는 링크 색인만 맡습니다. 두 상태 원본을 함께 운영하지 않습니다.
+- TODO는 사용자 작업 상태를 관리하고 tool JSON·실행 manifest·외부 tracker의 내부 상태를 대체하지 않습니다. 단순 작업에는 전체 문서와 빈 폴더를 생성하지 않습니다.
+- 일반 관리 기록과 자유롭게 저장할 수 있는 결과물은 각 repo의 기존 관리 공간에 묶습니다. design-qa.md·sealed scan bundle·제품 소스/자산·개인 runtime·외부 최종 URL 등 경로 계약은 원위치에서 연결합니다.
+- 완료 관리 기록을 먼저 보존하고 링크를 확인한 뒤 활성 목록을 정리합니다. 산출물과 검증 원본은 안정적인 경로에 유지하고 공개 기록과 비공개 raw/scratch를 구분합니다.
+
+이 후속 반영은 조회·기록 기준과 개인 skill 적용입니다. 기존 PLAN/TODO의 일괄 분할·이동, 모든 공개 plugin 설치·실행은 포함하지 않습니다. 구체적인 문서 역할·tree·예외는 [work-rules Workflow 참조](codex_windows/skills/work-rules/references/repository-workflow.md)를 기준으로 합니다.
 
 ---
 

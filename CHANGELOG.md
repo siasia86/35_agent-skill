@@ -4,6 +4,12 @@
 
 ## [Unreleased]
 
+### 공식 Codex skill 기준 Workflow 보완과 개인 적용 — 2026-10-03
+
+- 현행 공개 plugin source의 SKILL 문서 536개와 이전 skill source·실제 system/cache를 구분하고 [정적 검토·현재 적용 범위](agent-workflows/codex/windows/SYSTEM_SKILL_REVIEW_2026-10-03.md)에 기록했습니다.
+- [AI 작업 INDEX](agent-workflows/INDEX.md), work-rules의 선택적 Workflow 참조·동봉 대응, personal 공통 지침에 단일 상태 원본·작업별 결과·경로 예외·기존 승인·도구 계약을 반영합니다. 19개 원문과 기존 작업 기록은 보존합니다.
+- 개인 work-rules와 공통 요약의 실제 적용·검증 상태는 위 검토 기록에서 확인합니다. Git 게시는 yunli → 사용자 검증 → main 순서를 유지합니다.
+
 ### Windows 구조와 Workflow 안내 — 2026-10-03
 
 - 루트 [codex_windows.md](codex_windows.md)에 현재 tree·복사 사용/개발 기록의 구분·Codex Markdown 인식 방식·문서별 역할·보완안·장단점과 정적 검토 기준을 정리했습니다.

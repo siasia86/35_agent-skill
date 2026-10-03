@@ -5,6 +5,8 @@
 ## 1. 작업 문서
 
 - [PLAN](PLAN.md): 이관과 후속 작업 순서.
+- [공식 skill 재검토와 개인 적용](SYSTEM_SKILL_REVIEW_2026-10-03.md): 전체 공개 source 조사·INDEX/TODO/산출물 예외·현재 검증·설치 범위.
+- [AI 작업 INDEX](../../INDEX.md): 주요 구조와 작업별 기준 문서 연결.
 - [TODO](TODO.md): 완료·미실행·사용자 검증 상태.
 - [ISSUE](ISSUE.md): 호환 교정과 환경 제약.
 - [보고 지침과 helper 보완](REPORTING_REMEDIATION_2026-10-03.md): 현재 공통 보고 규칙·W02–W10 수정·새 검증과 미실행.

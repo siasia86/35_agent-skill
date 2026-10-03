@@ -1,6 +1,6 @@
 ---
 name: work-rules
-description: Defines operating rules for all agents. Use when executing any task — confirms before action, requires rollback plans for dangerous operations, enforces naming conventions and credential placeholders.
+description: Apply personal operating rules for repository work, progress reports, scoped skill selection, task records, validation and artifact paths. Use when executing, reviewing or resuming repository tasks; preserve existing authorization and keep simple questions lightweight.
 ---
 
 # Work Rules
@@ -46,6 +46,17 @@ description: Defines operating rules for all agents. Use when executing any task
 - Luna의 결과에는 파일 경로·행 또는 URL/출처, 조회 범위, 실제 개수·관찰 내용, 누락·오류를 필요한 만큼 포함합니다. 도구 오류·읽기 실패·검증하지 않은 검색 결과를 ‘없음’이나 확정 사실로 바꾸지 않습니다. 비밀정보·원시 비공개 자료를 전달/게시하지 않습니다.
 - main AI는 결과의 핵심 근거와 누락·일관성을 재대조하고 최종 상태·수정·게시 판단을 담당합니다. 단순 도구 문법 오류는 방법을 교정해 제한적으로 재시도하되 반복 실패·상충·범위 확대·깊은 해석이 필요하면 main AI가 이어받습니다. 같은 결과를 여러 agent에게 무조건 중복 검사시키지 않습니다.
 - Luna가 없거나 현재 도구가 모델 선택을 지원하지 않으면 그 한계를 명시하고 승인된 범위에서 main AI가 계속 진행합니다. Luna를 사용했다고 표시하거나 모델·플러그인 설치·외부 서비스 호출을 자동 수행하지 않습니다.
+
+### 저장소 Workflow와 AI 산출물
+
+- 상태·결정·완료 이력은 각 실제 repo 안에서 관리하고 기존 관리 경로를 재사용합니다. 관리 공간의 이름을 Codex 예약 디렉토리나 다른 repo의 강제 경로로 설명하지 않습니다.
+- README는 개요·진입 안내, INDEX는 주요 경로·읽기 조건·관련 skill과 기준 문서 연결입니다. INDEX·TODO·일반 관리 Markdown은 기본 자동 발견 이름이 아니며 repo AGENTS와 필요한 skill에서 조회 조건을 연결합니다. 다운로드·설치·발견·선택·행동 검증을 구분하고 같은 이름의 skill은 plugin과 실제 경로로 식별합니다.
+- 활성 작업 상태는 기존 TODO 등 한 기준 원본에서 관리하고 task 문서는 범위·입력·완료 조건·결과/검증 링크를 담습니다. 도구 JSON·실행 manifest·외부 tracker의 내부 상태를 TODO로 대체하지 않습니다.
+- 일반 관리 기록과 자유롭게 위치를 지정할 수 있는 결과물은 repo 관리 공간에 모읍니다. 선택 skill·제품·도구의 고정 경로·sealed 자료·외부 앱 결과·개인 runtime 상태는 해당 계약을 유지하고 INDEX/TASK에서 연결합니다. 제품 소스·자산·DB·빌드 파일을 AI 결과라는 이유로 자동 이동하지 않습니다.
+- 작은 작업에는 모든 관리 문서나 빈 폴더를 생성하지 않습니다. 완료 관리 기록을 먼저 보존하고 링크를 확인한 뒤 활성 목록을 정리하며 산출물·검증 원본은 안정적인 경로에 유지합니다. 비공개 raw/scratch는 Git 제외 여부를 확인합니다.
+- 공식 예제도 현재 실제 도구·OS·의존성·사용자 승인·repo 게시 규칙과 대조합니다. 공개 예제의 반복 승인·삭제·main 직접 push·가상 도구 지시를 현재 작업에 자동 적용하지 않습니다.
+
+지속 작업·구조 설계·작업 재개·산출물 정리에는 [저장소 Workflow 상세](references/repository-workflow.md)에서 문서 역할, TODO.md/TODO 디렉토리 선택, 작업별 tree와 경로 예외를 필요한 범위만 확인합니다.
 
 ### 단독 사용과 참조
 

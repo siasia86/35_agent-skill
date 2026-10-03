@@ -12,6 +12,8 @@ AI 도구별 Agent·Skill·Prompt의 최초 적용과 업데이트 절차를 관
 
 ---
 
+구조·skill·검토 자료를 찾을 때는 [AI 작업 INDEX](INDEX.md)를 사용합니다. 이 README는 관리 개요·절차, INDEX는 주요 tree·조회 조건·기준 문서 연결을 맡고 작업 상태는 해당 TODO에서 관리합니다.
+
 ## 1. 구조
 
 공통 절차·기존 SE 시험 기록과 환경·사용자·작업공간별 관찰 및 공개 가능한 적용 사본을 보관합니다. Agent·Skill·Prompt의 구현 원본과 사용 안내는 각 도구 디렉토리의 README·docs/에서 관리합니다.
@@ -21,7 +23,7 @@ AI 도구별 Agent·Skill·Prompt의 최초 적용과 업데이트 절차를 관
 - [codex/](codex/README.md): 과거 개인 홈의 skill 관찰 사본·inventory와 환경·작업공간별 후속 기록 기준. `pc01_codex-app-home`은 공개 별칭입니다.
 - ../kiro/docs/: Kiro 사용자 지침.
 - [../codex_linux/](../codex_linux/README.md): 현재 개인 스킬의 수동 복사·기존 편집 보존·검증 안내.
-- [../codex_windows/](../codex_windows/README.md): Windows 전용 계획·골격과 후속 검증 안내.
+- [../codex_windows/](../codex_windows/README.md): Windows 개인 skill 19개의 복사·사용 구성과 후속 검증 안내.
 - ../105_backup/codex/docs/: 폐기한 Codex 개발본의 역사적 적용 지침. 현재 설치 입력으로 사용하지 않습니다.
 - ../claude/docs/: Claude 예약 영역의 적용 전 점검 지침.
 
