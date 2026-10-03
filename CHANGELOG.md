@@ -4,6 +4,12 @@
 
 ## [Unreleased]
 
+### 보완 변경 yunli 게시와 main 병합 — 2026-10-03
+
+- 후속 사용자 요청으로 보완 변경 59개를 `a010cc7`에 commit하여 yunli에 일반 push하고 main에 fast-forward 병합·push했습니다. 실제 원격 두 SHA 일치와 design 유지를 확인했습니다.
+- 원래 로컬 main·yunli와 추적 refs도 같은 커밋으로 정합화하고 파일 498개 bytes·clean 상태를 보존했습니다. 확인 기록의 후속 커밋도 두 브랜치에 반영하며 최종 SHA는 Git refs에서 확인합니다. 근거는 [게시 결과](agent-workflows/codex/REMEDIATION_2026-10-03.md#7-yunli-게시와-main-병합-완료)에 남깁니다.
+- force push·release·설치·운영 적용은 수행하지 않았으며 독립 모델 사례·실환경 확인은 미완료로 유지합니다.
+
 ### Codex 개인 스킬 동작 보완과 로컬 회귀 검사 — 2026-10-03
 
 - Python parser 범위·원자적 쓰기 메타데이터, Bash 실패 전파, flock 경로 삭제, 중첩 펜스 뒤 링크 누락의 동작 문제 5개를 보완했습니다. Kiro 원문·예시·템플릿·체크리스트는 보존하고 호환 대체 블록과 실행용 검사기 7개에 반영했습니다.

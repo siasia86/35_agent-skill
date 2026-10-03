@@ -1,5 +1,7 @@
 # Codex 개인 스킬 동작 보완과 테스트
 
+1~5절은 로컬 보완 당시 기록이며 6절은 후속 게시 승인, 7절은 실제 게시·병합 결과입니다.
+
 ## 1. 요청 범위와 기준
 
 사용자가 “보완 작업 진행 후 테스트까지”를 요청했습니다. 시작은 yunli `f66b5b8`의 clean 작업 트리입니다. 저장소 로컬 보완·임시 Linux fixture·관련 기록을 수행하며 commit·push·설치·운영 적용은 포함하지 않습니다. `.governance`는 없으며 현재 AGENTS·TODO2의 원문 보존 기준을 적용했습니다.
@@ -58,6 +60,16 @@ python3 agent-workflows/codex/reviews/2026-10-03-remediation/validate_remediatio
 게시 시작 기준은 원격·로컬 main/yunli 모두 `f66b5b8`입니다. sandbox 원격 조회는 DNS 제한으로 실패했고 승인된 네트워크 fetch는 종료 0으로 최신 refs를 확인했습니다. 독립 게시 clone `/tmp/35-remediation-publish-jsz86usw/publish`에서 명시적으로 이번 파일만 stage·commit합니다. 원래 Git index·refs·파일 498개의 해시와 게시 대상 59개를 같은 임시 작업의 backup에 보관했습니다.
 
 원래 작업본은 Git 관리 영역이 읽기 전용이므로 해당 영역의 갱신은 파일 bytes 일치·조상 관계·staged 상태·백업을 확인한 후 승인된 실행 권한으로 진행합니다. 제한을 다른 파일이나 도구로 우회하거나 OS 권한을 바꾸지 않습니다. 원격/로컬 실제 완료 결과는 후속 기록으로 남기며, 실패하면 완료하지 않은 브랜치와 재개 지점을 구분합니다. 게시 후 복구는 검토된 revert를 사용합니다.
+
+## 7. yunli 게시와 main 병합 완료
+
+검증한 변경 59개를 독립 clone의 `a010cc73a12087a9063aea81e01db60c65d2eb00`으로 commit했습니다. 일반 yunli push는 `f66b5b8..a010cc7`로 성공했고, 이어 main의 fast-forward 병합과 일반 push도 같은 범위로 성공했습니다. git ls-remote에서 원격 main·yunli가 모두 이 SHA이며 design은 `55282e2`로 유지됨을 확인했습니다.
+
+게시 직전 clone과 원래 작업본의 파일 498개 bytes가 같고 회귀 입력 해시 80개도 같았습니다. 기본 스킬 검사와 새 승인 문서의 style·heading·파일 링크·앵커·frontmatter·구문·diff 검사도 통과했습니다. 기존 원문 style 경고 89건과 비밀정보 정규식 부분 검사는 그대로 구분합니다. 최종본 독립 모델·실환경 미검증을 게시로 해소했다고 처리하지 않습니다.
+
+원래 index·refs·파일 해시를 백업하고 격리 복사본에서 파일을 덮어쓰지 않는 read-tree/index 정합화와 refs transaction을 검증했습니다. 승인된 실행 권한으로 실제 작업본의 로컬 main·yunli와 origin 추적 refs도 `a010cc7`로 fast-forward했습니다. 파일 498개 bytes 보존과 yunli의 clean 상태를 확인했고 OS 권한은 변경하지 않았습니다.
+
+[publication.json](reviews/2026-10-03-remediation/publication.json)에 실제 push 출력·원격 SHA·격리/실제 로컬 보존·검증 근거를 남깁니다. 이 결과를 담은 후속 문서 커밋도 main·yunli에 fast-forward하며 최종 SHA는 Git refs와 사용자 응답으로 확인합니다. 이번 게시·병합 완료로 승인은 만료하며 force push·release·설치·운영 적용은 수행하지 않았습니다.
 
 ---
 

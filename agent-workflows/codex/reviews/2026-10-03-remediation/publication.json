@@ -1,0 +1,69 @@
+{
+  "implementation_commit": "a010cc73a12087a9063aea81e01db60c65d2eb00",
+  "yunli_push": {
+    "chunk_id": "79bbcc",
+    "wall_time_seconds": 9.6e-06,
+    "exit_code": 0,
+    "original_token_count": 20,
+    "output": "To github.com:siasia86/35_agent-skill.git\n   f66b5b8..a010cc7  yunli -> yunli\n"
+  },
+  "main_push": {
+    "chunk_id": "37e2ff",
+    "wall_time_seconds": 8.9e-06,
+    "exit_code": 0,
+    "original_token_count": 19,
+    "output": "To github.com:siasia86/35_agent-skill.git\n   f66b5b8..a010cc7  main -> main\n"
+  },
+  "remote_confirmation": {
+    "chunk_id": "681093",
+    "wall_time_seconds": 8.8e-06,
+    "exit_code": 0,
+    "original_token_count": 52,
+    "output": "55282e293f00e074d9c812561fcf4edb115f111d\trefs/heads/design/windows-game-skill-draft-20260930\na010cc73a12087a9063aea81e01db60c65d2eb00\trefs/heads/main\na010cc73a12087a9063aea81e01db60c65d2eb00\trefs/heads/yunli\n"
+  },
+  "scope": "Implementation publication and first local alignment; following result-record commit SHA is obtained from final Git refs",
+  "local_alignment": {
+    "target": "a010cc73a12087a9063aea81e01db60c65d2eb00",
+    "refs": {
+      "refs/heads/main": "a010cc73a12087a9063aea81e01db60c65d2eb00",
+      "refs/heads/yunli": "a010cc73a12087a9063aea81e01db60c65d2eb00",
+      "refs/remotes/origin/main": "a010cc73a12087a9063aea81e01db60c65d2eb00",
+      "refs/remotes/origin/yunli": "a010cc73a12087a9063aea81e01db60c65d2eb00"
+    },
+    "files_preserved": 498,
+    "clean": true,
+    "backup": "/tmp/35-remediation-publish-jsz86usw/local-sync-backup"
+  },
+  "isolated_alignment": {
+    "target": "a010cc73a12087a9063aea81e01db60c65d2eb00",
+    "refs": {
+      "refs/heads/main": "a010cc73a12087a9063aea81e01db60c65d2eb00",
+      "refs/heads/yunli": "a010cc73a12087a9063aea81e01db60c65d2eb00",
+      "refs/remotes/origin/main": "a010cc73a12087a9063aea81e01db60c65d2eb00",
+      "refs/remotes/origin/yunli": "a010cc73a12087a9063aea81e01db60c65d2eb00"
+    },
+    "files_preserved": 498,
+    "clean": true,
+    "backup": "/tmp/35-remediation-publish-jsz86usw/sync-fixture-backup"
+  },
+  "prepublication_checks": {
+    "passed_required_checks": true,
+    "style_added_issues": 0,
+    "style_raw_issues": 89,
+    "frontmatter": {
+      "skills": 19,
+      "failed": 0
+    },
+    "anchors": {
+      "checked": 14,
+      "errors": []
+    },
+    "regression_inputs": {
+      "hashes": 80,
+      "mismatches": [],
+      "recorded_tests_passed": true
+    },
+    "command": "python3 agent-workflows/codex/reviews/2026-10-03-remediation/validate_remediation.py --output /tmp/35-remediation-publish-jsz86usw/prepublication-validation.json"
+  },
+  "design_unchanged": "55282e293f00e074d9c812561fcf4edb115f111d"
+}

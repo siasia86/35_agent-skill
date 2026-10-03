@@ -17,7 +17,7 @@
 - [x] 2026-10-03 main·yunli·design 전체 원격 브랜치의 선후 관계와 격리 병합을 검토했습니다. 충돌·고유 커밋 유실은 없으며, 확인한 동작 결함과 판정 범위는 [병합 검토](../agent-workflows/codex/MERGE_REVIEW_2026-10-03.md)에 기록합니다. 실제 main·design 게시와 구현 보완은 완료 처리하지 않습니다.
 - [x] 후속 사용자 요청의 원격 main·yunli와 로컬 main·yunli 네 브랜치를 `36cd9d3`으로 실제 통합하고 원격 SHA·로컬/추적 refs·clean 상태·파일 보존을 확인했습니다. 기본 스킬 검사도 통과했습니다. 확인 결과를 담은 후속 기록 커밋 역시 네 브랜치로 fast-forward하며 최종 SHA는 Git refs에서 확인합니다. [실제 병합 기록](../agent-workflows/codex/MERGE_REVIEW_2026-10-03.md#7-네-브랜치의-실제-병합)을 따르고 기존 스킬 문제의 보완은 미완료로 유지합니다.
 
-- [ ] 2026-10-03 후속 사용자 요청의 보완 변경 yunli 게시와 main 병합을 수행하고 실제 원격·로컬 refs를 확인합니다. 승인 범위와 보존 절차는 [보완 기록](../agent-workflows/codex/REMEDIATION_2026-10-03.md#6-보완-변경-게시와-main-병합-승인)에 남깁니다.
+- [x] 2026-10-03 후속 요청의 보완 변경을 `a010cc7`로 yunli에 일반 push하고 main에 fast-forward 병합·push했습니다. 실제 원격 SHA 일치·design 유지, 원래 로컬 main/yunli·추적 refs 일치·파일 498개 보존·clean을 확인했습니다. 이 결과의 후속 기록 커밋도 두 브랜치씩에 반영하며 최종 SHA는 Git refs에서 확인합니다. [게시 결과](../agent-workflows/codex/REMEDIATION_2026-10-03.md#7-yunli-게시와-main-병합-완료)에 근거를 남깁니다.
 
 ## 2. 실제 사용자 환경
 
