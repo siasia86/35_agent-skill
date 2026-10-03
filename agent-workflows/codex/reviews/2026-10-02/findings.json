@@ -1,0 +1,55 @@
+{
+  "python_no_args": "NameError: name 'parser' is not defined",
+  "atomic_write_mode": {
+    "before": "0755",
+    "after": "0o600"
+  },
+  "bash_default": {
+    "exit": 0,
+    "stdout": "2026-10-02 15:24:02 sj_scripts [error] code:1 failed with status 1. false\nfunction returned: 0\nnext step executed"
+  },
+  "bash_errexit": {
+    "exit": 1,
+    "stdout": ""
+  },
+  "flock_unlink_race": {
+    "two_independent_locks_held": true,
+    "different_inodes": true
+  },
+  "md_link_normal": {
+    "exit": 1,
+    "stdout": "❌ ../../tmp/35-codex-content-review-vhgnyq9o/normal.md\n   L3: missing.md\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 1개 | 깨진 링크: 1건",
+    "stderr": ""
+  },
+  "md_link_nested": {
+    "exit": 0,
+    "stdout": "✅ 모든 링크 정상\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 0개 | 깨진 링크: 0건",
+    "stderr": "🟡 unclosed code block: ../../tmp/35-codex-content-review-vhgnyq9o/nested.md (fence count: 3, last open: L6)\n   hint: nested fence at L3 (````markdown) -> L4 (```python)"
+  },
+  "not_exact_final_luna": [
+    "md-link-check",
+    "using-skills",
+    "zircon-readme-policy"
+  ],
+  "dependency_gaps": {
+    "shipping-checklist": "code-review is required at SKILL.md:49 but not bundled",
+    "STYLE footer reference missing in": [
+      "git-commit-rule",
+      "md-link-check",
+      "security-tools",
+      "work-rules"
+    ],
+    "repo-governance": "governance_template.md and verification_template.md mentioned but not bundled"
+  },
+  "baseline_verification": {
+    "skills": 19,
+    "bundled_workflows": 45,
+    "local_links": 173,
+    "scripts": 25,
+    "isolated_tool_runs": 35,
+    "lock_invariants": 8,
+    "heading_files": 139,
+    "headings": 2764,
+    "heading_issues": 0
+  }
+}

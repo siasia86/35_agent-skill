@@ -23,6 +23,9 @@ Codex의 독립 개인 스킬은 선택한 폴더 전체를 수동 복사할 수
 - [ ] source repository의 branch·commit·working tree를 확인합니다.
 - [ ] 기존 사용자 변경 사항과 미추적 파일을 보존합니다.
 - [ ] 도구의 source·staging·runtime target 경로를 확정합니다.
+- [ ] 실행 환경·사용자·도구·적용 범위(개인 공통/저장소별)·작업공간을 확인합니다.
+- [ ] 작업공간의 적용 지침과 31 설정 적용 여부·참조 범위를 확인합니다. 연동이 없는 경우 도구별 독립 적용 절차를 사용합니다.
+- [ ] 개인 공통 구성과 저장소별 구성의 동명 중복·출처·실제 선택 대상을 도구별 지원 범위로 확인합니다.
 - [ ] 원본·공개 allowlist·license·owner를 확인합니다.
 - [ ] credential·token·private key·session data가 대상에 포함되지 않는지 확인합니다.
 
@@ -39,7 +42,7 @@ source repository
       v
 validated staging release
       v
-user runtime target
+selected runtime target
 ```
 
 - [ ] source는 특정 commit 또는 release로 고정합니다.
@@ -94,6 +97,8 @@ user runtime target
 
 ## 6. 완료 기록
 
+개인 홈의 공통 설치는 하나의 기록으로 관리하고, 각 작업공간의 적용 지침·추가 설치·발견·대표 행동 결과는 공통 설치 기록을 참조하여 따로 남깁니다. 상세 기준은 [환경·작업공간별 기록](../README.md#41-환경과-작업공간별-기록)을 따릅니다. 아래 공용 표에는 실제 사용자 결과를 누적하지 않습니다.
+
 | 항목                  | 상태 | 검증일     | 비고                       |
 |-----------------------|------|------------|----------------------------|
 | 도구·경로 확인        | [ ]  | YYYY-MM-DD | source·staging·target 기록 |
@@ -107,6 +112,6 @@ user runtime target
 
 **작성일**: 2026-09-21
 
-**마지막 업데이트**: 2026-10-01
+**마지막 업데이트**: 2026-10-02
 
 © 2026 siasia86. Licensed under CC BY 4.0.

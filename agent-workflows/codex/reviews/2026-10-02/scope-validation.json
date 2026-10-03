@@ -1,0 +1,19 @@
+{
+  "changed_documents": [
+    "README.md",
+    "AGENTS.md",
+    "CHANGELOG.md",
+    "codex/README.md",
+    "codex/TODO.md",
+    "agent-workflows/README.md",
+    "agent-workflows/codex/README.md",
+    "agent-workflows/common/USER_TODO.md",
+    "agent-workflows/common/UPDATE_TODO.md",
+    "claude/README.md",
+    "claude/docs/CLAUDE_SETUP_GUIDE.md",
+    "claude/docs/CLAUDE_UPDATE_GUIDE.md"
+  ],
+  "protected_files_verified": 423,
+  "source_and_snapshots_unchanged": true,
+  "new_runtime_installations": false
+}

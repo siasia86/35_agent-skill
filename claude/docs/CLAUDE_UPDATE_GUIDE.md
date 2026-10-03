@@ -4,6 +4,8 @@ Claude용 Agent·Skill·Prompt 업데이트 adapter입니다. 공통 절차는 [
 
 공용 체크리스트는 원본으로 유지하고 사용자별 결과·백업·미완료 항목은 별도 작업 기록에 남깁니다. docs/는 runtime 설치 대상이 아닙니다.
 
+독립 적용 절차와 현재 작업공간에 적용된 31 설정의 사용 범위를 구분합니다. 개인 공통 구성이 변경되면 이를 사용하는 작업공간별 영향과 발견·대표 행동을 확인하고 [환경·작업공간별 기록](../../agent-workflows/README.md#41-환경과-작업공간별-기록)을 갱신합니다.
+
 ## 목차
 
 | 섹션                                                                  |
@@ -20,7 +22,8 @@ Claude용 Agent·Skill·Prompt 업데이트 adapter입니다. 공통 절차는 [
 - [ ] Claude source·runtime target을 확정합니다.
 - [ ] 공개 allowlist·제외 범위·license를 확인합니다.
 - [ ] 공식 문서와 현재 client의 Skill·Agent·Prompt 동작을 대조합니다.
-- [ ] 동기화 script·manifest·검증 명령을 준비합니다.
+- [ ] 개인 공통/저장소별 적용 범위와 작업공간의 지침·31 설정 적용 여부를 확인합니다.
+- [ ] 독립 적용·검증 방법을 준비합니다. 동기화를 제공하는 구성에서는 해당 script·manifest를 확인합니다.
 
 [⬆ 목차로 돌아가기](#목차)
 
@@ -60,6 +63,6 @@ Claude용 Agent·Skill·Prompt 업데이트 adapter입니다. 공통 절차는 [
 
 **작성일**: 2026-09-21
 
-**마지막 업데이트**: 2026-09-22
+**마지막 업데이트**: 2026-10-02
 
 © 2026 siasia86. Licensed under CC BY 4.0.

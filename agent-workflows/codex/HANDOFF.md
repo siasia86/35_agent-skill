@@ -1,0 +1,128 @@
+# Codex 개인 스킬 세션 인계
+
+## 1. 재개할 작업과 읽기 순서
+
+**2026-10-03 인계 상태:** 1.0.0 개인 스킬 19개 작성·기존 검증·yunli 게시를 마쳤습니다. 그 뒤 2026-10-02 문서 12개를 정리했고, 추가 내용 검토의 재현 결과가 남았습니다. 다음 구현 작업은 이 검토 후보의 재확인·판정·원문 보존 방식의 보완입니다. 현재 체크리스트는 [codex/TODO](../../codex/TODO.md#1-다음-세션에서-이어갈-추가-검토)에 있습니다.
+
+**같은 날 후속:** 사용자 요청으로 인계 변경의 yunli 게시와 전체 브랜치 병합 검토를 진행합니다. 최신 상태는 아래 7절과 [병합 검토](MERGE_REVIEW_2026-10-03.md)를 우선 확인합니다. 아래 1~6절의 최초 인계 관찰·미게시 목록·미실행 기록은 작성 당시 상태입니다.
+
+다음 세션에서 이 저장소를 열고 아래 요청으로 이어갈 수 있습니다.
+
+> AGENTS.md와 agent-workflows/codex/HANDOFF.md, codex/TODO.md를 읽고 중단된 Codex 개인 스킬 추가 검토를 이어가 줘. 실제 파일·Git 상태와 저장소의 근거부터 대조하고, Kiro 원문을 보존하면서 현재 권한 안의 로컬 보완과 검증을 진행해 줘. 이번 요청에는 commit·push·설치·운영 적용을 포함하지 않아.
+
+1. 루트 [AGENTS](../../AGENTS.md)와 이 인계 문서를 읽습니다. 이미 제공된 같은 지침을 중복해서 읽을 필요는 없습니다.
+2. [현재 TODO](../../codex/TODO.md)의 1절과 [원시 검토 결과](reviews/2026-10-02/findings.json)를 읽고 대상 항목을 선택합니다.
+3. [TODO2](../../TODO2.md)의 9절에서 원문 보존·최소 수정·우선순위를 확인합니다. 전체 과거 TODO 실행으로 확대하지 않습니다.
+4. 선택한 스킬·동반 자료·Kiro 원문·[MIGRATION](../../codex/MIGRATION.md)·[VERIFICATION](../../codex/VERIFICATION.md)의 관련 부분만 대조합니다. 과거 작업 범위·게시 근거는 [REBUILD](REBUILD_1.0.0.md)에서 확인합니다.
+
+이번 사용자 요청은 다른 세션을 위한 인계 저장입니다. 위 재개 문장은 다음 세션에 전달할 요청 예시이며, 인계 문서 자체가 추가 구현·게시·설치의 새 승인은 아닙니다. 새 세션의 실제 사용자 요청과 플랫폼·현재 권한을 우선합니다. .codex/config.toml이나 개인 설정을 추가로 로드해야 인계가 성립하는 구조는 아닙니다.
+
+## 2. 완료한 작업과 남은 작업
+
+- **완료:** 기존 개발본 131개를 105_backup/codex에 보존했습니다. Kiro 전체 원문을 유지한 Codex 스킬 19개와 필요한 동반 자료를 작성했습니다.
+- **당시 검증 완료:** 원문·동반 자료 대응, 폴더 단독 복사, frontmatter·링크·문법·로컬 도구, Luna 사례와 우선순위 사례를 확인했습니다. 실패·보완·부분 검사·미실행은 기존 VERIFICATION과 원시 결과에 유지합니다.
+- **당시 게시 완료:** 1.0.0 구성과 검증 기록을 아래 세 커밋으로 yunli에 일반 push했습니다.
+- **문서 정리 완료·미게시:** 2026-10-02 독립 구성·환경·작업공간별 적용 기준을 문서 12개에 반영했습니다. 당시 기록은 style·heading·파일 링크·앵커·비밀정보·diff 검사 통과, 보호 자료 423개 bytes 보존입니다. [scope-validation.json](reviews/2026-10-02/scope-validation.json)은 변경 문서 목록·보존 개수·설치 미실행만 담으며 전체 검사 로그는 아닙니다.
+- **재확인·보완 대기:** 추가 내용 검토 원시 결과가 있습니다. 아래 후보의 구현 수정과 MIGRATION·VERIFICATION 반영은 인계 시점에 완료되지 않았습니다. 후보 전체를 확정 결함이나 해결 완료로 처리하지 않습니다.
+- **별도 후속:** 실제 개인 홈 설치·새 세션 발견·자동 선택·Windows·운영 환경·원래 보안 도구 호환성과 경량화/추가 스킬 검토는 현재 TODO의 별도 항목입니다.
+
+## 3. Git 상태와 미게시 변경
+
+이 절은 2026-10-03 로컬 확인입니다. 현재 원격을 새로 조회한 결과가 아니며 다음 세션에서는 달라진 상태를 재확인합니다.
+
+- 원래 작업본 `/root/35_agent-skill`: branch `main`, HEAD `4227f1d6b703238e3d2b763a0d320998cfeedc09`입니다. 로컬 yunli ref는 과거 `4a5dfb1`에 남아 있습니다.
+- 당시 독립 게시 clone `/tmp/codex-rebuild-5px8vpcd/publish`: branch `yunli`, HEAD와 origin/yunli가 `6a83e4746925a860dd76f3f08b905316e54d1e2a`입니다. 해당 ref의 reflog에서 세 번의 `update by push`를 확인했습니다. 인계 시작 시 clone 작업 트리는 clean이었습니다.
+- 게시 커밋: 이력/버전 정리 `f76d03d48487cad59f4a9ab5e3cebc1b22eba553`, 스킬/검증 `ef438b73addf0a0ed4e59c7fa1b90292695f7c02`, 결과 기록 `6a83e4746925a860dd76f3f08b905316e54d1e2a`입니다.
+- 원래 main 작업본은 게시 당시 branch/index를 갱신하지 않았으므로 이미 yunli에 게시된 이동·삭제·신규 파일도 Git 변경 목록에 표시됩니다. 표시된 변경 전체를 미게시 변경으로 간주하거나 되돌리지 않습니다.
+
+인계 작성 전 작업본과 게시 clone의 추적 파일을 bytes로 대조했습니다. 누락 0개이며 스킬 구현과 codex/verification 자료는 같았습니다. 차이가 있던 문서는 아래 12개입니다. 이번 인계에서는 이 중 일부 안내를 추가 갱신하고 루트 TODO와 새 인계 자료도 작성했으므로 다음 세션의 차이 목록은 더 커질 수 있습니다.
+
+```text
+AGENTS.md
+CHANGELOG.md
+README.md
+agent-workflows/README.md
+agent-workflows/codex/README.md
+agent-workflows/common/UPDATE_TODO.md
+agent-workflows/common/USER_TODO.md
+claude/README.md
+claude/docs/CLAUDE_SETUP_GUIDE.md
+claude/docs/CLAUDE_UPDATE_GUIDE.md
+codex/README.md
+codex/TODO.md
+```
+
+새 세션의 첫 Git 확인은 다음과 같습니다.
+
+```bash
+git status --short --branch
+git rev-parse HEAD
+git log -5 --oneline
+git diff --cached --stat
+```
+
+독립 게시 clone이 없어도 아래 검토 근거와 재개 순서는 저장소에 있습니다. 게시가 새로 요청되면 현재 원격 yunli와 작업본을 먼저 비교하고, 필요한 독립 clone을 현재 권한 안에서 마련합니다. 과거 push 승인은 작업 완료로 만료됐습니다. branch 전환·reset·clean·전체 stage로 인계 상태를 정리하지 않습니다. 게시 후 복구는 검토된 revert를 사용합니다.
+
+## 4. 추가 검토 후보와 근거
+
+[findings.json](reviews/2026-10-02/findings.json)은 2026-10-02 임시 검토 결과를 bytes 그대로 보존한 자료입니다. 원래 경로는 `/tmp/35-codex-content-review-vhgnyq9o/findings.json`이며, 새 세션은 저장소 사본을 사용합니다. 로그 속 /tmp 경로와 시각은 당시 출처이고 현재 실행 결과가 아닙니다. 재현에 사용한 전체 명령·fixture·사례 입력이 모두 보존된 자료는 아니므로 대상 원문에서 최소 재현을 다시 만듭니다.
+
+1. **Python 인수 없는 실행:** `python_no_args`에 `NameError: name 'parser' is not defined`가 있습니다. [Python 스킬](../../codex/skills/python-script-template/SKILL.md)의 전체 템플릿에서 parse_args가 만든 parser와 main의 도움말 분기 범위를 확인합니다.
+2. **Python 원자적 쓰기:** `atomic_write_mode`에 기존 `0755`가 `0600`으로 바뀐 결과가 있습니다. 같은 스킬의 `_atomic_write`, 임시 파일 모드와 os.replace를 격리 파일에서 확인하고, 기존 권한·소유 보존에 필요한 조건을 검토합니다.
+3. **Bash 실패 전파:** `bash_default`에 실패 로그 뒤 반환 0·후속 단계 실행이 있고, `bash_errexit`에는 종료 1·stdout 없음이 있습니다. [Bash 스킬](../../codex/skills/bash-script-template/SKILL.md)의 run_msg_info와 호출부를 일반 실행·set -e 조건에서 비교합니다. 시스템 로그 경로·서비스 예제를 그대로 실행하지 않습니다.
+4. **fcntl.flock 경로 삭제:** `flock_unlink_race`에 서로 다른 inode의 잠금을 동시에 잡은 결과가 있습니다. [work-rules](../../codex/skills/work-rules/SKILL.md)의 Python fcntl.flock 예시에서 잠금 해제·close·os.remove 순서를 격리 재현합니다. 실제 kiro-lock helper의 gate·O_EXCL 검사와 같은 구현으로 취급하지 않습니다.
+5. **중첩 펜스 뒤 링크 누락:** `md_link_normal`은 깨진 링크 1건으로 실패하지만 `md_link_nested`는 펜스 경고와 함께 링크 0개·종료 0을 보고합니다. [md-link-check 스킬](../../codex/skills/md-link-check/SKILL.md)의 동봉 검사기에서 유효한 외부 4-backtick 블록 뒤의 링크가 누락되는지 확인하고 동봉 사본의 영향 범위를 조사합니다. 펜스 경고가 있는 검사 결과를 링크 검증 성공으로 확대하지 않습니다.
+6. **참조 완결성:** `dependency_gaps`에는 shipping-checklist의 code-review 요구, git-commit-rule·md-link-check·security-tools·work-rules의 STYLE 푸터 참조, repo-governance의 governance_template.md·verification_template.md 언급이 있습니다. 문자열 언급이 모두 필수 파일 의존성인지는 미확정입니다. 실제 요구·범위·대체 절차를 대조한 뒤 폴더 단독 사용에 필요한 자료를 판단합니다.
+7. **최종 스킬과 Luna 입력 차이:** `not_exact_final_luna`에는 md-link-check·using-skills·zircon-readme-policy가 있습니다. [기존 Luna 원시 결과](../../codex/verification/luna-results.json)와 사례 입력·최종 파일 해시를 대조합니다. 보존되지 않은 입력은 미확인으로 남기고 필요한 최종본 사례를 검토합니다. 과거 Luna 지정은 새 세션의 모델/협업 조건으로 자동 적용하지 않습니다.
+
+`baseline_verification`의 스킬 19개·워크플로 45개·로컬 링크 173개·Python 25개·단독 도구 실행 35회·잠금 조건 8개·헤딩 2,764개는 기존 검사 수치입니다. 이 수치가 위 내용 검토 후보의 해소를 뜻하지 않습니다.
+
+보존한 검토 JSON의 SHA-256은 다음과 같습니다.
+
+```text
+findings.json
+040714ff8a3e5b620344e72cabe842d788bcd0e00b604260c95160fadf5be4d8
+scope-validation.json
+c80c88ba23094a32f4db7f295400356c2eb207a9c39116f1e5a94e5c96f95af7
+```
+
+## 5. 재개 순서와 완료 조건
+
+1. 현재 사용자 요청·AGENTS·Git 상태를 확인하고 기존 변경을 보존합니다. 읽기 전용 조사 후 해당 후보의 대상 스킬·원문·참조만 선택합니다.
+2. 각 후보를 새 임시 폴더의 최소 사례로 재현합니다. 입력·명령·종료 코드·stdout/stderr·판정을 남기며 임시 경로만으로 근거를 보관하지 않습니다. 당장 재현할 수 없는 경우 조건과 미확인 이유를 기록합니다.
+3. 확정한 문제에 한해 원문 유지와 Codex 호환 규칙·수정 예시·동반 자료 추가로 보완합니다. 원문·예시·템플릿·체크리스트를 삭제·축약·통합하지 않습니다. 형제 설치 스킬이나 30/31 저장소를 새 필수 의존성으로 만들지 않습니다.
+4. 변경한 내용의 관련 재현과 폴더 단독 검사를 수행합니다. source 대응 기본 검사는 `python3 codex/verification/verify_skills.py`입니다. 이 검사는 추가 후보 전체를 검증하지 않으므로 각 후보의 동작 확인이 별도로 필요합니다. 도구 확인 후 문서의 style·heading·파일 링크·교차 앵커·diff·비밀정보를 검사합니다.
+5. 구현을 보완하면 실제 동봉 참조 사본도 조사하고 필요한 사본을 함께 반영합니다. MIGRATION·VERIFICATION·TODO·CHANGELOG와 이 인계의 다음 작업을 실제 결과에 맞춰 갱신합니다. 독립 모델 사례는 현재 요청·도구 조건을 확인한 경우에 수행하고, 미실행을 통과로 기록하지 않습니다.
+6. 후보별 확정/조건부/오탐 판정과 수정/미수정 이유, 재현·관련 검사·원문 보존 근거가 있어야 해당 검토를 완료 처리합니다. 게시와 설치는 각각 요청된 범위에서 별도로 기록합니다.
+
+개인 홈·다른 저장소·Windows·AWS·Terraform 적용·서비스 조작·권한 변경·경량화·추가 스킬 전체 구현은 별도 사용자 범위입니다. 이번 인계는 로컬 문서와 근거 보존이며 commit·push·tag·release·runtime 설치를 수행하지 않습니다.
+
+## 6. 이번 인계의 검증과 갱신
+
+이번에 수정한 안내는 루트 AGENTS·README·TODO·CHANGELOG, Codex README·TODO, agent-workflows/codex/README입니다. 새 자료는 이 문서와 검토 JSON 두 개입니다.
+
+- **통과:** 변경·신규 문서 8개의 style 검사와 헤딩 114개 검사에서 이슈 0건입니다. TODO의 초기 0번 절은 순서 검사에서 실패하여 1번부터 시작하도록 수정한 뒤 통과했습니다.
+- **통과:** 문서 8개의 로컬 파일 링크 116개, 별도 교차/동일 문서 앵커 30개에서 오류 0건입니다. 기존 링크 도구가 fragment를 제외하므로 앵커는 펜스 길이를 구분하는 별도 대조로 확인했습니다.
+- **통과:** JSON 2개의 구문·출처 bytes·위 SHA-256을 확인했습니다. 안내 8개와 JSON 2개 대상 Gitleaks 탐지 0건, 이번 변경의 diff 공백 진단 0건입니다.
+- **통과:** 인계 시작 시 수집한 기존 파일 425개 중 안내 7개만 변경됐고 나머지 418개의 SHA-256이 같습니다. Git branch·HEAD·index bytes와 기존 staged diff도 유지했습니다. 이 비교에서 수집하지 않은 숨김 설정 폴더는 검증 수치에 포함하지 않습니다.
+- **미실행:** 추가 검토 후보의 새 재현·구현 보완·독립 모델 사례·원격 재조회·commit/push·실제 설치·운영 적용입니다. 위 문서 검사를 이 항목들의 완료 근거로 사용하지 않습니다.
+
+후속 세션이 시작되거나 끝나면 날짜·실제 작업 범위·현재 Git 상태·재현 결과·다음 미완료 항목을 이 문서와 Codex TODO에 갱신합니다. 과거 JSON·검사 결과·게시 기록은 당시 관찰로 보존하고 새 결과를 덮어쓰지 않습니다.
+
+## 7. 인계 게시와 전체 브랜치 병합 검토
+
+2026-10-03 사용자가 인계 변경의 push와 main을 포함한 현재 모든 브랜치 병합의 내용·동작 검토를 요청했습니다. 과거 승인 기록 대신 이 후속 요청의 범위를 적용합니다. 원래 root 작업본은 main `4227f1d`와 Git index를 보존하고 독립 작업본에서 yunli에 게시합니다. 실제 원격 main·design 병합/게시를 완료 처리하지 않습니다.
+
+최신 fetch에서 원격 브랜치는 main `4227f1d`, yunli `6a83e47`, design/windows-game-skill-draft-20260930 `55282e2`였습니다. main과 design은 모두 yunli의 조상이며 고유 커밋이 없습니다. 격리 merge의 결과 tree는 yunli와 같았습니다. 새 인계·문서 변경은 스킬 구현을 바꾸지 않습니다.
+
+추가 검토에서 Python 무인수 오류·atomic write 모드 변화·Bash 실패 전파·fcntl 잠금 경합·중첩 펜스 링크 누락을 새로 재현했습니다. 동봉 링크 검사기 7개가 영향을 받습니다. 과거 Luna 기록의 세 사례는 현재 해시와 다르고 후속 보고가 없습니다. readme-template에는 후속 보고가 있으므로 별도 근거 대조가 필요합니다. [새 원시 결과](reviews/2026-10-03/reproductions.json)와 [재현 스크립트](reviews/2026-10-03/reproduce_review.py)를 저장소에 보존합니다.
+
+다음 세션의 첫 구현 작업은 재현 완료한 항목의 원문 보존 보완입니다. README·TODO의 게시 상태와 최종 원격 SHA는 [병합 검토](MERGE_REVIEW_2026-10-03.md)의 게시 확인을 따릅니다. 충돌 없는 병합 가능성과 스킬 전체의 동작 보장을 구분합니다.
+
+---
+
+**작성일**: 2026-10-03
+
+**마지막 업데이트**: 2026-10-03
+
+© 2026 siasia86. Licensed under CC BY 4.0.
