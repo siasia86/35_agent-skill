@@ -32,7 +32,7 @@ def cli(script, *arguments, cwd):
 
 def verify(repo):
     root = repo / 'codex_windows'
-    manifest = json.loads(read(root / 'verification/source_manifest.json'))
+    manifest = json.loads(read(Path(__file__).with_name('source_manifest.json')))
     counts = {'skills': 0, 'source_files_preserved': 0, 'bundled_workflows': 0,
               'compat_local_links': 0, 'python_scripts': 0, 'isolated_tool_runs': 0,
               'settings_sources': 0}
@@ -119,7 +119,7 @@ def verify(repo):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--repo', type=Path, default=Path(__file__).resolve().parents[2])
+    parser.add_argument('--repo', type=Path, default=Path(__file__).resolve().parents[4])
     args = parser.parse_args()
     if sys.version_info < (3, 11):
         parser.error('Python 3.11 or newer is required')

@@ -5,13 +5,13 @@
 ## 1. 재현 명령
 
 ```powershell
-python -X utf8 -B codex_windows/verification/verify_skills.py
-python -X utf8 -B codex_windows/verification/test_markdown.py --skills codex_windows/skills
-python -X utf8 -B codex_windows/verification/test_runtime.py --skills codex_windows/skills
-python -X utf8 -B codex_windows/verification/test_patterns.py --skills codex_windows/skills
+python -X utf8 -B agent-workflows/codex/windows/verification/verify_skills.py
+python -X utf8 -B agent-workflows/codex/windows/verification/test_markdown.py --skills codex_windows/skills
+python -X utf8 -B agent-workflows/codex/windows/verification/test_runtime.py --skills codex_windows/skills
+python -X utf8 -B agent-workflows/codex/windows/verification/test_patterns.py --skills codex_windows/skills
 ```
 
-Bash 조건은 마지막 검사에서 `--bash '<현재 Git Bash의 bash.exe 경로>'`로 추가합니다. 설치된 실제 실행 파일을 확인합니다. Git Bash 실행은 WSL·Linux 전체 환경 검증과 별도입니다. 세부 CLI는 각 스크립트의 `--help`를 따릅니다.
+Bash 조건은 `test_runtime.py`에서 `--bash '<현재 Git Bash의 bash.exe 경로>'`로 추가합니다. 설치된 실제 실행 파일을 확인합니다. Git Bash 실행은 WSL·Linux 전체 환경 검증과 별도입니다. 세부 CLI는 각 스크립트의 `--help`를 따릅니다.
 
 ## 2. 검증 범위
 
@@ -24,7 +24,7 @@ Bash 조건은 마지막 검사에서 `--bash '<현재 Git Bash의 bash.exe 경�
 
 ## 3. 결과와 한계
 
-새 결과는 [results.json](results.json)에 비식별 case·카운트·판정만 기록합니다. [최종 입력 해시](input_hashes.json)는 results와 자기 index를 제외한 Windows 파일의 SHA-256을 기록합니다. 개인 절대 경로·계정·토큰·원시 stdout은 로컬에 보존합니다. 검사 입력과 실제 결과가 바뀌면 새 결과를 기록합니다. 원문의 과거 Linux 결과는 Windows 최종본 결과로 바꾸지 않습니다.
+`results.json`·`input_hashes.json`·`behavior_summary.json`은 이관 커밋 `773a150`의 과거 검사 결과·입력 해시·사례 기록이며 당시 경로와 bytes를 보존합니다. [이관 결과](results.json)와 [당시 입력 해시](input_hashes.json)를 현재 파일의 검사 결과로 재사용하지 않습니다. 새 검사는 별도 결과 파일에 비식별 case·카운트·판정을 기록합니다. 개인 절대 경로·계정·토큰·원시 stdout은 로컬에 보존합니다. 검사 입력과 실제 결과가 바뀌면 새 결과를 기록합니다. 원문의 과거 Linux 결과는 Windows 최종본 결과로 바꾸지 않습니다.
 
 실제 개인 홈 설치·Codex 검색/자동 선택·관리 sandbox 설정·NTFS ACL/ADS/owner 보존·SMB·비협조 writer·원격 인프라 적용·WSL 전체 동작은 별도 확인 대상입니다. stdlib의 파일 동일성 대조를 Windows 보안 경계 전체로 확대하지 않습니다.
 

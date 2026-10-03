@@ -1,6 +1,6 @@
 # Windows 전체 이관 기록
 
-사용자가 Linux에서 사용하던 **skill과 설정을 먼저 모두 Windows에 이관하고 이후 최적화**하도록 요청했습니다. 이전 문서 골격 범위를 확대해19개 전체 본문·필요 자료·실행 도구와 현재 저장소의 공통 지침/설정을 작성했습니다. 이 문서가 이번 작업 기준·대응·검증·복구의 본문이며 [Windows TODO](../../codex_windows/TODO.md)는 상태 안내입니다.
+사용자가 Linux에서 사용하던 **skill과 설정을 먼저 모두 Windows에 이관하고 이후 최적화**하도록 요청했습니다. 이전 문서 골격 범위를 확대해19개 전체 본문·필요 자료·실행 도구와 현재 저장소의 공통 지침/설정을 작성했습니다. 이 문서가 이번 작업 기준·대응·검증·복구의 본문이며 [Windows TODO](windows/TODO.md)는 상태 안내입니다.
 
 ## 1. 출처와 보존 범위
 
@@ -8,7 +8,7 @@
 
 19개 이름·역할은 [전체 대응표](../../codex_windows/skills/README.md)에 빠짐없이 연결합니다. Windows 활성 SKILL과 동봉 역할54개의 CODEX-COMPAT 밖 본문·frontmatter는 기존 Linux와 같으며 원문·예시·템플릿·체크리스트를 축약·삭제·통합하지 않았습니다. Windows 호환 절의 실행 계약이 플랫폼 충돌과 교정한 과거 예시를 대체합니다.
 
-19개 Linux SKILL은 `references/linux-original.md`, 변경한 동봉 역할은 `references/linux-skills`, 기존25개 도구는 `references/linux-tools`에 bytes 그대로 보존합니다. Kiro19개와 기존 원문/스타일/경계 테스트 자료도 유지합니다. [source_manifest.json](../../codex_windows/verification/source_manifest.json)은182개 전체의 원본 경로·활성 경로·보존 경로·SHA-256과 설정2개를 대조합니다. 비교용 코드·문서는 현재 실행 지시로 다시 사용하지 않습니다.
+19개 Linux SKILL은 `references/linux-original.md`, 변경한 동봉 역할은 `references/linux-skills`, 기존25개 도구는 `references/linux-tools`에 bytes 그대로 보존합니다. Kiro19개와 기존 원문/스타일/경계 테스트 자료도 유지합니다. [source_manifest.json](windows/verification/source_manifest.json)은182개 전체의 원본 경로·활성 경로·보존 경로·SHA-256과 설정2개를 대조합니다. 비교용 코드·문서는 현재 실행 지시로 다시 사용하지 않습니다.
 
 ## 2. Windows 실행 대응과 최소 보완
 
@@ -41,11 +41,11 @@
 - 부분 검사: Python·lock·GitBash 79실행 조건 일치, symlink 1건 생성권한 부족으로SKIP.
 - 통과: Windows inlinePython2개AST와byte-lock7조건; PowerShell13예제는구문만확인.
 
-상세 수치와 비식별 사례는 [REVIEW](../../codex_windows/REVIEW.md), [results.json](../../codex_windows/verification/results.json)을 따릅니다. 실제 원시 입력·stdout/stderr·TEMP·개인 경로는 로컬 비공개 근거로 보존합니다. 과거LinuxJSON/모델사례를 새 Windows 결과로 바꾸지 않습니다.
+상세 수치와 비식별 사례는 [REVIEW](windows/REVIEW.md), [results.json](windows/verification/results.json)을 따릅니다. 실제 원시 입력·stdout/stderr·TEMP·개인 경로는 로컬 비공개 근거로 보존합니다. 과거LinuxJSON/모델사례를 새 Windows 결과로 바꾸지 않습니다.
 
 미실행: 실제홈설치/config병합·Codex재시작발견/자동선택·관리sandbox실제준비·NTFS ACL/owner/ADS/SMB/비협조writer·원격운영/서비스·전체WSL환경. 코드작성·정적검사·협조자경쟁 성공을 전체OS보장이나설치완료로 보고하지 않습니다.
 
-독립agent의6개요청사례와Bash/게시범위후속을 [비식별 요약](../../codex_windows/verification/behavior_summary.json)에 기록했습니다. 기대답변이나개발검토를넘기지않고현재skill과필요참조로평가했으며, 단일평가자의수동사례·TEMP실행·정적판단을Codex재시작발견/전체실업무검증과구분합니다. baseline해시는관찰시점이고후속본문·도구변경해시와최종fixture결과는따로연결합니다.
+독립agent의6개요청사례와Bash/게시범위후속을 [비식별 요약](windows/verification/behavior_summary.json)에 기록했습니다. 기대답변이나개발검토를넘기지않고현재skill과필요참조로평가했으며, 단일평가자의수동사례·TEMP실행·정적판단을Codex재시작발견/전체실업무검증과구분합니다. baseline해시는관찰시점이고후속본문·도구변경해시와최종fixture결과는따로연결합니다.
 
 게시 전 staged 경로318개와최종Windows입력309개해시를대조했습니다. 기존추적509개중연결안내14개만수정하고나머지495개bytes를보존했습니다. Git 공백검사의6건은기존 testing-guide 원문118행의같은후행공백을보존한사본이며새작성영역0건입니다. 원문보존을위해해당공백을삭제하지않았고다른변경을묵인하지않았습니다.
 

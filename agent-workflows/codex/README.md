@@ -1,6 +1,6 @@
 # Codex 개인 적용본과 skill 확인
 
-현재 원본은 [Linux 보존본](../../codex_linux/README.md)과 [Windows 전체 이관본](../../codex_windows/README.md)으로 구분합니다. 현재 범위·검사는 [Windows 이관 기록](WINDOWS_MIGRATION_2026-10-03.md)을 따릅니다. [플랫폼 분리 기록](PLATFORM_SPLIT_2026-10-03.md)을 확인하며 아래 개인 설치 관찰 사본·inventory·당시 검증은 자동 갱신하지 않습니다.
+현재 원본은 [Linux 보존본](../../codex_linux/README.md)과 [Windows 전체 이관본](../../codex_windows/README.md)으로 구분합니다. 복사용 Windows 본문은 구현 폴더에 두고 개발 계획·검토·검증은 [Windows 작업 기록](windows/README.md)에서 관리합니다. 이전 이관 범위·검사는 [Windows 이관 기록](WINDOWS_MIGRATION_2026-10-03.md)을 따릅니다. [플랫폼 분리 기록](PLATFORM_SPLIT_2026-10-03.md)을 확인하며 아래 개인 설치 관찰 사본·inventory·당시 검증은 자동 갱신하지 않습니다.
 
 1~4절과 기존 사본·JSON은 **2026-09-30의 역사적 관찰**입니다. 새 1.0.0 개인 스킬의 설치·발견·행동 결과가 아니며 자동 동기화하지 않습니다. 5절은 2026-10-02 정한 후속 기록 기준이며 새로운 설치 결과가 아닙니다.
 

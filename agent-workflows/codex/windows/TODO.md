@@ -1,6 +1,6 @@
 # Codex Windows 현재 TODO
 
-작업 기준은 **Linux의 전체 skill·설정 이관 → 검증 → yunli 게시 → 사용자 검증 → main 반영 → 최적화**입니다. 상세 본문은 [이관 기록](../agent-workflows/codex/WINDOWS_MIGRATION_2026-10-03.md)에 두고 이 문서는 상태와 후속을 연결합니다.
+작업 기준은 **Linux의 전체 skill·설정 이관 → 검증 → yunli 게시 → 사용자 검증 → main 반영 → 최적화**입니다. 상세 본문은 [이관 기록](../WINDOWS_MIGRATION_2026-10-03.md)에 두고 이 문서는 상태와 후속을 연결합니다.
 
 ## 1. 전체 이관과 검증
 
@@ -26,6 +26,14 @@
 - [ ] 전체 이관 이후 사용 사례를 바탕으로 Windows 최적화 범위를 결정.
 
 이번 이관에서 생략·축약·통합하지 않습니다. main·홈 설치·운영 적용·release의 미실행을 문서 검사 성공으로 완료 처리하지 않습니다.
+
+## 4. 복사용 구성과 개선 검토
+
+- [x] PLAN·TODO·ISSUE·REVIEW·개발 verification을 복사 영역 밖으로 이동.
+- [x] 사용 안내·활성 Windows 본문의 이번 35 이관 관리 문구 정리.
+- [x] [ISSUE W01](ISSUE.md#4-복사용-영역과-개발-기록-혼입-w01)과 루트 README·AGENTS에 원인·배치 규칙·재발 방지 기록.
+- [x] 원문·19개 skill·동봉 자료 보존과 독립 복사·이동한 CLI 경로 검증.
+- [ ] [개선 검토](IMPROVEMENT_REVIEW_2026-10-03.md)의 재현된 helper 결함을 지정 범위에서 수정·회귀 확인.
 
 ---
 

@@ -2,7 +2,7 @@
 
 ## 1. 재개할 작업과 읽기 순서
 
-**2026-10-03 현재 상태:** 기존 `codex/`를 `codex_linux/`로 이동했고 `codex_windows/`에는 문서 골격 8개를 작성했습니다. 현재 재개할 작업은 [Windows PLAN](../../codex_windows/PLAN.md)·[Windows TODO](../../codex_windows/TODO.md)이며 실제 상태는 [플랫폼 분리 기록](PLATFORM_SPLIT_2026-10-03.md)을 먼저 확인합니다. 새 skill 작성·설치·설정과 main 게시를 완료로 표시하지 않습니다.
+**2026-10-03 현재 상태:** Windows 19개 전체 이관본은 `yunli@773a150`에 게시했습니다. 복사용 본문은 [codex_windows](../../codex_windows/README.md), 현재 개발 계획·후속은 [Windows 작업 기록](windows/README.md)에 구분합니다. 사용자 검증·개인 홈 적용·main 반영은 미완료이며 실제 Git 상태를 먼저 대조합니다.
 
 **플랫폼 분리 전 2026-10-03 상태:** 원격·로컬 main·yunli 통합 이후 사용자 요청으로 동작 문제 5개와 참조 완결성을 로컬 보완하고 회귀 검사를 마쳤습니다. 수정본은 후속 요청으로 yunli 게시와 main 병합을 마쳤으며 최신 상태는 아래 10절과 [보완 기록](REMEDIATION_2026-10-03.md#7-yunli-게시와-main-병합-완료)을 따릅니다. 다음 미완료 항목은 최종본 독립 모델 사례와 사용자가 선택하는 실제 환경 확인입니다. [codex/TODO](../../codex_linux/TODO.md#1-다음-세션에서-이어갈-추가-검토)에 범위를 남깁니다.
 
@@ -12,10 +12,10 @@
 
 다음 세션에서 이 저장소를 열고 아래 요청으로 이어갈 수 있습니다.
 
-> AGENTS.md, agent-workflows/codex/PLATFORM_SPLIT_2026-10-03.md, codex_windows/PLAN.md와 codex_windows/TODO.md를 읽고 현재 Windows 전용 재작성 범위를 먼저 대조해 줘. Linux 원문·과거 검증·개인 설치 관찰은 보존하고 검증 후 yunli commit/push, 사용자 검증 후 main 반영 순서를 따라 줘. 설치·설정·운영 적용은 별도 요청 범위로 남겨 줘.
+> AGENTS.md, agent-workflows/codex/PLATFORM_SPLIT_2026-10-03.md, agent-workflows/codex/windows/PLAN.md와 agent-workflows/codex/windows/TODO.md를 읽고 현재 Windows 전용 재작성 범위를 먼저 대조해 줘. Linux 원문·과거 검증·개인 설치 관찰은 보존하고 검증 후 yunli commit/push, 사용자 검증 후 main 반영 순서를 따라 줘. 설치·설정·운영 적용은 별도 요청 범위로 남겨 줘.
 
 1. 루트 [AGENTS](../../AGENTS.md)와 이 인계 문서를 읽습니다. 이미 제공된 같은 지침을 중복해서 읽을 필요는 없습니다.
-2. [Windows PLAN](../../codex_windows/PLAN.md)·[Windows TODO](../../codex_windows/TODO.md)와 [플랫폼 분리 기록](PLATFORM_SPLIT_2026-10-03.md)을 먼저 확인합니다. 기존 Linux 후속은 [Linux TODO](../../codex_linux/TODO.md)의 1절과 [원시 검토 결과](reviews/2026-10-02/findings.json)를 읽고 대상 항목을 선택합니다.
+2. [Windows PLAN](windows/PLAN.md)·[Windows TODO](windows/TODO.md)와 [플랫폼 분리 기록](PLATFORM_SPLIT_2026-10-03.md)을 먼저 확인합니다. 기존 Linux 후속은 [Linux TODO](../../codex_linux/TODO.md)의 1절과 [원시 검토 결과](reviews/2026-10-02/findings.json)를 읽고 대상 항목을 선택합니다.
 3. [TODO2](../../TODO2.md)의 9절에서 원문 보존·최소 수정·우선순위를 확인합니다. 전체 과거 TODO 실행으로 확대하지 않습니다.
 4. 선택한 스킬·동반 자료·Kiro 원문·[MIGRATION](../../codex_linux/MIGRATION.md)·[VERIFICATION](../../codex_linux/VERIFICATION.md)의 관련 부분만 대조합니다. 과거 작업 범위·게시 근거는 [REBUILD](REBUILD_1.0.0.md)에서 확인합니다.
 
@@ -155,13 +155,13 @@ Python 두 문제·Bash 실패 전파·generic flock 경로 삭제·중첩 펜�
 
 ## 11. 플랫폼 분리와 Windows 전용 재작성 준비
 
-기존 19개 개인 skill·동봉 자료는 codex_linux에 보존하고 Windows에는 계획·문서 골격만 둡니다. 최신 범위·경로 대응·검증·복구·게시 상태는 [플랫폼 분리 기록](PLATFORM_SPLIT_2026-10-03.md), 후속 작업은 [Windows PLAN](../../codex_windows/PLAN.md)·[TODO](../../codex_windows/TODO.md)를 기준으로 확인합니다. 과거 JSON·코드블록·원시 명령·SHA·개인 설치 관찰은 유지합니다.
+기존 19개 개인 skill·동봉 자료는 codex_linux에 보존하고 Windows에는 계획·문서 골격만 둡니다. 최신 범위·경로 대응·검증·복구·게시 상태는 [플랫폼 분리 기록](PLATFORM_SPLIT_2026-10-03.md), 후속 작업은 [Windows PLAN](windows/PLAN.md)·[TODO](windows/TODO.md)를 기준으로 확인합니다. 과거 JSON·코드블록·원시 명령·SHA·개인 설치 관찰은 유지합니다.
 
 검증 후 yunli commit·일반 push와 사용자 검증을 진행합니다. main은 사용자 검증 완료 전까지 유지하며 설치·설정·release·운영 적용은 별도 범위입니다.
 
 ## 12. Windows 전체 이관과 최적화 순서
 
-사용자가 19개 전부의 Windows 본문·필요 도구와 Linux에서 사용한 설정 전체의 이관을 요청했습니다. 최적화는 전체 이관 이후입니다. 현재 기준은 [Windows 이관 기록](WINDOWS_MIGRATION_2026-10-03.md), 상태는 [Windows TODO](../../codex_windows/TODO.md), 실제 검사·제약은 [REVIEW](../../codex_windows/REVIEW.md)를 확인합니다. 앞 절의 Windows 골격 상태는 준비 당시 기록입니다.
+사용자가 19개 전부의 Windows 본문·필요 도구와 Linux에서 사용한 설정 전체의 이관을 요청했습니다. 최적화는 전체 이관 이후입니다. 현재 기준은 [Windows 이관 기록](WINDOWS_MIGRATION_2026-10-03.md), 상태는 [Windows TODO](windows/TODO.md), 실제 검사·제약은 [REVIEW](windows/REVIEW.md)를 확인합니다. 앞 절의 Windows 골격 상태는 준비 당시 기록입니다.
 
 Linux·보호 원본·실제 개인 홈/config를 보존하고 Windows 폴더의 전체 모음·공통 설정 예시·필수 도구를 준비했습니다. 새 결과와 과거Linux/개인설치관찰은구분합니다. yunli게시 후사용자검증을기다리며 main반영·최적화·실제홈적용을미완료로유지합니다. 실제최신SHA는Gitrefs에서확인합니다.
 
@@ -172,3 +172,9 @@ Linux·보호 원본·실제 개인 홈/config를 보존하고 Windows 폴더의
 **마지막 업데이트**: 2026-10-03
 
 © 2026 siasia86. Licensed under CC BY 4.0.
+
+## 13. Windows 복사용 구성 정리와 개선 검토
+
+사용자가 `codex_windows`를 순수 복사 사용 공간으로 지정하고 관리 문서 혼입의 재발을 ISSUE 및 루트 README·AGENTS에 기록하도록 요청했습니다. PLAN·TODO·ISSUE·REVIEW·개발 verification은 [Windows 작업 기록](windows/README.md)으로 이동했고 활성 이관 관리 문구를 정리했습니다. 원문·실행 helper·이관 당시 결과 JSON/해시는 보존합니다.
+
+현재 후속은 [ISSUE W01](windows/ISSUE.md#4-복사용-영역과-개발-기록-혼입-w01), [추가 개선 검토](windows/IMPROVEMENT_REVIEW_2026-10-03.md), [Windows TODO](windows/TODO.md)를 확인합니다. Python·Bash·Markdown의 새 helper 재현 문제는 보고했으며 이번 구성 정리를 해당 구현 수정·홈 설치·사용자 검증·main 게시 완료로 해석하지 않습니다. 검증 후 yunli 일반 push, 사용자 검증 후 main 순서를 유지합니다. 현재 SHA와 원격 일치는 Git refs를 대조합니다.

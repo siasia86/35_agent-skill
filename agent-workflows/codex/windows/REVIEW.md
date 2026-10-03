@@ -1,6 +1,6 @@
 # Codex Windows 전체 이관 검토
 
-Linux skill **19개 전체**, 출처 파일 **182개**, 동봉 역할 **54개**, 설정 원본 **2개**를 Windows에 대응했습니다. 전체 원문·예시·템플릿·체크리스트와 비교 자료를 보존합니다. 최적화와 개인 홈 일괄 적용은 후속입니다. 상세 기준은 [이관 기록](../agent-workflows/codex/WINDOWS_MIGRATION_2026-10-03.md), 실제 비식별 결과는 [results.json](verification/results.json)에 있습니다.
+Linux skill **19개 전체**, 출처 파일 **182개**, 동봉 역할 **54개**, 설정 원본 **2개**를 Windows에 대응했습니다. 전체 원문·예시·템플릿·체크리스트와 비교 자료를 보존합니다. 최적화와 개인 홈 일괄 적용은 후속입니다. 상세 기준은 [이관 기록](../WINDOWS_MIGRATION_2026-10-03.md), 실제 비식별 결과는 [results.json](verification/results.json)에 있습니다.
 
 ## 1. 최종본 직접 검사
 
@@ -25,13 +25,13 @@ Python은 실제 변환 함수를 TEMP에서 제공한 경우의 멱등성·혼�
 
 준비 단계의 cp949 Markdown 실패11회·UTF-8 성공11회·기본 lock6회는 과거 관찰입니다. 이를 새 최종본의 결과로 바꾸지 않습니다. Windows helper는 UTF-8 읽기/쓰기/출력을 명시하고 네이티브 호출을 사용합니다. Linux 과거 모델·회귀 JSON도 그대로 보존합니다.
 
-통합 중 발견한 동봉 자기 참조 경로와 다른 드라이브의 relpath 오류를 교정했습니다. 독립 사례에서 발견한 Bash 옵션값 검증도 별도 실패 fixture로 보완했습니다. 원문의 이미 알려진14건은 Windows 실행 절·도구의 대체 계약과 [기존 검토](../agent-workflows/codex/SKILL_REVIEW_2026-10-03.md)를 연결합니다.
+통합 중 발견한 동봉 자기 참조 경로와 다른 드라이브의 relpath 오류를 교정했습니다. 독립 사례에서 발견한 Bash 옵션값 검증도 별도 실패 fixture로 보완했습니다. 원문의 이미 알려진14건은 Windows 실행 절·도구의 대체 계약과 [기존 검토](../SKILL_REVIEW_2026-10-03.md)를 연결합니다.
 
 ## 3. 한계와 다음 확인
 
 symlink fixture는 Windows 생성 권한이 없어 SKIP입니다. NTFS ACL/owner/ADS·network FS·비협조 writer·실제 서비스·Terraform/Ansible/Docker 운영 적용은 검증하지 않았습니다. 비교용 POSIX owner/flock 예제를 Windows 보장으로 보고하지 않습니다.
 
-개인 홈 설치·기존 config 병합·Codex 새 세션 발견/자동 선택·관리 sandbox 실제 준비·전체 WSL 동작은 미실행입니다. [설정 안내](personal/README.md)에서 미제공 개인 설정과 현재 확인된 원본을 구분합니다. 사용자 검증 후 main 반영, 전체 이관 이후 최적화를 진행합니다.
+개인 홈 설치·기존 config 병합·Codex 새 세션 발견/자동 선택·관리 sandbox 실제 준비·전체 WSL 동작은 미실행입니다. [설정 안내](../../../codex_windows/personal/README.md)에서 미제공 개인 설정과 현재 확인된 원본을 구분합니다. 사용자 검증 후 main 반영, 전체 이관 이후 최적화를 진행합니다.
 
 ---
 

@@ -4,6 +4,12 @@
 
 ## [Unreleased]
 
+### Windows 복사용 구성과 개발 기록 분리 — 2026-10-03
+
+- `codex_windows`에는 19개 skill·동봉 자료·선택적 개인 지침/설정과 사용 안내를 유지합니다. PLAN·TODO·ISSUE·REVIEW와 개발 verification은 `agent-workflows/codex/windows`로 이동합니다.
+- 원문·이전 검사 JSON/해시를 보존하고 현재 링크·검증 실행 경로를 연결합니다. 구성 정리와 추가 개선 검토는 [Windows 작업 기록](agent-workflows/codex/windows/README.md)에서 확인합니다.
+- 사용자 검증 전 main 반영·개인 홈 설치·운영 적용은 미실행입니다.
+
 ### Windows 전체 skill·설정 이관 — 2026-10-03
 
 - Linux19개 skill·182개 출처파일·동봉역할54개와공통설정2개를Windows에대응했습니다. 원문·예시·템플릿·체크리스트를 보존하고 현재Windows실행절·필수도구를작성합니다. 최적화는후속입니다.

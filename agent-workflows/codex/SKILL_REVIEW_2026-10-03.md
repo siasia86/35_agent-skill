@@ -133,7 +133,7 @@ Ansible syntax/check 예시는 playbook, Docker inspect 예시는 container가 �
 
 R01의 복구 안내를 우선 보완하고, R02–R08의 오류 전파·변경 전 상태·의존성·잠금 실패 정리를 처리합니다. 이어 R09–R12의 입력 검증과 Markdown 파싱을 보완하고 R13–R14의 안내를 맞춥니다. 각 수정은 실패 사례와 정상 제어 사례를 함께 검사합니다.
 
-Linux 원문·비교 사본을 보존한 채 필요한 COMPAT 대체 절차·실행 도구를 보완하는 방식으로 진행할 수 있습니다. 이번 검토를 원문 삭제·축약·19개 Windows 자동 복제의 승인으로 사용하지 않습니다. Windows 재작성에서도 해당 실패 사례가 재발하지 않도록 [Windows PLAN](../../codex_windows/PLAN.md)에 연결합니다.
+Linux 원문·비교 사본을 보존한 채 필요한 COMPAT 대체 절차·실행 도구를 보완하는 방식으로 진행할 수 있습니다. 이번 검토를 원문 삭제·축약·19개 Windows 자동 복제의 승인으로 사용하지 않습니다. Windows 재작성에서도 해당 실패 사례가 재발하지 않도록 [Windows PLAN](windows/PLAN.md)에 연결합니다.
 
 기록·TODO 연결만 yunli에 일반 commit·push하고 사용자 검증을 기다립니다. main은 사용자 검증 완료 후 반영·push하며 검토 결과 게시를 결함 수정 완료나 운영 적용 완료로 처리하지 않습니다.
 

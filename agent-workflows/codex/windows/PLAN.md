@@ -1,6 +1,6 @@
 # Codex Windows 이관 계획
 
-현재 범위는 Linux의 **19개 skill과 확인된 설정 전체의 Windows 이관**입니다. 원문을 축약·삭제·통합하지 않습니다. 작업 기준과 증거는 [이관 기록](../agent-workflows/codex/WINDOWS_MIGRATION_2026-10-03.md)에 두고 상태는 [TODO](TODO.md)에 연결합니다.
+현재 범위는 Linux의 **19개 skill과 확인된 설정 전체의 Windows 이관**입니다. 원문을 축약·삭제·통합하지 않습니다. 작업 기준과 증거는 [이관 기록](../WINDOWS_MIGRATION_2026-10-03.md)에 두고 상태는 [TODO](TODO.md)에 연결합니다.
 
 ## 1. 전체 원본과 설정 확인
 

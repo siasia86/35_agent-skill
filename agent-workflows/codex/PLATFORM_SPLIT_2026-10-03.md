@@ -2,7 +2,7 @@
 
 ## 1. 목적과 허용 범위
 
-사용자 요청으로 기존 `codex/`를 같은 깊이의 `codex_linux/`로 이동하고 `codex_windows/`에는 계획과 문서 골격만 준비합니다. Windows 전용 재작성은 [PLAN](../../codex_windows/PLAN.md)과 [TODO](../../codex_windows/TODO.md)에서 이어갑니다.
+사용자 요청으로 기존 `codex/`를 같은 깊이의 `codex_linux/`로 이동하고 `codex_windows/`에는 계획과 문서 골격만 준비합니다. Windows 전용 재작성은 [PLAN](windows/PLAN.md)과 [TODO](windows/TODO.md)에서 이어갑니다.
 
 현재 작업은 경로 분리·현행 안내 연결·개발 검증 경로 정합화입니다. Windows skill 생성·Linux skill 본문 재작성·개인 홈 설치·설정·WSL 설치·운영 적용·release는 실행하지 않습니다. 저장소 VERSION 1.0.0은 유지합니다.
 
@@ -34,7 +34,7 @@ Linux의 `skills/`·`personal/`·`verification/*.json` bytes, Kiro·GPT·105_bac
 - **통과:** 독립 검사에서 전체 대상 Markdown 192개·교차 앵커 116개를 확인했습니다. 새 깨진 파일 링크·앵커 오류·미완료 펜스는 0건입니다.
 - **기존 문제 보존:** testing-guide·using-skills의 비교 원문 edge_case_testing.md에 있던 파일 링크 2건은 기준선과 같으며 원문 bytes를 보존했습니다.
 - **통과:** 개발 검증기 두 파일의 구문을 확인했습니다. 변경은 skills 고정 경로 3곳이며 ROOT 부모 깊이는 유지합니다.
-- **검사 범위:** UTF-8을 명시한 Windows 실행을 사용했습니다. 대표 Windows fixture 검사는 [Windows REVIEW](../../codex_windows/REVIEW.md)에 별도로 기록하며 전체 skill 행동의 검증으로 확대하지 않습니다.
+- **검사 범위:** UTF-8을 명시한 Windows 실행을 사용했습니다. 대표 Windows fixture 검사는 [Windows REVIEW](windows/REVIEW.md)에 별도로 기록하며 전체 skill 행동의 검증으로 확대하지 않습니다.
 - **미실행:** 이번 이동 후 전체 Linux POSIX 회귀 실행·Windows 전용 구현·최종 모델 행동·개인 설치·Codex 발견·운영 적용은 수행하지 않았습니다. Gitleaks가 설치돼 있지 않아 자동 비밀정보 검사는 미실행이며 신규 문서와 추가 diff에서 개인 경로·자격증명 패턴을 제한적으로 확인합니다.
 
 실패하면 추가 적용을 중단하고 이번 diff와 로컬 사본을 검토합니다. 이번 변경만 복구하며 기존 변경·Git 이력·개인 설정·설치 사본을 전체 reset하거나 일괄 교체하지 않습니다. 게시 후 복구는 검토한 revert로 수행합니다.
