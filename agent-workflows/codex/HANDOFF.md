@@ -1,5 +1,7 @@
 # Codex 개인 스킬 세션 인계
 
+**최신 개인 skill 업데이트:** [T-WIN-003](2026-10-03-personal-skills-T-WIN-003/README.md)의 전후 사본·설치 관찰·검증·복구를 확인합니다. 활성 후속은 [Windows TODO](windows/TODO.md)에서 관리합니다. 다음 업데이트 백업은 codex 바로 아래 새 이름의 폴더 하나로 추가합니다.
+
 ## 1. 재개할 작업과 읽기 순서
 
 **2026-10-03 배치 후속:** 개인 공통 지침의 배포 원본을 codex_windows/AGENTS.md로 통일하고 35의 개발·검토·적용 기록과 역할을 명시했습니다. [T-WIN-002 완료 기록](../history/2026-10-03/T-WIN-002-distribution-root.md)과 [Windows TODO](windows/TODO.md)의 사용자 확인 항목에서 재개합니다. 기존 개인 홈과 이전 설치 사본은 유지합니다.

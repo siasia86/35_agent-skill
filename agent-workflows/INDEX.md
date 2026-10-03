@@ -12,6 +12,7 @@
 │   ├── AGENTS.md                     # Windows 개인 공통 지침 배포 원본
 │   ├── personal/                     # 설정 예시·비교 자료·홈 적용 안내
 │   └── skills/<이름>/SKILL.md        # 독립 개인 skill 19개
+├── _reference/                       # 원본 출처·비교용 캐시 정책
 ├── codex_linux/                      # Linux 보존 구성
 ├── kiro/                             # Kiro 보존 원본
 ├── gpt/                              # GPT 보존 원본
@@ -23,6 +24,11 @@
     │   └── 2026-10-03/
     │       └── T-WIN-002-distribution-root.md
     └── codex/
+        ├── 2026-10-03-personal-skills-T-WIN-003/
+        │   ├── README.md             # 이번 업데이트·검증·복구
+        │   ├── before/               # 이전 skill 사본·inventory
+        │   ├── after/                # 실제 적용 후 사본·inventory
+        │   └── private/              # Git 제외: 설정 원문·raw
         ├── HANDOFF.md                # 세션 재개 시 필요한 인계
         └── windows/
             ├── README.md            # Windows 검토·근거 연결
@@ -50,6 +56,8 @@
 | Linux 비교            | [Linux README](../codex_linux/README.md)                                                             | 지정한 Linux 작업·원문 대조에 한정                               |
 
 완료한 배포 원본 배치 교정은 [T-WIN-002 이력](history/2026-10-03/T-WIN-002-distribution-root.md)에서 확인합니다. 이 색인에 완료 상태를 다시 운영하지 않습니다.
+
+이번 개인 skill의 업데이트·이전본 조회는 [T-WIN-003 백업](codex/2026-10-03-personal-skills-T-WIN-003/README.md)을, 두 요청 skill의 원본 출처 조회는 [참고 색인](../_reference/INDEX.md#4-skill-원본-보관)을 사용합니다.
 
 ## 3. INDEX가 관리하지 않는 것
 

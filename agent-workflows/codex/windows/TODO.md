@@ -5,8 +5,9 @@
 ## 1. 사용자 검증과 실제 환경
 
 - [ ] 사용자가 yunli의 19개와 설정 대응·대표 작업 결과를 검증.
+- [ ] T-WIN-003 개인 skill·업데이트 백업 폴더 구성을 사용자 검증하고 새 세션에서 두 skill 발견·호출 확인 — [적용·검증·복구 기록](../2026-10-03-personal-skills-T-WIN-003/README.md).
 - [ ] T-WIN-002 배포 원본 배치 교정을 사용자 확인 후 main에 반영 — [완료 구현·검증 이력](../../history/2026-10-03/T-WIN-002-distribution-root.md).
-- [ ] work-rules 외 추가 개인 skill·config 적용이 요청되면 기존 동명 사본을 비교·병합.
+- [ ] 이번 7개 이외 추가 skill·config 적용이 요청되면 기존 사본과 비교·병합.
 - [ ] 실제 Codex 새 세션의 발견·자동 선택·설정 로드 확인.
 - [ ] 필요한 symlink·ACL/ADS/owner·SMB·WSL 등 추가 환경 검증.
 - [ ] 다른 Linux home/원격의 실제 설정이 있으면 비공개 자료로 추가 대조.

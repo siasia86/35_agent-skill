@@ -2,3 +2,6 @@
 *.md text eol=lf
 *.json text eol=lf
 pc01_codex-app-home/.agents/skills/** -text
+# Update snapshots retain exact observed bytes independently of core.autocrlf.
+*/before/skill-files/** -text
+*/after/skill-files/** -text

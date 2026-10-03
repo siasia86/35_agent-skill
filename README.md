@@ -23,7 +23,8 @@
 - [105_backup/codex](105_backup/codex/README.md): 폐기한 개발본·payload·catalog·설치기·governance·검증 이력. 새 설치 원본으로 사용하지 않습니다.
 - [agent-workflows](agent-workflows/README.md): 35 자체 agent·skill·prompt의 개발·검토·적용 절차, 관찰·검증·완료 이력과 과거 사본.
 - `claude/`: 기존 예약 영역.
-- [_reference](_reference/INDEX.md): 기존 참고 자료.
+- [_reference](_reference/INDEX.md): 기존 참고 자료와 내부 skill 출처·외부 원본 비교 기준.
+- [개인 Codex 업데이트 백업](agent-workflows/codex/2026-10-03-personal-skills-T-WIN-003/README.md): 업데이트마다 새 이름의 폴더 하나에 전후 skill·설정·설치·검증·복구를 묶는 기록.
 
 이동 전 루트 안내는 [보존 README](105_backup/codex/REPOSITORY_README.before-1.0.0.md)에 남겼습니다. 기존 30·31 연동은 과거 중앙 관리 개발 이력이며 새 개인 스킬의 필수 의존성이 아닙니다. 개인 skill을 사용하기 위해 다른 저장소나 개인 홈의 변경을 자동 요구하지 않습니다.
 

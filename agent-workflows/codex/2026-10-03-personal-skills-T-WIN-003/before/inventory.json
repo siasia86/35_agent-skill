@@ -1,0 +1,87 @@
+{
+  "environment": "pc01_codex-app-home",
+  "scope": "USER",
+  "observed_at": "2026-10-03",
+  "source_baseline": "16817d70a753707aad8e12c9311076b3c387203f",
+  "skills": [
+    {
+      "name": "code-review",
+      "snapshot": "skill-files/code-review",
+      "file_count": 1,
+      "files": {
+        "SKILL.md": "b4f452fcce679b3f66d474177a83e051d1cc6e76d6d413dc369236918c6099a4"
+      },
+      "action": "replace_with_windows_source"
+    },
+    {
+      "name": "debugging-and-recovery",
+      "snapshot": "skill-files/debugging-and-recovery",
+      "file_count": 1,
+      "files": {
+        "SKILL.md": "3d60d6a2df1534721d921f4aa7766a193b8c34beeac389e5e5de87d9b8226cf7"
+      },
+      "action": "replace_with_windows_source"
+    },
+    {
+      "name": "markdown-review",
+      "snapshot": "skill-files/markdown-review",
+      "file_count": 1,
+      "files": {
+        "SKILL.md": "c87f3dace668f3af4f891fafd7159e64d1e493c9eaa44c3565e99f57a4fa7307"
+      },
+      "action": "preserve"
+    },
+    {
+      "name": "md-link-check",
+      "snapshot": "skill-files/md-link-check",
+      "file_count": 1,
+      "files": {
+        "SKILL.md": "c6d038a2a8a2594625c4949c50524933a48c09e9339b7406a24a7ffa04844305"
+      },
+      "action": "replace_with_windows_source"
+    },
+    {
+      "name": "work-rules",
+      "snapshot": "skill-files/work-rules",
+      "file_count": 35,
+      "files": {
+        "SKILL.md": "246417f8bf023dfa3f742a9845c902e6dece502609e462f54764a2505e5503c2",
+        "references/kiro-original.md": "a940ad7376aecac56a873671a3f77250fb6d4f6deb77598810bdfefd1420ed20",
+        "references/linux-original.md": "87e5f78b137d2896b38dd29ddcad55aaf10e730f0f15d384d3c1ea41d4c8ab82",
+        "references/repository-workflow.md": "3a500c04ab034f874cda8824af04782ccf514af591be1057a93a9735c6d25da2",
+        "references/STYLE.md": "f2797a30aaf805f9ab3cf157fff2e7229ad99dfe5cc6785b01b734090701a46a",
+        "scripts/lock.py": "d26db693d6656ca610cc6164a4e9dea41bea7244f173e4d5bf499fa1a33585a4",
+        "scripts/md-heading-check.py": "16c3de7712ef8987216b3b4e519d9bce5214fb15f78a69865e7441805bdf85d3",
+        "scripts/md-link-check.py": "10cc067c8a398c335e95922921dd849d64b529b3285f616b19e4c3c3bc2d348f",
+        "scripts/md-style-check.py": "a5199d0740de762ceef8441f862b6691c9614caea944c4671c2c9771c732c0e2",
+        "scripts/md_common.py": "8af651399536aa8f7cf03101c1dee3ea5ee190a3621819d55d9ae1ddb81ef78d",
+        "references/linux-skills/debugging-and-recovery.md": "2d9abe01ee69ea435b9ab22f192770cfdba8ae01a28e47bd9cb7745bc8e9d77f",
+        "references/linux-skills/incremental-change.md": "130094af74d1304f0e6ab6684c19725cf266c0db9cb29c5bb112531fc4ec36ce",
+        "references/linux-skills/kiro-lock.md": "3451b83e3c0d23e0833e0f6e26b613713c984091440ccafb5c66a2b52f0b6c90",
+        "references/linux-skills/md-link-check.md": "b42e938b6c6e004e4625de0f403323e0fc2249a7074c253ca0084316e48c7085",
+        "references/linux-skills/planning-and-breakdown.md": "b28e326aa8c55ad774826dabd870eb9b014c2076ca5ed26410c646e8d07125cf",
+        "references/linux-skills/readme-template.md": "f384b1571a4b8f35c642e5984354f0c2721ecf612b66d3ba09bddf39dc58e850",
+        "references/linux-skills/spec-driven-infra.md": "2c8006325c5194aa013470926f59d98574b6f7eb815f06624273593d88a40949",
+        "references/linux-tools/lock.py": "90940c3f7d16cf4fb9f13e9244743d254d522523df0e8ed2b36881ab90bbffe0",
+        "references/linux-tools/md-heading-check.py": "53015d827dc7576dd4221c7accf7398a3be0e97d596b0b0b2951164397455df7",
+        "references/linux-tools/md-link-check.py": "9f6d5a2d5c83f160d73623ef881e62fec8adb876a4ef3696d2666866fdef13f7",
+        "references/linux-tools/md-style-check.py": "21d70e4cc4e4e272cbe64fdf6957dd10592eb26267a96c01d503c8a519c5ba10",
+        "references/originals/debugging-and-recovery.md": "10140924f539da68922ce66acd54d6d30e596059f377bdeeeecbd8e26400b11e",
+        "references/originals/incremental-change.md": "73abe0ab80accaae28ff8a628e16412255867aaacf063d2ee10bddc34b661d86",
+        "references/originals/kiro-lock.md": "207914bf93b04e9a201297def12cf0a0c512bd4fb10ef20c86e8a5ba57c10553",
+        "references/originals/md-link-check.md": "67bc59e6ca5432cd17ce0d13077cbaeaa51cc00c9c5764c8565323869d85aa05",
+        "references/originals/planning-and-breakdown.md": "11ca00491de7ace22d02b633db071d7c46233e8678b58d3a6ab1ed223694925a",
+        "references/originals/readme-template.md": "754dd7ea3b7be8e968802990ac8e63a2239285567d5c6c0ff45d935e8abc5a9e",
+        "references/originals/spec-driven-infra.md": "e102ac0892303423279dc10afa24fbd7fa939042205776586b5fa8cd4d9419b2",
+        "references/skills/debugging-and-recovery.md": "1d0749fc403b39ed0591a34bbbbce4581b49762e3803abb2edbb01458475358f",
+        "references/skills/incremental-change.md": "b8bf1f4f344e1ff03b5b226325da1d32a77ec076cfb9293467a06d6a4a667b07",
+        "references/skills/kiro-lock.md": "add747a0a09e3c75dabe4844e6030a127027cab15ffb8962aed0e5745349e84d",
+        "references/skills/md-link-check.md": "5ef6950cc4bf2aa755a63e9d450799198ba586623bf3ac1e80c9d80999378e5a",
+        "references/skills/planning-and-breakdown.md": "7dacfe0327d5be12174c44964b71d392de86a809b91ef067496b7ec7aff3f5ad",
+        "references/skills/readme-template.md": "ff4ff1c1f31d2718ac35acc12fe94de162f3fdad124261b21d7b4b406c74926e",
+        "references/skills/spec-driven-infra.md": "8cdfcc91e9c4e9543d45ef8242571303ac43395982ab2bdd711af6c41fee5d3e"
+      },
+      "action": "replace_with_windows_source"
+    }
+  ]
+}

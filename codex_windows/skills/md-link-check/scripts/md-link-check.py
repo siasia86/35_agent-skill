@@ -23,7 +23,7 @@ md-link-check.py — Markdown 내부 링크 존재 여부 검증
 종료 코드:
     0 = 모든 링크 정상
     1 = 깨진 링크 발견 또는 읽기 실패
-    2 = 닫히지 않은 코드 펜스로 검사 미완료
+    2 = 대상 Markdown 없음 또는 닫히지 않은 코드 펜스로 검사 미완료
 """
 
 VERSION = "26.10.03"
@@ -141,8 +141,8 @@ def main():
     files = collect_md_files(args.paths)
 
     if not files:
-        print("대상 .md 파일 없음")
-        sys.exit(1 if missing_inputs else 0)
+        print("🟡 검사 미완료: 선택된 .md 파일 없음 (검사 파일: 0개)", file=sys.stderr)
+        sys.exit(2)
 
     total_broken = 0
     incomplete_files = 0

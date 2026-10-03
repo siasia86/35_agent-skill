@@ -21,6 +21,8 @@
 
 사용 안내와 재사용 자료는 이 폴더에서 완결됩니다. 공통 지침의 본문을 personal에 중복 보관하지 않습니다.
 
+개인 skill 갱신 전에는 기존 동명 폴더와 사용자 차이를 보존하고 전체 파일 해시를 기록합니다. 업데이트별 백업 폴더는 해당 repo의 관리 공간에서 사용자 지정대로 만들며 이 배포 폴더에 개발 기록·개인 설정 백업을 추가하지 않습니다.
+
 ## 2. 필요한 실행 도구
 
 기본은 PowerShell·Git·Python 3.11 이상입니다. 동봉 Python 도구는 표준 라이브러리만 사용하며 `python -X utf8 -B`로 실행합니다. Bash 업무에는 확인한 Git Bash 또는 WSL을 사용합니다. Terraform·Docker·Ansible·보안 CLI는 해당 업무에 실제 필요한 경우에 확인합니다. Linux 서비스나 Ansible controller를 네이티브 PowerShell에서 실행한다고 가정하지 않습니다.

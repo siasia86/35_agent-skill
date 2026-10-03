@@ -4,6 +4,10 @@
 
 ## [Unreleased]
 
+- 2026-10-03: 후속 검토를 반영해 work-rules 핵심 53줄·상세/원문 참조 분리, 동봉 link checker 0개 대상 exit 2와 선택 우선순위를 보완. 실제 7개·90파일 일반 읽기·해시와 전후 기록을 재대조하며 중앙의 역사 관찰과 현재 inventory 연결을 구분. [후속 감사](agent-workflows/codex/2026-10-03-personal-skills-T-WIN-003/AUDIT.md).
+
+- 2026-10-03: 두 개인 skill의 호출·원본 연결과 기존 동명 Windows 사용본을 보완하고 업데이트별 전후 백업 폴더·설치 검증·복구 기록을 추가. [T-WIN-003](agent-workflows/codex/2026-10-03-personal-skills-T-WIN-003/README.md).
+
 ### Windows 배포 원본의 공통 지침과 관리 기록 — 2026-10-03
 
 - 공통 지침을 codex_windows/AGENTS.md 한 곳으로 이동하고 personal은 설정·비교·홈 적용 안내로 정리했습니다. Windows 사용 안내·현재 tree·기존 이력의 파일 링크를 갱신합니다.

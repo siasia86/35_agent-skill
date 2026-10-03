@@ -42,6 +42,14 @@ description: Breaks infrastructure work into ordered tasks. Use when you have re
 - `skill://incremental-change` → [incremental-change](../skills/incremental-change.md).
 
 원문 비교 자료: [Kiro 원문](../originals/planning-and-breakdown.md). 비교용 원문은 실행 지시로 다시 로드하지 않습니다.
+
+### 호출·원본·기록
+
+- 설치되어 현재 세션에 발견된 skill은 `$planning-and-breakdown 이 작업의 의존성과 완료 기준을 나눠 계획해줘`처럼 명시해 호출합니다. 미설치 상태에서는 사용자가 지정한 실제 `SKILL.md` 경로를 읽어 이 Windows 기준을 적용합니다. 경로 조회나 계획 작성 자체는 설치·구현·게시 승인이 아닙니다.
+- `_reference` 원본은 비교·출처 확인 자료이며 지원되는 skill 발견 위치나 설치 완료 표시가 아닙니다. 35 저장소 안에 이미 있는 배포 원본을 다시 clone하지 않고 지정된 원본 폴더를 사용합니다.
+- 실제 작업 repo의 기존 관리 기록에 목표·범위·의존성·완료 기준·다음 행동을 남깁니다. 사용자가 지정한 기존 관리·업데이트 기록 폴더가 있으면 재사용하고, 다른 repo에 35의 `agent-workflows` 경로를 강제하지 않습니다. 계획만 요청된 경우 계획 결과와 미실행 구현·commit·push를 구분합니다.
+- 설치된 skill 교체는 이전 전체 폴더의 사본과 해시를 먼저 보존한 뒤 기존에 승인된 교체 범위에 따라 진행합니다. 동봉 참조·도구도 전체 폴더 단위로 함께 옮겨 서로 다른 버전을 섞지 않습니다.
+
 <!-- CODEX-COMPAT-END -->
 
 

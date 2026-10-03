@@ -194,6 +194,22 @@ history에는 공개 가능한 상세 관리 기록을, CHANGELOG에는 완료 �
 
 이 후속 반영은 조회·기록 기준과 개인 skill 적용입니다. 기존 PLAN/TODO의 일괄 분할·이동, 모든 공개 plugin 설치·실행은 포함하지 않습니다. 구체적인 문서 역할·tree·예외는 [work-rules Workflow 참조](codex_windows/skills/work-rules/references/repository-workflow.md)를 기준으로 합니다.
 
+## 9. 개인 Codex 업데이트별 백업
+
+사용자 지정에 따라 이번 개인 설정 백업은 agent-workflows/codex 바로 아래 [2026-10-03-personal-skills-T-WIN-003](agent-workflows/codex/2026-10-03-personal-skills-T-WIN-003/README.md) 폴더 하나로 관리합니다. 다음 업데이트는 이름이 다른 폴더를 추가합니다.
+
+```text
+agent-workflows/codex/<날짜>-<목적>-<작업ID>/
+├── README.md                  # 범위·설치 결과·검증·복구
+├── USE.md                     # 호출·원본·적용 방법
+├── before/                    # 이전 skill 전체 사본·inventory
+├── after/                     # 실제 적용 후 skill 사본·inventory
+├── validation.json            # 공개 검사 근거
+└── private/                   # Git 제외: AGENTS/config·raw
+```
+
+장점은 업데이트 하나의 전후 상태와 복구 자료를 한 폴더에서 찾는 것입니다. 비용은 보관 용량과 개인정보·Git 제외 확인입니다. 새 사본은 `.agents/skills` 구조로 만들지 않아 runtime 발견 위치와 구분하고, 기존 관찰·JSON·이력 경로는 보존합니다. 배포 원본은 계속 codex_windows이며 이 백업을 독립 편집하거나 다음 설치 source로 사용하지 않습니다.
+
 ---
 
 **작성일**: 2026-10-03

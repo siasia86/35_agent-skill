@@ -1,0 +1,162 @@
+{
+  "phase": "applied and reverified",
+  "live_changed_markdown": 57,
+  "checks": [
+    {
+      "name": "managed-style",
+      "exit_code": 0,
+      "summary": "검사 파일: 20개 | 이슈: 0건"
+    },
+    {
+      "name": "skill-style",
+      "exit_code": 0,
+      "summary": "검사 파일: 34개 | 이슈: 0건"
+    },
+    {
+      "name": "md-heading-check.py",
+      "exit_code": 0,
+      "summary": "검사 파일: 57개 | 헤딩: 861개 | 이슈: 0건"
+    },
+    {
+      "name": "md-link-check.py",
+      "exit_code": 0,
+      "summary": "검사 파일: 57개 | 링크: 392개 | 깨진 링크: 0건"
+    },
+    {
+      "name": "skill-validate-bash-script-template",
+      "exit_code": 0,
+      "summary": "Skill is valid!"
+    },
+    {
+      "name": "skill-validate-code-review",
+      "exit_code": 0,
+      "summary": "Skill is valid!"
+    },
+    {
+      "name": "skill-validate-debugging-and-recovery",
+      "exit_code": 0,
+      "summary": "Skill is valid!"
+    },
+    {
+      "name": "skill-validate-doubt-driven-infra",
+      "exit_code": 0,
+      "summary": "Skill is valid!"
+    },
+    {
+      "name": "skill-validate-git-commit-rule",
+      "exit_code": 0,
+      "summary": "Skill is valid!"
+    },
+    {
+      "name": "skill-validate-incremental-change",
+      "exit_code": 0,
+      "summary": "Skill is valid!"
+    },
+    {
+      "name": "skill-validate-kiro-lock",
+      "exit_code": 0,
+      "summary": "Skill is valid!"
+    },
+    {
+      "name": "skill-validate-md-link-check",
+      "exit_code": 0,
+      "summary": "Skill is valid!"
+    },
+    {
+      "name": "skill-validate-planning-and-breakdown",
+      "exit_code": 0,
+      "summary": "Skill is valid!"
+    },
+    {
+      "name": "skill-validate-python-script-template",
+      "exit_code": 0,
+      "summary": "Skill is valid!"
+    },
+    {
+      "name": "skill-validate-readme-template",
+      "exit_code": 0,
+      "summary": "Skill is valid!"
+    },
+    {
+      "name": "skill-validate-repo-governance",
+      "exit_code": 0,
+      "summary": "Skill is valid!"
+    },
+    {
+      "name": "skill-validate-security-tools",
+      "exit_code": 0,
+      "summary": "Skill is valid!"
+    },
+    {
+      "name": "skill-validate-shipping-checklist",
+      "exit_code": 0,
+      "summary": "Skill is valid!"
+    },
+    {
+      "name": "skill-validate-spec-driven-infra",
+      "exit_code": 0,
+      "summary": "Skill is valid!"
+    },
+    {
+      "name": "skill-validate-testing-guide",
+      "exit_code": 0,
+      "summary": "Skill is valid!"
+    },
+    {
+      "name": "skill-validate-using-skills",
+      "exit_code": 0,
+      "summary": "Skill is valid!"
+    },
+    {
+      "name": "skill-validate-work-rules",
+      "exit_code": 0,
+      "summary": "Skill is valid!"
+    },
+    {
+      "name": "skill-validate-zircon-readme-policy",
+      "exit_code": 0,
+      "summary": "Skill is valid!"
+    }
+  ],
+  "failures": [],
+  "skill_style_scope": "active Windows blocks and details; preserved legacy checked by hash, headings and links",
+  "verbatim_style_skipped": 3,
+  "cross_file_fragments": 33,
+  "protected_history_files": 457,
+  "original_and_helper_files_unchanged": 202,
+  "intentional_active_helpers_updated": 7,
+  "preserved_outside_compat_or_archived": 31,
+  "snapshot_primary_docs": 12,
+  "snapshot_primary_local_links": 30,
+  "publication_path_scan": "passed",
+  "actual_installation": {
+    "phase": "actual installation verified",
+    "failures": [],
+    "before_skills": 5,
+    "before_files": 39,
+    "after_skills": 7,
+    "after_files": 90,
+    "runtime_payload_hashes_match": true,
+    "ordinary_read": true,
+    "existing_home_agents_preserved": true,
+    "config_and_system_49_unchanged": true,
+    "private_files_git_ignored": 48,
+    "windows_19_payloads_match_candidate": true,
+    "installed-zero-target": 2,
+    "installed-valid": 0,
+    "md-heading-check.py": "검사 파일: 26개 | 헤딩: 433개 | 이슈: 0건",
+    "md-link-check.py": "검사 파일: 26개 | 링크: 96개 | 깨진 링크: 0건",
+    "fresh_session_discovery_and_behavior": "not tested"
+  },
+  "official_metadata_skills": 19,
+  "gitleaks": {
+    "version": "8.30.1",
+    "public_candidate_leaks": 0
+  },
+  "checker_regression_cases": 10,
+  "ordinary_read_skills": 7,
+  "ordinary_read_managed_files": 90,
+  "central_registry": "latest observation linked in independent 31 change; original historical inventory retained",
+  "fresh_session_discovery": "not tested",
+  "main_push": "not performed; user verification pending"
+}

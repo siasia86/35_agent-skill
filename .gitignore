@@ -1,0 +1,4 @@
+# External source comparison cache and private update evidence
+/_reference/upstream/
+/agent-workflows/local/
+/agent-workflows/codex/*/private/
