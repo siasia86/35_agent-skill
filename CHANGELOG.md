@@ -4,6 +4,11 @@
 
 ## [Unreleased]
 
+### 단순 조회의 Luna 우선 배정 — 2026-10-03
+
+- Windows work-rules와 동봉 역할 2곳, personal AGENTS에 Luna 우선 배정·근거 수집·main AI 검증·지원 여부와 위임 비용 예외를 추가했습니다. 기본 모델·홈·config·중앙 정책은 변경하지 않습니다.
+- workflow 문서 구조는 제안만 검토했으며 파일 배치·이동·역할 개편은 수행하지 않습니다. Luna 기준의 범위·검증·한계는 [후속 기록](agent-workflows/codex/windows/REPORTING_REMEDIATION_2026-10-03.md#5-luna-우선-배정-후속)에 구분합니다.
+
 ### Windows 공통 보고 지침과 helper 보완 — 2026-10-03
 
 - work-rules·personal AGENTS에 시작/완료 보고, 결과 경로·가시성, 성과/제약, 채팅 `;` 요청 구분 규칙을 반영했습니다. 코드·명령어 등 내용 안의 기호는 원래 의미를 유지합니다.
