@@ -1,5 +1,7 @@
 # 인계 게시와 전체 브랜치 병합 검토
 
+**후속 실제 병합 요청:** 사용자가 원격·로컬 main·yunli 네 브랜치의 실제 통합을 추가 요청했습니다. 1~6절은 이전의 검토·yunli 게시 범위이며, 최신 실제 통합 상태는 7절을 확인합니다.
+
 ## 1. 요청 범위와 판정
 
 사용자가 2026-10-03 인계 변경의 push와 현재 모든 브랜치·main 병합 후 의도한 내용·동작이 유지되는지 검토하도록 요청했습니다. 미게시 문서·인계·검토 결과를 기존 개발 브랜치 yunli에 일반 commit·push합니다. main·design·yunli의 통합은 독립 임시 작업본에서 실제 merge 결과를 만들어 검토합니다. 원래 root 작업본의 Git index·branch와 사용자 변경은 보존합니다.
@@ -69,6 +71,18 @@ python3 codex/verification/verify_skills.py
 `525f0e01ac0ce0a31797ebfe53f2695af3a267ec`을 일반 push한 뒤 git ls-remote로 원격 yunli가 같은 SHA임을 확인했습니다. 원격 main `4227f1d6b703238e3d2b763a0d320998cfeedc09`와 design `55282e293f00e074d9c812561fcf4edb115f111d`도 유지됐습니다. 게시 clone은 clean이며 root Git 관리 영역은 보존합니다. 실제 확인 결과를 담은 이 후속 문서 커밋도 같은 yunli에 일반 push합니다. 이 문서 자체의 커밋 SHA는 자기 참조하지 않고 최종 Git HEAD와 사용자 응답에서 확인합니다.
 
 다음 작업은 [Codex TODO](../../codex/TODO.md)의 재현 완료 항목 보완, 참조 조건 확정, 최종본 독립 사례 확인입니다. main 병합의 충돌 검토는 통과했지만 스킬 전체 동작 완료 판정은 보류합니다. 게시 후 복구는 이번 커밋의 검토된 revert를 사용하며 기존 사용자 변경을 보존합니다.
+
+## 7. 네 브랜치의 실제 병합
+
+이전 작업은 병합 검토였으며 실제 main·로컬 Git 갱신은 수행하지 않았습니다. 이후 사용자가 원격 main·yunli와 원래 `/root/35_agent-skill`의 로컬 main·yunli 네 브랜치를 검증 후 실제 병합하도록 요청했습니다. 이번 후속 요청이 main 일반 push와 로컬 Git 관리 영역 갱신의 근거입니다. design의 실제 갱신과 force push·OS 권한 변경·설치·운영 적용은 포함하지 않습니다.
+
+시작값은 원격 main `4227f1d6b703238e3d2b763a0d320998cfeedc09`, 원격 yunli `345a6be30a1d4f460b90b352bb1c9d6a701f774b`, 원래 로컬 main `4227f1d6b703238e3d2b763a0d320998cfeedc09`, 로컬 yunli `4a5dfb17ccbd0dcb5d6da787e3c5133761c06261`입니다. 네 시작점은 최신 yunli의 조상이며 고유 변경은 없습니다. 원래 작업본의 모든 게시 대상 파일이 yunli와 같은 bytes임을 확인했고 기존 staged 변경은 없습니다.
+
+원래 refs·index bytes·파일 SHA-256을 임시 백업에 보존했습니다. 원래 main/index와 같은 상태의 격리 복사본을 만들고 `git read-tree <검증된 커밋>`으로 index만 일치시킨 뒤 `git merge --ff-only <검증된 커밋>`이 성공하며 게시 대상 파일 bytes를 유지하는 것을 확인했습니다. 이미 게시된 파일 이동·신규 파일을 stash로 반복 적용하거나 reset/clean으로 지우지 않습니다.
+
+추가 변경은 이번 승인·통합 상태 기록뿐이며 기존 스킬·원문·검증 자료·설치 사본을 변경하지 않습니다. 원격 두 브랜치는 검증된 같은 커밋으로 atomic 일반 push하고, 실제 원격 결과를 확인한 후 원래 로컬 main·yunli를 fast-forward합니다. 비활성 yunli는 조상 관계와 이전 SHA를 확인한 ref 갱신으로 전진시키며 작업 파일은 보존합니다. Git 쓰기는 현재 승인된 실행 권한에서만 수행하고 파일·디렉토리 권한을 바꾸지 않습니다.
+
+최종 확인은 원격 main/yunli·원래 로컬 main/yunli의 SHA 일치, origin 추적 refs 일치, 원래 작업본의 clean 상태와 승인된 기록 외 파일 해시 보존입니다. 실제 결과를 확인한 뒤 TODO·인계·이 절에 기록합니다. 자기 참조하는 기록 커밋 SHA는 본문에 넣지 않고 최종 Git HEAD와 응답에서 확인합니다.
 
 ---
 

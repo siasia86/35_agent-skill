@@ -37,7 +37,7 @@
 ## 4. 작업과 검증
 
 - [세션 인계](agent-workflows/codex/HANDOFF.md): 마지막 게시 상태·미게시 변경·추가 검토 근거·다음 세션의 재개 순서. 현재 미완료 항목은 [Codex TODO](codex/TODO.md)에서 확인합니다.
-- [2026-10-03 병합 검토](agent-workflows/codex/MERGE_REVIEW_2026-10-03.md): 전체 원격 브랜치의 병합 결과, 원문 보존과 동작 제한 및 yunli 게시 확인.
+- [2026-10-03 병합 검토와 실제 통합](agent-workflows/codex/MERGE_REVIEW_2026-10-03.md): 전체 원격 브랜치의 검토 결과, 원문 보존·동작 제한과 후속 요청의 원격/로컬 main·yunli 통합 상태.
 - [TODO2](TODO2.md): 원문 보존·최소 호환성 수정·후속 경량화 검토 기준.
 - [실행 기록](agent-workflows/codex/REBUILD_1.0.0.md): 이번 6개 작업의 순서·권한·검증·게시·복구.
 - [기존 TODO](TODO.md): 이전 중앙 배포 작업의 역사 기록. 과거 다음 단계는 이번 개인 스킬 작업의 자동 실행 지시가 아닙니다.
