@@ -4,6 +4,10 @@
 
 ## [Unreleased]
 
+- 2026-10-04: M12-MAIN-20261004-01 사용자 main 요청에 따라 현재 원문 보존·검증 진입을 보완하고 SMA 이관 및 관리 문서를 통합 검토했습니다. 개인 skill 구현·설치는 변경하지 않았습니다. [검사·기존 제한·게시 확인](agent-workflows/codex/windows/records/2026-10-04-main-merge-M12-MAIN-20261004-01/README.md).
+
+- 2026-10-04: SMA-20261004-01에서 이전 작업본의 PCS 백업·PCR 검토를 현행 관리 공간으로 이관하고 과거 PLAN·관찰과 현재 Windows 상태를 구분했습니다. 백업 도구는 개발 검증 경로로 옮기며 업데이트 기본 위치를 유지합니다. [이관·스킬 수정 workflow·검증·복구](agent-workflows/codex/windows/records/2026-10-04-record-relocation-SMA-20261004-01/README.md). 개인 설치·설정과 다른 작업의 변경은 보존하며 Git 게시는 미실행입니다.
+
 - 2026-10-03: 후속 검토를 반영해 work-rules 핵심 53줄·상세/원문 참조 분리, 동봉 link checker 0개 대상 exit 2와 선택 우선순위를 보완. 실제 7개·90파일 일반 읽기·해시와 전후 기록을 재대조하며 중앙의 역사 관찰과 현재 inventory 연결을 구분. [후속 감사](agent-workflows/codex/2026-10-03-personal-skills-T-WIN-003/AUDIT.md).
 
 - 2026-10-03: 두 개인 skill의 호출·원본 연결과 기존 동명 Windows 사용본을 보완하고 업데이트별 전후 백업 폴더·설치 검증·복구 기록을 추가. [T-WIN-003](agent-workflows/codex/2026-10-03-personal-skills-T-WIN-003/README.md).

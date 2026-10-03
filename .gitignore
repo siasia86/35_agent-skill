@@ -2,3 +2,6 @@
 /_reference/upstream/
 /agent-workflows/local/
 /agent-workflows/codex/*/private/
+
+# Governance documents and private application evidence
+/.governance/local/

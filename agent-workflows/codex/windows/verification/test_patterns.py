@@ -16,8 +16,15 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--skills', type=Path, required=True)
     parser.add_argument('--output', type=Path)
+    parser.add_argument('--pattern-document', type=Path,
+                        help='Current relocated Windows pattern document; legacy default reads SKILL blocks')
     args = parser.parse_args()
     snippets = []
+    if args.pattern_document:
+        text = args.pattern_document.read_text(encoding='utf-8')
+        for snippet in re.findall(r'^```python\s*\n(.*?)^```\s*$', text, re.M | re.S):
+            ast.parse(snippet)
+            snippets.append((args.pattern_document.name, snippet))
     for path in args.skills.glob('*/SKILL.md'):
         text = path.read_text(encoding='utf-8')
         assert '\x00' not in text, path.name

@@ -139,7 +139,8 @@ def main():
         bad_utf8 = root / 'bad-encoding.md'
         bad_utf8.write_bytes(b'# Document\n\xff\xfe\n')
         run('link-valid-native-crlf-destinations', 'md-link-check.py', 0, '-v', good)
-        run('link-explicit-missing', 'md-link-check.py', 1, missing)
+        # No selected Markdown is incomplete (2), not a scanned broken link (1).
+        run('link-explicit-missing', 'md-link-check.py', 2, missing)
         run('link-valid-plus-missing', 'md-link-check.py', 1, good, missing)
         run('link-broken', 'md-link-check.py', 1, broken)
         broken_angle = write('broken-angle.md', '# Document\n[Missing](<missing report.md> "Title")\n')

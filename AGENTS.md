@@ -43,6 +43,12 @@
 
 2026-10-03 실제 병합 추가 승인: 사용자가 원격 main·yunli와 원래 로컬 작업본의 main·yunli 네 브랜치를 검증 후 실제 병합하도록 요청했습니다. 이번 35 저장소 작업에 한해 검증한 같은 커밋으로 네 브랜치를 fast-forward합니다. 독립 게시 clone에서 기록을 commit하고 원격 main·yunli에 일반 push하며, 로컬 파일이 게시 후보와 같음을 확인한 뒤 필요한 Git 관리 영역 갱신을 승인된 실행 권한으로 진행합니다. 원래 index·refs·파일 해시를 백업하고 파일을 보존하는 read-tree와 main fast-forward, 조상 관계를 확인한 yunli ref 갱신을 사용합니다. design·다른 저장소·개인 홈·OS 권한 변경·force push·release·운영 적용은 제외합니다. 완료·중단 시 이번 승인도 만료되며 게시 후 복구는 검토된 revert를 사용합니다. 최신 결과는 [네 브랜치 실제 병합](agent-workflows/codex/MERGE_REVIEW_2026-10-03.md#7-네-브랜치의-실제-병합)에서 확인합니다.
 
+
+<!-- P31-GOVERNANCE-ENTRY BEGIN -->
+관리 문서 진입은 [.governance/INDEX](.governance/INDEX.md)입니다. 기존 AGENTS·하위 지침·현재 상태 원본을 보존하고 관련 문서만 선택합니다.
+저장소 지침 개정은 31의 해당 profile에서 검증한 뒤 반영하며, 개인 skill 구현은 35 관리 원본에서 수정·검증하여 로컬에 반영합니다. 31의 자동 CI/CD 반영은 아직 구성되지 않았습니다.
+<!-- P31-GOVERNANCE-ENTRY END -->
+
 ---
 
 **작성일**: 2026-09-21

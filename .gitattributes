@@ -4,3 +4,4 @@ gpt/** -text
 105_backup/** -text
 codex_linux/** text eol=lf
 codex_windows/** text eol=lf
+.codex/config.toml text eol=lf

@@ -66,6 +66,11 @@
 
 [Codex 관찰 자료](agent-workflows/codex/README.md)의 네 스킬 사본과 JSON은 2026-09-30에 확인한 상태입니다. 원본 commit·해시·사본을 보존하며 새 스킬 1.0.0이 해당 개인 환경에 설치됐다고 주장하지 않습니다. 사본은 독립 수정하거나 새 설치 입력으로 사용하지 않습니다.
 
+
+<!-- P31-GOVERNANCE-ENTRY BEGIN -->
+저장소 관리 문서와 실제 상태 위치는 [.governance 진입](.governance/README.md)에서 확인합니다. 기존 업무 자료·기록은 원래 위치를 유지합니다.
+<!-- P31-GOVERNANCE-ENTRY END -->
+
 ---
 
 **작성일**: 2026-08-31

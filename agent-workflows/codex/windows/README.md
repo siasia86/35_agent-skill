@@ -5,6 +5,7 @@
 ## 1. 작업 문서
 
 - [PLAN](PLAN.md): 이관과 후속 작업 순서.
+- [기존 자료 이관·스킬 수정 workflow](records/2026-10-04-record-relocation-SMA-20261004-01/README.md): PCS·PCR의 현재 위치·과거 기록 구분·검증·복구.
 - [T-WIN-002 배포 원본 배치 교정](../../history/2026-10-03/T-WIN-002-distribution-root.md): 루트 공통 지침·관리 역할·현재 검사와 미실행.
 - [공식 skill 재검토와 개인 적용](SYSTEM_SKILL_REVIEW_2026-10-03.md): 전체 공개 source 조사·INDEX/TODO/산출물 예외·현재 검증·설치 범위.
 - [AI 작업 INDEX](../../INDEX.md): 주요 구조와 작업별 기준 문서 연결.
@@ -27,6 +28,6 @@
 
 **작성일**: 2026-10-03
 
-**마지막 업데이트**: 2026-10-03
+**마지막 업데이트**: 2026-10-04
 
 © 2026 siasia86. Licensed under CC BY 4.0.
