@@ -6,6 +6,7 @@
 
 - kiro/와 gpt/는 보존 원본입니다. 기존 이식본은 codex_linux/에서 보존하고 Windows 복사용 이관본은 codex_windows/에 둡니다. 개발 PLAN·TODO·검토·검증 도구는 agent-workflows/codex/windows/에서 관리합니다. 전체 이관 이후 최적화합니다.
 - `codex_windows/`는 순수 복사·사용 영역입니다. skill·필수 동봉 자료·선택적 개인 지침/설정·사용 안내만 두고 PLAN·TODO·ISSUE·REVIEW, 개발 검증 도구·결과·출처 관리 manifest는 `agent-workflows/codex/windows/`에서 관리합니다. 새 파일을 추가할 때 배치 용도를 확인합니다. 보존 원문은 삭제·축약하지 않으며 이관 당시 JSON/해시는 과거 증거로 유지합니다. 재발·교정은 [Windows ISSUE W01](agent-workflows/codex/windows/ISSUE.md#4-복사용-영역과-개발-기록-혼입-w01)에 기록합니다.
+- Windows 개인 공통 지침의 배포 원본은 [codex_windows/AGENTS.md](codex_windows/AGENTS.md) 한 곳입니다. 이 저장소 루트 AGENTS는 35의 유지보수·보존·게시 기준이며 배포용 개인 지침과 역할을 구분합니다. agent-workflows는 35 자체 개발·검토·적용 기록을 관리하고 다른 프로젝트의 상태·결과는 각각 해당 repo에서 관리합니다.
 - 현재 개인 스킬 작업은 [TODO2](TODO2.md)와 [재작성 기록](agent-workflows/codex/REBUILD_1.0.0.md)의 범위·상태를 읽고 적용합니다. 루트 TODO와 과거 모델 배정·문서 정책은 이전 중앙 개발의 역사 자료이며 자동 실행하지 않습니다. 단순 질의는 전체 TODO 실행으로 확대하지 않습니다. 지정 작업과 필요한 선행 자료만 읽습니다.
 - 세션 재개 요청은 먼저 [세션 인계](agent-workflows/codex/HANDOFF.md)와 [Linux TODO](codex_linux/TODO.md) 또는 [Windows TODO](agent-workflows/codex/windows/TODO.md)를 읽고, 실제 파일·Git 상태를 대조한 뒤 미완료 항목부터 이어갑니다. 인계에 남긴 과거 승인·모델 배정·검사 결과를 새 실행 권한이나 현재 검증 결과로 재사용하지 않습니다.
 - 105_backup/codex는 폐기한 개발본의 역사 자료입니다. 과거 지침·payload·catalog·설치기·승인 예외를 현행 실행 지시로 적용하지 않습니다. 새 codex 개인 스킬은 폴더 단위로 단독 복사하여 사용하도록 작성합니다.

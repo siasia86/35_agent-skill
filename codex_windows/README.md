@@ -1,13 +1,25 @@
 # Codex Windows 개인 스킬
 
-이 폴더는 Windows에서 복사하여 사용하는 19개 개인 skill과 선택적 공통 지침·설정 예시를 제공합니다.
+이 폴더는 Windows 개인 Codex에 복사·적용할 공통 지침·19개 skill·필수 동봉 도구·설정 예시의 배포 원본입니다. 제공 파일별 실제 적용 위치와 기존 사용자 편집을 확인하여 복사·병합합니다.
 
 ## 1. 사용할 파일
 
 - [skill 목록과 실행 조건](skills/README.md): `skills/<이름>/` 전체를 복사합니다.
-- [공통 지침과 설정](personal/README.md): 기존 설정과 비교해 필요한 항목만 병합합니다.
+- [공통 지침](AGENTS.md): 이 배포 원본의 단일 공통 지침입니다. 기존 개인 AGENTS와 비교·병합합니다.
+- [설정 적용 안내와 예시](personal/README.md): 기존 설정과 비교해 필요한 항목만 병합합니다.
 
 활성 `SKILL.md`의 Windows 호환 절과 `scripts/`가 현재 실행 기준입니다. 각 폴더의 Linux/Kiro 원문·예시·체크리스트는 보존 자료이며 OS별 명령을 그대로 자동 실행하지 않습니다. 필요한 참조만 읽습니다.
+
+다음 표는 배포 원본과 실제 적용 위치의 대응입니다. AGENTS와 skill의 발견 위치는 서로 다르므로 해당 파일·폴더를 지원 위치에 적용합니다. [공식 AGENTS 안내](https://learn.chatgpt.com/docs/agent-configuration/agents-md)
+
+| 배포 원본                                       | 실제 적용 위치·방법                                                    |
+|-------------------------------------------------|------------------------------------------------------------------------|
+| AGENTS.md                                       | 사용자 Codex home의 AGENTS.md와 비교·병합                              |
+| skills/<이름>/ 전체                             | 사용자 홈 .agents/skills/<이름>/ 또는 해당 repo .agents/skills/<이름>/ |
+| personal/config.example.toml                    | 사용 중인 Codex home config.toml에 필요한 항목만 병합                  |
+| personal/config.shared.example.toml·references/ | 설정·Linux 지침의 비교용 자료; 현재 설정과 출처 대조                   |
+
+사용 안내와 재사용 자료는 이 폴더에서 완결됩니다. 공통 지침의 본문을 personal에 중복 보관하지 않습니다.
 
 ## 2. 필요한 실행 도구
 

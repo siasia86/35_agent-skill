@@ -9,7 +9,8 @@
 ├── AGENTS.md                         # 저장소 지침·보존·게시 순서
 ├── codex_windows.md                  # 구조 설명·장단점·설계 보완
 ├── codex_windows/                    # Windows 복사·사용 구성
-│   ├── personal/AGENTS.md            # 선택적 공통 지침 작성 원본
+│   ├── AGENTS.md                     # Windows 개인 공통 지침 배포 원본
+│   ├── personal/                     # 설정 예시·비교 자료·홈 적용 안내
 │   └── skills/<이름>/SKILL.md        # 독립 개인 skill 19개
 ├── codex_linux/                      # Linux 보존 구성
 ├── kiro/                             # Kiro 보존 원본
@@ -18,6 +19,9 @@
 └── agent-workflows/                  # 개발·적용·검토 기록
     ├── README.md                     # 관리 개요·사용 안내
     ├── INDEX.md                      # 이 탐색 문서
+    ├── history/                      # 35 완료 관리 기록
+    │   └── 2026-10-03/
+    │       └── T-WIN-002-distribution-root.md
     └── codex/
         ├── HANDOFF.md                # 세션 재개 시 필요한 인계
         └── windows/
@@ -32,18 +36,20 @@
 
 ## 2. 작업별 다음 문서
 
-| 작업                  | 먼저 읽을 기준                                                                                                    | 조건                                                             |
-|-----------------------|-------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------|
-| 현재 repo 규칙·게시   | [AGENTS](../AGENTS.md)                                                                                            | 해당 저장소 작업; 기존 승인·사용자 편집 확인                     |
-| Windows 복사·사용     | [Windows README](../codex_windows/README.md)                                                                      | 실제 설치/적용 요청 범위가 있을 때                               |
-| 개인 공통 규칙 작성   | [personal AGENTS](../codex_windows/personal/AGENTS.md), [work-rules](../codex_windows/skills/work-rules/SKILL.md) | 선택적 작성 원본과 실제 홈을 구분                                |
-| 필요한 역할 선택      | [using-skills](../codex_windows/skills/using-skills/SKILL.md)                                                     | 역할 기준 원본; 개별 본문은 선택한 것만                          |
-| repo 문서·결과물 구조 | [Workflow 참조](../codex_windows/skills/work-rules/references/repository-workflow.md)                             | INDEX/TODO/TASK·경로 예외·이력 설계                              |
-| Windows 변경·재개     | [Windows TODO](codex/windows/TODO.md), [PLAN](codex/windows/PLAN.md)                                              | 관련 항목과 실제 Git·파일 상태를 대조                            |
-| 반복 문제·제약        | [Windows ISSUE](codex/windows/ISSUE.md)                                                                           | 해당 문제와 필요한 재개 조건만                                   |
-| 공식 system 기준·검증 | [공식 skill 재검토](codex/windows/SYSTEM_SKILL_REVIEW_2026-10-03.md)                                              | 고정 source·설치/발견/정적/행동 범위를 구분                      |
-| 세션 인계             | [HANDOFF](codex/HANDOFF.md)                                                                                       | 재개 요청에 필요한 범위; 과거 승인을 새 권한으로 재사용하지 않음 |
-| Linux 비교            | [Linux README](../codex_linux/README.md)                                                                          | 지정한 Linux 작업·원문 대조에 한정                               |
+| 작업                  | 먼저 읽을 기준                                                                                       | 조건                                                             |
+|-----------------------|------------------------------------------------------------------------------------------------------|------------------------------------------------------------------|
+| 현재 repo 규칙·게시   | [AGENTS](../AGENTS.md)                                                                               | 해당 저장소 작업; 기존 승인·사용자 편집 확인                     |
+| Windows 복사·사용     | [Windows README](../codex_windows/README.md)                                                         | 실제 설치/적용 요청 범위가 있을 때                               |
+| 개인 공통 규칙 작성   | [공통 AGENTS](../codex_windows/AGENTS.md), [work-rules](../codex_windows/skills/work-rules/SKILL.md) | 선택적 작성 원본과 실제 홈을 구분                                |
+| 필요한 역할 선택      | [using-skills](../codex_windows/skills/using-skills/SKILL.md)                                        | 역할 기준 원본; 개별 본문은 선택한 것만                          |
+| repo 문서·결과물 구조 | [Workflow 참조](../codex_windows/skills/work-rules/references/repository-workflow.md)                | INDEX/TODO/TASK·경로 예외·이력 설계                              |
+| Windows 변경·재개     | [Windows TODO](codex/windows/TODO.md), [PLAN](codex/windows/PLAN.md)                                 | 관련 항목과 실제 Git·파일 상태를 대조                            |
+| 반복 문제·제약        | [Windows ISSUE](codex/windows/ISSUE.md)                                                              | 해당 문제와 필요한 재개 조건만                                   |
+| 공식 system 기준·검증 | [공식 skill 재검토](codex/windows/SYSTEM_SKILL_REVIEW_2026-10-03.md)                                 | 고정 source·설치/발견/정적/행동 범위를 구분                      |
+| 세션 인계             | [HANDOFF](codex/HANDOFF.md)                                                                          | 재개 요청에 필요한 범위; 과거 승인을 새 권한으로 재사용하지 않음 |
+| Linux 비교            | [Linux README](../codex_linux/README.md)                                                             | 지정한 Linux 작업·원문 대조에 한정                               |
+
+완료한 배포 원본 배치 교정은 [T-WIN-002 이력](history/2026-10-03/T-WIN-002-distribution-root.md)에서 확인합니다. 이 색인에 완료 상태를 다시 운영하지 않습니다.
 
 ## 3. INDEX가 관리하지 않는 것
 

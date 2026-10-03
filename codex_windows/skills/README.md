@@ -32,7 +32,7 @@
 
 `references/kiro-original.md`는 Kiro 원문, `references/linux-original.md`는 Linux 활성 원문입니다. 동봉 역할의 Linux 원문과 기존 도구는 각각 `references/linux-skills/`, `references/linux-tools/`에 bytes로 보존합니다. 비교용 Python 파일은 실행 도구가 아니며 `scripts/`의 Windows 사본을 사용합니다.
 
-공통 지침·설정은 [personal 안내](../personal/README.md)를 확인합니다. 각 skill의 Windows 절에서 해당 역할의 실행 조건과 제한을 확인합니다.
+공통 지침은 상위 [AGENTS.md](../AGENTS.md), 설정 적용은 [personal 안내](../personal/README.md)를 확인합니다. 각 skill의 Windows 절에서 해당 역할의 실행 조건과 제한을 확인합니다.
 
 ---
 

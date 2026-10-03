@@ -1,6 +1,6 @@
 # Codex Windows 구조와 Workflow 보완안
 
-Windows 개인 Codex의 복사·사용 구성, 저장소 작업 기록, 공통 workflow의 역할과 장단점을 설명합니다. 현재 파일 배치는 `yunli@1ad9888`을 기준으로 확인했으며 이 설명 문서를 루트에 추가합니다.
+Windows 개인 Codex의 복사·사용 구성, 저장소 작업 기록, 공통 workflow의 역할과 장단점을 설명합니다. 현재 안내는 `yunli@a6e3584` 이후의 배포 원본 배치 교정 T-WIN-002를 반영합니다. 완료 근거는 [배치 교정 이력](agent-workflows/history/2026-10-03/T-WIN-002-distribution-root.md)에 연결합니다.
 
 이 문서는 구조 안내입니다. **현재 배치와 보완안을 구분**하며, 작성만으로 폴더 이동·전역 지침 설치·모델 설정·새 문서의 자동 로드가 적용되지는 않습니다. 실제 작업 상태는 해당 TODO, 실행 근거는 해당 검토·검증 기록에서 확인합니다.
 
@@ -14,10 +14,10 @@ Windows 개인 Codex의 복사·사용 구성, 저장소 작업 기록, 공통 w
 ├── CHANGELOG.md                         # 저장소 주요 변경 색인
 ├── codex_windows.md                     # 현재 구조와 보완안 설명: 이 문서
 ├── codex_windows/                       # 복사·사용 공간
+│   ├── AGENTS.md                        # 개인 공통 지침의 단일 배포 원본
 │   ├── README.md                        # 사용 안내
-│   ├── personal/                        # 선택적 공통 지침·설정 예시
+│   ├── personal/                        # 설정 예시·비교 자료·홈 적용 안내
 │   │   ├── README.md
-│   │   ├── AGENTS.md
 │   │   ├── config.example.toml
 │   │   ├── config.shared.example.toml
 │   │   └── references/                  # 보존 자료
@@ -29,6 +29,10 @@ Windows 개인 Codex의 복사·사용 구성, 저장소 작업 기록, 공통 w
 │           └── references/             # 해당 skill이 제공하는 동봉 참조
 └── agent-workflows/                     # 개발·적용·검토 기록
     ├── README.md
+    ├── INDEX.md                         # 35의 구조·조회 조건
+    ├── history/                         # 완료 관리 기록
+    │   └── 2026-10-03/
+    │       └── T-WIN-002-distribution-root.md
     └── codex/
         ├── README.md
         ├── HANDOFF.md                   # 기존 세션 인계
@@ -55,7 +59,7 @@ Windows 개인 Codex의 복사·사용 구성, 저장소 작업 기록, 공통 w
 
 현행 상태·검사·미실행은 [Windows 작업 색인](agent-workflows/codex/windows/README.md), [TODO](agent-workflows/codex/windows/TODO.md), [보고 지침과 helper 보완 기록](agent-workflows/codex/windows/REPORTING_REMEDIATION_2026-10-03.md)에서 확인합니다. 기존 이관 REVIEW와 후속 검토는 입력 시점·범위를 구분합니다.
 
-현행 자료 탐색은 [AI 작업 INDEX](agent-workflows/INDEX.md)를 기준으로 합니다. 위 tree는 기재한 입력 시점의 구조 설명이며 INDEX의 활성 경로·조회 조건과 같은 현황표를 별도 관리하지 않습니다.
+현행 자료 탐색은 [AI 작업 INDEX](agent-workflows/INDEX.md)를 기준으로 합니다. 위 tree는 배포 원본과 관리 공간의 역할을 설명하며 INDEX의 조회 조건·TODO 상태와 같은 현황표를 별도 관리하지 않습니다.
 
 ## 2. Codex가 인식하는 Markdown
 
@@ -85,9 +89,9 @@ DELEGATION 기록은 실제 agent 호출·모델 선택·결과 회수와 구분
 | 각 repo `AGENTS.md` | 해당 repo 규칙·관리 README 하나의 경로·조회/갱신 조건·검증/게시 기준                       |
 | 각 repo 관리 README | 도구·플랫폼별 활성 PLAN/TODO와 관련 ISSUE·검토·완료 이력의 연결                            |
 
-35에서 배포용 지침의 작성 위치는 [personal AGENTS](codex_windows/personal/AGENTS.md)와 [work-rules](codex_windows/skills/work-rules/SKILL.md)입니다. 파일을 준비한 상태와 실제 개인 홈 적용·새 세션의 발견/선택은 구분합니다. 기존 홈 지침·동명 skill을 일괄 교체하지 않습니다.
+35에서 배포용 지침의 작성 위치는 [공통 AGENTS](codex_windows/AGENTS.md)와 [work-rules](codex_windows/skills/work-rules/SKILL.md)입니다. 파일을 준비한 상태와 실제 개인 홈 적용·새 세션의 발견/선택은 구분합니다. 기존 홈 지침·동명 skill을 일괄 교체하지 않습니다.
 
-다음 tree는 **보완안**입니다. 단일 진입점 안내와 선택 문서·history의 생성/이동은 아직 적용하지 않았습니다.
+다음 tree는 관리 역할의 기준입니다. README·INDEX 진입점과 첫 history 기록은 35에 적용했으며 DELEGATION·INTERVIEW는 필요할 때 생성합니다. 기존 과거 자료는 일괄 이동하지 않습니다.
 
 ```text
 35_agent-skill/
@@ -104,14 +108,14 @@ DELEGATION 기록은 실제 agent 호출·모델 선택·결과 회수와 구분
     │   ├── REVIEW.md                    # 실질적 검토가 있을 때
     │   ├── DELEGATION.md                # 복잡한 위임에만 추가: 미생성
     │   └── INTERVIEW.md                 # 설계 질문이 많을 때: 미생성
-    └── history/                         # 완료 상세 기록: 미생성
+    └── history/                         # 완료 상세 기록
         └── YYYY-MM-DD/
             └── T-WIN-001-작업제목.md
 ```
 
 관리 공통 README는 존재하는 자료에 연결하고, 상세 task 상태는 TODO에서 갱신합니다. 플랫폼 README는 하위 자료 색인이며 같은 상태 표를 복제하지 않습니다. 별도 WORKFLOW.md를 추가하기보다 기존 README의 역할을 보완합니다. 다른 repo에서는 기존 관리 경로와 완료 색인을 먼저 재사용합니다.
 
-현재 35의 `DELEGATION.md`·`INTERVIEW.md`·`history/`는 위 관리 루트와 Windows 관리 폴더에 없습니다. 보완안의 폴더 이름을 다른 repo에 강제하거나 보호된 Linux·원문·과거 증거를 자동 이동하지 않습니다.
+현재 35의 DELEGATION·INTERVIEW는 선택 문서이며 새 완료 기록은 agent-workflows/history에서 관리합니다. 보완안의 폴더 이름을 다른 repo에 강제하거나 보호된 Linux·원문·과거 증거를 자동 이동하지 않습니다.
 
 ## 4. 작업 문서의 역할
 
@@ -136,7 +140,7 @@ DELEGATION 기록은 실제 agent 호출·모델 선택·결과 회수와 구분
 2. 설계: 필요한 질문·대안을 INTERVIEW 또는 기존 PLAN에 정리하고 채택한 결정과 실행 항목을 PLAN/TODO에 연결합니다.
 3. 위임: 범위·판정 기준이 정해진 수집은 사용 가능한 Luna에 우선 배정하고, 판단·상충 근거 해석·최종 검증은 총괄 AI가 담당합니다. 작은 호출의 위임 비용과 미지원 상태를 구분합니다. 실제 모델·오류·누락을 확인합니다.
 4. 오류: 해당 ISSUE의 재발 방지·근거를 확인하고 필요한 교정 TODO와 실제 검증 결과를 연결합니다.
-5. 완료: 완료 조건을 확인한 뒤 공개 가능한 상세 관리 내용을 같은 repo의 관리 경로에 먼저 보존합니다. 35의 제안 위치는 `agent-workflows/history/`이며 다른 repo에서는 기존 관리 경로를 재사용합니다. 완료 요약은 CHANGELOG, 평가가 있으면 REVIEW에 남깁니다.
+5. 완료: 완료 조건을 확인한 뒤 공개 가능한 상세 관리 내용을 같은 repo의 관리 경로에 먼저 보존합니다. 35의 완료 기록 위치는 `agent-workflows/history/`이며 다른 repo에서는 기존 관리 경로를 재사용합니다. 완료 요약은 CHANGELOG, 평가가 있으면 REVIEW에 남깁니다.
 6. 정리: history로 들어오는 ID 링크와 history에서 근거 파일로 나가는 상대 링크·앵커를 확인한 뒤 완료 항목을 활성 TODO에서 제거합니다. 미완료 항목은 유지하고 전체 완료한 PLAN은 history로 이관합니다.
 
 ID는 repo 안에서 유일하게 유지하고 재사용하지 않습니다. 여러 도구·플랫폼이 있는 35의 신규 항목은 `P-WIN-001`·`T-WIN-001`·`I-WIN-001`처럼 구분합니다. 기존 ID·보호 기록은 재번호하지 않습니다. history는 날짜·작업 ID·짧은 제목으로 이름을 정하고 같은 ID의 후속 기록은 짧은 commit 또는 순번으로 구분합니다.
@@ -180,7 +184,7 @@ history에는 공개 가능한 상세 관리 기록을, CHANGELOG에는 완료 �
 
 ## 8. 공식 skill 기준의 후속 보완
 
-[system·공식 skill 재검토](agent-workflows/codex/windows/SYSTEM_SKILL_REVIEW_2026-10-03.md)에서 현행 공개 plugin source 전체와 실제 local system·cache를 구분했습니다. 35의 AI 작업 INDEX를 추가하고 work-rules·personal AGENTS에 아래 기준을 반영합니다.
+[system·공식 skill 재검토](agent-workflows/codex/windows/SYSTEM_SKILL_REVIEW_2026-10-03.md)에서 현행 공개 plugin source 전체와 실제 local system·cache를 구분했습니다. 35의 AI 작업 INDEX를 추가하고 work-rules·공통 AGENTS에 아래 기준을 반영합니다.
 
 - README는 개요·진입점, INDEX는 주요 tree·읽기 조건·기준 문서 연결입니다. 실제 router skill의 SKILL.md와 일반 INDEX.md를 구분하며 동명 skill은 plugin·파일 경로로 식별합니다.
 - 기본은 짧은 TODO.md와 큰 작업의 tasks/<ID>/TASK.md입니다. TODO/ 방식은 각 작업 문서가 상태 원본이고 README는 링크 색인만 맡습니다. 두 상태 원본을 함께 운영하지 않습니다.

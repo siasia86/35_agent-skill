@@ -1,10 +1,11 @@
 # Windows 개발 작업 기록
 
-`codex_windows/`는 복사하여 사용할 skill·선택적 공통 설정·사용 안내만 관리합니다. 이 디렉터리는 35 저장소의 Windows 개발 계획·검토·검증용이며 설치 또는 사용 의존성이 아닙니다.
+`codex_windows/`는 Windows 개인 Codex용 루트 AGENTS·skill·필수 자료·설정 예시·사용 안내의 배포 원본입니다. 이 디렉터리는 35 저장소의 Windows 개발 계획·검토·검증용이며 설치 또는 사용 의존성이 아닙니다.
 
 ## 1. 작업 문서
 
 - [PLAN](PLAN.md): 이관과 후속 작업 순서.
+- [T-WIN-002 배포 원본 배치 교정](../../history/2026-10-03/T-WIN-002-distribution-root.md): 루트 공통 지침·관리 역할·현재 검사와 미실행.
 - [공식 skill 재검토와 개인 적용](SYSTEM_SKILL_REVIEW_2026-10-03.md): 전체 공개 source 조사·INDEX/TODO/산출물 예외·현재 검증·설치 범위.
 - [AI 작업 INDEX](../../INDEX.md): 주요 구조와 작업별 기준 문서 연결.
 - [TODO](TODO.md): 완료·미실행·사용자 검증 상태.

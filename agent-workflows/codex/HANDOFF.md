@@ -2,7 +2,9 @@
 
 ## 1. 재개할 작업과 읽기 순서
 
-**2026-10-03 후속 상태:** 공식 source를 재검토하고 INDEX·단일 작업 상태·산출물 경로 예외를 보완했습니다. 사용자가 지정한 work-rules와 개인 AGENTS 공통 요약을 실제 개인 경로에 적용하고 기존 사본을 보존했습니다. 상세 실행·검증·미검증은 [공식 skill 재검토](windows/SYSTEM_SKILL_REVIEW_2026-10-03.md#6-적용검증복구), 후속 상태는 [Windows TODO](windows/TODO.md)를 확인합니다. 게시 SHA는 실제 Git refs와 대조하며 사용자 검증 전 main 반영·추가 개인 적용을 완료로 가정하지 않습니다.
+**2026-10-03 배치 후속:** 개인 공통 지침의 배포 원본을 codex_windows/AGENTS.md로 통일하고 35의 개발·검토·적용 기록과 역할을 명시했습니다. [T-WIN-002 완료 기록](../history/2026-10-03/T-WIN-002-distribution-root.md)과 [Windows TODO](windows/TODO.md)의 사용자 확인 항목에서 재개합니다. 기존 개인 홈과 이전 설치 사본은 유지합니다.
+
+**같은 날 개인 적용 후속 상태:** 공식 source를 재검토하고 INDEX·단일 작업 상태·산출물 경로 예외를 보완했습니다. 사용자가 지정한 work-rules와 개인 AGENTS 공통 요약을 실제 개인 경로에 적용하고 기존 사본을 보존했습니다. 상세 실행·검증·미검증은 [공식 skill 재검토](windows/SYSTEM_SKILL_REVIEW_2026-10-03.md#6-적용검증복구), 후속 상태는 [Windows TODO](windows/TODO.md)를 확인합니다. 게시 SHA는 실제 Git refs와 대조하며 사용자 검증 전 main 반영·추가 개인 적용을 완료로 가정하지 않습니다.
 
 **같은 날 이전 상태:** Windows 전체 이관 `773a150`과 복사용 구성 정리 `47f3328` 이후 work-rules·personal AGENTS의 공통 보고·채팅 요청 구분과 W02–W10을 보완했습니다. 당시 변경·검증은 [보고 지침과 helper 보완](windows/REPORTING_REMEDIATION_2026-10-03.md), 복사용 본문은 [codex_windows](../../codex_windows/README.md)에서 확인합니다. 당시 개인 홈 적용 대기 기록은 위 후속 상태와 구분합니다.
 

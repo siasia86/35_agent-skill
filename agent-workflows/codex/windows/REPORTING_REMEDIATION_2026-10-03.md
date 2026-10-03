@@ -2,12 +2,14 @@
 
 시작 기준은 `yunli@47f3328`입니다. 사용자가 지정한 `codex_windows/personal/AGENTS.md`와 주로 사용하는 work-rules에 공통 보고 지침을 반영하고, [이전 개선 검토](IMPROVEMENT_REVIEW_2026-10-03.md)의 W02–W10을 수정했습니다. Linux·Kiro·이관 당시 결과·개인 홈은 보존합니다.
 
+당시 personal/AGENTS.md 배치는 과거 수행 사실로 보존합니다. 현행 파일은 [배포 원본 AGENTS](../../../codex_windows/AGENTS.md)이며 [T-WIN-002 배치 교정](../../history/2026-10-03/T-WIN-002-distribution-root.md)에서 이동·검증 근거를 확인합니다.
+
 ## 1. 기준 본문과 실제 반영
 
 실행 지침: `codex_windows/`.
 
 - [work-rules](../../../codex_windows/skills/work-rules/SKILL.md#작업-시작과-완료-보고)에 시작 전 대상·수행·예상 결과, 의미 있는 진행 관찰, 완료 후 수행·검증·미실행과 잘된 점·문제·제약을 기록했습니다. 같은 동봉 역할 2곳도 일치시켰습니다.
-- [개인 공통 AGENTS](../../../codex_windows/personal/AGENTS.md#작업-시작과-완료-보고)는 같은 기본값을 짧게 제공하고 work-rules로 연결합니다. 사용자가 지정한 저장소 파일이며 실제 홈 AGENTS를 설치·교체한 상태가 아닙니다.
+- [개인 공통 AGENTS](../../../codex_windows/AGENTS.md#작업-시작과-완료-보고)는 같은 기본값을 짧게 제공하고 work-rules로 연결합니다. 사용자가 지정한 저장소 파일이며 실제 홈 AGENTS를 설치·교체한 상태가 아닙니다.
 - 결과물이 있으면 설명 위에 기준 경로와 파일 링크를 표시합니다. 큰 결과는 표·번호 목록·트리 중 내용에 맞는 형식을 선택하고 짧은 답변에 고정 양식·깊은 중첩을 강제하지 않습니다.
 - 채팅의 `;`는 여러 요청을 구분하는 뜻으로 이해합니다. 각 요청의 진행·검증·미실행을 구분하고 코드·명령어·인용문·경로 안의 기호는 원래 의미를 유지합니다.
 - 중앙 31의 [35 정책](https://github.com/siasia86/31_governances/blob/yunli/profiles/codex/repositories/35_agent-skill.md#3-개인-codex-공통-보고-지침의-구현-기준)은 구현·관리 기준입니다. runtime의 사용을 위해 31 조회·설치나 다른 skill을 필수로 요구하지 않습니다. 중앙 draft·정책 게시와 실제 홈 적용을 구분합니다.

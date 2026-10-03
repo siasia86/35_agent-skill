@@ -71,7 +71,7 @@ W04–W10의 Markdown 도구는 `git-commit-rule`, `md-link-check`, `readme-temp
 - 환경: Windows Python 3.14.8·설치된 Git Bash를 사용했습니다. 원시 stdout·절대 개인 경로·실행 token은 로컬 비공개 TEMP 증거에 보존하고 원격 문서에 복사하지 않습니다.
 - 미실행: helper 결함 수정·전체 기존 79/63 회귀 재실행·실제 개인 홈 설치/config 병합·새 Codex 발견/자동 선택·렌더러 UI 검증·symlink 추가 권한·ACL/ADS/owner/SMB·실제 서비스/원격 인프라·main 반영.
 
-이관 당시 `results.json`·`input_hashes.json`·`behavior_summary.json`은 `773a150`의 과거 결과와 당시 경로를 보존합니다. 포장 변경에 맞춰 과거 해시를 다시 생성하거나 새 helper 검토 결과로 바꾸지 않았습니다. 후속 수정은 [TODO](TODO.md#4-복사용-구성과-개선-검토)를 따릅니다.
+이관 당시 `results.json`·`input_hashes.json`·`behavior_summary.json`은 `773a150`의 과거 결과와 당시 경로를 보존합니다. 포장 변경에 맞춰 과거 해시를 다시 생성하거나 새 helper 검토 결과로 바꾸지 않았습니다. 당시 후속 수정의 완료 항목은 [보존 이력](../../history/2026-10-03/T-WIN-002-distribution-root.md#52-복사용-구성과-개선-검토)으로 이동했습니다. 현재 후속 행동은 [TODO](TODO.md)를 따릅니다.
 
 ## 5. 게시와 복구
 

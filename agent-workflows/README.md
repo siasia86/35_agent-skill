@@ -1,6 +1,6 @@
 # Agent Workflows
 
-AI 도구별 Agent·Skill·Prompt의 최초 적용과 업데이트 절차를 관리합니다. 공통 운영 원칙과 도구별 adapter를 분리하여 Kiro·GPT/Codex·Claude의 서로 다른 실행 구조를 혼합하지 않습니다.
+35 저장소 자체의 Agent·Skill·Prompt 개발·계획·검토·검증·최초 적용·업데이트와 완료 이력을 관리합니다. 공통 운영 원칙과 도구별 adapter를 분리하여 Kiro·GPT/Codex·Claude의 서로 다른 실행 구조를 혼합하지 않습니다.
 
 ## 목차
 
@@ -16,9 +16,10 @@ AI 도구별 Agent·Skill·Prompt의 최초 적용과 업데이트 절차를 관
 
 ## 1. 구조
 
-공통 절차·기존 SE 시험 기록과 환경·사용자·작업공간별 관찰 및 공개 가능한 적용 사본을 보관합니다. Agent·Skill·Prompt의 구현 원본과 사용 안내는 각 도구 디렉토리의 README·docs/에서 관리합니다.
+공통 절차·35의 개발 작업 기록·기존 SE 시험 기록과 환경·사용자·작업공간별 관찰 및 공개 가능한 적용 사본을 보관합니다. 다른 프로젝트의 실제 작업 상태·결과·이력은 그 repo에 둡니다. Agent·Skill·Prompt의 구현 원본과 사용 안내는 각 도구 디렉토리의 README·docs/에서 관리합니다.
 
 - common/: 공통 최초 적용·업데이트 체크리스트.
+- [완료 이력](history/2026-10-03/T-WIN-002-distribution-root.md): 35에서 완료한 배포 원본 유지보수·검토 기록. 기존 역사 자료는 출처 경로를 보존합니다.
 - gpt/: 기존 SE_PILOT.md·SE_PILOT_RESULTS.md 시험 기록. 경로와 과거 기록은 보존합니다.
 - [codex/](codex/README.md): 과거 개인 홈의 skill 관찰 사본·inventory와 환경·작업공간별 후속 기록 기준. `pc01_codex-app-home`은 공개 별칭입니다.
 - ../kiro/docs/: Kiro 사용자 지침.
@@ -66,11 +67,11 @@ rollback 가능 상태 확인
 
 ## 3. 도구별 workflow
 
-| 도구   | 최초 적용                                         | 업데이트                                                  | 현재 상태                     |
-|--------|---------------------------------------------------|-----------------------------------------------------------|-------------------------------|
-| Kiro   | [최초 적용](../kiro/docs/KIRO_SETUP_GUIDE.md)     | [업데이트](../kiro/docs/KIRO_UPDATE_GUIDE.md)             | 선택 적용 전 검토 필요        |
-| Codex  | [수동 복사](../codex_linux/README.md#2-수동-복사) | [비교·백업 후 복사](../codex_linux/README.md#2-수동-복사) | 현재 모음·개인 설치 미실행    |
-| Claude | [최초 적용](../claude/docs/CLAUDE_SETUP_GUIDE.md) | [업데이트](../claude/docs/CLAUDE_UPDATE_GUIDE.md)         | source·allowlist 확정 전 예약 |
+| 도구   | 최초 적용                                         | 업데이트                                                                                                  | 현재 상태                                                                                                       |
+|--------|---------------------------------------------------|-----------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
+| Kiro   | [최초 적용](../kiro/docs/KIRO_SETUP_GUIDE.md)     | [업데이트](../kiro/docs/KIRO_UPDATE_GUIDE.md)                                                             | 선택 적용 전 검토 필요                                                                                          |
+| Codex  | [Windows 복사·적용](../codex_windows/README.md)   | [Windows 비교·병합](../codex_windows/README.md) · [Linux 비교·백업](../codex_linux/README.md#2-수동-복사) | [환경별 관찰](codex/README.md)·[지정 개인 적용](codex/windows/SYSTEM_SKILL_REVIEW_2026-10-03.md#6-적용검증복구) |
+| Claude | [최초 적용](../claude/docs/CLAUDE_SETUP_GUIDE.md) | [업데이트](../claude/docs/CLAUDE_UPDATE_GUIDE.md)                                                         | source·allowlist 확정 전 예약                                                                                   |
 
 새 Codex 개인 스킬은 폴더 전체의 수동 복사를 기본으로 하며 catalog·adapter·installer·30·31을 필수로 요구하지 않습니다. 기존 공통 체크리스트의 manifest·adapter 항목은 해당 구성이 실제 제공될 때만 적용합니다. [1.0.0 실행 기록](codex/REBUILD_1.0.0.md)을 확인합니다.
 

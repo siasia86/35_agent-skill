@@ -4,6 +4,11 @@
 
 ## [Unreleased]
 
+### Windows 배포 원본의 공통 지침과 관리 기록 — 2026-10-03
+
+- 공통 지침을 codex_windows/AGENTS.md 한 곳으로 이동하고 personal은 설정·비교·홈 적용 안내로 정리했습니다. Windows 사용 안내·현재 tree·기존 이력의 파일 링크를 갱신합니다.
+- agent-workflows를 35 자체 개발·검토·적용 기록 공간으로 명시하고 [T-WIN-002 완료 이력](agent-workflows/history/2026-10-03/T-WIN-002-distribution-root.md)에 검증·복구·미실행을 보존합니다. 다른 repo·실제 개인 홈은 기존 상태를 유지합니다.
+
 ### 공식 Codex skill 기준 Workflow 보완과 개인 적용 — 2026-10-03
 
 - 현행 공개 plugin source의 SKILL 문서 536개와 이전 skill source·실제 system/cache를 구분하고 [정적 검토·현재 적용 범위](agent-workflows/codex/windows/SYSTEM_SKILL_REVIEW_2026-10-03.md)에 기록했습니다.

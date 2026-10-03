@@ -19,13 +19,15 @@
 - `kiro/`: 실제 Kiro 개인 스킬·prompt·스타일의 보존 원본.
 - `gpt/`: 이전 GPT/Codex 이식의 보존 원본.
 - [codex_linux/](codex_linux/README.md): 폴더 단위로 단독 복사하는 Codex 개인 스킬 19개, 선택적 개인 지침 예시와 검증 기록.
-- [codex_windows/](codex_windows/README.md): Windows에서 복사해 사용하는 개인 skill 19개·동봉 자료·필요 도구·선택적 공통 지침/설정 예시·사용 안내.
+- [codex_windows/](codex_windows/README.md): 루트 [공통 AGENTS](codex_windows/AGENTS.md), Windows 개인 skill 19개·동봉 자료·필요 도구·설정 예시·사용 안내의 배포 원본.
 - [105_backup/codex](105_backup/codex/README.md): 폐기한 개발본·payload·catalog·설치기·governance·검증 이력. 새 설치 원본으로 사용하지 않습니다.
-- [agent-workflows](agent-workflows/README.md): 공통 적용 절차, 환경·사용자·작업공간별 관찰과 검증 기록 및 과거 설치 사본.
+- [agent-workflows](agent-workflows/README.md): 35 자체 agent·skill·prompt의 개발·검토·적용 절차, 관찰·검증·완료 이력과 과거 사본.
 - `claude/`: 기존 예약 영역.
 - [_reference](_reference/INDEX.md): 기존 참고 자료.
 
 이동 전 루트 안내는 [보존 README](105_backup/codex/REPOSITORY_README.before-1.0.0.md)에 남겼습니다. 기존 30·31 연동은 과거 중앙 관리 개발 이력이며 새 개인 스킬의 필수 의존성이 아닙니다. 개인 skill을 사용하기 위해 다른 저장소나 개인 홈의 변경을 자동 요구하지 않습니다.
+
+다른 프로젝트의 작업 상태·결정·결과·이력은 각각 해당 repo에서 관리합니다. 35의 agent-workflows는 이 배포 원본을 유지보수하는 관리 공간입니다.
 
 `codex_windows/`에는 복사·사용에 필요한 파일만 둡니다. `PLAN.md`·`TODO.md`·`ISSUE.md`·`REVIEW.md`, 개발 검사기·출처 manifest·검증 결과는 [Windows 작업 기록](agent-workflows/codex/windows/README.md)에서 관리합니다. 같은 관리 문서가 복사 영역에 다시 들어오지 않도록 배치 기준을 확인하며, 재발 원인·조치는 [ISSUE W01](agent-workflows/codex/windows/ISSUE.md#4-복사용-영역과-개발-기록-혼입-w01)에 기록합니다. skill의 실행 도구와 필요한 참고 자료는 각 skill 폴더에 유지합니다.
 
