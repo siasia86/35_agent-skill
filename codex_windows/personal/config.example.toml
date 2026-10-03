@@ -1,0 +1,9 @@
+# Windows 이관 예시. 개인 config를 덮어쓰지 말고 필요한 항목만 병합합니다.
+# 공통 3개 값의 출처: 저장소 .codex/config.toml (값 변경 없음).
+approval_policy = "on-request"
+approvals_reviewer = "auto_review"
+sandbox_mode = "workspace-write"
+
+# Windows 네이티브 sandbox 예시. 관리자/관리 정책의 허용 여부를 실제 확인합니다.
+[windows]
+sandbox = "elevated"

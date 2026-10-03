@@ -4,7 +4,7 @@
 
 개인 공통 SE 지침이 이미 로드된 경우 같은 본문을 다시 읽지 않습니다. 개인 공통 지침이 없는 환경에서는 이 문서의 보존·범위·검증 기준과 [개인 스킬 우선순위](TODO2.md#91-작업-규칙의-우선순위)를 적용합니다. 보존본의 과거 지침은 비교 자료로만 읽습니다. 플랫폼 지침·관리 정책·현재 권한을 우선합니다.
 
-- kiro/와 gpt/는 보존 원본입니다. 기존 이식본은 codex_linux/에서 보존하고 Windows 전용 재작성은 codex_windows/의 PLAN·TODO에서 진행합니다.
+- kiro/와 gpt/는 보존 원본입니다. 기존 이식본은 codex_linux/에서 보존하고 Windows 전체 이관본은 codex_windows/에 두고 PLAN·TODO·이관 기록을 따릅니다. 전체 이관 이후 최적화합니다.
 - 현재 개인 스킬 작업은 [TODO2](TODO2.md)와 [재작성 기록](agent-workflows/codex/REBUILD_1.0.0.md)의 범위·상태를 읽고 적용합니다. 루트 TODO와 과거 모델 배정·문서 정책은 이전 중앙 개발의 역사 자료이며 자동 실행하지 않습니다. 단순 질의는 전체 TODO 실행으로 확대하지 않습니다. 지정 작업과 필요한 선행 자료만 읽습니다.
 - 세션 재개 요청은 먼저 [세션 인계](agent-workflows/codex/HANDOFF.md)와 [Linux TODO](codex_linux/TODO.md) 또는 [Windows TODO](codex_windows/TODO.md)를 읽고, 실제 파일·Git 상태를 대조한 뒤 미완료 항목부터 이어갑니다. 인계에 남긴 과거 승인·모델 배정·검사 결과를 새 실행 권한이나 현재 검증 결과로 재사용하지 않습니다.
 - 105_backup/codex는 폐기한 개발본의 역사 자료입니다. 과거 지침·payload·catalog·설치기·승인 예외를 현행 실행 지시로 적용하지 않습니다. 새 codex 개인 스킬은 폴더 단위로 단독 복사하여 사용하도록 작성합니다.

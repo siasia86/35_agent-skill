@@ -1,0 +1,1259 @@
+{
+  "scope": "final Windows files, excluding results.json and this self-referential index",
+  "files": [
+    {
+      "path": "codex_windows/ISSUE.md",
+      "sha256": "545fd6ea58331947445effdf0b3fda2e384f90e80f6405d9550911799d733818"
+    },
+    {
+      "path": "codex_windows/personal/AGENTS.md",
+      "sha256": "d678b22768385da1f55d12674b89dbe995d16c877d0c231038c1ce53a38c7da9"
+    },
+    {
+      "path": "codex_windows/personal/config.example.toml",
+      "sha256": "f0efe858e5568e8aedea2da6690c4bb32da646db13a1bc203d941f573d04bfca"
+    },
+    {
+      "path": "codex_windows/personal/config.shared.example.toml",
+      "sha256": "7cefef81dd38fd70f8e326139ac2bd791e9a148d251536edf44dee992dad5ebe"
+    },
+    {
+      "path": "codex_windows/personal/README.md",
+      "sha256": "aa61d313257a58905bf2af014b12b2d77305ec6a9515453719b3d8f90fbbcdc8"
+    },
+    {
+      "path": "codex_windows/personal/references/linux-AGENTS.md",
+      "sha256": "4185bb6b51548530cc76149a08e11960a38f7ccfaa341af82e8824c7c1ce6125"
+    },
+    {
+      "path": "codex_windows/PLAN.md",
+      "sha256": "9f56f8c458c7c8cb23b3c02f0b7150115dc1fc98db6bb1ac4d2b078e612a22f8"
+    },
+    {
+      "path": "codex_windows/README.md",
+      "sha256": "4be5a0ab14987e55fed97ffff022cc663cbbeb447823ba63fc6c95853aeb19a8"
+    },
+    {
+      "path": "codex_windows/REVIEW.md",
+      "sha256": "d12d8fffe4b93a803fed253d11cca17cc8162ea5403f6283e547ee6e99f86189"
+    },
+    {
+      "path": "codex_windows/skills/bash-script-template/references/kiro-original.md",
+      "sha256": "5156328e4a35f9765907910f0431f65b71a9a2bd0c86982cc7a7311465fdac2c"
+    },
+    {
+      "path": "codex_windows/skills/bash-script-template/references/linux-original.md",
+      "sha256": "bbd6fb8c0fb56f682d01e293ce596c4bed8c9681def00d45e0cf55116f479bb6"
+    },
+    {
+      "path": "codex_windows/skills/bash-script-template/scripts/script_template.sh",
+      "sha256": "e5b539309fdcfdf3330291f025bea9e7ad511095e43bd8bfe45d402e314293e6"
+    },
+    {
+      "path": "codex_windows/skills/bash-script-template/SKILL.md",
+      "sha256": "a8433d66f5794f99a3ef9ae235af0bea462ab8b3d3ff102d75ebeb8f7d211ea9"
+    },
+    {
+      "path": "codex_windows/skills/code-review/references/kiro-original.md",
+      "sha256": "4517d03039faec289e326ca452de1f62e8434d7c2bb9dec7c03bb05ac99b47d6"
+    },
+    {
+      "path": "codex_windows/skills/code-review/references/linux-original.md",
+      "sha256": "8f89352bf924360a11ef6b7b207e836c532d447b7185b23e42576e1263b40303"
+    },
+    {
+      "path": "codex_windows/skills/code-review/SKILL.md",
+      "sha256": "169bebbc6f96499be6e0e773472825aa0239366f879510797d14da5c12367920"
+    },
+    {
+      "path": "codex_windows/skills/debugging-and-recovery/references/kiro-original.md",
+      "sha256": "10140924f539da68922ce66acd54d6d30e596059f377bdeeeecbd8e26400b11e"
+    },
+    {
+      "path": "codex_windows/skills/debugging-and-recovery/references/linux-original.md",
+      "sha256": "1e54c6076119c318eded71e707c626ced008324e492e7c3a3e350fe13c0a4ee3"
+    },
+    {
+      "path": "codex_windows/skills/debugging-and-recovery/references/linux-skills/incremental-change.md",
+      "sha256": "319f704c9b1186ca0b7135ac549d065d8149ab928d6e199d61dbf8b98b2908d3"
+    },
+    {
+      "path": "codex_windows/skills/debugging-and-recovery/references/originals/incremental-change.md",
+      "sha256": "73abe0ab80accaae28ff8a628e16412255867aaacf063d2ee10bddc34b661d86"
+    },
+    {
+      "path": "codex_windows/skills/debugging-and-recovery/references/skills/incremental-change.md",
+      "sha256": "e7b85345c644c6973708106d660459e76b4db472dad1cda4e0becf1bcbadbed2"
+    },
+    {
+      "path": "codex_windows/skills/debugging-and-recovery/SKILL.md",
+      "sha256": "20b673a98155c7b863f866ea60c817e93a907a2bbf5fe2e8b39435168e50c752"
+    },
+    {
+      "path": "codex_windows/skills/doubt-driven-infra/references/kiro-original.md",
+      "sha256": "f56cbf7786e794ee886bb5d7a86abaa568e0bd4db194eef275f0c62bf65b622c"
+    },
+    {
+      "path": "codex_windows/skills/doubt-driven-infra/references/linux-original.md",
+      "sha256": "82f65a71cb5e97a70ee7d5ad45996a9ffe0b62d7e893b3475d610c618554b5e2"
+    },
+    {
+      "path": "codex_windows/skills/doubt-driven-infra/SKILL.md",
+      "sha256": "b1aa6b05679aaa5e660e3d08d88cd634d388ac2ec0f9ac14b46250de95323bb9"
+    },
+    {
+      "path": "codex_windows/skills/git-commit-rule/references/kiro-original.md",
+      "sha256": "9fecb39349ea2536bcb781cd6c551541dc6839cad32e454bd3d037d2078437c5"
+    },
+    {
+      "path": "codex_windows/skills/git-commit-rule/references/linux-original.md",
+      "sha256": "7c98d1c614e26bb44715708ad5f2ac0af598da054292f273c234490661501717"
+    },
+    {
+      "path": "codex_windows/skills/git-commit-rule/references/linux-skills/md-link-check.md",
+      "sha256": "b42e938b6c6e004e4625de0f403323e0fc2249a7074c253ca0084316e48c7085"
+    },
+    {
+      "path": "codex_windows/skills/git-commit-rule/references/linux-skills/readme-template.md",
+      "sha256": "f384b1571a4b8f35c642e5984354f0c2721ecf612b66d3ba09bddf39dc58e850"
+    },
+    {
+      "path": "codex_windows/skills/git-commit-rule/references/linux-tools/md-heading-check.py",
+      "sha256": "53015d827dc7576dd4221c7accf7398a3be0e97d596b0b0b2951164397455df7"
+    },
+    {
+      "path": "codex_windows/skills/git-commit-rule/references/linux-tools/md-link-check.py",
+      "sha256": "9f6d5a2d5c83f160d73623ef881e62fec8adb876a4ef3696d2666866fdef13f7"
+    },
+    {
+      "path": "codex_windows/skills/git-commit-rule/references/linux-tools/md-style-check.py",
+      "sha256": "21d70e4cc4e4e272cbe64fdf6957dd10592eb26267a96c01d503c8a519c5ba10"
+    },
+    {
+      "path": "codex_windows/skills/git-commit-rule/references/originals/md-link-check.md",
+      "sha256": "67bc59e6ca5432cd17ce0d13077cbaeaa51cc00c9c5764c8565323869d85aa05"
+    },
+    {
+      "path": "codex_windows/skills/git-commit-rule/references/originals/readme-template.md",
+      "sha256": "754dd7ea3b7be8e968802990ac8e63a2239285567d5c6c0ff45d935e8abc5a9e"
+    },
+    {
+      "path": "codex_windows/skills/git-commit-rule/references/skills/md-link-check.md",
+      "sha256": "88d5a9c5919b4cf1352a5ddb61b48c6dcb451b17049a7ed35ab0d839735528ae"
+    },
+    {
+      "path": "codex_windows/skills/git-commit-rule/references/skills/readme-template.md",
+      "sha256": "027a6cbab33fe8303db1f699992b0a68b89c93fa5d102d465ed761945e090743"
+    },
+    {
+      "path": "codex_windows/skills/git-commit-rule/references/STYLE.md",
+      "sha256": "f2797a30aaf805f9ab3cf157fff2e7229ad99dfe5cc6785b01b734090701a46a"
+    },
+    {
+      "path": "codex_windows/skills/git-commit-rule/scripts/md-heading-check.py",
+      "sha256": "4a1af547292edbb49ec24d07f3bac44cb5009c228b65906d4aa50d21edbe813e"
+    },
+    {
+      "path": "codex_windows/skills/git-commit-rule/scripts/md-link-check.py",
+      "sha256": "f2e8e17c887fd73919f1ffa2866650d48e8688e3a78e78b0f65e31749079d2b7"
+    },
+    {
+      "path": "codex_windows/skills/git-commit-rule/scripts/md-style-check.py",
+      "sha256": "cc5e8d5f63890ac36c8ac8d18b96176bab372f82bba5ede0b91b13ff9efba7fc"
+    },
+    {
+      "path": "codex_windows/skills/git-commit-rule/scripts/md_common.py",
+      "sha256": "147e9df5db16c4e0dd244fc90e0baa0c431a6a713bb100b2d62ae4cb66ed452a"
+    },
+    {
+      "path": "codex_windows/skills/git-commit-rule/SKILL.md",
+      "sha256": "c09bc7ccb6655f0d60a9f75b60f25ee0a3a9cfff75c1eece50e36642fb98daf9"
+    },
+    {
+      "path": "codex_windows/skills/incremental-change/references/kiro-original.md",
+      "sha256": "73abe0ab80accaae28ff8a628e16412255867aaacf063d2ee10bddc34b661d86"
+    },
+    {
+      "path": "codex_windows/skills/incremental-change/references/linux-original.md",
+      "sha256": "f9c23007684a81815d277b043d79e4f163983920f219622c8cb6fafe77e2e2ec"
+    },
+    {
+      "path": "codex_windows/skills/incremental-change/references/linux-skills/debugging-and-recovery.md",
+      "sha256": "34a351b91c6726b27ad27f60962252905a7b708b9f71cf1cb034c965e4bea882"
+    },
+    {
+      "path": "codex_windows/skills/incremental-change/references/originals/debugging-and-recovery.md",
+      "sha256": "10140924f539da68922ce66acd54d6d30e596059f377bdeeeecbd8e26400b11e"
+    },
+    {
+      "path": "codex_windows/skills/incremental-change/references/skills/debugging-and-recovery.md",
+      "sha256": "f48952807fda75b54b116f4b15a38614ef7aaa7eb6c09679348f7cfe7cc6b459"
+    },
+    {
+      "path": "codex_windows/skills/incremental-change/SKILL.md",
+      "sha256": "dc5e52b649bd90de878878357dae2737f2539d65bae0c4915de5a19df0721ffa"
+    },
+    {
+      "path": "codex_windows/skills/kiro-lock/references/kiro-original.md",
+      "sha256": "207914bf93b04e9a201297def12cf0a0c512bd4fb10ef20c86e8a5ba57c10553"
+    },
+    {
+      "path": "codex_windows/skills/kiro-lock/references/linux-original.md",
+      "sha256": "057557134a32d1b3deb9bbcfe447f8d858b396762eb5cfb4d366b5176e2fc13c"
+    },
+    {
+      "path": "codex_windows/skills/kiro-lock/references/linux-tools/lock.py",
+      "sha256": "90940c3f7d16cf4fb9f13e9244743d254d522523df0e8ed2b36881ab90bbffe0"
+    },
+    {
+      "path": "codex_windows/skills/kiro-lock/scripts/lock.py",
+      "sha256": "d26db693d6656ca610cc6164a4e9dea41bea7244f173e4d5bf499fa1a33585a4"
+    },
+    {
+      "path": "codex_windows/skills/kiro-lock/SKILL.md",
+      "sha256": "a4e9e38176b5aa662684a220fca9031b71a85e75e3f31346b78001a21f401702"
+    },
+    {
+      "path": "codex_windows/skills/md-link-check/references/kiro-original.md",
+      "sha256": "67bc59e6ca5432cd17ce0d13077cbaeaa51cc00c9c5764c8565323869d85aa05"
+    },
+    {
+      "path": "codex_windows/skills/md-link-check/references/linux-original.md",
+      "sha256": "351f5c44338f52b8ceb4c06d21a9c863c0681136173ccefb4b6fc5cabb20c35c"
+    },
+    {
+      "path": "codex_windows/skills/md-link-check/references/linux-skills/md-link-check.md",
+      "sha256": "b42e938b6c6e004e4625de0f403323e0fc2249a7074c253ca0084316e48c7085"
+    },
+    {
+      "path": "codex_windows/skills/md-link-check/references/linux-skills/readme-template.md",
+      "sha256": "f384b1571a4b8f35c642e5984354f0c2721ecf612b66d3ba09bddf39dc58e850"
+    },
+    {
+      "path": "codex_windows/skills/md-link-check/references/linux-tools/md-heading-check.py",
+      "sha256": "53015d827dc7576dd4221c7accf7398a3be0e97d596b0b0b2951164397455df7"
+    },
+    {
+      "path": "codex_windows/skills/md-link-check/references/linux-tools/md-link-check.py",
+      "sha256": "9f6d5a2d5c83f160d73623ef881e62fec8adb876a4ef3696d2666866fdef13f7"
+    },
+    {
+      "path": "codex_windows/skills/md-link-check/references/linux-tools/md-style-check.py",
+      "sha256": "21d70e4cc4e4e272cbe64fdf6957dd10592eb26267a96c01d503c8a519c5ba10"
+    },
+    {
+      "path": "codex_windows/skills/md-link-check/references/originals/md-link-check.md",
+      "sha256": "67bc59e6ca5432cd17ce0d13077cbaeaa51cc00c9c5764c8565323869d85aa05"
+    },
+    {
+      "path": "codex_windows/skills/md-link-check/references/originals/readme-template.md",
+      "sha256": "754dd7ea3b7be8e968802990ac8e63a2239285567d5c6c0ff45d935e8abc5a9e"
+    },
+    {
+      "path": "codex_windows/skills/md-link-check/references/skills/md-link-check.md",
+      "sha256": "4a353e5a9adff54608708100c05fd2cf2399cefb8a8ba724231e45586c1b230f"
+    },
+    {
+      "path": "codex_windows/skills/md-link-check/references/skills/readme-template.md",
+      "sha256": "20f721abb64031c589238980e64c3b0486a7a4da212d6f4fb98d08f91157ed81"
+    },
+    {
+      "path": "codex_windows/skills/md-link-check/references/STYLE.md",
+      "sha256": "f2797a30aaf805f9ab3cf157fff2e7229ad99dfe5cc6785b01b734090701a46a"
+    },
+    {
+      "path": "codex_windows/skills/md-link-check/scripts/md-heading-check.py",
+      "sha256": "4a1af547292edbb49ec24d07f3bac44cb5009c228b65906d4aa50d21edbe813e"
+    },
+    {
+      "path": "codex_windows/skills/md-link-check/scripts/md-link-check.py",
+      "sha256": "f2e8e17c887fd73919f1ffa2866650d48e8688e3a78e78b0f65e31749079d2b7"
+    },
+    {
+      "path": "codex_windows/skills/md-link-check/scripts/md-style-check.py",
+      "sha256": "cc5e8d5f63890ac36c8ac8d18b96176bab372f82bba5ede0b91b13ff9efba7fc"
+    },
+    {
+      "path": "codex_windows/skills/md-link-check/scripts/md_common.py",
+      "sha256": "147e9df5db16c4e0dd244fc90e0baa0c431a6a713bb100b2d62ae4cb66ed452a"
+    },
+    {
+      "path": "codex_windows/skills/md-link-check/SKILL.md",
+      "sha256": "cf1de3f931bfe113fd9a73a3e3eb6799716c5f3fa382df20620087f0e6bcb9e1"
+    },
+    {
+      "path": "codex_windows/skills/planning-and-breakdown/references/kiro-original.md",
+      "sha256": "11ca00491de7ace22d02b633db071d7c46233e8678b58d3a6ab1ed223694925a"
+    },
+    {
+      "path": "codex_windows/skills/planning-and-breakdown/references/linux-original.md",
+      "sha256": "e48d05e3c44af73e1eeb8a9a4c638f06a77485abdb49ca689a494cbff7706efe"
+    },
+    {
+      "path": "codex_windows/skills/planning-and-breakdown/references/linux-skills/debugging-and-recovery.md",
+      "sha256": "2d9abe01ee69ea435b9ab22f192770cfdba8ae01a28e47bd9cb7745bc8e9d77f"
+    },
+    {
+      "path": "codex_windows/skills/planning-and-breakdown/references/linux-skills/incremental-change.md",
+      "sha256": "130094af74d1304f0e6ab6684c19725cf266c0db9cb29c5bb112531fc4ec36ce"
+    },
+    {
+      "path": "codex_windows/skills/planning-and-breakdown/references/originals/debugging-and-recovery.md",
+      "sha256": "10140924f539da68922ce66acd54d6d30e596059f377bdeeeecbd8e26400b11e"
+    },
+    {
+      "path": "codex_windows/skills/planning-and-breakdown/references/originals/incremental-change.md",
+      "sha256": "73abe0ab80accaae28ff8a628e16412255867aaacf063d2ee10bddc34b661d86"
+    },
+    {
+      "path": "codex_windows/skills/planning-and-breakdown/references/skills/debugging-and-recovery.md",
+      "sha256": "3014fa0488cd5977a548488871bcafe266f939cb861493825bfb85b1a81ce426"
+    },
+    {
+      "path": "codex_windows/skills/planning-and-breakdown/references/skills/incremental-change.md",
+      "sha256": "9541698e38beec8908f863af768d2cf2fa0ff169a241aef5d12ccfdbbd9f75bf"
+    },
+    {
+      "path": "codex_windows/skills/planning-and-breakdown/SKILL.md",
+      "sha256": "32845cf2aca9284e083c8142d68a91e9d7f91410a028ef16731fb713c1ab0593"
+    },
+    {
+      "path": "codex_windows/skills/python-script-template/references/kiro-original.md",
+      "sha256": "8691f514f0ac0530807fd0cffdf38e4ad4fb7e66019629874bb360df04d219d9"
+    },
+    {
+      "path": "codex_windows/skills/python-script-template/references/linux-original.md",
+      "sha256": "17c2b2a8cb87bb20551aa7c6af459a80da6ff8f2818707a6529c6845c55f4817"
+    },
+    {
+      "path": "codex_windows/skills/python-script-template/scripts/script_template.py",
+      "sha256": "875fbbde7b9ccee7d321a33bf67dd25fa96fec31d1f40d19d3d09ffa2f8c64f1"
+    },
+    {
+      "path": "codex_windows/skills/python-script-template/SKILL.md",
+      "sha256": "f13993a00b767c2c7854f3079e61d36dece469e748e4030f8c98e09aa4d85c55"
+    },
+    {
+      "path": "codex_windows/skills/readme-template/references/kiro-original.md",
+      "sha256": "754dd7ea3b7be8e968802990ac8e63a2239285567d5c6c0ff45d935e8abc5a9e"
+    },
+    {
+      "path": "codex_windows/skills/readme-template/references/linux-original.md",
+      "sha256": "7ea648b0edc173152d48478fafb03c27c0790cbaf19a0cffdbc23c8ac80cc10e"
+    },
+    {
+      "path": "codex_windows/skills/readme-template/references/linux-skills/md-link-check.md",
+      "sha256": "b42e938b6c6e004e4625de0f403323e0fc2249a7074c253ca0084316e48c7085"
+    },
+    {
+      "path": "codex_windows/skills/readme-template/references/linux-skills/readme-template.md",
+      "sha256": "f384b1571a4b8f35c642e5984354f0c2721ecf612b66d3ba09bddf39dc58e850"
+    },
+    {
+      "path": "codex_windows/skills/readme-template/references/linux-tools/md-heading-check.py",
+      "sha256": "53015d827dc7576dd4221c7accf7398a3be0e97d596b0b0b2951164397455df7"
+    },
+    {
+      "path": "codex_windows/skills/readme-template/references/linux-tools/md-link-check.py",
+      "sha256": "9f6d5a2d5c83f160d73623ef881e62fec8adb876a4ef3696d2666866fdef13f7"
+    },
+    {
+      "path": "codex_windows/skills/readme-template/references/linux-tools/md-style-check.py",
+      "sha256": "21d70e4cc4e4e272cbe64fdf6957dd10592eb26267a96c01d503c8a519c5ba10"
+    },
+    {
+      "path": "codex_windows/skills/readme-template/references/originals/md-link-check.md",
+      "sha256": "67bc59e6ca5432cd17ce0d13077cbaeaa51cc00c9c5764c8565323869d85aa05"
+    },
+    {
+      "path": "codex_windows/skills/readme-template/references/originals/readme-template.md",
+      "sha256": "754dd7ea3b7be8e968802990ac8e63a2239285567d5c6c0ff45d935e8abc5a9e"
+    },
+    {
+      "path": "codex_windows/skills/readme-template/references/skills/md-link-check.md",
+      "sha256": "5468541994123b491a62960c44a9ab6dd2fc4444bcf830c7b9f3ae2a55c22852"
+    },
+    {
+      "path": "codex_windows/skills/readme-template/references/skills/readme-template.md",
+      "sha256": "027a6cbab33fe8303db1f699992b0a68b89c93fa5d102d465ed761945e090743"
+    },
+    {
+      "path": "codex_windows/skills/readme-template/references/STYLE.md",
+      "sha256": "f2797a30aaf805f9ab3cf157fff2e7229ad99dfe5cc6785b01b734090701a46a"
+    },
+    {
+      "path": "codex_windows/skills/readme-template/scripts/md-heading-check.py",
+      "sha256": "4a1af547292edbb49ec24d07f3bac44cb5009c228b65906d4aa50d21edbe813e"
+    },
+    {
+      "path": "codex_windows/skills/readme-template/scripts/md-link-check.py",
+      "sha256": "f2e8e17c887fd73919f1ffa2866650d48e8688e3a78e78b0f65e31749079d2b7"
+    },
+    {
+      "path": "codex_windows/skills/readme-template/scripts/md-style-check.py",
+      "sha256": "cc5e8d5f63890ac36c8ac8d18b96176bab372f82bba5ede0b91b13ff9efba7fc"
+    },
+    {
+      "path": "codex_windows/skills/readme-template/scripts/md_common.py",
+      "sha256": "147e9df5db16c4e0dd244fc90e0baa0c431a6a713bb100b2d62ae4cb66ed452a"
+    },
+    {
+      "path": "codex_windows/skills/readme-template/SKILL.md",
+      "sha256": "fe9260cbe3caecbaa86e7494a912401ee5567148e7eea400d125f6651adeb6fb"
+    },
+    {
+      "path": "codex_windows/skills/README.md",
+      "sha256": "ab1735b2bcf9bf66340f8a29469e47c506b2fa6b7a3b559b881094526dea7831"
+    },
+    {
+      "path": "codex_windows/skills/repo-governance/references/kiro-original.md",
+      "sha256": "ec70916e7a09db1f82c4c4882292b9cb1d1ed8d72ba7ed27008a366eb9e95e17"
+    },
+    {
+      "path": "codex_windows/skills/repo-governance/references/linux-original.md",
+      "sha256": "7db1c1f32eeb47e3eb11f21be2b6c8189badff560130381c5ca1eb3dec140129"
+    },
+    {
+      "path": "codex_windows/skills/repo-governance/SKILL.md",
+      "sha256": "bab507b8ddc101e5be89f090a50c404f6f79d4ba7d2e5a2627305d8d0c6fae88"
+    },
+    {
+      "path": "codex_windows/skills/security-tools/references/kiro-original.md",
+      "sha256": "d61f66ef4cae5d85b9b80a24167b39340ac5be299e8d602fe380644ac3579ae3"
+    },
+    {
+      "path": "codex_windows/skills/security-tools/references/linux-original.md",
+      "sha256": "477130e71bbf5ef341dcf5f90cd9936844c5fae80e9cf6ddd261f5acca2f7794"
+    },
+    {
+      "path": "codex_windows/skills/security-tools/references/linux-skills/md-link-check.md",
+      "sha256": "b42e938b6c6e004e4625de0f403323e0fc2249a7074c253ca0084316e48c7085"
+    },
+    {
+      "path": "codex_windows/skills/security-tools/references/linux-skills/readme-template.md",
+      "sha256": "f384b1571a4b8f35c642e5984354f0c2721ecf612b66d3ba09bddf39dc58e850"
+    },
+    {
+      "path": "codex_windows/skills/security-tools/references/linux-tools/md-heading-check.py",
+      "sha256": "53015d827dc7576dd4221c7accf7398a3be0e97d596b0b0b2951164397455df7"
+    },
+    {
+      "path": "codex_windows/skills/security-tools/references/linux-tools/md-link-check.py",
+      "sha256": "9f6d5a2d5c83f160d73623ef881e62fec8adb876a4ef3696d2666866fdef13f7"
+    },
+    {
+      "path": "codex_windows/skills/security-tools/references/linux-tools/md-style-check.py",
+      "sha256": "21d70e4cc4e4e272cbe64fdf6957dd10592eb26267a96c01d503c8a519c5ba10"
+    },
+    {
+      "path": "codex_windows/skills/security-tools/references/originals/md-link-check.md",
+      "sha256": "67bc59e6ca5432cd17ce0d13077cbaeaa51cc00c9c5764c8565323869d85aa05"
+    },
+    {
+      "path": "codex_windows/skills/security-tools/references/originals/readme-template.md",
+      "sha256": "754dd7ea3b7be8e968802990ac8e63a2239285567d5c6c0ff45d935e8abc5a9e"
+    },
+    {
+      "path": "codex_windows/skills/security-tools/references/skills/md-link-check.md",
+      "sha256": "e7c241022e79c56c26305c2d97e488d08cd2c55cc22ab0df37db2e31b26f4a1f"
+    },
+    {
+      "path": "codex_windows/skills/security-tools/references/skills/readme-template.md",
+      "sha256": "027a6cbab33fe8303db1f699992b0a68b89c93fa5d102d465ed761945e090743"
+    },
+    {
+      "path": "codex_windows/skills/security-tools/references/STYLE.md",
+      "sha256": "f2797a30aaf805f9ab3cf157fff2e7229ad99dfe5cc6785b01b734090701a46a"
+    },
+    {
+      "path": "codex_windows/skills/security-tools/scripts/md-heading-check.py",
+      "sha256": "4a1af547292edbb49ec24d07f3bac44cb5009c228b65906d4aa50d21edbe813e"
+    },
+    {
+      "path": "codex_windows/skills/security-tools/scripts/md-link-check.py",
+      "sha256": "f2e8e17c887fd73919f1ffa2866650d48e8688e3a78e78b0f65e31749079d2b7"
+    },
+    {
+      "path": "codex_windows/skills/security-tools/scripts/md-style-check.py",
+      "sha256": "cc5e8d5f63890ac36c8ac8d18b96176bab372f82bba5ede0b91b13ff9efba7fc"
+    },
+    {
+      "path": "codex_windows/skills/security-tools/scripts/md_common.py",
+      "sha256": "147e9df5db16c4e0dd244fc90e0baa0c431a6a713bb100b2d62ae4cb66ed452a"
+    },
+    {
+      "path": "codex_windows/skills/security-tools/SKILL.md",
+      "sha256": "63293f0bb9297e64ec32afcb20bcabec135189130818d467e44682953fa35108"
+    },
+    {
+      "path": "codex_windows/skills/shipping-checklist/references/kiro-original.md",
+      "sha256": "f6a291a8f7119b888daabe2491917b380ca5c84fa9dfc83966c4a5e4d899effd"
+    },
+    {
+      "path": "codex_windows/skills/shipping-checklist/references/linux-original.md",
+      "sha256": "995df14376c965f4fce9928d190ceb843ecc9f11940c7593c07bd7982e2b9e22"
+    },
+    {
+      "path": "codex_windows/skills/shipping-checklist/references/linux-skills/code-review.md",
+      "sha256": "1e94645a8ee91ccb09db6274419e44efe97a7b27b38625f5909e8965e8dde572"
+    },
+    {
+      "path": "codex_windows/skills/shipping-checklist/references/linux-skills/debugging-and-recovery.md",
+      "sha256": "2d9abe01ee69ea435b9ab22f192770cfdba8ae01a28e47bd9cb7745bc8e9d77f"
+    },
+    {
+      "path": "codex_windows/skills/shipping-checklist/references/linux-skills/incremental-change.md",
+      "sha256": "130094af74d1304f0e6ab6684c19725cf266c0db9cb29c5bb112531fc4ec36ce"
+    },
+    {
+      "path": "codex_windows/skills/shipping-checklist/references/originals/code-review.md",
+      "sha256": "4517d03039faec289e326ca452de1f62e8434d7c2bb9dec7c03bb05ac99b47d6"
+    },
+    {
+      "path": "codex_windows/skills/shipping-checklist/references/originals/debugging-and-recovery.md",
+      "sha256": "10140924f539da68922ce66acd54d6d30e596059f377bdeeeecbd8e26400b11e"
+    },
+    {
+      "path": "codex_windows/skills/shipping-checklist/references/originals/incremental-change.md",
+      "sha256": "73abe0ab80accaae28ff8a628e16412255867aaacf063d2ee10bddc34b661d86"
+    },
+    {
+      "path": "codex_windows/skills/shipping-checklist/references/skills/code-review.md",
+      "sha256": "3ab30d0c988db14dcb9dfc195d93664762882abb13f22f30962e1c418569734b"
+    },
+    {
+      "path": "codex_windows/skills/shipping-checklist/references/skills/debugging-and-recovery.md",
+      "sha256": "3014fa0488cd5977a548488871bcafe266f939cb861493825bfb85b1a81ce426"
+    },
+    {
+      "path": "codex_windows/skills/shipping-checklist/references/skills/incremental-change.md",
+      "sha256": "9541698e38beec8908f863af768d2cf2fa0ff169a241aef5d12ccfdbbd9f75bf"
+    },
+    {
+      "path": "codex_windows/skills/shipping-checklist/SKILL.md",
+      "sha256": "2d0eda940c98673264483624f8802d7124ce4544f879f8290c9e5ce0114c383f"
+    },
+    {
+      "path": "codex_windows/skills/spec-driven-infra/references/kiro-original.md",
+      "sha256": "e102ac0892303423279dc10afa24fbd7fa939042205776586b5fa8cd4d9419b2"
+    },
+    {
+      "path": "codex_windows/skills/spec-driven-infra/references/linux-original.md",
+      "sha256": "02278ad7bdd4092a27e1d57f21a39fd7049ca1794d04d4727fbca4221cce3016"
+    },
+    {
+      "path": "codex_windows/skills/spec-driven-infra/references/linux-skills/debugging-and-recovery.md",
+      "sha256": "2d9abe01ee69ea435b9ab22f192770cfdba8ae01a28e47bd9cb7745bc8e9d77f"
+    },
+    {
+      "path": "codex_windows/skills/spec-driven-infra/references/linux-skills/incremental-change.md",
+      "sha256": "130094af74d1304f0e6ab6684c19725cf266c0db9cb29c5bb112531fc4ec36ce"
+    },
+    {
+      "path": "codex_windows/skills/spec-driven-infra/references/linux-skills/planning-and-breakdown.md",
+      "sha256": "b28e326aa8c55ad774826dabd870eb9b014c2076ca5ed26410c646e8d07125cf"
+    },
+    {
+      "path": "codex_windows/skills/spec-driven-infra/references/originals/debugging-and-recovery.md",
+      "sha256": "10140924f539da68922ce66acd54d6d30e596059f377bdeeeecbd8e26400b11e"
+    },
+    {
+      "path": "codex_windows/skills/spec-driven-infra/references/originals/incremental-change.md",
+      "sha256": "73abe0ab80accaae28ff8a628e16412255867aaacf063d2ee10bddc34b661d86"
+    },
+    {
+      "path": "codex_windows/skills/spec-driven-infra/references/originals/planning-and-breakdown.md",
+      "sha256": "11ca00491de7ace22d02b633db071d7c46233e8678b58d3a6ab1ed223694925a"
+    },
+    {
+      "path": "codex_windows/skills/spec-driven-infra/references/skills/debugging-and-recovery.md",
+      "sha256": "3014fa0488cd5977a548488871bcafe266f939cb861493825bfb85b1a81ce426"
+    },
+    {
+      "path": "codex_windows/skills/spec-driven-infra/references/skills/incremental-change.md",
+      "sha256": "9541698e38beec8908f863af768d2cf2fa0ff169a241aef5d12ccfdbbd9f75bf"
+    },
+    {
+      "path": "codex_windows/skills/spec-driven-infra/references/skills/planning-and-breakdown.md",
+      "sha256": "c4de74e8cf82c72bc59ab72f4bad9bff945826bfc4c4f677de694a2d27acf83c"
+    },
+    {
+      "path": "codex_windows/skills/spec-driven-infra/SKILL.md",
+      "sha256": "d87a6918f0df992cde9e95e758124ffc61775bae3a794ddf40ead406a61555da"
+    },
+    {
+      "path": "codex_windows/skills/testing-guide/references/kiro-original.md",
+      "sha256": "5bb3a1be05d470a8f58d1459bd6d9a31c85ba00de81ac1e9fb8359c814028fda"
+    },
+    {
+      "path": "codex_windows/skills/testing-guide/references/linux-original.md",
+      "sha256": "0398843913db43fb60d84d7d27ec697b26ac0c5303025f5caac0ccdeeb270a59"
+    },
+    {
+      "path": "codex_windows/skills/testing-guide/references/linux-skills/debugging-and-recovery.md",
+      "sha256": "2d9abe01ee69ea435b9ab22f192770cfdba8ae01a28e47bd9cb7745bc8e9d77f"
+    },
+    {
+      "path": "codex_windows/skills/testing-guide/references/linux-skills/incremental-change.md",
+      "sha256": "130094af74d1304f0e6ab6684c19725cf266c0db9cb29c5bb112531fc4ec36ce"
+    },
+    {
+      "path": "codex_windows/skills/testing-guide/references/originals/debugging-and-recovery.md",
+      "sha256": "10140924f539da68922ce66acd54d6d30e596059f377bdeeeecbd8e26400b11e"
+    },
+    {
+      "path": "codex_windows/skills/testing-guide/references/originals/edge_case_testing.md",
+      "sha256": "ac3cf80fa5cf22f9027f81c4c1edd141a62271810b2f0225038f1fc897998aca"
+    },
+    {
+      "path": "codex_windows/skills/testing-guide/references/originals/incremental-change.md",
+      "sha256": "73abe0ab80accaae28ff8a628e16412255867aaacf063d2ee10bddc34b661d86"
+    },
+    {
+      "path": "codex_windows/skills/testing-guide/references/resources/edge_case_testing.md",
+      "sha256": "57382216fe2524a048f16e8477dd19a92b674983fd163e0e51ad0a1bfbfeab51"
+    },
+    {
+      "path": "codex_windows/skills/testing-guide/references/skills/debugging-and-recovery.md",
+      "sha256": "3014fa0488cd5977a548488871bcafe266f939cb861493825bfb85b1a81ce426"
+    },
+    {
+      "path": "codex_windows/skills/testing-guide/references/skills/incremental-change.md",
+      "sha256": "9541698e38beec8908f863af768d2cf2fa0ff169a241aef5d12ccfdbbd9f75bf"
+    },
+    {
+      "path": "codex_windows/skills/testing-guide/SKILL.md",
+      "sha256": "44393347be47bbc59f4a586464bd40a370a694cffd742609a75307ed23db21f0"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/kiro-original.md",
+      "sha256": "1ded614abc90d43868e43306e3381af04948168f5e419bc9cd004e67daa0be75"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/linux-original.md",
+      "sha256": "cb13e00c8da33fac480b5c14456ae4d1b72d44bb8123b3905f90efea57e7d948"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/linux-skills/bash-script-template.md",
+      "sha256": "c5de513ed36633556cba9c4e6dc700140d5daf97cdd8c1439425c62aa06ef47d"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/linux-skills/code-review.md",
+      "sha256": "1e94645a8ee91ccb09db6274419e44efe97a7b27b38625f5909e8965e8dde572"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/linux-skills/debugging-and-recovery.md",
+      "sha256": "2d9abe01ee69ea435b9ab22f192770cfdba8ae01a28e47bd9cb7745bc8e9d77f"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/linux-skills/doubt-driven-infra.md",
+      "sha256": "a734a58d8bab6a465d287d06f62d400bddea0f2c5a6a0dfea6e7c12aadad3894"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/linux-skills/git-commit-rule.md",
+      "sha256": "df8055de8399195e6f93d6cd68dbb86bb4dab27a25ecc00bb45bc00f8c1bb438"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/linux-skills/incremental-change.md",
+      "sha256": "130094af74d1304f0e6ab6684c19725cf266c0db9cb29c5bb112531fc4ec36ce"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/linux-skills/kiro-lock.md",
+      "sha256": "3451b83e3c0d23e0833e0f6e26b613713c984091440ccafb5c66a2b52f0b6c90"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/linux-skills/md-link-check.md",
+      "sha256": "b42e938b6c6e004e4625de0f403323e0fc2249a7074c253ca0084316e48c7085"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/linux-skills/planning-and-breakdown.md",
+      "sha256": "b28e326aa8c55ad774826dabd870eb9b014c2076ca5ed26410c646e8d07125cf"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/linux-skills/python-script-template.md",
+      "sha256": "2c65b38929f713cbd026c481ae67bebdd46fdd3ffdf8d6d2d2c491bea2af06a5"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/linux-skills/readme-template.md",
+      "sha256": "f384b1571a4b8f35c642e5984354f0c2721ecf612b66d3ba09bddf39dc58e850"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/linux-skills/repo-governance.md",
+      "sha256": "7397fba9ff4e14817d627859a71693811b41f2fbf3ff8e20aba507dd666bdc9c"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/linux-skills/security-tools.md",
+      "sha256": "5fb93cf6d24be189235f8853bca092766837d428089afb58eb51db91a858a890"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/linux-skills/shipping-checklist.md",
+      "sha256": "62a2c38a42bb3738857d9f45b429accb4c09efb4d74a5a5948b1d102951d4aa5"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/linux-skills/spec-driven-infra.md",
+      "sha256": "2c8006325c5194aa013470926f59d98574b6f7eb815f06624273593d88a40949"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/linux-skills/testing-guide.md",
+      "sha256": "de2e41db626c7732c61cd005c797308642fa4d8412ba1cb1f63babccf4d64e3f"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/linux-skills/work-rules.md",
+      "sha256": "3220baa55a8b7c0d6447209d27e3d7cc148c05b58b5b7415ec2d63e19621423c"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/linux-skills/zircon-readme-policy.md",
+      "sha256": "a15f285be2fde845a0db8a08106d728a3a740c8a9eb12010461c3ead8ff0c9a5"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/linux-tools/lock.py",
+      "sha256": "90940c3f7d16cf4fb9f13e9244743d254d522523df0e8ed2b36881ab90bbffe0"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/linux-tools/md-heading-check.py",
+      "sha256": "53015d827dc7576dd4221c7accf7398a3be0e97d596b0b0b2951164397455df7"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/linux-tools/md-link-check.py",
+      "sha256": "9f6d5a2d5c83f160d73623ef881e62fec8adb876a4ef3696d2666866fdef13f7"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/linux-tools/md-style-check.py",
+      "sha256": "21d70e4cc4e4e272cbe64fdf6957dd10592eb26267a96c01d503c8a519c5ba10"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/originals/bash-script-template.md",
+      "sha256": "5156328e4a35f9765907910f0431f65b71a9a2bd0c86982cc7a7311465fdac2c"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/originals/code-review.md",
+      "sha256": "4517d03039faec289e326ca452de1f62e8434d7c2bb9dec7c03bb05ac99b47d6"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/originals/debugging-and-recovery.md",
+      "sha256": "10140924f539da68922ce66acd54d6d30e596059f377bdeeeecbd8e26400b11e"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/originals/doubt-driven-infra.md",
+      "sha256": "f56cbf7786e794ee886bb5d7a86abaa568e0bd4db194eef275f0c62bf65b622c"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/originals/edge_case_testing.md",
+      "sha256": "ac3cf80fa5cf22f9027f81c4c1edd141a62271810b2f0225038f1fc897998aca"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/originals/git-commit-rule.md",
+      "sha256": "9fecb39349ea2536bcb781cd6c551541dc6839cad32e454bd3d037d2078437c5"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/originals/incremental-change.md",
+      "sha256": "73abe0ab80accaae28ff8a628e16412255867aaacf063d2ee10bddc34b661d86"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/originals/kiro-lock.md",
+      "sha256": "207914bf93b04e9a201297def12cf0a0c512bd4fb10ef20c86e8a5ba57c10553"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/originals/md-link-check.md",
+      "sha256": "67bc59e6ca5432cd17ce0d13077cbaeaa51cc00c9c5764c8565323869d85aa05"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/originals/planning-and-breakdown.md",
+      "sha256": "11ca00491de7ace22d02b633db071d7c46233e8678b58d3a6ab1ed223694925a"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/originals/python-script-template.md",
+      "sha256": "8691f514f0ac0530807fd0cffdf38e4ad4fb7e66019629874bb360df04d219d9"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/originals/readme-template.md",
+      "sha256": "754dd7ea3b7be8e968802990ac8e63a2239285567d5c6c0ff45d935e8abc5a9e"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/originals/repo-governance.md",
+      "sha256": "ec70916e7a09db1f82c4c4882292b9cb1d1ed8d72ba7ed27008a366eb9e95e17"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/originals/security-tools.md",
+      "sha256": "d61f66ef4cae5d85b9b80a24167b39340ac5be299e8d602fe380644ac3579ae3"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/originals/shipping-checklist.md",
+      "sha256": "f6a291a8f7119b888daabe2491917b380ca5c84fa9dfc83966c4a5e4d899effd"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/originals/spec-driven-infra.md",
+      "sha256": "e102ac0892303423279dc10afa24fbd7fa939042205776586b5fa8cd4d9419b2"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/originals/testing-guide.md",
+      "sha256": "5bb3a1be05d470a8f58d1459bd6d9a31c85ba00de81ac1e9fb8359c814028fda"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/originals/work-rules.md",
+      "sha256": "a940ad7376aecac56a873671a3f77250fb6d4f6deb77598810bdfefd1420ed20"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/originals/zircon-readme-policy.md",
+      "sha256": "ad8f3b767ac27577365701cb6a026041b57080d992a2aea1de16db43510732c7"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/resources/edge_case_testing.md",
+      "sha256": "e9057050c1205cc48ecacb302d56a234aef7d1a2a855db661d9dda364fe1c577"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/skills/bash-script-template.md",
+      "sha256": "76d61426e1dde743ef764792a74ace13ae7ded0fb296a8fa1213a9af0f5463ad"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/skills/code-review.md",
+      "sha256": "3ab30d0c988db14dcb9dfc195d93664762882abb13f22f30962e1c418569734b"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/skills/debugging-and-recovery.md",
+      "sha256": "3014fa0488cd5977a548488871bcafe266f939cb861493825bfb85b1a81ce426"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/skills/doubt-driven-infra.md",
+      "sha256": "ad0c92ec5c151619e46df66c222ce2d8f2fe1680944e75299067494875e9a00f"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/skills/git-commit-rule.md",
+      "sha256": "806d561e39427c163312c1b76dc53d5917bdc0076307fadcc9d6bd579597fbf1"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/skills/incremental-change.md",
+      "sha256": "9541698e38beec8908f863af768d2cf2fa0ff169a241aef5d12ccfdbbd9f75bf"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/skills/kiro-lock.md",
+      "sha256": "add747a0a09e3c75dabe4844e6030a127027cab15ffb8962aed0e5745349e84d"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/skills/md-link-check.md",
+      "sha256": "2eb1d9fbc07d8095ca3f7b2291240a936e883e947a63577949f9ed1072b2c1a3"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/skills/planning-and-breakdown.md",
+      "sha256": "c4de74e8cf82c72bc59ab72f4bad9bff945826bfc4c4f677de694a2d27acf83c"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/skills/python-script-template.md",
+      "sha256": "3a51757e35bc351255118e9cf2f38d95cc37d48358c34172ee87a50907f346f3"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/skills/readme-template.md",
+      "sha256": "027a6cbab33fe8303db1f699992b0a68b89c93fa5d102d465ed761945e090743"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/skills/repo-governance.md",
+      "sha256": "c2e3f153d14a25be77dc2955f2b02d332ee5c90f0d3518c283c42030c399a93d"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/skills/security-tools.md",
+      "sha256": "d200d56c1aca501015067a1d3fd11c5bf038beb9f5079204bb268cfb774fa447"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/skills/shipping-checklist.md",
+      "sha256": "e33402f0dfb366063b2774b49ec0e314dd98234972c94fa6690efa0a0bd19800"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/skills/spec-driven-infra.md",
+      "sha256": "0c4db0e852fb1e3896545bfd1849cb556c8f918c16a883e6b25623d62c243d2c"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/skills/testing-guide.md",
+      "sha256": "1cd6191e1e1a05d0d14637b42d74b9aaf299dcc133bd50f55f452cd221ced089"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/skills/work-rules.md",
+      "sha256": "0ef6cd5505528ef4887ab18124b7ae0bd08b15a74093fb8200301f52ade94723"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/skills/zircon-readme-policy.md",
+      "sha256": "be3f75cc18783b75ad741a55b40c1650243b1b8891f79e9817cefecdcb917c30"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/STYLE.md",
+      "sha256": "f2797a30aaf805f9ab3cf157fff2e7229ad99dfe5cc6785b01b734090701a46a"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/scripts/lock.py",
+      "sha256": "d26db693d6656ca610cc6164a4e9dea41bea7244f173e4d5bf499fa1a33585a4"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/scripts/md-heading-check.py",
+      "sha256": "4a1af547292edbb49ec24d07f3bac44cb5009c228b65906d4aa50d21edbe813e"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/scripts/md-link-check.py",
+      "sha256": "f2e8e17c887fd73919f1ffa2866650d48e8688e3a78e78b0f65e31749079d2b7"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/scripts/md-style-check.py",
+      "sha256": "cc5e8d5f63890ac36c8ac8d18b96176bab372f82bba5ede0b91b13ff9efba7fc"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/scripts/md_common.py",
+      "sha256": "147e9df5db16c4e0dd244fc90e0baa0c431a6a713bb100b2d62ae4cb66ed452a"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/scripts/script_template.py",
+      "sha256": "875fbbde7b9ccee7d321a33bf67dd25fa96fec31d1f40d19d3d09ffa2f8c64f1"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/scripts/script_template.sh",
+      "sha256": "e5b539309fdcfdf3330291f025bea9e7ad511095e43bd8bfe45d402e314293e6"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/SKILL.md",
+      "sha256": "2a7b2d90b29ee06b41169c721e7015eff12ec1bf5534df8b70bdb2fa2548bda3"
+    },
+    {
+      "path": "codex_windows/skills/work-rules/references/kiro-original.md",
+      "sha256": "a940ad7376aecac56a873671a3f77250fb6d4f6deb77598810bdfefd1420ed20"
+    },
+    {
+      "path": "codex_windows/skills/work-rules/references/linux-original.md",
+      "sha256": "87e5f78b137d2896b38dd29ddcad55aaf10e730f0f15d384d3c1ea41d4c8ab82"
+    },
+    {
+      "path": "codex_windows/skills/work-rules/references/linux-skills/debugging-and-recovery.md",
+      "sha256": "2d9abe01ee69ea435b9ab22f192770cfdba8ae01a28e47bd9cb7745bc8e9d77f"
+    },
+    {
+      "path": "codex_windows/skills/work-rules/references/linux-skills/incremental-change.md",
+      "sha256": "130094af74d1304f0e6ab6684c19725cf266c0db9cb29c5bb112531fc4ec36ce"
+    },
+    {
+      "path": "codex_windows/skills/work-rules/references/linux-skills/kiro-lock.md",
+      "sha256": "3451b83e3c0d23e0833e0f6e26b613713c984091440ccafb5c66a2b52f0b6c90"
+    },
+    {
+      "path": "codex_windows/skills/work-rules/references/linux-skills/md-link-check.md",
+      "sha256": "b42e938b6c6e004e4625de0f403323e0fc2249a7074c253ca0084316e48c7085"
+    },
+    {
+      "path": "codex_windows/skills/work-rules/references/linux-skills/planning-and-breakdown.md",
+      "sha256": "b28e326aa8c55ad774826dabd870eb9b014c2076ca5ed26410c646e8d07125cf"
+    },
+    {
+      "path": "codex_windows/skills/work-rules/references/linux-skills/readme-template.md",
+      "sha256": "f384b1571a4b8f35c642e5984354f0c2721ecf612b66d3ba09bddf39dc58e850"
+    },
+    {
+      "path": "codex_windows/skills/work-rules/references/linux-skills/spec-driven-infra.md",
+      "sha256": "2c8006325c5194aa013470926f59d98574b6f7eb815f06624273593d88a40949"
+    },
+    {
+      "path": "codex_windows/skills/work-rules/references/linux-tools/lock.py",
+      "sha256": "90940c3f7d16cf4fb9f13e9244743d254d522523df0e8ed2b36881ab90bbffe0"
+    },
+    {
+      "path": "codex_windows/skills/work-rules/references/linux-tools/md-heading-check.py",
+      "sha256": "53015d827dc7576dd4221c7accf7398a3be0e97d596b0b0b2951164397455df7"
+    },
+    {
+      "path": "codex_windows/skills/work-rules/references/linux-tools/md-link-check.py",
+      "sha256": "9f6d5a2d5c83f160d73623ef881e62fec8adb876a4ef3696d2666866fdef13f7"
+    },
+    {
+      "path": "codex_windows/skills/work-rules/references/linux-tools/md-style-check.py",
+      "sha256": "21d70e4cc4e4e272cbe64fdf6957dd10592eb26267a96c01d503c8a519c5ba10"
+    },
+    {
+      "path": "codex_windows/skills/work-rules/references/originals/debugging-and-recovery.md",
+      "sha256": "10140924f539da68922ce66acd54d6d30e596059f377bdeeeecbd8e26400b11e"
+    },
+    {
+      "path": "codex_windows/skills/work-rules/references/originals/incremental-change.md",
+      "sha256": "73abe0ab80accaae28ff8a628e16412255867aaacf063d2ee10bddc34b661d86"
+    },
+    {
+      "path": "codex_windows/skills/work-rules/references/originals/kiro-lock.md",
+      "sha256": "207914bf93b04e9a201297def12cf0a0c512bd4fb10ef20c86e8a5ba57c10553"
+    },
+    {
+      "path": "codex_windows/skills/work-rules/references/originals/md-link-check.md",
+      "sha256": "67bc59e6ca5432cd17ce0d13077cbaeaa51cc00c9c5764c8565323869d85aa05"
+    },
+    {
+      "path": "codex_windows/skills/work-rules/references/originals/planning-and-breakdown.md",
+      "sha256": "11ca00491de7ace22d02b633db071d7c46233e8678b58d3a6ab1ed223694925a"
+    },
+    {
+      "path": "codex_windows/skills/work-rules/references/originals/readme-template.md",
+      "sha256": "754dd7ea3b7be8e968802990ac8e63a2239285567d5c6c0ff45d935e8abc5a9e"
+    },
+    {
+      "path": "codex_windows/skills/work-rules/references/originals/spec-driven-infra.md",
+      "sha256": "e102ac0892303423279dc10afa24fbd7fa939042205776586b5fa8cd4d9419b2"
+    },
+    {
+      "path": "codex_windows/skills/work-rules/references/skills/debugging-and-recovery.md",
+      "sha256": "3014fa0488cd5977a548488871bcafe266f939cb861493825bfb85b1a81ce426"
+    },
+    {
+      "path": "codex_windows/skills/work-rules/references/skills/incremental-change.md",
+      "sha256": "9541698e38beec8908f863af768d2cf2fa0ff169a241aef5d12ccfdbbd9f75bf"
+    },
+    {
+      "path": "codex_windows/skills/work-rules/references/skills/kiro-lock.md",
+      "sha256": "add747a0a09e3c75dabe4844e6030a127027cab15ffb8962aed0e5745349e84d"
+    },
+    {
+      "path": "codex_windows/skills/work-rules/references/skills/md-link-check.md",
+      "sha256": "5ef6950cc4bf2aa755a63e9d450799198ba586623bf3ac1e80c9d80999378e5a"
+    },
+    {
+      "path": "codex_windows/skills/work-rules/references/skills/planning-and-breakdown.md",
+      "sha256": "c4de74e8cf82c72bc59ab72f4bad9bff945826bfc4c4f677de694a2d27acf83c"
+    },
+    {
+      "path": "codex_windows/skills/work-rules/references/skills/readme-template.md",
+      "sha256": "027a6cbab33fe8303db1f699992b0a68b89c93fa5d102d465ed761945e090743"
+    },
+    {
+      "path": "codex_windows/skills/work-rules/references/skills/spec-driven-infra.md",
+      "sha256": "0c4db0e852fb1e3896545bfd1849cb556c8f918c16a883e6b25623d62c243d2c"
+    },
+    {
+      "path": "codex_windows/skills/work-rules/references/STYLE.md",
+      "sha256": "f2797a30aaf805f9ab3cf157fff2e7229ad99dfe5cc6785b01b734090701a46a"
+    },
+    {
+      "path": "codex_windows/skills/work-rules/scripts/lock.py",
+      "sha256": "d26db693d6656ca610cc6164a4e9dea41bea7244f173e4d5bf499fa1a33585a4"
+    },
+    {
+      "path": "codex_windows/skills/work-rules/scripts/md-heading-check.py",
+      "sha256": "4a1af547292edbb49ec24d07f3bac44cb5009c228b65906d4aa50d21edbe813e"
+    },
+    {
+      "path": "codex_windows/skills/work-rules/scripts/md-link-check.py",
+      "sha256": "f2e8e17c887fd73919f1ffa2866650d48e8688e3a78e78b0f65e31749079d2b7"
+    },
+    {
+      "path": "codex_windows/skills/work-rules/scripts/md-style-check.py",
+      "sha256": "cc5e8d5f63890ac36c8ac8d18b96176bab372f82bba5ede0b91b13ff9efba7fc"
+    },
+    {
+      "path": "codex_windows/skills/work-rules/scripts/md_common.py",
+      "sha256": "147e9df5db16c4e0dd244fc90e0baa0c431a6a713bb100b2d62ae4cb66ed452a"
+    },
+    {
+      "path": "codex_windows/skills/work-rules/SKILL.md",
+      "sha256": "b0232bf2c9654257576f07ada14d2c4066153e03b773b9a07905ff4f5cc7ba7c"
+    },
+    {
+      "path": "codex_windows/skills/zircon-readme-policy/references/kiro-original.md",
+      "sha256": "ad8f3b767ac27577365701cb6a026041b57080d992a2aea1de16db43510732c7"
+    },
+    {
+      "path": "codex_windows/skills/zircon-readme-policy/references/linux-original.md",
+      "sha256": "6b8a4ef7d48b587690e85d0b0b49ec26fc26feb6e22d825676ab514b38da0eee"
+    },
+    {
+      "path": "codex_windows/skills/zircon-readme-policy/references/linux-skills/debugging-and-recovery.md",
+      "sha256": "2d9abe01ee69ea435b9ab22f192770cfdba8ae01a28e47bd9cb7745bc8e9d77f"
+    },
+    {
+      "path": "codex_windows/skills/zircon-readme-policy/references/linux-skills/git-commit-rule.md",
+      "sha256": "df8055de8399195e6f93d6cd68dbb86bb4dab27a25ecc00bb45bc00f8c1bb438"
+    },
+    {
+      "path": "codex_windows/skills/zircon-readme-policy/references/linux-skills/incremental-change.md",
+      "sha256": "130094af74d1304f0e6ab6684c19725cf266c0db9cb29c5bb112531fc4ec36ce"
+    },
+    {
+      "path": "codex_windows/skills/zircon-readme-policy/references/linux-skills/kiro-lock.md",
+      "sha256": "3451b83e3c0d23e0833e0f6e26b613713c984091440ccafb5c66a2b52f0b6c90"
+    },
+    {
+      "path": "codex_windows/skills/zircon-readme-policy/references/linux-skills/md-link-check.md",
+      "sha256": "b42e938b6c6e004e4625de0f403323e0fc2249a7074c253ca0084316e48c7085"
+    },
+    {
+      "path": "codex_windows/skills/zircon-readme-policy/references/linux-skills/planning-and-breakdown.md",
+      "sha256": "b28e326aa8c55ad774826dabd870eb9b014c2076ca5ed26410c646e8d07125cf"
+    },
+    {
+      "path": "codex_windows/skills/zircon-readme-policy/references/linux-skills/readme-template.md",
+      "sha256": "f384b1571a4b8f35c642e5984354f0c2721ecf612b66d3ba09bddf39dc58e850"
+    },
+    {
+      "path": "codex_windows/skills/zircon-readme-policy/references/linux-skills/spec-driven-infra.md",
+      "sha256": "2c8006325c5194aa013470926f59d98574b6f7eb815f06624273593d88a40949"
+    },
+    {
+      "path": "codex_windows/skills/zircon-readme-policy/references/linux-skills/work-rules.md",
+      "sha256": "3220baa55a8b7c0d6447209d27e3d7cc148c05b58b5b7415ec2d63e19621423c"
+    },
+    {
+      "path": "codex_windows/skills/zircon-readme-policy/references/linux-tools/lock.py",
+      "sha256": "90940c3f7d16cf4fb9f13e9244743d254d522523df0e8ed2b36881ab90bbffe0"
+    },
+    {
+      "path": "codex_windows/skills/zircon-readme-policy/references/linux-tools/md-heading-check.py",
+      "sha256": "53015d827dc7576dd4221c7accf7398a3be0e97d596b0b0b2951164397455df7"
+    },
+    {
+      "path": "codex_windows/skills/zircon-readme-policy/references/linux-tools/md-link-check.py",
+      "sha256": "9f6d5a2d5c83f160d73623ef881e62fec8adb876a4ef3696d2666866fdef13f7"
+    },
+    {
+      "path": "codex_windows/skills/zircon-readme-policy/references/linux-tools/md-style-check.py",
+      "sha256": "21d70e4cc4e4e272cbe64fdf6957dd10592eb26267a96c01d503c8a519c5ba10"
+    },
+    {
+      "path": "codex_windows/skills/zircon-readme-policy/references/originals/debugging-and-recovery.md",
+      "sha256": "10140924f539da68922ce66acd54d6d30e596059f377bdeeeecbd8e26400b11e"
+    },
+    {
+      "path": "codex_windows/skills/zircon-readme-policy/references/originals/git-commit-rule.md",
+      "sha256": "9fecb39349ea2536bcb781cd6c551541dc6839cad32e454bd3d037d2078437c5"
+    },
+    {
+      "path": "codex_windows/skills/zircon-readme-policy/references/originals/incremental-change.md",
+      "sha256": "73abe0ab80accaae28ff8a628e16412255867aaacf063d2ee10bddc34b661d86"
+    },
+    {
+      "path": "codex_windows/skills/zircon-readme-policy/references/originals/kiro-lock.md",
+      "sha256": "207914bf93b04e9a201297def12cf0a0c512bd4fb10ef20c86e8a5ba57c10553"
+    },
+    {
+      "path": "codex_windows/skills/zircon-readme-policy/references/originals/md-link-check.md",
+      "sha256": "67bc59e6ca5432cd17ce0d13077cbaeaa51cc00c9c5764c8565323869d85aa05"
+    },
+    {
+      "path": "codex_windows/skills/zircon-readme-policy/references/originals/planning-and-breakdown.md",
+      "sha256": "11ca00491de7ace22d02b633db071d7c46233e8678b58d3a6ab1ed223694925a"
+    },
+    {
+      "path": "codex_windows/skills/zircon-readme-policy/references/originals/readme-template.md",
+      "sha256": "754dd7ea3b7be8e968802990ac8e63a2239285567d5c6c0ff45d935e8abc5a9e"
+    },
+    {
+      "path": "codex_windows/skills/zircon-readme-policy/references/originals/spec-driven-infra.md",
+      "sha256": "e102ac0892303423279dc10afa24fbd7fa939042205776586b5fa8cd4d9419b2"
+    },
+    {
+      "path": "codex_windows/skills/zircon-readme-policy/references/originals/work-rules.md",
+      "sha256": "a940ad7376aecac56a873671a3f77250fb6d4f6deb77598810bdfefd1420ed20"
+    },
+    {
+      "path": "codex_windows/skills/zircon-readme-policy/references/skills/debugging-and-recovery.md",
+      "sha256": "3014fa0488cd5977a548488871bcafe266f939cb861493825bfb85b1a81ce426"
+    },
+    {
+      "path": "codex_windows/skills/zircon-readme-policy/references/skills/git-commit-rule.md",
+      "sha256": "806d561e39427c163312c1b76dc53d5917bdc0076307fadcc9d6bd579597fbf1"
+    },
+    {
+      "path": "codex_windows/skills/zircon-readme-policy/references/skills/incremental-change.md",
+      "sha256": "9541698e38beec8908f863af768d2cf2fa0ff169a241aef5d12ccfdbbd9f75bf"
+    },
+    {
+      "path": "codex_windows/skills/zircon-readme-policy/references/skills/kiro-lock.md",
+      "sha256": "add747a0a09e3c75dabe4844e6030a127027cab15ffb8962aed0e5745349e84d"
+    },
+    {
+      "path": "codex_windows/skills/zircon-readme-policy/references/skills/md-link-check.md",
+      "sha256": "98e6e4c0ca6cd15bcb7cd2322a949f89b92555b8b1e40e2ff9b968b30c242ba1"
+    },
+    {
+      "path": "codex_windows/skills/zircon-readme-policy/references/skills/planning-and-breakdown.md",
+      "sha256": "c4de74e8cf82c72bc59ab72f4bad9bff945826bfc4c4f677de694a2d27acf83c"
+    },
+    {
+      "path": "codex_windows/skills/zircon-readme-policy/references/skills/readme-template.md",
+      "sha256": "027a6cbab33fe8303db1f699992b0a68b89c93fa5d102d465ed761945e090743"
+    },
+    {
+      "path": "codex_windows/skills/zircon-readme-policy/references/skills/spec-driven-infra.md",
+      "sha256": "0c4db0e852fb1e3896545bfd1849cb556c8f918c16a883e6b25623d62c243d2c"
+    },
+    {
+      "path": "codex_windows/skills/zircon-readme-policy/references/skills/work-rules.md",
+      "sha256": "0ef6cd5505528ef4887ab18124b7ae0bd08b15a74093fb8200301f52ade94723"
+    },
+    {
+      "path": "codex_windows/skills/zircon-readme-policy/references/STYLE.md",
+      "sha256": "f2797a30aaf805f9ab3cf157fff2e7229ad99dfe5cc6785b01b734090701a46a"
+    },
+    {
+      "path": "codex_windows/skills/zircon-readme-policy/scripts/lock.py",
+      "sha256": "d26db693d6656ca610cc6164a4e9dea41bea7244f173e4d5bf499fa1a33585a4"
+    },
+    {
+      "path": "codex_windows/skills/zircon-readme-policy/scripts/md-heading-check.py",
+      "sha256": "4a1af547292edbb49ec24d07f3bac44cb5009c228b65906d4aa50d21edbe813e"
+    },
+    {
+      "path": "codex_windows/skills/zircon-readme-policy/scripts/md-link-check.py",
+      "sha256": "f2e8e17c887fd73919f1ffa2866650d48e8688e3a78e78b0f65e31749079d2b7"
+    },
+    {
+      "path": "codex_windows/skills/zircon-readme-policy/scripts/md-style-check.py",
+      "sha256": "cc5e8d5f63890ac36c8ac8d18b96176bab372f82bba5ede0b91b13ff9efba7fc"
+    },
+    {
+      "path": "codex_windows/skills/zircon-readme-policy/scripts/md_common.py",
+      "sha256": "147e9df5db16c4e0dd244fc90e0baa0c431a6a713bb100b2d62ae4cb66ed452a"
+    },
+    {
+      "path": "codex_windows/skills/zircon-readme-policy/SKILL.md",
+      "sha256": "4125286630f3ae7063f1dfd1bdbb70a41981a5023b230c7be4ad14daeb833f9d"
+    },
+    {
+      "path": "codex_windows/TODO.md",
+      "sha256": "872f894a35fb914562d22631e66df718ed7bb85e021b82ce8a72418f9644c28e"
+    },
+    {
+      "path": "codex_windows/verification/behavior_summary.json",
+      "sha256": "3d4163379c6c695defad26c2b1335fc2b1a18ab6e30ea9c6b2aedff152723c7c"
+    },
+    {
+      "path": "codex_windows/verification/README.md",
+      "sha256": "f8cb562ae0f2ebaf144da34fffd792d51f85326577809fe18da4614e8cd7e14a"
+    },
+    {
+      "path": "codex_windows/verification/source_manifest.json",
+      "sha256": "71405117ead9eecbb7d3454a0014b7956535e11694f6e61fcf24a8afafaa2970"
+    },
+    {
+      "path": "codex_windows/verification/test_markdown.py",
+      "sha256": "2b3518744fc7f0a26d9ed7b688bd2bc4a261ed1f0cb530473c10f1ab810b3500"
+    },
+    {
+      "path": "codex_windows/verification/test_patterns.py",
+      "sha256": "47a05d7f1269265be21ce16cd534cb0b0daab21f62058efeed79699bb6ddb759"
+    },
+    {
+      "path": "codex_windows/verification/test_runtime.py",
+      "sha256": "1c3f9264e009205f2fcca4667f943611fe0f4891e8d89c23ec9ad6ec6a4446c3"
+    },
+    {
+      "path": "codex_windows/verification/verify_skills.py",
+      "sha256": "16a81e1428482c2f6f5b2db89ba2f8688fa6756e346a622db2f6ea61a9733734"
+    }
+  ],
+  "baseline_tracked": 509,
+  "unrelated_bytes_preserved": 495,
+  "changed_baseline_paths": [
+    "AGENTS.md",
+    "CHANGELOG.md",
+    "README.md",
+    "TODO2.md",
+    "agent-workflows/codex/HANDOFF.md",
+    "agent-workflows/codex/README.md",
+    "codex_windows/ISSUE.md",
+    "codex_windows/PLAN.md",
+    "codex_windows/README.md",
+    "codex_windows/REVIEW.md",
+    "codex_windows/TODO.md",
+    "codex_windows/personal/README.md",
+    "codex_windows/skills/README.md",
+    "codex_windows/verification/README.md"
+  ]
+}

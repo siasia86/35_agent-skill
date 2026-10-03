@@ -1,6 +1,6 @@
 # Codex 개인 스킬 기본 구조 및 이식 TODO
 
-플랫폼 분리 이후 기존 원문 보존 이식본은 [codex_linux](codex_linux/README.md)에 있고 Windows 전용 재작성은 [codex_windows PLAN](codex_windows/PLAN.md)·[TODO](codex_windows/TODO.md)에서 진행합니다. 이 문서의 축약 금지·원문 보존 기준과 과거 초안·검증 기록은 유지하며 새 작업 범위는 [분리 기록](agent-workflows/codex/PLATFORM_SPLIT_2026-10-03.md)을 확인합니다.
+플랫폼 분리 이후 기존 원문 보존 이식본은 [codex_linux](codex_linux/README.md)에 있고 Windows의 전체19개·현재공통설정 이관은 [이관 기록](agent-workflows/codex/WINDOWS_MIGRATION_2026-10-03.md)·[PLAN](codex_windows/PLAN.md)·[TODO](codex_windows/TODO.md)에서 확인합니다. 최적화는 전체이관 이후입니다. 이 문서의 축약 금지·원문 보존 기준과 과거 초안·검증 기록은 유지하며 새 작업 범위는 [분리 기록](agent-workflows/codex/PLATFORM_SPLIT_2026-10-03.md)을 확인합니다.
 
 Kiro CLI에서 사용하던 개인 작업 규칙과 스킬을 Codex에서 활용하기 위한 구조와 후속 작업을 정리합니다. GPT-6 Astra 사용을 염두에 둔 개인 구성안이며, 모델 선택·결제·설치는 후속 작업입니다.
 

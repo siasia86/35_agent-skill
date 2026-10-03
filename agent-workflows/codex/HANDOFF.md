@@ -159,6 +159,12 @@ Python 두 문제·Bash 실패 전파·generic flock 경로 삭제·중첩 펜�
 
 검증 후 yunli commit·일반 push와 사용자 검증을 진행합니다. main은 사용자 검증 완료 전까지 유지하며 설치·설정·release·운영 적용은 별도 범위입니다.
 
+## 12. Windows 전체 이관과 최적화 순서
+
+사용자가 19개 전부의 Windows 본문·필요 도구와 Linux에서 사용한 설정 전체의 이관을 요청했습니다. 최적화는 전체 이관 이후입니다. 현재 기준은 [Windows 이관 기록](WINDOWS_MIGRATION_2026-10-03.md), 상태는 [Windows TODO](../../codex_windows/TODO.md), 실제 검사·제약은 [REVIEW](../../codex_windows/REVIEW.md)를 확인합니다. 앞 절의 Windows 골격 상태는 준비 당시 기록입니다.
+
+Linux·보호 원본·실제 개인 홈/config를 보존하고 Windows 폴더의 전체 모음·공통 설정 예시·필수 도구를 준비했습니다. 새 결과와 과거Linux/개인설치관찰은구분합니다. yunli게시 후사용자검증을기다리며 main반영·최적화·실제홈적용을미완료로유지합니다. 실제최신SHA는Gitrefs에서확인합니다.
+
 ---
 
 **작성일**: 2026-10-03

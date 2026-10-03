@@ -1,18 +1,32 @@
-# Codex Windows 검증 영역
+# Windows 이관 검증
 
-현재 안내 문서만 있으며 Windows 검증 실행 코드는 작성하지 않았습니다. 이전 fixture 결과는 [REVIEW](../REVIEW.md)에 있고 향후 구현 검증과 구분합니다.
+네이티브 Python 3.11 이상에서 저장소 루트 기준으로 실행합니다. 개발 검증 파일은 개인 skill 설치 의존성이 아닙니다. [실제 결과](../REVIEW.md)와 [전체 출처 manifest](source_manifest.json)를 함께 확인합니다.
 
-## 1. 실행 조건
+## 1. 재현 명령
 
-Windows 네이티브 PowerShell과 실제 Python 실행 파일을 확인합니다. `python3` alias를 실행 가능한 Python으로 가정하지 않습니다. Python 호출은 `python -X utf8 -B`를 기준으로 확인합니다. 최종 구현에는 UTF-8 읽기·쓰기·출력을 명시하고 기본 cp949 환경의 실패도 검사합니다.
+```powershell
+python -X utf8 -B codex_windows/verification/verify_skills.py
+python -X utf8 -B codex_windows/verification/test_markdown.py --skills codex_windows/skills
+python -X utf8 -B codex_windows/verification/test_runtime.py --skills codex_windows/skills
+python -X utf8 -B codex_windows/verification/test_patterns.py --skills codex_windows/skills
+```
 
-## 2. 검증과 근거
+Bash 조건은 마지막 검사에서 `--bash '<현재 Git Bash의 bash.exe 경로>'`로 추가합니다. 설치된 실제 실행 파일을 확인합니다. Git Bash 실행은 WSL·Linux 전체 환경 검증과 별도입니다. 세부 CLI는 각 스크립트의 `--help`를 따릅니다.
 
-정상·오류·중첩 펜스·미닫힘·한국어 문서·오류 상태 전파를 의미 있는 사례로 검사합니다. 독립 폴더 사본과 최종 입력 해시를 기록합니다. 잠금·메타데이터는 실제 보장 범위에 맞는 별도 사례가 필요합니다. 단일 흐름의 성공이나 [Linux 기록](../../codex_linux/README.md)을 Windows 전체 성공으로 확대하지 않습니다.
+## 2. 검증 범위
 
-원시 입력·stdout/stderr·비공개 근거는 로컬 작업 전용 위치에 보존하고 공개 자료에는 개인 경로·계정·config 원문을 넣지 않습니다.
+- 19개 skill 이름·본문 보존·출처182개 파일·설정2개·동봉역할54개·로컬 필수 참조·Python AST·사본 동일성.
+- 각 폴더를 독립 TEMP에 복사한 뒤 실제 helper 실행. 형제 skill·원repo의 import를 이용하지 않습니다.
+- 한국어·공백·CRLF·유효/깨진 링크·누락/혼합 입력·앵커 중복·인용/tilde fence의 정상·실패 반환.
+- Python CLI와 원자 쓰기, 잠금 소유·경쟁·부분 쓰기 실패·기존 파일 보존, 선택 Bash 백업 실패 반환.
 
-대표 모델 행동·개인 설치·새 세션 발견·운영 검사는 각 범위를 구분합니다. 미실행은 통과로 기록하지 않으며 [TODO](../TODO.md)에 남깁니다.
+검사에 쓰는 fixtures는 새 TEMP 안에서 생성·정리합니다. 운영 리소스·개인 홈·네트워크·권한을 바꾸지 않습니다. 공식 `skill-creator`의 `quick_validate.py`도 별도 실행하며 PyYAML은 개발 검증용일 뿐 동봉 runtime 의존성이 아닙니다.
+
+## 3. 결과와 한계
+
+새 결과는 [results.json](results.json)에 비식별 case·카운트·판정만 기록합니다. [최종 입력 해시](input_hashes.json)는 results와 자기 index를 제외한 Windows 파일의 SHA-256을 기록합니다. 개인 절대 경로·계정·토큰·원시 stdout은 로컬에 보존합니다. 검사 입력과 실제 결과가 바뀌면 새 결과를 기록합니다. 원문의 과거 Linux 결과는 Windows 최종본 결과로 바꾸지 않습니다.
+
+실제 개인 홈 설치·Codex 검색/자동 선택·관리 sandbox 설정·NTFS ACL/ADS/owner 보존·SMB·비협조 writer·원격 인프라 적용·WSL 전체 동작은 별도 확인 대상입니다. stdlib의 파일 동일성 대조를 Windows 보안 경계 전체로 확대하지 않습니다.
 
 ---
 

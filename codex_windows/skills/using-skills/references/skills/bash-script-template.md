@@ -1,0 +1,326 @@
+---
+name: bash-script-template
+description: "Bash 스크립트 작성 시 표준 로깅 함수와 에러 처리 패턴을 적용합니다. 새 스크립트 생성 또는 기존 스크립트 개선 시 사용합니다. 이 skill을 참조할 때 응답 첫 줄에 \"🟡 참조: skill://bash-script-template\" 를 출력합니다."
+---
+
+# Bash Script Template
+
+<!-- CODEX-COMPAT-BEGIN -->
+## Windows Codex 실행 및 적용 규칙
+
+이 절과 이 절에서 연결한 실행 도구가 Windows의 현재 실행 본문입니다. 아래 Linux/Kiro 원문의 코드·명령·경로는 전체 보존한 비교 자료이며 그대로 자동 실행하지 않습니다. 원문의 목적·예시·체크리스트는 유지하되 플랫폼 차이와 교정 사항은 이 절의 실행 계약을 적용합니다. Linux 본문은 `codex_linux/`에 보존되어 있으며 이번 이식은 경량화·통합 작업이 아닙니다.
+
+- 시스템·개발자·관리 정책과 실제 권한 안에서 **사용자 명시 지시 > 적용 저장소 AGENTS > 개인 스킬 기본값**을 적용합니다. 이미 부여된 범위와 승인을 유지하고 다른 저장소·개인 홈·시스템·운영 환경의 수정 권한을 경로 존재로 추정하지 않습니다.
+- 실제 Git 루트·branch·기존 변경을 먼저 확인합니다. 필요한 본문·동봉 참조만 읽고 다른 스킬·전체 작업 기록을 자동 로드하지 않습니다. 원문의 `skill://`는 아래 로컬 참조로 해석하며 URI 도구를 호출하지 않습니다.
+- 이 폴더를 통째로 복사하는 개인 스킬입니다. 필수 참조는 아래 상대 링크를 사용합니다. 중앙 catalog·설치기·다른 저장소 또는 형제 스킬 설치를 필수로 요구하지 않습니다. 원문 `../originals/bash-script-template.md`는 비교 자료입니다.
+- 네이티브 Windows 작업 셸은 PowerShell입니다. 파일 작업은 `-LiteralPath` 등 실제 대상 인자로 처리하며 셸 문자열·`eval`로 외부 입력을 재해석하지 않습니다. Python 3.11 이상을 `python -X utf8`로 실행하고 Python 하위 실행은 `[sys.executable, '-X', 'utf8', ...]` 인자 배열을 사용합니다. 실제 Python 위치·버전은 현재 환경에서 확인합니다.
+- Bash 업무는 Git Bash 또는 승인된 WSL에서 유지합니다. PowerShell에서 Bash/POSIX 예제를 직접 실행하지 않습니다. 원문의 `/root`, `/var/log`, `/backup`, Kiro hook은 과거 환경 자료이며 Windows 개인 홈·시스템 경로로 자동 치환하지 않습니다.
+- 검증은 **통과 / 부분 검사 / 실패 / 미실행**을 실행 목적·관찰·다음 조치와 함께 기록합니다. 경로 치환이나 과거 완료 기록을 현재 동작 통과로 사용하지 않습니다. 비공개 경로·계정·토큰·운영 자료를 공개 결과에 복사하지 않습니다.
+
+### 현재 Bash 실행 템플릿
+
+Windows의 Bash 업무는 Git Bash/WSL에서 [전체 Bash 템플릿](../../scripts/script_template.sh)을 사용합니다. 네이티브 Windows 파일/서비스 업무는 요청한 PowerShell 구현으로 작성하고 Bash의 init·chown 의미를 Windows 서비스·ACL로 자동 변환하지 않습니다. 원문의 helper 순서(변수·로그·backup_conf·service_start·ensure_dir·main), 헤더·복잡도·번호/에러 규칙과 복구에 필요한 백업 기능을 유지합니다. 아래 원문의 eval wrapper·문자열 호출·실패를 숨기는 backup helper·시스템 초기화는 비교 자료이며 동봉 교정 본문만 실행합니다.
+
+```powershell
+# 현재 환경에서 확인한 Git Bash 실행 파일과 인자 배열을 사용합니다.
+& '<Git Bash bash.exe>' '<SKILL_DIR>/scripts/script_template.sh' --help
+& '<Git Bash bash.exe>' '<SKILL_DIR>/scripts/script_template.sh' --dry-run --backup '<현재 파일>'
+```
+
+- 기본 무인수 실행은 help만 출력합니다. `--backup`, `--ensure-dir`, `--service`는 실제 현재 요청 대상과 승인 범위에서 명시적으로 선택합니다. 업무 없는 scaffold가 설치·서비스·시스템 로그·백업 디렉터리를 자동 실행하지 않습니다.
+- `run_msg_info 번호 명령 인수...`는 인자 배열을 실행하고 원래 상태를 반환합니다. 로그는 stderr이고 필수 단계는 `|| return "$?"` 또는 최상위 `|| exit "$?"`로 중단합니다. `set -e`만으로 복합 함수 내부 실패를 보장하지 않습니다. 모든 helper는 실패 상태를 명시적으로 전파합니다.
+- `backup_conf`는 실제 `cp -a`가 성공한 뒤에만 성공 로그를 씁니다. 실패 상태를 원래대로 반환하여 후속 작업을 막습니다. 원문의 없는 파일 skip 계약은 유지하되 skip을 백업 성공이라고 기록하지 않습니다. 같은 목적의 백업이 이미 있으면 덮어쓰지 않고 실패합니다. 메타데이터 보존은 사용한 Git Bash/WSL·파일시스템의 `cp -a` 범위이며 Windows ACL/ADS 보존을 주장하지 않습니다.
+- `service_start`는 WSL/Linux의 실제 init 시스템에서만 선택적으로 사용합니다. Git Bash에서 Linux 서비스 호출은 지원하지 않습니다. `daemon-reload`, enable, restart, status 실패를 전파합니다. `ensure_dir`는 새 디렉터리만 만들고 owner가 명시된 POSIX 작업에서만 chown하며 오류를 반환합니다. 네이티브 Windows 서비스는 현재 요청에 맞는 PowerShell cmdlet로 작성합니다.
+- 로그 파일은 `LOG_FILE01`, status 위치는 `backup_status_log_dir`를 사용자가 허용한 작업 경로로 명시했을 때만 초기화합니다. 기본은 stderr 콘솔이며 stdout 데이터는 유지합니다. 전역 `exec >> ... 2>&1`로 stdout을 로그에 섞지 않습니다. 환경 변수의 기존 사용자 값을 존중합니다.
+
+원문 비교 자료: [Kiro 원문](../originals/bash-script-template.md). 보존한 운영/설치 명령을 현재 대상으로 자동 실행하지 않습니다.
+<!-- CODEX-COMPAT-END -->
+
+
+## 기존 스크립트 패턴 참고 (sj_del)
+
+실제 운영 스크립트에서 사용된 패턴입니다. 새 스크립트 작성 시 일관성을 유지합니다.
+
+### 헤더 주석
+
+```bash
+#!/bin/bash
+#### This script was created by sjyun on YYYY-MM-DD. version YY.MM.DD. Modified by sjyun on YYYY-MM-DD.
+#### 스크립트 한 줄 설명
+```
+
+### 에러 처리 인라인 패턴
+
+```bash
+# 기존 패턴 (jenkins 스타일)
+apt-get install jenkins -y || { echo "#### filed error code : $? ####" ; exit 1; }
+
+# 로그 함수 적용 패턴
+apt-get install jenkins -y || { log_msg_error 1 "jenkins install failed" ; exit 1; }
+```
+
+### 파일/디렉토리 존재 체크
+
+```bash
+if [ ! -f "/path/to/file" ]; then exit 1; fi
+if [ ! -d "/path/to/dir" ]; then mkdir -p /path/to/dir; fi
+```
+
+### OS 버전 체크
+
+```bash
+version_id=$(grep -i version_ID /etc/os-release | awk -F '"' '{print $(NF-1)}')
+if [ "$version_id" = "20.04" ]; then
+    echo "20.04 OK"
+else
+    echo "failed"; exit 1
+fi
+```
+
+---
+
+## 로그 레벨 인라인 패턴
+
+명령어 한 줄에 에러 처리를 붙이는 패턴입니다.
+
+```bash
+echo "test01" || { echo "$(date '+%Y%m%d-%H:%M:%S') - sj_scripts [info]:    sj_scripts-end. check. ---- error ----"   ; exit 1; }
+echo "test02" || { echo "$(date '+%Y%m%d-%H:%M:%S') - sj_scripts [success]: sj_scripts-end. check. ---- success ----" ; exit 1; }
+echo "test03" || { echo "$(date '+%Y%m%d-%H:%M:%S') - sj_scripts [error01]: sj_scripts-end. check. ---- error01 ----" ; exit 1; }
+echo "test04" || { echo "$(date '+%Y%m%d-%H:%M:%S') - sj_scripts [failed]:  sj_scripts-end. check. ---- failed ----"  ; exit 1; }
+```
+
+---
+
+## 표준 함수 기반 템플릿
+
+```bash
+#!/bin/bash
+#### This script was created by sjyun on YYYY-MM-DD. version YY.MM.DD.
+#### 스크립트 한 줄 설명
+#
+# 허용 도메인:
+#   domain.com - 용도
+
+# ── 변수 ───────────────────────────────────────────────────
+DATE=$(date +%Y%m%d_%H%M%S)                        # 타임스탬프 (백업 중복 방지)
+LOG_FILE01="/var/log/$(basename "$0" .sh).log"      # 스크립트명 기반 자동 지정
+# LOG_FILE01="/var/log/rsync-backup-transfer.log"   # 직접 지정 시 위 줄 대체
+
+BK_DIR="/backup/ORG"
+backup_status_log_dir="/var/log/sj_scripts"
+
+# ── 로그 디렉토리 초기화 ───────────────────────────────────
+mkdir -p "$(dirname "${LOG_FILE01}")"
+mkdir -p "${backup_status_log_dir}"
+exec >> "${LOG_FILE01}" 2>&1
+
+# ── 로깅 함수 ──────────────────────────────────────────────
+
+# 명령어 실행 + 성공/실패 자동 로그
+# 🟡 eval 사용 — 외부 입력값 직접 전달 금지, 스크립트 내부 명령어만 허용
+run_msg_info() {
+    local info_code=$1
+    local info_msg=$2
+    local status
+
+    eval "${info_msg}"   # 따옴표로 word splitting 방지
+    status=$?            # local 선언 전에 $? 저장 (local이 $?를 덮어쓰는 문제 방지)
+
+    if [ "${status}" -eq 0 ]; then
+        echo "$(date '+%Y-%m-%d %H:%M:%S') sj_scripts [info] code:${info_code} success. ${info_msg}"
+    else
+        echo "$(date '+%Y-%m-%d %H:%M:%S') sj_scripts [error] code:${info_code} failed with status ${status}. ${info_msg}"
+    fi
+}
+
+# 단순 메시지 로그 (명령어 실행 없음)
+log_msg_info() {
+    local info_code=$1
+    local info_msg=$2
+
+    echo "$(date '+%Y-%m-%d %H:%M:%S') sj_scripts [info] code:${info_code} ${info_msg}"
+}
+
+# 에러 기록 + status 파일 저장 (exit는 호출부에서 결정)
+log_msg_error() {
+    local err_code=$1
+    local err_msg=$2
+
+    echo "$(date '+%Y-%m-%d %H:%M:%S') sj_scripts [error] code:${err_code} ${err_msg}"
+
+    if [ -n "${backup_status_log_dir:-}" ]; then
+        echo "${err_code}" > "${backup_status_log_dir}/backup.status"
+    fi
+## exit "${err_code}";
+}
+
+# ── 설정 파일 백업 함수 ────────────────────────────────────
+# 타임스탬프 포함으로 같은 날 중복 실행 시 덮어쓰기 방지
+backup_conf() {
+    local conf_file=$1
+    if [ -f "${conf_file}" ]; then
+        cp -a "${conf_file}" "${conf_file}_ORG_${DATE}"
+        log_msg_info 0 "backup: ${conf_file}_ORG_${DATE}"
+    else
+        log_msg_info 0 "${conf_file} not exists. skip backup."
+    fi
+}
+
+# ── 서비스 시작 함수 ───────────────────────────────────────
+# OS init 시스템 자동 감지 (systemd / sysvinit / 없음)
+service_start() {
+    local svc=$1
+
+    if command -v systemctl > /dev/null 2>&1; then
+        systemctl daemon-reload
+        systemctl enable "${svc}" || { log_msg_error 11 "${svc} enable failed" ; return 1; }
+        systemctl restart "${svc}" || { log_msg_error 12 "${svc} restart failed" ; return 1; }
+        systemctl status "${svc}" --no-pager || true
+    elif command -v service > /dev/null 2>&1; then
+        service "${svc}" restart || { log_msg_error 12 "${svc} restart failed" ; return 1; }
+    else
+        log_msg_error 10 "no init system found"
+        return 1
+    fi
+    log_msg_info 0 "${svc} started"
+}
+
+# ── 디렉토리 생성 함수 ─────────────────────────────────────
+ensure_dir() {
+    local dir=$1
+    local owner=${2:-root}
+    if [ ! -d "${dir}" ]; then
+        mkdir -p "${dir}"
+        chown "${owner}" -R "${dir}"
+        log_msg_info 0 "created: ${dir} (owner: ${owner})"
+    fi
+}
+
+# ── 메인 ───────────────────────────────────────────────────
+main() {
+    log_msg_info 1 "script start"
+
+    ensure_dir "${BK_DIR}"
+
+    # 작업 내용
+    # apt-get install -y package || { log_msg_error 1 "package install failed" ; exit 1; }
+    # backup_conf /etc/service/service.conf
+    # service_start service-name
+
+    log_msg_info 99 "script end"
+}
+
+main "$@"
+```
+
+---
+
+## 함수 사용 예시
+
+```bash
+# 명령어 실행 + 결과 자동 로그
+run_msg_info 1 "apt-get install -y nginx"
+run_msg_info 2 "systemctl restart nginx"
+
+# 단순 메시지 로그
+log_msg_info 1 "script start"
+log_msg_info 2 "config updated"
+
+# 에러 기록 후 exit (호출부에서 결정)
+log_msg_error 1 "nginx install failed" ; exit 1
+
+# 설정 파일 백업 (타임스탬프 포함)
+backup_conf /etc/elasticsearch/elasticsearch.yml
+backup_conf /etc/kibana/kibana.yml
+
+# 서비스 시작
+service_start elasticsearch
+service_start kibana
+
+# 디렉토리 생성 (소유자 지정)
+ensure_dir /masang_vol1/mdf mssql:mssql
+ensure_dir /backup/data
+```
+
+---
+
+## 적용 규칙
+
+- 반복되는 패턴(백업, 서비스 시작, 디렉토리 생성)은 함수로 추출
+- `log_msg_error` 후 exit 여부는 호출부에서 결정 (`; exit N` 명시)
+- `eval` 사용 시 반드시 따옴표 감싸기 (`eval "${cmd}"`), 외부 입력값 전달 금지
+- `$?` 는 `local` 선언 전에 저장 (`local` 자체가 exit code 0을 반환하므로 덮어씀)
+- `DATE`에 시분초 포함 → 같은 날 중복 백업 시 덮어쓰기 방지
+- `backup_status_log_dir` 미정의 시 `log_msg_error`가 빈 경로에 쓰지 않도록 `${var:-}` 가드
+- `systemctl enable` 실패도 에러 처리
+- `main()` 함수로 진입점 통일, 함수 정의 후 마지막에 호출
+
+## `main()` 함수 구조 규칙
+
+- 단일 작업 스크립트: `main()` 하나로 충분 (굳이 분리하지 않음)
+- 복합 작업 스크립트 (ELK 등 여러 서비스): `install_elasticsearch()`, `install_kibana()` 등 분리
+- `main()`으로 감싸는 이유:
+  - 로깅 함수가 `main` 호출 전에 정의되어야 하므로 순서 보장
+  - `exec >>` 리다이렉트 후 실행 흐름 명확화
+  - 나중에 함수 분리 시 구조 변경 없이 확장 가능
+- `main "$@"` — 인수 없어도 습관적으로 사용 (향후 인수 추가 시 수정 불필요)
+
+## 스크립트 복잡도 기준
+
+| 복잡도 | 기준                                        | 로깅 함수                       | 구조                          |
+|--------|---------------------------------------------|---------------------------------|-------------------------------|
+| 간단   | 100줄 이하 또는 단일 패키지 설치            | 사용하지 않음                   | 인라인 `echo` + `\|\| exit`   |
+| 보통   | 100~150줄 또는 여러 단계, 설정 변경 포함    | `run_msg_info` / `log_msg_info` | `main()`                      |
+| 복잡   | 151줄 이상 또는 여러 서비스, 백업/롤백 필요 | 전체 함수 사용                  | `main()` + 서비스별 함수 분리 |
+
+### 간단한 스크립트 예시 (로깅 함수 없음)
+
+```bash
+#!/bin/bash
+#### This script was created by sjyun on YYYY-MM-DD. version YY.MM.DD.
+#### Python 3.9 설치 — Ubuntu 20.04
+#
+# 허용 도메인:
+#   archive.ubuntu.com
+
+apt-get update -qq
+apt-get install -y python3.9 || { echo "#### filed error code : $? ####" ; exit 1; }
+
+if [[ ! -e /usr/local/bin/python3 ]]; then
+    ln -s /usr/bin/python3.9 /usr/local/bin/python3
+fi
+
+echo "done: $(python3.9 --version)"
+```
+
+## 에러 코드 규칙 (순차 번호)
+
+| 방식                 | 설명                                     |
+|----------------------|------------------------------------------|
+| 순차 (1, 2, 3, 4...) | 로그에서 빠진 번호로 실패 지점 즉시 파악 |
+
+```bash
+run_msg_info 1 "apt-get update -y"
+run_msg_info 2 "apt-get install -y curl gnupg2"
+run_msg_info 3 "apt-get install -y elasticsearch"
+run_msg_info 4 "systemctl enable elasticsearch"
+run_msg_info 5 "systemctl restart elasticsearch"
+run_msg_info 6 "apt-get install -y kibana"
+run_msg_info 7 "systemctl enable kibana"
+run_msg_info 8 "systemctl restart kibana"
+```
+
+로그 확인:
+```
+code:1 success.
+code:2 success.
+code:3 success.
+code:4 success.
+code:6 success.   ← 5가 없음 → elasticsearch restart 실패
+```
+
+- `backup.status` 파일에 마지막 에러 코드 기록 → `cat backup.status`로 즉시 확인
+- `0` = 정상, 그 외 = 해당 번호 단계에서 실패
+- exit code는 0~255 제한 (bash), `backup.status`는 문자열이므로 제한 없음
+- 스크립트 수정 시 번호 재정렬 필요 — 주석으로 번호-작업 매핑 유지 권장

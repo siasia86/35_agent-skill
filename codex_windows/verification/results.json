@@ -1,0 +1,1049 @@
+{
+  "date": "2026-10-03",
+  "source_commit": "63e382bd5433bc1572556a528920add0d974c6e3",
+  "runtime": {
+    "os": "Windows native",
+    "python": "3.14.8",
+    "bash": "Git Bash"
+  },
+  "migration": {
+    "status": "PASS",
+    "counts": {
+      "skills": 19,
+      "source_files_preserved": 182,
+      "bundled_workflows": 54,
+      "settings_sources": 2,
+      "compat_local_links": 214,
+      "python_scripts": 34,
+      "isolated_tool_runs": 41
+    }
+  },
+  "metadata": {
+    "validator": "skill-creator/quick_validate.py",
+    "skills": 19,
+    "passed": 19,
+    "results": [
+      {
+        "skill": "bash-script-template",
+        "passed": true,
+        "message": "Skill is valid!"
+      },
+      {
+        "skill": "code-review",
+        "passed": true,
+        "message": "Skill is valid!"
+      },
+      {
+        "skill": "debugging-and-recovery",
+        "passed": true,
+        "message": "Skill is valid!"
+      },
+      {
+        "skill": "doubt-driven-infra",
+        "passed": true,
+        "message": "Skill is valid!"
+      },
+      {
+        "skill": "git-commit-rule",
+        "passed": true,
+        "message": "Skill is valid!"
+      },
+      {
+        "skill": "incremental-change",
+        "passed": true,
+        "message": "Skill is valid!"
+      },
+      {
+        "skill": "kiro-lock",
+        "passed": true,
+        "message": "Skill is valid!"
+      },
+      {
+        "skill": "md-link-check",
+        "passed": true,
+        "message": "Skill is valid!"
+      },
+      {
+        "skill": "planning-and-breakdown",
+        "passed": true,
+        "message": "Skill is valid!"
+      },
+      {
+        "skill": "python-script-template",
+        "passed": true,
+        "message": "Skill is valid!"
+      },
+      {
+        "skill": "readme-template",
+        "passed": true,
+        "message": "Skill is valid!"
+      },
+      {
+        "skill": "repo-governance",
+        "passed": true,
+        "message": "Skill is valid!"
+      },
+      {
+        "skill": "security-tools",
+        "passed": true,
+        "message": "Skill is valid!"
+      },
+      {
+        "skill": "shipping-checklist",
+        "passed": true,
+        "message": "Skill is valid!"
+      },
+      {
+        "skill": "spec-driven-infra",
+        "passed": true,
+        "message": "Skill is valid!"
+      },
+      {
+        "skill": "testing-guide",
+        "passed": true,
+        "message": "Skill is valid!"
+      },
+      {
+        "skill": "using-skills",
+        "passed": true,
+        "message": "Skill is valid!"
+      },
+      {
+        "skill": "work-rules",
+        "passed": true,
+        "message": "Skill is valid!"
+      },
+      {
+        "skill": "zircon-readme-policy",
+        "passed": true,
+        "message": "Skill is valid!"
+      }
+    ]
+  },
+  "markdown": {
+    "runtime": "native-windows",
+    "cases": 63,
+    "passed": 63,
+    "failed": 0,
+    "results": [
+      {
+        "case": "link-valid-native-crlf-destinations",
+        "tool": "md-link-check.py",
+        "expected_status": 0,
+        "actual_status": 0,
+        "passed": true
+      },
+      {
+        "case": "link-explicit-missing",
+        "tool": "md-link-check.py",
+        "expected_status": 1,
+        "actual_status": 1,
+        "passed": true
+      },
+      {
+        "case": "link-valid-plus-missing",
+        "tool": "md-link-check.py",
+        "expected_status": 1,
+        "actual_status": 1,
+        "passed": true
+      },
+      {
+        "case": "link-broken",
+        "tool": "md-link-check.py",
+        "expected_status": 1,
+        "actual_status": 1,
+        "passed": true
+      },
+      {
+        "case": "link-angle-missing-detected",
+        "tool": "md-link-check.py",
+        "expected_status": 1,
+        "actual_status": 1,
+        "passed": true
+      },
+      {
+        "case": "link-balanced-parenthesis-missing-detected",
+        "tool": "md-link-check.py",
+        "expected_status": 1,
+        "actual_status": 1,
+        "passed": true
+      },
+      {
+        "case": "link-url-decoded-missing-detected",
+        "tool": "md-link-check.py",
+        "expected_status": 1,
+        "actual_status": 1,
+        "passed": true
+      },
+      {
+        "case": "link-quote-tilde-long-fences",
+        "tool": "md-link-check.py",
+        "expected_status": 0,
+        "actual_status": 0,
+        "passed": true
+      },
+      {
+        "case": "link-after-fence-still-checked",
+        "tool": "md-link-check.py",
+        "expected_status": 1,
+        "actual_status": 1,
+        "passed": true
+      },
+      {
+        "case": "link-unclosed-is-incomplete",
+        "tool": "md-link-check.py",
+        "expected_status": 2,
+        "actual_status": 2,
+        "passed": true
+      },
+      {
+        "case": "link-invalid-utf8",
+        "tool": "md-link-check.py",
+        "expected_status": 1,
+        "actual_status": 1,
+        "passed": true
+      },
+      {
+        "case": "link-version",
+        "tool": "md-link-check.py",
+        "expected_status": 0,
+        "actual_status": 0,
+        "passed": true,
+        "expected_version": "26.10.03",
+        "actual_version": "26.10.03"
+      },
+      {
+        "case": "link-help",
+        "tool": "md-link-check.py",
+        "expected_status": 0,
+        "actual_status": 0,
+        "passed": true
+      },
+      {
+        "case": "heading-valid-native-crlf",
+        "tool": "md-heading-check.py",
+        "expected_status": 0,
+        "actual_status": 0,
+        "passed": true
+      },
+      {
+        "case": "heading-duplicate-suffix-anchor-only",
+        "tool": "md-heading-check.py",
+        "expected_status": 0,
+        "actual_status": 0,
+        "passed": true
+      },
+      {
+        "case": "heading-suffix-collision-anchor-only",
+        "tool": "md-heading-check.py",
+        "expected_status": 0,
+        "actual_status": 0,
+        "passed": true
+      },
+      {
+        "case": "heading-nonexistent-duplicate-suffix",
+        "tool": "md-heading-check.py",
+        "expected_status": 1,
+        "actual_status": 1,
+        "passed": true
+      },
+      {
+        "case": "heading-duplicate-policy-preserved",
+        "tool": "md-heading-check.py",
+        "expected_status": 1,
+        "actual_status": 1,
+        "passed": true
+      },
+      {
+        "case": "heading-explicit-missing",
+        "tool": "md-heading-check.py",
+        "expected_status": 1,
+        "actual_status": 1,
+        "passed": true
+      },
+      {
+        "case": "heading-valid-plus-missing",
+        "tool": "md-heading-check.py",
+        "expected_status": 1,
+        "actual_status": 1,
+        "passed": true
+      },
+      {
+        "case": "heading-all-checks-skipped-missing",
+        "tool": "md-heading-check.py",
+        "expected_status": 1,
+        "actual_status": 1,
+        "passed": true
+      },
+      {
+        "case": "heading-invalid-anchor",
+        "tool": "md-heading-check.py",
+        "expected_status": 1,
+        "actual_status": 1,
+        "passed": true
+      },
+      {
+        "case": "heading-numbering-preserved",
+        "tool": "md-heading-check.py",
+        "expected_status": 1,
+        "actual_status": 1,
+        "passed": true
+      },
+      {
+        "case": "heading-level-policy-preserved",
+        "tool": "md-heading-check.py",
+        "expected_status": 1,
+        "actual_status": 1,
+        "passed": true
+      },
+      {
+        "case": "heading-toc-valid",
+        "tool": "md-heading-check.py",
+        "expected_status": 0,
+        "actual_status": 0,
+        "passed": true
+      },
+      {
+        "case": "heading-toc-missing",
+        "tool": "md-heading-check.py",
+        "expected_status": 1,
+        "actual_status": 1,
+        "passed": true
+      },
+      {
+        "case": "heading-quote-tilde-long-fences",
+        "tool": "md-heading-check.py",
+        "expected_status": 0,
+        "actual_status": 0,
+        "passed": true
+      },
+      {
+        "case": "heading-invalid-utf8",
+        "tool": "md-heading-check.py",
+        "expected_status": 1,
+        "actual_status": 1,
+        "passed": true
+      },
+      {
+        "case": "heading-version",
+        "tool": "md-heading-check.py",
+        "expected_status": 0,
+        "actual_status": 0,
+        "passed": true,
+        "expected_version": "26.10.03",
+        "actual_version": "26.10.03"
+      },
+      {
+        "case": "heading-help",
+        "tool": "md-heading-check.py",
+        "expected_status": 0,
+        "actual_status": 0,
+        "passed": true
+      },
+      {
+        "case": "heading-auto-toml-config",
+        "tool": "md-heading-check.py",
+        "expected_status": 0,
+        "actual_status": 0,
+        "passed": true
+      },
+      {
+        "case": "heading-explicit-toml-config",
+        "tool": "md-heading-check.py",
+        "expected_status": 0,
+        "actual_status": 0,
+        "passed": true
+      },
+      {
+        "case": "heading-invalid-config",
+        "tool": "md-heading-check.py",
+        "expected_status": 1,
+        "actual_status": 1,
+        "passed": true
+      },
+      {
+        "case": "heading-directory-exclusion",
+        "tool": "md-heading-check.py",
+        "expected_status": 0,
+        "actual_status": 0,
+        "passed": true
+      },
+      {
+        "case": "heading-file-skip-preserved",
+        "tool": "md-heading-check.py",
+        "expected_status": 0,
+        "actual_status": 0,
+        "passed": true
+      },
+      {
+        "case": "style-native-utf8-crlf",
+        "tool": "md-style-check.py",
+        "expected_status": 0,
+        "actual_status": 0,
+        "passed": true
+      },
+      {
+        "case": "style-quote-tilde-mixed-fences",
+        "tool": "md-style-check.py",
+        "expected_status": 0,
+        "actual_status": 0,
+        "passed": true
+      },
+      {
+        "case": "style-h1-policy-preserved",
+        "tool": "md-style-check.py",
+        "expected_status": 1,
+        "actual_status": 1,
+        "passed": true
+      },
+      {
+        "case": "style-h1-cli-skip-preserved",
+        "tool": "md-style-check.py",
+        "expected_status": 0,
+        "actual_status": 0,
+        "passed": true
+      },
+      {
+        "case": "style-explicit-missing",
+        "tool": "md-style-check.py",
+        "expected_status": 1,
+        "actual_status": 1,
+        "passed": true
+      },
+      {
+        "case": "style-valid-plus-missing",
+        "tool": "md-style-check.py",
+        "expected_status": 1,
+        "actual_status": 1,
+        "passed": true
+      },
+      {
+        "case": "style-invalid-utf8",
+        "tool": "md-style-check.py",
+        "expected_status": 1,
+        "actual_status": 1,
+        "passed": true
+      },
+      {
+        "case": "style-version",
+        "tool": "md-style-check.py",
+        "expected_status": 0,
+        "actual_status": 0,
+        "passed": true,
+        "expected_version": "26.10.03",
+        "actual_version": "26.10.03"
+      },
+      {
+        "case": "style-help",
+        "tool": "md-style-check.py",
+        "expected_status": 0,
+        "actual_status": 0,
+        "passed": true
+      },
+      {
+        "case": "style-list-skips",
+        "tool": "md-style-check.py",
+        "expected_status": 0,
+        "actual_status": 0,
+        "passed": true
+      },
+      {
+        "case": "style-auto-toml-config",
+        "tool": "md-style-check.py",
+        "expected_status": 0,
+        "actual_status": 0,
+        "passed": true
+      },
+      {
+        "case": "style-explicit-toml-config",
+        "tool": "md-style-check.py",
+        "expected_status": 0,
+        "actual_status": 0,
+        "passed": true
+      },
+      {
+        "case": "style-invalid-config",
+        "tool": "md-style-check.py",
+        "expected_status": 1,
+        "actual_status": 1,
+        "passed": true
+      },
+      {
+        "case": "style-native-reference-path",
+        "tool": "md-style-check.py",
+        "expected_status": 0,
+        "actual_status": 0,
+        "passed": true
+      },
+      {
+        "case": "style-reference-required-metadata",
+        "tool": "md-style-check.py",
+        "expected_status": 1,
+        "actual_status": 1,
+        "passed": true
+      },
+      {
+        "case": "style-directory-exclusion",
+        "tool": "md-style-check.py",
+        "expected_status": 0,
+        "actual_status": 0,
+        "passed": true
+      },
+      {
+        "case": "style-strict-preserved",
+        "tool": "md-style-check.py",
+        "expected_status": 0,
+        "actual_status": 0,
+        "passed": true
+      },
+      {
+        "case": "cross-drive-cwd-link-valid-display",
+        "tool": "md-link-check.py",
+        "expected_status": 0,
+        "actual_status": 0,
+        "passed": true
+      },
+      {
+        "case": "cross-drive-cwd-link-broken-display",
+        "tool": "md-link-check.py",
+        "expected_status": 1,
+        "actual_status": 1,
+        "passed": true
+      },
+      {
+        "case": "cross-drive-cwd-link-unclosed-display",
+        "tool": "md-link-check.py",
+        "expected_status": 2,
+        "actual_status": 2,
+        "passed": true
+      },
+      {
+        "case": "cross-drive-cwd-heading-valid-display",
+        "tool": "md-heading-check.py",
+        "expected_status": 0,
+        "actual_status": 0,
+        "passed": true
+      },
+      {
+        "case": "cross-drive-cwd-heading-failure-display",
+        "tool": "md-heading-check.py",
+        "expected_status": 1,
+        "actual_status": 1,
+        "passed": true
+      },
+      {
+        "case": "cross-drive-cwd-style-valid-display",
+        "tool": "md-style-check.py",
+        "expected_status": 0,
+        "actual_status": 0,
+        "passed": true
+      },
+      {
+        "case": "cross-drive-cwd-style-failure-display",
+        "tool": "md-style-check.py",
+        "expected_status": 1,
+        "actual_status": 1,
+        "passed": true
+      },
+      {
+        "case": "cross-drive-target-link-display",
+        "tool": "md-link-check.py",
+        "expected_status": 0,
+        "actual_status": 0,
+        "passed": true
+      },
+      {
+        "case": "cross-drive-target-heading-display",
+        "tool": "md-heading-check.py",
+        "expected_status": 0,
+        "actual_status": 0,
+        "passed": true
+      },
+      {
+        "case": "cross-drive-target-style-display",
+        "tool": "md-style-check.py",
+        "expected_status": 0,
+        "actual_status": 0,
+        "passed": true
+      },
+      {
+        "case": "cross-drive-target-directory-no-input",
+        "tool": "md-style-check.py",
+        "expected_status": 1,
+        "actual_status": 1,
+        "passed": true
+      }
+    ]
+  },
+  "runtime_helpers": {
+    "executed": 79,
+    "skipped": 1,
+    "results": [
+      {
+        "name": "python_no_args_help",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "python_help",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "python_help_no_unimplemented_restore",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "python_version",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "python_unknown_restore_option",
+        "code": 2,
+        "expected": 2
+      },
+      {
+        "name": "python_missing_target",
+        "code": 1,
+        "expected": 1
+      },
+      {
+        "name": "python_missing_dry_run",
+        "code": 1,
+        "expected": 1
+      },
+      {
+        "name": "python_mixed_file_batch",
+        "code": 1,
+        "expected": 1
+      },
+      {
+        "name": "python_mixed_batch_valid_dispatch",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "python_mixed_dir_batch",
+        "code": 1,
+        "expected": 1
+      },
+      {
+        "name": "python_file_option_rejects_directory",
+        "code": 1,
+        "expected": 1
+      },
+      {
+        "name": "python_dir_option_rejects_file",
+        "code": 1,
+        "expected": 1
+      },
+      {
+        "name": "python_conflicting_input_modes",
+        "code": 2,
+        "expected": 2
+      },
+      {
+        "name": "python_unicode_dry_run",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "python_dry_run_preserves_bytes",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "python_unimplemented_transform_fails",
+        "code": 1,
+        "expected": 1
+      },
+      {
+        "name": "python_placeholder_contract_explicit",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "python_real_transform_partial_failure_status",
+        "code": 1,
+        "expected": 1
+      },
+      {
+        "name": "python_valid_member_written_despite_batch_failure",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "python_transform_idempotent_status",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "python_transform_idempotent_bytes",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "python_atomic_replace_failure_propagates",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "python_atomic_replace_failure_preserves_original",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "python_atomic_replace_failure_cleans_temp",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "lock_unicode_acquire",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "lock_unicode_payload",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "lock_existing_not_overwritten",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "lock_foreign_release_preserves",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "lock_owner_check",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "lock_owner_release",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "lock_release_removes_only_owned_lock",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "lock_partial_write_failure_status",
+        "code": 1,
+        "expected": 1
+      },
+      {
+        "name": "lock_partial_write_own_cleanup",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "lock_partial_write_gate_cleanup",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "lock_fsync_failure_status",
+        "code": 1,
+        "expected": 1
+      },
+      {
+        "name": "lock_fsync_failure_own_cleanup",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "lock_reacquire_after_own_failed_write",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "lock_malformed_preserved",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "lock_existing_guard_preserved",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "lock_cleanup_preserves_other_inode",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "lock_concurrent_single_winner",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "lock_concurrent_winner_release",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "reparse_symlink_fixture_capability",
+        "code": "SKIP",
+        "expected": "SKIP"
+      },
+      {
+        "name": "bash_syntax",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "bash_no_args_help",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "bash_help",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "bash_version",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "bash_backup_failure",
+        "code": 7,
+        "expected": 7
+      },
+      {
+        "name": "bash_backup_failure_stops_followup",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "bash_backup_failure_errexit",
+        "code": 7,
+        "expected": 7
+      },
+      {
+        "name": "bash_backup_failure_errexit_stops_followup",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "bash_unicode_dry_run",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "bash_dry_run_creates_no_backup",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "bash_unsupported_owner_status",
+        "code": 2,
+        "expected": 2
+      },
+      {
+        "name": "bash_unsupported_owner_no_directory_creation",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "bash_invalid_backup_missing",
+        "code": 2,
+        "expected": 2
+      },
+      {
+        "name": "bash_invalid_backup_missing_no_mutation_or_followup",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "bash_invalid_backup_empty",
+        "code": 2,
+        "expected": 2
+      },
+      {
+        "name": "bash_invalid_backup_empty_no_mutation_or_followup",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "bash_invalid_backup_option_value",
+        "code": 2,
+        "expected": 2
+      },
+      {
+        "name": "bash_invalid_backup_option_value_no_mutation_or_followup",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "bash_invalid_service_option_value",
+        "code": 2,
+        "expected": 2
+      },
+      {
+        "name": "bash_invalid_service_option_value_no_mutation_or_followup",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "bash_invalid_service_empty",
+        "code": 2,
+        "expected": 2
+      },
+      {
+        "name": "bash_invalid_service_empty_no_mutation_or_followup",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "bash_invalid_directory_option_value",
+        "code": 2,
+        "expected": 2
+      },
+      {
+        "name": "bash_invalid_directory_option_value_no_mutation_or_followup",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "bash_invalid_directory_empty",
+        "code": 2,
+        "expected": 2
+      },
+      {
+        "name": "bash_invalid_directory_empty_no_mutation_or_followup",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "bash_invalid_owner_missing",
+        "code": 2,
+        "expected": 2
+      },
+      {
+        "name": "bash_invalid_owner_missing_no_mutation_or_followup",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "bash_invalid_owner_empty",
+        "code": 2,
+        "expected": 2
+      },
+      {
+        "name": "bash_invalid_owner_empty_no_mutation_or_followup",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "bash_invalid_owner_option_value",
+        "code": 2,
+        "expected": 2
+      },
+      {
+        "name": "bash_invalid_owner_option_value_no_mutation_or_followup",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "bash_invalid_action_with_owner_option_value",
+        "code": 2,
+        "expected": 2
+      },
+      {
+        "name": "bash_invalid_action_with_owner_option_value_no_mutation_or_followup",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "bash_invalid_backup_leading_dash_literal_requires_path",
+        "code": 2,
+        "expected": 2
+      },
+      {
+        "name": "bash_invalid_backup_leading_dash_literal_requires_path_no_mutation_or_followup",
+        "code": 0,
+        "expected": 0
+      },
+      {
+        "name": "bash_leading_dash_filename_explicit_path",
+        "code": 0,
+        "expected": 0
+      }
+    ]
+  },
+  "inline_patterns": {
+    "status": "PASS",
+    "python_snippets": 2,
+    "cases": [
+      {
+        "name": "windows_python_snippets_parse",
+        "passed": true
+      },
+      {
+        "name": "byte_lock_initial_file_has_one_byte",
+        "passed": true
+      },
+      {
+        "name": "byte_lock_blocks_competing_process",
+        "passed": true
+      },
+      {
+        "name": "byte_lock_path_retained_after_release",
+        "passed": true
+      },
+      {
+        "name": "byte_lock_reacquired_after_release",
+        "passed": true
+      },
+      {
+        "name": "byte_lock_exception_releases",
+        "passed": true
+      },
+      {
+        "name": "byte_lock_persistent_bytes_preserved",
+        "passed": true
+      }
+    ]
+  },
+  "powershell": {
+    "status": "PASS",
+    "examples": 13,
+    "scope": "syntax only"
+  },
+  "not_executed": [
+    "personal home installation and config merge",
+    "Codex restarted discovery and automatic selection",
+    "operating resources",
+    "ACL ADS owner SMB noncooperating writer guarantees",
+    "full WSL execution"
+  ],
+  "publication": {
+    "branch": "yunli",
+    "main": "user verification pending"
+  },
+  "independent_behavior": {
+    "cases": 6,
+    "scope": "manual single evaluator with separate cases",
+    "record": "codex_windows/verification/behavior_summary.json",
+    "bash_followup": "four invalid operands rejected before operational helpers",
+    "publication_scope_followup": "repository-scoped wording clarified"
+  },
+  "publication_preflight": {
+    "staged_paths": 318,
+    "windows_input_hashes_match": 309,
+    "baseline_tracked_files": 509,
+    "unrelated_bytes_preserved": 495,
+    "inherited_source_whitespace": 6,
+    "new_authored_whitespace": 0
+  }
+}

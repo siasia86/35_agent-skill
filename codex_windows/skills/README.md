@@ -1,18 +1,38 @@
-# Codex Windows skill 영역
+# Windows skill 전체 대응
 
-현재 안내 문서만 있으며 Windows `SKILL.md`와 실행 코드는 없습니다. 이 폴더를 개인 홈에 복사해 설치하지 않습니다.
+Linux의 19개를 **19개 모두** Windows에 이관합니다. 이름·역할을 제거하거나 합치지 않으며 원문·예시·체크리스트·필요 자료를 보존합니다. 활성 Windows 절과 동봉 도구를 실행 기준으로 사용합니다. 최적화와 실제 설치 범위 결정은 후속입니다.
 
-## 1. 선택과 구조
+## 1. 전체 19개
 
-실제 Windows 작업 예시를 기준으로 필요한 skill부터 선택합니다. 문서 검사·저장소 지침 확인·코드 검토·Python 작성 등이 우선 검토 후보이며 확정 목록은 [TODO](../TODO.md)에 기록합니다. 선택한 skill은 `skills/<이름>/` 안에 본문·필수 참조·필요한 실행 코드를 포함하도록 설계합니다. 다른 skill의 별도 설치를 필수 조건으로 두지 않습니다.
+| skill                                                     | 유지한 역할                          | Windows 실행 조건·도구                        |
+|-----------------------------------------------------------|--------------------------------------|-----------------------------------------------|
+| [bash-script-template](bash-script-template/SKILL.md)     | Bash 전체 템플릿·백업·실패 전파      | Git Bash 또는 WSL; native 서비스는 PowerShell |
+| [code-review](code-review/SKILL.md)                       | 코드·스크립트·IaC 검토               | Git·대상 언어 도구; 실행한 검사만 보고        |
+| [debugging-and-recovery](debugging-and-recovery/SKILL.md) | 증거 수집·장애 격리·복구             | Windows 서비스/로그 또는 확인한 원격 Linux    |
+| [doubt-driven-infra](doubt-driven-infra/SKILL.md)         | 비가역 변경의 가정·증거·복구 검토    | 대상 인프라 CLI와 현재 권한 확인              |
+| [git-commit-rule](git-commit-rule/SKILL.md)               | 커밋·PR·변경 기록                    | Git·Python Markdown 도구                      |
+| [incremental-change](incremental-change/SKILL.md)         | 작은 변경·선행 호환성·검증           | Git·대상 IaC/서비스 도구                      |
+| [kiro-lock](kiro-lock/SKILL.md)                           | 협조자 잠금·소유 확인·해제           | Python 동봉 lock; ACL/SMB 보장 별도           |
+| [md-link-check](md-link-check/SKILL.md)                   | Markdown 파일 링크·앵커·헤딩         | Python 검사기 3개 + md_common.py              |
+| [planning-and-breakdown](planning-and-breakdown/SKILL.md) | 목적·범위·의존성·실행 순서           | 현재 저장소 문서 체계; 고정 외부 도구 없음    |
+| [python-script-template](python-script-template/SKILL.md) | 전체 Python 템플릿·UTF-8·원자 쓰기   | Python; 실제 업무 변환은 대상에서 구현        |
+| [readme-template](readme-template/SKILL.md)               | README 구조·표·푸터 규칙             | Python Markdown 도구; 저장소 예외 우선        |
+| [repo-governance](repo-governance/SKILL.md)               | 저장소 지침·예외·권한 확인           | Git·현재 AGENTS와 채택된 정책                 |
+| [security-tools](security-tools/SKILL.md)                 | 비밀정보·보안 도구·마스킹 검토       | Python·실제 제공된 보안 CLI; 개인 map 비공개  |
+| [shipping-checklist](shipping-checklist/SKILL.md)         | 배포 조건·검증·가역성·복구           | 실제 배포 대상 CLI; 요청 범위 확인            |
+| [spec-driven-infra](spec-driven-infra/SKILL.md)           | 인프라 명세·설계·구현·검증           | Terraform/Docker/원격 Ansible 등 대상별 확인  |
+| [testing-guide](testing-guide/SKILL.md)                   | 테스트 설계·경계·실패·운영 지표      | 대상 언어 도구·명시한 playbook/container      |
+| [using-skills](using-skills/SKILL.md)                     | 전체 19개 역할 대응·필요 참조 선택   | 동봉 역할 18개·현재 작업 도구                 |
+| [work-rules](work-rules/SKILL.md)                         | 전체 공통 작업·문서·파일·서비스 규약 | PowerShell·Git·Python; Linux 업무 계층 구분   |
+| [zircon-readme-policy](zircon-readme-policy/SKILL.md)     | Zircon 대상 README 정책·예외         | 명시 채택 저장소에서만; 동봉 Python 도구      |
 
-[Linux 19개 모음](../../codex_linux/README.md)의 원문·예시·참조를 보존합니다. 본문을 축약한 복제나 플랫폼명 치환만으로 Windows 완료 판정을 만들지 않습니다.
+## 2. 단독 사용과 보존
 
-## 2. 완료 조건
+폴더 전체를 복사하면 동봉 참조·필요 helper를 사용할 수 있습니다. 다른 개인 skill 설치는 필요하지 않습니다. 실제 작업에 필요한 참조만 읽고 순환 참조를 반복하지 않습니다. 동봉 역할 54개도 Windows 본문으로 대응합니다.
 
-각 skill의 적용 조건·Windows 실행 도구·UTF-8 처리·실패 동작·원문 대응·단독 폴더 검증을 확인합니다. 최종 모델 행동과 실제 설치·발견은 각각 별도로 기록합니다.
+`references/kiro-original.md`는 Kiro 원문, `references/linux-original.md`는 Linux 활성 원문입니다. 동봉 역할의 Linux 원문과 기존 도구는 각각 `references/linux-skills/`, `references/linux-tools/`에 bytes로 보존합니다. 원본과 활성 파일의 전체 대응은 [manifest](../verification/source_manifest.json)에 있습니다. 비교용 Python 파일은 실행 도구가 아니며 `scripts/`의 Windows 사본을 사용합니다.
 
-전체 순서는 [PLAN](../PLAN.md), 현재 직접 검사 범위는 [REVIEW](../REVIEW.md)를 따릅니다.
+현재 검사 범위와 환경 제약은 [검토 결과](../REVIEW.md), 설정은 [personal 안내](../personal/README.md), 게시·사용자 검증 순서는 [PLAN](../PLAN.md)을 따릅니다.
 
 ---
 
