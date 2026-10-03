@@ -2,4 +2,5 @@
 kiro/** -text
 gpt/** -text
 105_backup/** -text
-codex/** text eol=lf
+codex_linux/** text eol=lf
+codex_windows/** text eol=lf

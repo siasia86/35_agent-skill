@@ -39,7 +39,7 @@ Luna workflow 조사에서 사라진 codex/payload 경로와 과거 관찰의 �
 
 ## 6. 새 개인 스킬 작성과 검증
 
-[Codex 모음](../../codex/README.md)에 19개 독립 복사 폴더·선택적 개인 지침·수동 복사 안내를 작성했습니다. [원문 대응](../../codex/MIGRATION.md)에 source 해시·행 대응·호환 사유·미지원 상태를 기록하고 [VERIFICATION](../../codex/VERIFICATION.md)에 전체 검사와 Luna 결과를 남깁니다. source를 줄이거나 자기 본문을 상세 참조로 이동하지 않았습니다.
+[Codex 모음](../../codex_linux/README.md)에 19개 독립 복사 폴더·선택적 개인 지침·수동 복사 안내를 작성했습니다. [원문 대응](../../codex_linux/MIGRATION.md)에 source 해시·행 대응·호환 사유·미지원 상태를 기록하고 [VERIFICATION](../../codex_linux/VERIFICATION.md)에 전체 검사와 Luna 결과를 남깁니다. source를 줄이거나 자기 본문을 상세 참조로 이동하지 않았습니다.
 
 주 agent 검사는 frontmatter 19개, 전체 원문/워크플로 bytes 대응, 폴더 내부 참조 173개, 활성 문서 73개 파일 링크 175개, 문서 139개 헤딩 2,764개, Python 25개 구문과 단독 tool 실행 35회, 실제 잠금 조건 8개입니다. 원시 style의 234건은 지침 푸터 적용/원문 예시 경고를 포함합니다. 지침 footer 제외 후 원문 51건·활성 51건·새 경고 0건으로 비교하고 원문을 수정하지 않습니다. root/new 안내 문서는 별도로 검사합니다.
 
@@ -64,6 +64,6 @@ Terraform provider 부재로 validate가 실패한 사례는 부분 검사이며
 
 **작성일**: 2026-10-01
 
-**마지막 업데이트**: 2026-10-01
+**마지막 업데이트**: 2026-10-03
 
 © 2026 siasia86. Licensed under CC BY 4.0.

@@ -10,7 +10,7 @@ import subprocess
 import tempfile
 
 ROOT = Path(__file__).resolve().parents[2]
-SKILLS = ROOT / 'codex/skills'
+SKILLS = ROOT / 'codex_linux/skills'
 COMPAT = re.compile(r'\n\n<!-- CODEX-COMPAT-BEGIN -->.*?<!-- CODEX-COMPAT-END -->\n', re.S)
 
 

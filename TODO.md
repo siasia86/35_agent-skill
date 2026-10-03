@@ -1,4 +1,6 @@
 # AI 운영 설정 통합 관리 및 Codex 배포 TODO
+
+현재 플랫폼 분리 후속은 [Windows PLAN](codex_windows/PLAN.md)·[Windows TODO](codex_windows/TODO.md)와 [분리 기록](agent-workflows/codex/PLATFORM_SPLIT_2026-10-03.md)에서 확인합니다. 아래 중앙 배포 개발 기록·과거 경로·완료 상태는 당시 근거로 유지합니다.
 <!-- reference: _reference/32_system-engineering-resources/ref_codex_cli_official_notes.md -->
 
 31에서 저장소별 AI 운영 구성을 관리하고, 35의 지침·skill·agent와 30의 검사 도구를 조합하여 여러 환경에 배포하기 위한 작업 목록입니다. 대상 저장소를 이 문서에서는 consumer라고 부릅니다.
@@ -7,7 +9,7 @@
 
 **2026-10-01 / 1.0.0:** 이 문서의 중앙 배포 개발 이력과 기존 다음 단계는 역사 기록으로 보존합니다. 이번 개인 스킬 재작성의 현재 작업은 [TODO2](TODO2.md)와 [실행 기록](agent-workflows/codex/REBUILD_1.0.0.md)입니다. 30·31 작업·운영 적용을 자동 재개하지 않습니다.
 
-**2026-10-03 / 세션 재개:** [세션 인계](agent-workflows/codex/HANDOFF.md)와 [현재 Codex TODO](codex/TODO.md)의 추가 검토 항목부터 확인합니다. 이 문서의 과거 미완료 체크리스트를 현재 작업으로 자동 확대하지 않습니다.
+**2026-10-03 / 세션 재개:** [세션 인계](agent-workflows/codex/HANDOFF.md)와 [현재 Codex TODO](codex_linux/TODO.md)의 추가 검토 항목부터 확인합니다. 이 문서의 과거 미완료 체크리스트를 현재 작업으로 자동 확대하지 않습니다.
 
 ## 목차
 

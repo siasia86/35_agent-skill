@@ -70,7 +70,7 @@ python3 codex/verification/verify_skills.py
 
 `525f0e01ac0ce0a31797ebfe53f2695af3a267ec`을 일반 push한 뒤 git ls-remote로 원격 yunli가 같은 SHA임을 확인했습니다. 원격 main `4227f1d6b703238e3d2b763a0d320998cfeedc09`와 design `55282e293f00e074d9c812561fcf4edb115f111d`도 유지됐습니다. 게시 clone은 clean이며 root Git 관리 영역은 보존합니다. 실제 확인 결과를 담은 이 후속 문서 커밋도 같은 yunli에 일반 push합니다. 이 문서 자체의 커밋 SHA는 자기 참조하지 않고 최종 Git HEAD와 사용자 응답에서 확인합니다.
 
-다음 작업은 [Codex TODO](../../codex/TODO.md)의 재현 완료 항목 보완, 참조 조건 확정, 최종본 독립 사례 확인입니다. main 병합의 충돌 검토는 통과했지만 스킬 전체 동작 완료 판정은 보류합니다. 게시 후 복구는 이번 커밋의 검토된 revert를 사용하며 기존 사용자 변경을 보존합니다.
+다음 작업은 [Codex TODO](../../codex_linux/TODO.md)의 재현 완료 항목 보완, 참조 조건 확정, 최종본 독립 사례 확인입니다. main 병합의 충돌 검토는 통과했지만 스킬 전체 동작 완료 판정은 보류합니다. 게시 후 복구는 이번 커밋의 검토된 revert를 사용하며 기존 사용자 변경을 보존합니다.
 
 ## 7. 네 브랜치의 실제 병합
 

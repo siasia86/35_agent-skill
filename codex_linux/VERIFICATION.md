@@ -1,5 +1,7 @@
 # Codex 개인 스킬 검증 기록
 
+플랫폼 분리 후 이 문서는 Linux 이식본의 검증 기록입니다. 과거 JSON·명령·입력 해시는 당시 내용으로 유지하고 첫 `codex/` 경로를 `codex_linux/`에 대응합니다. workflow reviews의 `validate_remediation.py`와 재현기는 당시 경로·환경·입력에 고정된 역사 자료이므로 현재 검사기로 자동 실행하지 않습니다. 현재 분리 검증은 [분리 기록](../agent-workflows/codex/PLATFORM_SPLIT_2026-10-03.md)에 별도로 남깁니다.
+
 1~5절은 2026-10-01 당시의 검사 기록입니다. 최신 로컬 보완 결과는 6절을 따르며 과거 게시·모델 지정은 새 실행 권한이나 현재 검증 결과가 아닙니다. 6절의 commit/push 미실행은 보완 당시 상태이며, 후속 실제 게시·main 병합·로컬 정합화는 [게시 결과](../agent-workflows/codex/REMEDIATION_2026-10-03.md#7-yunli-게시와-main-병합-완료)에 기록합니다.
 
 ## 1. 목적과 실행 범위

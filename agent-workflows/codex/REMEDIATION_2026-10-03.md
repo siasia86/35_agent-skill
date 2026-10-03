@@ -17,15 +17,15 @@
 - 링크 검사기: 실행용 사본 7개에서 펜스 문자·길이·닫는 태그·최대 3칸 들여쓰기를 추적합니다. 미닫힘은 종료 2로 보고하고 다른 파일의 검사는 계속합니다. 검사기 날짜 버전은 `26.10.03`이며 외부 source는 변경하지 않았습니다.
 - 참조 완결성: shipping-checklist의 code-review와 네 STYLE 역할의 readme-template·그 문서가 요구하는 md-link-check를 전체 지침과 비교 원문으로 동봉했습니다. governance 템플릿 이름은 대상 저장소가 채택한 조건부 입력으로 명시했습니다. 필수 자료 접근 실패를 자동 대체하는 규칙은 추가하지 않았습니다.
 
-모든 보완 예시는 CODEX-COMPAT 절 안에 추가했고 실제 동봉 활성 사본에도 반영했습니다. Kiro의 본문·예시·템플릿·체크리스트는 삭제·축약·통합하지 않았습니다. [MIGRATION](../../codex/MIGRATION.md)의 행 대응 표는 현재본을 기준으로 갱신했습니다.
+모든 보완 예시는 CODEX-COMPAT 절 안에 추가했고 실제 동봉 활성 사본에도 반영했습니다. Kiro의 본문·예시·템플릿·체크리스트는 삭제·축약·통합하지 않았습니다. [MIGRATION](../../codex_linux/MIGRATION.md)의 행 대응 표는 현재본을 기준으로 갱신했습니다.
 
 ## 3. 실제 검증 결과
 
 수정 전 재현 스크립트는 종료 0으로 기존 동작 문제 5개를 다시 확인했습니다. [baseline.json](reviews/2026-10-03-remediation/baseline.json)에 새 관찰을 보존하며 앞선 검토 JSON을 덮어쓰지 않았습니다.
 
-- **통과:** [회귀 테스트](../../codex/verification/test_remediation.py) 16개·CLI 실행 120회입니다. Python의 무인수/help/version/잘못된 옵션/처리 분기, 네 파일 mode와 동일 uid/gid 보존, 새 파일 0600, 실패 시 원본 유지/임시 파일 정리, Bash의 일반/set-e 상태 7 전파/로그/후속 차단, argv 보존, flock의 waiter/새 프로세스 배제와 예외 해제를 검사했습니다.
+- **통과:** [회귀 테스트](../../codex_linux/verification/test_remediation.py) 16개·CLI 실행 120회입니다. Python의 무인수/help/version/잘못된 옵션/처리 분기, 네 파일 mode와 동일 uid/gid 보존, 새 파일 0600, 실패 시 원본 유지/임시 파일 정리, Bash의 일반/set-e 상태 7 전파/로그/후속 차단, argv 보존, flock의 waiter/새 프로세스 배제와 예외 해제를 검사했습니다.
 - **통과:** 링크 검사기 7개를 각각 단독 폴더로 복사하여 중첩·tilde·더 긴 닫는 펜스·태그/다른 문자·들여쓰기·행 번호·미닫힘·혼합 파일·기존 외부/앵커/인라인 제외를 확인했습니다. 같은 오류 입력을 숨기는 종료 0은 없었습니다.
-- **통과:** [기본 검사](../../codex/verification/verify_skills.py)에서 스킬 19개·전체 동봉 역할 54개·폴더 내부 참조 213개·Python 도구 25개·단독 도구 실행 35회·kiro-lock 조건 8개입니다. source 본문과 비교 원문의 bytes 대응도 확인했습니다.
+- **통과:** [기본 검사](../../codex_linux/verification/verify_skills.py)에서 스킬 19개·전체 동봉 역할 54개·폴더 내부 참조 213개·Python 도구 25개·단독 도구 실행 35회·kiro-lock 조건 8개입니다. source 본문과 비교 원문의 bytes 대응도 확인했습니다.
 
 - **통과:** Markdown 45개에서 source 대비 새 style 경고 0건, 헤딩 820개·파일 링크 163개·앵커 13개 오류 0건, frontmatter 19개 실패 0건, 변경 Python 9개 구문·diff 검사를 확인했습니다. 원시 style 경고 89건은 기존 source/푸터 경고로 유지합니다. 회귀 입력 80개의 해시는 현재 파일과 같고, 기존 추적 파일 472개 중 변경 33개 외 439개는 해시가 같습니다. 보호 원본 변경·누락은 0개이며 HEAD와 staged 상태도 유지했습니다.
 
@@ -51,7 +51,7 @@ python3 codex/verification/verify_skills.py
 python3 agent-workflows/codex/reviews/2026-10-03-remediation/validate_remediation.py --output /tmp/35-remediation-validation.json
 ```
 
-다음 미완료 항목은 [Codex TODO](../../codex/TODO.md)의 최종본 독립 사례와 사용자가 선택한 실제 환경 확인입니다. 구현 보완·로컬 테스트 완료와 게시/설치 완료를 구분합니다. [HANDOFF](HANDOFF.md#9-동작-보완과-로컬-테스트-완료)의 최신 범위를 따릅니다.
+다음 미완료 항목은 [Codex TODO](../../codex_linux/TODO.md)의 최종본 독립 사례와 사용자가 선택한 실제 환경 확인입니다. 구현 보완·로컬 테스트 완료와 게시/설치 완료를 구분합니다. [HANDOFF](HANDOFF.md#9-동작-보완과-로컬-테스트-완료)의 최신 범위를 따릅니다.
 
 ## 6. 보완 변경 게시와 main 병합 승인
 

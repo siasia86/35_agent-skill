@@ -1,5 +1,7 @@
 # 35 `agent-skill`
 
+현재 플랫폼 진입점은 [Linux 모음](codex_linux/README.md)과 [Windows 계획](codex_windows/PLAN.md)입니다. Linux의 기존 19개 skill은 보존하고 Windows는 [TODO](codex_windows/TODO.md)를 따라 전용 재작성을 준비합니다. [분리 기록](agent-workflows/codex/PLATFORM_SPLIT_2026-10-03.md)에 경로 대응·검증·복구와 게시 상태를 남깁니다.
+
 **저장소 버전: 1.0.0** — 2026-10-01 기존 Codex 개발본을 이력 보존 영역으로 옮기고 개인 스킬 모음을 새로 구성합니다. 버전은 [VERSION](VERSION)과 [CHANGELOG](CHANGELOG.md)에서 관리합니다. Git main 게시나 runtime 설치 상태를 뜻하지 않습니다.
 
 ## 1. 목적
@@ -16,7 +18,8 @@
 
 - `kiro/`: 실제 Kiro 개인 스킬·prompt·스타일의 보존 원본.
 - `gpt/`: 이전 GPT/Codex 이식의 보존 원본.
-- [codex/](codex/README.md): 폴더 단위로 단독 복사하는 Codex 개인 스킬 19개, 선택적 개인 지침 예시와 검증 기록.
+- [codex_linux/](codex_linux/README.md): 폴더 단위로 단독 복사하는 Codex 개인 스킬 19개, 선택적 개인 지침 예시와 검증 기록.
+- [codex_windows/](codex_windows/README.md): Windows 전용 재작성의 계획·문서 골격. 설치 가능한 skill은 아직 없습니다.
 - [105_backup/codex](105_backup/codex/README.md): 폐기한 개발본·payload·catalog·설치기·governance·검증 이력. 새 설치 원본으로 사용하지 않습니다.
 - [agent-workflows](agent-workflows/README.md): 공통 적용 절차, 환경·사용자·작업공간별 관찰과 검증 기록 및 과거 설치 사본.
 - `claude/`: 기존 예약 영역.
@@ -26,17 +29,17 @@
 
 ## 3. 개인 스킬의 사용 단위
 
-새 스킬은 `codex/skills/<이름>/` 전체를 실행 사용자의 `~/.agents/skills/<이름>/`에 복사하는 형태로 작성합니다. 스킬 폴더 안에 필요한 자료를 포함하고 다른 스킬의 별도 설치·catalog·installer·30·31 저장소를 요구하지 않습니다. Git·Python·Terraform 같은 작업 도구와 해당 작업의 권한은 실제 실행 환경에서 확인합니다.
+기존 Linux 스킬은 `codex_linux/skills/<이름>/` 전체를 실행 사용자의 `~/.agents/skills/<이름>/`에 복사하는 형태로 작성합니다. 스킬 폴더 안에 필요한 자료를 포함하고 다른 스킬의 별도 설치·catalog·installer·30·31 저장소를 요구하지 않습니다. Git·Python·Terraform 같은 작업 도구와 해당 작업의 권한은 실제 실행 환경에서 확인합니다.
 
-사용자 홈에 설치한 스킬은 같은 사용자로 작업하는 여러 저장소에서 사용할 수 있습니다. 저장소별 구성이 필요하면 해당 저장소의 `.agents/skills/<이름>/`에 선택한 폴더를 배치합니다. 같은 이름의 스킬이 여러 범위에 있으면 중복과 실제 선택 대상을 확인합니다. [Codex 적용 범위](codex/README.md#21-적용-범위)와 [환경·작업공간별 기록 기준](agent-workflows/README.md#41-환경과-작업공간별-기록)을 따릅니다.
+사용자 홈에 설치한 스킬은 같은 사용자로 작업하는 여러 저장소에서 사용할 수 있습니다. 저장소별 구성이 필요하면 해당 저장소의 `.agents/skills/<이름>/`에 선택한 폴더를 배치합니다. 같은 이름의 스킬이 여러 범위에 있으면 중복과 실제 선택 대상을 확인합니다. [Codex 적용 범위](codex_linux/README.md#21-적용-범위)와 [환경·작업공간별 기록 기준](agent-workflows/README.md#41-환경과-작업공간별-기록)을 따릅니다.
 
-[수동 복사 안내](codex/README.md#2-수동-복사), [원문 대응과 변경 이유](codex/MIGRATION.md), [19개 스킬 검증 결과](codex/VERIFICATION.md)를 확인합니다. 현재 Codex 개인 스킬 작업은 Kiro의 개인 규칙·템플릿·워크플로를 원문 보존 방식으로 이식한 것입니다. 이 이식 단계에서는 내용 삭제·축약·통합 없이 Codex 호환 절을 추가했으며, 경량화는 이후 별도 검토입니다. 실제 원본이 없는 개인 보안 도구의 배포·map 호환성은 별도 미검증으로 명시합니다.
+[수동 복사 안내](codex_linux/README.md#2-수동-복사), [원문 대응과 변경 이유](codex_linux/MIGRATION.md), [19개 스킬 검증 결과](codex_linux/VERIFICATION.md)를 확인합니다. 현재 Codex 개인 스킬 작업은 Kiro의 개인 규칙·템플릿·워크플로를 원문 보존 방식으로 이식한 것입니다. 이 이식 단계에서는 내용 삭제·축약·통합 없이 Codex 호환 절을 추가했으며, 경량화는 이후 별도 검토입니다. 실제 원본이 없는 개인 보안 도구의 배포·map 호환성은 별도 미검증으로 명시합니다.
 
 스킬 생성과 폴더 복사 검증을 실제 개인 홈 설치·자동 발견·운영 적용으로 처리하지 않습니다. 기존 동명 스킬이 있으면 백업·비교하고 사용자 편집을 보존합니다. 개인 설정 예시와 실제 개인 config도 구분합니다.
 
 ## 4. 작업과 검증
 
-- [세션 인계](agent-workflows/codex/HANDOFF.md): 마지막 게시 상태·미게시 변경·추가 검토 근거·다음 세션의 재개 순서. 현재 미완료 항목은 [Codex TODO](codex/TODO.md)에서 확인합니다.
+- [세션 인계](agent-workflows/codex/HANDOFF.md): 마지막 게시 상태·미게시 변경·추가 검토 근거·다음 세션의 재개 순서. 플랫폼별 후속은 [Linux TODO](codex_linux/TODO.md)와 [Windows TODO](codex_windows/TODO.md)에서 확인합니다.
 - [2026-10-03 병합 검토와 실제 통합](agent-workflows/codex/MERGE_REVIEW_2026-10-03.md): 전체 원격 브랜치의 검토 결과, 원문 보존·동작 제한과 후속 요청의 원격/로컬 main·yunli 통합 상태.
 - [TODO2](TODO2.md): 원문 보존·최소 호환성 수정·후속 경량화 검토 기준.
 - [실행 기록](agent-workflows/codex/REBUILD_1.0.0.md): 이번 6개 작업의 순서·권한·검증·게시·복구.

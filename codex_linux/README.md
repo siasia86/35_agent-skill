@@ -1,4 +1,8 @@
-# Codex 개인 스킬
+# Codex Linux 개인 스킬
+
+이 디렉토리는 기존 `codex/`를 같은 깊이로 옮긴 Linux 원문 보존 이식본입니다. skill 19개·personal 자료·검증 JSON의 bytes를 유지하며 Windows 전용 재작성은 [Windows PLAN](../codex_windows/PLAN.md)에서 준비합니다. PowerShell 복사 예시는 Linux 원본 파일의 복사 안내이며 Windows 실행 호환성의 통과 근거가 아닙니다.
+
+과거 검증 JSON의 `codex/` 입력 경로·해시·원시 명령은 바꾸지 않습니다. 현재 파일 대조에서는 첫 `codex/`만 `codex_linux/`로 대응합니다. [플랫폼 분리 기록](../agent-workflows/codex/PLATFORM_SPLIT_2026-10-03.md)에서 검증·복구·게시 상태를 확인합니다.
 
 저장소 버전 **1.0.0**의 개인 스킬 복제본입니다. `skills/<이름>/` 폴더 전체를 복사하면 그 스킬의 지침·필수 참조를 사용할 수 있습니다. Kiro 스킬 19개의 본문·코드·예시·체크리스트를 줄이지 않고 Codex 호환 규칙을 추가했습니다.
 
@@ -7,7 +11,7 @@
 ## 1. 구조
 
 ```text
-codex/
+codex_linux/
 ├── README.md
 ├── MIGRATION.md                 원문 대응·변경 이유·해시
 ├── VERIFICATION.md              실제 검사와 Luna 사례 결과
@@ -67,7 +71,7 @@ if [ -e "$skill_target" ]; then
     printf '기존 스킬을 먼저 비교·백업하세요: %s\n' "$skill_target"
 else
     mkdir -p "$HOME/.agents/skills"
-    cp -a "codex/skills/$skill_name" "$skill_target"
+    cp -a "codex_linux/skills/$skill_name" "$skill_target"
 fi
 ```
 
@@ -81,7 +85,7 @@ if (Test-Path $skillTarget) {
     Write-Output "기존 스킬을 먼저 비교·백업하세요: $skillTarget"
 } else {
     New-Item -ItemType Directory -Force $skillRoot | Out-Null
-    Copy-Item -Recurse "codex/skills/$skillName" $skillTarget
+    Copy-Item -Recurse "codex_linux/skills/$skillName" $skillTarget
 }
 ```
 

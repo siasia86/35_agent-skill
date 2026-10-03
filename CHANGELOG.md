@@ -4,6 +4,13 @@
 
 ## [Unreleased]
 
+### Windows Linux 플랫폼 분리 — 2026-10-03
+
+- 기존 codex를 codex_linux로 이동하고 Linux skill 19개·원문·동반 자료·개인 지침·검증 JSON을 보존합니다. 현행 안내와 개발 검증 경로를 새 위치로 연결합니다.
+- codex_windows에는 Windows 전용 재작성의 PLAN·TODO·ISSUE·REVIEW와 문서 골격만 준비합니다. 설치 가능한 skill과 Windows 동작 검증은 후속입니다.
+- 과거 JSON의 입력 경로·해시·원시 명령·개인 설치 관찰과 보호 원본은 유지합니다. 경로 대응·검증·복구·게시 상태는 [플랫폼 분리 기록](agent-workflows/codex/PLATFORM_SPLIT_2026-10-03.md)에 남깁니다.
+- 설정·개인 홈 설치·WSL 설치·release·운영 적용은 수행하지 않고 VERSION 1.0.0을 유지합니다. 검증 후 yunli 게시·사용자 검증을 거쳐 main 반영을 진행하며 사용자 검증 전 main은 유지합니다.
+
 ### 보완 변경 yunli 게시와 main 병합 — 2026-10-03
 
 - 후속 사용자 요청으로 보완 변경 59개를 `a010cc7`에 commit하여 yunli에 일반 push하고 main에 fast-forward 병합·push했습니다. 실제 원격 두 SHA 일치와 design 유지를 확인했습니다.
@@ -268,6 +275,6 @@
 
 **작성일**: 2026-08-31
 
-**마지막 업데이트**: 2026-10-02
+**마지막 업데이트**: 2026-10-03
 
 © 2026 siasia86. Licensed under CC BY 4.0.

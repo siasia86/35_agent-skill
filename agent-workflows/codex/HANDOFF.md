@@ -2,7 +2,9 @@
 
 ## 1. 재개할 작업과 읽기 순서
 
-**2026-10-03 현재 상태:** 원격·로컬 main·yunli 통합 이후 사용자 요청으로 동작 문제 5개와 참조 완결성을 로컬 보완하고 회귀 검사를 마쳤습니다. 수정본은 후속 요청으로 yunli 게시와 main 병합을 마쳤으며 최신 상태는 아래 10절과 [보완 기록](REMEDIATION_2026-10-03.md#7-yunli-게시와-main-병합-완료)을 따릅니다. 다음 미완료 항목은 최종본 독립 모델 사례와 사용자가 선택하는 실제 환경 확인입니다. [codex/TODO](../../codex/TODO.md#1-다음-세션에서-이어갈-추가-검토)에 범위를 남깁니다.
+**2026-10-03 현재 상태:** 기존 `codex/`를 `codex_linux/`로 이동했고 `codex_windows/`에는 문서 골격 8개를 작성했습니다. 현재 재개할 작업은 [Windows PLAN](../../codex_windows/PLAN.md)·[Windows TODO](../../codex_windows/TODO.md)이며 실제 상태는 [플랫폼 분리 기록](PLATFORM_SPLIT_2026-10-03.md)을 먼저 확인합니다. 새 skill 작성·설치·설정과 main 게시를 완료로 표시하지 않습니다.
+
+**플랫폼 분리 전 2026-10-03 상태:** 원격·로컬 main·yunli 통합 이후 사용자 요청으로 동작 문제 5개와 참조 완결성을 로컬 보완하고 회귀 검사를 마쳤습니다. 수정본은 후속 요청으로 yunli 게시와 main 병합을 마쳤으며 최신 상태는 아래 10절과 [보완 기록](REMEDIATION_2026-10-03.md#7-yunli-게시와-main-병합-완료)을 따릅니다. 다음 미완료 항목은 최종본 독립 모델 사례와 사용자가 선택하는 실제 환경 확인입니다. [codex/TODO](../../codex_linux/TODO.md#1-다음-세션에서-이어갈-추가-검토)에 범위를 남깁니다.
 
 **같은 날 후속 완료:** 사용자 요청의 yunli 게시와 전체 브랜치 병합 검토를 마쳤습니다. 최신 상태는 아래 7절과 [병합 검토](MERGE_REVIEW_2026-10-03.md)를 우선 확인합니다. 아래 1~6절의 최초 인계 관찰·미게시 목록·미실행 기록은 작성 당시 상태입니다.
 
@@ -10,12 +12,12 @@
 
 다음 세션에서 이 저장소를 열고 아래 요청으로 이어갈 수 있습니다.
 
-> AGENTS.md와 agent-workflows/codex/HANDOFF.md의 9절, codex/TODO.md를 읽고 남은 최종본 사례·환경 확인의 범위를 먼저 대조해 줘. 이미 통과한 로컬 보완은 실제 파일·Git 상태와 확인하고, 이번 요청에는 commit·push·설치·운영 적용을 포함하지 않아.
+> AGENTS.md, agent-workflows/codex/PLATFORM_SPLIT_2026-10-03.md, codex_windows/PLAN.md와 codex_windows/TODO.md를 읽고 현재 Windows 전용 재작성 범위를 먼저 대조해 줘. Linux 원문·과거 검증·개인 설치 관찰은 보존하고 검증 후 yunli commit/push, 사용자 검증 후 main 반영 순서를 따라 줘. 설치·설정·운영 적용은 별도 요청 범위로 남겨 줘.
 
 1. 루트 [AGENTS](../../AGENTS.md)와 이 인계 문서를 읽습니다. 이미 제공된 같은 지침을 중복해서 읽을 필요는 없습니다.
-2. [현재 TODO](../../codex/TODO.md)의 1절과 [원시 검토 결과](reviews/2026-10-02/findings.json)를 읽고 대상 항목을 선택합니다.
+2. [Windows PLAN](../../codex_windows/PLAN.md)·[Windows TODO](../../codex_windows/TODO.md)와 [플랫폼 분리 기록](PLATFORM_SPLIT_2026-10-03.md)을 먼저 확인합니다. 기존 Linux 후속은 [Linux TODO](../../codex_linux/TODO.md)의 1절과 [원시 검토 결과](reviews/2026-10-02/findings.json)를 읽고 대상 항목을 선택합니다.
 3. [TODO2](../../TODO2.md)의 9절에서 원문 보존·최소 수정·우선순위를 확인합니다. 전체 과거 TODO 실행으로 확대하지 않습니다.
-4. 선택한 스킬·동반 자료·Kiro 원문·[MIGRATION](../../codex/MIGRATION.md)·[VERIFICATION](../../codex/VERIFICATION.md)의 관련 부분만 대조합니다. 과거 작업 범위·게시 근거는 [REBUILD](REBUILD_1.0.0.md)에서 확인합니다.
+4. 선택한 스킬·동반 자료·Kiro 원문·[MIGRATION](../../codex_linux/MIGRATION.md)·[VERIFICATION](../../codex_linux/VERIFICATION.md)의 관련 부분만 대조합니다. 과거 작업 범위·게시 근거는 [REBUILD](REBUILD_1.0.0.md)에서 확인합니다.
 
 1~8절의 최초 사용자 요청은 다른 세션을 위한 인계 저장과 후속 게시·병합이었습니다. 위 재개 문장은 다음 세션에 전달할 요청 예시이며, 인계 문서 자체가 추가 구현·게시·설치의 새 승인은 아닙니다. 새 세션의 실제 사용자 요청과 플랫폼·현재 권한을 우선합니다. .codex/config.toml이나 개인 설정을 추가로 로드해야 인계가 성립하는 구조는 아닙니다.
 
@@ -69,13 +71,13 @@ git diff --cached --stat
 
 [findings.json](reviews/2026-10-02/findings.json)은 2026-10-02 임시 검토 결과를 bytes 그대로 보존한 자료입니다. 원래 경로는 `/tmp/35-codex-content-review-vhgnyq9o/findings.json`이며, 새 세션은 저장소 사본을 사용합니다. 로그 속 /tmp 경로와 시각은 당시 출처이고 현재 실행 결과가 아닙니다. 재현에 사용한 전체 명령·fixture·사례 입력이 모두 보존된 자료는 아니므로 대상 원문에서 최소 재현을 다시 만듭니다.
 
-1. **Python 인수 없는 실행:** `python_no_args`에 `NameError: name 'parser' is not defined`가 있습니다. [Python 스킬](../../codex/skills/python-script-template/SKILL.md)의 전체 템플릿에서 parse_args가 만든 parser와 main의 도움말 분기 범위를 확인합니다.
+1. **Python 인수 없는 실행:** `python_no_args`에 `NameError: name 'parser' is not defined`가 있습니다. [Python 스킬](../../codex_linux/skills/python-script-template/SKILL.md)의 전체 템플릿에서 parse_args가 만든 parser와 main의 도움말 분기 범위를 확인합니다.
 2. **Python 원자적 쓰기:** `atomic_write_mode`에 기존 `0755`가 `0600`으로 바뀐 결과가 있습니다. 같은 스킬의 `_atomic_write`, 임시 파일 모드와 os.replace를 격리 파일에서 확인하고, 기존 권한·소유 보존에 필요한 조건을 검토합니다.
-3. **Bash 실패 전파:** `bash_default`에 실패 로그 뒤 반환 0·후속 단계 실행이 있고, `bash_errexit`에는 종료 1·stdout 없음이 있습니다. [Bash 스킬](../../codex/skills/bash-script-template/SKILL.md)의 run_msg_info와 호출부를 일반 실행·set -e 조건에서 비교합니다. 시스템 로그 경로·서비스 예제를 그대로 실행하지 않습니다.
-4. **fcntl.flock 경로 삭제:** `flock_unlink_race`에 서로 다른 inode의 잠금을 동시에 잡은 결과가 있습니다. [work-rules](../../codex/skills/work-rules/SKILL.md)의 Python fcntl.flock 예시에서 잠금 해제·close·os.remove 순서를 격리 재현합니다. 실제 kiro-lock helper의 gate·O_EXCL 검사와 같은 구현으로 취급하지 않습니다.
-5. **중첩 펜스 뒤 링크 누락:** `md_link_normal`은 깨진 링크 1건으로 실패하지만 `md_link_nested`는 펜스 경고와 함께 링크 0개·종료 0을 보고합니다. [md-link-check 스킬](../../codex/skills/md-link-check/SKILL.md)의 동봉 검사기에서 유효한 외부 4-backtick 블록 뒤의 링크가 누락되는지 확인하고 동봉 사본의 영향 범위를 조사합니다. 펜스 경고가 있는 검사 결과를 링크 검증 성공으로 확대하지 않습니다.
+3. **Bash 실패 전파:** `bash_default`에 실패 로그 뒤 반환 0·후속 단계 실행이 있고, `bash_errexit`에는 종료 1·stdout 없음이 있습니다. [Bash 스킬](../../codex_linux/skills/bash-script-template/SKILL.md)의 run_msg_info와 호출부를 일반 실행·set -e 조건에서 비교합니다. 시스템 로그 경로·서비스 예제를 그대로 실행하지 않습니다.
+4. **fcntl.flock 경로 삭제:** `flock_unlink_race`에 서로 다른 inode의 잠금을 동시에 잡은 결과가 있습니다. [work-rules](../../codex_linux/skills/work-rules/SKILL.md)의 Python fcntl.flock 예시에서 잠금 해제·close·os.remove 순서를 격리 재현합니다. 실제 kiro-lock helper의 gate·O_EXCL 검사와 같은 구현으로 취급하지 않습니다.
+5. **중첩 펜스 뒤 링크 누락:** `md_link_normal`은 깨진 링크 1건으로 실패하지만 `md_link_nested`는 펜스 경고와 함께 링크 0개·종료 0을 보고합니다. [md-link-check 스킬](../../codex_linux/skills/md-link-check/SKILL.md)의 동봉 검사기에서 유효한 외부 4-backtick 블록 뒤의 링크가 누락되는지 확인하고 동봉 사본의 영향 범위를 조사합니다. 펜스 경고가 있는 검사 결과를 링크 검증 성공으로 확대하지 않습니다.
 6. **참조 완결성:** `dependency_gaps`에는 shipping-checklist의 code-review 요구, git-commit-rule·md-link-check·security-tools·work-rules의 STYLE 푸터 참조, repo-governance의 governance_template.md·verification_template.md 언급이 있습니다. 문자열 언급이 모두 필수 파일 의존성인지는 미확정입니다. 실제 요구·범위·대체 절차를 대조한 뒤 폴더 단독 사용에 필요한 자료를 판단합니다.
-7. **최종 스킬과 Luna 입력 차이:** `not_exact_final_luna`에는 md-link-check·using-skills·zircon-readme-policy가 있습니다. [기존 Luna 원시 결과](../../codex/verification/luna-results.json)와 사례 입력·최종 파일 해시를 대조합니다. 보존되지 않은 입력은 미확인으로 남기고 필요한 최종본 사례를 검토합니다. 과거 Luna 지정은 새 세션의 모델/협업 조건으로 자동 적용하지 않습니다.
+7. **최종 스킬과 Luna 입력 차이:** `not_exact_final_luna`에는 md-link-check·using-skills·zircon-readme-policy가 있습니다. [기존 Luna 원시 결과](../../codex_linux/verification/luna-results.json)와 사례 입력·최종 파일 해시를 대조합니다. 보존되지 않은 입력은 미확인으로 남기고 필요한 최종본 사례를 검토합니다. 과거 Luna 지정은 새 세션의 모델/협업 조건으로 자동 적용하지 않습니다.
 
 `baseline_verification`의 스킬 19개·워크플로 45개·로컬 링크 173개·Python 25개·단독 도구 실행 35회·잠금 조건 8개·헤딩 2,764개는 기존 검사 수치입니다. 이 수치가 위 내용 검토 후보의 해소를 뜻하지 않습니다.
 
@@ -150,6 +152,12 @@ Python 두 문제·Bash 실패 전파·generic flock 경로 삭제·중첩 펜�
 게시 clone과 원래 파일 498개 bytes·회귀 입력 해시 80개 일치, 기본/문서 검사 통과를 확인했습니다. 백업·격리 검증 후 승인된 실행 권한으로 원래 로컬 main·yunli와 origin 추적 refs도 같은 커밋에 정합화했습니다. 원래 파일 498개 bytes와 clean 상태를 유지했습니다. [게시 결과](REMEDIATION_2026-10-03.md#7-yunli-게시와-main-병합-완료)와 [원시 근거](reviews/2026-10-03-remediation/publication.json)에 구체적 결과를 남깁니다.
 
 이 확인 기록의 후속 커밋도 원격/로컬 두 브랜치씩에 반영하고 최종 SHA는 Git refs에서 확인합니다. 다음 작업은 남은 최종본 독립 사례와 사용자가 선택한 실제 환경 확인이며 이번 게시·병합 승인은 완료로 만료합니다. 새 세션은 과거 `f66b5b8`을 현재 HEAD로 가정하거나 이번 push 승인을 재사용하지 않습니다.
+
+## 11. 플랫폼 분리와 Windows 전용 재작성 준비
+
+기존 19개 개인 skill·동봉 자료는 codex_linux에 보존하고 Windows에는 계획·문서 골격만 둡니다. 최신 범위·경로 대응·검증·복구·게시 상태는 [플랫폼 분리 기록](PLATFORM_SPLIT_2026-10-03.md), 후속 작업은 [Windows PLAN](../../codex_windows/PLAN.md)·[TODO](../../codex_windows/TODO.md)를 기준으로 확인합니다. 과거 JSON·코드블록·원시 명령·SHA·개인 설치 관찰은 유지합니다.
+
+검증 후 yunli commit·일반 push와 사용자 검증을 진행합니다. main은 사용자 검증 완료 전까지 유지하며 설치·설정·release·운영 적용은 별도 범위입니다.
 
 ---
 

@@ -55,7 +55,7 @@ class RemediationTests(unittest.TestCase):
                  'md-link-check', 'git-commit-rule', 'readme-template',
                  'security-tools', 'using-skills', 'zircon-readme-policy')
         for name in names:
-            shutil.copytree(ROOT / 'codex/skills' / name, self.copies / name)
+            shutil.copytree(ROOT / 'codex_linux/skills' / name, self.copies / name)
 
     def python_cli(self):
         """Build a CLI from the actual corrected parse_args and main example."""
@@ -359,7 +359,7 @@ def main():
     EVIDENCE['passed'] = result.wasSuccessful()
     EVIDENCE['inputs'] = {
         str(path.relative_to(ROOT)): hashlib.sha256(path.read_bytes()).hexdigest()
-        for path in sorted((ROOT / 'codex/skills').rglob('*'))
+        for path in sorted((ROOT / 'codex_linux/skills').rglob('*'))
         if path.is_file() and (path.name == 'SKILL.md' or path.name == 'md-link-check.py'
                                or path.parent.name == 'skills')}
     args.output.parent.mkdir(parents=True, exist_ok=True)
