@@ -1,0 +1,39 @@
+{
+  "taskId": "CU-TURN-20261004-01",
+  "date": "2026-10-04",
+  "sourceFiles": 44,
+  "installedFiles": 44,
+  "initialDifferences": 0,
+  "changedSourceFiles": [
+    "SKILL.md"
+  ],
+  "sourceInstalledExactMatch": true,
+  "unrelatedSkillsUnchanged": 7,
+  "personalSettingsUnchanged": true,
+  "quickValidateExitCode": 0,
+  "markdown": {
+    "files": 3,
+    "headingExitCode": 0,
+    "linkExitCode": 0,
+    "styleExitCode": 1,
+    "baselineFooterWarnings": 3,
+    "newStyleIssues": 0
+  },
+  "behaviorReview": {
+    "scope": "manual_instruction_review",
+    "cases": [
+      "no_response_existing_authorization",
+      "stop_or_defer_message",
+      "mandatory_approval_pending",
+      "control_segment_completed",
+      "control_restarted",
+      "user_input_conflict"
+    ],
+    "desktopActions": 0
+  },
+  "actualComputerUseBehavior": "not_observed",
+  "newSessionAutomaticSelection": "not_observed",
+  "sourceSkillSha256": "fe1bb8c51ed61f5aac29e0d7e05e59e4a3b490a440858f798d1723953cb9b47a",
+  "backup": "private/before",
+  "rollback": "compare_previous_full_folder_and_current_user_changes_before_scoped_restore"
+}
