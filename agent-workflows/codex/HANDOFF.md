@@ -1,5 +1,7 @@
 # Codex 개인 스킬 세션 인계
 
+**2026-10-04 PLAN·TODO 연속 실행 후속:** T-WIN-004에 연결하여 개인 AGENTS·planning·work-rules의 관리 원본과 실제 대체 참조를 보완합니다. [이번 갱신 기록](2026-10-04-plan-continuation-T-WIN-004/README.md)에서 원본 검증·독립 검토·설치·게시·새 세션 적용을 구분합니다. 기존 업데이트·원문·fact-check 설치 보류는 유지합니다.
+
 **최신 개인 skill 업데이트:** [T-WIN-003](2026-10-03-personal-skills-T-WIN-003/README.md)의 전후 사본·설치 관찰·검증·복구를 확인합니다. 활성 후속은 [Windows TODO](windows/TODO.md)에서 관리합니다. 다음 업데이트 백업은 codex 바로 아래 새 이름의 폴더 하나로 추가합니다.
 
 **2026-10-04 현행 게시 정책:** [BRANCH-POLICY](2026-10-04-main-branch-policy-BRANCH-POLICY-20261004-01/README.md)로 일반 main 직접 작업·검증·commit·일반 push를 적용했습니다. 필요한 agent/task·목적 브랜치와 fact-check 로컬 적용 대기는 유지합니다. 아래 날짜별 yunli·사용자 검증 대기·main 미게시 기록은 당시 범위이며 현재 일반 작업의 게시 조건으로 재사용하지 않습니다. 새 세션 암시적 행동은 Windows TODO의 미확인 후속입니다.

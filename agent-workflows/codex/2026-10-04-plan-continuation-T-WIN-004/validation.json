@@ -1,0 +1,165 @@
+{
+  "task_id": "T-WIN-004",
+  "state": "installed_pending_publication",
+  "checks": [
+    {
+      "name": "quick-validate-planning-and-breakdown",
+      "exit_code": 0
+    },
+    {
+      "name": "quick-validate-work-rules",
+      "exit_code": 0
+    },
+    {
+      "name": "md-link-check",
+      "exit_code": 0
+    },
+    {
+      "name": "md-heading-check",
+      "exit_code": 0
+    },
+    {
+      "name": "md-style-check",
+      "exit_code": 1
+    },
+    {
+      "name": "diff-check",
+      "exit_code": 0
+    },
+    {
+      "name": "standalone-links-planning-and-breakdown",
+      "exit_code": 1
+    },
+    {
+      "name": "standalone-links-work-rules",
+      "exit_code": 1
+    },
+    {
+      "name": "active-source-style-existing-footer-excluded",
+      "exit_code": 0,
+      "scope": "4 source instruction files; original no-footer format preserved; no new requirement added"
+    },
+    {
+      "name": "active-standalone-links-planning-and-breakdown",
+      "exit_code": 2,
+      "scope": "Complete standalone folder excluding only preserved linux-original.md comparison text"
+    },
+    {
+      "name": "active-standalone-links-work-rules",
+      "exit_code": 2,
+      "scope": "Complete standalone folder excluding only preserved linux-original.md comparison text"
+    },
+    {
+      "name": "active-file-list-links-planning-and-breakdown",
+      "exit_code": 0,
+      "scope": "Complete standalone folder, explicit Markdown list excluding only preserved linux-original.md",
+      "markdown_files": 8
+    },
+    {
+      "name": "active-file-list-links-work-rules",
+      "exit_code": 0,
+      "scope": "Complete standalone folder, explicit Markdown list excluding only preserved linux-original.md",
+      "markdown_files": 34
+    }
+  ],
+  "preservation": {
+    "planning-and-breakdown": {
+      "changed_files": [
+        "SKILL.md"
+      ],
+      "previous_files": 9,
+      "current_files": 9
+    },
+    "work-rules": {
+      "changed_files": [
+        "references/skills/planning-and-breakdown.md",
+        "SKILL.md"
+      ],
+      "previous_files": 44,
+      "current_files": 44
+    },
+    "planning-and-breakdown/SKILL.md": {
+      "legacy_bytes_preserved": true
+    },
+    "work-rules/references/skills/planning-and-breakdown.md": {
+      "legacy_bytes_preserved": true
+    },
+    "direct_fallback_equivalent_except_relative_routes": true
+  },
+  "initial_dependency_attempt": "PyYAML absent globally; reused existing isolated private dependency",
+  "installation": {
+    "state": "completed",
+    "checks": {
+      "planning-and-breakdown": true,
+      "work-rules": true,
+      "managed_agents_match": true,
+      "local_agents_suffix_preserved": true,
+      "config_preserved": true,
+      "other_personal_skills_preserved": true
+    },
+    "skill_files": 53,
+    "other_skill_files_unchanged": 48
+  },
+  "publication": "not_performed",
+  "new_session_implicit_behavior": "not_performed",
+  "baseline_style": {
+    "exit_code": 1,
+    "findings": "Same 12 existing missing-footer diagnostics on 4 active source files; no new style issue"
+  },
+  "preserved_original_diagnostics": [
+    {
+      "skill": "planning-and-breakdown",
+      "baseline_exit_code": 1,
+      "excluded_file": "references/linux-original.md",
+      "reason": "Unchanged original comparison text has historical relative links; not an active installation dependency"
+    },
+    {
+      "skill": "work-rules",
+      "baseline_exit_code": 1,
+      "excluded_file": "references/linux-original.md",
+      "reason": "Unchanged original comparison text has historical relative links; not an active installation dependency"
+    }
+  ],
+  "static_behavior_review": [
+    {
+      "scenario": "PLAN/TODO generation only",
+      "assessment": "Create executable specification; no inferred Goal or implementation/publication authority"
+    },
+    {
+      "scenario": "Approved execution with ready equal-priority tasks",
+      "assessment": "Choose PLAN order, execute and verify, record evidence and continue"
+    },
+    {
+      "scenario": "External input wait and independent ready task",
+      "assessment": "Record needed input/resume condition and continue independent task"
+    },
+    {
+      "scenario": "Verification failure",
+      "assessment": "Preserve evidence, diagnose, make evidence-backed change and retest affected scope"
+    },
+    {
+      "scenario": "Existing user hold",
+      "assessment": "Do not make held item ready; keep independent queue moving"
+    },
+    {
+      "scenario": "Human usability/business choice required",
+      "assessment": "Finish possible agent checks and bundle minimal outstanding decisions"
+    }
+  ],
+  "initial_active_link_filter_attempt": "Unsupported -X option returned exit 2; corrected to explicit file lists; failure retained",
+  "independent_review": {
+    "count": 1,
+    "assessment": "Parent reviewed active source diff; no new finding"
+  },
+  "publication_preflight": {
+    "gitleaks_version": "8.30.1",
+    "mode": "dir",
+    "scope": "Exact staged content snapshot of 12 owned public files; no repository history or private/raw scan",
+    "scanned_files": 12,
+    "exit_code": 0,
+    "absolute_path_privacy_scan": "Added lines of 7 existing and entire 5 new public files passed; preserved generic legacy path examples excluded",
+    "initial_privacy_attempt": "Whole-file absolute-path pattern matched preserved generic legacy example; refined to changed content, no source content removed",
+    "private_or_raw_staged": false,
+    "staged_diff_check": "passed"
+  }
+}

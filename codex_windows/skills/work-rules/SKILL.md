@@ -34,7 +34,7 @@ Windows 개인 작업의 공통 실행 기준입니다. 현재 사용자 요청�
 - 파일/작업 잠금: [잠금 상세](references/windows/file-lock.md).
 - repo 기록 체계의 출처·충돌 확인: [저장소 지침 연결](references/repository-workflow.md). 단순 재개는 대상 repo의 현재 작업 항목과 관련 근거로 바로 이동합니다.
 - 문서 표현 양식이 필요한 경우: [STYLE](references/STYLE.md). 문서 역할·파일명·푸터·배지·날짜는 대상의 적용 기준을 확인합니다.
-- 큰 작업 분해·commit: 실제 선택한 planning-and-breakdown·git-commit-rule을 사용합니다. 분해 skill이 미설치라면 [동봉 planning 지침](references/skills/planning-and-breakdown.md)을 참고하며 설치·발견으로 보고하지 않습니다. 사용자/repo가 지정한 출처를 우선하고 설치본과 동봉본을 중복 로드하지 않습니다.
+- PLAN·TODO 생성·재작성과 큰 작업 분해: 실제 선택한 planning-and-breakdown의 실행 가능한 계획·연속 실행 기준을 적용합니다. 계획 작성만으로 Goal 생성·구현·게시를 시작하지 않으며 목표 실행 요청과 기존 승인을 구분합니다. 단순 질문·짧은 작업은 필요한 기준만 적용합니다. commit은 실제 선택한 git-commit-rule을 사용합니다. 분해 skill이 미설치라면 [동봉 planning 지침](references/skills/planning-and-breakdown.md)을 참고하며 설치·발견으로 보고하지 않습니다. 사용자/repo가 지정한 출처를 우선하고 설치본과 동봉본을 중복 로드하지 않습니다.
 - 점진적 변경·IaC가 실제 필요한 경우: [incremental-change](references/skills/incremental-change.md), [spec-driven-infra](references/skills/spec-driven-infra.md) 중 해당 자료만 선택합니다.
 - 원문 비교가 요청된 경우: [보존 본문](references/legacy-work-rules.md), [Kiro 원문](references/kiro-original.md), [Linux 원문](references/linux-original.md). 과거 고정 경로·branch·승인은 실행 기준으로 복원하지 않습니다.
 

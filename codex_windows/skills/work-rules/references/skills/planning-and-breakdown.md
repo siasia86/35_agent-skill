@@ -1,6 +1,6 @@
 ---
 name: planning-and-breakdown
-description: Breaks infrastructure work into ordered tasks. Use when you have requirements and need to decompose into implementable steps. Use when an infra change feels too large, when you need to estimate blast radius, or when changes span multiple environments.
+description: Create or rewrite executable PLAN and TODO documents, and break infrastructure work into ordered tasks with dependencies, acceptance criteria, verification, and user intervention conditions. Use for plan decomposition or multi-environment changes.
 ---
 
 # Planning and Breakdown
@@ -34,6 +34,22 @@ description: Breaks infrastructure work into ordered tasks. Use when you have re
 - 의존성 우선으로 정상 상태가 유지되는 단위를 정합니다. 수직/위험/환경 분할을 상황에 맞게 조합하되 위험도 때문에 앱 호환성 같은 선행 조건을 뒤로 밀지 않습니다. checkpoint의 실제 검사·미실행과 rollback 범위를 명시합니다.
 - 원문의 terraform apply·health·monitoring 완료 조건은 실제 Terraform 적용 태스크의 예시입니다. 계획 작성 태스크에는 명세·의존성·범위·검증 방법·미결 조건을 확인하며 실제 배포 성공으로 완료 표시하지 않습니다. 비적용 도구 항목은 이유를 기록합니다.
 - 구현이 요청되면 해당 Windows incremental-change 참조를 적용합니다. 기록 번호·batch 형식은 사용자/저장소가 정한 체계를 우선하며 3개 태스크마다 새 문서·승인·agent를 자동 생성하지 않습니다.
+
+### PLAN·TODO 생성과 연속 실행 기본값
+
+개인 작업에서 PLAN·TODO를 생성·재작성할 때 아래 기준을 기본 적용합니다. 문서 역할·경로·양식·상태 표기는 실제 적용된 저장소 지침을 따르고 기존 작업 ID·보류·사용자 편집을 보존합니다. 단순 작업에 새 PLAN·TODO·검증표·결과 폴더를 일괄 만들거나 전체 skill·중앙 자료를 매번 읽도록 요구하지 않습니다.
+
+- PLAN은 목표·범위·담당·실행 순서·의존성·완료 기준·검증·복구 방법·사용자 개입 조건을 연결합니다. 실행 환경·브랜치는 실제 대상의 승인 범위에 맞춥니다.
+- TODO는 기존 ID·우선순위·담당·상태·선행 조건·다음 행동·완료 근거·PLAN 연결을 담습니다. 저장소 간 작업은 `저장소 별칭 + 기존 ID`로 구분하며 실제 기능 상태 원본을 해당 저장소에 유지합니다.
+- 계획만 요청되면 실행 가능한 명세와 미결 사항을 남깁니다. 문서 생성·검토 완료는 Goal 생성·구현·배포·게시의 새 승인이 아닙니다. Goal 생성은 사용자가 명시적으로 요청한 경우에만 수행하며 일반 실행 요청에서 추론하지 않습니다.
+
+목표 실행이 요청되면 선행 조건과 보류를 확인하여 실행 가능한 항목 중 우선순위가 높은 작업을 선택하고, 같은 우선순위에서는 PLAN 순서를 따릅니다. 승인된 실행·자동 시험·로그 분석을 수행하고 상태와 근거를 갱신한 뒤 다음 준비된 작업으로 이어갑니다. 문서 완료·기능 완료·게시 완료는 각각 판정하며 대상이 0개거나 미검사인 범위를 완료로 확장하지 않습니다.
+
+대기·보류 항목에는 원인·필요 입력·재개 조건을 남기고 다른 독립 작업을 계속합니다. 실패 시 영향받는 작업의 증거를 보존하고 원인을 분석한 뒤, 새 근거에 따른 수정과 영향 범위 재검증을 수행합니다. 같은 입력의 실패를 반복하거나 원인 분석 없이 사용자에게 반복 시험을 넘기지 않습니다.
+
+실제 권한 부족·사용자 보류 해제·업무상 선택·자동 판정이 어려운 사용성 확인이 필요할 때 이미 검증한 범위와 필요한 결정을 모아 요청합니다. 승인된 범위를 다시 확인하지 않으며 자동화·도구·격리 환경으로 가능한 검증을 먼저 완료합니다. 자동 감시·별도 채팅·운영 권한 확대는 연속 실행의 기본값에 포함하지 않습니다.
+
+완료 검토는 사용자가 정한 회차를 따릅니다. 검토 후 수정·새 입력·실패가 있으면 영향받은 부분만 재검증하고, 관련 검사와 기존 기록으로 마감합니다. 새 근거 없는 전체 검사 반복이나 고정 개수마다 추가 승인을 요구하지 않습니다.
 
 ### 동봉 Windows 역할 대응
 
