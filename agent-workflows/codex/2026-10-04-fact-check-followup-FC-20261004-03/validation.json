@@ -1,0 +1,118 @@
+{
+  "task": "FC-20261004-03",
+  "date": "2026-10-04",
+  "baseHead": "869f4827b5e9083d93f97f125e4e2c9f1640253e",
+  "branch": "main",
+  "sourceHashes": {
+    "codex_windows/skills/fact-check/SKILL.md": "919439d12915cfceffcb3a13ec58d1c97240735e4c31c541296b62eb0e7af4a7",
+    "codex_windows/skills/fact-check/agents/openai.yaml": "4923239aaf79896900e1887321b449f2c5b51502b097e37bc56905848623b29d"
+  },
+  "sourceChanged": false,
+  "priorResultsReused": [
+    "FC01/02 metadata and correction/no-edit behavior"
+  ],
+  "external": {
+    "status": "pass within factual behavior scope",
+    "documents": {
+      "PLAN": {
+        "claims": 2,
+        "accurate": 1,
+        "corrected": 1,
+        "mismatch": 0,
+        "unknown": 1,
+        "cycles": 1
+      },
+      "TODO": {
+        "claims": 1,
+        "accurate": 1,
+        "corrected": 1,
+        "mismatch": 0,
+        "unknown": 0,
+        "cycles": 1
+      }
+    },
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc9110.html#section-4.2.2",
+      "https://www.rfc-editor.org/rfc/rfc2119.html#section-1"
+    ],
+    "residual": "Performance claim lacks supplied log",
+    "procedureDeviation": "Requested CASE-first order not met; CASE before target read/edit",
+    "rootOracleAndExactBytesChecked": true
+  },
+  "controlledLoop": {
+    "status": "pass for explicit controlled protocol",
+    "claims": 3,
+    "accurate": 2,
+    "corrected": 2,
+    "mismatch": 1,
+    "unknown": 0,
+    "cycles": 2,
+    "probeCalls": 3,
+    "events": [
+      {
+        "mode": "inspect",
+        "phase": 0
+      },
+      {
+        "mode": "reverify",
+        "phase": 1
+      },
+      {
+        "mode": "reverify",
+        "phase": 2
+      }
+    ],
+    "finalPhase": 2,
+    "residual": "C original100 retained although final observation200",
+    "helperAndCaseUnchanged": true,
+    "rootExactBytesAndLogChecked": true,
+    "arbitraryFailureCoverage": false
+  },
+  "requestedChildModel": "gpt-6.1-sol",
+  "requestedChildEffort": "medium",
+  "rootRuntimeModelVerified": false,
+  "rootCheckFailure": {
+    "result": "first LF expectation failed before writes",
+    "cause": "Initial recorded fixtures were CRLF; root comparator wrongly expected LF",
+    "correction": "Reconstruct CRLF original and verify initial hash before minimal replacements; preserve targets"
+  },
+  "gitReadFailure": "Absent local design ref lookup failed; no mutation or candidate used",
+  "localInstallation": "hold; both discovery paths absent",
+  "receivingAgentAcceptance": "pending; creator review is not acceptance",
+  "notExecuted": [
+    "native discovery",
+    "implicit selection",
+    "installation",
+    "actual project full-document audit",
+    "remote CI",
+    "game or DB changes",
+    "02 shared edits",
+    "other-chat messages"
+  ],
+  "documentationChecks": {
+    "status": "pass",
+    "checkerVersion": "26.10.03",
+    "fallbackReason": "No repo-specific Markdown checker/config found",
+    "selectedMarkdownFiles": 4,
+    "styleIssues": 0,
+    "headingCount": 71,
+    "headingIssues": 0,
+    "inlineFileLinks": 70,
+    "brokenFileLinks": 0,
+    "crossFileAnchors": 13,
+    "crossAnchorIssues": 0,
+    "scope": "inline links outside fences; reference-style and general external reachability not covered"
+  },
+  "secretChecks": {
+    "status": "pass",
+    "scope": "five owned publish files, private evidence excluded",
+    "scanner": "gitleaks dir",
+    "redacted": true
+  },
+  "publication": {
+    "target": "origin/main",
+    "observedResult": "actual Git and final report; no pre-execution success claim"
+  },
+  "protectedInputsCheck": "source, CASE and helper SHA256 unchanged; prior JSONs not edited",
+  "scopeReview": "main existing fact-check source reused; five new/updated evidence documents only; holds preserved; no source contradiction observed"
+}
