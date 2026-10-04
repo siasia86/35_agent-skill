@@ -43,7 +43,7 @@ if ($LASTEXITCODE -ne 0) { throw 'commit 실패' }
 - 이 절을 읽는 것은 commit/push·checkout 승인이 아닙니다. 이미 승인된 commit·특정 branch 일반 push는 반복 승인 질문 없이 수행하며 보호 branch·force/amend·release는 실제 저장소와 현재 요청 범위를 확인합니다. 현재 branch를 임의로 yunli로 전환하지 않습니다. 원문의 고정 BASE를 현재 실제 대상 경로로 바꾸고 사용자 변경을 보존합니다.
 - 원문의 `sia-md-*`, fix_table_align, trim_diagram 외부 도구의 존재를 가정하지 않고 repo 지정 검사기·버전·설정을 우선하며 지정이 없을 때 동봉 Python 검사와 직접 수정 후 재검사를 사용합니다. [STYLE.md](../STYLE.md), [md-link-check](../skills/md-link-check.md), [readme-template](../skills/readme-template.md)은 필요한 항목만 읽습니다. Python 3.11+와 stdlib로 실행하며 선택 TOML 설정은 실제 대상에 있을 때만 적용합니다.
 - 대상 경로가 실제 존재하는지 먼저 확인하고 missing target/빈 대상이 검증 완료로 보고되지 않는지 검사 결과 범위를 확인합니다. 코드/링크 검사 완료와 공개 문서 정책 통과를 구분합니다. 저장소가 푸터를 금지하면 style 검사에 `--no-footer`와 근거를 기록하며 다른 검사를 유지합니다. 외부 checker의 미구현 옵션을 주장하지 않습니다.
-- 원격·추적 branch·허용 push 목적을 확인하고 일반 push 후 실제 원격 commit을 확인합니다. 현재 저장소에 yunli→사용자 검증→main 흐름이 지정되어 있으면 그 순서를 유지하고 사용자 검증 전 main 게시를 하지 않습니다. 이 개인 스킬을 다른 저장소의 main 금지 규칙으로 일괄 적용하지 않습니다.
+- 원격·추적 branch·허용 push 목적을 확인하고 일반 push 후 실제 원격 commit을 확인합니다. 개인 공통 AGENTS의 기본은 `main` 직접 작업·일반 게시이며 필요한 agent 브랜치와 QA·Migration·복구 등 목적 브랜치의 별도 절차를 유지합니다. 일반 작업의 반복 사용자 검증 대기는 요구하지 않으며 현재 사용자 제한·원격 보호 규칙의 필수 PR·검사를 준수합니다. 읽기 전용·변경 0건은 commit·push하지 않습니다. 다른 저장소의 branch를 일괄 전환하지 않습니다.
 - 읽기 전용 Git 관리 영역은 권한을 바꾸지 않습니다. 승인된 별도 작업본이 필요하면 실제 사용자 변경과 refs를 보존하며 현재 범위에서 진행합니다. 공개 기록에는 개인 경로·계정·자격증명·raw TEMP 증거를 복사하지 않습니다.
 
 원문 비교 자료: [Kiro 원문](../originals/git-commit-rule.md).

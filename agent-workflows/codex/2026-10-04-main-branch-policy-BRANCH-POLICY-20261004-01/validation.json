@@ -1,0 +1,61 @@
+{
+  "taskId": "BRANCH-POLICY-20261004-01",
+  "centralSourceCommit": "5bc37da9aa43597a0ed59fc47aa23067368427d1",
+  "centralSourcePublication": "main remote SHA verified",
+  "source": {
+    "currentInventory": 20,
+    "historicalVerifiedSkills": 19,
+    "skills": 19,
+    "source_and_preserved_hashes": 368,
+    "local_links": 77,
+    "python_syntax": 34,
+    "isolated_helper_runs": 27,
+    "factCheckMetadata": "PASS",
+    "originalVerifier": "unchanged; historical19 inventory rejected current20; task-scoped adapter used"
+  },
+  "localInstallation": {
+    "status": "PASS",
+    "selectedFolders": [
+      "work-rules",
+      "git-commit-rule"
+    ],
+    "selectedFileCount": 62,
+    "homePolicyChangedLines": 1,
+    "homeOtherLinesPreserved": true,
+    "configUnchangedByInstallation": true,
+    "configConcurrentDriftPreserved": true,
+    "otherInstalledFoldersUnchanged": 5,
+    "factCheckInstalled": false
+  },
+  "preservation": {
+    "wholeInstalledFoldersBackedUp": 7,
+    "wholeSourceFoldersBackedUp": 4,
+    "managedMainCheckouts": 7,
+    "purposeGameCheckouts": 10,
+    "branchDeletion": false,
+    "privateIgnored": true
+  },
+  "notVerified": [
+    "new-session implicit discovery and behavior",
+    "remote CI"
+  ],
+  "notExecuted": [
+    "fact-check local installation",
+    "game source/assets/build/runtime/DB",
+    "config/system/plugin changes",
+    "force push/branch deletion/release/operational application",
+    "remote default branch settings"
+  ],
+  "markdown": {
+    "centralSourceFiles": 22,
+    "consumerFiles": 20,
+    "crossFileFragments": 101,
+    "failures": 0,
+    "versions": {
+      "style": "26.08.24",
+      "heading": "26.08.27.7",
+      "link": "26.07.04"
+    },
+    "footerException": "existing personal skill documents and 41 historical state only"
+  }
+}
