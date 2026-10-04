@@ -1,6 +1,6 @@
 {
   "task_id": "T-WIN-004",
-  "state": "installed_pending_publication",
+  "state": "installation_and_source_publication_complete_new_session_behavior_pending",
   "checks": [
     {
       "name": "quick-validate-planning-and-breakdown",
@@ -100,7 +100,14 @@
     "skill_files": 53,
     "other_skill_files_unchanged": 48
   },
-  "publication": "not_performed",
+  "publication": {
+    "branch": "main",
+    "source_commit": "d17016e19888cb2cfb508cd7100c932c2e419de3",
+    "commit_url": "https://github.com/siasia86/35_agent-skill/commit/d17016e19888cb2cfb508cd7100c932c2e419de3",
+    "source_remote_sha_confirmed_at_publication": "d17016e19888cb2cfb508cd7100c932c2e419de3",
+    "normal_push": true,
+    "receipt_commit_reported_in_chat_and_workspace_record": "No recursive receipt commit"
+  },
   "new_session_implicit_behavior": "not_performed",
   "baseline_style": {
     "exit_code": 1,
@@ -161,5 +168,9 @@
     "initial_privacy_attempt": "Whole-file absolute-path pattern matched preserved generic legacy example; refined to changed content, no source content removed",
     "private_or_raw_staged": false,
     "staged_diff_check": "passed"
+  },
+  "current_session_instruction_visibility": {
+    "assessment": "Parent observed the new personal AGENTS rule in the re-delivered instructions",
+    "independent_new_session_implicit_selection": "not_performed"
   }
 }
