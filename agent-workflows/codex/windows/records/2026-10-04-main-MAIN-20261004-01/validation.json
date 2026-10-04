@@ -1,0 +1,65 @@
+{
+  "task": "MAIN-20261004-01",
+  "state": "feature-candidate-merged-verified-record-publication-separate",
+  "beforeMain": "2632fe13a5cc2a50ccee05ae291937e553600cbb",
+  "mergedCommit": "8bb4c83932b0b25f6a0192ed64ad4549e6813ba7",
+  "remoteMainAtObservation": "8bb4c83932b0b25f6a0192ed64ad4549e6813ba7",
+  "review": "No confirmed contradiction or intent mismatch",
+  "checks": {
+    "style": {
+      "exit": 0
+    },
+    "style-original-nofooter": {
+      "exit": 0
+    },
+    "heading": {
+      "exit": 0
+    },
+    "links": {
+      "exit": 0
+    },
+    "json": {
+      "passed": true,
+      "files": 4,
+      "zero": null
+    },
+    "whitespace": {
+      "exit": 0
+    },
+    "secrets-owned": {
+      "exit": 0
+    },
+    "secrets-patch": {
+      "exit": 0
+    },
+    "metadata-fact-check": {
+      "exit": 0
+    },
+    "metadata-work-rules": {
+      "exit": 0
+    },
+    "metadata-git-commit-rule": {
+      "exit": 0
+    },
+    "factCheckHold": {
+      "passed": true,
+      "installed": false
+    }
+  },
+  "markdownFiles": 15,
+  "fileLinks": 158,
+  "crossFragments": 17,
+  "localInstallation": "waiting; not performed",
+  "workingTreeAtVerification": "clean",
+  "trackedBytesAndLogicalIndexPreserved": true,
+  "initialFailure": "Checkout newline conversion in 9 files; bytes restored and logical index verified",
+  "notPerformed": [
+    "New fact-check installation",
+    "Fresh-session discovery/behavior",
+    "External facts behavior cases",
+    "Loop exhaustion case",
+    "Receiver acceptance",
+    "Remote CI",
+    "Force push/release/operations"
+  ]
+}

@@ -4,6 +4,9 @@
 
 ## [Unreleased]
 
+- 2026-10-04: MAIN-20261004-01에서 사용자 main 요청에 따라 LC-PUB·UA-MIN·fact-check 생성/보완 4개 커밋을 main에 fast-forward·일반 push하고 원격 SHA를 확인했습니다. 확인된 모순·의도 불일치 없음, 로컬 적용 보류와 미검증 항목 유지, checkout 줄바꿈 차이 9개 복구를 기록합니다. [병합·검증·복구](agent-workflows/codex/windows/records/2026-10-04-main-MAIN-20261004-01/README.md).
+
+
 - 2026-10-04: FC-20261004-02에서 `fact-check`에 대상 문서의 새 내용·수식 추가 금지, 실제 도구 확인, ✅ / ❌ / 🟡 항목별 보고, 오류 diff, 최대 2회 검증·수정·재검증과 최종 집계를 반영합니다. 기존 출처·조건 추가 허용을 제거하고 미확인 내용 보존과 수정 금지를 유지합니다. 로컬 설치는 계속 대기합니다. [보완·검증·복구](agent-workflows/codex/2026-10-04-fact-check-rules-FC-20261004-02/README.md).
 
 - 2026-10-04: FC-20261004-01에서 독립된 `fact-check` 스킬과 UI 메타데이터를 추가합니다. `PLAN TODO $fact-check`로 각 문서 전체의 사실을 검증하고 근거로 확정된 오류를 최소 수정·재검증하며, 수정 금지와 추론 금지를 명시합니다. 최초 이관 19개와 신규 1개의 수치를 구분해 현행 Windows 안내를 갱신합니다. 로컬 적용은 사용자의 대기 요청으로 수행하지 않습니다. [생성·검증·적용 대기·복구](agent-workflows/codex/2026-10-04-fact-check-FC-20261004-01/README.md).
