@@ -26,6 +26,10 @@
 
 현재 적용 지침·기존 변경 확인 → 담당 기록·전체 bytes·Git 제외 보존 → 개인 업데이트와 Windows 개발 기록의 역할에 맞춰 이동 → 링크·도구 경로·이전 안내 갱신 → 전후 해시·기존 변경·개인 설치본 보존 검증 순서로 진행합니다. 과거 PLAN·관찰 JSON을 현행 상태 원본에 덮어쓰지 않습니다. PCS·PCR 이관의 결과·복구 근거는 [SMA 기록](records/2026-10-04-record-relocation-SMA-20261004-01/README.md)에 둡니다.
 
+## 7. LC-PUB-20261004-01 작업 완료 후 yunli 게시
+
+개인 AGENTS의 상시 완료 절차를 검증·기록 → 담당 변경만 yunli commit·일반 push → 원격 SHA 확인·사용자 commit 링크 보고로 정리합니다. work-rules와 git-commit-rule의 Windows 실행 본문을 맞추고 기존 전체 폴더·로컬 경로 안내를 보존한 뒤 관리 원본 검증 → 로컬 반영 → 담당 파일만 게시 순서로 진행합니다. main·force push·release·운영 적용은 포함하지 않습니다. [업데이트·검증·복구 기록](../2026-10-04-yunli-publication-LC-PUB-20261004-01/README.md)을 따르며 새 세션 행동 검증은 TODO에 유지합니다.
+
 ---
 
 **작성일**: 2026-10-03

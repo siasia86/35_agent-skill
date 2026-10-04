@@ -40,10 +40,10 @@ git -C $Repo commit -m '<type>: <한국어 설명>'
 if ($LASTEXITCODE -ne 0) { throw 'commit 실패' }
 ```
 
-- 이 절을 읽는 것은 commit/push·checkout 승인이 아닙니다. 이미 승인된 commit·특정 branch 일반 push는 반복 승인 질문 없이 수행하며 보호 branch·force/amend·release는 실제 저장소와 현재 요청 범위를 확인합니다. 현재 branch를 임의로 yunli로 전환하지 않습니다. 원문의 고정 BASE를 현재 실제 대상 경로로 바꾸고 사용자 변경을 보존합니다.
+- 개인 공통 AGENTS의 상시 yunli 게시 승인과 현재 사용자 지시를 확인합니다. Git 변경이 있는 작업은 검증·기록 후 검토한 담당 파일만 yunli에 commit·일반 push하며 이 범위의 승인을 반복 질문하지 않습니다. 현재 checkout이 다르면 기존 branch·사용자 변경을 보존하고 yunli 게시용 작업본에서 담당 변경을 준비합니다. 검증 실패·비밀값·다른 작업 변경은 게시하지 않고 읽기 전용·변경 0건에는 빈 commit을 만들지 않습니다. 현재 사용자의 별도 게시 제한·플랫폼 및 보호 정책은 유지하며 main 병합·force/amend·release·운영 적용은 이 승인에 포함하지 않습니다. 원문의 고정 BASE를 현재 실제 대상 경로로 바꾸고 사용자 변경을 보존합니다.
 - 원문의 `sia-md-*`, fix_table_align, trim_diagram 외부 도구의 존재를 가정하지 않고 repo 지정 검사기·버전·설정을 우선하며 지정이 없을 때 동봉 Python 검사와 직접 수정 후 재검사를 사용합니다. [STYLE.md](references/STYLE.md), [md-link-check](references/skills/md-link-check.md), [readme-template](references/skills/readme-template.md)은 필요한 항목만 읽습니다. Python 3.11+와 stdlib로 실행하며 선택 TOML 설정은 실제 대상에 있을 때만 적용합니다.
 - 대상 경로가 실제 존재하는지 먼저 확인하고 missing target/빈 대상이 검증 완료로 보고되지 않는지 검사 결과 범위를 확인합니다. 코드/링크 검사 완료와 공개 문서 정책 통과를 구분합니다. 저장소가 푸터를 금지하면 style 검사에 `--no-footer`와 근거를 기록하며 다른 검사를 유지합니다. 외부 checker의 미구현 옵션을 주장하지 않습니다.
-- 원격·추적 branch·허용 push 목적을 확인하고 일반 push 후 실제 원격 commit을 확인합니다. 현재 저장소에 yunli→사용자 검증→main 흐름이 지정되어 있으면 그 순서를 유지하고 사용자 검증 전 main 게시를 하지 않습니다. 이 개인 스킬을 다른 저장소의 main 금지 규칙으로 일괄 적용하지 않습니다.
+- 원격·추적 branch와 yunli 대상을 확인하고 일반 push 후 실제 원격 SHA를 대조합니다. 사용자에게 저장소·branch·commit 링크와 수행·검증·미실행을 보고합니다. 게시 실패는 원인·미게시 상태를 기록하고 완료로 표시하지 않습니다. yunli 사용자 확인과 별도 main 반영 승인을 구분하며 이번 완료 절차에서 main은 게시하지 않습니다.
 - 읽기 전용 Git 관리 영역은 권한을 바꾸지 않습니다. 승인된 별도 작업본이 필요하면 실제 사용자 변경과 refs를 보존하며 현재 범위에서 진행합니다. 공개 기록에는 개인 경로·계정·자격증명·raw TEMP 증거를 복사하지 않습니다.
 
 원문 비교 자료: [Kiro 원문](references/kiro-original.md).
@@ -95,4 +95,4 @@ style: 전체 README 푸터 배지 통일
 
 ## Branch와 게시 기준
 
-대상 repo에 적용된 지침과 현재 요청에서 branch·검사·게시 순서를 확인합니다. 검토한 파일만 staging하며 원격 commit과 CI를 구분합니다. 개인 skill은 특정 repo의 branch 표나 일괄 checkout·main 금지 규칙을 정의하지 않습니다. 원문 절차는 위 원문 비교 링크에서 보존합니다.
+개인 공통 AGENTS의 상시 yunli 게시 승인과 현재 요청·적용 지침·보호 정책을 확인합니다. 검토한 담당 파일만 staging하고 검증·기록 후 yunli에 commit·일반 push하여 원격 SHA와 사용자 확인용 링크를 보고합니다. 원격 게시 성공과 CI 결과는 구분하며 main 병합은 별도 승인 범위입니다. 원문 branch 표와 checkout 예시는 위 원문 비교 링크에서 보존합니다.

@@ -1,0 +1,39 @@
+{
+  "task": "LC-PUB-20261004-01",
+  "state": "installed",
+  "requestedBranch": "yunli",
+  "metadataSkillsChecked": 2,
+  "markdownDocumentsChecked": 7,
+  "localFileLinksChecked": 63,
+  "fragmentsChecked": 13,
+  "metadataMarkdownWhitespaceSecretsAndIgnoreChecks": "passed",
+  "backup": {
+    "wholeSkillFolders": 2,
+    "skillFilesEachBeforeAfter": 62,
+    "privateGitIgnored": true
+  },
+  "installation": {
+    "wholeSkillFolders": 2,
+    "files": 62,
+    "sourceAndInstalledHashesEqual": true,
+    "otherPersonalSkillsUnchanged": true,
+    "systemSkillsUnchanged": true,
+    "configUnchanged": true,
+    "localManagementSectionPreserved": true
+  },
+  "lunaReadOnlyScenarioReview": {
+    "cases": 5,
+    "result": "reviewed",
+    "actualLiveBehaviorTest": false
+  },
+  "dependencyFailure": {
+    "cause": "PyYAML absent in ordinary and bundled Python",
+    "initialSourceResult": 1,
+    "repair": "PyYAML 6.0.3 wheel in ignored task-only validator-deps; PYTHONPATH set only in checker subprocess",
+    "globalPythonConfigChanged": false
+  },
+  "newSessionDiscoveryAndAutomaticBehavior": "unverified",
+  "externalUrlsAndCI": "unverified",
+  "mainForceReleaseOperations": "not performed",
+  "publicationProof": "Git history and final user report; exact remote comparison retained in private receipt"
+}
