@@ -1,0 +1,84 @@
+{
+  "task": "FC-INSTALL-20261004-01",
+  "date": "2026-10-04",
+  "authorization": "User explicitly released hold and requested local installation",
+  "baseHead": "4aabb98d9dabf78817882c33de4cc28cd118c33f",
+  "branch": "main",
+  "source": "codex_windows/skills/fact-check",
+  "target": "USER/.agents/skills/fact-check",
+  "targetPreviouslyAbsent": true,
+  "sourceModified": false,
+  "relativeFileHashes": {
+    "SKILL.md": "919439d12915cfceffcb3a13ec58d1c97240735e4c31c541296b62eb0e7af4a7",
+    "agents/openai.yaml": "4923239aaf79896900e1887321b449f2c5b51502b097e37bc56905848623b29d"
+  },
+  "installedHashes": {
+    "SKILL.md": "919439d12915cfceffcb3a13ec58d1c97240735e4c31c541296b62eb0e7af4a7",
+    "agents/openai.yaml": "4923239aaf79896900e1887321b449f2c5b51502b097e37bc56905848623b29d"
+  },
+  "fileCount": 2,
+  "copyMethod": "bundled skill-installer validate/copy helpers; no remote download",
+  "officialValidator": {
+    "exit": 0,
+    "dependency": "Prior ignored PyYAML reused only in subprocess; no global install"
+  },
+  "uiYamlParsed": true,
+  "implicitInvocationPolicy": "default true preserved",
+  "explicitDisabledEntry": false,
+  "preservation": {
+    "personalExistingFileCount": 101,
+    "personalFilesUnchanged": true,
+    "systemFileCount": 49,
+    "systemUnchanged": true,
+    "otherSourceUnchanged": true,
+    "personalAgentsAndConfigUnchanged": true,
+    "fullPriorPersonalFolderAndSettingsBackedUp": true,
+    "privateEvidenceIgnored": true
+  },
+  "discovery": {
+    "observer": "fresh delegated agent",
+    "requestedModel": "gpt-6-luna",
+    "requestedEffort": "medium",
+    "providedSkillName": "fact-check",
+    "providedPathAlias": "USER/.agents/skills/fact-check/SKILL.md",
+    "filesOrToolsUsedByObserver": false,
+    "nativeInvocation": "not executed",
+    "rootCatalogRefresh": "not independently observed"
+  },
+  "priorBehaviorReused": [
+    "FC-20261004-01",
+    "FC-20261004-02",
+    "FC-20261004-03"
+  ],
+  "notExecuted": [
+    "native explicit skill invocation",
+    "implicit behavior selection",
+    "actual project full-document fact-check",
+    "02 receiving acceptance",
+    "remote CI",
+    "rollback",
+    "other-chat messages"
+  ],
+  "documentationChecks": {
+    "status": "pass",
+    "version": "26.10.03",
+    "markdownFiles": 4,
+    "styleIssues": 0,
+    "headings": 70,
+    "headingIssues": 0,
+    "inlineLinks": 72,
+    "fileLinkIssues": 0,
+    "crossFileAnchors": 13,
+    "crossAnchorIssues": 0,
+    "scope": "inline links outside fences; general external reachability and reference-style links not covered"
+  },
+  "secretChecks": {
+    "status": "pass",
+    "scope": "five public owned files; personal backups/raw ignored",
+    "redacted": true
+  },
+  "publication": {
+    "target": "origin/main",
+    "result": "See actual Git and final report"
+  }
+}
