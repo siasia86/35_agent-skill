@@ -48,7 +48,6 @@
   ],
   "markdown": {
     "centralSourceFiles": 22,
-    "consumerFiles": 20,
     "crossFileFragments": 101,
     "failures": 0,
     "versions": {
@@ -56,6 +55,54 @@
       "heading": "26.08.27.7",
       "link": "26.07.04"
     },
-    "footerException": "existing personal skill documents and 41 historical state only"
-  }
+    "footerException": "existing personal skill documents and 41 historical state only",
+    "initialConsumerMarkdownFiles": 23,
+    "initialManagedConsumerMarkdownFiles": 21,
+    "localGameRoutingMarkdownFiles": 2
+  },
+  "publications": [
+    {
+      "alias": "POLICY-31",
+      "branch": "main",
+      "head": "5bc37da9aa43597a0ed59fc47aa23067368427d1",
+      "commitUrl": "https://github.com/siasia86/31_governances/commit/5bc37da9aa43597a0ed59fc47aa23067368427d1",
+      "push": "verified"
+    },
+    {
+      "alias": "SKILL-35",
+      "branch": "main",
+      "head": "4c4782493558665d6c6768b648964ccd24d02d16",
+      "commitUrl": "https://github.com/siasia86/35_agent-skill/commit/4c4782493558665d6c6768b648964ccd24d02d16",
+      "push": "verified"
+    },
+    {
+      "alias": "ZWS-02",
+      "branch": "main",
+      "head": "654d0973e1a9684a5c65586247aeeb187acb2050",
+      "commitUrl": "https://github.com/siasia86/02_zircon-workspace-plan/commit/654d0973e1a9684a5c65586247aeeb187acb2050",
+      "push": "verified"
+    },
+    {
+      "alias": "PARENT",
+      "branch": "main",
+      "head": "fa7a3225201a3dbf18090fe1822a22231e192413",
+      "commitUrl": "https://github.com/siasia86/12_github-main/commit/fa7a3225201a3dbf18090fe1822a22231e192413",
+      "push": "verified"
+    },
+    {
+      "alias": "SCRIPT-30",
+      "branch": "main",
+      "head": "88edcf4a0b4cf25dbac71350fcd410fc850cc2ac",
+      "commitUrl": "https://github.com/siasia86/30_sia-scripts/commit/88edcf4a0b4cf25dbac71350fcd410fc850cc2ac",
+      "push": "verified"
+    },
+    {
+      "alias": "REFERENCE-41",
+      "branch": "main",
+      "head": "62cf46ed22344df0ade215d07bcf59ea49a447af",
+      "commitUrl": "https://github.com/siasia86/41_clone-repo/commit/62cf46ed22344df0ade215d07bcf59ea49a447af",
+      "push": "verified"
+    }
+  ],
+  "records": "Subsequent handoff/count correction validated separately; final publication SHA reported via Git receipt"
 }

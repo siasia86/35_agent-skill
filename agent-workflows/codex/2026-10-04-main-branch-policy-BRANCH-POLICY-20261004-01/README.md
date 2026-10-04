@@ -22,6 +22,19 @@ main agent는 판단·편집·최종 검증·게시를 담당하고 gpt-6-luna �
 
 설치 전 실제 config의 외부 변경을 감지해 최초 사본과 별도로 보존했습니다. 이번 작업은 config를 쓰지 않았고 설치 직전·직후 hash 일치를 확인했습니다. 초기 거부 검사와 이후 구분 검증은 private에 남깁니다. [비민감 검증 집계](validation.json)와 실제 main 게시·원격 SHA는 완료 보고에서 확인합니다. 새 세션 행동·원격 CI는 별도 미확인입니다.
 
+중앙 source 22개 Markdown과 최초 소비 문서 23개 Markdown의 관련 검사가 통과했습니다. 후속 인계·집계 수정은 변경 범위만 다시 검사합니다. 교차 파일 fragment 101개는 이슈 0건입니다.
+
+| 대상         | 게시 브랜치 | 원격 SHA 대조 commit                                                                                            |
+|--------------|-------------|-----------------------------------------------------------------------------------------------------------------|
+| POLICY-31    | main        | [5bc37da](https://github.com/siasia86/31_governances/commit/5bc37da9aa43597a0ed59fc47aa23067368427d1)           |
+| SKILL-35     | main        | [4c47824](https://github.com/siasia86/35_agent-skill/commit/4c4782493558665d6c6768b648964ccd24d02d16)           |
+| ZWS-02       | main        | [654d097](https://github.com/siasia86/02_zircon-workspace-plan/commit/654d0973e1a9684a5c65586247aeeb187acb2050) |
+| PARENT       | main        | [fa7a322](https://github.com/siasia86/12_github-main/commit/fa7a3225201a3dbf18090fe1822a22231e192413)           |
+| SCRIPT-30    | main        | [88edcf4](https://github.com/siasia86/30_sia-scripts/commit/88edcf4a0b4cf25dbac71350fcd410fc850cc2ac)           |
+| REFERENCE-41 | main        | [62cf46e](https://github.com/siasia86/41_clone-repo/commit/62cf46ed22344df0ade215d07bcf59ea49a447af)            |
+
+관리 7개 작업본은 main이며 문서 변경이 있는 6개 저장소의 일반 push·원격 SHA를 확인했습니다. 32는 변경 0건으로 새 commit을 만들지 않았습니다. 게임 10개 작업본의 branch·HEAD·기존 변경·index를 보존하며 91·98의 기존 로컬 관리 문서에서 중앙 게시 경로 문구만 보완했습니다. 이 두 미게시 문서는 staging·commit·push하지 않았습니다. 31의 최종 종료 기록은 별도 문서 commit으로 연결합니다.
+
 ## 5. 미실행과 후속
 
 게임 구현·자산·DB·빌드·기동·실행 환경·운영 적용·force push·branch 삭제·config·system/plugin은 범위 밖입니다. fact-check 로컬 적용 보류와 미확인 기능 상태를 유지합니다. 새 세션 암시적 발견·선택·행동과 원격 CI는 이번 정적 검사·설치·원격 SHA 확인으로 완료 처리하지 않습니다. 일반 작업은 필요한 검사와 기존 짧은 기록으로 마감하고 반복 사용자 검증·상세 폴더·전체 조사를 상시 요구하지 않습니다.

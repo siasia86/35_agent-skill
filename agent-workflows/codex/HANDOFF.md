@@ -2,6 +2,8 @@
 
 **최신 개인 skill 업데이트:** [T-WIN-003](2026-10-03-personal-skills-T-WIN-003/README.md)의 전후 사본·설치 관찰·검증·복구를 확인합니다. 활성 후속은 [Windows TODO](windows/TODO.md)에서 관리합니다. 다음 업데이트 백업은 codex 바로 아래 새 이름의 폴더 하나로 추가합니다.
 
+**2026-10-04 현행 게시 정책:** [BRANCH-POLICY](2026-10-04-main-branch-policy-BRANCH-POLICY-20261004-01/README.md)로 일반 main 직접 작업·검증·commit·일반 push를 적용했습니다. 필요한 agent/task·목적 브랜치와 fact-check 로컬 적용 대기는 유지합니다. 아래 날짜별 yunli·사용자 검증 대기·main 미게시 기록은 당시 범위이며 현재 일반 작업의 게시 조건으로 재사용하지 않습니다. 새 세션 암시적 행동은 Windows TODO의 미확인 후속입니다.
+
 ## 1. 재개할 작업과 읽기 순서
 
 **2026-10-03 배치 후속:** 개인 공통 지침의 배포 원본을 codex_windows/AGENTS.md로 통일하고 35의 개발·검토·적용 기록과 역할을 명시했습니다. [T-WIN-002 완료 기록](../history/2026-10-03/T-WIN-002-distribution-root.md)과 [Windows TODO](windows/TODO.md)의 사용자 확인 항목에서 재개합니다. 기존 개인 홈과 이전 설치 사본은 유지합니다.
@@ -18,7 +20,7 @@
 
 다음 세션에서 이 저장소를 열고 아래 요청으로 이어갈 수 있습니다.
 
-> AGENTS.md, agent-workflows/codex/PLATFORM_SPLIT_2026-10-03.md, agent-workflows/codex/windows/PLAN.md와 agent-workflows/codex/windows/TODO.md를 읽고 현재 Windows 전용 재작성 범위를 먼저 대조해 줘. Linux 원문·과거 검증·개인 설치 관찰은 보존하고 검증 후 yunli commit/push, 사용자 검증 후 main 반영 순서를 따라 줘. 설치·설정·운영 적용은 별도 요청 범위로 남겨 줘.
+> AGENTS.md와 현재 Windows PLAN·TODO의 지정 항목을 확인해 작업을 이어가 줘. 일반 작업은 관련 검증·기록 후 담당 파일만 main에 commit·일반 push하고 원격 SHA·링크를 보고해 줘. 기존 변경·필요한 agent 브랜치·QA/Migration/복구 목적 브랜치와 원문·사본은 보존해 줘. fact-check 로컬 적용 보류와 설정·운영 적용의 별도 범위는 유지해 줘.
 
 1. 루트 [AGENTS](../../AGENTS.md)와 이 인계 문서를 읽습니다. 이미 제공된 같은 지침을 중복해서 읽을 필요는 없습니다.
 2. [Windows PLAN](windows/PLAN.md)·[Windows TODO](windows/TODO.md)와 [플랫폼 분리 기록](PLATFORM_SPLIT_2026-10-03.md)을 먼저 확인합니다. 기존 Linux 후속은 [Linux TODO](../../codex_linux/TODO.md)의 1절과 [원시 검토 결과](reviews/2026-10-02/findings.json)를 읽고 대상 항목을 선택합니다.
