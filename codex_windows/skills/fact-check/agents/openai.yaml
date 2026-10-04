@@ -1,0 +1,4 @@
+interface:
+  display_name: "fact-check 문서별 사실 검증"
+  short_description: "PLAN·TODO 각각의 사실을 검증하고 확인된 오류를 수정합니다"
+  default_prompt: "PLAN TODO $fact-check: 각 문서 전체의 사실 주장을 검증하고 확인된 오류를 수정해 주세요."

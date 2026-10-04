@@ -4,6 +4,8 @@
 
 ## [Unreleased]
 
+- 2026-10-04: FC-20261004-01에서 독립된 `fact-check` 스킬과 UI 메타데이터를 추가합니다. `PLAN TODO $fact-check`로 각 문서 전체의 사실을 검증하고 근거로 확정된 오류를 최소 수정·재검증하며, 수정 금지와 추론 금지를 명시합니다. 최초 이관 19개와 신규 1개의 수치를 구분해 현행 Windows 안내를 갱신합니다. 로컬 적용은 사용자의 대기 요청으로 수행하지 않습니다. [생성·검증·적용 대기·복구](agent-workflows/codex/2026-10-04-fact-check-FC-20261004-01/README.md).
+
 - 2026-10-04: UA-MIN-20261004-01에서 사용자 요청의 테스트·개입 최소화 7개 규칙을 개인 AGENTS 배포 원본에 추가합니다. agent의 선행 검증·최소 사용자 확인·실행 경로/파일명 안내·실패 원인 분석·자율 후속을 명시하며 로컬 차이를 보존해 반영합니다. skill·도구·설정·게임 runtime은 변경하지 않습니다. [범위·검증·복구](agent-workflows/codex/2026-10-04-user-test-minimum-UA-MIN-20261004-01/README.md).
 
 - 2026-10-04: LC-PUB-20261004-01에서 개인 AGENTS와 work-rules·git-commit-rule의 Windows 실행 본문에 작업 완료 후 담당 변경의 yunli commit·일반 push·원격 확인·사용자 commit 링크 보고를 상시 절차로 반영합니다. 읽기 전용·변경 0건, 검증 실패·비밀값·다른 작업 변경, 현재 사용자 제한과 main 별도 승인을 구분합니다. [범위·적용·검증·복구](agent-workflows/codex/2026-10-04-yunli-publication-LC-PUB-20261004-01/README.md).

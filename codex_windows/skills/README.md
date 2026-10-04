@@ -1,6 +1,6 @@
 # Windows skill 목록
 
-19개 skill의 원문·예시·체크리스트·필요 자료를 보존합니다. 활성 Windows 절과 동봉 도구를 실행 기준으로 사용하고 필요한 폴더 전체를 복사합니다.
+기존 이관 skill 19개의 원문·예시·체크리스트·필요 자료를 보존하고 새 `fact-check` 1개를 더해 현재 20개를 제공합니다. 활성 본문과 동봉 도구를 실행 기준으로 사용하고 필요한 폴더 전체를 복사합니다.
 
 ## 1. 전체 19개
 
@@ -30,6 +30,8 @@
 
 ## 2. 단독 사용과 보존
 
+추가된 [fact-check](fact-check/SKILL.md)는 `PLAN TODO $fact-check`처럼 요청한 문서 각각을 전체 검증합니다. 기본은 근거로 확정된 오류의 수정·재검증이며 `수정 금지`·`검토만`이면 분석·보고만 합니다. 별도 helper 설치가 필요 없는 지시형 스킬입니다. 이 추가는 최초 19개 이관의 역사 수치·출처를 변경하지 않습니다.
+
 폴더 전체를 복사하면 동봉 참조·필요 helper를 사용할 수 있습니다. 다른 개인 skill 설치는 필요하지 않습니다. 실제 작업에 필요한 참조만 읽고 순환 참조를 반복하지 않습니다. 동봉 역할 54개도 Windows 본문으로 대응합니다.
 
 `references/kiro-original.md`는 Kiro 원문, `references/linux-original.md`는 Linux 활성 원문입니다. 동봉 역할의 Linux 원문과 기존 도구는 각각 `references/linux-skills/`, `references/linux-tools/`에 bytes로 보존합니다. 비교용 Python 파일은 실행 도구가 아니며 `scripts/`의 Windows 사본을 사용합니다.
@@ -40,6 +42,6 @@
 
 **작성일**: 2026-10-03
 
-**마지막 업데이트**: 2026-10-03
+**마지막 업데이트**: 2026-10-04
 
 © 2026 siasia86. Licensed under CC BY 4.0.

@@ -1,0 +1,100 @@
+{
+  "task": "FC-20261004-01",
+  "state": "generated-local-application-waiting",
+  "name": "fact-check",
+  "default": "correct-confirmed-errors-and-reverify",
+  "request_examples": [
+    "PLAN TODO $fact-check",
+    "PLAN TODO \"$fact-check\" 수정 금지"
+  ],
+  "scope": "full factual content of each requested document independently",
+  "inference": "explicitly prohibited; evidence comparison and verified-input arithmetic only",
+  "localApplication": "not performed: user requested waiting",
+  "checks": {
+    "skill-metadata": {
+      "exit": 0
+    },
+    "ui-metadata": {
+      "exit": 0
+    },
+    "originals-unchanged": {
+      "exit": 0
+    },
+    "markdown-style": {
+      "exit": 0,
+      "files": 9
+    },
+    "markdown-heading": {
+      "exit": 0,
+      "files": 9
+    },
+    "markdown-links": {
+      "exit": 0,
+      "files": 9,
+      "links": 125
+    },
+    "cross-fragments": {
+      "count": 17,
+      "passed": true
+    },
+    "whitespace": {
+      "exit": 0
+    },
+    "private-ignore": {
+      "exit": 0
+    },
+    "secrets-owned": {
+      "exit": 0
+    }
+  },
+  "preservation": {
+    "personalFolders": 7,
+    "personalFiles": 99,
+    "personalSkillsUnchanged": true,
+    "personalAGENTSAndConfigUnchanged": true,
+    "systemSkillsUnchanged": true,
+    "existing19SourceSkillFoldersUnchanged": true,
+    "newSkillNotInstalled": true,
+    "privateBackupIgnored": true
+  },
+  "sourceFiles": {
+    "SKILL.md": "d77150a39b96af5aa6449f711fc024224a11a8329ffa4ca45c729e3712c839ba",
+    "agents/openai.yaml": "4923239aaf79896900e1887321b449f2c5b51502b097e37bc56905848623b29d"
+  },
+  "distributionSkills": 20,
+  "isolatedBehavior": {
+    "model": "gpt-6-luna",
+    "invocations": 5,
+    "initialCases": 2,
+    "finalCases": 2,
+    "finalCoverageFollowup": 1,
+    "defaultCorrection": "two confirmed factual corrections only",
+    "explicitNoEdit": "whole fixture bytes unchanged",
+    "futureHistoricalAndEvidenceFilesPreserved": true,
+    "unverifiedClaimPreserved": true,
+    "initialObservations": [
+      "claim grouping and checkbox interpretation differed",
+      "one later review omitted present-state clause on a line with future plan"
+    ],
+    "repair": "explicit grouping, checkbox scope, mixed-clause separation; final evidence review retained unknowns",
+    "skillProvidedByExplicitPath": true,
+    "automaticDiscoveryTested": false
+  },
+  "toolSelection": {
+    "markdown": "installed md-link-check bundled Windows tools 26.10.03",
+    "reason": "no target-repository pinned Markdown checker or root TOML override found",
+    "python": "3.14.8; UTF-8; no bytecode generation",
+    "metadataDependency": "PyYAML 6.0.3 reused in ignored task-only directory; subprocess PYTHONPATH only"
+  },
+  "notPerformed": [
+    "local installation",
+    "fresh-session discovery and implicit selection",
+    "external factual lookup cases",
+    "actual project whole-document fact check",
+    "main merge",
+    "force push",
+    "release",
+    "operations",
+    "remote CI verification"
+  ]
+}

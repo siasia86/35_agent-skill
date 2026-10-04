@@ -19,7 +19,7 @@
 - `kiro/`: 실제 Kiro 개인 스킬·prompt·스타일의 보존 원본.
 - `gpt/`: 이전 GPT/Codex 이식의 보존 원본.
 - [codex_linux/](codex_linux/README.md): 폴더 단위로 단독 복사하는 Codex 개인 스킬 19개, 선택적 개인 지침 예시와 검증 기록.
-- [codex_windows/](codex_windows/README.md): 루트 [공통 AGENTS](codex_windows/AGENTS.md), Windows 개인 skill 19개·동봉 자료·필요 도구·설정 예시·사용 안내의 배포 원본.
+- [codex_windows/](codex_windows/README.md): 루트 [공통 AGENTS](codex_windows/AGENTS.md), Windows 개인 skill 20개(최초 이관 19개 + fact-check)·동봉 자료·필요 도구·설정 예시·사용 안내의 배포 원본.
 - [105_backup/codex](105_backup/codex/README.md): 폐기한 개발본·payload·catalog·설치기·governance·검증 이력. 새 설치 원본으로 사용하지 않습니다.
 - [agent-workflows](agent-workflows/README.md): 35 자체 agent·skill·prompt의 개발·검토·적용 절차, 관찰·검증·완료 이력과 과거 사본.
 - `claude/`: 기존 예약 영역.
@@ -75,6 +75,6 @@
 
 **작성일**: 2026-08-31
 
-**마지막 업데이트**: 2026-10-03
+**마지막 업데이트**: 2026-10-04
 
 © 2026 siasia86. Licensed under CC BY 4.0.

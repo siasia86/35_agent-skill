@@ -9,7 +9,7 @@ codex_windows/
 ├── AGENTS.md                  개인 공통 지침의 배포 원본
 ├── README.md                  복사·사용 안내
 ├── personal/                  설정 예시·적용 안내·Linux 비교 원문
-└── skills/                    19개 폴더 단위 자산
+└── skills/                    20개 폴더 단위 자산
     └── work-rules/
         ├── SKILL.md           핵심 규칙과 직접 참조 조건
         ├── references/
@@ -31,6 +31,8 @@ codex_windows/
 ```
 
 SKILL의 참조표가 work-rules 내부의 읽기 조건을 안내합니다. 별도 INDEX·PLAN·TODO·REVIEW·설치 inventory를 복사용 폴더 안에 추가하지 않습니다. 개발·검증·업데이트 기록은 [agent-workflows INDEX](agent-workflows/INDEX.md)에서 연결합니다.
+
+최초 이관 19개에 [fact-check](codex_windows/skills/fact-check/SKILL.md)를 추가했습니다. `PLAN TODO $fact-check`는 각 문서의 사실 주장을 검증하며 전체 작업 상태 감사로 확대하지 않습니다.
 
 ## 2. Codex가 인식하는 Markdown
 

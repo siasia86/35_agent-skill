@@ -1,6 +1,6 @@
 # Codex Windows 개인 스킬
 
-이 폴더는 Windows 개인 Codex에 복사·적용할 공통 지침·19개 skill·필수 동봉 도구·설정 예시의 배포 원본입니다. 제공 파일별 실제 적용 위치와 기존 사용자 편집을 확인하여 복사·병합합니다.
+이 폴더는 Windows 개인 Codex에 복사·적용할 공통 지침·20개 skill·필수 동봉 도구·설정 예시의 배포 원본입니다. 최초 이관 19개와 이후 추가한 `fact-check` 1개를 구분하며 제공 파일별 실제 적용 위치와 기존 사용자 편집을 확인하여 복사·병합합니다.
 
 ## 1. 사용할 파일
 
@@ -58,6 +58,6 @@ Copy-Item -LiteralPath $skillSource -Destination $skillTarget -Recurse -ErrorAct
 
 **작성일**: 2026-10-03
 
-**마지막 업데이트**: 2026-10-03
+**마지막 업데이트**: 2026-10-04
 
 © 2026 siasia86. Licensed under CC BY 4.0.
