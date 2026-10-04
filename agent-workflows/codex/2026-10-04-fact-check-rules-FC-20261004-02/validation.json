@@ -1,0 +1,148 @@
+{
+  "task": "FC-20261004-02",
+  "state": "source-validated-local-application-waiting",
+  "scope": "Each requested document full factual content; confirmed errors only",
+  "localApplication": "not performed: user requested waiting",
+  "checks": {
+    "skill-metadata": {
+      "exit": 0
+    },
+    "ui-metadata": {
+      "passed": true,
+      "unchanged": true
+    },
+    "markdown-style": {
+      "exit": 0,
+      "files": 5
+    },
+    "markdown-heading": {
+      "exit": 0,
+      "files": 5
+    },
+    "markdown-link": {
+      "exit": 0,
+      "files": 5
+    },
+    "version-style": {
+      "exit": 0
+    },
+    "version-heading": {
+      "exit": 0
+    },
+    "version-link": {
+      "exit": 0
+    },
+    "cross-file-fragments": {
+      "passed": true,
+      "count": 13
+    },
+    "fixture-exact-bytes": {
+      "passed": true,
+      "roots": 4,
+      "defaultEditsPerRoot": 2,
+      "readOnlyUnchanged": true,
+      "evidenceAndUnknownsPreserved": true
+    },
+    "preserved-platforms": {
+      "exit": 0
+    },
+    "preservation": {
+      "passed": true,
+      "personalFiles": 101,
+      "personalFolders": 7,
+      "personalSkillsAndSettingsUnchanged": true,
+      "systemSkillsUnchanged": true,
+      "other19SourceSkillsUnchanged": true,
+      "newSkillNotInstalled": true
+    },
+    "private-ignore": {
+      "exit": 0
+    },
+    "whitespace": {
+      "exit": 0
+    },
+    "secret-tool-version": {
+      "exit": 0
+    },
+    "secrets-owned": {
+      "exit": 0
+    },
+    "secrets-patch": {
+      "exit": 0
+    }
+  },
+  "behavior": {
+    "model": "gpt-6-luna",
+    "invocations": 5,
+    "defaultInvocations": 3,
+    "readOnlyInvocations": 2,
+    "freshFixtureRoots": 4,
+    "skillProvidedByExplicitPath": true,
+    "actualCyclesPerInvocation": 1,
+    "finalDefault": {
+      "claims": 6,
+      "accurate": 3,
+      "corrected": 2,
+      "remainingMismatch": 0,
+      "remainingUnknown": 3
+    },
+    "finalReadOnly": {
+      "claims": 6,
+      "accurate": 1,
+      "corrected": 0,
+      "remainingMismatch": 2,
+      "remainingUnknown": 3
+    },
+    "finalOutputReviewedByMain": true,
+    "initialObservations": [
+      "First default report omitted one before-correction mismatch and used inline arrow instead of diff codeblock",
+      "Read-only interim total was 7 and self-corrected to 6",
+      "Second default report omitted explicit source path for checkbox calculation",
+      "Expression embellishment vs arithmetic wording was clarified"
+    ],
+    "repairs": [
+      "All corrected errors require before/after verdicts and diff codeblocks",
+      "Before output, verify explicit source paths and per-file count totals"
+    ]
+  },
+  "initialFailures": [
+    {
+      "check": "markdown-style",
+      "exit": 1,
+      "issues": 23,
+      "repair": "Owned emoji spacing only; no skip options"
+    },
+    {
+      "check": "cross-file-fragments",
+      "observedCount": 0,
+      "status": "incomplete",
+      "cause": "File-link helper decoded path intentionally drops fragments",
+      "repair": "Read the raw destination and verify actual target headings; require nonzero known targets"
+    }
+  ],
+  "sourceFiles": {
+    "SKILL.md": "919439d12915cfceffcb3a13ec58d1c97240735e4c31c541296b62eb0e7af4a7",
+    "agents/openai.yaml": "4923239aaf79896900e1887321b449f2c5b51502b097e37bc56905848623b29d"
+  },
+  "toolSelection": {
+    "markdown": {
+      "style": "md-style-check.py 26.10.03",
+      "heading": "md-heading-check.py 26.10.03",
+      "link": "md-link-check.py 26.10.03"
+    },
+    "python": "3.14.8",
+    "metadataDependency": "Existing task-private PyYAML 6.0.3; subprocess-only PYTHONPATH; no global install",
+    "markdownReason": "No target-root pinned Markdown checker or Markdown TOML override found; bundled installed tools used"
+  },
+  "notPerformed": [
+    "Local installation",
+    "Fresh-session discovery or implicit selection",
+    "External technical factual lookup cases",
+    "An actual loop-exhaustion failure case",
+    "Actual project whole-document fact check",
+    "Main merge",
+    "Force push",
+    "Release or operations",
+    "Remote CI verification"
+  ]
+}
