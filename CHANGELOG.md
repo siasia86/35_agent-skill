@@ -4,6 +4,8 @@
 
 ## [Unreleased]
 
+- 2026-10-04: T-WIN-004 후속으로 정형 추출·자료 판단·계획·최종 설계의 모델 배정과 단일 통합 창구·계획 담당 분리를 보완했습니다. 지정 두 skill 53파일 및 개인 지침을 보존·병합·검증했고 설치본 해시 일치와 다른 skill/config 보존을 확인했습니다. 새 세션 암시적 선택·실제 분담·모델 성능 실측은 별도 미확인입니다. [검증·설치·복구](agent-workflows/codex/2026-10-04-orchestration-T-WIN-004/README.md).
+
 - 2026-10-04: GOAL-CONT-20261004-01에서 공통 goal-continuation과 UI metadata를 작성하고 work-rules의 목표 실행 선택 안내·현재 제공 목록을 보완했습니다. 독립 의미 검토·가상 요청 10개 대조 후 지정 두 폴더 46파일을 반영하고 해시 일치와 다른 설치본·개인 설정 보존을 확인했습니다. 기존 Goal·승인·보류·실제 도구 계약을 유지하며 실제 Goal 실행·새 세션 선택은 미확인입니다. [검증·지정 설치·게시·복구](agent-workflows/codex/2026-10-04-goal-continuation-GOAL-CONT-20261004-01/README.md).
 
 - 2026-10-04: BRANCH-POLICY-20261004-01에서 일반 main 작업·게시와 조건부 agent/task 브랜치, 목적 브랜치·기존 변경 보존을 개인 AGENTS·skill 4개 source 폴더의 관련 본문·참조와 35 지침에 반영했습니다. 원본 검사 후 로컬 두 skill 62파일·개인 게시 규칙 1줄을 적용하고 다른 설치본·외부 config 변경·fact-check 대기를 보존했습니다. 새 세션 행동·원격 CI는 미확인입니다. [범위·검증·설치·복구](agent-workflows/codex/2026-10-04-main-branch-policy-BRANCH-POLICY-20261004-01/README.md).

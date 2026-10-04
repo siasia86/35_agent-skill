@@ -1,0 +1,178 @@
+{
+  "references/kiro-original.md": {
+    "bytes": 29956,
+    "sha256": "a940ad7376aecac56a873671a3f77250fb6d4f6deb77598810bdfefd1420ed20"
+  },
+  "references/legacy-work-rules.md": {
+    "bytes": 29703,
+    "sha256": "e7e21a43a174ff83a1c45bea840d07ef892b58ee8455201286b936dc8bf26727"
+  },
+  "references/linux-original.md": {
+    "bytes": 38141,
+    "sha256": "87e5f78b137d2896b38dd29ddcad55aaf10e730f0f15d384d3c1ea41d4c8ab82"
+  },
+  "references/linux-skills/debugging-and-recovery.md": {
+    "bytes": 9774,
+    "sha256": "2d9abe01ee69ea435b9ab22f192770cfdba8ae01a28e47bd9cb7745bc8e9d77f"
+  },
+  "references/linux-skills/incremental-change.md": {
+    "bytes": 9809,
+    "sha256": "130094af74d1304f0e6ab6684c19725cf266c0db9cb29c5bb112531fc4ec36ce"
+  },
+  "references/linux-skills/kiro-lock.md": {
+    "bytes": 7050,
+    "sha256": "3451b83e3c0d23e0833e0f6e26b613713c984091440ccafb5c66a2b52f0b6c90"
+  },
+  "references/linux-skills/md-link-check.md": {
+    "bytes": 17422,
+    "sha256": "b42e938b6c6e004e4625de0f403323e0fc2249a7074c253ca0084316e48c7085"
+  },
+  "references/linux-skills/planning-and-breakdown.md": {
+    "bytes": 8783,
+    "sha256": "b28e326aa8c55ad774826dabd870eb9b014c2076ca5ed26410c646e8d07125cf"
+  },
+  "references/linux-skills/readme-template.md": {
+    "bytes": 7219,
+    "sha256": "f384b1571a4b8f35c642e5984354f0c2721ecf612b66d3ba09bddf39dc58e850"
+  },
+  "references/linux-skills/spec-driven-infra.md": {
+    "bytes": 10758,
+    "sha256": "2c8006325c5194aa013470926f59d98574b6f7eb815f06624273593d88a40949"
+  },
+  "references/linux-tools/lock.py": {
+    "bytes": 3840,
+    "sha256": "90940c3f7d16cf4fb9f13e9244743d254d522523df0e8ed2b36881ab90bbffe0"
+  },
+  "references/linux-tools/md-heading-check.py": {
+    "bytes": 30106,
+    "sha256": "53015d827dc7576dd4221c7accf7398a3be0e97d596b0b0b2951164397455df7"
+  },
+  "references/linux-tools/md-link-check.py": {
+    "bytes": 7944,
+    "sha256": "9f6d5a2d5c83f160d73623ef881e62fec8adb876a4ef3696d2666866fdef13f7"
+  },
+  "references/linux-tools/md-style-check.py": {
+    "bytes": 46040,
+    "sha256": "21d70e4cc4e4e272cbe64fdf6957dd10592eb26267a96c01d503c8a519c5ba10"
+  },
+  "references/operating-details.md": {
+    "bytes": 10966,
+    "sha256": "b2035b7054c7b4645d4c2065b98ff7e0abbb6842287448161a96eb612dcfdaae"
+  },
+  "references/originals/debugging-and-recovery.md": {
+    "bytes": 7021,
+    "sha256": "10140924f539da68922ce66acd54d6d30e596059f377bdeeeecbd8e26400b11e"
+  },
+  "references/originals/incremental-change.md": {
+    "bytes": 7100,
+    "sha256": "73abe0ab80accaae28ff8a628e16412255867aaacf063d2ee10bddc34b661d86"
+  },
+  "references/originals/kiro-lock.md": {
+    "bytes": 3021,
+    "sha256": "207914bf93b04e9a201297def12cf0a0c512bd4fb10ef20c86e8a5ba57c10553"
+  },
+  "references/originals/md-link-check.md": {
+    "bytes": 12260,
+    "sha256": "67bc59e6ca5432cd17ce0d13077cbaeaa51cc00c9c5764c8565323869d85aa05"
+  },
+  "references/originals/planning-and-breakdown.md": {
+    "bytes": 6048,
+    "sha256": "11ca00491de7ace22d02b633db071d7c46233e8678b58d3a6ab1ed223694925a"
+  },
+  "references/originals/readme-template.md": {
+    "bytes": 2998,
+    "sha256": "754dd7ea3b7be8e968802990ac8e63a2239285567d5c6c0ff45d935e8abc5a9e"
+  },
+  "references/originals/spec-driven-infra.md": {
+    "bytes": 7965,
+    "sha256": "e102ac0892303423279dc10afa24fbd7fa939042205776586b5fa8cd4d9419b2"
+  },
+  "references/originals/STYLE.md": {
+    "bytes": 19168,
+    "sha256": "f2797a30aaf805f9ab3cf157fff2e7229ad99dfe5cc6785b01b734090701a46a"
+  },
+  "references/repository-workflow.md": {
+    "bytes": 1847,
+    "sha256": "1c10dc6b77fe3fc3e022d81726cfa75e02ea223ef55714842efee52409aaabba"
+  },
+  "references/skill-maintenance.md": {
+    "bytes": 4734,
+    "sha256": "931d1964feb35ef54d8ef0d2b78d085a521b50340be537ef5936769a6dec99bd"
+  },
+  "references/skills/debugging-and-recovery.md": {
+    "bytes": 15328,
+    "sha256": "1d0749fc403b39ed0591a34bbbbce4581b49762e3803abb2edbb01458475358f"
+  },
+  "references/skills/incremental-change.md": {
+    "bytes": 14418,
+    "sha256": "b8bf1f4f344e1ff03b5b226325da1d32a77ec076cfb9293467a06d6a4a667b07"
+  },
+  "references/skills/kiro-lock.md": {
+    "bytes": 8753,
+    "sha256": "add747a0a09e3c75dabe4844e6030a127027cab15ffb8962aed0e5745349e84d"
+  },
+  "references/skills/md-link-check.md": {
+    "bytes": 21162,
+    "sha256": "9266581f77317f28d678086653d5b509297dce54b028eacec8637afee5313049"
+  },
+  "references/skills/planning-and-breakdown.md": {
+    "bytes": 19110,
+    "sha256": "bea2df26fad608b16f03b026bd7fbf07a2a0faa813b62c686d4cc61cd82a9abc"
+  },
+  "references/skills/readme-template.md": {
+    "bytes": 1438,
+    "sha256": "42664f8cd2e73f996e529e332e61f1e1743c432cc2ce7a22a70f3ddf3028ffe1"
+  },
+  "references/skills/spec-driven-infra.md": {
+    "bytes": 15345,
+    "sha256": "8cdfcc91e9c4e9543d45ef8242571303ac43395982ab2bdd711af6c41fee5d3e"
+  },
+  "references/STYLE.md": {
+    "bytes": 16673,
+    "sha256": "eb5764fc12a813f9bd20456cec508d24828bf076e77845de409c78ff7f9788a2"
+  },
+  "references/validation-and-recovery.md": {
+    "bytes": 3873,
+    "sha256": "2ad846203ed50678eb251fdaa6920e6fccd40967b9716bb0569b15973ff82030"
+  },
+  "references/windows/file-lock.md": {
+    "bytes": 2763,
+    "sha256": "b9b053155050b2fe1567c82b2e4b360b36e876b1b78c96596b3d8657bfc96a76"
+  },
+  "references/windows/runtime-and-encoding.md": {
+    "bytes": 5327,
+    "sha256": "0d68fa5e24d69f6f310ff4283a303506b31b32a82db6c482237576b3d8851677"
+  },
+  "references/windows/ssh-and-acl.md": {
+    "bytes": 2777,
+    "sha256": "7a5976c607c300ad0ba9c36419459a91b44e13cca482a09c252aad45f6009723"
+  },
+  "references/windows-work-rules-details.md": {
+    "bytes": 851,
+    "sha256": "d0f943b35dee07abe758e72204e9e34dcc7bc3785cb1c8a9fa157aa0ce6f3adc"
+  },
+  "scripts/lock.py": {
+    "bytes": 5896,
+    "sha256": "d26db693d6656ca610cc6164a4e9dea41bea7244f173e4d5bf499fa1a33585a4"
+  },
+  "scripts/md-heading-check.py": {
+    "bytes": 29592,
+    "sha256": "16c3de7712ef8987216b3b4e519d9bce5214fb15f78a69865e7441805bdf85d3"
+  },
+  "scripts/md-link-check.py": {
+    "bytes": 6993,
+    "sha256": "6991d56bf10c1ec6eaa8cbb9add5ff2e8bd3231a6cf8c534856736205983e5e6"
+  },
+  "scripts/md-style-check.py": {
+    "bytes": 46391,
+    "sha256": "a5199d0740de762ceef8441f862b6691c9614caea944c4671c2c9771c732c0e2"
+  },
+  "scripts/md_common.py": {
+    "bytes": 6387,
+    "sha256": "8af651399536aa8f7cf03101c1dee3ea5ee190a3621819d55d9ae1ddb81ef78d"
+  },
+  "SKILL.md": {
+    "bytes": 10267,
+    "sha256": "2b565669787eda09181688653650a1d776b2cfa64831b4d49a45ca2f9e9a9de4"
+  }
+}

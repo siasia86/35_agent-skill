@@ -1,0 +1,38 @@
+{
+  "references/kiro-original.md": {
+    "bytes": 6048,
+    "sha256": "11ca00491de7ace22d02b633db071d7c46233e8678b58d3a6ab1ed223694925a"
+  },
+  "references/linux-original.md": {
+    "bytes": 8790,
+    "sha256": "e48d05e3c44af73e1eeb8a9a4c638f06a77485abdb49ca689a494cbff7706efe"
+  },
+  "references/linux-skills/debugging-and-recovery.md": {
+    "bytes": 9774,
+    "sha256": "2d9abe01ee69ea435b9ab22f192770cfdba8ae01a28e47bd9cb7745bc8e9d77f"
+  },
+  "references/linux-skills/incremental-change.md": {
+    "bytes": 9809,
+    "sha256": "130094af74d1304f0e6ab6684c19725cf266c0db9cb29c5bb112531fc4ec36ce"
+  },
+  "references/originals/debugging-and-recovery.md": {
+    "bytes": 7021,
+    "sha256": "10140924f539da68922ce66acd54d6d30e596059f377bdeeeecbd8e26400b11e"
+  },
+  "references/originals/incremental-change.md": {
+    "bytes": 7100,
+    "sha256": "73abe0ab80accaae28ff8a628e16412255867aaacf063d2ee10bddc34b661d86"
+  },
+  "references/skills/debugging-and-recovery.md": {
+    "bytes": 15328,
+    "sha256": "1d0749fc403b39ed0591a34bbbbce4581b49762e3803abb2edbb01458475358f"
+  },
+  "references/skills/incremental-change.md": {
+    "bytes": 14418,
+    "sha256": "b8bf1f4f344e1ff03b5b226325da1d32a77ec076cfb9293467a06d6a4a667b07"
+  },
+  "SKILL.md": {
+    "bytes": 16710,
+    "sha256": "adb227edea6b69fee5d66dcf3ed60b2cb73a1c94be44a538d967f56c60ec0033"
+  }
+}
