@@ -11,7 +11,7 @@
 ├── codex_windows/                    # Windows 복사·사용 구성
 │   ├── AGENTS.md                     # Windows 개인 공통 지침 배포 원본
 │   ├── personal/                     # 설정 예시·비교 자료·홈 적용 안내
-│   └── skills/<이름>/SKILL.md        # 독립 개인 skill 19개
+│   └── skills/<이름>/SKILL.md        # 독립 개인 skill 원본
 ├── _reference/                       # 원본 출처·비교용 캐시 정책
 ├── codex_linux/                      # Linux 보존 구성
 ├── kiro/                             # Kiro 보존 원본

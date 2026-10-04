@@ -1,0 +1,4 @@
+interface:
+  display_name: "목표 이어가기"
+  short_description: "실행 전 대조 후 승인된 PLAN·TODO 목표 작업을 이어갑니다"
+  default_prompt: "$goal-continuation 최신 PLAN·TODO와 승인 범위를 실행 전에 대조하고, 같은 미완료 Goal은 유지하며 조회에 성공해 Goal이 없으면 요청한 작업 목표를 생성해 준비된 작업을 이어가줘. 다른 미완료 Goal은 보존해줘."

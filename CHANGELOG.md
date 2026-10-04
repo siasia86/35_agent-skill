@@ -4,6 +4,8 @@
 
 ## [Unreleased]
 
+- 2026-10-04: GOAL-CONT-20261004-01에서 공통 goal-continuation과 UI metadata를 작성하고 work-rules의 목표 실행 선택 안내·현재 제공 목록을 보완했습니다. 독립 의미 검토·가상 요청 10개 대조 후 지정 두 폴더 46파일을 반영하고 해시 일치와 다른 설치본·개인 설정 보존을 확인했습니다. 기존 Goal·승인·보류·실제 도구 계약을 유지하며 실제 Goal 실행·새 세션 선택은 미확인입니다. [검증·지정 설치·게시·복구](agent-workflows/codex/2026-10-04-goal-continuation-GOAL-CONT-20261004-01/README.md).
+
 - 2026-10-04: BRANCH-POLICY-20261004-01에서 일반 main 작업·게시와 조건부 agent/task 브랜치, 목적 브랜치·기존 변경 보존을 개인 AGENTS·skill 4개 source 폴더의 관련 본문·참조와 35 지침에 반영했습니다. 원본 검사 후 로컬 두 skill 62파일·개인 게시 규칙 1줄을 적용하고 다른 설치본·외부 config 변경·fact-check 대기를 보존했습니다. 새 세션 행동·원격 CI는 미확인입니다. [범위·검증·설치·복구](agent-workflows/codex/2026-10-04-main-branch-policy-BRANCH-POLICY-20261004-01/README.md).
 
 - 2026-10-04: MAIN-20261004-01에서 사용자 main 요청에 따라 LC-PUB·UA-MIN·fact-check 생성/보완 4개 커밋을 main에 fast-forward·일반 push하고 원격 SHA를 확인했습니다. 확인된 모순·의도 불일치 없음, 로컬 적용 보류와 미검증 항목 유지, checkout 줄바꿈 차이 9개 복구를 기록합니다. [병합·검증·복구](agent-workflows/codex/windows/records/2026-10-04-main-MAIN-20261004-01/README.md).
