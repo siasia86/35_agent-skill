@@ -1,0 +1,552 @@
+{
+  "schemaVersion": 1,
+  "ownerId": "SKILL-35:FC-20261004-03",
+  "assignmentId": "ZWS-COORD-20261004-02",
+  "observedDate": "2026-10-05",
+  "iterationCount": 1,
+  "readOnlyTargets": true,
+  "targetGit": {
+    "alias": "REC-STATS-53",
+    "branch": "main",
+    "head": "3b7f399074d56e6e0987e2a2fa383b01631d6794",
+    "initialStatus": "clean"
+  },
+  "assignmentGit": {
+    "alias": "WORKSPACE-02",
+    "head": "3baeab67e7298e6c32420a74a420599490ac1e0f"
+  },
+  "recordGit": {
+    "alias": "SKILL-35",
+    "branch": "main",
+    "head": "e683d2e254d1ec8648c77597120901f46ccdc9bd"
+  },
+  "targetPins": {
+    "docs/SOURCE_MAP.md": "725e222223f6af0dffce9aa2f41b4d09a902741f5b2b8b0a5a0fd1c1c8e9a473",
+    "docs/VERIFICATION_CONTRACT.md": "52730495ea7e1f941635a71dd7b4f88ba3c4685491439633953f7213710e6e76",
+    "docs/SOURCE_PINS.json": "3b91b69b5d97b096a09eea9c3c8012edd025296083e6fede1d706dfecb1aae7c",
+    ".governance/PLAN.md": "e03abc543f99711b322174392686bbf15406b27d81fc116065dd6ab0b1d93ece",
+    ".governance/TODO.md": "c6dd7756f909d8069e0855320ccb3efd954095f1998692b4bd837b52a08966f9"
+  },
+  "sourcePins": [
+    {
+      "alias": "TEST-98",
+      "path": "LibraryCore/SystemModels/ItemInfo.cs",
+      "sha256": "5c57637a771e981603ed1739e2dbd729d4f09dcf20974873d9583b3f66ac9064",
+      "matchesPublishedPin": true
+    },
+    {
+      "alias": "TEST-98",
+      "path": "LibraryCore/SystemModels/ItemInfoStat.cs",
+      "sha256": "d7e5c47b0f60f08f883d141939d0189f37652c64834698445da6b343ce60d40b",
+      "matchesPublishedPin": true
+    },
+    {
+      "alias": "TEST-98",
+      "path": "LibraryCore/SystemModels/SetInfo.cs",
+      "sha256": "7ca97fced5ceb874877ef823f0a12ff6fe402a6540de83e3a404e7c0749df938",
+      "matchesPublishedPin": true
+    },
+    {
+      "alias": "TEST-98",
+      "path": "LibraryCore/SystemModels/SetInfoStat.cs",
+      "sha256": "bf056be0829ab0abf6d0ba6fc41805af4dda091dd4f0c2787686302331f44788",
+      "matchesPublishedPin": true
+    },
+    {
+      "alias": "TEST-98",
+      "path": "LibraryCore/Stat.cs",
+      "sha256": "9b56990d3e52084c5e4ca30fb97975ebd44686cdaeda009b6f60170df84fc8c9",
+      "matchesPublishedPin": true
+    },
+    {
+      "alias": "TEST-98",
+      "path": "LibraryCore/EquipmentOptionMath.cs",
+      "sha256": "b3483fe9617c8307113b3a38c8f62c2bfded3e2cf0e9b0ff08da932d3b58309b",
+      "matchesPublishedPin": true
+    },
+    {
+      "alias": "TEST-98",
+      "path": "LibraryCore/Globals.cs",
+      "sha256": "507962c7a556edb730c0f71c11c3da3cf03fc809190095f060e75fd8dce04847",
+      "matchesPublishedPin": true
+    },
+    {
+      "alias": "TEST-98",
+      "path": "ServerLibrary/DBModels/UserItem.cs",
+      "sha256": "8e6574e0ab192a37861ed45064237886b88ccf526e68298bb2b0535d457fc396",
+      "matchesPublishedPin": true
+    },
+    {
+      "alias": "TEST-98",
+      "path": "ServerLibrary/DBModels/UserItemStat.cs",
+      "sha256": "60e70110456657fc7e36251e3e1ed51462a36cb95528f60f9b11c21a9cfb5e26",
+      "matchesPublishedPin": true
+    },
+    {
+      "alias": "TEST-98",
+      "path": "ServerLibrary/Models/PlayerObject.cs",
+      "sha256": "252187af880999e8054369a83e6d0a9132d99a504e7d9daf2156cad5cd925984",
+      "matchesPublishedPin": true
+    },
+    {
+      "alias": "TEST-98",
+      "path": "Client/Scenes/Views/InventoryDialog.cs",
+      "sha256": "6d743e3295fdce684f6a77c92cd907dc3d23376fa4afcc1687cdd8a55bed2519",
+      "matchesPublishedPin": true
+    },
+    {
+      "alias": "TEST-98",
+      "path": "AGENTS.md",
+      "sha256": "65f73fc3d93f03c233f4eee0feff9512b3b53bd3dbf4fd0487dea7656c3d0287",
+      "matchesPublishedPin": true
+    },
+    {
+      "alias": "TEST-98",
+      "path": ".governance/INDEX.md",
+      "sha256": "9df2f5dae37093e4a23ad40a0d5aee0db47843cbb1f7165dbfbdc7cd83b2a49d",
+      "matchesPublishedPin": true
+    },
+    {
+      "alias": "TEST-98",
+      "path": ".governance/PLAN.md",
+      "sha256": "6968bd944d816cbd63287225e68556f29d648a3466eb3469c0c762e7bc6cccc7",
+      "matchesPublishedPin": true
+    },
+    {
+      "alias": "TEST-98",
+      "path": ".governance/TODO.md",
+      "sha256": "50a8c36873daec529a3b5ffae4a260967264322c5879d882d1d68ae6fea4d591",
+      "matchesPublishedPin": true
+    },
+    {
+      "alias": "REC-SHIELD",
+      "path": "AGENTS.md",
+      "sha256": "3cf83f01842d6c30da9c423b1eb30895389497902147c05ea25b958dbf86204a",
+      "matchesPublishedPin": true
+    },
+    {
+      "alias": "REC-SHIELD",
+      "path": ".governance/INDEX.md",
+      "sha256": "1609c48e630853b9ae1d43d610f5bcc725c067995178a13170bcfc71aa77bebe",
+      "matchesPublishedPin": true
+    },
+    {
+      "alias": "REC-SHIELD",
+      "path": ".governance/PLAN.md",
+      "sha256": "f1301443c19b7287106995c95a9517dd30f7a429e5da0ab188c3092c99d258c0",
+      "matchesPublishedPin": true
+    },
+    {
+      "alias": "REC-SHIELD",
+      "path": ".governance/TODO.md",
+      "sha256": "3edebaa7553afc784e0abffdad39641722468fb8d2c09d24ecb1ed5a96cb6411",
+      "matchesPublishedPin": true
+    },
+    {
+      "alias": "REC-SHIELD",
+      "path": ".governance/outputs/REC-APPLY-20261004_levels/ITEM98-COORD-01.md",
+      "sha256": "65c1e9298fadab6506e0b584c02d144eb82bf17a7e015507e5c489f43c022702",
+      "matchesPublishedPin": true
+    }
+  ],
+  "documents": [
+    {
+      "filename": "SOURCE_MAP.md",
+      "claims": 23,
+      "confirmed": 23,
+      "corrected": 0,
+      "errors": 0,
+      "unknown": 0,
+      "scope": "specified direct code claims and numeric examples only",
+      "results": [
+        {
+          "id": "S01",
+          "line": 18,
+          "claim": "기본 Stat별 Amount 합산",
+          "evidence": "LibraryCore/SystemModels/ItemInfo.cs:485-489",
+          "verdict": "confirmed"
+        },
+        {
+          "id": "S02",
+          "line": 18,
+          "claim": "ItemInfoStat의 Item·Stat·Amount 필드",
+          "evidence": "LibraryCore/SystemModels/ItemInfoStat.cs:7-53",
+          "verdict": "confirmed"
+        },
+        {
+          "id": "S03",
+          "line": 18,
+          "claim": "SetInfo의 Items/SetStats 관계",
+          "evidence": "LibraryCore/SystemModels/SetInfo.cs:24-29",
+          "verdict": "confirmed"
+        },
+        {
+          "id": "S04",
+          "line": 19,
+          "claim": "UserItem은 AddedStats만 합산",
+          "evidence": "ServerLibrary/DBModels/UserItem.cs:500-505",
+          "verdict": "confirmed"
+        },
+        {
+          "id": "S05",
+          "line": 19,
+          "claim": "클라이언트 AddedStats 필드",
+          "evidence": "LibraryCore/Globals.cs:486",
+          "verdict": "confirmed"
+        },
+        {
+          "id": "S06",
+          "line": 19,
+          "claim": "클라이언트 AddedStats 복사 경계",
+          "evidence": "LibraryCore/Globals.cs:564",
+          "verdict": "confirmed"
+        },
+        {
+          "id": "S07",
+          "line": 20,
+          "claim": "속성 추가는 addElements 조건",
+          "evidence": "LibraryCore/Stat.cs:63-77",
+          "verdict": "confirmed"
+        },
+        {
+          "id": "S08",
+          "line": 20,
+          "claim": "ItemReviveTime의 0 제외·비영 최소값",
+          "evidence": "LibraryCore/Stat.cs:78-85",
+          "verdict": "confirmed"
+        },
+        {
+          "id": "S09",
+          "line": 21,
+          "claim": "내구 0이며 정의 내구가 양수인 장비 제외",
+          "evidence": "ServerLibrary/Models/PlayerObject.cs:2185-2187",
+          "verdict": "confirmed"
+        },
+        {
+          "id": "S10",
+          "line": 21,
+          "claim": "같은 ItemInfo는 세트 수집에 중복 추가하지 않음",
+          "evidence": "ServerLibrary/Models/PlayerObject.cs:2189-2196",
+          "verdict": "confirmed"
+        },
+        {
+          "id": "S11",
+          "line": 21,
+          "claim": "말 장비 조건은 세트 수집 뒤 수치 집계 전에 처리",
+          "evidence": "ServerLibrary/Models/PlayerObject.cs:2195-2202",
+          "verdict": "confirmed"
+        },
+        {
+          "id": "S12",
+          "line": 21,
+          "claim": "장비 정의와 인스턴스 Stats 별도 합산",
+          "evidence": "ServerLibrary/Models/PlayerObject.cs:2201-2202",
+          "verdict": "confirmed"
+        },
+        {
+          "id": "S13",
+          "line": 21,
+          "claim": "소켓 Gem의 기본·추가 Stats 합산",
+          "evidence": "ServerLibrary/Models/PlayerObject.cs:2204-2210",
+          "verdict": "confirmed"
+        },
+        {
+          "id": "S14",
+          "line": 21,
+          "claim": "무기 속성 선택과 값 합산 분기",
+          "evidence": "ServerLibrary/Models/PlayerObject.cs:2213-2221",
+          "verdict": "confirmed"
+        },
+        {
+          "id": "S15",
+          "line": 22,
+          "claim": "세트 Items 수와 고유 착용 정의 수 일치 조건",
+          "evidence": "ServerLibrary/Models/PlayerObject.cs:2299-2301",
+          "verdict": "confirmed"
+        },
+        {
+          "id": "S16",
+          "line": 22,
+          "claim": "세트 레벨·직업 비트 통과 후 Amount 추가",
+          "evidence": "ServerLibrary/Models/PlayerObject.cs:2303-2323",
+          "verdict": "confirmed"
+        },
+        {
+          "id": "S17",
+          "line": 23,
+          "claim": "스킬 회복 처리 뒤 물약 기본량의 퍼센트를 추가",
+          "evidence": "LibraryCore/EquipmentOptionMath.cs:9-13; ServerLibrary/Models/PlayerObject.cs:6390-6428",
+          "verdict": "confirmed"
+        },
+        {
+          "id": "S18",
+          "line": 23,
+          "claim": "HP/MP 회복 Stat의 퍼센트 정의",
+          "evidence": "LibraryCore/Stat.cs:905-908",
+          "verdict": "confirmed"
+        },
+        {
+          "id": "S19",
+          "line": 24,
+          "claim": "양수 치명타 감소율 상한 100과 정수 계산",
+          "evidence": "LibraryCore/EquipmentOptionMath.cs:16-20",
+          "verdict": "confirmed"
+        },
+        {
+          "id": "S20",
+          "line": 24,
+          "claim": "조사한 PlayerObject의 호출은 치명타 판정·배율 뒤 분기 내부",
+          "evidence": "ServerLibrary/Models/PlayerObject.cs:15764-15774",
+          "verdict": "confirmed"
+        },
+        {
+          "id": "S21",
+          "line": 24,
+          "claim": "치명타 저항 Stat의 퍼센트 정의",
+          "evidence": "LibraryCore/Stat.cs:909-910",
+          "verdict": "confirmed"
+        },
+        {
+          "id": "S22",
+          "line": 25,
+          "claim": "지정 마법 경로는 저항 값을 10으로 나누어 소비",
+          "evidence": "ServerLibrary/Models/PlayerObject.cs:15516-15548",
+          "verdict": "confirmed"
+        },
+        {
+          "id": "S23",
+          "line": 25,
+          "claim": "저항 처리 후 power<=0이면 차단·0 반환",
+          "evidence": "ServerLibrary/Models/PlayerObject.cs:15551-15554",
+          "verdict": "confirmed"
+        }
+      ]
+    },
+    {
+      "filename": "VERIFICATION_CONTRACT.md",
+      "claims": 19,
+      "confirmed": 19,
+      "corrected": 0,
+      "errors": 0,
+      "unknown": 0,
+      "scope": "specified direct code claims and numeric examples only",
+      "results": [
+        {
+          "id": "C01",
+          "line": 14,
+          "claim": "C# 정수 나눗셈은 0 방향으로 처리",
+          "evidence": "Microsoft C# arithmetic-operators:Integer division",
+          "verdict": "confirmed"
+        },
+        {
+          "id": "C02",
+          "line": 14,
+          "claim": "조사한 helper의 long 중간값과 clamp",
+          "evidence": "LibraryCore/EquipmentOptionMath.cs:12,19",
+          "verdict": "confirmed"
+        },
+        {
+          "id": "C03",
+          "line": 20,
+          "claim": "합산 가능한 기본 10·추가 3의 장비 기여는 13",
+          "evidence": "ServerLibrary/Models/PlayerObject.cs:2201-2202; LibraryCore/Stat.cs:86-87",
+          "verdict": "confirmed"
+        },
+        {
+          "id": "C04",
+          "line": 21,
+          "claim": "세트 필요 정의 2개에 유효 1개면 제외·2개와 직업/레벨 충족이면 Amount 추가",
+          "evidence": "ServerLibrary/Models/PlayerObject.cs:2299-2323",
+          "verdict": "confirmed"
+        },
+        {
+          "id": "C05",
+          "line": 21,
+          "claim": "같은 정의 중복은 고유 착용 정의 수를 늘리지 않음",
+          "evidence": "ServerLibrary/Models/PlayerObject.cs:2195-2196",
+          "verdict": "confirmed"
+        },
+        {
+          "id": "C06",
+          "line": 22,
+          "claim": "150 + 100*20/100 = 170",
+          "evidence": "LibraryCore/EquipmentOptionMath.cs:12",
+          "verdict": "confirmed"
+        },
+        {
+          "id": "C07",
+          "line": 22,
+          "claim": "150의 20%를 추가한 180과 구분",
+          "evidence": "LibraryCore/EquipmentOptionMath.cs:12",
+          "verdict": "confirmed"
+        },
+        {
+          "id": "C08",
+          "line": 22,
+          "claim": "percent<=0 또는 baseRecovery<=0이면 recovered 반환",
+          "evidence": "LibraryCore/EquipmentOptionMath.cs:11",
+          "verdict": "confirmed"
+        },
+        {
+          "id": "C09",
+          "line": 22,
+          "claim": "양수 base/percent 분기만 0..int.MaxValue로 제한",
+          "evidence": "LibraryCore/EquipmentOptionMath.cs:11-12",
+          "verdict": "confirmed"
+        },
+        {
+          "id": "C10",
+          "line": 22,
+          "claim": "장비 회복 helper는 HP/MP에만 호출하고 Focus에는 미호출",
+          "evidence": "ServerLibrary/Models/PlayerObject.cs:6424-6429; 같은 파일 helper 호출 검색",
+          "verdict": "confirmed"
+        },
+        {
+          "id": "C11",
+          "line": 23,
+          "claim": "150 + 99*1/100의 함수 결과는 150",
+          "evidence": "LibraryCore/EquipmentOptionMath.cs:12",
+          "verdict": "confirmed"
+        },
+        {
+          "id": "C12",
+          "line": 23,
+          "claim": "회복 결과가 int.MaxValue를 초과하면 int.MaxValue",
+          "evidence": "LibraryCore/EquipmentOptionMath.cs:12",
+          "verdict": "confirmed"
+        },
+        {
+          "id": "C13",
+          "line": 24,
+          "claim": "101*(100-33)/100의 함수 결과는 67",
+          "evidence": "LibraryCore/EquipmentOptionMath.cs:19",
+          "verdict": "confirmed"
+        },
+        {
+          "id": "C14",
+          "line": 24,
+          "claim": "감소율 100 이상이면 양수 피해 반환 0",
+          "evidence": "LibraryCore/EquipmentOptionMath.cs:18-19",
+          "verdict": "confirmed"
+        },
+        {
+          "id": "C15",
+          "line": 24,
+          "claim": "감소율 0 이하면 원래 피해 반환",
+          "evidence": "LibraryCore/EquipmentOptionMath.cs:18",
+          "verdict": "confirmed"
+        },
+        {
+          "id": "C16",
+          "line": 24,
+          "claim": "피해 0 이하면 원래 값 반환",
+          "evidence": "LibraryCore/EquipmentOptionMath.cs:18",
+          "verdict": "confirmed"
+        },
+        {
+          "id": "C17",
+          "line": 24,
+          "claim": "조사한 서버 분기에서 canCrit·확률 통과 및 배율 처리 뒤 호출·비치명타 미호출",
+          "evidence": "ServerLibrary/Models/PlayerObject.cs:15764-15775; 같은 파일 helper 호출 검색",
+          "verdict": "confirmed"
+        },
+        {
+          "id": "C18",
+          "line": 25,
+          "claim": "저항 직전 power100의 raw1은90·raw10은0으로 차단",
+          "evidence": "ServerLibrary/Models/PlayerObject.cs:15519,15551-15554",
+          "verdict": "confirmed"
+        },
+        {
+          "id": "C19",
+          "line": 25,
+          "claim": "지정 저항 raw1은10%·회복/치명타 raw1은1%",
+          "evidence": "ServerLibrary/Models/PlayerObject.cs:15519-15547; LibraryCore/EquipmentOptionMath.cs:12,19",
+          "verdict": "confirmed"
+        }
+      ]
+    }
+  ],
+  "officialEvidence": [
+    {
+      "url": "https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/arithmetic-operators#integer-division",
+      "claim": "integer division rounded toward zero",
+      "observedVia": "web open official Microsoft page",
+      "scope": "C# integer division only"
+    }
+  ],
+  "arithmetic": {
+    "runtime": "Python direct integer expressions",
+    "cases": 9,
+    "passed": 9,
+    "failed": 0,
+    "csharpExecuted": false,
+    "productBuild": false,
+    "negativeOrOverflowEquivalenceClaimed": false
+  },
+  "goal": {
+    "observed": null,
+    "created": false,
+    "explicitHumanCreationRequestInThisChatObserved": false
+  },
+  "excludedChanges": [
+    "agent-workflows/codex/2026-10-05-runtime-rules-followup-T-WIN-004/README.md",
+    "agent-workflows/codex/2026-10-05-fact-check-native-FC-20261004-03/HANDOFF-20261005.md",
+    "agent-workflows/codex/HANDOFF.md",
+    "agent-workflows/codex/windows/PLAN.md",
+    "agent-workflows/codex/windows/TODO.md",
+    "agent-workflows/codex/windows/records/2026-10-05-current-verifier-MAIN-20261004-01/HANDOFF_INTEGRATION_20261005.md"
+  ],
+  "publication": {
+    "staged": false,
+    "committed": false,
+    "pushed": false,
+    "owner": "12_github-main"
+  },
+  "unverified": [
+    "implicit skill selection",
+    "full default correction behavior",
+    "C# execution",
+    "original balance and database values",
+    "source and deployment equality",
+    "game and full combat behavior"
+  ],
+  "recordChecks": {
+    "markdownStyle": {
+      "selectedFiles": 1,
+      "issues": 0,
+      "exitCode": 0
+    },
+    "markdownHeading": {
+      "selectedFiles": 1,
+      "headings": 7,
+      "issues": 0,
+      "exitCode": 0
+    },
+    "markdownLocalLinks": {
+      "selectedFiles": 1,
+      "fileLinks": 2,
+      "issues": 0,
+      "exitCode": 0
+    },
+    "jsonCountsValid": true,
+    "forbiddenLanguageCharacters": 0,
+    "trailingWhitespaceLines": 0,
+    "networkLinkAvailabilityChecked": false,
+    "dedicatedSecretScannerRun": false
+  },
+  "preservation": {
+    "sourcePinCount": 20,
+    "sourceHashChanges": 0,
+    "targetAndPlanTodoPinCount": 5,
+    "targetAndPlanTodoHashChanges": 0,
+    "targetGitStatusAfter": "clean"
+  },
+  "inspectionCorrection": {
+    "issue": "First final record Git-status query used parent index 3, which selected the enclosing workspace instead of SKILL-35",
+    "impact": "That empty status is excluded as evidence for SKILL-35; document and source hash checks were independent and unaffected",
+    "resolution": "Requeried explicit SKILL-35 Git root; root and HEAD match; assigned pair untracked; other changes excluded",
+    "corrected": true
+  },
+  "recordMarkdownSha256": "894c51a1be541738f221831b8111a92366195356c814da1ecf5a24df2dcf4eaf"
+}
