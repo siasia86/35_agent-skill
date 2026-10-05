@@ -1,0 +1,91 @@
+{
+  "taskId": "T-WIN-004-USER-GUIDE-20261005",
+  "checks": {
+    "links": {
+      "exit": 0,
+      "summary": "✅ 모든 링크 정상\n\n────────────────────────────────────────────────────────────\n검사 파일: 10개 | 링크: 35개 | 깨진 링크: 0건"
+    },
+    "headings": {
+      "exit": 0,
+      "summary": "✅ 헤딩 구조 정상\n\n────────────────────────────────────────────────────────────\n검사 파일: 10개 | 헤딩: 284개 | 이슈: 0건"
+    },
+    "styleFocused": {
+      "exit": 0,
+      "summary": "\u001b[1;33m[제외] 디렉토리: .git, .venv, __pycache__, node_modules\u001b[0m\n\u001b[1;33m[제외] 파일: README.md (루트)\u001b[0m\n\u001b[1;33m[제외] 검사: footer\u001b[0m\n\n\u001b[0;32m✅ codex_windows\\AGENTS.md\u001b[0m\n\u001b[0;32m✅ codex_windows\\skills\\work-rules\\SKILL.md\u001b[0m\n\u001b[0;32m✅ agent-workflows\\codex\\2026-10-05-user-intervention-guide-T-WIN-004\\README.md\u001b[0m\n\n────────────────────────────────────────────────────────────\n\u001b[0;32m검사 파일: 3개 | 이슈: 0건\u001b[0m"
+    },
+    "skillStructure": {
+      "exit": 0,
+      "summary": "Skill is valid!"
+    },
+    "styleBaseline": {
+      "before": 6,
+      "after": 6,
+      "additional": 0,
+      "copies": 7
+    }
+  },
+  "sourceFiles": {
+    "codex_windows/AGENTS.md": "80c2b83c3dd5b32565605dee1a2cdb6ee17e57bb707705469654dce81313ec49",
+    "codex_windows/skills/work-rules/SKILL.md": "73c12d4daa335ac1ee859bdfe101b3228abf33e8671fea6b82cd5959980311b1",
+    "codex_windows/skills/work-rules/references/STYLE.md": "f993aaf32a113805784c5c9bef6e872c64ffab18314fb05f9cba55e08f1b4ca7",
+    "codex_windows/skills/using-skills/references/STYLE.md": "f993aaf32a113805784c5c9bef6e872c64ffab18314fb05f9cba55e08f1b4ca7",
+    "codex_windows/skills/git-commit-rule/references/STYLE.md": "f993aaf32a113805784c5c9bef6e872c64ffab18314fb05f9cba55e08f1b4ca7",
+    "codex_windows/skills/md-link-check/references/STYLE.md": "f993aaf32a113805784c5c9bef6e872c64ffab18314fb05f9cba55e08f1b4ca7",
+    "codex_windows/skills/readme-template/references/STYLE.md": "f993aaf32a113805784c5c9bef6e872c64ffab18314fb05f9cba55e08f1b4ca7",
+    "codex_windows/skills/security-tools/references/STYLE.md": "f993aaf32a113805784c5c9bef6e872c64ffab18314fb05f9cba55e08f1b4ca7",
+    "codex_windows/skills/zircon-readme-policy/references/STYLE.md": "f993aaf32a113805784c5c9bef6e872c64ffab18314fb05f9cba55e08f1b4ca7"
+  },
+  "styleCopies": {
+    "work-rules": "f993aaf32a113805784c5c9bef6e872c64ffab18314fb05f9cba55e08f1b4ca7",
+    "using-skills": "f993aaf32a113805784c5c9bef6e872c64ffab18314fb05f9cba55e08f1b4ca7",
+    "git-commit-rule": "f993aaf32a113805784c5c9bef6e872c64ffab18314fb05f9cba55e08f1b4ca7",
+    "md-link-check": "f993aaf32a113805784c5c9bef6e872c64ffab18314fb05f9cba55e08f1b4ca7",
+    "readme-template": "f993aaf32a113805784c5c9bef6e872c64ffab18314fb05f9cba55e08f1b4ca7",
+    "security-tools": "f993aaf32a113805784c5c9bef6e872c64ffab18314fb05f9cba55e08f1b4ca7",
+    "zircon-readme-policy": "f993aaf32a113805784c5c9bef6e872c64ffab18314fb05f9cba55e08f1b4ca7"
+  },
+  "checkerUnchanged": true,
+  "crossAnchor": "사용자-확인개입-안내",
+  "readmeFinalChecks": {
+    "links": {
+      "exit": 0,
+      "summary": "✅ 모든 링크 정상\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 링크: 4개 | 깨진 링크: 0건"
+    },
+    "headings": {
+      "exit": 0,
+      "summary": "✅ 헤딩 구조 정상\n\n────────────────────────────────────────────────────────────\n검사 파일: 1개 | 헤딩: 4개 | 이슈: 0건"
+    },
+    "style": {
+      "exit": 0,
+      "summary": "\u001b[1;33m[제외] 디렉토리: .git, .venv, __pycache__, node_modules\u001b[0m\n\u001b[1;33m[제외] 파일: README.md (루트)\u001b[0m\n\u001b[1;33m[제외] 검사: footer\u001b[0m\n\n\u001b[0;32m✅ agent-workflows\\codex\\2026-10-05-user-intervention-guide-T-WIN-004\\README.md\u001b[0m\n\n────────────────────────────────────────────────────────────\n\u001b[0;32m검사 파일: 1개 | 이슈: 0건\u001b[0m"
+    }
+  },
+  "baseHead": "172e6ae896398713d943cbb74bda6ecf67393bcc",
+  "installation": {
+    "work-rules": {
+      "contentFiles": 44,
+      "allInstalledFiles": 44,
+      "matches": true
+    },
+    "git-commit-rule": {
+      "contentFiles": 18,
+      "allInstalledFiles": 18,
+      "matches": true
+    },
+    "md-link-check": {
+      "contentFiles": 18,
+      "allInstalledFiles": 21,
+      "matches": true
+    }
+  },
+  "personalAgentsOutsideApprovedPhrasesPreserved": true,
+  "semanticReview": {
+    "requiredGuideFieldsMatched": true,
+    "markersOnlyImproveVisibility": true,
+    "existingAuthorizationAndHoldsPreserved": true,
+    "ownerStatusNotDuplicated": true,
+    "nonexistentLinksForbidden": true,
+    "independentAuthorizedWorkContinues": true,
+    "independentSessionLongTermBehavior": "not_verified"
+  }
+}
