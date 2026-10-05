@@ -1,0 +1,99 @@
+{
+  "task": "FC-20261004-03 native read-only followup",
+  "assignment": "ZWS-RESUME-20261005-02",
+  "date": "2026-10-05",
+  "relatedIDs": [
+    "FC-20261004-01",
+    "FC-20261004-02",
+    "FC-20261004-03",
+    "FC-INSTALL-20261004-01"
+  ],
+  "owner": "current Codex root",
+  "sourceHead": "18dbc416e171006a4f08732b55348089fea59a36",
+  "targetHead": "b08c9dd4585cfc790088e60dd27904e8e57602c3",
+  "targetAlias": "WORKSPACE-02/.governance/agent-guides/instructions/PLAN_TODO_EXECUTION.md",
+  "targetHash": "725846aaabda2214a0ffeeac9d190487bae567b8d8c37da4814c2bc12ceec519",
+  "targetLines": 85,
+  "selectedSkill": "USER/.agents/skills/fact-check/SKILL.md",
+  "selection": "explicit from provided catalog; installed instructions read and applied to actual document",
+  "implicitSelection": "not observed",
+  "sourceInstallation": "unchanged; prior verified2file installation reused",
+  "factualResult": {
+    "claims": 2,
+    "accurate": 2,
+    "corrected": 0,
+    "mismatch": 0,
+    "unknown": 0,
+    "iterations": 1,
+    "mode": "read-only",
+    "claimsEvidence": {
+      "first": {
+        "commit": "272f00e03993a14ad6a317aeef56063b2dcba2b7",
+        "gitDate": "2026-10-04T18:20:54+09:00",
+        "footer": [
+          "**작성일**: 2026-10-04",
+          "**마지막 업데이트**: 2026-10-04"
+        ]
+      },
+      "last": {
+        "commit": "c0caca34619367eed9c147c6f18973392caff766",
+        "gitDate": "2026-10-05T09:34:56+09:00",
+        "footer": [
+          "**작성일**: 2026-10-04",
+          "**마지막 업데이트**: 2026-10-05"
+        ]
+      }
+    },
+    "limits": "dates match tracked Git history; pre-Git drafting time not verified"
+  },
+  "excludedFromFactualCount": "policy imperatives, conditional instructions, examples, document-role and license declarations; no implementation success claims inferred",
+  "supplementaryReferences": {
+    "localFiles": 2,
+    "sameDocumentAnchors": 7,
+    "scope": "presence/anchor only, separate from factual claim count"
+  },
+  "readonlyPhase": {
+    "filesystemWrites": false,
+    "targetSourceInstalledConfigTodoUnchanged": true,
+    "externalProtectedChange": "verify_current.py hash changed; writer not independently identified; assigned editor is separate and file excluded",
+    "recordWriting": "separate explicitly-authorized result recording after read-only check ended"
+  },
+  "goal": "none observed; no creation",
+  "documentationChecks": {
+    "status": "pass",
+    "markdownFiles": 1,
+    "styleIssues": 0,
+    "headings": 7,
+    "headingIssues": 0,
+    "inlineFileLinks": 1,
+    "fileLinkIssues": 0,
+    "jsonParsedAndCountsChecked": true,
+    "checkerVersions": {
+      "md-style-check.py": "26.10.03",
+      "md-heading-check.py": "26.10.03",
+      "md-link-check.py": "26.10.03"
+    },
+    "scope": "one dedicated Markdown file and JSON; existing common checker not run"
+  },
+  "secretChecks": {
+    "status": "pass",
+    "scope": "two dedicated candidate files; ignored raw excluded",
+    "scanner": "gitleaks dir and candidate diff stdin",
+    "redacted": true
+  },
+  "notExecuted": [
+    "reinstallation",
+    "prior fixture replay",
+    "source or target edits",
+    "common TODO changes",
+    "verify_current.py review or execution",
+    "implicit selection",
+    "independent acceptance",
+    "remote SHA query",
+    "staging",
+    "commit",
+    "push",
+    "other-chat messages"
+  ],
+  "integration": "Return two dedicated files/diff/hash to total coordinator; 12_github-main owns Git publication"
+}
