@@ -1,0 +1,1006 @@
+{
+  "status": "PASS",
+  "consumers": 3,
+  "cases": 165,
+  "checks": [
+    {
+      "consumer": "git-commit-rule",
+      "case": "seven_statuses",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "rating_and_existing_symbols",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "bare_bmp_warning",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "bmp_emoji_selector",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "bmp_text_selector_not_bypass",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "allowed_glyph_extended_selector",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "allowed_glyph_text_selector",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "allowed_auxiliary_selector",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "supplementary_picture",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "regional_flag",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "skin_modifier",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "joined_sequence",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "keycap",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "ordinary_math_and_text",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "explicit_arrow_emoji",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "explicit_text_copyright",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "inline_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "multi_backtick_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "unclosed_inline_code",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "fenced_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "tilde_fenced_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "nested_shorter_fence",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "blockquote_original",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "nested_blockquote",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "code_then_authored_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "quoted_then_authored_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "literal_path",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "link_path",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "nested_link_path",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "link_label_is_authored",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "root_indented_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "indented_code_then_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "tab_indented_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "indent_cannot_interrupt_paragraph",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "list_indented_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "list_indented_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "ordered_list_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "ordered_list_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "nested_list_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "nested_list_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "list_first_line_code_padding",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "ordered_first_line_code_padding",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "list_short_padding_is_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "quoted_indented_original",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "new_status_space_required",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "new_info_space_required",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "rating_unchanged",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "auxiliary_spacing_unchanged",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "inline_spacing_preserved",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "quote_spacing_preserved",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "allowed_selector_spacing",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "allowed_selector_without_spacing",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "indented_spacing_preserved",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "cli_allowed",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "cli_reject",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "seven_statuses",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "rating_and_existing_symbols",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "bare_bmp_warning",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "bmp_emoji_selector",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "bmp_text_selector_not_bypass",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "allowed_glyph_extended_selector",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "allowed_glyph_text_selector",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "allowed_auxiliary_selector",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "supplementary_picture",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "regional_flag",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "skin_modifier",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "joined_sequence",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "keycap",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "ordinary_math_and_text",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "explicit_arrow_emoji",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "explicit_text_copyright",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "inline_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "multi_backtick_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "unclosed_inline_code",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "fenced_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "tilde_fenced_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "nested_shorter_fence",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "blockquote_original",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "nested_blockquote",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "code_then_authored_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "quoted_then_authored_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "literal_path",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "link_path",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "nested_link_path",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "link_label_is_authored",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "root_indented_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "indented_code_then_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "tab_indented_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "indent_cannot_interrupt_paragraph",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "list_indented_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "list_indented_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "ordered_list_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "ordered_list_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "nested_list_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "nested_list_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "list_first_line_code_padding",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "ordered_first_line_code_padding",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "list_short_padding_is_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "quoted_indented_original",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "new_status_space_required",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "new_info_space_required",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "rating_unchanged",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "auxiliary_spacing_unchanged",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "inline_spacing_preserved",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "quote_spacing_preserved",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "allowed_selector_spacing",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "allowed_selector_without_spacing",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "indented_spacing_preserved",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "cli_allowed",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "cli_reject",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "seven_statuses",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "rating_and_existing_symbols",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "bare_bmp_warning",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "bmp_emoji_selector",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "bmp_text_selector_not_bypass",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "allowed_glyph_extended_selector",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "allowed_glyph_text_selector",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "allowed_auxiliary_selector",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "supplementary_picture",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "regional_flag",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "skin_modifier",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "joined_sequence",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "keycap",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "ordinary_math_and_text",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "explicit_arrow_emoji",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "explicit_text_copyright",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "inline_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "multi_backtick_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "unclosed_inline_code",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "fenced_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "tilde_fenced_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "nested_shorter_fence",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "blockquote_original",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "nested_blockquote",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "code_then_authored_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "quoted_then_authored_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "literal_path",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "link_path",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "nested_link_path",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "link_label_is_authored",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "root_indented_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "indented_code_then_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "tab_indented_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "indent_cannot_interrupt_paragraph",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "list_indented_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "list_indented_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "ordered_list_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "ordered_list_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "nested_list_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "nested_list_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "list_first_line_code_padding",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "ordered_first_line_code_padding",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "list_short_padding_is_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "quoted_indented_original",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "new_status_space_required",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "new_info_space_required",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "rating_unchanged",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "auxiliary_spacing_unchanged",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "inline_spacing_preserved",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "quote_spacing_preserved",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "allowed_selector_spacing",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "allowed_selector_without_spacing",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "indented_spacing_preserved",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "cli_allowed",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "cli_reject",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true
+    }
+  ],
+  "checker_sha256": [
+    "9370c6e9bc395729c58631ce0e88d37c4db1d2c629cd0b7d3fc18586d7aa46c8"
+  ]
+}

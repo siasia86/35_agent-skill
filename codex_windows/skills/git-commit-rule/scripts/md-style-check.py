@@ -23,7 +23,7 @@ STYLE.md 규칙 기반: 표 정렬, 다이어그램 폭/한글/박스 문자, H1
   -V, --version             버전 출력
 """
 
-VERSION = "26.10.03"
+VERSION = "26.10.05"
 
 import argparse
 import os
@@ -32,7 +32,7 @@ import sys
 import tomllib
 import unicodedata
 from functools import lru_cache
-from md_common import configure_utf8_output, display_path, fence_info, strip_blockquote_prefix, strip_fenced_code
+from md_common import configure_utf8_output, display_path, fence_info, iter_inline_links, mask_inline_code, strip_blockquote_prefix, strip_fenced_code
 
 # ── 컬러 ──────────────────────────────────────────────────────────────────────
 
@@ -356,57 +356,110 @@ def check_diagram_korean(content, strict=False):
             block_body.append(_strip_blockquote_prefix(line))
     return issues
 
-# 허용 이모지 목록
-_ALLOWED_EMOJIS = ['✅', '❌', '🟡', '🟢', '🔴', '★', '☆', '💡', '✓', '✗']
-# 공백 검사 대상: ✅ ❌ 🟡 🟢 🔴 만 (★☆💡는 공백 규칙 불필요)
-_EMOJI_SPACE_TARGETS = ['✅', '❌', '🟡', '🟢', '🔴']
+# 기본 상태 7개와 사용자가 허용한 기존 보조 기호 5개.
+_ALLOWED_EMOJIS = ['✅', '❌', '🟡', '🟢', '🔴', '★', '☆', '💡', '✓', '✗', '🟠', '🔵']
+_EMOJI_SPACE_TARGETS = ['✅', '❌', '🟡', '🟢', '🔴', '🟠', '🔵']
 _EMOJI_PATTERN = re.compile(
-    r'(' + '|'.join(re.escape(e) for e in _EMOJI_SPACE_TARGETS) + r')([^\s|`])'
+    r'(' + '|'.join(re.escape(e) for e in _EMOJI_SPACE_TARGETS) + r')[\ufe0e\ufe0f]?([^\s|`\ufe0e\ufe0f])'
 )
-# 비허용 이모지 탐지: Unicode Emoji 범위 중 허용 목록 외
-# 장식용 이모지만 검사 (Emoticons, Transport/Map Symbols, Supplemental)
-# 기호 문자(✓✗⚠☰⬆ 등)는 제외합니다.
-# Unicode 15.1 기준 장식용 이모지 범위이며, Unicode 확장 시 범위를 재검토합니다.
+# Derived from Unicode Emoji 15.1 Emoji property (Unicode, Inc., 2023).
+# https://www.unicode.org/Public/15.1.0/ucd/emoji/emoji-data.txt
+# Terms: https://www.unicode.org/terms_of_use.html
+_EMOJI_CHAR_CLASS = r"""\u0023\u002a\u0030-\u0039\u00a9\u00ae\u203c\u2049\u2122\u2139\u2194-\u2199\u21a9-\u21aa\u231a-\u231b\u2328\u23cf\u23e9-\u23f3\u23f8-\u23fa\u24c2\u25aa-\u25ab\u25b6\u25c0\u25fb-\u25fe\u2600-\u2604\u260e\u2611\u2614-\u2615\u2618\u261d\u2620\u2622-\u2623\u2626\u262a\u262e-\u262f\u2638-\u263a\u2640\u2642\u2648-\u2653\u265f-\u2660\u2663\u2665-\u2666\u2668\u267b\u267e-\u267f\u2692-\u2697\u2699\u269b-\u269c\u26a0-\u26a1\u26a7\u26aa-\u26ab\u26b0-\u26b1\u26bd-\u26be\u26c4-\u26c5\u26c8\u26ce-\u26cf\u26d1\u26d3-\u26d4\u26e9-\u26ea\u26f0-\u26f5\u26f7-\u26fa\u26fd\u2702\u2705\u2708-\u270d\u270f\u2712\u2714\u2716\u271d\u2721\u2728\u2733-\u2734\u2744\u2747\u274c\u274e\u2753-\u2755\u2757\u2763-\u2764\u2795-\u2797\u27a1\u27b0\u27bf\u2934-\u2935\u2b05-\u2b07\u2b1b-\u2b1c\u2b50\u2b55\u3030\u303d\u3297\u3299\U0001f004\U0001f0cf\U0001f170-\U0001f171\U0001f17e-\U0001f17f\U0001f18e\U0001f191-\U0001f19a\U0001f1e6-\U0001f1ff\U0001f201-\U0001f202\U0001f21a\U0001f22f\U0001f232-\U0001f23a\U0001f250-\U0001f251\U0001f300-\U0001f321\U0001f324-\U0001f393\U0001f396-\U0001f397\U0001f399-\U0001f39b\U0001f39e-\U0001f3f0\U0001f3f3-\U0001f3f5\U0001f3f7-\U0001f4fd\U0001f4ff-\U0001f53d\U0001f549-\U0001f54e\U0001f550-\U0001f567\U0001f56f-\U0001f570\U0001f573-\U0001f57a\U0001f587\U0001f58a-\U0001f58d\U0001f590\U0001f595-\U0001f596\U0001f5a4-\U0001f5a5\U0001f5a8\U0001f5b1-\U0001f5b2\U0001f5bc\U0001f5c2-\U0001f5c4\U0001f5d1-\U0001f5d3\U0001f5dc-\U0001f5de\U0001f5e1\U0001f5e3\U0001f5e8\U0001f5ef\U0001f5f3\U0001f5fa-\U0001f64f\U0001f680-\U0001f6c5\U0001f6cb-\U0001f6d2\U0001f6d5-\U0001f6d7\U0001f6dc-\U0001f6e5\U0001f6e9\U0001f6eb-\U0001f6ec\U0001f6f0\U0001f6f3-\U0001f6fc\U0001f7e0-\U0001f7eb\U0001f7f0\U0001f90c-\U0001f93a\U0001f93c-\U0001f945\U0001f947-\U0001f9ff\U0001fa70-\U0001fa7c\U0001fa80-\U0001fa88\U0001fa90-\U0001fabd\U0001fabf-\U0001fac5\U0001face-\U0001fadb\U0001fae0-\U0001fae8\U0001faf0-\U0001faf8"""
+_EMOJI_COMPONENT = '[' + _EMOJI_CHAR_CLASS + '★☆✓✗]' + r'[\ufe0e\ufe0f]?[\U0001f3fb-\U0001f3ff]?'
 _ALL_EMOJI_PATTERN = re.compile(
-    '[\U0001F300-\U0001F5FF'   # Misc Symbols and Pictographs
-    '\U0001F600-\U0001F64F'    # Emoticons
-    '\U0001F680-\U0001F6FF'    # Transport and Map Symbols
-    '\U0001F900-\U0001F9FF'    # Supplemental Symbols
-    '\U0001FA00-\U0001FA6F'    # Chess Symbols
-    '\U0001FA70-\U0001FAFF'    # Symbols Extended-A
-    '\U00002600-\U000027BF'    # Misc Symbols + Dingbats (⚠️❗✂️ 등)
-    '\U00002B50'                 # ⭐ (White Medium Star — ★과 혼동 방지)
-    ']+'
+    _EMOJI_COMPONENT + r'(?:\u200d' + _EMOJI_COMPONENT + r')*\u20e3?'
 )
+# ASCII markers, copyright, arrows and math/text symbols are not decorative
+# emoji unless an explicit emoji selector or keycap is attached.
+_TEXT_STYLE_SYMBOLS = set('#*0123456789©®™ℹ↔↕↖↗↘↙↩↪♀♂')
+
+
+def _mask_indented_emoji_code(content):
+    """Mask indented code without treating list prose as root-level code.
+
+    Code needs a block boundary, four spaces beyond its list container,
+    and cannot interrupt an existing paragraph. Keep diagnostic line numbers.
+    """
+    result = []
+    containers = []
+    paragraph_open = False
+    code_indent = None
+    for line in content.splitlines(keepends=True):
+        expanded = line.expandtabs(4)
+        indent = len(expanded) - len(expanded.lstrip(' '))
+        text = expanded.strip()
+        if not text:
+            paragraph_open = False
+            result.append(line)
+            continue
+        if code_indent is not None:
+            if indent >= code_indent:
+                result.append(''.join(c if c in '\r\n' else ' ' for c in line))
+                continue
+            code_indent = None
+            paragraph_open = False
+        while containers and indent < containers[-1]:
+            containers.pop()
+        required_indent = (containers[-1] if containers else 0) + 4
+        if not paragraph_open and indent >= required_indent:
+            code_indent = required_indent
+            result.append(''.join(c if c in '\r\n' else ' ' for c in line))
+            continue
+        marker = re.match(r'^( *)(?:[-+*]|\d{1,9}[.)])([ ]+)(.*)$', expanded.rstrip('\r\n'))
+        if marker and indent < required_indent:
+            # More than four padding spaces means one padding space followed
+            # by code indentation, rather than an over-wide list container.
+            padding = len(marker.group(2))
+            content_indent = marker.start(3) - (padding - 1 if padding > 4 else 0)
+            containers.append(content_indent)
+            paragraph_open = bool(marker.group(3).strip()) and padding <= 4
+            if padding > 4:
+                code_indent = content_indent + 4
+                result.append(''.join(c if c in '\r\n' else ' ' for c in line))
+                continue
+        elif re.match(r'^(?:#{1,6}\s|>|(?:-{3,}|\*{3,}|_{3,})\s*$)', text):
+            paragraph_open = False
+        else:
+            paragraph_open = True
+        result.append(line)
+    return ''.join(result)
+
+
+def _emoji_prose(content):
+    clean = mask_inline_code(_mask_indented_emoji_code(strip_code_blocks(content)))
+    for line_number, line in enumerate(clean.splitlines(), 1):
+        if line.lstrip().startswith('>'):
+            continue
+        # Preserve exact inline link destinations/paths, not the visible label.
+        for raw, _ in iter_inline_links(line):
+            destination = '](' + raw + ')'
+            line = line.replace(destination, '](' + ' ' * len(raw) + ')')
+        yield line_number, line.strip()
 
 
 def check_emoji_space(content, strict=False):
-    """이모지 뒤 공백 1칸 필수 검사 (STYLE.md § 7). 코드블록/표 셀 내 이모지 단독 사용 제외."""
+    """Require the existing spacing rule for seven status markers only."""
     issues = []
-    # 코드블록 제거 후 원본 라인 번호 추적
-    clean = strip_code_blocks(content)
-    for i, line in enumerate(clean.splitlines(), 1):
-        stripped = line.strip()
-        for emoji, next_char in _EMOJI_PATTERN.findall(stripped):
-            issues.append(f"L{i}: '{emoji}' 뒤 공백 없음 → '{emoji}{next_char}'")
+    for line_number, line in _emoji_prose(content):
+        for emoji, next_char in _EMOJI_PATTERN.findall(line):
+            issues.append(f"L{line_number}: '{emoji}' 뒤 공백 없음 → '{emoji}{next_char}'")
     return issues
 
 
 def check_emoji_disallowed(content, strict=False):
-    """비허용 이모지 사용 검사 (STYLE.md § 7). 허용: ✅ ❌ 🟡 🟢 🔴 + ★. 코드블록/인용구 내부 제외."""
+    """Check authored prose; preserve code, quoted originals and link paths."""
     issues = []
-    clean = strip_code_blocks(content)
-    for i, line in enumerate(clean.splitlines(), 1):
-        stripped = line.strip()
-        # 인용구(>) 내부 제외 — 외부 출처 인용 시 원문 이모지 보존 목적
-        if stripped.startswith('>'):
-            continue
-        for match in _ALL_EMOJI_PATTERN.finditer(stripped):
-            emoji = match.group()
-            # 허용 목록 확인 (문자 단위 — ★★★☆☆ 같은 연속도 허용)
-            if all(c in _ALLOWED_EMOJIS for c in emoji):
+    allowed = set(_ALLOWED_EMOJIS)
+    for line_number, line in _emoji_prose(content):
+        for match in _ALL_EMOJI_PATTERN.finditer(line):
+            symbol = match.group()
+            normalized = symbol[:-1] if symbol.endswith(('\ufe0e', '\ufe0f')) else symbol
+            if normalized in allowed or symbol in _TEXT_STYLE_SYMBOLS:
                 continue
-            issues.append(f"L{i}: 비허용 이모지 '{emoji}' — 허용: ✅ ❌ 🟡 🟢 🔴 ★")
+            if symbol.endswith('\ufe0e') and normalized in _TEXT_STYLE_SYMBOLS:
+                continue
+            issues.append(f"L{line_number}: 비허용 이모지 '{symbol}' — 허용: {' '.join(_ALLOWED_EMOJIS)}")
     return issues
 
 
@@ -891,7 +944,7 @@ def parse_args():
             "  표 정렬          한글 display width 기준 셀 패딩\n"
             "  다이어그램 행 폭  박스 다이어그램 내부 행 폭 일치\n"
             "  다이어그램 한글  박스 다이어그램 내부 영문 권장\n"
-            "  이모지 뒤 공백   ✅❌🟡🟢🔴 뒤 공백 1칸 필수\n"
+            "  이모지 뒤 공백   ✅❌🟡🟢🔴🟠🔵 뒤 공백 1칸 필수\n"
             "  반말체 종결어미  ~이다/한다/된다 등 금지\n"
             "  과장 표현        완전/완벽/최고/최강 등 금지 (--strict: whitelist 무시)\n"
             "  푸터             작성일/마지막 업데이트/저작권 필수\n"

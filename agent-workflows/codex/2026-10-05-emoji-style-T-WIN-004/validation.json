@@ -1,0 +1,146 @@
+{
+  "task_id": "T-WIN-004-EMOJI-20261005",
+  "baseline_head": "b04b034e479a3d69fd8795620230bf11fb4647b8",
+  "allowed_symbols": [
+    "✅",
+    "❌",
+    "🟡",
+    "🟢",
+    "🔴",
+    "★",
+    "☆",
+    "💡",
+    "✓",
+    "✗",
+    "🟠",
+    "🔵"
+  ],
+  "source_files": [
+    {
+      "path": "codex_windows/AGENTS.md",
+      "before_sha256": "185998547300a3edd0b017af1e8b63a0291bf7ef89475bddf011c039b468c4f6",
+      "after_sha256": "83cb2d7773623646c340ef13d37979d82ed3c8f86dd8cebcd26b1640407cdfbc"
+    },
+    {
+      "path": "codex_windows/skills/git-commit-rule/references/STYLE.md",
+      "before_sha256": "eb5764fc12a813f9bd20456cec508d24828bf076e77845de409c78ff7f9788a2",
+      "after_sha256": "5f198a69fb929bf207766a8de5215994cb19030312aa605887989b1d06192e97"
+    },
+    {
+      "path": "codex_windows/skills/git-commit-rule/scripts/md-style-check.py",
+      "before_sha256": "a5199d0740de762ceef8441f862b6691c9614caea944c4671c2c9771c732c0e2",
+      "after_sha256": "9370c6e9bc395729c58631ce0e88d37c4db1d2c629cd0b7d3fc18586d7aa46c8"
+    },
+    {
+      "path": "codex_windows/skills/md-link-check/references/STYLE.md",
+      "before_sha256": "eb5764fc12a813f9bd20456cec508d24828bf076e77845de409c78ff7f9788a2",
+      "after_sha256": "5f198a69fb929bf207766a8de5215994cb19030312aa605887989b1d06192e97"
+    },
+    {
+      "path": "codex_windows/skills/md-link-check/scripts/md-style-check.py",
+      "before_sha256": "a5199d0740de762ceef8441f862b6691c9614caea944c4671c2c9771c732c0e2",
+      "after_sha256": "9370c6e9bc395729c58631ce0e88d37c4db1d2c629cd0b7d3fc18586d7aa46c8"
+    },
+    {
+      "path": "codex_windows/skills/readme-template/references/STYLE.md",
+      "before_sha256": "eb5764fc12a813f9bd20456cec508d24828bf076e77845de409c78ff7f9788a2",
+      "after_sha256": "5f198a69fb929bf207766a8de5215994cb19030312aa605887989b1d06192e97"
+    },
+    {
+      "path": "codex_windows/skills/readme-template/scripts/md-style-check.py",
+      "before_sha256": "a5199d0740de762ceef8441f862b6691c9614caea944c4671c2c9771c732c0e2",
+      "after_sha256": "9370c6e9bc395729c58631ce0e88d37c4db1d2c629cd0b7d3fc18586d7aa46c8"
+    },
+    {
+      "path": "codex_windows/skills/security-tools/references/STYLE.md",
+      "before_sha256": "eb5764fc12a813f9bd20456cec508d24828bf076e77845de409c78ff7f9788a2",
+      "after_sha256": "5f198a69fb929bf207766a8de5215994cb19030312aa605887989b1d06192e97"
+    },
+    {
+      "path": "codex_windows/skills/security-tools/scripts/md-style-check.py",
+      "before_sha256": "a5199d0740de762ceef8441f862b6691c9614caea944c4671c2c9771c732c0e2",
+      "after_sha256": "9370c6e9bc395729c58631ce0e88d37c4db1d2c629cd0b7d3fc18586d7aa46c8"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/references/STYLE.md",
+      "before_sha256": "eb5764fc12a813f9bd20456cec508d24828bf076e77845de409c78ff7f9788a2",
+      "after_sha256": "5f198a69fb929bf207766a8de5215994cb19030312aa605887989b1d06192e97"
+    },
+    {
+      "path": "codex_windows/skills/using-skills/scripts/md-style-check.py",
+      "before_sha256": "a5199d0740de762ceef8441f862b6691c9614caea944c4671c2c9771c732c0e2",
+      "after_sha256": "9370c6e9bc395729c58631ce0e88d37c4db1d2c629cd0b7d3fc18586d7aa46c8"
+    },
+    {
+      "path": "codex_windows/skills/work-rules/SKILL.md",
+      "before_sha256": "c22ef1f49b2ce99d828ad8fb6b23a27d228bd0e60dd93a58f1d935140dc0151d",
+      "after_sha256": "0546f88671332ca76ae0de6bfec9fc56355f8385ff6d567dd005781ac47952a5"
+    },
+    {
+      "path": "codex_windows/skills/work-rules/references/STYLE.md",
+      "before_sha256": "eb5764fc12a813f9bd20456cec508d24828bf076e77845de409c78ff7f9788a2",
+      "after_sha256": "5f198a69fb929bf207766a8de5215994cb19030312aa605887989b1d06192e97"
+    },
+    {
+      "path": "codex_windows/skills/work-rules/scripts/md-style-check.py",
+      "before_sha256": "a5199d0740de762ceef8441f862b6691c9614caea944c4671c2c9771c732c0e2",
+      "after_sha256": "9370c6e9bc395729c58631ce0e88d37c4db1d2c629cd0b7d3fc18586d7aa46c8"
+    },
+    {
+      "path": "codex_windows/skills/zircon-readme-policy/references/STYLE.md",
+      "before_sha256": "eb5764fc12a813f9bd20456cec508d24828bf076e77845de409c78ff7f9788a2",
+      "after_sha256": "5f198a69fb929bf207766a8de5215994cb19030312aa605887989b1d06192e97"
+    },
+    {
+      "path": "codex_windows/skills/zircon-readme-policy/scripts/md-style-check.py",
+      "before_sha256": "a5199d0740de762ceef8441f862b6691c9614caea944c4671c2c9771c732c0e2",
+      "after_sha256": "9370c6e9bc395729c58631ce0e88d37c4db1d2c629cd0b7d3fc18586d7aa46c8"
+    }
+  ],
+  "installed_skills": [
+    "git-commit-rule",
+    "md-link-check",
+    "work-rules"
+  ],
+  "source_payload_files": 80,
+  "installed_files": 82,
+  "preserved_generated_cache_files": 2,
+  "payload_sha256_equal": true,
+  "personal_agent_sha256": "fa70a1d16bd31c8897d9cd53e313e3b1aa534a602925c2f71899c48ff45d895c",
+  "personal_appendix_bytes_preserved": true,
+  "configuration_unchanged": true,
+  "git_index_unchanged": true,
+  "source_regression_cases": 385,
+  "installed_regression_cases": 165,
+  "unicode_emoji_data_version": "15.1",
+  "unicode_emoji_data_sha256": "d7aef489c8fe4c14f09ea5695200277c6b93ac82ac60845cdd2161b0d6835cc1",
+  "active_checker_version": "26.10.05",
+  "style_baseline_diagnostics": 63,
+  "new_style_diagnostics": 0,
+  "commit_push": "not_performed_by_this_owner",
+  "source_folder_sha256": {
+    "git-commit-rule": "657eabe12b016724d888521ccef2b8aec28e810a2049ffc41dd6e911b4ac1f2a",
+    "md-link-check": "04d3090fa75952406e9f1517542f4e3798b5571e9b3d5281ff824ff20e94704d",
+    "readme-template": "cb953201346fe9ca3517b7c07b3aa2acbe8c346e4e28517fe70417162d7ef7b4",
+    "security-tools": "6acd2ddeb1118ac2ead9f20bc4dae25623468941eaf8baf1d0d9f17c0980e048",
+    "using-skills": "226734b606d6845bf978147d092ac78661da441298fd1577fbadedf348751840",
+    "work-rules": "2022941ecd73d0ba751a58f317422bfb972e66cda27d493669c694d0440b3de1",
+    "zircon-readme-policy": "9eccc5bde4fc10a77b8e5af5f5b76d7d8a1a92ed603a30e7febbc0a6e4b22f80"
+  },
+  "installed_folder_sha256": {
+    "git-commit-rule": "657eabe12b016724d888521ccef2b8aec28e810a2049ffc41dd6e911b4ac1f2a",
+    "md-link-check": "dab6a3652fcd205b2b5bb2fd6c0eb1c1708cad4a19413969b3d00bdf8e98eec1",
+    "work-rules": "2022941ecd73d0ba751a58f317422bfb972e66cda27d493669c694d0440b3de1"
+  },
+  "unchanged_source_files_in_consumer_folders": 232,
+  "canonical_checker_sha256": "9370c6e9bc395729c58631ce0e88d37c4db1d2c629cd0b7d3fc18586d7aa46c8",
+  "closing_record_markdown": {
+    "files": 1,
+    "headings": 6,
+    "local_links": 7,
+    "issues": 0,
+    "style_exit": 0,
+    "heading_exit": 0,
+    "link_exit": 0
+  }
+}
