@@ -10,6 +10,7 @@ import re
 import subprocess
 import sys
 import tempfile
+from verify_current import active_skill_body, current_entries, read_current_inventory
 
 
 def main():
@@ -25,10 +26,11 @@ def main():
         for snippet in re.findall(r'^```python\s*\n(.*?)^```\s*$', text, re.M | re.S):
             ast.parse(snippet)
             snippets.append((args.pattern_document.name, snippet))
-    for path in args.skills.glob('*/SKILL.md'):
+    inventory = read_current_inventory(Path(__file__).with_name('current_inventory.json'))
+    for path in current_entries(args.skills.resolve(), inventory):
         text = path.read_text(encoding='utf-8')
         assert '\x00' not in text, path.name
-        body = text.split('<!-- CODEX-COMPAT-BEGIN -->', 1)[1].split('<!-- CODEX-COMPAT-END -->', 1)[0]
+        body = active_skill_body(text, inventory[path.parent.name])
         for snippet in re.findall(r'^```python\s*\n(.*?)^```\s*$', body, re.M | re.S):
             ast.parse(snippet)
             snippets.append((path.parent.name, snippet))

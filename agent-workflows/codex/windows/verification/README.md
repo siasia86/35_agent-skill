@@ -6,6 +6,7 @@
 
 ```powershell
 python -X utf8 -B agent-workflows/codex/windows/verification/verify_current.py
+python -X utf8 -B agent-workflows/codex/windows/verification/test_current.py
 python -X utf8 -B agent-workflows/codex/windows/verification/test_markdown.py --skills codex_windows/skills
 python -X utf8 -B agent-workflows/codex/windows/verification/test_runtime.py --skills codex_windows/skills
 python -X utf8 -B agent-workflows/codex/windows/verification/test_patterns.py --skills codex_windows/skills --pattern-document codex_windows/skills/work-rules/references/windows/file-lock.md
@@ -13,13 +14,16 @@ python -X utf8 -B agent-workflows/codex/windows/verification/test_patterns.py --
 
 Bash 조건은 `test_runtime.py`에서 `--bash '<현재 Git Bash의 bash.exe 경로>'`로 추가합니다. 설치된 실제 실행 파일을 확인합니다. Git Bash 실행은 WSL·Linux 전체 환경 검증과 별도입니다. 세부 CLI는 각 스크립트의 `--help`를 따릅니다.
 
-`verify_skills.py`는 최초 이관 당시 구조·본문을 검사하는 역사 도구입니다. T-WIN-004 이후 STYLE 원문 7개는 [보존 대응](../../2026-10-04-personal-routing-T-WIN-004/preservation-map.json), 개인 AGENTS는 배포 루트에 있습니다. 현재 검사는 원문 368개 해시 대조·19개 skill·독립 helper·배포 참조를 확인합니다. 잠금 회귀는 이동한 실제 예제를 명시합니다. 과거 manifest·검사 결과와 skill 구현은 수정하지 않습니다.
+`verify_skills.py`는 최초 이관 당시 구조·본문을 검사하는 역사 도구입니다. T-WIN-004 이후 STYLE 원문 7개는 [보존 대응](../../2026-10-04-personal-routing-T-WIN-004/preservation-map.json), 개인 AGENTS는 배포 루트에 있습니다. 역사 검사는 최초 이관 19개·파일 182개·설정 2개와 원문/보존 해시 368건·이동 7개를 유지합니다. 현재 배포는 별도 [current_inventory.json](current_inventory.json)의 명시 목록과 형식을 검사합니다. 현재 목록은 COMPAT 19개와 native fact-check·goal-continuation 2개, 총 21개입니다. 역사 목록을 현재 전체 목록으로 강제하지 않습니다. 잠금 회귀는 이동한 실제 예제를 명시합니다. 과거 manifest·검사 결과와 skill 구현은 수정하지 않습니다.
 
 ## 2. 검증 범위
 
 개인 설정의 지정 파일·skill 폴더 전체를 보존할 때는 [Snapshot-PersonalConfig.ps1](Snapshot-PersonalConfig.ps1)을 사용합니다. 업데이트 폴더는 `agent-workflows/codex/<날짜-목적-작업ID>/`에 먼저 준비하고 private의 Git 제외를 확인합니다. 기본 백업 루트는 스크립트 위치에서 두 단계 위의 codex이며 원래 기록 위치를 유지합니다. [PCS의 실행 예](../../20261003-native-layout-PCS-20261003-structure/README.md#2-업데이트-폴더와-백업), [위치 보정·검증](../records/2026-10-04-record-relocation-SMA-20261004-01/README.md)을 확인합니다.
 
-- 현재 검사: 19개 skill, 출처 182개 파일·설정 2개의 원문/보존 해시 368건, 배포 참조·Python AST·helper 사본 동일성. 최초 이관의 본문·동봉 역할 동등성은 과거 verify_skills의 계약이며 개정한 활성 지침에 강제하지 않습니다.
+- 현재 검사: 선언한 스킬 폴더의 누락·미등록 추가·SKILL.md 누락, name/description, 형식별 활성 본문과 native 인터페이스, 배포 참조·Python AST·helper 사본 동일성. 최초 이관의 본문·동봉 역할 동등성은 과거 verify_skills의 계약이며 개정한 활성 지침에 강제하지 않습니다.
+- 목록·형식은 관찰한 폴더에서 자동 생성하지 않습니다. 새 스킬 승인 시 current_inventory를 담당 변경과 함께 명시적으로 개정·검토하고 회귀를 실행합니다. 역사 source_manifest와 원형 보존 자료는 개정하지 않습니다.
+- 메타데이터는 현재 배포의 단일 행 name·description 문자열과 native agents/openai.yaml의 interface 세 문자열을 검사합니다. 임의 YAML 문법 전체의 파서가 아니며, 새 필드·여러 행 형식이 필요하면 검사 계약부터 개정합니다. 공식 quick_validate는 별도 검사입니다.
+- COMPAT는 정확히 한 쌍의 순서가 맞는 활성 블록과 references/windows/*.md를, native는 전체 Markdown 본문을 검사합니다. 인라인 파일 링크의 존재·폴더 밖 의존성·코드 펜스를 확인하며, 참조형 링크·앵커·외부 URL 도달성·나머지 역사 참조 본문은 전체 검사로 주장하지 않습니다.
 - 각 폴더를 독립 TEMP에 복사한 뒤 실제 helper 실행. 형제 skill·원repo의 import를 이용하지 않습니다.
 - 한국어·공백·CRLF·유효/깨진 링크·누락/혼합 입력·앵커 중복·인용/tilde fence의 정상·실패 반환.
 - Python CLI와 원자 쓰기, 잠금 소유·경쟁·부분 쓰기 실패·기존 파일 보존, 선택 Bash 백업 실패 반환.
@@ -27,6 +31,8 @@ Bash 조건은 `test_runtime.py`에서 `--bash '<현재 Git Bash의 bash.exe 경
 검사에 쓰는 fixtures는 새 TEMP 안에서 생성·정리합니다. 운영 리소스·개인 홈·네트워크·권한을 바꾸지 않습니다. 공식 `skill-creator`의 `quick_validate.py`도 별도 실행하며 PyYAML은 개발 검증용일 뿐 동봉 runtime 의존성이 아닙니다.
 
 W02–W10의 신규 회귀는 Markdown91조건, Python/Bash108조건으로 확장했습니다. 시작/완료 보고 규칙과 현재 판정·미실행은 [보고 지침과 helper 보완](../REPORTING_REMEDIATION_2026-10-03.md#3-현재-검증과-미실행)을 확인합니다.
+
+[이번 교정·회귀·복구 기록](../records/2026-10-05-current-verifier-MAIN-20261004-01/README.md)은 현행 21개에서 재현한 실패와 수정 결과를 연결합니다. test_current는 안전한 TEMP 사본에서 누락·추가·잘못된 메타데이터·형식·링크·역사 자료 변조를 검사합니다. test_patterns도 같은 선언과 활성 본문 선택을 재사용합니다.
 
 ## 3. 결과와 한계
 
@@ -38,6 +44,6 @@ W02–W10의 신규 회귀는 Markdown91조건, Python/Bash108조건으로 확�
 
 **작성일**: 2026-10-03
 
-**마지막 업데이트**: 2026-10-04
+**마지막 업데이트**: 2026-10-05
 
 © 2026 siasia86. Licensed under CC BY 4.0.

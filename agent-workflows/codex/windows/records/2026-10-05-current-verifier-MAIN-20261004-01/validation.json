@@ -1,0 +1,90 @@
+{
+  "task": "ZWS-RESUME-20261005-02",
+  "owner": "SKILL-35:MAIN-20261004-01/T-WIN-002",
+  "base_head": "18dbc416e171006a4f08732b55348089fea59a36",
+  "baseline": {
+    "exit": 1,
+    "error": "Current skill inventory differs",
+    "skills": 21
+  },
+  "current": {
+    "status": "PASS",
+    "counts": {
+      "skills": 21,
+      "compat_skills": 19,
+      "native_skills": 2,
+      "historical_skills": 19,
+      "source_and_preserved_hashes": 368,
+      "local_links": 78,
+      "native_interfaces": 2,
+      "python_syntax": 34,
+      "isolated_helper_runs": 27
+    }
+  },
+  "mutation": {
+    "tests": 32,
+    "passed": 32,
+    "failed": 0,
+    "errors": 0
+  },
+  "markdown": {
+    "runtime": "native-windows",
+    "cases": 91,
+    "baseline_cases": 63,
+    "new_cases": 28,
+    "passed": 91,
+    "failed": 0
+  },
+  "runtime": {
+    "cases": 108,
+    "failed": 0
+  },
+  "patterns": {
+    "cases": 7,
+    "failed": 0
+  },
+  "official_skill_validation": {
+    "cases": 21,
+    "failed": 0
+  },
+  "review": {
+    "requested_model": "gpt-6-astra",
+    "effort": "high",
+    "findings": 2,
+    "resolved": 2,
+    "execution": "static_only"
+  },
+  "public_checks": {
+    "documents": 4,
+    "file_links": 48,
+    "headings": 19,
+    "cross_file_anchors": 4,
+    "link_exit": 0,
+    "heading_exit": 0,
+    "style_exit": 0,
+    "gitleaks_dir_exit": 0,
+    "language_mix": 0,
+    "owned_python_syntax": "passed",
+    "owned_json": "passed"
+  },
+  "protected_files": {
+    "files": 647,
+    "changed": 0
+  },
+  "not_performed": [
+    "installation",
+    "personal_configuration_changes",
+    "implicit_discovery_or_behavior",
+    "02_changes",
+    "runtime_deployment"
+  ],
+  "other_owner_receipt": {
+    "task": "T-WIN-004/LC-PUB",
+    "source_files": 44,
+    "missing": 0,
+    "extra": 0,
+    "different": 0,
+    "verification": "owner_result_reused_after_source_inputs_preserved",
+    "candidate_before_sha256": "e902124dd69e2848c3873ceb1fc4bc15ab4f0368d0802c1e13bd667272d2c848"
+  }
+}

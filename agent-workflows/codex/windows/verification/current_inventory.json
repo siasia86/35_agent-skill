@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "skills": {
+    "bash-script-template": "compat",
+    "code-review": "compat",
+    "debugging-and-recovery": "compat",
+    "doubt-driven-infra": "compat",
+    "fact-check": "native",
+    "git-commit-rule": "compat",
+    "goal-continuation": "native",
+    "incremental-change": "compat",
+    "kiro-lock": "compat",
+    "md-link-check": "compat",
+    "planning-and-breakdown": "compat",
+    "python-script-template": "compat",
+    "readme-template": "compat",
+    "repo-governance": "compat",
+    "security-tools": "compat",
+    "shipping-checklist": "compat",
+    "spec-driven-infra": "compat",
+    "testing-guide": "compat",
+    "using-skills": "compat",
+    "work-rules": "compat",
+    "zircon-readme-policy": "compat"
+  }
+}
