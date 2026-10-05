@@ -356,9 +356,9 @@ def check_diagram_korean(content, strict=False):
             block_body.append(_strip_blockquote_prefix(line))
     return issues
 
-# 기본 상태 7개와 사용자가 허용한 기존 보조 기호 5개.
-_ALLOWED_EMOJIS = ['✅', '❌', '🟡', '🟢', '🔴', '★', '☆', '💡', '✓', '✗', '🟠', '🔵']
-_EMOJI_SPACE_TARGETS = ['✅', '❌', '🟡', '🟢', '🔴', '🟠', '🔵']
+# 기본 상태 8개와 사용자가 허용한 기존 보조 기호 5개.
+_ALLOWED_EMOJIS = ['✅', '❌', '🟡', '🟢', '🔴', '★', '☆', '💡', '✓', '✗', '🟠', '🔵', '🟣']
+_EMOJI_SPACE_TARGETS = ['✅', '❌', '🟡', '🟢', '🔴', '🟠', '🔵', '🟣']
 _EMOJI_PATTERN = re.compile(
     r'(' + '|'.join(re.escape(e) for e in _EMOJI_SPACE_TARGETS) + r')[\ufe0e\ufe0f]?([^\s|`\ufe0e\ufe0f])'
 )
@@ -439,7 +439,7 @@ def _emoji_prose(content):
 
 
 def check_emoji_space(content, strict=False):
-    """Require the existing spacing rule for seven status markers only."""
+    """Require the existing spacing rule for eight status markers only."""
     issues = []
     for line_number, line in _emoji_prose(content):
         for emoji, next_char in _EMOJI_PATTERN.findall(line):
@@ -944,7 +944,7 @@ def parse_args():
             "  표 정렬          한글 display width 기준 셀 패딩\n"
             "  다이어그램 행 폭  박스 다이어그램 내부 행 폭 일치\n"
             "  다이어그램 한글  박스 다이어그램 내부 영문 권장\n"
-            "  이모지 뒤 공백   ✅❌🟡🟢🔴🟠🔵 뒤 공백 1칸 필수\n"
+            "  이모지 뒤 공백   ✅❌🟡🟢🔴🟠🔵🟣 뒤 공백 1칸 필수\n"
             "  반말체 종결어미  ~이다/한다/된다 등 금지\n"
             "  과장 표현        완전/완벽/최고/최강 등 금지 (--strict: whitelist 무시)\n"
             "  푸터             작성일/마지막 업데이트/저작권 필수\n"

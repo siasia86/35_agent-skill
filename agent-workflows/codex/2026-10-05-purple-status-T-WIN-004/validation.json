@@ -1,0 +1,88 @@
+{
+  "taskId": "T-WIN-004-PURPLE-20261005",
+  "baselineHead": "ce12d7cffcd6bd4ccc368ce7dc9356c294d1b522",
+  "sourceFiles": {
+    "codex_windows/AGENTS.md": "dfe911aca21166ef069c5fd317c5f2f7b5dd337a1ae81e20b4080774e87181b9",
+    "codex_windows/skills/work-rules/SKILL.md": "2c786c997e1d2b36dc8e1c739ea68dae60e90c9d27617a8342a410e3e504c84a",
+    "codex_windows/skills/work-rules/references/STYLE.md": "e2ff014fe24e522d35a0260b815dafa3ff5f3f3d295a95de07bfef90d2e35daf",
+    "codex_windows/skills/work-rules/scripts/md-style-check.py": "89a5bbf25979be2ccac556d1624e89dfbe1a2db132d9f3bd098ca98660574268",
+    "codex_windows/skills/using-skills/references/STYLE.md": "e2ff014fe24e522d35a0260b815dafa3ff5f3f3d295a95de07bfef90d2e35daf",
+    "codex_windows/skills/using-skills/scripts/md-style-check.py": "89a5bbf25979be2ccac556d1624e89dfbe1a2db132d9f3bd098ca98660574268",
+    "codex_windows/skills/git-commit-rule/references/STYLE.md": "e2ff014fe24e522d35a0260b815dafa3ff5f3f3d295a95de07bfef90d2e35daf",
+    "codex_windows/skills/git-commit-rule/scripts/md-style-check.py": "89a5bbf25979be2ccac556d1624e89dfbe1a2db132d9f3bd098ca98660574268",
+    "codex_windows/skills/md-link-check/references/STYLE.md": "e2ff014fe24e522d35a0260b815dafa3ff5f3f3d295a95de07bfef90d2e35daf",
+    "codex_windows/skills/md-link-check/scripts/md-style-check.py": "89a5bbf25979be2ccac556d1624e89dfbe1a2db132d9f3bd098ca98660574268",
+    "codex_windows/skills/readme-template/references/STYLE.md": "e2ff014fe24e522d35a0260b815dafa3ff5f3f3d295a95de07bfef90d2e35daf",
+    "codex_windows/skills/readme-template/scripts/md-style-check.py": "89a5bbf25979be2ccac556d1624e89dfbe1a2db132d9f3bd098ca98660574268",
+    "codex_windows/skills/security-tools/references/STYLE.md": "e2ff014fe24e522d35a0260b815dafa3ff5f3f3d295a95de07bfef90d2e35daf",
+    "codex_windows/skills/security-tools/scripts/md-style-check.py": "89a5bbf25979be2ccac556d1624e89dfbe1a2db132d9f3bd098ca98660574268",
+    "codex_windows/skills/zircon-readme-policy/references/STYLE.md": "e2ff014fe24e522d35a0260b815dafa3ff5f3f3d295a95de07bfef90d2e35daf",
+    "codex_windows/skills/zircon-readme-policy/scripts/md-style-check.py": "89a5bbf25979be2ccac556d1624e89dfbe1a2db132d9f3bd098ca98660574268"
+  },
+  "checks": {
+    "links": {
+      "exit": 0,
+      "files": 10,
+      "links": 36,
+      "issues": 0
+    },
+    "headings": {
+      "exit": 0,
+      "files": 10,
+      "headings": 278,
+      "issues": 0
+    },
+    "styleFocused": {
+      "exit": 0,
+      "output": "\u001b[1;33m[제외] 디렉토리: .git, .venv, __pycache__, node_modules\u001b[0m\n\u001b[1;33m[제외] 파일: README.md (루트)\u001b[0m\n\u001b[1;33m[제외] 검사: footer\u001b[0m\n\n\u001b[0;32m✅ codex_windows\\AGENTS.md\u001b[0m\n\u001b[0;32m✅ codex_windows\\skills\\work-rules\\SKILL.md\u001b[0m\n\u001b[0;32m✅ agent-workflows\\codex\\2026-10-05-purple-status-T-WIN-004\\README.md\u001b[0m\n\n────────────────────────────────────────────────────────────\n\u001b[0;32m검사 파일: 3개 | 이슈: 0건\u001b[0m"
+    },
+    "skillStructure": {
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    "styleBaseline": {
+      "beforePerCopy": 6,
+      "afterPerCopy": 6,
+      "copies": 7,
+      "added": 0
+    },
+    "diffCheck": {
+      "exit": 0
+    }
+  },
+  "sourceRegression": {
+    "consumers": 7,
+    "cases": 462,
+    "status": "PASS"
+  },
+  "installedRegression": {
+    "consumers": 3,
+    "cases": 198,
+    "status": "PASS"
+  },
+  "installation": {
+    "work-rules": {
+      "contentFiles": 44,
+      "allInstalledFiles": 44,
+      "matches": true
+    },
+    "git-commit-rule": {
+      "contentFiles": 18,
+      "allInstalledFiles": 18,
+      "matches": true
+    },
+    "md-link-check": {
+      "contentFiles": 18,
+      "allInstalledFiles": 21,
+      "matches": true
+    }
+  },
+  "backup": "private/before",
+  "discoveryAndLongTermBehavior": "unverified",
+  "initialFailures": [
+    "Windows TemporaryDirectory access denied; inherited workspace fixture directory used",
+    "default and bundled Python lacked yaml; reused preserved validation dependency",
+    "first link scan preceded validation.json creation; dependent scan repaired"
+  ],
+  "installedAgentsOutsideApprovedPhrasePreserved": true
+}

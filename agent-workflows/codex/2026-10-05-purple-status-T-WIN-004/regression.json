@@ -1,0 +1,2817 @@
+{
+  "status": "PASS",
+  "consumers": 7,
+  "cases": 462,
+  "checks": [
+    {
+      "consumer": "git-commit-rule",
+      "case": "seven_statuses",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "rating_and_existing_symbols",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "bare_bmp_warning",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "bmp_emoji_selector",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "bmp_text_selector_not_bypass",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "allowed_glyph_extended_selector",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "allowed_glyph_text_selector",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "allowed_auxiliary_selector",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "supplementary_picture",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "regional_flag",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "skin_modifier",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "joined_sequence",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "keycap",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "ordinary_math_and_text",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "explicit_arrow_emoji",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "explicit_text_copyright",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "inline_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "multi_backtick_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "unclosed_inline_code",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "fenced_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "tilde_fenced_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "nested_shorter_fence",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "blockquote_original",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "nested_blockquote",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "code_then_authored_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "quoted_then_authored_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "literal_path",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "link_path",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "nested_link_path",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "link_label_is_authored",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "root_indented_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "indented_code_then_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "tab_indented_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "indent_cannot_interrupt_paragraph",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "list_indented_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "list_indented_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "ordered_list_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "ordered_list_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "nested_list_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "nested_list_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "list_first_line_code_padding",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "ordered_first_line_code_padding",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "list_short_padding_is_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "quoted_indented_original",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "purple_planned_work",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "purple_emoji_selector",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "purple_text_selector",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "purple_quote_literal",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "purple_inline_literal",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "new_status_space_required",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "new_info_space_required",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "rating_unchanged",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "auxiliary_spacing_unchanged",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "inline_spacing_preserved",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "quote_spacing_preserved",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "allowed_selector_spacing",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "allowed_selector_without_spacing",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "indented_spacing_preserved",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "purple_space_required",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "purple_space_allowed",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "purple_selector_space_required",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "cli_allowed",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "cli_reject",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "seven_statuses",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "rating_and_existing_symbols",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "bare_bmp_warning",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "bmp_emoji_selector",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "bmp_text_selector_not_bypass",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "allowed_glyph_extended_selector",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "allowed_glyph_text_selector",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "allowed_auxiliary_selector",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "supplementary_picture",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "regional_flag",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "skin_modifier",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "joined_sequence",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "keycap",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "ordinary_math_and_text",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "explicit_arrow_emoji",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "explicit_text_copyright",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "inline_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "multi_backtick_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "unclosed_inline_code",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "fenced_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "tilde_fenced_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "nested_shorter_fence",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "blockquote_original",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "nested_blockquote",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "code_then_authored_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "quoted_then_authored_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "literal_path",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "link_path",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "nested_link_path",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "link_label_is_authored",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "root_indented_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "indented_code_then_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "tab_indented_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "indent_cannot_interrupt_paragraph",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "list_indented_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "list_indented_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "ordered_list_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "ordered_list_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "nested_list_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "nested_list_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "list_first_line_code_padding",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "ordered_first_line_code_padding",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "list_short_padding_is_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "quoted_indented_original",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "purple_planned_work",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "purple_emoji_selector",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "purple_text_selector",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "purple_quote_literal",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "purple_inline_literal",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "new_status_space_required",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "new_info_space_required",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "rating_unchanged",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "auxiliary_spacing_unchanged",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "inline_spacing_preserved",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "quote_spacing_preserved",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "allowed_selector_spacing",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "allowed_selector_without_spacing",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "indented_spacing_preserved",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "purple_space_required",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "purple_space_allowed",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "purple_selector_space_required",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "cli_allowed",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "cli_reject",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "seven_statuses",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "rating_and_existing_symbols",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "bare_bmp_warning",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "bmp_emoji_selector",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "bmp_text_selector_not_bypass",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "allowed_glyph_extended_selector",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "allowed_glyph_text_selector",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "allowed_auxiliary_selector",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "supplementary_picture",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "regional_flag",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "skin_modifier",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "joined_sequence",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "keycap",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "ordinary_math_and_text",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "explicit_arrow_emoji",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "explicit_text_copyright",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "inline_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "multi_backtick_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "unclosed_inline_code",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "fenced_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "tilde_fenced_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "nested_shorter_fence",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "blockquote_original",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "nested_blockquote",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "code_then_authored_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "quoted_then_authored_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "literal_path",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "link_path",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "nested_link_path",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "link_label_is_authored",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "root_indented_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "indented_code_then_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "tab_indented_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "indent_cannot_interrupt_paragraph",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "list_indented_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "list_indented_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "ordered_list_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "ordered_list_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "nested_list_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "nested_list_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "list_first_line_code_padding",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "ordered_first_line_code_padding",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "list_short_padding_is_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "quoted_indented_original",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "purple_planned_work",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "purple_emoji_selector",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "purple_text_selector",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "purple_quote_literal",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "purple_inline_literal",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "new_status_space_required",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "new_info_space_required",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "rating_unchanged",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "auxiliary_spacing_unchanged",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "inline_spacing_preserved",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "quote_spacing_preserved",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "allowed_selector_spacing",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "allowed_selector_without_spacing",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "indented_spacing_preserved",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "purple_space_required",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "purple_space_allowed",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "purple_selector_space_required",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "cli_allowed",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "cli_reject",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "seven_statuses",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "rating_and_existing_symbols",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "bare_bmp_warning",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "bmp_emoji_selector",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "bmp_text_selector_not_bypass",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "allowed_glyph_extended_selector",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "allowed_glyph_text_selector",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "allowed_auxiliary_selector",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "supplementary_picture",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "regional_flag",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "skin_modifier",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "joined_sequence",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "keycap",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "ordinary_math_and_text",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "explicit_arrow_emoji",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "explicit_text_copyright",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "inline_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "multi_backtick_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "unclosed_inline_code",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "fenced_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "tilde_fenced_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "nested_shorter_fence",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "blockquote_original",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "nested_blockquote",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "code_then_authored_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "quoted_then_authored_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "literal_path",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "link_path",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "nested_link_path",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "link_label_is_authored",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "root_indented_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "indented_code_then_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "tab_indented_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "indent_cannot_interrupt_paragraph",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "list_indented_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "list_indented_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "ordered_list_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "ordered_list_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "nested_list_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "nested_list_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "list_first_line_code_padding",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "ordered_first_line_code_padding",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "list_short_padding_is_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "quoted_indented_original",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "purple_planned_work",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "purple_emoji_selector",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "purple_text_selector",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "purple_quote_literal",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "purple_inline_literal",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "new_status_space_required",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "new_info_space_required",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "rating_unchanged",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "auxiliary_spacing_unchanged",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "inline_spacing_preserved",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "quote_spacing_preserved",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "allowed_selector_spacing",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "allowed_selector_without_spacing",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "indented_spacing_preserved",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "purple_space_required",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "purple_space_allowed",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "purple_selector_space_required",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "cli_allowed",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "cli_reject",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "seven_statuses",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "rating_and_existing_symbols",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "bare_bmp_warning",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "bmp_emoji_selector",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "bmp_text_selector_not_bypass",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "allowed_glyph_extended_selector",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "allowed_glyph_text_selector",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "allowed_auxiliary_selector",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "supplementary_picture",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "regional_flag",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "skin_modifier",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "joined_sequence",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "keycap",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "ordinary_math_and_text",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "explicit_arrow_emoji",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "explicit_text_copyright",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "inline_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "multi_backtick_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "unclosed_inline_code",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "fenced_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "tilde_fenced_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "nested_shorter_fence",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "blockquote_original",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "nested_blockquote",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "code_then_authored_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "quoted_then_authored_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "literal_path",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "link_path",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "nested_link_path",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "link_label_is_authored",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "root_indented_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "indented_code_then_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "tab_indented_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "indent_cannot_interrupt_paragraph",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "list_indented_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "list_indented_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "ordered_list_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "ordered_list_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "nested_list_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "nested_list_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "list_first_line_code_padding",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "ordered_first_line_code_padding",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "list_short_padding_is_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "quoted_indented_original",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "purple_planned_work",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "purple_emoji_selector",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "purple_text_selector",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "purple_quote_literal",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "purple_inline_literal",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "new_status_space_required",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "new_info_space_required",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "rating_unchanged",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "auxiliary_spacing_unchanged",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "inline_spacing_preserved",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "quote_spacing_preserved",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "allowed_selector_spacing",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "allowed_selector_without_spacing",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "indented_spacing_preserved",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "purple_space_required",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "purple_space_allowed",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "purple_selector_space_required",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "cli_allowed",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "cli_reject",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "seven_statuses",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "rating_and_existing_symbols",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "bare_bmp_warning",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "bmp_emoji_selector",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "bmp_text_selector_not_bypass",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "allowed_glyph_extended_selector",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "allowed_glyph_text_selector",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "allowed_auxiliary_selector",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "supplementary_picture",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "regional_flag",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "skin_modifier",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "joined_sequence",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "keycap",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "ordinary_math_and_text",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "explicit_arrow_emoji",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "explicit_text_copyright",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "inline_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "multi_backtick_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "unclosed_inline_code",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "fenced_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "tilde_fenced_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "nested_shorter_fence",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "blockquote_original",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "nested_blockquote",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "code_then_authored_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "quoted_then_authored_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "literal_path",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "link_path",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "nested_link_path",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "link_label_is_authored",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "root_indented_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "indented_code_then_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "tab_indented_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "indent_cannot_interrupt_paragraph",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "list_indented_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "list_indented_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "ordered_list_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "ordered_list_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "nested_list_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "nested_list_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "list_first_line_code_padding",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "ordered_first_line_code_padding",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "list_short_padding_is_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "quoted_indented_original",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "purple_planned_work",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "purple_emoji_selector",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "purple_text_selector",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "purple_quote_literal",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "purple_inline_literal",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "new_status_space_required",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "new_info_space_required",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "rating_unchanged",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "auxiliary_spacing_unchanged",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "inline_spacing_preserved",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "quote_spacing_preserved",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "allowed_selector_spacing",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "allowed_selector_without_spacing",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "indented_spacing_preserved",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "purple_space_required",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "purple_space_allowed",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "purple_selector_space_required",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "cli_allowed",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "cli_reject",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "seven_statuses",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "rating_and_existing_symbols",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "bare_bmp_warning",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "bmp_emoji_selector",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "bmp_text_selector_not_bypass",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "allowed_glyph_extended_selector",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "allowed_glyph_text_selector",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "allowed_auxiliary_selector",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "supplementary_picture",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "regional_flag",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "skin_modifier",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "joined_sequence",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "keycap",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "ordinary_math_and_text",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "explicit_arrow_emoji",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "explicit_text_copyright",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "inline_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "multi_backtick_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "unclosed_inline_code",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "fenced_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "tilde_fenced_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "nested_shorter_fence",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "blockquote_original",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "nested_blockquote",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "code_then_authored_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "quoted_then_authored_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "literal_path",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "link_path",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "nested_link_path",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "link_label_is_authored",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "root_indented_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "indented_code_then_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "tab_indented_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "indent_cannot_interrupt_paragraph",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "list_indented_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "list_indented_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "ordered_list_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "ordered_list_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "nested_list_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "nested_list_code",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "list_first_line_code_padding",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "ordered_first_line_code_padding",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "list_short_padding_is_prose",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "quoted_indented_original",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "purple_planned_work",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "purple_emoji_selector",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "purple_text_selector",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "purple_quote_literal",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "purple_inline_literal",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "new_status_space_required",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "new_info_space_required",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "rating_unchanged",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "auxiliary_spacing_unchanged",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "inline_spacing_preserved",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "quote_spacing_preserved",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "allowed_selector_spacing",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "allowed_selector_without_spacing",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "indented_spacing_preserved",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "purple_space_required",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "purple_space_allowed",
+      "expected_failure": false,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "purple_selector_space_required",
+      "expected_failure": true,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "cli_allowed",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "cli_reject",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "purple_cli_allowed",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "purple_cli_space",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true
+    },
+    {
+      "consumer": "git-commit-rule",
+      "case": "purple_cli_other_rejected",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "purple_cli_allowed",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "purple_cli_space",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true
+    },
+    {
+      "consumer": "md-link-check",
+      "case": "purple_cli_other_rejected",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "purple_cli_allowed",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "purple_cli_space",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true
+    },
+    {
+      "consumer": "readme-template",
+      "case": "purple_cli_other_rejected",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "purple_cli_allowed",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "purple_cli_space",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true
+    },
+    {
+      "consumer": "security-tools",
+      "case": "purple_cli_other_rejected",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "purple_cli_allowed",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "purple_cli_space",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true
+    },
+    {
+      "consumer": "using-skills",
+      "case": "purple_cli_other_rejected",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "purple_cli_allowed",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "purple_cli_space",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true
+    },
+    {
+      "consumer": "work-rules",
+      "case": "purple_cli_other_rejected",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "purple_cli_allowed",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "purple_cli_space",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true
+    },
+    {
+      "consumer": "zircon-readme-policy",
+      "case": "purple_cli_other_rejected",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true
+    }
+  ],
+  "checker_sha256": [
+    "89a5bbf25979be2ccac556d1624e89dfbe1a2db132d9f3bd098ca98660574268"
+  ]
+}
