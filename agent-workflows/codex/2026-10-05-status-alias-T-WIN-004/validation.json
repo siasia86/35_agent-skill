@@ -1,0 +1,203 @@
+{
+  "sourceSkillFiles": 44,
+  "installedSkillFiles": 44,
+  "semanticReviewIssues": 0,
+  "localAgentsAppendixPreserved": true,
+  "personalPathsPublished": false,
+  "nativeCommandsRegistered": false,
+  "aliases": [
+    "$상황보고",
+    "@상황보고"
+  ],
+  "otherChatsBehavior": "unconfirmed",
+  "markdown": [
+    {
+      "file": "AGENTS.md",
+      "tool": "md-style-check.py",
+      "existingDiagnostics": 3,
+      "newDiagnostics": 0
+    },
+    {
+      "file": "AGENTS.md",
+      "tool": "md-heading-check.py",
+      "exit": 0
+    },
+    {
+      "file": "AGENTS.md",
+      "tool": "md-link-check.py",
+      "exit": 0
+    },
+    {
+      "file": "SKILL.md",
+      "tool": "md-style-check.py",
+      "existingDiagnostics": 3,
+      "newDiagnostics": 0
+    },
+    {
+      "file": "SKILL.md",
+      "tool": "md-heading-check.py",
+      "exit": 0
+    },
+    {
+      "file": "SKILL.md",
+      "tool": "md-link-check.py",
+      "exit": 0
+    },
+    {
+      "file": "STYLE.md",
+      "tool": "md-style-check.py",
+      "existingDiagnostics": 9,
+      "newDiagnostics": 0
+    },
+    {
+      "file": "STYLE.md",
+      "tool": "md-heading-check.py",
+      "exit": 0
+    },
+    {
+      "file": "STYLE.md",
+      "tool": "md-link-check.py",
+      "exit": 0
+    },
+    {
+      "file": "README.md",
+      "tool": "md-style-check.py",
+      "exit": 0
+    },
+    {
+      "file": "README.md",
+      "tool": "md-heading-check.py",
+      "exit": 0
+    },
+    {
+      "file": "README.md",
+      "tool": "md-link-check.py",
+      "exit": 0
+    },
+    {
+      "file": "TODO.md",
+      "tool": "md-style-check.py",
+      "exit": 0
+    },
+    {
+      "file": "TODO.md",
+      "tool": "md-heading-check.py",
+      "exit": 0
+    },
+    {
+      "file": "TODO.md",
+      "tool": "md-link-check.py",
+      "exit": 0
+    }
+  ],
+  "installation": "verified: skill44 equal; managed AGENTS body merged and original local appendix bytes preserved",
+  "publication": "pre-publication snapshot; final SHA recorded after push",
+  "crossAnchorsPassed": 2,
+  "initialReadmeLinkFailure": "validation.json had not yet been generated; generated it and reran affected file-link check",
+  "officialValidator": {
+    "exit": 0,
+    "result": "Skill is valid!",
+    "newDependenciesInstalled": false
+  },
+  "sourceSkillInventory": {
+    "SKILL.md": "8e5825ed3a01a2abcb92c5585e2d9b590a83da51f01f386b06bff7f26bf1265f",
+    "references/kiro-original.md": "a940ad7376aecac56a873671a3f77250fb6d4f6deb77598810bdfefd1420ed20",
+    "references/legacy-work-rules.md": "e7e21a43a174ff83a1c45bea840d07ef892b58ee8455201286b936dc8bf26727",
+    "references/linux-original.md": "87e5f78b137d2896b38dd29ddcad55aaf10e730f0f15d384d3c1ea41d4c8ab82",
+    "references/operating-details.md": "12ee3f9adb5bfbcae8ad144da87ccb67f8a7eb07e3d7cb006ba29aa86eaaa853",
+    "references/repository-workflow.md": "1c10dc6b77fe3fc3e022d81726cfa75e02ea223ef55714842efee52409aaabba",
+    "references/skill-maintenance.md": "931d1964feb35ef54d8ef0d2b78d085a521b50340be537ef5936769a6dec99bd",
+    "references/STYLE.md": "92f7f4032b82b7a7011b5f53290dee06b2ff732b9e745ce44e864bbd27179746",
+    "references/validation-and-recovery.md": "2ad846203ed50678eb251fdaa6920e6fccd40967b9716bb0569b15973ff82030",
+    "references/windows-work-rules-details.md": "d0f943b35dee07abe758e72204e9e34dcc7bc3785cb1c8a9fa157aa0ce6f3adc",
+    "scripts/lock.py": "d26db693d6656ca610cc6164a4e9dea41bea7244f173e4d5bf499fa1a33585a4",
+    "scripts/md-heading-check.py": "16c3de7712ef8987216b3b4e519d9bce5214fb15f78a69865e7441805bdf85d3",
+    "scripts/md-link-check.py": "6991d56bf10c1ec6eaa8cbb9add5ff2e8bd3231a6cf8c534856736205983e5e6",
+    "scripts/md-style-check.py": "89a5bbf25979be2ccac556d1624e89dfbe1a2db132d9f3bd098ca98660574268",
+    "scripts/md_common.py": "8af651399536aa8f7cf03101c1dee3ea5ee190a3621819d55d9ae1ddb81ef78d",
+    "references/linux-skills/debugging-and-recovery.md": "2d9abe01ee69ea435b9ab22f192770cfdba8ae01a28e47bd9cb7745bc8e9d77f",
+    "references/linux-skills/incremental-change.md": "130094af74d1304f0e6ab6684c19725cf266c0db9cb29c5bb112531fc4ec36ce",
+    "references/linux-skills/kiro-lock.md": "3451b83e3c0d23e0833e0f6e26b613713c984091440ccafb5c66a2b52f0b6c90",
+    "references/linux-skills/md-link-check.md": "b42e938b6c6e004e4625de0f403323e0fc2249a7074c253ca0084316e48c7085",
+    "references/linux-skills/planning-and-breakdown.md": "b28e326aa8c55ad774826dabd870eb9b014c2076ca5ed26410c646e8d07125cf",
+    "references/linux-skills/readme-template.md": "f384b1571a4b8f35c642e5984354f0c2721ecf612b66d3ba09bddf39dc58e850",
+    "references/linux-skills/spec-driven-infra.md": "2c8006325c5194aa013470926f59d98574b6f7eb815f06624273593d88a40949",
+    "references/linux-tools/lock.py": "90940c3f7d16cf4fb9f13e9244743d254d522523df0e8ed2b36881ab90bbffe0",
+    "references/linux-tools/md-heading-check.py": "53015d827dc7576dd4221c7accf7398a3be0e97d596b0b0b2951164397455df7",
+    "references/linux-tools/md-link-check.py": "9f6d5a2d5c83f160d73623ef881e62fec8adb876a4ef3696d2666866fdef13f7",
+    "references/linux-tools/md-style-check.py": "21d70e4cc4e4e272cbe64fdf6957dd10592eb26267a96c01d503c8a519c5ba10",
+    "references/originals/debugging-and-recovery.md": "10140924f539da68922ce66acd54d6d30e596059f377bdeeeecbd8e26400b11e",
+    "references/originals/incremental-change.md": "73abe0ab80accaae28ff8a628e16412255867aaacf063d2ee10bddc34b661d86",
+    "references/originals/kiro-lock.md": "207914bf93b04e9a201297def12cf0a0c512bd4fb10ef20c86e8a5ba57c10553",
+    "references/originals/md-link-check.md": "67bc59e6ca5432cd17ce0d13077cbaeaa51cc00c9c5764c8565323869d85aa05",
+    "references/originals/planning-and-breakdown.md": "11ca00491de7ace22d02b633db071d7c46233e8678b58d3a6ab1ed223694925a",
+    "references/originals/readme-template.md": "754dd7ea3b7be8e968802990ac8e63a2239285567d5c6c0ff45d935e8abc5a9e",
+    "references/originals/spec-driven-infra.md": "e102ac0892303423279dc10afa24fbd7fa939042205776586b5fa8cd4d9419b2",
+    "references/originals/STYLE.md": "f2797a30aaf805f9ab3cf157fff2e7229ad99dfe5cc6785b01b734090701a46a",
+    "references/skills/debugging-and-recovery.md": "1d0749fc403b39ed0591a34bbbbce4581b49762e3803abb2edbb01458475358f",
+    "references/skills/incremental-change.md": "b8bf1f4f344e1ff03b5b226325da1d32a77ec076cfb9293467a06d6a4a667b07",
+    "references/skills/kiro-lock.md": "add747a0a09e3c75dabe4844e6030a127027cab15ffb8962aed0e5745349e84d",
+    "references/skills/md-link-check.md": "9266581f77317f28d678086653d5b509297dce54b028eacec8637afee5313049",
+    "references/skills/planning-and-breakdown.md": "95fd4a84323f4613415d484bb7c1d0bd764d5a5cc2ade8ff244206b2b6990b06",
+    "references/skills/readme-template.md": "42664f8cd2e73f996e529e332e61f1e1743c432cc2ce7a22a70f3ddf3028ffe1",
+    "references/skills/spec-driven-infra.md": "8cdfcc91e9c4e9543d45ef8242571303ac43395982ab2bdd711af6c41fee5d3e",
+    "references/windows/file-lock.md": "b9b053155050b2fe1567c82b2e4b360b36e876b1b78c96596b3d8657bfc96a76",
+    "references/windows/runtime-and-encoding.md": "0d68fa5e24d69f6f310ff4283a303506b31b32a82db6c482237576b3d8851677",
+    "references/windows/ssh-and-acl.md": "7a5976c607c300ad0ba9c36419459a91b44e13cca482a09c252aad45f6009723"
+  },
+  "installedSkillInventory": {
+    "SKILL.md": "8e5825ed3a01a2abcb92c5585e2d9b590a83da51f01f386b06bff7f26bf1265f",
+    "references/kiro-original.md": "a940ad7376aecac56a873671a3f77250fb6d4f6deb77598810bdfefd1420ed20",
+    "references/legacy-work-rules.md": "e7e21a43a174ff83a1c45bea840d07ef892b58ee8455201286b936dc8bf26727",
+    "references/linux-original.md": "87e5f78b137d2896b38dd29ddcad55aaf10e730f0f15d384d3c1ea41d4c8ab82",
+    "references/operating-details.md": "12ee3f9adb5bfbcae8ad144da87ccb67f8a7eb07e3d7cb006ba29aa86eaaa853",
+    "references/repository-workflow.md": "1c10dc6b77fe3fc3e022d81726cfa75e02ea223ef55714842efee52409aaabba",
+    "references/skill-maintenance.md": "931d1964feb35ef54d8ef0d2b78d085a521b50340be537ef5936769a6dec99bd",
+    "references/STYLE.md": "92f7f4032b82b7a7011b5f53290dee06b2ff732b9e745ce44e864bbd27179746",
+    "references/validation-and-recovery.md": "2ad846203ed50678eb251fdaa6920e6fccd40967b9716bb0569b15973ff82030",
+    "references/windows-work-rules-details.md": "d0f943b35dee07abe758e72204e9e34dcc7bc3785cb1c8a9fa157aa0ce6f3adc",
+    "scripts/lock.py": "d26db693d6656ca610cc6164a4e9dea41bea7244f173e4d5bf499fa1a33585a4",
+    "scripts/md-heading-check.py": "16c3de7712ef8987216b3b4e519d9bce5214fb15f78a69865e7441805bdf85d3",
+    "scripts/md-link-check.py": "6991d56bf10c1ec6eaa8cbb9add5ff2e8bd3231a6cf8c534856736205983e5e6",
+    "scripts/md-style-check.py": "89a5bbf25979be2ccac556d1624e89dfbe1a2db132d9f3bd098ca98660574268",
+    "scripts/md_common.py": "8af651399536aa8f7cf03101c1dee3ea5ee190a3621819d55d9ae1ddb81ef78d",
+    "references/linux-skills/debugging-and-recovery.md": "2d9abe01ee69ea435b9ab22f192770cfdba8ae01a28e47bd9cb7745bc8e9d77f",
+    "references/linux-skills/incremental-change.md": "130094af74d1304f0e6ab6684c19725cf266c0db9cb29c5bb112531fc4ec36ce",
+    "references/linux-skills/kiro-lock.md": "3451b83e3c0d23e0833e0f6e26b613713c984091440ccafb5c66a2b52f0b6c90",
+    "references/linux-skills/md-link-check.md": "b42e938b6c6e004e4625de0f403323e0fc2249a7074c253ca0084316e48c7085",
+    "references/linux-skills/planning-and-breakdown.md": "b28e326aa8c55ad774826dabd870eb9b014c2076ca5ed26410c646e8d07125cf",
+    "references/linux-skills/readme-template.md": "f384b1571a4b8f35c642e5984354f0c2721ecf612b66d3ba09bddf39dc58e850",
+    "references/linux-skills/spec-driven-infra.md": "2c8006325c5194aa013470926f59d98574b6f7eb815f06624273593d88a40949",
+    "references/linux-tools/lock.py": "90940c3f7d16cf4fb9f13e9244743d254d522523df0e8ed2b36881ab90bbffe0",
+    "references/linux-tools/md-heading-check.py": "53015d827dc7576dd4221c7accf7398a3be0e97d596b0b0b2951164397455df7",
+    "references/linux-tools/md-link-check.py": "9f6d5a2d5c83f160d73623ef881e62fec8adb876a4ef3696d2666866fdef13f7",
+    "references/linux-tools/md-style-check.py": "21d70e4cc4e4e272cbe64fdf6957dd10592eb26267a96c01d503c8a519c5ba10",
+    "references/originals/debugging-and-recovery.md": "10140924f539da68922ce66acd54d6d30e596059f377bdeeeecbd8e26400b11e",
+    "references/originals/incremental-change.md": "73abe0ab80accaae28ff8a628e16412255867aaacf063d2ee10bddc34b661d86",
+    "references/originals/kiro-lock.md": "207914bf93b04e9a201297def12cf0a0c512bd4fb10ef20c86e8a5ba57c10553",
+    "references/originals/md-link-check.md": "67bc59e6ca5432cd17ce0d13077cbaeaa51cc00c9c5764c8565323869d85aa05",
+    "references/originals/planning-and-breakdown.md": "11ca00491de7ace22d02b633db071d7c46233e8678b58d3a6ab1ed223694925a",
+    "references/originals/readme-template.md": "754dd7ea3b7be8e968802990ac8e63a2239285567d5c6c0ff45d935e8abc5a9e",
+    "references/originals/spec-driven-infra.md": "e102ac0892303423279dc10afa24fbd7fa939042205776586b5fa8cd4d9419b2",
+    "references/originals/STYLE.md": "f2797a30aaf805f9ab3cf157fff2e7229ad99dfe5cc6785b01b734090701a46a",
+    "references/skills/debugging-and-recovery.md": "1d0749fc403b39ed0591a34bbbbce4581b49762e3803abb2edbb01458475358f",
+    "references/skills/incremental-change.md": "b8bf1f4f344e1ff03b5b226325da1d32a77ec076cfb9293467a06d6a4a667b07",
+    "references/skills/kiro-lock.md": "add747a0a09e3c75dabe4844e6030a127027cab15ffb8962aed0e5745349e84d",
+    "references/skills/md-link-check.md": "9266581f77317f28d678086653d5b509297dce54b028eacec8637afee5313049",
+    "references/skills/planning-and-breakdown.md": "95fd4a84323f4613415d484bb7c1d0bd764d5a5cc2ade8ff244206b2b6990b06",
+    "references/skills/readme-template.md": "42664f8cd2e73f996e529e332e61f1e1743c432cc2ce7a22a70f3ddf3028ffe1",
+    "references/skills/spec-driven-infra.md": "8cdfcc91e9c4e9543d45ef8242571303ac43395982ab2bdd711af6c41fee5d3e",
+    "references/windows/file-lock.md": "b9b053155050b2fe1567c82b2e4b360b36e876b1b78c96596b3d8657bfc96a76",
+    "references/windows/runtime-and-encoding.md": "0d68fa5e24d69f6f310ff4283a303506b31b32a82db6c482237576b3d8851677",
+    "references/windows/ssh-and-acl.md": "7a5976c607c300ad0ba9c36419459a91b44e13cca482a09c252aad45f6009723"
+  },
+  "changedSourceHashes": {
+    "codex_windows/AGENTS.md": "3f0061798ef6b6a87e3eee6ad4886657d6b34d5f528212f7b7334d358df9b57a",
+    "codex_windows/skills/work-rules/SKILL.md": "8e5825ed3a01a2abcb92c5585e2d9b590a83da51f01f386b06bff7f26bf1265f",
+    "codex_windows/skills/work-rules/references/STYLE.md": "92f7f4032b82b7a7011b5f53290dee06b2ff732b9e745ce44e864bbd27179746"
+  },
+  "homeAgentsHash": "ffd85fa1bbc9c8637e8a332953be6ed7643e2695cf4c573666930ad86772f2c6",
+  "sourceAgentsHash": "3f0061798ef6b6a87e3eee6ad4886657d6b34d5f528212f7b7334d358df9b57a",
+  "homeAgentsWholeHashEqualsSource": false,
+  "localAppendixBytesPreserved": true
+}
