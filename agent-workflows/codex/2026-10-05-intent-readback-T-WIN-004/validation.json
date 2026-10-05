@@ -1,0 +1,248 @@
+{
+  "schema_version": 1,
+  "task_id": "T-WIN-004",
+  "support": "SKILL-35",
+  "purpose": "intent-readback",
+  "date": "2026-10-05",
+  "timezone": "Asia/Seoul",
+  "baseline_branch": "main",
+  "baseline_head": "1abd22baaa481d67ba55dac1cf5e2666382300f8",
+  "scope": {
+    "source_files": [
+      "codex_windows/AGENTS.md",
+      "codex_windows/skills/work-rules/SKILL.md"
+    ],
+    "records": [
+      "agent-workflows/codex/2026-10-05-intent-readback-T-WIN-004/README.md",
+      "agent-workflows/codex/2026-10-05-intent-readback-T-WIN-004/validation.json"
+    ],
+    "integration_only": [
+      "agent-workflows/codex/windows/TODO.md"
+    ],
+    "staging_commit_push": "not performed"
+  },
+  "before": {
+    "source_skill_count": 44,
+    "installed_skill_count": 44,
+    "source_installed_identical": true,
+    "installed_only_files": [],
+    "source_agents_sha256": "80c2b83c3dd5b32565605dee1a2cdb6ee17e57bb707705469654dce81313ec49",
+    "installed_agents_sha256": "f369f9f3f74ce89008d2acd23520ce55fbe4bc8ba86129f9d7d19d1ea4f6965a",
+    "local_agents_difference": "local source-location guidance; preserved only in personal AGENTS",
+    "source_skill_sha256_by_path": {
+      "references/kiro-original.md": "a940ad7376aecac56a873671a3f77250fb6d4f6deb77598810bdfefd1420ed20",
+      "references/legacy-work-rules.md": "e7e21a43a174ff83a1c45bea840d07ef892b58ee8455201286b936dc8bf26727",
+      "references/linux-original.md": "87e5f78b137d2896b38dd29ddcad55aaf10e730f0f15d384d3c1ea41d4c8ab82",
+      "references/linux-skills/debugging-and-recovery.md": "2d9abe01ee69ea435b9ab22f192770cfdba8ae01a28e47bd9cb7745bc8e9d77f",
+      "references/linux-skills/incremental-change.md": "130094af74d1304f0e6ab6684c19725cf266c0db9cb29c5bb112531fc4ec36ce",
+      "references/linux-skills/kiro-lock.md": "3451b83e3c0d23e0833e0f6e26b613713c984091440ccafb5c66a2b52f0b6c90",
+      "references/linux-skills/md-link-check.md": "b42e938b6c6e004e4625de0f403323e0fc2249a7074c253ca0084316e48c7085",
+      "references/linux-skills/planning-and-breakdown.md": "b28e326aa8c55ad774826dabd870eb9b014c2076ca5ed26410c646e8d07125cf",
+      "references/linux-skills/readme-template.md": "f384b1571a4b8f35c642e5984354f0c2721ecf612b66d3ba09bddf39dc58e850",
+      "references/linux-skills/spec-driven-infra.md": "2c8006325c5194aa013470926f59d98574b6f7eb815f06624273593d88a40949",
+      "references/linux-tools/lock.py": "90940c3f7d16cf4fb9f13e9244743d254d522523df0e8ed2b36881ab90bbffe0",
+      "references/linux-tools/md-heading-check.py": "53015d827dc7576dd4221c7accf7398a3be0e97d596b0b0b2951164397455df7",
+      "references/linux-tools/md-link-check.py": "9f6d5a2d5c83f160d73623ef881e62fec8adb876a4ef3696d2666866fdef13f7",
+      "references/linux-tools/md-style-check.py": "21d70e4cc4e4e272cbe64fdf6957dd10592eb26267a96c01d503c8a519c5ba10",
+      "references/operating-details.md": "12ee3f9adb5bfbcae8ad144da87ccb67f8a7eb07e3d7cb006ba29aa86eaaa853",
+      "references/originals/debugging-and-recovery.md": "10140924f539da68922ce66acd54d6d30e596059f377bdeeeecbd8e26400b11e",
+      "references/originals/incremental-change.md": "73abe0ab80accaae28ff8a628e16412255867aaacf063d2ee10bddc34b661d86",
+      "references/originals/kiro-lock.md": "207914bf93b04e9a201297def12cf0a0c512bd4fb10ef20c86e8a5ba57c10553",
+      "references/originals/md-link-check.md": "67bc59e6ca5432cd17ce0d13077cbaeaa51cc00c9c5764c8565323869d85aa05",
+      "references/originals/planning-and-breakdown.md": "11ca00491de7ace22d02b633db071d7c46233e8678b58d3a6ab1ed223694925a",
+      "references/originals/readme-template.md": "754dd7ea3b7be8e968802990ac8e63a2239285567d5c6c0ff45d935e8abc5a9e",
+      "references/originals/spec-driven-infra.md": "e102ac0892303423279dc10afa24fbd7fa939042205776586b5fa8cd4d9419b2",
+      "references/originals/STYLE.md": "f2797a30aaf805f9ab3cf157fff2e7229ad99dfe5cc6785b01b734090701a46a",
+      "references/repository-workflow.md": "1c10dc6b77fe3fc3e022d81726cfa75e02ea223ef55714842efee52409aaabba",
+      "references/skill-maintenance.md": "931d1964feb35ef54d8ef0d2b78d085a521b50340be537ef5936769a6dec99bd",
+      "references/skills/debugging-and-recovery.md": "1d0749fc403b39ed0591a34bbbbce4581b49762e3803abb2edbb01458475358f",
+      "references/skills/incremental-change.md": "b8bf1f4f344e1ff03b5b226325da1d32a77ec076cfb9293467a06d6a4a667b07",
+      "references/skills/kiro-lock.md": "add747a0a09e3c75dabe4844e6030a127027cab15ffb8962aed0e5745349e84d",
+      "references/skills/md-link-check.md": "9266581f77317f28d678086653d5b509297dce54b028eacec8637afee5313049",
+      "references/skills/planning-and-breakdown.md": "95fd4a84323f4613415d484bb7c1d0bd764d5a5cc2ade8ff244206b2b6990b06",
+      "references/skills/readme-template.md": "42664f8cd2e73f996e529e332e61f1e1743c432cc2ce7a22a70f3ddf3028ffe1",
+      "references/skills/spec-driven-infra.md": "8cdfcc91e9c4e9543d45ef8242571303ac43395982ab2bdd711af6c41fee5d3e",
+      "references/STYLE.md": "f2fc6b405b0f7f14b174ca312a0129a29941c8afdb0536fcf3d032f70b5d175d",
+      "references/validation-and-recovery.md": "2ad846203ed50678eb251fdaa6920e6fccd40967b9716bb0569b15973ff82030",
+      "references/windows/file-lock.md": "b9b053155050b2fe1567c82b2e4b360b36e876b1b78c96596b3d8657bfc96a76",
+      "references/windows/runtime-and-encoding.md": "0d68fa5e24d69f6f310ff4283a303506b31b32a82db6c482237576b3d8851677",
+      "references/windows/ssh-and-acl.md": "7a5976c607c300ad0ba9c36419459a91b44e13cca482a09c252aad45f6009723",
+      "references/windows-work-rules-details.md": "d0f943b35dee07abe758e72204e9e34dcc7bc3785cb1c8a9fa157aa0ce6f3adc",
+      "scripts/lock.py": "d26db693d6656ca610cc6164a4e9dea41bea7244f173e4d5bf499fa1a33585a4",
+      "scripts/md-heading-check.py": "16c3de7712ef8987216b3b4e519d9bce5214fb15f78a69865e7441805bdf85d3",
+      "scripts/md-link-check.py": "6991d56bf10c1ec6eaa8cbb9add5ff2e8bd3231a6cf8c534856736205983e5e6",
+      "scripts/md-style-check.py": "89a5bbf25979be2ccac556d1624e89dfbe1a2db132d9f3bd098ca98660574268",
+      "scripts/md_common.py": "8af651399536aa8f7cf03101c1dee3ea5ee190a3621819d55d9ae1ddb81ef78d",
+      "SKILL.md": "e373f77cf4ed07b2f3d05ad00c149b65a996f0ec582719f47a817789ab090261"
+    }
+  },
+  "after": {
+    "source_skill_count": 44,
+    "installed_skill_count": 44,
+    "source_installed_identical": true,
+    "source_skill_sha256_by_path": {
+      "references/kiro-original.md": "a940ad7376aecac56a873671a3f77250fb6d4f6deb77598810bdfefd1420ed20",
+      "references/legacy-work-rules.md": "e7e21a43a174ff83a1c45bea840d07ef892b58ee8455201286b936dc8bf26727",
+      "references/linux-original.md": "87e5f78b137d2896b38dd29ddcad55aaf10e730f0f15d384d3c1ea41d4c8ab82",
+      "references/linux-skills/debugging-and-recovery.md": "2d9abe01ee69ea435b9ab22f192770cfdba8ae01a28e47bd9cb7745bc8e9d77f",
+      "references/linux-skills/incremental-change.md": "130094af74d1304f0e6ab6684c19725cf266c0db9cb29c5bb112531fc4ec36ce",
+      "references/linux-skills/kiro-lock.md": "3451b83e3c0d23e0833e0f6e26b613713c984091440ccafb5c66a2b52f0b6c90",
+      "references/linux-skills/md-link-check.md": "b42e938b6c6e004e4625de0f403323e0fc2249a7074c253ca0084316e48c7085",
+      "references/linux-skills/planning-and-breakdown.md": "b28e326aa8c55ad774826dabd870eb9b014c2076ca5ed26410c646e8d07125cf",
+      "references/linux-skills/readme-template.md": "f384b1571a4b8f35c642e5984354f0c2721ecf612b66d3ba09bddf39dc58e850",
+      "references/linux-skills/spec-driven-infra.md": "2c8006325c5194aa013470926f59d98574b6f7eb815f06624273593d88a40949",
+      "references/linux-tools/lock.py": "90940c3f7d16cf4fb9f13e9244743d254d522523df0e8ed2b36881ab90bbffe0",
+      "references/linux-tools/md-heading-check.py": "53015d827dc7576dd4221c7accf7398a3be0e97d596b0b0b2951164397455df7",
+      "references/linux-tools/md-link-check.py": "9f6d5a2d5c83f160d73623ef881e62fec8adb876a4ef3696d2666866fdef13f7",
+      "references/linux-tools/md-style-check.py": "21d70e4cc4e4e272cbe64fdf6957dd10592eb26267a96c01d503c8a519c5ba10",
+      "references/operating-details.md": "12ee3f9adb5bfbcae8ad144da87ccb67f8a7eb07e3d7cb006ba29aa86eaaa853",
+      "references/originals/debugging-and-recovery.md": "10140924f539da68922ce66acd54d6d30e596059f377bdeeeecbd8e26400b11e",
+      "references/originals/incremental-change.md": "73abe0ab80accaae28ff8a628e16412255867aaacf063d2ee10bddc34b661d86",
+      "references/originals/kiro-lock.md": "207914bf93b04e9a201297def12cf0a0c512bd4fb10ef20c86e8a5ba57c10553",
+      "references/originals/md-link-check.md": "67bc59e6ca5432cd17ce0d13077cbaeaa51cc00c9c5764c8565323869d85aa05",
+      "references/originals/planning-and-breakdown.md": "11ca00491de7ace22d02b633db071d7c46233e8678b58d3a6ab1ed223694925a",
+      "references/originals/readme-template.md": "754dd7ea3b7be8e968802990ac8e63a2239285567d5c6c0ff45d935e8abc5a9e",
+      "references/originals/spec-driven-infra.md": "e102ac0892303423279dc10afa24fbd7fa939042205776586b5fa8cd4d9419b2",
+      "references/originals/STYLE.md": "f2797a30aaf805f9ab3cf157fff2e7229ad99dfe5cc6785b01b734090701a46a",
+      "references/repository-workflow.md": "1c10dc6b77fe3fc3e022d81726cfa75e02ea223ef55714842efee52409aaabba",
+      "references/skill-maintenance.md": "931d1964feb35ef54d8ef0d2b78d085a521b50340be537ef5936769a6dec99bd",
+      "references/skills/debugging-and-recovery.md": "1d0749fc403b39ed0591a34bbbbce4581b49762e3803abb2edbb01458475358f",
+      "references/skills/incremental-change.md": "b8bf1f4f344e1ff03b5b226325da1d32a77ec076cfb9293467a06d6a4a667b07",
+      "references/skills/kiro-lock.md": "add747a0a09e3c75dabe4844e6030a127027cab15ffb8962aed0e5745349e84d",
+      "references/skills/md-link-check.md": "9266581f77317f28d678086653d5b509297dce54b028eacec8637afee5313049",
+      "references/skills/planning-and-breakdown.md": "95fd4a84323f4613415d484bb7c1d0bd764d5a5cc2ade8ff244206b2b6990b06",
+      "references/skills/readme-template.md": "42664f8cd2e73f996e529e332e61f1e1743c432cc2ce7a22a70f3ddf3028ffe1",
+      "references/skills/spec-driven-infra.md": "8cdfcc91e9c4e9543d45ef8242571303ac43395982ab2bdd711af6c41fee5d3e",
+      "references/STYLE.md": "f2fc6b405b0f7f14b174ca312a0129a29941c8afdb0536fcf3d032f70b5d175d",
+      "references/validation-and-recovery.md": "2ad846203ed50678eb251fdaa6920e6fccd40967b9716bb0569b15973ff82030",
+      "references/windows/file-lock.md": "b9b053155050b2fe1567c82b2e4b360b36e876b1b78c96596b3d8657bfc96a76",
+      "references/windows/runtime-and-encoding.md": "0d68fa5e24d69f6f310ff4283a303506b31b32a82db6c482237576b3d8851677",
+      "references/windows/ssh-and-acl.md": "7a5976c607c300ad0ba9c36419459a91b44e13cca482a09c252aad45f6009723",
+      "references/windows-work-rules-details.md": "d0f943b35dee07abe758e72204e9e34dcc7bc3785cb1c8a9fa157aa0ce6f3adc",
+      "scripts/lock.py": "d26db693d6656ca610cc6164a4e9dea41bea7244f173e4d5bf499fa1a33585a4",
+      "scripts/md-heading-check.py": "16c3de7712ef8987216b3b4e519d9bce5214fb15f78a69865e7441805bdf85d3",
+      "scripts/md-link-check.py": "6991d56bf10c1ec6eaa8cbb9add5ff2e8bd3231a6cf8c534856736205983e5e6",
+      "scripts/md-style-check.py": "89a5bbf25979be2ccac556d1624e89dfbe1a2db132d9f3bd098ca98660574268",
+      "scripts/md_common.py": "8af651399536aa8f7cf03101c1dee3ea5ee190a3621819d55d9ae1ddb81ef78d",
+      "SKILL.md": "4207ea57d802192237fa6d73df5da0b903c061f3e1c78c5678a3fabb706c2793"
+    },
+    "source_agents_sha256": "e5aa9897eb6d357c432db82dd567bdcbfd02eb2218af3ca4d8bb9aa86c8e078f",
+    "installed_agents_sha256": "85c0b76cc46dab47f0038ba9aa775658451c133a8fc382cb01177f65b78b33e1",
+    "local_agents_user_difference_preserved": true,
+    "source_skill_changed_files": [
+      "SKILL.md"
+    ],
+    "agents_inserted_lines": 2
+  },
+  "validation": {
+    "baseline_changed_file_style": {
+      "files": 2,
+      "issues": 0,
+      "footer_exception": "existing operational AGENTS and SKILL format"
+    },
+    "changed_source_style": {
+      "files": 2,
+      "issues": 0,
+      "final_wording_recheck": {
+        "files": 1,
+        "issues": 0
+      }
+    },
+    "heading": {
+      "files": 2,
+      "headings": 7,
+      "issues": 0
+    },
+    "internal_file_links": {
+      "files": 2,
+      "links": 17,
+      "issues": 0
+    },
+    "current_distribution": {
+      "status": "PASS",
+      "stage": "review draft before one-sentence wording revision",
+      "unchanged_structure_reference_tool_checks_reused": true,
+      "counts": {
+        "skills": 21,
+        "compat_skills": 19,
+        "native_skills": 2,
+        "historical_skills": 19,
+        "source_and_preserved_hashes": 368,
+        "local_links": 80,
+        "native_interfaces": 2,
+        "python_syntax": 34,
+        "isolated_helper_runs": 27
+      }
+    },
+    "official_skill_validator": {
+      "initial_attempts": {
+        "default_python": "yaml dependency missing",
+        "bundled_python": "yaml dependency missing"
+      },
+      "isolated_dependency": {
+        "name": "PyYAML",
+        "version": "6.0.3",
+        "source": "https://pypi.org/project/PyYAML/6.0.3/",
+        "artifact_sha256": "4a2e8cebe2ff6ab7d1050ecd59c25d4c8bd7e6f400f5f82b96557ac0abafd0ac",
+        "global_install": false
+      },
+      "baseline": "PASS",
+      "final_source": "PASS"
+    },
+    "semantic_review": {
+      "reported_passes": 1,
+      "minimal_revision_applied": true,
+      "new_permission_or_wait_gate": false
+    },
+    "public_record_markdown": {
+      "files": 1,
+      "headings": 9,
+      "internal_file_links": 5,
+      "style_issues": 0,
+      "heading_issues": 0,
+      "broken_file_links": 0
+    },
+    "public_check_initial_errors": {
+      "privacy_regex": "HTTPS URL falsely classified as drive path; narrowed drive-letter boundary",
+      "dependent_gitleaks_attempt": "snapshot absent; scan failed before completion",
+      "private_raw_preserved": true
+    }
+  },
+  "installation": {
+    "status": "complete",
+    "installed_at": "2026-10-05T17:38:20+09:00",
+    "whole_folder_hash_match": true,
+    "personal_agents_merge_preserved_other_bytes": true,
+    "configuration_hash_unchanged": true,
+    "windows_todo_hash_unchanged": true,
+    "restore_rehearsal": "isolated full-folder and AGENTS copies matched before hashes; active rollback not performed"
+  },
+  "observation": {
+    "filesystem_entrypoint_readback": "confirmed",
+    "current_chat_updated_personal_agents_context": "received",
+    "fresh_session_discovery": "not observed",
+    "fresh_session_selection": "not observed",
+    "fresh_session_behavior": "not observed"
+  },
+  "public_file_check": {
+    "status": "PASS",
+    "json_parse": "PASS",
+    "private_absolute_paths": 0,
+    "private_raw_material_included": false,
+    "scope_files": 4,
+    "gitleaks": {
+      "version": "8.30.1",
+      "scope": "four selected public files",
+      "findings": 0,
+      "redaction_percent": 100,
+      "raw_report": "private/gitleaks-public.json"
+    }
+  },
+  "handoff": {
+    "status": "prepared for integration owner; final hashes frozen in private manifest",
+    "owned_public_files": 4,
+    "integration_only_files": 1,
+    "existing_T_WIN_004_checkbox": "unchanged",
+    "staging_commit_push": "not performed"
+  }
+}
