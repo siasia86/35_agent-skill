@@ -1,10 +1,12 @@
 # Codex 개인 스킬 세션 인계
 
-**2026-10-04 PLAN·TODO 연속 실행 후속:** T-WIN-004에 연결하여 개인 AGENTS·planning·work-rules의 관리 원본과 실제 대체 참조를 보완합니다. [이번 갱신 기록](2026-10-04-plan-continuation-T-WIN-004/README.md)에서 원본 검증·독립 검토·설치·게시·새 세션 적용을 구분합니다. 기존 업데이트·원문·fact-check 설치 보류는 유지합니다.
+**2026-10-05 최신 재개 안내:** fact-check의 보류 해제·지정 설치·실제 명시 검증과 FCH-01 인수 범위는 [소유 인계](2026-10-05-fact-check-native-FC-20261004-03/HANDOFF-20261005.md)를 따릅니다. T-WIN-004·LC-PUB의 완료 설치·게시와 실제 행동 잔여는 [runtime 업무 정리](2026-10-05-runtime-rules-followup-T-WIN-004/README.md#6-2026-10-05-업무-정리와-안전한-인계)에 연결합니다. 확정 배정의 제한된 명시 행동은 [runtime 7절](2026-10-05-runtime-rules-followup-T-WIN-004/README.md#7-확정-후속-배정의-실제-행동-관찰과-수정안)을 인수하며 독립 새 세션의 암묵 선택·직접 게시 완료로 확대하지 않습니다. 아래 날짜별 기록은 당시 관찰로 보존하며 현재 범위의 계획은 [Windows PLAN](windows/PLAN.md), 상태는 [Windows TODO](windows/TODO.md)를 확인합니다.
+
+**2026-10-04 PLAN·TODO 연속 실행 후속:** T-WIN-004에 연결하여 개인 AGENTS·planning·work-rules의 관리 원본과 실제 대체 참조를 보완합니다. [이번 갱신 기록](2026-10-04-plan-continuation-T-WIN-004/README.md)에서 원본 검증·독립 검토·설치·게시·새 세션 적용을 구분합니다. 기존 업데이트·원문은 보존합니다. fact-check 설치 보류는 FC-INSTALL-20261004-01에서 해제됐으며 지정 설치·발견과 남은 실제 행동은 [Windows TODO](windows/TODO.md)의 FC 항목을 따릅니다.
 
 **최신 개인 skill 업데이트:** [T-WIN-003](2026-10-03-personal-skills-T-WIN-003/README.md)의 전후 사본·설치 관찰·검증·복구를 확인합니다. 활성 후속은 [Windows TODO](windows/TODO.md)에서 관리합니다. 다음 업데이트 백업은 codex 바로 아래 새 이름의 폴더 하나로 추가합니다.
 
-**2026-10-04 현행 게시 정책:** [BRANCH-POLICY](2026-10-04-main-branch-policy-BRANCH-POLICY-20261004-01/README.md)로 일반 main 직접 작업·검증·commit·일반 push를 적용했습니다. 필요한 agent/task·목적 브랜치와 fact-check 로컬 적용 대기는 유지합니다. 아래 날짜별 yunli·사용자 검증 대기·main 미게시 기록은 당시 범위이며 현재 일반 작업의 게시 조건으로 재사용하지 않습니다. 새 세션 암시적 행동은 Windows TODO의 미확인 후속입니다.
+**2026-10-04 현행 게시 정책:** [BRANCH-POLICY](2026-10-04-main-branch-policy-BRANCH-POLICY-20261004-01/README.md)로 일반 main 직접 작업·검증·commit·일반 push를 적용했습니다. 필요한 agent/task·목적 브랜치와 지정 밖 설치·설정·운영 적용의 범위 제한은 유지합니다. fact-check의 지정 설치 완료를 새 세션 전체 행동 완료로 확대하지 않습니다. 아래 날짜별 yunli·사용자 검증 대기·main 미게시 기록은 당시 범위이며 현재 일반 작업의 게시 조건으로 재사용하지 않습니다. 새 세션 암시적 행동은 Windows TODO의 미확인 후속입니다.
 
 ## 1. 재개할 작업과 읽기 순서
 
@@ -22,7 +24,7 @@
 
 다음 세션에서 이 저장소를 열고 아래 요청으로 이어갈 수 있습니다.
 
-> AGENTS.md와 현재 Windows PLAN·TODO의 지정 항목을 확인해 작업을 이어가 줘. 일반 작업은 관련 검증·기록 후 담당 파일만 main에 commit·일반 push하고 원격 SHA·링크를 보고해 줘. 기존 변경·필요한 agent 브랜치·QA/Migration/복구 목적 브랜치와 원문·사본은 보존해 줘. fact-check 로컬 적용 보류와 설정·운영 적용의 별도 범위는 유지해 줘.
+> AGENTS.md와 현재 Windows PLAN·TODO의 지정 항목을 확인해 작업을 이어가 줘. 일반 작업은 관련 검증·기록 후 담당 파일만 main에 commit·일반 push하고 원격 SHA·링크를 보고해 줘. 기존 변경·필요한 agent 브랜치·QA/Migration/복구 목적 브랜치와 원문·사본은 보존해 줘. fact-check의 지정 설치 완료·남은 행동과 설정·운영 적용의 별도 범위는 현재 Windows TODO를 따라 보존해 줘.
 
 1. 루트 [AGENTS](../../AGENTS.md)와 이 인계 문서를 읽습니다. 이미 제공된 같은 지침을 중복해서 읽을 필요는 없습니다.
 2. [Windows PLAN](windows/PLAN.md)·[Windows TODO](windows/TODO.md)와 [플랫폼 분리 기록](PLATFORM_SPLIT_2026-10-03.md)을 먼저 확인합니다. 기존 Linux 후속은 [Linux TODO](../../codex_linux/TODO.md)의 1절과 [원시 검토 결과](reviews/2026-10-02/findings.json)를 읽고 대상 항목을 선택합니다.
@@ -179,7 +181,7 @@ Linux·보호 원본·실제 개인 홈/config를 보존하고 Windows 폴더의
 
 **작성일**: 2026-10-03
 
-**마지막 업데이트**: 2026-10-03
+**마지막 업데이트**: 2026-10-05
 
 © 2026 siasia86. Licensed under CC BY 4.0.
 
