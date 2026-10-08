@@ -4,6 +4,8 @@
 
 ## [Unreleased]
 
+- T-WIN-004 / ZWS-TECH-20261005-01: 저장소 유무와 관계없는 지속 작업의 개인 work-rules 적용 안내와 보고 순서·첫 열 대표 상태·4열·행동 표시 예외를 보완한 원본 및 지정 로컬 적용 근거를 인수했습니다 — [변경·검증·복구](agent-workflows/codex/2026-10-09-report-visibility-T-WIN-004/README.md). 새 문맥의 자동 선택·전체 담당 행동은 미확인으로 유지합니다.
+
 - T-WIN-004 / MD-LUNA-20261009-01: 정해진 검사·단순 스크립트·확정된 기계적 수정의 Luna `medium` 기본 위임을 총괄을 포함한 모든 역할에 적용하도록 원본을 갱신하고 지정 로컬 적용 근거를 인수했습니다. 의미·승인·게시 책임은 소유/통합 담당에게 유지합니다 — [변경·검증·복구](agent-workflows/codex/2026-10-09-markdown-luna-T-WIN-004/README.md). 공식 `quick_validate` 미확인과 부분 구조 확인을 구분합니다.
 
 - 2026-10-04: FC-INSTALL-20261004-01에서 사용자 승인으로 fact-check 설치 보류를 해제하고 관리 원본 두 파일을 개인 스킬 경로에 적용했습니다. 전체 사본·source/설치본 해시·형식 검사와 기존 개인 스킬 101파일·설정 보존을 확인했습니다. 새 Luna 실행 문맥의 제공 목록 발견과 실제 호출 미실행을 구분합니다. [적용·검증·복구](agent-workflows/codex/2026-10-04-fact-check-install-FC-INSTALL-20261004-01/README.md).

@@ -1,6 +1,6 @@
 ---
 name: work-rules
-description: Apply personal operating rules when executing, reviewing or resuming repository work. Report scope and verification, preserve existing authorization, and select only task-relevant references. Keep simple questions lightweight.
+description: Apply personal operating rules during sustained work, repository execution, review or resumption, and status reporting. Use relevant reporting and Markdown guidance while preserving scope and authorization. Keep simple questions lightweight.
 ---
 
 # 개인 Codex Work Rules
@@ -20,7 +20,7 @@ Windows 개인 작업의 공통 실행 기준입니다. 현재 사용자 요청�
 - 복명복창은 이해한 내용을 출력하는 보고입니다. 보고 출력·이모지·무응답·정정 없음은 승인 요청·획득·권한 부여·보류 해제의 근거가 아닙니다. 출력 자체를 사용자 답변·승인 대기의 조건으로 삼지 않고 이미 승인된 작업은 계속합니다. 실제 수행 범위·승인·보류·선행 조건·완료 기준은 최신 사용자 지시와 소유 원본을 따르며, 변경되지 않은 기존 승인·명시 보류는 유지합니다.
 - 실제 행동 전 현재 요청과 이해한 범위를 대조합니다. 목표·권한·명시 보류·완료 기준에 영향을 주는 충돌은 영향 구간만 기존 확인 절차로 처리하며 복명복창을 새 승인 관문으로 만들지 않습니다. 같은 입력의 요약·검토·통과 검사를 매 단계 반복하지 않으며 출력은 실제 검증을 대신하지 않습니다.
 - 작업 전 대상·수행 내용·검증 방향과 진행 중 의미 있는 관찰을 알리고, 완료 시 요청 대비 수행·검증·미실행·남은 조건과 확인된 성과·문제를 대조하여 한국어로 간결하게 보고합니다. 큰 결과는 표·tree를 사용하고 결과물 설명 위에 실제 경로와 링크를 둡니다. 공개 문서에는 공개 가능한 상대 경로·별칭을 사용합니다.
-- 작업 정리·상태·완료·중단 보고는 **대상·담당 / 확인된 결과 / 남은 조건 / 사용자 확인용 `.md`**의 4열 표를 기본으로 사용합니다. [STYLE의 작업 정리 표](references/STYLE.md#작업-정리-표)에 따라 준비된 확인 문서와 실제 사용자 행동을 연결하며, 유효한 미해결 사용자 개입의 맨 위 요약을 유지합니다. 단순 질문 답변과 한줄 진행 알림까지 표로 바꾸지는 않습니다.
+- 작업 정리·상태·완료·중단·인계 보고는 **대상·담당 / 확인된 결과 / 남은 조건 / 사용자 확인용 `.md`**의 4열 표를 기본으로 사용합니다. [STYLE의 작업 정리 표](references/STYLE.md#작업-정리-표)에 따라 준비된 확인 문서와 실제 사용자 행동을 연결하며, 유효한 미해결 사용자 개입의 맨 위 요약을 유지합니다. 단순 질문 답변과 한줄 진행 알림까지 표로 바꾸지는 않습니다. 대표 상태는 첫 번째 열 셀 맨 앞에 이모지·공백 1칸·한국어 상태 텍스트로 표시하고 다른 열에 반복하지 않습니다.
 - `$상황보고`와 `@상황보고`는 [상황보고 호출문](references/STYLE.md#상황보고-호출문)에 따른 같은 개인 보고 요청으로 해석합니다. 사용자 확인용 열에는 실제 사용자 행동을 안내하는 `.md`만 연결하며 TODO·PLAN이나 단순 결과·참고 문서로 대신하지 않습니다. 호출문 자체로 기능 실행·Goal 생성·게시·다른 채팅 메시지를 시작하지 않습니다.
 - 사용자 확인·개입이 필요한 안내문·문서·보고는 [사용자 확인·개입 안내](references/STYLE.md#사용자-확인개입-안내)에 따라 긴 문단 대신 표나 목록으로 구분합니다.
   - 담당·사용자가 할 일·검증 범위·실제 파일/PNG 링크·최소 확인 절차·회신 항목·재개 행동을 연결합니다.
