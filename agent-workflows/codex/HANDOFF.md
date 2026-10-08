@@ -1,5 +1,7 @@
 # Codex 개인 스킬 세션 인계
 
+**2026-10-09 T-WIN-004 / MD-LUNA-20261009-01:** 총괄을 포함한 정해진 검사·단순 스크립트·기계적 수정은 Luna `medium`에 작업 묶음으로 기본 위임합니다. 소유 담당이 의미·상태·권한을 판정하며 worker는 같은 작업을 재위임하지 않습니다. [이번 원본·지정 설치·검증·복구](2026-10-09-markdown-luna-T-WIN-004/README.md)를 인수했고, 공식 `quick_validate` 미확인·기존 푸터 진단·다른 채팅 행동 미확인을 유지합니다. 현행 상태는 [Windows TODO](windows/TODO.md)를 따릅니다.
+
 **2026-10-05 최신 재개 안내:** fact-check의 보류 해제·지정 설치·실제 명시 검증과 FCH-01 인수 범위는 [소유 인계](2026-10-05-fact-check-native-FC-20261004-03/HANDOFF-20261005.md)를 따릅니다. T-WIN-004·LC-PUB의 완료 설치·게시와 실제 행동 잔여는 [runtime 업무 정리](2026-10-05-runtime-rules-followup-T-WIN-004/README.md#6-2026-10-05-업무-정리와-안전한-인계)에 연결합니다. 확정 배정의 제한된 명시 행동은 [runtime 7절](2026-10-05-runtime-rules-followup-T-WIN-004/README.md#7-확정-후속-배정의-실제-행동-관찰과-수정안)을 인수하며 독립 새 세션의 암묵 선택·직접 게시 완료로 확대하지 않습니다. 아래 날짜별 기록은 당시 관찰로 보존하며 현재 범위의 계획은 [Windows PLAN](windows/PLAN.md), 상태는 [Windows TODO](windows/TODO.md)를 확인합니다.
 
 **2026-10-04 PLAN·TODO 연속 실행 후속:** T-WIN-004에 연결하여 개인 AGENTS·planning·work-rules의 관리 원본과 실제 대체 참조를 보완합니다. [이번 갱신 기록](2026-10-04-plan-continuation-T-WIN-004/README.md)에서 원본 검증·독립 검토·설치·게시·새 세션 적용을 구분합니다. 기존 업데이트·원문은 보존합니다. fact-check 설치 보류는 FC-INSTALL-20261004-01에서 해제됐으며 지정 설치·발견과 남은 실제 행동은 [Windows TODO](windows/TODO.md)의 FC 항목을 따릅니다.
@@ -181,7 +183,7 @@ Linux·보호 원본·실제 개인 홈/config를 보존하고 Windows 폴더의
 
 **작성일**: 2026-10-03
 
-**마지막 업데이트**: 2026-10-05
+**마지막 업데이트**: 2026-10-09
 
 © 2026 siasia86. Licensed under CC BY 4.0.
 
