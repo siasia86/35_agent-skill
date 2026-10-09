@@ -4,6 +4,8 @@
 
 ## [Unreleased]
 
+- `T-WIN-004` 일반 완료·중단·인계 보고의 결론·결과물·4열 상태·다음 행동·실제 도구·토큰·시간 순서를 STYLE에 통합하고 SKILL의 연결을 정리했습니다. [원본·지정 설치·검증 기록](agent-workflows/codex/2026-10-09-report-format-T-WIN-004/README.md)에 측정 근거·집계 범위와 미제공 기준, 기존 실패·미검증을 연결했습니다.
+
 - `T-WIN-004` 개인 상황보고를 `status-report`로 분리하고 AGENTS·skill 목록·일반 작업 보고 경계를 정리했습니다. [변경·설치·관찰 기록](agent-workflows/codex/2026-10-09-status-report-T-WIN-004/README.md)에 최초 실패와 한정 관찰, 미해결 검증 조건을 보존하고 Windows TODO·공통 HANDOFF에 총괄의 후속 배정 대상을 연결했습니다.
 
 - T-WIN-004 / ZWS-TECH-20261005-01: 저장소 유무와 관계없는 지속 작업의 개인 work-rules 적용 안내와 보고 순서·첫 열 대표 상태·4열·행동 표시 예외를 보완한 원본 및 지정 로컬 적용 근거를 인수했습니다 — [변경·검증·복구](agent-workflows/codex/2026-10-09-report-visibility-T-WIN-004/README.md). 새 문맥의 자동 선택·전체 담당 행동은 미확인으로 유지합니다.
