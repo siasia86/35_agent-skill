@@ -4,6 +4,8 @@
 
 ## [Unreleased]
 
+- `MAIN-20261004-01·T-WIN-002/004`의 기존 PLAN·TODO에 명시 Goal의 통합 범위·차기 순서·의존성·검증·복구·재개 조건을 연결했습니다. [STYLE 교정·지정 설치 기록](agent-workflows/codex/2026-10-09-style-diagnostics-T-WIN-004/README.md)의 다이어그램 4건 해소와 잔존 진단 8건을 인수하고, 이미 게시한 FC delta와 인계 전 계획 초안의 범위를 구분했습니다.
+
 - `FC-20261004-03·FCH-01`의 [53 문서 변경분 검증 결과](agent-workflows/codex/2026-10-05-fact-check-native-FC-20261004-03/FACTCHECK-53-DELTA-20261009.md)와 JSON을 인수했습니다. 15개 주장 중 확인 14·불일치 0·미확인 1 및 `V-D02` 한계를 공통 기록에 연결하고, 저장 계산 결과·소유 보고·실제 제품 검증의 범위를 구분했습니다.
 
 - `T-WIN-004` 일반 완료·중단·인계 보고의 결론·결과물·4열 상태·다음 행동·실제 도구·토큰·시간 순서를 STYLE에 통합하고 SKILL의 연결을 정리했습니다. [원본·지정 설치·검증 기록](agent-workflows/codex/2026-10-09-report-format-T-WIN-004/README.md)에 측정 근거·집계 범위와 미제공 기준, 기존 실패·미검증을 연결했습니다.
