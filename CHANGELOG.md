@@ -4,6 +4,8 @@
 
 ## [Unreleased]
 
+- `FC-20261004-03·FCH-01`의 [53 문서 변경분 검증 결과](agent-workflows/codex/2026-10-05-fact-check-native-FC-20261004-03/FACTCHECK-53-DELTA-20261009.md)와 JSON을 인수했습니다. 15개 주장 중 확인 14·불일치 0·미확인 1 및 `V-D02` 한계를 공통 기록에 연결하고, 저장 계산 결과·소유 보고·실제 제품 검증의 범위를 구분했습니다.
+
 - `T-WIN-004` 일반 완료·중단·인계 보고의 결론·결과물·4열 상태·다음 행동·실제 도구·토큰·시간 순서를 STYLE에 통합하고 SKILL의 연결을 정리했습니다. [원본·지정 설치·검증 기록](agent-workflows/codex/2026-10-09-report-format-T-WIN-004/README.md)에 측정 근거·집계 범위와 미제공 기준, 기존 실패·미검증을 연결했습니다.
 
 - `T-WIN-004` 개인 상황보고를 `status-report`로 분리하고 AGENTS·skill 목록·일반 작업 보고 경계를 정리했습니다. [변경·설치·관찰 기록](agent-workflows/codex/2026-10-09-status-report-T-WIN-004/README.md)에 최초 실패와 한정 관찰, 미해결 검증 조건을 보존하고 Windows TODO·공통 HANDOFF에 총괄의 후속 배정 대상을 연결했습니다.

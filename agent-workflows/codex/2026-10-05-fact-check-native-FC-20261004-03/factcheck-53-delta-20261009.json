@@ -1,0 +1,460 @@
+{
+  "schemaVersion": 1,
+  "workId": "SKILL-35:FC-20261004-01·02·03/FCH-01",
+  "recordedAt": "2026-10-09",
+  "model": {
+    "id": "gpt-6-luna",
+    "effort": "medium"
+  },
+  "goal": {
+    "created": true,
+    "statusAtRecordPreparation": "active",
+    "tokenBudget": null
+  },
+  "scope": {
+    "classification": "document_delta_fact_check",
+    "sourceDocumentsModified": false,
+    "t04Rerun": false,
+    "sourceImport": false,
+    "csharpExecution": false,
+    "build": false,
+    "dll": false,
+    "database": false,
+    "game": false,
+    "gitPublication": false,
+    "mandatoryUserAction": null
+  },
+  "repositories": [
+    {
+      "alias": "35_agent-skill",
+      "branch": "main",
+      "head": "0c047c49bb5e4a74c21eeaf970c70b779eb6d1d5",
+      "initialStatus": "clean",
+      "writtenFiles": [
+        "agent-workflows/codex/2026-10-05-fact-check-native-FC-20261004-03/FACTCHECK-53-DELTA-20261009.md",
+        "agent-workflows/codex/2026-10-05-fact-check-native-FC-20261004-03/factcheck-53-delta-20261009.json"
+      ]
+    },
+    {
+      "alias": "53_장비수치복원",
+      "branch": "main",
+      "head": "da29356bf2d9d35ce91b5700224bc971e708f375",
+      "writtenFiles": []
+    }
+  ],
+  "inputSha256": {
+    "35/.governance/INDEX.md": "787e5cec1b70c1920c04670df54704e95f83c752fd55829c353301bd71335e09",
+    "35/agent-workflows/codex/windows/TODO.md": "e8b180c781515023bbe4d6673c9b4384ccc1db98331701c2f38c538df93ada6b",
+    "35/agent-workflows/codex/HANDOFF.md": "d567243d2921dc0ce1c0b00aeb4c9e9487660b1c8375fa43aae6b33453b12209",
+    "35/agent-workflows/codex/2026-10-05-fact-check-native-FC-20261004-03/README.md": "aa95c74e82401b3edd1ef87dad964381f1d37051fbfe1b521d27536cfc0d17e0",
+    "35/agent-workflows/codex/2026-10-05-fact-check-native-FC-20261004-03/HANDOFF-20261005.md": "12bfef5bd0de73990a782105386a62c7645c91b6fc2d826c0d67f3f252ddf2c3",
+    "53/docs/SOURCE_MAP.md": "6470476ec13530af33acb88ede06cf606429b0b15a6ce25bf3b0ca353541b9ea",
+    "53/docs/VERIFICATION_CONTRACT.md": "a4dce423fcec8e9510e5871d3c34a1cde937b38ba2e295f42384082b43c68e85",
+    "53/docs/SOURCE_PINS.json": "3b91b69b5d97b096a09eea9c3c8012edd025296083e6fede1d706dfecb1aae7c",
+    "53/docs/T04_SOURCE_PINS.json": "29b0fb5b613739b049140c4e8e4dea3226bf601654277c75172bc744b86cbca9",
+    "53/docs/T05_SOURCE_PINS.json": "533839471c8579307d543bb8b5e988c76f343c55b2e5b9310e63f8b98a8a9ba9",
+    "53/fixtures/T04_CASES.json": "2592782005614b53a262dbaa09b9dfc01d782614ea9510387fdc58c6a656c6e1",
+    "53/.governance/outputs/RECSTATS-20261005-01/20261005_markdown/t04-verification.json": "99dd57064d4b1e50327cdc1bd9966679de54624289b1481c29c763c75085ed51",
+    "53/tools/verify_stats_candidates.py": "8968e2a23e3f9445e04c9a44f213d883b95e40924d58420383005862e778862e",
+    "53/.governance/outputs/RECSTATS-20261005-01/20261005_markdown/T04.md": "5a43d4363edf61e3ee5ea5e768d1c324b17a73072e4c0f534529e463a9440c58"
+  },
+  "sourcePinCheck": {
+    "expectedSourcePinsSha256": "3b91b69b5d97b096a09eea9c3c8012edd025296083e6fede1d706dfecb1aae7c",
+    "currentSourcePinsSha256": "3b91b69b5d97b096a09eea9c3c8012edd025296083e6fede1d706dfecb1aae7c",
+    "matches": true,
+    "numericSources": {
+      "alias": "TEST-98",
+      "entries": [
+        {
+          "relativePath": "LibraryCore/SystemModels/ItemInfo.cs",
+          "expectedSha256": "5c57637a771e981603ed1739e2dbd729d4f09dcf20974873d9583b3f66ac9064",
+          "currentSha256": "5c57637a771e981603ed1739e2dbd729d4f09dcf20974873d9583b3f66ac9064",
+          "matches": true
+        },
+        {
+          "relativePath": "ServerLibrary/DBModels/UserItem.cs",
+          "expectedSha256": "8e6574e0ab192a37861ed45064237886b88ccf526e68298bb2b0535d457fc396",
+          "currentSha256": "8e6574e0ab192a37861ed45064237886b88ccf526e68298bb2b0535d457fc396",
+          "matches": true
+        },
+        {
+          "relativePath": "LibraryCore/Stat.cs",
+          "expectedSha256": "9b56990d3e52084c5e4ca30fb97975ebd44686cdaeda009b6f60170df84fc8c9",
+          "currentSha256": "9b56990d3e52084c5e4ca30fb97975ebd44686cdaeda009b6f60170df84fc8c9",
+          "matches": true
+        },
+        {
+          "relativePath": "LibraryCore/EquipmentOptionMath.cs",
+          "expectedSha256": "b3483fe9617c8307113b3a38c8f62c2bfded3e2cf0e9b0ff08da932d3b58309b",
+          "currentSha256": "b3483fe9617c8307113b3a38c8f62c2bfded3e2cf0e9b0ff08da932d3b58309b",
+          "matches": true
+        },
+        {
+          "relativePath": "ServerLibrary/Models/PlayerObject.cs",
+          "expectedSha256": "252187af880999e8054369a83e6d0a9132d99a504e7d9daf2156cad5cd925984",
+          "currentSha256": "252187af880999e8054369a83e6d0a9132d99a504e7d9daf2156cad5cd925984",
+          "matches": true
+        }
+      ]
+    }
+  },
+  "claims": [
+    {
+      "id": "S-D01",
+      "document": "docs/SOURCE_MAP.md",
+      "line": 12,
+      "status": "confirmed",
+      "claim": "T04 pins five numeric sources and one ownership TODO snapshot as distinct entries.",
+      "evidence": "docs/T04_SOURCE_PINS.json role entries"
+    },
+    {
+      "id": "S-D02",
+      "document": "docs/SOURCE_MAP.md",
+      "line": 12,
+      "status": "confirmed",
+      "claim": "Initial SOURCE_PINS is preserved.",
+      "evidence": "docs/SOURCE_PINS.json current SHA matches prior observation; not all 20 initial source files were rechecked."
+    },
+    {
+      "id": "S-D03",
+      "document": "docs/SOURCE_MAP.md",
+      "line": 16,
+      "status": "confirmed",
+      "claim": "Five T05 numeric pins match T04 and current file hashes.",
+      "evidence": "docs/T05_SOURCE_PINS.json, T04 pins, current hashes"
+    },
+    {
+      "id": "S-D04",
+      "document": "docs/SOURCE_MAP.md",
+      "line": 16,
+      "status": "confirmed",
+      "claim": "Ownership TODO changed from prior observation snapshot.",
+      "evidence": "T05 pin initial/T04/T05 SHA and changed markers; not interpreted as current feature state"
+    },
+    {
+      "id": "S-D05",
+      "document": "docs/SOURCE_MAP.md",
+      "line": 37,
+      "status": "confirmed",
+      "claim": "EF98-T59 field-removal history is recorded in current owner TODO.",
+      "evidence": "TEST-98:.governance/TODO.md lines 29, 33, 120; owner report only, no independent DB/UI check"
+    },
+    {
+      "id": "V-D01",
+      "document": "docs/VERIFICATION_CONTRACT.md",
+      "line": 18,
+      "status": "confirmed",
+      "claim": "Fixture and stored result each contain 38 corresponding IDs and expected/result values; 36 calculations, 2 scope rejections, 0 failures.",
+      "evidence": "fixtures/T04_CASES.json and stored t04-verification.json; no rerun"
+    },
+    {
+      "id": "V-D02",
+      "document": "docs/VERIFICATION_CONTRACT.md",
+      "line": 18,
+      "status": "unknown",
+      "claim": "Other real data/product/game validation is unexecuted.",
+      "reason": "T04 and owner TODO record nonexecution/T05 pending, but do not independently establish the complete execution history. Preserve unknown; not an error."
+    },
+    {
+      "id": "V-D03",
+      "document": "docs/VERIFICATION_CONTRACT.md",
+      "line": 23,
+      "status": "confirmed",
+      "claim": "Negative recovered boundary cases are present and stored results match: R08=-50/100/20 -> 0; R10 percent=0 -> -50.",
+      "evidence": "T04 fixture and stored result"
+    },
+    {
+      "id": "V-D04",
+      "document": "docs/VERIFICATION_CONTRACT.md",
+      "line": 23,
+      "status": "confirmed",
+      "claim": "R09 uses recovered/baseRecovery/percent all 2147483647 and stores 2147483647.",
+      "evidence": "Selected case only; not full long boundary or C# runtime equivalence"
+    },
+    {
+      "id": "V-D05",
+      "document": "docs/VERIFICATION_CONTRACT.md",
+      "line": 32,
+      "status": "confirmed",
+      "claim": "Tool reads five numerical sources and rejects fixed SHA mismatch.",
+      "evidence": "tools/verify_stats_candidates.py:98-114"
+    },
+    {
+      "id": "V-D06",
+      "document": "docs/VERIFICATION_CONTRACT.md",
+      "line": 32,
+      "status": "confirmed",
+      "claim": "Tool enforces a restricted arithmetic AST and rejects unsupported nodes/operators/names.",
+      "evidence": "tools/verify_stats_candidates.py:41-82"
+    },
+    {
+      "id": "V-D07",
+      "document": "docs/VERIFICATION_CONTRACT.md",
+      "line": 32,
+      "status": "confirmed",
+      "claim": "Tool uses synthetic models for sums, recovery, sets, and resistance.",
+      "evidence": "tools/verify_stats_candidates.py:151-178; not full C# execution"
+    },
+    {
+      "id": "V-D08",
+      "document": "docs/VERIFICATION_CONTRACT.md",
+      "line": 32,
+      "status": "confirmed",
+      "claim": "Fixture, pins, local path map, and output JSON locations are fixed in the tool.",
+      "evidence": "tools/verify_stats_candidates.py:18-19,98-114,181-189,245"
+    },
+    {
+      "id": "V-D09",
+      "document": "docs/VERIFICATION_CONTRACT.md",
+      "line": 32,
+      "status": "confirmed",
+      "claim": "Out-of-range C# int inputs and resistance multiplication boundary candidates are explicitly rejected.",
+      "evidence": "tools/verify_stats_candidates.py:28-31,175-178; X01/X02 stored rejected; not original overflow behavior"
+    },
+    {
+      "id": "V-D10",
+      "document": "docs/VERIFICATION_CONTRACT.md",
+      "line": 32,
+      "status": "confirmed",
+      "claim": "Inspected tool path has no DB/DLL/product execution call and T04 result records those activities as false.",
+      "evidence": "tool import/I/O/entry path and T04 scope fields; not the entire historical execution record for other tools/games"
+    }
+  ],
+  "counts": {
+    "total": 15,
+    "confirmed": 14,
+    "mismatch": 0,
+    "unknown": 1,
+    "corrected": 0,
+    "factCheckPasses": 1,
+    "targetDocumentsModified": false
+  },
+  "t04": {
+    "fixtureCases": 38,
+    "storedResults": 38,
+    "calculated": 36,
+    "rejected": 2,
+    "failures": 0,
+    "groups": {
+      "BASIC": 5,
+      "SET": 8,
+      "RECOVERY": 10,
+      "CRIT": 8,
+      "RESIST": 5,
+      "LIMIT": 2
+    },
+    "allIdsAndExpectedActualPassedCorrespond": true,
+    "negativeRecovery": {
+      "R08": {
+        "expected": 0,
+        "actual": 0,
+        "passed": true
+      },
+      "R10": {
+        "expected": -50,
+        "actual": -50,
+        "passed": true
+      }
+    },
+    "R09": {
+      "expected": 2147483647,
+      "actual": 2147483647,
+      "passed": true
+    },
+    "rejections": {
+      "X01": {
+        "expected": "rejected",
+        "actual": "rejected",
+        "passed": true
+      },
+      "X02": {
+        "expected": "rejected",
+        "actual": "rejected",
+        "passed": true
+      }
+    },
+    "counterexamplesDistinguished": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "rerun": false
+  },
+  "priorFCFCH": {
+    "oldDecisionCount": 42,
+    "preservedAsHistoricalObservation": true,
+    "oldClaimRecheckedAsCurrent": false,
+    "pendingItems": [
+      "implicit selection",
+      "default edit mode",
+      "three historical unknowns: model selection, complete settings identity, then-current Goal return"
+    ]
+  },
+  "handoff": {
+    "owner": "35 · Git 통합",
+    "stagingCommitPushPerformed": false,
+    "otherChatMessageSent": false,
+    "mandatoryUserAction": null
+  },
+  "privateDataPolicy": {
+    "absoluteLocalRootsIncluded": false,
+    "sourceOrDBContentsCopied": false,
+    "credentialsIncluded": false
+  },
+  "recordChecks": {
+    "markdownFileCount": 1,
+    "jsonFileCount": 1,
+    "crossFileAnchors": "none present; not separately tested",
+    "externalReachability": "not run",
+    "markdownChecks": [
+      {
+        "name": "style",
+        "tool": "bundled md-link-check/scripts/md-style-check.py",
+        "version": "26.10.05",
+        "command": "python -X utf8 -B md-style-check.py <target>",
+        "targetFiles": 1,
+        "exitCode": 0,
+        "diagnostics": 0
+      },
+      {
+        "name": "heading",
+        "tool": "bundled md-link-check/scripts/md-heading-check.py",
+        "version": "26.10.03",
+        "command": "python -X utf8 -B md-heading-check.py <target>",
+        "targetFiles": 1,
+        "headings": 5,
+        "exitCode": 0,
+        "diagnostics": 0
+      },
+      {
+        "name": "link",
+        "tool": "bundled md-link-check/scripts/md-link-check.py",
+        "version": "26.10.03",
+        "command": "python -X utf8 -B md-link-check.py <target>",
+        "targetFiles": 1,
+        "links": 2,
+        "brokenLinks": 0,
+        "exitCode": 0,
+        "diagnostics": 0
+      }
+    ],
+    "jsonParseAggregateChecks": {
+      "method": "PowerShell ConvertFrom-Json plus assertions",
+      "exitCode": 0,
+      "parse": "passed",
+      "claimCount": 15,
+      "confirmed": 14,
+      "mismatch": 0,
+      "unknown": 1,
+      "fixtureCases": 38,
+      "storedResults": 38,
+      "groupTotal": 38,
+      "counterexamplesDistinguished": 5,
+      "sourcePreservationShaChecks": "all pinned inputs rechecked before write; no mismatch",
+      "japaneseOrHanjaCodepoints": 0,
+      "privateAbsolutePathPatternHits": 0
+    },
+    "outputMarkdownSha256": "7c0a6217ed89231a326bd91b08a62a5369bc5a34e2d75adab1457163172d9dce",
+    "jsonSelfSha256": "not self-referential; report final file hash separately",
+    "aggregateCheckAttempts": [
+      {
+        "attempt": "initial PowerShell aggregate check",
+        "exitCode": 1,
+        "diagnostic": "T04 group count mismatch",
+        "cause": "ConvertFrom-Json 결과 PSCustomObject의 groups.Values를 합산하는 검사식을 사용하여 그룹값을 올바르게 읽지 못함",
+        "correction": "BASIC, SET, RECOVERY, CRIT, RESIST, LIMIT 각 속성을 정수로 읽어 명시 합산",
+        "recheckExitCode": 0,
+        "recheck": "통과",
+        "inputFilesChanged": false
+      },
+      {
+        "attempt": "first JSON field update",
+        "exitCode": 1,
+        "diagnostic": "aggregateCheckAttempts 및 beforeAfterPreservation 속성을 기존 PSCustomObject에 직접 대입하지 못함",
+        "cause": "JSON 객체에 존재하지 않는 속성에 직접 대입",
+        "correction": "Add-Member로 신규 NoteProperty 추가",
+        "recheckExitCode": 0,
+        "recheck": "이 최종 갱신에서 parse 및 지정 집계 확인",
+        "inputFilesChanged": false,
+        "targetJsonAtFailureUnchanged": true
+      }
+    ],
+    "beforeAfterPreservation": {
+      "head35": "0c047c49bb5e4a74c21eeaf970c70b779eb6d1d5",
+      "status35": [
+        "?? agent-workflows/codex/2026-10-05-fact-check-native-FC-20261004-03/FACTCHECK-53-DELTA-20261009.md",
+        "?? agent-workflows/codex/2026-10-05-fact-check-native-FC-20261004-03/factcheck-53-delta-20261009.json"
+      ],
+      "head53": "da29356bf2d9d35ce91b5700224bc971e708f375",
+      "status53": [],
+      "documents": {
+        "53/docs/T05_SOURCE_PINS.json": {
+          "baselineSha256": "533839471c8579307d543bb8b5e988c76f343c55b2e5b9310e63f8b98a8a9ba9",
+          "currentSha256": "533839471c8579307d543bb8b5e988c76f343c55b2e5b9310e63f8b98a8a9ba9",
+          "matchesBaseline": true
+        },
+        "53/docs/SOURCE_MAP.md": {
+          "baselineSha256": "6470476ec13530af33acb88ede06cf606429b0b15a6ce25bf3b0ca353541b9ea",
+          "currentSha256": "6470476ec13530af33acb88ede06cf606429b0b15a6ce25bf3b0ca353541b9ea",
+          "matchesBaseline": true
+        },
+        "53/docs/VERIFICATION_CONTRACT.md": {
+          "baselineSha256": "a4dce423fcec8e9510e5871d3c34a1cde937b38ba2e295f42384082b43c68e85",
+          "currentSha256": "a4dce423fcec8e9510e5871d3c34a1cde937b38ba2e295f42384082b43c68e85",
+          "matchesBaseline": true
+        },
+        "53/docs/SOURCE_PINS.json": {
+          "baselineSha256": "3b91b69b5d97b096a09eea9c3c8012edd025296083e6fede1d706dfecb1aae7c",
+          "currentSha256": "3b91b69b5d97b096a09eea9c3c8012edd025296083e6fede1d706dfecb1aae7c",
+          "matchesBaseline": true
+        },
+        "53/docs/T04_SOURCE_PINS.json": {
+          "baselineSha256": "29b0fb5b613739b049140c4e8e4dea3226bf601654277c75172bc744b86cbca9",
+          "currentSha256": "29b0fb5b613739b049140c4e8e4dea3226bf601654277c75172bc744b86cbca9",
+          "matchesBaseline": true
+        }
+      },
+      "numericSources": [
+        {
+          "alias": "TEST-98",
+          "relativePath": "LibraryCore/SystemModels/ItemInfo.cs",
+          "pinnedSha256": "5c57637a771e981603ed1739e2dbd729d4f09dcf20974873d9583b3f66ac9064",
+          "currentSha256": "5c57637a771e981603ed1739e2dbd729d4f09dcf20974873d9583b3f66ac9064",
+          "matchesPin": true
+        },
+        {
+          "alias": "TEST-98",
+          "relativePath": "ServerLibrary/DBModels/UserItem.cs",
+          "pinnedSha256": "8e6574e0ab192a37861ed45064237886b88ccf526e68298bb2b0535d457fc396",
+          "currentSha256": "8e6574e0ab192a37861ed45064237886b88ccf526e68298bb2b0535d457fc396",
+          "matchesPin": true
+        },
+        {
+          "alias": "TEST-98",
+          "relativePath": "LibraryCore/Stat.cs",
+          "pinnedSha256": "9b56990d3e52084c5e4ca30fb97975ebd44686cdaeda009b6f60170df84fc8c9",
+          "currentSha256": "9b56990d3e52084c5e4ca30fb97975ebd44686cdaeda009b6f60170df84fc8c9",
+          "matchesPin": true
+        },
+        {
+          "alias": "TEST-98",
+          "relativePath": "LibraryCore/EquipmentOptionMath.cs",
+          "pinnedSha256": "b3483fe9617c8307113b3a38c8f62c2bfded3e2cf0e9b0ff08da932d3b58309b",
+          "currentSha256": "b3483fe9617c8307113b3a38c8f62c2bfded3e2cf0e9b0ff08da932d3b58309b",
+          "matchesPin": true
+        },
+        {
+          "alias": "TEST-98",
+          "relativePath": "ServerLibrary/Models/PlayerObject.cs",
+          "pinnedSha256": "252187af880999e8054369a83e6d0a9132d99a504e7d9daf2156cad5cd925984",
+          "currentSha256": "252187af880999e8054369a83e6d0a9132d99a504e7d9daf2156cad5cd925984",
+          "matchesPin": true
+        }
+      ],
+      "sourceContentsRead": false,
+      "sourceExecuted": false
+    }
+  }
+}
