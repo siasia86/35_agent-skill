@@ -4,6 +4,8 @@
 
 ## [Unreleased]
 
+- `T-WIN-004` 개인 상황보고를 `status-report`로 분리하고 AGENTS·skill 목록·일반 작업 보고 경계를 정리했습니다. [변경·설치·관찰 기록](agent-workflows/codex/2026-10-09-status-report-T-WIN-004/README.md)에 최초 실패와 한정 관찰, 미해결 검증 조건을 보존하고 Windows TODO·공통 HANDOFF에 총괄의 후속 배정 대상을 연결했습니다.
+
 - T-WIN-004 / ZWS-TECH-20261005-01: 저장소 유무와 관계없는 지속 작업의 개인 work-rules 적용 안내와 보고 순서·첫 열 대표 상태·4열·행동 표시 예외를 보완한 원본 및 지정 로컬 적용 근거를 인수했습니다 — [변경·검증·복구](agent-workflows/codex/2026-10-09-report-visibility-T-WIN-004/README.md). 새 문맥의 자동 선택·전체 담당 행동은 미확인으로 유지합니다.
 
 - T-WIN-004 / MD-LUNA-20261009-01: 정해진 검사·단순 스크립트·확정된 기계적 수정의 Luna `medium` 기본 위임을 총괄을 포함한 모든 역할에 적용하도록 원본을 갱신하고 지정 로컬 적용 근거를 인수했습니다. 의미·승인·게시 책임은 소유/통합 담당에게 유지합니다 — [변경·검증·복구](agent-workflows/codex/2026-10-09-markdown-luna-T-WIN-004/README.md). 공식 `quick_validate` 미확인과 부분 구조 확인을 구분합니다.
