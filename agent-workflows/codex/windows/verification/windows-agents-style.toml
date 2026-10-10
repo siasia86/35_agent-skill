@@ -1,0 +1,7 @@
+version = 1
+
+[[file_skip]]
+path = "../../../../codex_windows/AGENTS.md"
+checks = ["footer"]
+reason = "Windows 배포용 개인 AGENTS는 실행 지침이며 README 푸터의 필수 대상이 아님"
+review = "T-WIN-004 STYLE-10-20261010 기술 검토; codex_windows/README의 적용 계약 변경 시 재검토"

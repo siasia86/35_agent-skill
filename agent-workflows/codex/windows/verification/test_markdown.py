@@ -218,7 +218,7 @@ def main():
         run('style-explicit-missing', 'md-style-check.py', 1, '--no-footer', missing)
         run('style-valid-plus-missing', 'md-style-check.py', 1, '--no-footer', clean_style, missing)
         run('style-invalid-utf8', 'md-style-check.py', 1, '--no-footer', bad_utf8)
-        run('style-version', 'md-style-check.py', 0, '--version', expected_stdout='26.10.05')
+        run('style-version', 'md-style-check.py', 0, '--version', expected_stdout='26.10.10')
         run('style-help', 'md-style-check.py', 0, '--help')
         run('style-list-skips', 'md-style-check.py', 0, '--list-skips')
         write('style-config/.md-style-check.toml', 'skip_checks = ["footer"]\n')
@@ -234,6 +234,54 @@ def main():
         write('style-exclude/ignored/document.md', '# Root\n# Error\n')
         run('style-directory-exclusion', 'md-style-check.py', 0, '--no-footer', '-E', 'ignored', root / 'style-exclude')
         run('style-strict-preserved', 'md-style-check.py', 0, '--strict', '--no-footer', clean_style)
+
+        # T-WIN-004 STYLE-10: literals/quotations are evidence, prose is checked.
+        exaggeration_cases = (
+            ('negative-literals', '- ❌ `SE 완전 로드맵`, `완벽한 가이드`\n', 0, []),
+            ('plain-prose', '완벽한 가이드\n', 1, [3]),
+            ('literal-outside-prose', '`완벽한 가이드` 뒤 최고의 기능\n', 1, [3]),
+            ('quoted-original', '> 완벽한 가이드\n> > 최고의 기능\n', 0, []),
+            ('after-quotation', '> 완벽한 가이드\n\n최고의 기능\n', 1, [5]),
+            ('unclosed-inline', '`완벽한 가이드\n최고의 기능\n', 2, [3, 4]),
+            ('mismatched-inline', '``완벽한 가이드`\n', 1, [3]),
+            ('closed-fence', '~~~text\n완벽한 가이드\n~~~\n', 0, []),
+            ('unclosed-fence', '~~~text\n완벽한 가이드\n', 1, [3]),
+        )
+        for strict in (False, True):
+            mode = 'strict' if strict else 'normal'
+            mode_flags = ['--strict'] if strict else []
+            for label, body, issues, lines in exaggeration_cases:
+                target = write(f'style-exaggeration-{label}-{mode}.md', '# Root\n\n' + body)
+                run(f'style-exaggeration-{label}-{mode}', 'md-style-check.py', int(bool(issues)),
+                    '--no-footer', *mode_flags, target,
+                    expected_metrics={'files': 1, 'issues': issues}, expected_lines=lines)
+            technical = write(f'style-technical-whitelist-{mode}.md', '# Root\n\n완전 이진 트리\n')
+            run(f'style-technical-whitelist-{mode}', 'md-style-check.py', int(strict),
+                '--no-footer', *mode_flags, technical,
+                expected_metrics={'files': 1, 'issues': int(strict)}, expected_lines=[3] if strict else [])
+
+        # The adopted distribution profile is exact-path/one-check only.
+        footer_profile = write('style-role-profile.toml',
+            '[[file_skip]]\npath = "role/AGENTS.md"\nchecks = ["footer"]\n'
+            'reason = "distribution instruction fixture"\nreview = "T-WIN-004"\n')
+        role_agents = write('role/AGENTS.md', '# Instructions\n')
+        run('style-default-agents-footer', 'md-style-check.py', 1, role_agents,
+            expected_metrics={'files': 1, 'issues': 3})
+        run('style-profile-exact-agents-footer', 'md-style-check.py', 0, '--config', footer_profile, role_agents,
+            expected_metrics={'files': 1, 'issues': 0})
+        write('role/AGENTS.md', '# Instructions\n\n✅NoSpace\n')
+        run('style-profile-agents-other-checks', 'md-style-check.py', 1, '--config', footer_profile, role_agents,
+            expected_metrics={'files': 1, 'issues': 1}, expected_lines=[3])
+        other_agents = write('role/other/AGENTS.md', '# Instructions\n')
+        run('style-profile-other-agents-default', 'md-style-check.py', 1, '--config', footer_profile, other_agents,
+            expected_metrics={'files': 1, 'issues': 3})
+        readme_missing = write('role/README.md', '# Usage\n')
+        run('style-profile-readme-footer-required', 'md-style-check.py', 1, '--config', footer_profile, readme_missing,
+            expected_metrics={'files': 1, 'issues': 3})
+        write('role/README.md', '# Usage\n\n---\n\n**작성일**: 2026-10-10\n\n'
+            '**마지막 업데이트**: 2026-10-10\n\n© 2026 example\n')
+        run('style-profile-readme-footer-present', 'md-style-check.py', 0, '--config', footer_profile, readme_missing,
+            expected_metrics={'files': 1, 'issues': 0})
 
         # W04: escaped opening brackets depend on the parity of the backslash run.
         for count, expected in ((1, 0), (2, 1), (3, 0), (4, 1)):

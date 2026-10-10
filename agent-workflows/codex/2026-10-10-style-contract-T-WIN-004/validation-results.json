@@ -1,0 +1,180 @@
+{
+  "work_id": "T-WIN-004 / STYLE-10-20261010",
+  "base_head": "2946330a8f8dae4561b192fde05a75cd6c1a592a",
+  "runtime": {
+    "python": "bundled primary runtime, Python 3.12.14",
+    "yaml": "PyYAML 6.0.3",
+    "validator": "official skill-creator quick_validate.py",
+    "requested_model": "gpt-6-luna",
+    "requested_effort": "medium",
+    "observed_runtime_model": "not exposed by execution tool"
+  },
+  "commands": {
+    "regression": "python -X utf8 -B test_markdown.py --skills codex_windows/skills (isolated fixture; cross-drive C: temp -> J: repository)",
+    "quick_validate": "python -X utf8 -B quick_validate.py <each of 7 affected skill directories>",
+    "style": "python md-style-check.py <each of 7 STYLE.md> --no-footer",
+    "agents_default": "python md-style-check.py codex_windows/AGENTS.md",
+    "agents_profile": "python md-style-check.py codex_windows/AGENTS.md --config agent-workflows/codex/windows/verification/windows-agents-style.toml",
+    "final_docs": "python md-link-check.py <record README.md> validation-results.json; python md-heading-check.py <same>; python md-style-check.py <same>",
+    "diff": "git diff --check"
+  },
+  "official_targets": [
+    "git-commit-rule",
+    "md-link-check",
+    "readme-template",
+    "security-tools",
+    "using-skills",
+    "work-rules",
+    "zircon-readme-policy"
+  ],
+  "tests": {
+    "markdown_regression": {
+      "passed": 117,
+      "failed": 0,
+      "actual_new_style_cases": 26,
+      "cross_drive_fixture": "included",
+      "raw_results": "private only"
+    },
+    "quick_validate": {
+      "passed": 7,
+      "failed": 0,
+      "targets": "all seven official targets"
+    },
+    "style_no_footer": {
+      "passed": 7,
+      "failed": 0
+    },
+    "codex_windows_agents_default": {
+      "exit": 1,
+      "footer_diagnostics": 3
+    },
+    "codex_windows_agents_profile": {
+      "exit": 0,
+      "resolved_target": "codex_windows/AGENTS.md",
+      "checks": [
+        "footer"
+      ]
+    },
+    "verify_current": {
+      "result": "PASS",
+      "native": 21,
+      "preservation_hashes": 368,
+      "local_links": 208,
+      "ast": 34,
+      "isolated_helper_runs": 27,
+      "archived": 190,
+      "linux_tool_copies": 2
+    },
+    "installed_versions": [
+      {
+        "exit": 0,
+        "skill": "git-commit-rule",
+        "version": "md-style-check.py 26.10.10"
+      },
+      {
+        "exit": 0,
+        "skill": "md-link-check",
+        "version": "md-style-check.py 26.10.10"
+      },
+      {
+        "exit": 0,
+        "skill": "work-rules",
+        "version": "md-style-check.py 26.10.10"
+      }
+    ],
+    "install": {
+      "source_managed_files": 57,
+      "local_managed_files": 57,
+      "local_total_files": 62,
+      "preserved_extras": 5,
+      "managed_mismatches": 0,
+      "extras_changed": 0
+    },
+    "helper_style_sha256": "152E70788C1F293B5E97A5881F903D7F7A9393528CB14ABA8229D194930BA0CE",
+    "style_sha256": "81CE8E570B1DDEC75C7D83F947C59422B5669FAEBFA76BA14A56C71F1A086830",
+    "final_record_documents": {
+      "markdown_targets": 1,
+      "target": "record README.md only",
+      "link_exit": 0,
+      "links": 4,
+      "broken": 0,
+      "heading_exit": 0,
+      "headings": 5,
+      "heading_issues": 0,
+      "style_exit": 0,
+      "validation_json": "JSON destination/payload only; JSON syntax checked separately",
+      "git_diff_check_exit": 0
+    }
+  },
+  "changed_source_files": [
+    "codex_windows/README.md",
+    "codex_windows/skills/git-commit-rule/references/STYLE.md",
+    "codex_windows/skills/git-commit-rule/scripts/md-style-check.py",
+    "codex_windows/skills/md-link-check/references/STYLE.md",
+    "codex_windows/skills/md-link-check/scripts/md-style-check.py",
+    "codex_windows/skills/readme-template/references/STYLE.md",
+    "codex_windows/skills/readme-template/scripts/md-style-check.py",
+    "codex_windows/skills/security-tools/references/STYLE.md",
+    "codex_windows/skills/security-tools/scripts/md-style-check.py",
+    "codex_windows/skills/using-skills/references/STYLE.md",
+    "codex_windows/skills/using-skills/scripts/md-style-check.py",
+    "codex_windows/skills/work-rules/references/STYLE.md",
+    "codex_windows/skills/work-rules/scripts/md-style-check.py",
+    "codex_windows/skills/zircon-readme-policy/references/STYLE.md",
+    "codex_windows/skills/zircon-readme-policy/scripts/md-style-check.py",
+    "agent-workflows/codex/windows/verification/test_markdown.py",
+    "agent-workflows/codex/windows/verification/windows-agents-style.toml"
+  ],
+  "source_local_status": {
+    "source_managed_files": 171,
+    "local_managed_files": 57,
+    "local_total_files": 62,
+    "extras": 5,
+    "managed_mismatches": 0,
+    "extras_changed": 0
+  },
+  "historical_note": "Harness historical new_cases=28 aggregates earlier W04-W10 cases; current test diff confirms 26 actual added cases. Existing raw logs do not include input hashes. Current hashes will be recorded as close-time measurements, not reconstructed test-time hashes.",
+  "execution_order": "Canonical checker, STYLE, deployment README, profile, and regression harness were not modified after their corresponding verification; local copies were applied after source verification.",
+  "commands_summary": "명령은 절대 홈 경로를 노출하지 않도록 실행한 동일 명령의 경로 별칭 및 repo 상대 인수를 사용해 축약 표기했다. 실행 기록에 -X utf8 -B가 확인된 명령에는 해당 인수를 반영한다.",
+  "docs_preinstall": {
+    "documents": 8,
+    "targets": [
+      "codex_windows/README.md",
+      "codex_windows/skills/git-commit-rule/references/STYLE.md",
+      "codex_windows/skills/md-link-check/references/STYLE.md",
+      "codex_windows/skills/readme-template/references/STYLE.md",
+      "codex_windows/skills/security-tools/references/STYLE.md",
+      "codex_windows/skills/using-skills/references/STYLE.md",
+      "codex_windows/skills/work-rules/references/STYLE.md",
+      "codex_windows/skills/zircon-readme-policy/references/STYLE.md"
+    ],
+    "links": 3,
+    "broken": 0,
+    "headings": 291,
+    "heading_issues": 0,
+    "timing": "earlier check before final README update"
+  },
+  "current_hashes": {
+    "basis": "close-time current measurement, not test-time input hash",
+    "helper_sha256": "152E70788C1F293B5E97A5881F903D7F7A9393528CB14ABA8229D194930BA0CE",
+    "style_sha256": "81CE8E570B1DDEC75C7D83F947C59422B5669FAEBFA76BA14A56C71F1A086830",
+    "input_sha_in_raw_logs": false
+  },
+  "write_close_status": "source/local/repository record writes closed after final manifest and candidate freeze",
+  "after_manifest": {
+    "path": "private/after-manifest.json",
+    "groups": {
+      "source": 171,
+      "local": 62,
+      "support": 4
+    },
+    "files": 237,
+    "sha256": "DE713B1BE843D07CE3FC12AC6163CD616BB08F97ABD3CD0A79091B1D3A1C841B"
+  },
+  "candidate_freeze": {
+    "path": "private/publication-candidates.json",
+    "candidate_count": 19,
+    "excluded_private_self_manifest": true
+  },
+  "write_close_timestamp_utc": "2026-10-10T09:01:29Z"
+}

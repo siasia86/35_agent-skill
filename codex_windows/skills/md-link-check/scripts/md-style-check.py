@@ -23,7 +23,7 @@ STYLE.md 규칙 기반: 표 정렬, 다이어그램 폭/한글/박스 문자, H1
   -V, --version             버전 출력
 """
 
-VERSION = "26.10.05"
+VERSION = "26.10.10"
 
 import argparse
 import os
@@ -562,11 +562,20 @@ _EXAGGERATION_WHITELIST = re.compile(
 )
 
 def check_exaggeration(content, strict=False):
-    """과장 표현 검사 (STYLE.md § 10). 코드블록 제외."""
+    """Inspect prose; preserve fenced code, same-line literals and quotations.
+
+    An unmatched inline delimiter cannot mask later lines. An unclosed fence
+    makes this check incomplete instead of silently accepting hidden prose.
+    Strict mode still disables the technical-term whitelist for prose.
+    """
     issues = []
-    clean = strip_code_blocks(content)
+    clean, unclosed = strip_fenced_code(content)
+    if unclosed is not None:
+        issues.append(f"L{unclosed}: 닫히지 않은 코드 펜스 — 문체 검사 미완료")
     for i, line in enumerate(clean.splitlines(), 1):
-        stripped = line.strip()
+        if line.lstrip().startswith('>'):
+            continue
+        stripped = mask_inline_code(line).strip()
         if re.search(r'[가-힣]', stripped) and _EXAGGERATION_PATTERN.search(stripped):
             if strict or not _EXAGGERATION_WHITELIST.search(stripped):
                 issues.append(f"L{i}: {stripped[:80]}")
