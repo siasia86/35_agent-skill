@@ -1,0 +1,4 @@
+interface:
+  display_name: "인프라 명세"
+  short_description: "인프라 변경 전 목표·영향·보안·검증·복구 명세 작성"
+  default_prompt: "$spec-driven-infra 스킬로 요청한 대상의 인프라 명세 작업을 수행하고 실행 근거와 미확인 범위를 보고해 주세요."

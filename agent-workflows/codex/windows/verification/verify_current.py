@@ -18,6 +18,10 @@ import tempfile
 import tomllib
 
 
+NATIVE_RECORD = 'agent-workflows/codex/2026-10-10-windows-native-T-WIN-004'
+NATIVE_MAP = NATIVE_RECORD + '/preservation-map.json'
+
+
 def read_current_inventory(path):
     """Reviewed distribution contract; deliberately separate from migration history."""
     value = json.loads(path.read_text(encoding='utf-8'))
@@ -114,14 +118,47 @@ def check_native_interface(folder):
     lines = path.read_text(encoding='utf-8').splitlines()
     if not lines or lines[0] != 'interface:':
         raise ValueError(f'Invalid native interface: {folder.name}')
-    fields = {}
+    fields, policy = {}, {}
+    section = 'interface'
     for line in lines[1:]:
+        if not line.strip() or line.lstrip().startswith('#'):
+            continue
+        if line == 'policy:':
+            if section == 'policy':
+                raise ValueError(f'Duplicate native policy: {folder.name}')
+            section = 'policy'
+            continue
+        if section == 'policy':
+            match = re.fullmatch(r'  allow_implicit_invocation:[ \t]*(true|false)', line)
+            if not match or policy:
+                raise ValueError(f'Invalid native policy: {folder.name}')
+            policy['allow_implicit_invocation'] = match[1] == 'true'
+            continue
         match = re.fullmatch(r'  (display_name|short_description|default_prompt):[ \t]*(.*)', line)
         if not match or match[1] in fields:
             raise ValueError(f'Invalid native interface field: {folder.name}')
         fields[match[1]] = string_scalar(match[2])
     if set(fields) != {'display_name', 'short_description', 'default_prompt'} or not all(fields.values()):
         raise ValueError(f'Incomplete native interface: {folder.name}')
+    if section == 'policy' and not policy:
+        raise ValueError(f'Incomplete native policy: {folder.name}')
+    if '$' + folder.name not in fields['default_prompt']:
+        raise ValueError(f'Native prompt omits skill name: {folder.name}')
+
+
+def check_windows_distribution(root):
+    """Reject retired payloads and execution examples, not platform boundary prose."""
+    legacy_names = {'linux-original.md', 'kiro-original.md', 'legacy-work-rules.md'}
+    legacy_parts = {'linux-skills', 'linux-tools', 'originals', 'bash-script-template'}
+    executable_patterns = re.compile(
+        r'(?m)^\s*```(?:bash|sh|shell)\s*$|/root/|/mnt/[a-z]/|'
+        r'\b(?:systemctl|journalctl|apt-get)\b|bash-script-template|'
+        r'linux-original\.md|kiro-original\.md|legacy-work-rules\.md')
+    for path in root.rglob('*'):
+        if path.suffix == '.sh' or path.name in legacy_names or legacy_parts.intersection(path.relative_to(root).parts):
+            raise ValueError(f'Retired Windows payload: {path.relative_to(root)}')
+        if path.is_file() and path.suffix == '.md' and executable_patterns.search(path.read_text(encoding='utf-8')):
+            raise ValueError(f'Non-native Windows instructions: {path.relative_to(root)}')
 
 
 def markdown_helper(root):
@@ -170,30 +207,80 @@ def verify(repo):
     relocated = {item['before']: item for item in routing['relocated_preserved_files']}
     if len(relocated) != 7 or len(history['files']) != 182 or len(history['settings']) != 2:
         raise ValueError('Unexpected preservation inventory')
+    native_map = read_json(repo / NATIVE_MAP)
+    archived = {}
+    for item in native_map['files']:
+        original = 'codex_windows/' + item['source']
+        if original in archived:
+            raise ValueError('Duplicate native preservation source')
+        target = NATIVE_RECORD + '/' + item['preserved']
+        expected_prefix = NATIVE_RECORD + '/archive/codex_windows/'
+        if not target.startswith(expected_prefix) or not re.fullmatch(r'[0-9a-f]{64}', item['sha256']):
+            raise ValueError('Invalid native preservation record')
+        path = inside(target)
+        if not path.is_relative_to((repo / expected_prefix).resolve()):
+            raise ValueError('Native preservation escapes archive')
+        if digest(target) != item['sha256'] or path.stat().st_size != item['bytes']:
+            raise ValueError(f'Native preserved file changed: {original}')
+        for counterpart in item['linux_or_kiro_counterparts']:
+            if digest(counterpart['path']) != counterpart['sha256']:
+                raise ValueError(f'Native preservation counterpart changed: {original}')
+            if not item['windows_only'] and counterpart['sha256'] != item['sha256']:
+                raise ValueError(f'Native preservation counterpart differs: {original}')
+        archived[original] = {'preserved': target, 'sha256': item['sha256']}
+    if native_map['file_count'] != len(archived) or not archived:
+        raise ValueError('Unexpected native preservation inventory')
     counts = {'skills': 0, 'compat_skills': 0, 'native_skills': 0,
               'historical_skills': len(history['skills']),
               'source_and_preserved_hashes': 0, 'local_links': 0,
-              'native_interfaces': 0, 'python_syntax': 0, 'isolated_helper_runs': 0}
+              'native_interfaces': 0, 'python_syntax': 0, 'isolated_helper_runs': 0,
+              'archived_files': len(archived), 'linux_tool_copies': 0}
+    tool_sources, tool_targets = set(), set()
+    for item in native_map['linux_script_copies']:
+        if item['source'] in tool_sources or item['preserved'] in tool_targets:
+            raise ValueError('Duplicate Linux tool preservation')
+        tool_sources.add(item['source'])
+        tool_targets.add(item['preserved'])
+        saved = archived.get(item['source'])
+        if not saved or saved['sha256'] != item['sha256']:
+            raise ValueError('Linux tool preservation lacks archived source')
+        target = inside(item['preserved'])
+        if not item['preserved'].startswith('codex_linux/references/windows-migration/'):
+            raise ValueError('Invalid Linux tool preservation target')
+        if not target.is_relative_to((repo / 'codex_linux/references/windows-migration').resolve()):
+            raise ValueError('Linux tool preservation escapes target')
+        if target.stat().st_size != item['bytes'] or digest(item['preserved']) != item['sha256']:
+            raise ValueError('Linux tool preservation changed')
+        counts['linux_tool_copies'] += 1
+    if len(tool_sources) != 2:
+        raise ValueError('Unexpected Linux tool preservation inventory')
     for item in history['files'] + history['settings']:
         saved = relocated.get(item['preserved'])
         if saved and saved['sha256'] != item['sha256']:
             raise ValueError('Relocation hash differs from historical source')
         preserved = saved['preserved'] if saved else item['preserved']
+        current_archive = archived.get(preserved)
+        if current_archive:
+            if current_archive['sha256'] != item['sha256']:
+                raise ValueError('Native relocation hash differs from historical source')
+            preserved = current_archive['preserved']
         for path in (item['source'], preserved):
             if digest(path) != item['sha256']:
                 raise ValueError(f'Preserved source changed: {path}')
             counts['source_and_preserved_hashes'] += 1
-        active = item['active']
-        if active == 'codex_windows/personal/AGENTS.md':
-            active = 'codex_windows/AGENTS.md'
-        inside(active)
+        # `active` describes the migration at the time, not today's installed path.
+        # Current dependencies are independently checked across all native folders.
     root = repo / 'codex_windows/skills'
     inventory = read_current_inventory(verification / 'current_inventory.json')
     if len(history['skills']) != 19 or len(set(history['skills'])) != 19:
         raise ValueError('Unexpected historical skill inventory')
-    if any(inventory.get(name) != 'compat' for name in history['skills']):
-        raise ValueError('Historical skill missing from current compatibility inventory')
+    retired = set(native_map.get('retired_skills', []))
+    if retired != {'bash-script-template'} or set(history['skills']) - retired - set(inventory):
+        raise ValueError('Historical skill retirement differs')
+    if len(inventory) != 21 or any(kind != 'native' for kind in inventory.values()) or retired.intersection(inventory):
+        raise ValueError('Windows native inventory differs')
     folders = current_entries(root, inventory)
+    check_windows_distribution(root)
     helper = markdown_helper(root)
     for entry in folders:
         folder = entry.parent
@@ -227,7 +314,7 @@ def verify(repo):
                     raise ValueError(f'Isolated helper failed: {folder.name}/{script.name}')
                 counts['isolated_helper_runs'] += 1
         counts['skills'] += 1
-    for name in ('md-link-check.py', 'md-heading-check.py', 'md-style-check.py', 'md_common.py', 'lock.py', 'script_template.py', 'script_template.sh'):
+    for name in ('md-link-check.py', 'md-heading-check.py', 'md-style-check.py', 'md_common.py', 'lock.py', 'script_template.py'):
         hashes = {hashlib.sha256(p.read_bytes()).hexdigest() for p in root.glob('*/scripts/' + name)}
         if len(hashes) != 1:
             raise ValueError(f'Helper copies differ or are missing: {name}')

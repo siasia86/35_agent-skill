@@ -1,0 +1,4 @@
+interface:
+  display_name: "보안·마스킹"
+  short_description: "민감정보 마스킹·복원의 안전 계약과 보안 점검 검증"
+  default_prompt: "$security-tools 스킬로 요청한 대상의 보안·마스킹 작업을 수행하고 실행 근거와 미확인 범위를 보고해 주세요."

@@ -88,8 +88,10 @@ def main():
                 results[-1].update({'expected_lines': expected_lines, 'actual_lines': actual_lines})
                 results[-1]['passed'] = results[-1]['passed'] and actual_lines == expected_lines
             if case.endswith('-version'):
-                results[-1].update({'expected_version': '26.10.03',
-                                    'actual_version': process.stdout.strip().rsplit(' ', 1)[-1]})
+                actual_version = process.stdout.strip().rsplit(' ', 1)[-1]
+                results[-1].update({'expected_version': expected_stdout,
+                                    'actual_version': actual_version})
+                results[-1]['passed'] = results[-1]['passed'] and actual_version == expected_stdout
             if args.raw_output:
                 raw.append({'case': case, 'command': command, 'stdout': process.stdout, 'stderr': process.stderr})
 
@@ -216,7 +218,7 @@ def main():
         run('style-explicit-missing', 'md-style-check.py', 1, '--no-footer', missing)
         run('style-valid-plus-missing', 'md-style-check.py', 1, '--no-footer', clean_style, missing)
         run('style-invalid-utf8', 'md-style-check.py', 1, '--no-footer', bad_utf8)
-        run('style-version', 'md-style-check.py', 0, '--version', expected_stdout='26.10.03')
+        run('style-version', 'md-style-check.py', 0, '--version', expected_stdout='26.10.05')
         run('style-help', 'md-style-check.py', 0, '--help')
         run('style-list-skips', 'md-style-check.py', 0, '--list-skips')
         write('style-config/.md-style-check.toml', 'skip_checks = ["footer"]\n')

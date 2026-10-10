@@ -1,0 +1,4 @@
+interface:
+  display_name: "Python 스크립트"
+  short_description: "Windows Python 스크립트의 입력·오류·저장 구조 작성"
+  default_prompt: "$python-script-template 스킬로 요청한 대상의 Python 스크립트 작업을 수행하고 실행 근거와 미확인 범위를 보고해 주세요."

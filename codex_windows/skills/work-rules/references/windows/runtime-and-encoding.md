@@ -5,7 +5,7 @@
 ## 1. 실행 환경과 파일 처리
 
 - Windows 네이티브 PowerShell과 실제 Python 3.11 이상을 사용합니다. PowerShell 5.1/7, `python.exe`/`py`의 실제 경로·버전을 확인하고 WindowsApps alias를 설치된 runtime으로 간주하지 않습니다. Python은 `-X utf8 -B`로 호출하고 작성하는 코드의 파일 읽기·쓰기도 `encoding='utf-8'`을 명시합니다. PowerShell 인코딩은 버전별로 확인하며 BOM/UTF-16/개행을 의도 없이 변경하지 않습니다.
-- PowerShell의 파일 작업은 `-LiteralPath`, `Join-Path`, 확인한 절대 경로를 사용합니다. Linux의 `/root`, `/opt`, `$HOME`, `chmod`, `sudo`, `systemctl`, `fcntl`을 Windows 계정·경로·ACL·서비스로 이름만 치환하지 않습니다. WSL/Git Bash가 필요하면 명시한 Linux/Bash 역할로 구분하며 설치·활성화·권한 변경은 자동 수행하지 않습니다.
+- PowerShell의 파일 작업은 `-LiteralPath`, `Join-Path`, 확인한 절대 경로를 사용합니다. 계정·ACL·서비스·잠금은 실제 Windows 도구와 대상의 계약으로 확인하고, 다른 플랫폼의 명령을 이름만 바꾸어 실행하지 않습니다.
 - 네이티브 CLI의 종료 상태는 해당 도구 계약으로 판정합니다. PowerShell cmdlet 오류와 `$LASTEXITCODE`를 혼동하지 않고 오류 로그만으로 성공 처리하지 않습니다. Terraform detailed exit code처럼 정상 차이를 뜻하는 상태는 일반 실패와 구분합니다.
 
 - **§2 위험 작업·§3 삭제:** 현재 승인 범위를 동작 직전에 확인합니다. 대상·영향·복구 범위를 확인하고 Windows 삭제/이동은 절대 경로가 의도한 범위 안에 있는지 확인한 뒤 `Remove-Item`/`Move-Item -LiteralPath`로 수행합니다. 다른 shell이나 문자열 명령으로 권한/범위를 우회하지 않습니다. 이미 승인된 같은 동작은 재확인하지 않습니다.
@@ -47,7 +47,7 @@ def load_config(config_path=None):
 
 원문의 `write_status(error_codes)` 목적은 모니터링 프로토콜의 상태 기록입니다. 실제 LOG_DIR/STATUS_FILE·오류 코드 의미를 확인하고 UTF-8로 기록합니다. 0 성공/비정상 실패 집계를 프로젝트 계약에 맞추고 실패를 status나 프로세스의 0으로 덮지 않습니다. `main()`의 최종 결과는 `sys.exit(main())`로 프로세스에 전달하며 R07 누락/혼합 입력과 R14 등록된 도움말 option을 함께 검사합니다.
 
-[PowerShell 인코딩](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_character_encoding?view=powershell-5.1)의 실제 사용 버전과 파일 형식을 함께 확인합니다. Bash/POSIX/Kiro 예시는 비교 자료이며 Windows의 자동 실행 방법이 아닙니다.
+[PowerShell 인코딩](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_character_encoding?view=powershell-5.1)의 실제 사용 버전과 파일 형식을 함께 확인합니다. 배포본의 Windows 실행 절차와 실제 대상의 지원 범위를 함께 확인합니다.
 
 ## 3. VM 작업의 실행 범위
 

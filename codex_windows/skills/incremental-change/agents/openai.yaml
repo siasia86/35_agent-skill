@@ -1,0 +1,4 @@
+interface:
+  display_name: "점진적 변경"
+  short_description: "여러 인프라 변경을 작은 단위로 나눠 적용·복구 검증"
+  default_prompt: "$incremental-change 스킬로 요청한 대상의 점진적 변경 작업을 수행하고 실행 근거와 미확인 범위를 보고해 주세요."

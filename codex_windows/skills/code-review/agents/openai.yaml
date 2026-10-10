@@ -1,0 +1,4 @@
+interface:
+  display_name: "코드 리뷰"
+  short_description: "요청한 코드의 결함·보안·호환성 위험을 근거 중심으로 검토"
+  default_prompt: "$code-review 스킬로 요청한 대상의 코드 리뷰 작업을 수행하고 실행 근거와 미확인 범위를 보고해 주세요."

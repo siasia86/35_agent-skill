@@ -1,18 +1,20 @@
 ---
 name: readme-template
-description: Defines the mandatory footer template for applicable Markdown documents — GitHub badges, dates, and license. Use when creating or modifying Markdown documents.
+description: README와 Markdown 작성·수정 시 대상 저장소에 실제 적용된 문서 역할·양식·푸터·배지·날짜 기준을 확인하고 연결합니다. 특정 저장소의 양식을 공통 필수 규칙으로 강제하지 않습니다.
 ---
 
 # 저장소 문서 양식 연결
 
-<!-- CODEX-COMPAT-BEGIN -->
-## Windows 적용 기준
+실제 대상 Git 루트·기존 변경과 적용 AGENTS·하위 지침에서 README·일반 Markdown의 역할·위치·양식·푸터·배지·날짜·출처·상태·게시 기준을 확인합니다. 현재 사용자 요구와 적용 저장소 지침을 개인 기본값보다 우선하고 기존 사용자 문서·최초 작성일·고정 경로를 보존합니다.
 
-README·일반 Markdown의 역할·푸터·배지·날짜·출처 표시는 대상 repo의 적용 AGENTS와 지정 양식에서 확인합니다. 31의 codex/template·codex/profile은 중앙 작성·배포 원본이며 실제 대상에 적용됐는지 확인합니다. 일반 문서 작업에 중앙 clone이나 설치를 요구하지 않습니다.
+중앙 31의 `codex/template`·`codex/profile`은 작성·배포 원본입니다. 대상에 실제 배포된 지침만 적용하며 미배포 변경·백업을 현재 규칙으로 취급하지 않습니다. 중앙 조회는 출처 확인·개정·배포 작업에 필요할 때만 수행하고 일반 문서 작성에 중앙 clone·설치·전체 skill 읽기를 요구하지 않습니다.
 
-기존 사용자 문서·최초 작성일·고정 경로를 보존합니다. 개인 skill에서 특정 저장소의 배지·자동 날짜 갱신·파일명·출처 주석 형식을 모든 repo에 강제하지 않습니다. 대상 양식이 없으면 현재 요청과 기존 문서 형식에 맞춰 필요한 내용만 작성합니다.
+대상이 채택한 양식이 있으면 그 양식을 사용합니다. 없으면 요청의 목적과 기존 문서 형식에 맞춰 필요한 내용만 작성합니다. 특정 저장소의 배지·자동 날짜 갱신·파일명·출처 주석·푸터를 모든 저장소에 강제하지 않습니다. 금지된 푸터를 검사 통과 목적으로 추가하지 않습니다.
 
-검증은 repo 지정 도구·설정을 우선하고 없을 때 동봉 도구의 실제 지원 범위로 검사합니다. 문서 표현 기준이 필요한 경우에만 [STYLE](references/STYLE.md)을, Markdown 검사 절차가 필요한 경우에만 [md-link-check](references/skills/md-link-check.md)를 읽습니다. 보존 원문은 현재 실행 규칙으로 읽지 않습니다.
+새 README 골격이 필요한 경우에만 [Markdown 골격과 적용 절차](references/windows/readme-writing.md)를 읽습니다. 표현 기준이 필요할 때만 [STYLE](references/STYLE.md)을 읽으며 문서 정책은 실제 대상 기준을 유지합니다.
 
-원문 비교: [기존 README 양식](references/kiro-original.md).
-<!-- CODEX-COMPAT-END -->
+Markdown 검사는 대상 지정 도구·설정을 우선하고 지정이 없을 때 실제 동봉 도구를 Python 3.11 이상의 `python -X utf8 -B`로 실행합니다. 동봉 도구는 `scripts/md-style-check.py`, `scripts/md-heading-check.py`, `scripts/md-link-check.py`와 `scripts/md_common.py`입니다. 각 종료 코드·파일 수를 확인하고 내부 파일 존재·같은 파일 앵커·다른 파일 앵커·외부 도달성을 구분합니다. 대상 0개·필수 도구 부재·미실행은 통과가 아닙니다.
+
+정해진 검사와 확정된 의미 불변 수정은 지원되는 `gpt-6-luna / medium`에 묶음으로 배정하며 이미 배정된 worker는 재위임하지 않습니다. 미지원이면 이유를 남기고 소유 담당자가 직접 진행할 수 있습니다. 의미·정책·상태·권한 판단은 소유 담당자가 맡고 검사기 변경으로 통과시키지 않습니다.
+
+완료 보고는 작성·검증·미실행·게시 상태를 구분합니다. 메시지·문서 초안 작성은 설치·commit·push·운영 적용의 새 권한을 만들지 않습니다. 폴더 전체를 복사하면 필수 참조·도구를 함께 사용할 수 있고 형제 skill 설치를 요구하지 않습니다.

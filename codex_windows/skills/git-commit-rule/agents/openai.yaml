@@ -1,0 +1,4 @@
+interface:
+  display_name: "Git 커밋과 게시"
+  short_description: "검증한 담당 변경의 한국어 커밋과 실제 원격 게시 결과를 확인합니다"
+  default_prompt: "$git-commit-rule을 사용해 검증한 담당 변경의 커밋 메시지와 게시 결과를 확인해줘"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Windows skill 선택"
+  short_description: "현재 요청에 맞는 Windows 역할과 필요한 동봉 지침·도구를 선택"
+  default_prompt: "$using-skills 현재 요청에 필요한 역할과 Windows 참조만 선택해줘."

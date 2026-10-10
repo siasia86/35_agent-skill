@@ -1,51 +1,45 @@
 # Windows skill 목록
 
-기존 이관 skill 19개의 원문·예시·체크리스트·필요 자료를 보존하고 새 `fact-check`·`goal-continuation`·`status-report` 3개를 더해 현재 22개를 제공합니다. 활성 본문과 동봉 도구를 실행 기준으로 사용하고 필요한 폴더 전체를 복사합니다.
+Windows 네이티브 실행 지침 21개를 제공합니다. 각 skill은 핵심 본문·UI 메타데이터와 실제 필요한 참조·도구를 동봉한 폴더 단위입니다. 현재 요청에 필요한 역할만 선택합니다.
 
-## 1. 전체 19개
+## 1. 작업 수행과 판단
 
-| skill                                                     | 유지한 역할                        | Windows 실행 조건·도구                        |
-|-----------------------------------------------------------|------------------------------------|-----------------------------------------------|
-| [bash-script-template](bash-script-template/SKILL.md)     | Bash 전체 템플릿·백업·실패 전파    | Git Bash 또는 WSL; native 서비스는 PowerShell |
-| [code-review](code-review/SKILL.md)                       | 코드·스크립트·IaC 검토             | Git·대상 언어 도구; 실행한 검사만 보고        |
-| [debugging-and-recovery](debugging-and-recovery/SKILL.md) | 증거 수집·장애 격리·복구           | Windows 서비스/로그 또는 확인한 원격 Linux    |
-| [doubt-driven-infra](doubt-driven-infra/SKILL.md)         | 비가역 변경의 가정·증거·복구 검토  | 대상 인프라 CLI와 현재 권한 확인              |
-| [git-commit-rule](git-commit-rule/SKILL.md)               | 커밋·PR·변경 기록                  | Git·Python Markdown 도구                      |
-| [incremental-change](incremental-change/SKILL.md)         | 작은 변경·선행 호환성·검증         | Git·대상 IaC/서비스 도구                      |
-| [kiro-lock](kiro-lock/SKILL.md)                           | 협조자 잠금·소유 확인·해제         | Python 동봉 lock; ACL/SMB 보장 별도           |
-| [md-link-check](md-link-check/SKILL.md)                   | Markdown 파일 링크·앵커·헤딩       | Python 검사기 3개 + md_common.py              |
-| [planning-and-breakdown](planning-and-breakdown/SKILL.md) | 목적·범위·의존성·실행 순서         | 현재 저장소 문서 체계; 고정 외부 도구 없음    |
-| [python-script-template](python-script-template/SKILL.md) | 전체 Python 템플릿·UTF-8·원자 쓰기 | Python; 실제 업무 변환은 대상에서 구현        |
-| [readme-template](readme-template/SKILL.md)               | 대상 README 양식 연결              | Python Markdown 도구; 저장소 예외 우선        |
-| [repo-governance](repo-governance/SKILL.md)               | 저장소 지침·예외·권한 확인         | Git·현재 AGENTS와 채택된 정책                 |
-| [security-tools](security-tools/SKILL.md)                 | 비밀정보·보안 도구·마스킹 검토     | Python·실제 제공된 보안 CLI; 개인 map 비공개  |
-| [shipping-checklist](shipping-checklist/SKILL.md)         | 배포 조건·검증·가역성·복구         | 실제 배포 대상 CLI; 요청 범위 확인            |
-| [spec-driven-infra](spec-driven-infra/SKILL.md)           | 인프라 명세·설계·구현·검증         | Terraform/Docker/원격 Ansible 등 대상별 확인  |
-| [testing-guide](testing-guide/SKILL.md)                   | 테스트 설계·경계·실패·운영 지표    | 대상 언어 도구·명시한 playbook/container      |
-| [using-skills](using-skills/SKILL.md)                     | 전체 19개 역할 대응·필요 참조 선택 | 동봉 역할 18개·현재 작업 도구                 |
-| [work-rules](work-rules/SKILL.md)                         | 공통 작업·보고·조건별 참조         | PowerShell·Git·Python; Linux 업무 계층 구분   |
-| [zircon-readme-policy](zircon-readme-policy/SKILL.md)     | Zircon 현행 문서 지침 연결         | 명시 채택 저장소에서만; 동봉 Python 도구      |
+- [work-rules](work-rules/SKILL.md): 지속 작업의 범위·보고·모델 분담·검증·개인 skill 갱신.
+- [status-report](status-report/SKILL.md): 별도 상황보고의 상태·근거·남은 조건·사용자 개입.
+- [using-skills](using-skills/SKILL.md): 요청에 맞는 역할과 동봉 참조 선택.
+- [repo-governance](repo-governance/SKILL.md): 실제 저장소 지침·예외·권한 확인.
+- [planning-and-breakdown](planning-and-breakdown/SKILL.md): 큰 목표·의존성·실행 가능한 작업 분해.
+- [goal-continuation](goal-continuation/SKILL.md): 승인된 목표의 대조·기존 Goal 유지·준비된 작업 이어가기.
+- [fact-check](fact-check/SKILL.md): 요청 문서 각각의 전체 사실 검증; 수정 금지이면 검토만 수행.
 
-2026-10-04 재구성에서 work-rules의 조건별 상세를 분리하고 문서 역할·결과물 tree·푸터·고정 branch의 개인 중복 규칙을 제거했습니다. 문서·정책 skill은 실제 대상에 적용된 지침을 연결하며 보존 원문과 실행 도구는 유지합니다. 현재 선택한 개인 설치본은 별도 업데이트 기록에서 확인합니다.
+## 2. 코드·시험·문서
 
-## 2. 단독 사용과 보존
+- [code-review](code-review/SKILL.md): 코드·스크립트·IaC의 정확성·오류 처리·보안 검토.
+- [testing-guide](testing-guide/SKILL.md): 변경 위험에 맞는 경계·실패·회귀 시험.
+- [python-script-template](python-script-template/SKILL.md): Python 업무 골격·UTF-8·설정·종료 상태.
+- [md-link-check](md-link-check/SKILL.md): Markdown 파일 링크·앵커·헤딩 검증 범위.
+- [readme-template](readme-template/SKILL.md): 실제 적용된 README 양식과 검사 연결.
+- [zircon-readme-policy](zircon-readme-policy/SKILL.md): 해당 저장소에서 채택한 Zircon 문서 기준.
+- [git-commit-rule](git-commit-rule/SKILL.md): 커밋 제목·담당 파일·일반 게시 규약.
 
-추가된 [fact-check](fact-check/SKILL.md)는 `PLAN TODO $fact-check`처럼 요청한 문서 각각을 전체 검증합니다. 기본은 근거로 확정된 오류의 수정·재검증이며 `수정 금지`·`검토만`이면 분석·보고만 합니다. 별도 helper 설치가 필요 없는 지시형 스킬입니다. 이 추가는 최초 19개 이관의 역사 수치·출처를 변경하지 않습니다.
+## 3. 인프라·보안·복구
 
-추가된 [goal-continuation](goal-continuation/SKILL.md)은 사용자 요청 목표의 실행 전 대조·기존 Goal 유지·준비된 승인 작업 이어가기를 담당합니다. 목표 생성은 명시 요청과 실제 제공 도구를 따르며 계획·검토 요청을 실행으로 확대하지 않습니다. 저장소별 기능 상태·보류는 소유 문서에서 읽습니다.
+- [spec-driven-infra](spec-driven-infra/SKILL.md): 요구·명세·설계·구현·검증 연결.
+- [incremental-change](incremental-change/SKILL.md): 작고 검증 가능한 변경과 선행 호환성.
+- [doubt-driven-infra](doubt-driven-infra/SKILL.md): 가정·반례·증거·가역성 검토.
+- [debugging-and-recovery](debugging-and-recovery/SKILL.md): 장애 증거·원인·격리·복구.
+- [security-tools](security-tools/SKILL.md): 실제 보안 도구·비밀정보·마스킹의 지원 범위.
+- [shipping-checklist](shipping-checklist/SKILL.md): 배포 조건·시험·복구와 실제 운영 적용의 경계.
+- [kiro-lock](kiro-lock/SKILL.md): 기존 이름을 유지한 Windows 협조자 잠금·소유 확인·해제.
 
-추가된 [status-report](status-report/SKILL.md)는 별도 상황보고 요청을 현재 소유 원본·직접 근거로 읽기 전용 대조하여 보고합니다. 정식 호출은 `$status-report`이며 일반 완료 보고와 단순 사실 질문을 새 상황조사로 확대하지 않습니다. 한국어 호출문 연결은 상위 AGENTS를 따릅니다.
+기본 실행은 PowerShell·Git·Python 3.11 이상입니다. 필요한 추가 CLI는 해당 업무에서만 확인합니다. 단독 폴더 복사 후 필수 참조와 실제 도구를 검사하고, 설치·발견·선택·행동을 각각 기록합니다.
 
-폴더 전체를 복사하면 동봉 참조·필요 helper를 사용할 수 있습니다. 다른 개인 skill 설치는 필요하지 않습니다. 실제 작업에 필요한 참조만 읽고 순환 참조를 반복하지 않습니다. 동봉 역할 54개도 Windows 본문으로 대응합니다.
-
-`references/kiro-original.md`는 Kiro 원문, `references/linux-original.md`는 Linux 활성 원문입니다. 동봉 역할의 Linux 원문과 기존 도구는 각각 `references/linux-skills/`, `references/linux-tools/`에 bytes로 보존합니다. 비교용 Python 파일은 실행 도구가 아니며 `scripts/`의 Windows 사본을 사용합니다.
-
-공통 지침은 상위 [AGENTS.md](../AGENTS.md), 설정 적용은 [personal 안내](../personal/README.md)를 확인합니다. 각 skill의 Windows 절에서 해당 역할의 실행 조건과 제한을 확인합니다.
+공통 지침은 [AGENTS.md](../AGENTS.md), 설정 예시는 [personal 안내](../personal/README.md), 복사·갱신은 [사용 안내](../README.md)를 따릅니다. 저장소별 문서 역할·위치·양식·상태·게시 규칙은 대상의 실제 지침을 우선합니다.
 
 ---
 
 **작성일**: 2026-10-03
 
-**마지막 업데이트**: 2026-10-09
+**마지막 업데이트**: 2026-10-10
 
 © 2026 siasia86. Licensed under CC BY 4.0.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "계획과 작업 분해"
+  short_description: "작업의 의존성·완료 조건·검증·복구를 연결한 실행 가능한 계획을 작성합니다"
+  default_prompt: "$planning-and-breakdown을 사용해 작업의 의존성과 완료 기준을 나눠 계획해줘"

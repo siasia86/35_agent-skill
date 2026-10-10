@@ -1,0 +1,4 @@
+interface:
+  display_name: "테스트 설계"
+  short_description: "정상·오류·경계·환경 실패를 고려한 의미 있는 테스트 설계"
+  default_prompt: "$testing-guide 스킬로 요청한 대상의 테스트 설계 작업을 수행하고 실행 근거와 미확인 범위를 보고해 주세요."

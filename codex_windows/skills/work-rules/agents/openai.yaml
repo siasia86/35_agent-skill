@@ -1,0 +1,4 @@
+interface:
+  display_name: "개인 작업 원칙"
+  short_description: "승인된 Windows 작업의 범위·보고·분담·검증과 개인 skill 갱신 기준"
+  default_prompt: "$work-rules 현재 요청과 적용 지침을 확인하고 승인된 작업을 수행·검증해줘."

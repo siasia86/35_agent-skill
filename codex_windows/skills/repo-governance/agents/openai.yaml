@@ -1,0 +1,4 @@
+interface:
+  display_name: "저장소 지침 탐색"
+  short_description: "실제 Git 루트의 AGENTS와 관리 지침을 찾아 작업 범위에 맞게 적용합니다"
+  default_prompt: "$repo-governance를 사용해 이 저장소에 실제 적용되는 작업 지침을 확인해줘"

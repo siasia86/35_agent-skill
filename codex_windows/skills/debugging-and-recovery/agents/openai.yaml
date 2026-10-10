@@ -1,0 +1,4 @@
+interface:
+  display_name: "장애 복구"
+  short_description: "Windows 장애의 증거 보존·원인 조사·복구 결과 검증"
+  default_prompt: "$debugging-and-recovery 스킬로 요청한 대상의 장애 복구 작업을 수행하고 실행 근거와 미확인 범위를 보고해 주세요."

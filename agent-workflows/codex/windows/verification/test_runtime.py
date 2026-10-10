@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Validate Windows helpers in fresh TEMP; no repository/home/operating writes.
 
-Python 3.11+. --skills PATH or --repo PATH; --bash selects an existing Git Bash.
+Python 3.11+. --skills PATH or --repo PATH selects the native package.
+Historical Bash fixtures require both --bash and --legacy-bash-script explicitly.
 Public results contain only name/code/expected. Optional --raw is local evidence.
 """
 import argparse
@@ -50,14 +51,20 @@ def main(argv=None):
     locations.add_argument('--skills', type=Path, help='Windows skill collection directory')
     locations.add_argument('--repo', type=Path, help='repository with codex_windows/skills')
     parser.add_argument('--bash', type=Path, help='existing Git Bash bash.exe; omitted means SKIP')
+    parser.add_argument('--legacy-bash-script', type=Path,
+                        help='optional preserved historical Bash helper, outside the native package')
     parser.add_argument('--output', type=Path, help='optional public JSON result')
     parser.add_argument('--raw', type=Path, help='optional PRIVATE local raw result, never publish')
     args = parser.parse_args(argv)
     skills = (args.skills if args.skills else args.repo / 'codex_windows' / 'skills').resolve()
     template = skills / 'python-script-template' / 'scripts' / 'script_template.py'
     lock_script = skills / 'kiro-lock' / 'scripts' / 'lock.py'
-    bash_script = skills / 'bash-script-template' / 'scripts' / 'script_template.sh'
-    for script in (template, lock_script, bash_script):
+    bash_script = args.legacy_bash_script
+    if (args.bash is None) != (bash_script is None):
+        parser.error('historical Bash fixtures require both --bash and --legacy-bash-script')
+    if args.bash is not None and (not args.bash.is_file() or not bash_script.is_file()):
+        parser.error('explicit historical Bash inputs must exist')
+    for script in (template, lock_script):
         if not script.is_file():
             parser.error('required helper file is absent; assemble all draft files first')
     if sys.version_info < (3, 11):
@@ -276,7 +283,7 @@ def main(argv=None):
             lock_path.unlink()
             symlink.unlink()
 
-        if args.bash is None or not args.bash.is_file():
+        if args.bash is None:
             record('bash_runtime_selected', 'SKIP', 'SKIP')
         else:
             bash_env = os.environ.copy()

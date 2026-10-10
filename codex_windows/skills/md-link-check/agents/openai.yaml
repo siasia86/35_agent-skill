@@ -1,0 +1,4 @@
+interface:
+  display_name: "Markdown 링크와 헤딩 검사"
+  short_description: "실제 문서의 파일 링크와 앵커·목차·헤딩 구조를 범위별로 검사합니다"
+  default_prompt: "$md-link-check를 사용해 변경한 문서의 링크와 헤딩 구조를 검사해줘"

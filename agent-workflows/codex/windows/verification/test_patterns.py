@@ -10,7 +10,12 @@ import re
 import subprocess
 import sys
 import tempfile
-from verify_current import active_skill_body, current_entries, read_current_inventory
+_spec = importlib.util.spec_from_file_location('verify_current', Path(__file__).with_name('verify_current.py'))
+_verifier = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(_verifier)
+active_skill_body = _verifier.active_skill_body
+current_entries = _verifier.current_entries
+read_current_inventory = _verifier.read_current_inventory
 
 
 def main():

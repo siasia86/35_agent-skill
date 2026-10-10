@@ -1,103 +1,67 @@
-# Codex Windows 구조와 Workflow 보완안
+# Codex Windows 구조와 읽기 흐름
 
-Windows 개인 배포 원본과 조건별 읽기 구조입니다. 2026-10-04부터 저장소 문서 역할·결과물 배치·양식·게시 정책은 31에서 관리하고 대상에 실제 적용한 지침을 따릅니다. 개인 skill은 공통 실행 방법과 필요한 참조를 제공합니다.
+개인 배포 원본은 [codex_windows](codex_windows/README.md), 구현·검증 원본은 35, 대상 저장소의 문서 정책은 실제 적용된 지침입니다. 현재 배포본은 PowerShell·Windows Python·Git 기준의 skill 21개입니다.
 
-## 1. 현재 구조
+## 1. 배포 구조
 
 ```text
 codex_windows/
-├── AGENTS.md                  개인 공통 지침의 배포 원본
-├── README.md                  복사·사용 안내
-├── personal/                  설정 예시·적용 안내·Linux 비교 원문
-└── skills/                    20개 폴더 단위 자산
-    └── work-rules/
-        ├── SKILL.md           핵심 규칙과 직접 참조 조건
-        ├── references/
-        │   ├── operating-details.md
-        │   ├── skill-maintenance.md
-        │   ├── validation-and-recovery.md
-        │   ├── windows/
-        │   │   ├── runtime-and-encoding.md
-        │   │   ├── ssh-and-acl.md
-        │   │   └── file-lock.md
-        │   ├── repository-workflow.md
-        │   ├── windows-work-rules-details.md
-        │   ├── STYLE.md
-        │   ├── skills/        필요할 때 선택할 동봉 지침
-        │   ├── originals/     비교용 원문
-        │   ├── linux-skills/  Linux 비교 자료
-        │   └── linux-tools/   보존 도구
-        └── scripts/           실제 Windows helper
+├── AGENTS.md                  선택적 개인 공통 지침 원본
+├── README.md                  폴더 복사·갱신 안내
+├── personal/                  Windows 설정 예시·적용 안내
+└── skills/                    Windows native 21개
+    └── <skill>/
+        ├── SKILL.md           핵심 지침·참조를 읽을 조건
+        ├── agents/openai.yaml UI 메타데이터·기존 호출 정책
+        ├── references/        실제 필요한 Windows 상세
+        └── scripts/           실제 필요한 동봉 도구
 ```
 
-SKILL의 참조표가 work-rules 내부의 읽기 조건을 안내합니다. 별도 INDEX·PLAN·TODO·REVIEW·설치 inventory를 복사용 폴더 안에 추가하지 않습니다. 개발·검증·업데이트 기록은 [agent-workflows INDEX](agent-workflows/INDEX.md)에서 연결합니다.
+모든 skill에 상세 폴더를 강제하지 않습니다. references와 scripts는 해당 기능에 필요한 경우에만 두며 폴더 전체가 단독 복사 단위입니다.
 
-최초 이관 19개에 [fact-check](codex_windows/skills/fact-check/SKILL.md)를 추가했습니다. `PLAN TODO $fact-check`는 각 문서의 사실 주장을 검증하며 전체 작업 상태 감사로 확대하지 않습니다.
-
-## 2. Codex가 인식하는 Markdown
-
-개인 공통 지침의 배포 원본은 [AGENTS](codex_windows/AGENTS.md), skill 본문은 [work-rules](codex_windows/skills/work-rules/SKILL.md)입니다. 실제 Codex home의 AGENTS와 skill 발견 위치는 다르므로 [복사 안내](codex_windows/README.md)를 따릅니다. INDEX·TODO 등은 지정 지침이 연결한 경우 읽는 관리 문서이며 이름만으로 자동 실행되지 않습니다.
-
-[공식 skill 안내](https://learn.chatgpt.com/docs/build-skills)의 발견·선택·참조 읽기와 실제 관찰을 구분합니다. 본문 분리는 필요 자료만 읽는 조건을 제공하며 매 요청의 자동 선택을 보장하는 hook은 아닙니다.
-
-## 3. 공통 규칙과 repo 기록의 연결 보완안
-
-개인 AGENTS는 짧은 공통 원칙과 work-rules 선택을 안내합니다. work-rules는 범위·보고·실행·검증과 조건별 상세를 관리합니다. 대상 repo의 적용 AGENTS·운영 기준이 문서 위치·양식·검사·게시를 정합니다.
-
-중앙 작성 원본은 [31 Codex 양식](https://github.com/siasia86/31_governances/tree/yunli/codex/template), 배포 원본은 [31 profile](https://github.com/siasia86/31_governances/tree/yunli/codex/profile)입니다. 일반 실행 때마다 중앙 자료를 내려받지 않으며 실제 배포 상태와 중앙 원본을 구분합니다. 35의 실제 작업 기록은 기존 agent-workflows를 유지합니다.
-
-## 4. 작업 문서의 역할
-
-README·INDEX·PLAN·TODO·TASK·ISSUE·CHANGELOG의 역할표와 결과물 tree를 이 문서나 개인 skill에서 별도로 갱신하지 않습니다. 대상 repo의 적용 지침을 기준으로 하고 중앙 개정이 필요한 경우 [31 template 안내](https://github.com/siasia86/31_governances/tree/yunli/codex/template)를 확인합니다. 이전 상세와 이번 분리 대응은 [T-WIN-004](agent-workflows/codex/2026-10-04-personal-routing-T-WIN-004/README.md)에 기록합니다.
-
-## 5. 조회·위임·완료 처리
+## 2. 읽기 흐름
 
 ```text
-현재 요청·적용 지침
-└── work-rules 핵심 본문
-    ├── 기존 작업 재개 → 해당 repo의 현재 작업과 관련 근거
-    ├── 보고·분담 → operating-details
-    ├── 개인 skill 갱신 → skill-maintenance
-    ├── 검사·실패 대응 → validation-and-recovery
-    ├── Windows 특수 처리 → windows의 해당 상세
-    └── 과거 비교 → 필요한 보존 원문
+현재 요청·실제 적용 AGENTS
+└── 필요한 skill 선택
+    ├── 지속 작업 → work-rules
+    │   ├── 보고·모델 분담 → operating-details
+    │   ├── 개인 skill 갱신 → skill-maintenance
+    │   ├── 검사·실패 대응 → validation-and-recovery
+    │   └── Windows 특수 처리 → 필요한 windows 상세
+    ├── 별도 상황보고 → status-report
+    ├── 계획 작성 → planning-and-breakdown
+    ├── 승인 목표 이어가기 → goal-continuation
+    └── 선택이 불명확 → using-skills의 필요한 역할
 ```
 
-INDEX는 경로를 모를 때 관련 항목만 사용합니다. 같은 내용이 현재 문맥에 있고 변경 정황이 없으면 반복 읽기를 피하며, 변경·문맥 누락·대상 전환·충돌이 있을 때 재확인합니다. 필수 참조가 없거나 읽기에 실패하면 누락을 숨기지 않습니다.
+INDEX는 실제 작업 공간에서 경로를 탐색할 때 사용합니다. 개인 skill 폴더에 별도 PLAN·TODO·INDEX·검증 결과를 강제로 만들지 않습니다. 필요한 참조만 읽고 유효한 기존 문맥은 재사용합니다.
 
-## 6. 장점과 단점
+## 3. 원본·보존·설치
 
-- 장점: repo별 정책 원본과 개인 실행 지침의 중복을 줄이고 기본 읽기에서 드문 Windows 상세를 분리합니다.
-- 비용: 동봉 사본과 링크를 함께 갱신해야 하므로 독립 폴더 복사·내부 참조·원문 해시를 확인합니다.
-- 한계: 문자 수 감소는 실제 토큰·비용 절감률이나 새 세션의 자동 선택 성공을 증명하지 않습니다.
+- 현재 실행본: [Windows skill 목록](codex_windows/skills/README.md).
+- Linux 원본: [codex_linux](codex_linux/README.md); 기존 원문 bytes 유지.
+- 이번 이동·보존·검증: [Windows native 갱신 기록](agent-workflows/codex/2026-10-10-windows-native-T-WIN-004/README.md).
+- 작업 공간 탐색: [agent-workflows INDEX](agent-workflows/INDEX.md).
 
-## 7. 설계 검토와 적용 범위
+과거 원문·비교 자료·개발 검사기는 Windows 복사 영역 밖에 둡니다. 누락된 Bash 도구는 Linux 보존 공간에 원형을 추가했으며 실제 Linux 실행 완료로 처리하지 않습니다.
 
-기존 사용자 설정·system·plugin·모델·인증은 지정 범위 밖에서 바꾸지 않습니다. 역사 자료·이관 당시 manifest·검사 결과는 당시 증거로 유지합니다. 최신 구현·설치·검증·미실행은 [T-WIN-004](agent-workflows/codex/2026-10-04-personal-routing-T-WIN-004/README.md)에서 확인합니다.
+갱신은 35 관리 원본 수정·검증 → 현재 설치된 관리 대상 반영 → Git 통합 담당의 main 일반 게시 순서입니다. 사용자 추가 파일과 기존 설정을 보존하며 31 정책의 자동 CI/CD 적용을 가정하지 않습니다.
 
-35의 게시 순서는 [저장소 AGENTS](AGENTS.md)의 yunli 게시 → 사용자 검증 → main 반영입니다. 사용자 검증 전 main을 갱신하지 않습니다.
+## 4. 장점과 한계
 
-## 8. 공식 skill 기준의 후속 보완
+- 장점: 실행 지침과 역사 자료를 분리하여 불필요한 읽기와 잘못된 플랫폼 명령 선택을 줄입니다.
+- 장점: Windows 도구와 필수 참조를 동봉하여 skill 폴더 단위 복사가 가능합니다.
+- 비용: 동봉 참조·도구·UI·현재 inventory를 함께 검증해야 합니다.
+- 한계: 본문 분리·파일 일치는 자동 선택·장기 행동·실제 토큰 절감률의 검증 근거가 아닙니다.
+- 한계: Windows에서 실행할 수 없는 기능은 해당 플랫폼의 별도 지침과 검증이 필요합니다.
 
-[기존 공식 skill 검토](agent-workflows/codex/windows/SYSTEM_SKILL_REVIEW_2026-10-03.md)는 당시 근거입니다. 이번 재구성은 조건별 참조·폴더 독립 사용·실제 repo 지침 연결을 유지합니다. 새로운 scheduler·무인 반복·중앙 자동 동기화는 도입하지 않습니다.
-
-## 9. 개인 Codex 업데이트별 백업
-
-```text
-agent-workflows/codex/<날짜>-<목적>-<작업ID>/
-├── README.md                  대상·변경·검증·복구 안내
-├── before/inventory.json      변경 전 파일 해시
-├── after/inventory.json       변경 후 파일 해시
-├── verification.json          공개 가능한 검증 결과
-└── private/                   Git 제외: 전후 사본·설정·raw
-```
-
-다음 업데이트는 새 폴더에 기록하며 이전 사본·해시를 덮어쓰지 않습니다. 원형 백업은 발견 경로 밖에서 보존하고 Git 제외를 실제 확인합니다.
+설정·권한·system/plugin skill·31 정책 변경은 이번 정리와 별도 범위입니다. 완료 여부는 최신 갱신 기록의 실제 검사·설치·게시 근거를 따릅니다.
 
 ---
 
 **작성일**: 2026-10-03
 
-**마지막 업데이트**: 2026-10-04
+**마지막 업데이트**: 2026-10-10
 
 © 2026 siasia86. Licensed under CC BY 4.0.

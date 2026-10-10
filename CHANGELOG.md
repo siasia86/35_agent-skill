@@ -4,6 +4,8 @@
 
 ## [Unreleased]
 
+- `T-WIN-004 / WIN-NATIVE-20261010`의 [Windows native 정리 기록](agent-workflows/codex/2026-10-10-windows-native-T-WIN-004/README.md)을 인수했습니다. 현행 21개 본문·UI·단독 복사 계약을 맞추고 Bash 배포를 원형 보존 후 제외했습니다. archive 190개·Linux 추가 보존 도구 2개·역사 자료를 보존하며 공식 21/21·관련 회귀와 현재 설치된 관리 9개·79파일 일치의 소유 근거를 연결했습니다. 동결 후보 586개와 필요한 공통 기록만 통합하고 STYLE 부정 예시 7건·AGENTS 푸터 3건 및 실제 앱 행동 미확인은 유지했습니다.
+
 - `MAIN-20261004-01·T-WIN-002/004`의 기존 PLAN·TODO에 명시 Goal의 통합 범위·차기 순서·의존성·검증·복구·재개 조건을 연결했습니다. [STYLE 교정·지정 설치 기록](agent-workflows/codex/2026-10-09-style-diagnostics-T-WIN-004/README.md)의 다이어그램 4건 해소와 잔존 진단 8건을 인수하고, 이미 게시한 FC delta와 인계 전 계획 초안의 범위를 구분했습니다.
 
 - `FC-20261004-03·FCH-01`의 [53 문서 변경분 검증 결과](agent-workflows/codex/2026-10-05-fact-check-native-FC-20261004-03/FACTCHECK-53-DELTA-20261009.md)와 JSON을 인수했습니다. 15개 주장 중 확인 14·불일치 0·미확인 1 및 `V-D02` 한계를 공통 기록에 연결하고, 저장 계산 결과·소유 보고·실제 제품 검증의 범위를 구분했습니다.

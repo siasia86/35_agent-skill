@@ -1,0 +1,4 @@
+interface:
+  display_name: "결정 교차 검증"
+  short_description: "중요 인프라 결정의 안전성 주장을 반대 관점에서 검증"
+  default_prompt: "$doubt-driven-infra 스킬로 요청한 대상의 결정 교차 검증 작업을 수행하고 실행 근거와 미확인 범위를 보고해 주세요."

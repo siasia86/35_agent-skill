@@ -1,6 +1,6 @@
 # Windows 설정 예시와 개인 홈 적용 안내
 
-공통 지침의 작성 원본은 상위 [AGENTS.md](../AGENTS.md) 한 곳입니다. 이 폴더는 개인 홈 적용 방법·설정 예시·비교 원문을 제공합니다. 기존 개인 지침·config·override·관리 정책을 확인하고 필요한 항목만 비교·병합합니다.
+공통 지침의 작성 원본은 상위 [AGENTS.md](../AGENTS.md) 한 곳입니다. 이 폴더는 Windows 개인 홈 적용 방법과 설정 예시를 제공합니다. 기존 개인 지침·config·override·관리 정책을 확인하고 필요한 항목만 비교·병합합니다.
 
 ## 1. 제공 파일
 
@@ -9,9 +9,10 @@
 | [공통 AGENTS.md](../AGENTS.md)                           | 공통 작업 기본값과 Windows 적용 지침 |
 | [config.example.toml](config.example.toml)               | 공통 설정과 Windows sandbox 예시     |
 | [config.shared.example.toml](config.shared.example.toml) | 기존 공통 설정 원본                  |
-| [Linux AGENTS 원문](references/linux-AGENTS.md)          | 비교용 보존 자료                     |
 
 공통값은 `approval_policy = "on-request"`, `approvals_reviewer = "auto_review"`, `sandbox_mode = "workspace-write"`입니다. `auto_review`는 승인 검토자를 선택하며 sandbox를 해제하지 않습니다. [공식 설정 기준](https://learn.chatgpt.com/docs/config-file/config-reference)
+
+위 값은 배포 예시의 기본값입니다. 현재 개인 설정이나 실제 세션의 권한을 나타내지 않으며, 이번 skill 정리에서 설정과 권한은 변경하지 않습니다.
 
 Windows 예시는 `[windows] sandbox = "elevated"`를 추가합니다. 실제 환경·관리 정책·지원 모드를 확인한 뒤 필요한 경우 허용된 fallback을 판단합니다. 예시 파일 자체가 OS 준비나 관리자 권한을 부여하지 않습니다. [공식 Windows sandbox](https://learn.chatgpt.com/docs/windows/windows-sandbox)
 
@@ -29,6 +30,6 @@ Windows 예시는 `[windows] sandbox = "elevated"`를 추가합니다. 실제 �
 
 **작성일**: 2026-10-03
 
-**마지막 업데이트**: 2026-10-03
+**마지막 업데이트**: 2026-10-10
 
 © 2026 siasia86. Licensed under CC BY 4.0.

@@ -6,13 +6,16 @@ No source edits, installation, personal configuration access or network requests
 import argparse
 from contextlib import contextmanager
 import io
+import importlib.util
 import json
 from pathlib import Path
 import shutil
 import tempfile
 import unittest
 
-import verify_current as verifier
+_spec = importlib.util.spec_from_file_location('verify_current', Path(__file__).with_name('verify_current.py'))
+verifier = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(verifier)
 
 
 REPO = Path(__file__).resolve().parents[4]
@@ -29,12 +32,19 @@ class CurrentContractTests(unittest.TestCase):
         routing_path = 'agent-workflows/codex/2026-10-04-personal-routing-T-WIN-004/preservation-map.json'
         routing = json.loads((REPO / routing_path).read_text(encoding='utf-8'))
         relocated = {item['before']: item['preserved'] for item in routing['relocated_preserved_files']}
+        native_map = json.loads((REPO / verifier.NATIVE_MAP).read_text(encoding='utf-8'))
+        archived = {'codex_windows/' + item['source']: verifier.NATIVE_RECORD + '/' + item['preserved']
+                    for item in native_map['files']}
         files = {routing_path, '.codex/config.toml', 'codex_windows/personal/config.example.toml',
                  'agent-workflows/codex/windows/verification/source_manifest.json',
-                 'agent-workflows/codex/windows/verification/current_inventory.json'}
+                 'agent-workflows/codex/windows/verification/current_inventory.json', verifier.NATIVE_MAP}
+        files.update(archived.values())
+        files.update(counterpart['path'] for item in native_map['files']
+                     for counterpart in item['linux_or_kiro_counterparts'])
+        files.update(item['preserved'] for item in native_map['linux_script_copies'])
         for item in history['files'] + history['settings']:
-            files.update((item['source'], relocated.get(item['preserved'], item['preserved']),
-                          'codex_windows/AGENTS.md' if item['active'] == 'codex_windows/personal/AGENTS.md' else item['active']))
+            previous = relocated.get(item['preserved'], item['preserved'])
+            files.update((item['source'], archived.get(previous, previous)))
         for relative in files:
             target = cls.repo / relative
             target.parent.mkdir(parents=True, exist_ok=True)
@@ -48,6 +58,10 @@ class CurrentContractTests(unittest.TestCase):
         cls.compat = cls.root / 'work-rules'
         cls.history = history
         cls.routing_path = cls.repo / routing_path
+        cls.native_map_path = cls.repo / verifier.NATIVE_MAP
+        cls.native_map = native_map
+        cls.archived = archived
+        cls.relocated = relocated
 
     @contextmanager
     def changed(self, path, content):
@@ -64,10 +78,13 @@ class CurrentContractTests(unittest.TestCase):
     def test_full_current_and_history_contract(self):
         result = verifier.verify(self.repo)
         self.assertEqual(result['skills'], len(self.inventory))
-        self.assertEqual(result['compat_skills'], 19)
-        self.assertEqual(result['native_skills'], 2)
+        self.assertEqual(result['skills'], 21)
+        self.assertEqual(result['compat_skills'], 0)
+        self.assertEqual(result['native_skills'], 21)
         self.assertEqual(result['source_and_preserved_hashes'], 368)
-        self.assertEqual(result['native_interfaces'], 2)
+        self.assertEqual(result['native_interfaces'], 21)
+        self.assertEqual(result['archived_files'], len(self.native_map['files']))
+        self.assertEqual(result['linux_tool_copies'], 2)
 
     def test_missing_native_skill(self):
         moved = self.repo / 'moved-native'
@@ -224,13 +241,67 @@ class CurrentContractTests(unittest.TestCase):
 
     def test_preserved_source_tamper(self):
         path = self.repo / self.history['files'][0]['source']
-        with self.changed(path, path.read_bytes() + b'\nchanged'), self.assertRaisesRegex(ValueError, 'Preserved source changed'):
+        with self.changed(path, path.read_bytes() + b'\nchanged'), self.assertRaisesRegex(ValueError, 'changed'):
             verifier.verify(self.repo)
 
     def test_preserved_setting_tamper(self):
-        path = self.repo / self.history['settings'][0]['preserved']
-        with self.changed(path, path.read_bytes() + b'\nchanged'), self.assertRaisesRegex(ValueError, 'Preserved source changed'):
+        original = self.history['settings'][0]['preserved']
+        previous = self.relocated.get(original, original)
+        path = self.repo / self.archived.get(previous, previous)
+        with self.changed(path, path.read_bytes() + b'\nchanged'), self.assertRaisesRegex(ValueError, 'changed'):
             verifier.verify(self.repo)
+
+    def test_preserved_native_archive_tamper(self):
+        item = self.native_map['files'][0]
+        path = self.repo / verifier.NATIVE_RECORD / item['preserved']
+        with self.changed(path, path.read_bytes() + b'\nchanged'), self.assertRaisesRegex(ValueError, 'Native preserved file changed'):
+            verifier.verify(self.repo)
+
+    def test_linux_tool_copy_tamper(self):
+        path = self.repo / self.native_map['linux_script_copies'][0]['preserved']
+        with self.changed(path, path.read_bytes() + b'\nchanged'), self.assertRaisesRegex(ValueError, 'changed'):
+            verifier.verify(self.repo)
+
+    def test_duplicate_native_mapping(self):
+        value = dict(self.native_map)
+        value['files'] = [*value['files'], value['files'][0]]
+        with self.changed(self.native_map_path, json.dumps(value)), self.assertRaisesRegex(ValueError, 'Duplicate native preservation source'):
+            verifier.verify(self.repo)
+
+    def test_duplicate_linux_tool_mapping(self):
+        value = dict(self.native_map)
+        value['linux_script_copies'] = [*value['linux_script_copies'], value['linux_script_copies'][0]]
+        with self.changed(self.native_map_path, json.dumps(value)), self.assertRaisesRegex(ValueError, 'Duplicate Linux tool preservation'):
+            verifier.verify(self.repo)
+
+    def test_retired_shell_payload_rejected(self):
+        path = self.native / 'retired.sh'
+        path.write_text('# unused\n', encoding='utf-8')
+        try:
+            with self.assertRaisesRegex(ValueError, 'Retired Windows payload'):
+                verifier.check_windows_distribution(self.root)
+        finally:
+            path.unlink()
+
+    def test_retired_execution_example_rejected(self):
+        entry = self.native / 'SKILL.md'
+        with self.changed(entry, entry.read_text(encoding='utf-8') + '\n```bash\necho example\n```\n'):
+            with self.assertRaisesRegex(ValueError, 'Non-native Windows instructions'):
+                verifier.check_windows_distribution(self.root)
+
+    def test_native_interface_preserves_boolean_policy(self):
+        path = self.native / 'agents/openai.yaml'
+        original = path.read_text(encoding='utf-8').split('policy:', 1)[0].rstrip() + '\n'
+        for value in ('true', 'false'):
+            with self.subTest(value=value), self.changed(path, original + 'policy:\n  allow_implicit_invocation: ' + value + '\n'):
+                verifier.check_native_interface(self.native)
+
+    def test_native_interface_rejects_invalid_policy(self):
+        path = self.native / 'agents/openai.yaml'
+        original = path.read_text(encoding='utf-8').split('policy:', 1)[0].rstrip() + '\n'
+        for policy in ('', '  allow_implicit_invocation: "true"\n', '  allow_implicit_invocation: true\n  allow_implicit_invocation: false\n'):
+            with self.subTest(policy=policy), self.changed(path, original + 'policy:\n' + policy), self.assertRaises(ValueError):
+                verifier.check_native_interface(self.native)
 
     def test_relocated_source_hash_mismatch(self):
         routing = json.loads(self.routing_path.read_text(encoding='utf-8'))

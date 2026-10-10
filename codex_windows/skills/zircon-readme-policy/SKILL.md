@@ -1,16 +1,18 @@
 ---
 name: zircon-readme-policy
-description: Locate the currently applied Markdown policy when working in a Zircon repository. Use the target repository instructions; preserve historical policy only for comparison.
+description: Zircon 저장소의 Markdown 작업에서 실제 적용 AGENTS와 운영·문서·검증 지침을 찾아 채택된 정책을 적용합니다. 과거 경로·이름·미배포 중앙 정책을 현재 대상의 규칙으로 취급하지 않습니다.
 ---
 
 # Zircon 문서 지침 연결
 
-<!-- CODEX-COMPAT-BEGIN -->
-## Windows 적용 기준
+실제 대상 Git 루트·기존 변경과 적용 AGENTS·하위 지침에서 지정한 운영·문서·검증 기준을 읽습니다. Zircon이라는 이름이나 과거 경로만으로 적용 정책을 정하지 않습니다. 현재 사용자 요청과 실제 대상 지침을 개인 기본값보다 우선하고 다른 작업·비공개 자료를 보존합니다.
 
-실제 대상 Git 루트의 AGENTS와 지정 운영·문서·검증 지침을 읽습니다. 해당 repo가 채택한 푸터·날짜·배지·게시 예외만 적용하고 과거 Zircon 경로나 이름만으로 정책을 결정하지 않습니다. 현행 작성·배포 원본은 31에서 관리하며 미배포 profile·백업을 현재 대상의 규칙으로 취급하지 않습니다.
+README·일반 Markdown의 역할·위치·푸터·날짜·배지·상태·게시 예외는 해당 저장소가 실제 채택한 기준만 적용합니다. 중앙 31의 `codex/template`·`codex/profile`은 작성·배포 원본이며 미배포 변경·백업을 대상의 현행 규칙으로 취급하지 않습니다. 중앙 조회는 출처 확인·개정·배포가 필요할 때만 수행합니다.
 
-일반 문서 작업에 중앙 clone·전체 skill·잠금·Git 게시를 자동 요구하지 않습니다. 문서 표현 검토는 필요한 때 [STYLE](references/STYLE.md), 링크 검사는 [md-link-check](references/skills/md-link-check.md)에서 해당 절차를 선택합니다. 실제 대상에 필수 지침이 지정되어 있으나 접근할 수 없으면 개인 기본값으로 우회하지 않습니다.
+일반 문서 작업에 중앙 clone·전체 skill 읽기·잠금·Git 게시를 자동 요구하지 않습니다. 실제 지정된 필수 지침에 접근할 수 없으면 개인 기본값으로 우회하지 않고 영향받는 정책 판단을 보류하여 원인을 확인합니다. 필요할 때 [Windows 대상 확인과 검사](references/windows/zircon-document-workflow.md)를 읽습니다. 문서 표현 기준은 필요한 때만 [STYLE](references/STYLE.md)을 읽으며 실제 대상의 문서 정책이 우선합니다.
 
-과거의 고정 경로·푸터 금지 목록은 [보존 원문](references/kiro-original.md)에 유지하며 현재 정책으로 중복 관리하지 않습니다.
-<!-- CODEX-COMPAT-END -->
+검사는 실제 지정 도구·설정·버전과 지원 범위로 수행하고 파일 존재·같은 파일 앵커·다른 파일 앵커·외부 도달성을 구분합니다. 필수 도구 부재·대상 0개·미실행은 완료가 아닙니다. 정책에서 푸터를 금지하면 금지된 푸터를 추가해 검사를 통과시키지 않습니다.
+
+문서·초안 작성은 설치·commit·push·운영 적용의 새 승인이 아닙니다. 게시가 승인된 일반 개인 개발은 `main` 기본값과 실제 목적별 브랜치·사용자 제한·원격 필수 PR·검사에 따라 검토한 담당 파일만 commit·일반 push하고 원격 SHA를 대조합니다. 이미 승인된 범위를 반복 확인하지 않습니다.
+
+보고는 한국어로 실행·검증·미실행·게시 상태를 구분합니다. 개인 경로·계정·자격증명·전체 설정·운영 자료를 공개 문서에 복사하지 않습니다. 이 폴더의 필수 참조·도구를 함께 복사하면 단독으로 사용할 수 있으며 형제 skill·중앙 설치기를 필수 조건으로 삼지 않습니다.

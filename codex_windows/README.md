@@ -1,41 +1,30 @@
 # Codex Windows 개인 스킬
 
-이 폴더는 Windows 개인 Codex에 복사·적용할 공통 지침·21개 skill·필수 동봉 도구·설정 예시의 배포 원본입니다. 최초 이관 19개와 이후 추가한 `fact-check`·`goal-continuation` 2개를 구분하며 제공 파일별 실제 적용 위치와 기존 사용자 편집을 확인하여 복사·병합합니다.
+이 폴더는 Windows 네이티브 개인 Codex에 복사하는 공통 지침·skill 21개·필수 동봉 도구·설정 예시의 배포 원본입니다. PowerShell·Git·Python을 기준으로 필요한 skill 폴더 전체를 선택합니다.
 
 ## 1. 사용할 파일
 
-- [skill 목록과 실행 조건](skills/README.md): `skills/<이름>/` 전체를 복사합니다.
-- [공통 지침](AGENTS.md): 이 배포 원본의 단일 공통 지침입니다. 기존 개인 AGENTS와 비교·병합합니다.
-- [설정 적용 안내와 예시](personal/README.md): 기존 설정과 비교해 필요한 항목만 병합합니다.
+- [skill 목록](skills/README.md): 역할과 실행 조건을 확인합니다.
+- [공통 지침](AGENTS.md): 기존 개인 AGENTS와 필요한 항목을 비교·병합합니다.
+- [설정 적용 안내](personal/README.md): 예시와 실제 설정·세션 정책을 구분합니다.
 
-활성 `SKILL.md`의 Windows 호환 절과 `scripts/`가 현재 실행 기준입니다. 각 폴더의 Linux/Kiro 원문·예시·체크리스트는 보존 자료이며 OS별 명령을 그대로 자동 실행하지 않습니다. 필요한 참조만 읽습니다.
+`SKILL.md`는 현재 실행 지침입니다. 조건별 상세는 같은 폴더의 `references`, 실행 도구는 `scripts`, UI 메타데이터는 `agents/openai.yaml`에 있습니다. 각 폴더 안에서 필수 참조가 완결되며 형제 skill·중앙 설치기·다른 저장소를 준비할 필요가 없습니다.
 
-다음 표는 배포 원본과 실제 적용 위치의 대응입니다. AGENTS와 skill의 발견 위치는 서로 다르므로 해당 파일·폴더를 지원 위치에 적용합니다. [공식 AGENTS 안내](https://learn.chatgpt.com/docs/agent-configuration/agents-md)
+개인 skill 적용 위치는 사용자 홈 `.agents/skills/<이름>/`, 공통 지침은 사용 중인 Codex home의 `AGENTS.md`입니다. 저장소별 skill은 해당 저장소의 `.agents/skills/<이름>/`에 적용합니다. 같은 이름의 기존 사본은 출처와 사용자 차이를 먼저 확인합니다.
 
-| 배포 원본                                       | 실제 적용 위치·방법                                                    |
-|-------------------------------------------------|------------------------------------------------------------------------|
-| AGENTS.md                                       | 사용자 Codex home의 AGENTS.md와 비교·병합                              |
-| skills/<이름>/ 전체                             | 사용자 홈 .agents/skills/<이름>/ 또는 해당 repo .agents/skills/<이름>/ |
-| personal/config.example.toml                    | 사용 중인 Codex home config.toml에 필요한 항목만 병합                  |
-| personal/config.shared.example.toml·references/ | 설정·Linux 지침의 비교용 자료; 현재 설정과 출처 대조                   |
+개발 계획·검증 도구·결과·비교 원문은 이 배포 폴더에 포함하지 않습니다. 문서 역할·위치·양식·상태·게시 절차는 대상에 실제 적용된 지침을 따릅니다.
 
-사용 안내와 재사용 자료는 이 폴더에서 완결됩니다. 공통 지침의 본문을 personal에 중복 보관하지 않습니다.
+## 2. 실행 환경
 
-개인 skill 갱신 전에는 기존 동명 폴더와 사용자 차이를 보존하고 전체 파일 해시를 기록합니다. 업데이트별 백업 폴더는 해당 repo의 관리 공간에서 사용자 지정대로 만들며 이 배포 폴더에 개발 기록·개인 설정 백업을 추가하지 않습니다.
+기본 도구는 Windows PowerShell·Git·Python 3.11 이상입니다. 동봉 Python 도구는 표준 라이브러리만 사용하며 `python -X utf8 -B`로 실행합니다. 실제 도구 경로·버전·인코딩·종료 상태는 작업 환경에서 확인합니다.
 
-`work-rules`는 핵심 본문에서 보고·분담, 개인 skill 갱신, 검증·복구, Windows runtime·SSH·잠금으로 직접 연결합니다. 참조는 조건에 맞을 때만 읽고 단순 재개는 대상 repo의 현재 작업 기록으로 이동합니다. 문서 역할·결과물 구조·푸터·게시 규칙은 개인 skill에서 재정의하지 않으며 31에서 관리하여 대상에 적용한 지침을 따릅니다. 폴더 복사는 중앙 정책의 자동 배포·양방향 동기화가 아닙니다.
+Terraform·Docker·보안 CLI와 대상 언어의 시험 도구는 해당 업무에 필요한 경우에만 확인합니다. Windows에서 실행할 수 없는 기능은 지원 범위 밖으로 구분하고 다른 플랫폼의 명령을 이름만 바꾸어 실행하지 않습니다.
 
-## 2. 필요한 실행 도구
+원격 Windows 업무의 SSH·ACL과 잠금·Python 설정은 work-rules의 해당 조건에서만 읽습니다. `--help` 성공은 실제 업무 실행이나 전체 동작 검증을 뜻하지 않습니다.
 
-기본은 PowerShell·Git·Python 3.11 이상입니다. 동봉 Python 도구는 표준 라이브러리만 사용하며 `python -X utf8 -B`로 실행합니다. Bash 업무에는 확인한 Git Bash 또는 WSL을 사용합니다. Terraform·Docker·Ansible·보안 CLI는 해당 업무에 실제 필요한 경우에 확인합니다. Linux 서비스나 Ansible controller를 네이티브 PowerShell에서 실행한다고 가정하지 않습니다.
+## 3. 폴더 복사와 갱신
 
-## 3. skill 폴더 복사
-
-복사 단위는 **skill 폴더 전체**입니다. 동봉 참조와 helper가 각 폴더 안에 있으며 형제 skill·중앙 설치기·다른 저장소를 준비할 필요가 없습니다.
-
-Codex의 사용자 범위와 저장소 범위 검색 위치는 각각 사용자 홈과 저장소의 `.agents/skills`입니다. 같은 이름의 skill이 여러 범위에 있으면 기존 출처·편집을 비교해 사용할 대상을 정합니다. [공식 skill 검색 안내](https://learn.chatgpt.com/docs/build-skills)
-
-아래 예시는 현재 디렉터리가 이 `codex_windows` 폴더일 때 선택한 skill 한 개를 복사합니다. 기존 동명 폴더가 있으면 비교·백업 후 병합합니다.
+복사 단위는 **skill 폴더 전체**입니다. 아래 예시는 이 codex_windows 폴더에서 기존 대상이 없을 때만 복사합니다.
 
 ```powershell
 $skillName = 'work-rules'
@@ -43,21 +32,23 @@ $skillSource = Join-Path (Get-Location) "skills/$skillName"
 $skillRoot = Join-Path $HOME '.agents/skills'
 $skillTarget = Join-Path $skillRoot $skillName
 if (-not (Test-Path -LiteralPath (Join-Path $skillSource 'SKILL.md') -PathType Leaf)) {
-    throw 'codex_windows 폴더에서 skill 이름과 원본을 확인하세요.'
+    throw 'codex_windows 폴더와 skill 이름을 확인하세요.'
 }
 if (Test-Path -LiteralPath $skillTarget) {
-    throw '기존 폴더를 비교·백업한 후 필요한 변경을 병합하세요.'
+    throw '기존 폴더를 먼저 비교·백업하고 사용자 차이를 병합하세요.'
 }
 New-Item -ItemType Directory -Force -Path $skillRoot | Out-Null
 Copy-Item -LiteralPath $skillSource -Destination $skillTarget -Recurse -ErrorAction Stop
 ```
 
-복사 후 실제 Codex 새 세션에서 발견·선택·필요 도구 실행을 확인합니다. 공통 지침과 설정 예시는 선택적으로 적용하며 기존 사용자 설정을 일괄 교체하지 않습니다.
+갱신은 35 관리 원본 수정·검증 → 현재 설치된 관리 대상 반영 순서입니다. 기존 전체 폴더·사용자 추가 파일·해시·이전본을 먼저 보존합니다. 설정·권한·system/plugin skill은 별도 지정 범위를 따릅니다.
+
+새 세션의 실제 발견·선택·도구 실행은 별도로 확인합니다. 파일 일치만으로 자동 선택이나 장기 행동의 성공을 보고하지 않습니다. 중앙 정책의 자동 배포·양방향 동기화는 현재 구성으로 가정하지 않습니다.
 
 ---
 
 **작성일**: 2026-10-03
 
-**마지막 업데이트**: 2026-10-04
+**마지막 업데이트**: 2026-10-10
 
 © 2026 siasia86. Licensed under CC BY 4.0.

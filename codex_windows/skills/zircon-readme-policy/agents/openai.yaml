@@ -1,0 +1,4 @@
+interface:
+  display_name: "Zircon 문서 지침"
+  short_description: "대상 Zircon 저장소에 실제 적용된 문서 양식과 검증·게시 기준을 확인합니다"
+  default_prompt: "$zircon-readme-policy를 사용해 대상 저장소의 실제 문서 지침에 맞춰 변경해줘"

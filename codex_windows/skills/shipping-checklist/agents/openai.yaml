@@ -1,0 +1,4 @@
+interface:
+  display_name: "배포 점검"
+  short_description: "운영 배포의 준비·보안·복구·단계별 검증 근거 점검"
+  default_prompt: "$shipping-checklist 스킬로 요청한 대상의 배포 점검 작업을 수행하고 실행 근거와 미확인 범위를 보고해 주세요."

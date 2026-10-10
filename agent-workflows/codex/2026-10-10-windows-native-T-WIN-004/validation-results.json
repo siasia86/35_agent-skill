@@ -1,0 +1,18 @@
+{
+  "task_id": "T-WIN-004",
+  "date": "2026-10-10",
+  "scope": "windows-native-source-and-installed-personal-skills",
+  "source": {"native_skills": 21, "compat_skills": 0, "interfaces": 21, "after_files": 242},
+  "preservation": {"archived_files": 190, "historical_hash_checks": 368, "original_linux_files": 191, "kiro_files": 55, "added_linux_tools": 2, "git_filter_identity_checks": 192, "changed_original_files": 0},
+  "official_validation": {"initial_skills_passed": 21, "formatted_skills_rechecked": 6, "failed": 0},
+  "regressions": {"current_cases_passed": 40, "markdown_cases_passed": 91, "runtime_cases_passed": 54, "runtime_cases_skipped": 2, "locking_pattern_cases_passed": 7},
+  "standalone": {"folders": 21, "python_syntax_checks": 34, "helper_help_runs": 27, "local_links": 208},
+  "markdown": {"documents": 188, "file_links": 264, "headings": 904, "broken_links": 0, "heading_issues": 0, "cross_file_anchors_checked": 11, "same_file_fragments": 29, "external_links_not_reached": 13},
+  "powershell_syntax": {"distribution_documents": 185, "fences": 42, "unique_snippets": 12, "parse_errors": 0, "examples_executed": false},
+  "presentation": {"table_files_formatted": 68, "table_diagnostics_fixed": 952, "new_diagnostics": 0, "existing_style_negative_example_diagnostics": 7, "existing_unchanged_AGENTS_footer_diagnostics": 3, "all_skill_style_exit_code": 1},
+  "installation": {"selected_existing_skills": 9, "managed_source_files": 79, "managed_installed_files": 79, "managed_hashes_equal": true, "removed_obsolete_managed_files": 53, "preserved_cache_files": 4, "after_installed_files": 83, "unmanaged_markdown_review_unchanged": true},
+  "environment": {"python": "3.12.14", "pyyaml": "6.0.3", "dependency_scope": "ignored-verification-venv"},
+  "models": {"mechanics": "gpt-6-luna / medium", "native_drafts": "gpt-6.1-sol / medium", "final_semantic_review": "gpt-6-astra / high"},
+  "unobserved": ["linux-runtime", "new-session-discovery-selection-and-long-running-behavior", "external-link-reachability", "NTFS-security-boundary", "operational-application"],
+  "publication_evidence_owner": "35 Git integration"
+}
