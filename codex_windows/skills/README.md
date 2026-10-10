@@ -1,11 +1,12 @@
 # Windows skill 목록
 
-Windows 네이티브 실행 지침 21개를 제공합니다. 각 skill은 핵심 본문·UI 메타데이터와 실제 필요한 참조·도구를 동봉한 폴더 단위입니다. 현재 요청에 필요한 역할만 선택합니다.
+Windows 네이티브 실행 지침 22개를 제공합니다. 각 skill은 핵심 본문·UI 메타데이터와 실제 필요한 참조·도구를 동봉한 폴더 단위입니다. 현재 요청에 필요한 역할만 선택합니다.
 
 ## 1. 작업 수행과 판단
 
 - [work-rules](work-rules/SKILL.md): 지속 작업의 범위·보고·모델 분담·검증·개인 skill 갱신.
 - [status-report](status-report/SKILL.md): 별도 상황보고의 상태·근거·남은 조건·사용자 개입.
+- [job-status-update](job-status-update/SKILL.md): 배정된 담당 상태 카드 갱신과 지정 통합 담당의 현황판 집계.
 - [using-skills](using-skills/SKILL.md): 요청에 맞는 역할과 동봉 참조 선택.
 - [repo-governance](repo-governance/SKILL.md): 실제 저장소 지침·예외·권한 확인.
 - [planning-and-breakdown](planning-and-breakdown/SKILL.md): 큰 목표·의존성·실행 가능한 작업 분해.

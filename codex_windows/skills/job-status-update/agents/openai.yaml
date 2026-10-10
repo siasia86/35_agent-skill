@@ -1,0 +1,5 @@
+interface:
+  display_name: "현황판 갱신"
+  short_description: "담당 상태 카드와 전체 현황판을 근거·소유 범위에 맞게 갱신합니다"
+policy:
+  allow_implicit_invocation: true

@@ -1,6 +1,6 @@
 # Codex Windows 개인 스킬
 
-이 폴더는 Windows 네이티브 개인 Codex에 복사하는 공통 지침·skill 21개·필수 동봉 도구·설정 예시의 배포 원본입니다. PowerShell·Git·Python을 기준으로 필요한 skill 폴더 전체를 선택합니다.
+이 폴더는 Windows 네이티브 개인 Codex에 복사하는 공통 지침·skill 22개·필수 동봉 도구·설정 예시의 배포 원본입니다. PowerShell·Git·Python을 기준으로 필요한 skill 폴더 전체를 선택합니다.
 
 ## 1. 사용할 파일
 
